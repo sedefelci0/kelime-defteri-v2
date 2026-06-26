@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kelime Defteri — Çalış</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/study.css" />
+</head>
+<body>
+<div class="app-shell">
+  <div class="topbar">
+    <div class="brand">Kelime Defteri</div>
+    <div class="user-area">
+      <span class="user-name" id="user-name"></span>
+      <button class="btn btn-danger-ghost" id="logout-btn" type="button">Çıkış yap</button>
+    </div>
+  </div>
+
+  <div class="progress-strip">
+    <div class="legend">
+      <span><span class="dot dot-known"></span>Öğrendim</span>
+      <span><span class="dot dot-learning"></span>Öğreniyorum</span>
+      <span><span class="dot dot-new"></span>Yeni</span>
+    </div>
+    <div class="progress-bar" id="progress-bar"></div>
+    <span id="progress-text">—</span>
+  </div>
+
+  <div class="study-area">
+    <div id="loading" class="loading-state">Kelimeler yükleniyor…</div>
+
+    <div id="card-zone" class="card-zone" style="display:none;">
+      <div class="card-counter" id="card-counter"></div>
+      <div class="flip-card" id="flip-card">
+        <div class="flip-card-inner">
+          <div class="card-face card-face-front">
+            <span class="card-eyebrow">İngilizce</span>
+            <div class="card-word" id="word-english"></div>
+            <div class="card-pron" id="word-pron"></div>
+            <div class="card-explanation" id="word-explanation"></div>
+          </div>
+          <div class="card-face card-face-back">
+            <span class="card-eyebrow">Türkçe</span>
+            <div class="card-meaning" id="word-meaning"></div>
+            <div class="card-example" id="word-example"></div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-hint">Kartı çevirmek için tıkla</div>
+
+      <div class="answer-buttons">
+        <button class="btn btn-again" id="btn-again" type="button">Tekrar göster</button>
+        <button class="btn btn-know" id="btn-know" type="button">Biliyorum</button>
+      </div>
+    </div>
+
+    <div id="empty-state" class="empty-state" style="display:none;">
+      <h2>Henüz kelime yok</h2>
+      <p>Kelime listesi şu an boş görünüyor. Yönetici kelimeleri ekleyene kadar bekleyebilirsin.</p>
+    </div>
+
+    <div id="done-state" class="done-state" style="display:none;">
+      <h2>Bugünlük bu kadar! 🎉</h2>
+      <p>Şu an gösterilecek yeni veya öğrenilmekte olan kelime yok. Daha sonra tekrar gel ya da tüm kelimeleri sıfırdan tekrar etmek için aşağıdaki butonu kullan.</p>
+      <button class="btn btn-secondary" id="restart-btn" type="button">Tüm kelimeleri tekrar göster</button>
+    </div>
+  </div>
+</div>
+
+<script src="/js/study.js"></script>
+</body>
+</html>
