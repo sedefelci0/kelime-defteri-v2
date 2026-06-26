@@ -1,0 +1,4321 @@
+[
+  {
+    "english": "Abolish",
+    "pronunciation": "Eboliş",
+    "turkish_meaning": "ortadan kaldırmak, kaldırmak (yasa/sistem)",
+    "english_explanation": "to formally put an end to a law, system, or practice",
+    "example_sentence": "The government decided to abolish the old tax law."
+  },
+  {
+    "english": "Ablolition",
+    "pronunciation": "Ebolişin",
+    "turkish_meaning": "kaldırma, ortadan kaldırma (yasal/sistemsel)",
+    "english_explanation": "the act of officially ending a law, system, or practice",
+    "example_sentence": "The abolition of slavery was a major turning point in history."
+  },
+  {
+    "english": "Absorb",
+    "pronunciation": "Ebzorb",
+    "turkish_meaning": "emmek, soğurmak; özümsemek",
+    "english_explanation": "to take in or soak up a liquid, gas, or information",
+    "example_sentence": "The sponge absorbed all the water on the counter."
+  },
+  {
+    "english": "Abuse",
+    "pronunciation": "Ebyus (isim) / Ebyuz (fiil)",
+    "turkish_meaning": "kötüye kullanmak; istismar",
+    "english_explanation": "to use something wrongly, or to treat someone cruelly; (noun) cruel or unjust treatment",
+    "example_sentence": "He was charged with abuse of power."
+  },
+  {
+    "english": "Access",
+    "pronunciation": "Akses",
+    "turkish_meaning": "erişim, giriş hakkı",
+    "english_explanation": "the means or opportunity to approach, enter, or use something",
+    "example_sentence": "Employees need access to the building after hours."
+  },
+  {
+    "english": "Accessible",
+    "pronunciation": "Aksesıbıl",
+    "turkish_meaning": "erişilebilir, ulaşılabilir",
+    "english_explanation": "able to be reached, entered, or obtained easily",
+    "example_sentence": "The report should be accessible to everyone on the team."
+  },
+  {
+    "english": "Accused",
+    "pronunciation": "Ekyuzd",
+    "turkish_meaning": "Sanık/ suçlamak",
+    "english_explanation": "a person charged with a crime; (verb) to charge someone with wrongdoing",
+    "example_sentence": "The accused denied all the charges in court."
+  },
+  {
+    "english": "Accustom",
+    "pronunciation": "Ekastım",
+    "turkish_meaning": "alıştırmak",
+    "english_explanation": "to make someone or oneself familiar with something through habit or experience",
+    "example_sentence": "It took her a while to accustom herself to the new schedule."
+  },
+  {
+    "english": "Accustomed",
+    "pronunciation": "Ekastımd",
+    "turkish_meaning": "alışkın, alışmış",
+    "english_explanation": "used to something, familiar with it through habit",
+    "example_sentence": "He is accustomed to working long hours."
+  },
+  {
+    "english": "Acknowledge",
+    "pronunciation": "Eknolic",
+    "turkish_meaning": "kabul etmek, tanımak",
+    "english_explanation": "to accept or admit the existence or truth of something",
+    "example_sentence": "She acknowledged her mistake during the meeting."
+  },
+  {
+    "english": "Acquire",
+    "pronunciation": "Ekuayır",
+    "turkish_meaning": "edinmek, kazanmak, satın almak",
+    "english_explanation": "to buy or obtain an asset or object for oneself",
+    "example_sentence": "The company plans to acquire a smaller competitor next year."
+  },
+  {
+    "english": "Acquisition",
+    "pronunciation": "Ekuızişın",
+    "turkish_meaning": "edinme, satın alma (şirket birleşmesi)",
+    "english_explanation": "an act of acquiring something, especially a company",
+    "example_sentence": "The merger and acquisition deal was finalized last month."
+  },
+  {
+    "english": "Admission",
+    "pronunciation": "Edmişın",
+    "turkish_meaning": "kabul, giriş, itiraf",
+    "english_explanation": "the process of entering a place or institution, or an act of confessing something",
+    "example_sentence": "Admission to the university requires a strong academic record."
+  },
+  {
+    "english": "Adverse",
+    "pronunciation": "Edvörs",
+    "turkish_meaning": "olumsuz, ters, zararlı",
+    "english_explanation": "preventing success or development; harmful",
+    "example_sentence": "The medicine had several adverse side effects."
+  },
+  {
+    "english": "Allocate",
+    "pronunciation": "Alıkeyt",
+    "turkish_meaning": "ayırmak, tahsis etmek",
+    "english_explanation": "to distribute resources or duties for a particular purpose",
+    "example_sentence": "The manager allocated the budget for next quarter's marketing campaign."
+  },
+  {
+    "english": "Allocations",
+    "pronunciation": "Alıkeyşınz",
+    "turkish_meaning": "tahsisatlar, paylaştırmalar",
+    "english_explanation": "amounts of resources distributed or assigned for a purpose",
+    "example_sentence": "Budget allocations were reduced for non-essential departments this year."
+  },
+  {
+    "english": "Allowance",
+    "pronunciation": "Alauıns",
+    "turkish_meaning": "ödenek, harçlık, tahsisat",
+    "english_explanation": "an amount of money given regularly or for a specific purpose",
+    "example_sentence": "Children often receive a weekly allowance from their parents."
+  },
+  {
+    "english": "Ally",
+    "pronunciation": "Alay",
+    "turkish_meaning": "müttefik, destekçi",
+    "english_explanation": "a person, group, or country that cooperates with another for a common purpose",
+    "example_sentence": "The two countries have been close allies for decades."
+  },
+  {
+    "english": "Alter",
+    "pronunciation": "Oltır",
+    "turkish_meaning": "değiştirmek",
+    "english_explanation": "to change something, often slightly",
+    "example_sentence": "They had to alter their plans because of the weather."
+  },
+  {
+    "english": "Amend",
+    "pronunciation": "Emend",
+    "turkish_meaning": "değiştirmek, düzeltmek (yasa/metin)",
+    "english_explanation": "to make minor changes to a law, document, or agreement to improve it",
+    "example_sentence": "The committee voted to amend the constitution."
+  },
+  {
+    "english": "Ample",
+    "pronunciation": "Empıl",
+    "turkish_meaning": "yeterli, bol",
+    "english_explanation": "enough or more than enough; plentiful",
+    "example_sentence": "There was ample time to finish the project before the deadline."
+  },
+  {
+    "english": "Anchor",
+    "pronunciation": "Enkır",
+    "turkish_meaning": "çapa; (TV) sunucu",
+    "english_explanation": "a heavy object used to moor a ship; also, a person who presents a news broadcast",
+    "example_sentence": "The ship dropped anchor near the harbor."
+  },
+  {
+    "english": "Anticipate",
+    "pronunciation": "Entisıpeyt",
+    "turkish_meaning": "beklemek, öngörmek, ummak",
+    "english_explanation": "to expect or predict that something will happen",
+    "example_sentence": "We anticipate strong sales during the holiday season."
+  },
+  {
+    "english": "Apparently",
+    "pronunciation": "Eperıntli",
+    "turkish_meaning": "görünüşe göre, anlaşılan",
+    "english_explanation": "as far as one knows or can see; seemingly",
+    "example_sentence": "Apparently, the meeting has been postponed until next week."
+  },
+  {
+    "english": "Article Of Assosication",
+    "pronunciation": "Artikıl ov Asosieyşın",
+    "turkish_meaning": "şirket ana sözleşmesi",
+    "english_explanation": "a document that sets out the rules for a company's internal management",
+    "example_sentence": "The articles of association define how the board of directors is appointed."
+  },
+  {
+    "english": "Aspect",
+    "pronunciation": "Espekt",
+    "turkish_meaning": "yön, açı, husus",
+    "english_explanation": "a particular part or feature of a situation, idea, or problem",
+    "example_sentence": "We need to consider every aspect of the proposal before deciding."
+  },
+  {
+    "english": "Asset",
+    "pronunciation": "Eset",
+    "turkish_meaning": "varlık, kıymetli şey",
+    "english_explanation": "a useful or valuable thing, or an item of property owned by a person or company",
+    "example_sentence": "Real estate is one of the company's most valuable assets."
+  },
+  {
+    "english": "Assurance",
+    "pronunciation": "Işurıns",
+    "turkish_meaning": "güvence, teminat",
+    "english_explanation": "a positive declaration intended to give confidence",
+    "example_sentence": "He gave us his assurance that the work would be finished on time."
+  },
+  {
+    "english": "Assure",
+    "pronunciation": "Işur",
+    "turkish_meaning": "temin etmek, güvence vermek",
+    "english_explanation": "to tell someone something confidently to remove doubts",
+    "example_sentence": "I can assure you that your data is completely safe."
+  },
+  {
+    "english": "Assured",
+    "pronunciation": "Işurd",
+    "turkish_meaning": "güvenceli, emin; kendinden eminmiş gibi",
+    "english_explanation": "confident or certain; guaranteed",
+    "example_sentence": "She spoke in a calm, assured tone during the interview."
+  },
+  {
+    "english": "Attachment",
+    "pronunciation": "Itaçmınt",
+    "turkish_meaning": "ek, ilişik (dosya); bağlılık",
+    "english_explanation": "an extra part fixed to something; also, an emotional bond",
+    "example_sentence": "Please find the report in the attachment to this email."
+  },
+  {
+    "english": "Attendant",
+    "pronunciation": "Itendınt",
+    "turkish_meaning": "görevli, hizmet eden kişi",
+    "english_explanation": "a person whose job is to help or look after people in a particular place",
+    "example_sentence": "A flight attendant offered us drinks during the trip."
+  },
+  {
+    "english": "Auction",
+    "pronunciation": "Okşın",
+    "turkish_meaning": "açık artırma, müzayede",
+    "english_explanation": "a public sale where items are sold to the highest bidder",
+    "example_sentence": "The painting was sold at auction for a record price."
+  },
+  {
+    "english": "Audience",
+    "pronunciation": "Odiıns",
+    "turkish_meaning": "izleyici, dinleyici kitlesi",
+    "english_explanation": "the group of people watching or listening to a performance or speech",
+    "example_sentence": "The audience applauded loudly at the end of the concert."
+  },
+  {
+    "english": "Augment",
+    "pronunciation": "Ogment",
+    "turkish_meaning": "arttırmak, çoğaltmak",
+    "english_explanation": "to make something greater by adding to it",
+    "example_sentence": "She took a part-time job to augment her income."
+  },
+  {
+    "english": "Awkward",
+    "pronunciation": "Okvırd",
+    "turkish_meaning": "garip, sıkıntılı, beceriksiz",
+    "english_explanation": "causing difficulty or embarrassment; not graceful",
+    "example_sentence": "There was an awkward silence after his comment."
+  },
+  {
+    "english": "Backbone",
+    "pronunciation": "Bekboun",
+    "turkish_meaning": "bel kemiği; temel destek",
+    "english_explanation": "the spine; also, the main support of a system or organization",
+    "example_sentence": "Small businesses are the backbone of the local economy."
+  },
+  {
+    "english": "Baneful",
+    "pronunciation": "Beynfıl",
+    "turkish_meaning": "zararlı, yıkıcı",
+    "english_explanation": "causing harm or ruin",
+    "example_sentence": "The baneful effects of the drought were felt across the region."
+  },
+  {
+    "english": "Banish",
+    "pronunciation": "Beniş",
+    "turkish_meaning": "sürgün etmek, kovmak",
+    "english_explanation": "to send someone away from a place, especially as punishment",
+    "example_sentence": "The king banished the traitor from the kingdom."
+  },
+  {
+    "english": "Basin",
+    "pronunciation": "Beysın",
+    "turkish_meaning": "leğen, havza",
+    "english_explanation": "a wide, round container for water; also, a low-lying area drained by a river",
+    "example_sentence": "The Amazon basin is home to thousands of species."
+  },
+  {
+    "english": "Bastardize",
+    "pronunciation": "Bastırdayz",
+    "turkish_meaning": "bozmak, niteliğini düşürmek",
+    "english_explanation": "to debase or corrupt something, especially in quality",
+    "example_sentence": "Critics say the remake bastardized the original story."
+  },
+  {
+    "english": "Bawl",
+    "pronunciation": "Bol",
+    "turkish_meaning": "bağırmak, yüksek sesle ağlamak",
+    "english_explanation": "to cry or shout loudly",
+    "example_sentence": "The toddler began to bawl when his toy broke."
+  },
+  {
+    "english": "Bias",
+    "pronunciation": "Bayıs",
+    "turkish_meaning": "önyargı, taraf tutma",
+    "english_explanation": "a tendency to favor one side unfairly",
+    "example_sentence": "The judge was accused of bias toward the defendant."
+  },
+  {
+    "english": "Bladder",
+    "pronunciation": "Bledır",
+    "turkish_meaning": "mesane",
+    "english_explanation": "the organ in the body that stores urine",
+    "example_sentence": "Drinking too much coffee can irritate the bladder."
+  },
+  {
+    "english": "Blister",
+    "pronunciation": "Blistır",
+    "turkish_meaning": "kabarcık (deride)",
+    "english_explanation": "a small bubble on the skin filled with fluid, caused by friction or burning",
+    "example_sentence": "Her new shoes gave her a painful blister on her heel."
+  },
+  {
+    "english": "Blockade",
+    "pronunciation": "Blokeyd",
+    "turkish_meaning": "abluka, kuşatma",
+    "english_explanation": "an act of sealing off a place to prevent goods or people from entering or leaving",
+    "example_sentence": "The navy imposed a blockade on the enemy port."
+  },
+  {
+    "english": "Bolt",
+    "pronunciation": "Bolt",
+    "turkish_meaning": "cıvata; sürgü; (fiil) kaçmak",
+    "english_explanation": "a metal pin used to fasten things, or a sliding bar that locks a door; also, to run away suddenly",
+    "example_sentence": "He tightened the bolt to secure the shelf."
+  },
+  {
+    "english": "Bonnet",
+    "pronunciation": "Bonıt",
+    "turkish_meaning": "araba kaputu (İng.); kadın şapkası",
+    "english_explanation": "the hinged cover over a car's engine (British English); also a type of hat",
+    "example_sentence": "Smoke was coming from under the car's bonnet."
+  },
+  {
+    "english": "Bony",
+    "pronunciation": "Bouni",
+    "turkish_meaning": "kemikli, sıska",
+    "english_explanation": "very thin, with bones visible or prominent",
+    "example_sentence": "The stray dog had a thin, bony body."
+  },
+  {
+    "english": "Booklet",
+    "pronunciation": "Buklıt",
+    "turkish_meaning": "kitapçık, broşür",
+    "english_explanation": "a small, thin book, often with information or instructions",
+    "example_sentence": "The booklet explains how to set up the new device."
+  },
+  {
+    "english": "Bounce",
+    "pronunciation": "Bauns",
+    "turkish_meaning": "sıçramak, zıplamak",
+    "english_explanation": "to spring back after hitting a surface",
+    "example_sentence": "The ball bounced twice before rolling under the car."
+  },
+  {
+    "english": "Bound",
+    "pronunciation": "Baund",
+    "turkish_meaning": "sınırlı, mecbur; -e gitmekte olan",
+    "english_explanation": "certain or likely to happen; also, on the way to a destination",
+    "example_sentence": "The flight is bound for Istanbul."
+  },
+  {
+    "english": "Boundary",
+    "pronunciation": "Baundıri",
+    "turkish_meaning": "sınır",
+    "english_explanation": "a line that marks the limit of an area",
+    "example_sentence": "The river forms a natural boundary between the two countries."
+  },
+  {
+    "english": "Branch",
+    "pronunciation": "Brenç",
+    "turkish_meaning": "dal; şube",
+    "english_explanation": "a part of a tree; also, a local office of a company or organization",
+    "example_sentence": "The bank opened a new branch downtown."
+  },
+  {
+    "english": "Break out",
+    "pronunciation": "Breyk aut",
+    "turkish_meaning": "patlak vermek (savaş/yangın); kaçmak",
+    "english_explanation": "to start suddenly (a fire, war, disease); also, to escape from a place",
+    "example_sentence": "A fire broke out in the warehouse late last night."
+  },
+  {
+    "english": "Brest",
+    "pronunciation": "Brest",
+    "turkish_meaning": "göğüs, meme",
+    "english_explanation": "the front upper part of the body; the chest area",
+    "example_sentence": "She held the baby close to her breast."
+  },
+  {
+    "english": "Bribe",
+    "pronunciation": "Brayb",
+    "turkish_meaning": "Rüşvet",
+    "english_explanation": "money or a gift offered to persuade someone to act dishonestly",
+    "example_sentence": "The official was arrested for accepting a bribe."
+  },
+  {
+    "english": "Broker",
+    "pronunciation": "Broukır",
+    "turkish_meaning": "aracı, komisyoncu",
+    "english_explanation": "a person who arranges deals between buyers and sellers, especially in finance",
+    "example_sentence": "We bought the house through a real estate broker."
+  },
+  {
+    "english": "Brow",
+    "pronunciation": "Brau",
+    "turkish_meaning": "kaş, alın",
+    "english_explanation": "the forehead, or the ridge above the eye",
+    "example_sentence": "Sweat dripped from his brow during the race."
+  },
+  {
+    "english": "Bucket",
+    "pronunciation": "Bakıt",
+    "turkish_meaning": "kova",
+    "english_explanation": "an open container with a handle, used to carry liquids",
+    "example_sentence": "He filled the bucket with water to wash the car."
+  },
+  {
+    "english": "Cabbage",
+    "pronunciation": "Kebic",
+    "turkish_meaning": "lahana",
+    "english_explanation": "a vegetable with thick green or purple leaves",
+    "example_sentence": "She made a salad with cabbage and carrots."
+  },
+  {
+    "english": "Calf",
+    "pronunciation": "Kef",
+    "turkish_meaning": "Fil veya balina yavrusu/Buzağı/Kalf",
+    "english_explanation": "a young cow, elephant, or whale; also, the back of the lower leg, or an apprentice",
+    "example_sentence": "The calf followed its mother closely across the field."
+  },
+  {
+    "english": "Cannon",
+    "pronunciation": "Kenın",
+    "turkish_meaning": "top (silah)",
+    "english_explanation": "a large, heavy gun, usually mounted, that fires solid shot",
+    "example_sentence": "The fortress walls were destroyed by cannon fire."
+  },
+  {
+    "english": "Capable",
+    "pronunciation": "Keypıbıl",
+    "turkish_meaning": "yetenekli, becerikli",
+    "english_explanation": "having the ability or skill to do something",
+    "example_sentence": "She is fully capable of handling this project alone."
+  },
+  {
+    "english": "Carefree",
+    "pronunciation": "Keırfri",
+    "turkish_meaning": "kaygısız, dertsiz",
+    "english_explanation": "free from worry or responsibility",
+    "example_sentence": "They spent a carefree afternoon at the beach."
+  },
+  {
+    "english": "Carryover",
+    "pronunciation": "Keriouvır",
+    "turkish_meaning": "devreden bakiye/miktar",
+    "english_explanation": "an amount carried forward from one period or situation to the next",
+    "example_sentence": "The unused vacation days will be a carryover to next year."
+  },
+  {
+    "english": "Cartridge",
+    "pronunciation": "Kartiric",
+    "turkish_meaning": "kartuş, fişek",
+    "english_explanation": "a container holding ink, ammunition, or film, designed to be inserted into a device",
+    "example_sentence": "Don't forget to buy a new ink cartridge for the printer."
+  },
+  {
+    "english": "Cash register",
+    "pronunciation": "Keş recistır",
+    "turkish_meaning": "yazar kasa",
+    "english_explanation": "a machine used in shops to calculate and record sales",
+    "example_sentence": "The cashier entered the price into the cash register."
+  },
+  {
+    "english": "Casual",
+    "pronunciation": "Kejuıl",
+    "turkish_meaning": "Planlanmayan (Casual meeting etc.)",
+    "english_explanation": "happening by chance, not planned; or relaxed and informal",
+    "example_sentence": "We had a casual meeting to discuss the new ideas, nothing official."
+  },
+  {
+    "english": "Caterpillar",
+    "pronunciation": "Ketırpilır",
+    "turkish_meaning": "tırtıl",
+    "english_explanation": "the larva of a butterfly or moth",
+    "example_sentence": "A caterpillar slowly crawled along the leaf."
+  },
+  {
+    "english": "Cauliflower",
+    "pronunciation": "Koliflauır",
+    "turkish_meaning": "karnabahar",
+    "english_explanation": "a vegetable with a large white head surrounded by green leaves",
+    "example_sentence": "She roasted cauliflower with garlic and olive oil."
+  },
+  {
+    "english": "Cease",
+    "pronunciation": "Sis",
+    "turkish_meaning": "durmak, kesmek, son vermek",
+    "english_explanation": "to stop happening or doing something",
+    "example_sentence": "The factory ceased production after the fire."
+  },
+  {
+    "english": "Cease fire",
+    "pronunciation": "Sis fayır",
+    "turkish_meaning": "ateşkes",
+    "english_explanation": "a temporary stop to fighting, often by agreement",
+    "example_sentence": "Both sides agreed to a cease fire after months of conflict."
+  },
+  {
+    "english": "Cement",
+    "pronunciation": "Siment",
+    "turkish_meaning": "çimento; (fiil) sağlamlaştırmak",
+    "english_explanation": "a powder mixed with water to make concrete; also, to make something stronger",
+    "example_sentence": "Workers poured cement to build the foundation."
+  },
+  {
+    "english": "Chamber",
+    "pronunciation": "Çeymbır",
+    "turkish_meaning": "Oda (Chamber of Commerce etc-Ticaret odası)",
+    "english_explanation": "a room, often used for formal purposes, or a part of a legislative body",
+    "example_sentence": "The case was heard in the judge's private chamber."
+  },
+  {
+    "english": "Charter",
+    "pronunciation": "Çartır",
+    "turkish_meaning": "kiralamak (uçak/gemi); tüzük",
+    "english_explanation": "to hire a vehicle or vessel for private use; also, a formal document granting rights",
+    "example_sentence": "They decided to charter a boat for the day."
+  },
+  {
+    "english": "Chase",
+    "pronunciation": "Çeys",
+    "turkish_meaning": "kovalamak, takip etmek",
+    "english_explanation": "to run after someone or something to catch them",
+    "example_sentence": "The police chased the suspect through the streets."
+  },
+  {
+    "english": "Cheek",
+    "pronunciation": "Çik",
+    "turkish_meaning": "yanak; (argo) küstahlık",
+    "english_explanation": "the side of the face below the eye",
+    "example_sentence": "Tears rolled down her cheek."
+  },
+  {
+    "english": "Cheeky",
+    "pronunciation": "Çiki",
+    "turkish_meaning": "küstah, arsız (şirin biçimde)",
+    "english_explanation": "disrespectful in a playful or amusing way",
+    "example_sentence": "The cheeky child stuck out his tongue at the teacher."
+  },
+  {
+    "english": "Cheque",
+    "pronunciation": "Çek",
+    "turkish_meaning": "çek (banka)",
+    "english_explanation": "a written order to a bank to pay money from one's account",
+    "example_sentence": "She wrote a cheque to pay the rent."
+  },
+  {
+    "english": "Chest",
+    "pronunciation": "Çest",
+    "turkish_meaning": "göğüs; sandık",
+    "english_explanation": "the front part of the body between the neck and stomach; also, a large box for storage",
+    "example_sentence": "He felt a sharp pain in his chest."
+  },
+  {
+    "english": "Chest of Drawers",
+    "pronunciation": "Çest ov drorz",
+    "turkish_meaning": "çekmeceli dolap, şifonyer",
+    "english_explanation": "a piece of furniture with multiple drawers for storing clothes",
+    "example_sentence": "She keeps her sweaters in the top drawer of the chest of drawers."
+  },
+  {
+    "english": "Chestnut",
+    "pronunciation": "Çesnat",
+    "turkish_meaning": "kestane",
+    "english_explanation": "a type of nut from a tree, often roasted and eaten",
+    "example_sentence": "They roasted chestnuts over an open fire."
+  },
+  {
+    "english": "Chilli",
+    "pronunciation": "Çili",
+    "turkish_meaning": "acı biber",
+    "english_explanation": "a small, hot-tasting pepper used in cooking",
+    "example_sentence": "He added extra chilli to make the dish spicier."
+  },
+  {
+    "english": "Chilly",
+    "pronunciation": "Çili",
+    "turkish_meaning": "serin, hafif soğuk",
+    "english_explanation": "uncomfortably cold",
+    "example_sentence": "It was a chilly evening, so she put on a jacket."
+  },
+  {
+    "english": "Chimney",
+    "pronunciation": "Çimni",
+    "turkish_meaning": "baca",
+    "english_explanation": "a vertical pipe that carries smoke away from a fire",
+    "example_sentence": "Smoke rose from the chimney on the cold morning."
+  },
+  {
+    "english": "Chop",
+    "pronunciation": "Çop",
+    "turkish_meaning": "doğramak, kesmek (baltayla/bıçakla)",
+    "english_explanation": "to cut something into pieces with a sharp tool",
+    "example_sentence": "She chopped the onions for the soup."
+  },
+  {
+    "english": "Chuckle",
+    "pronunciation": "Çakıl",
+    "turkish_meaning": "kıkırdamak, hafifçe gülmek",
+    "english_explanation": "to laugh quietly",
+    "example_sentence": "He gave a small chuckle at the joke."
+  },
+  {
+    "english": "Claiment",
+    "pronunciation": "Kleymınt",
+    "turkish_meaning": "hak talep eden kişi, davacı",
+    "english_explanation": "a person who makes a claim, especially in a legal or insurance context",
+    "example_sentence": "The claimant submitted documents to support the insurance request."
+  },
+  {
+    "english": "Clap",
+    "pronunciation": "Klep",
+    "turkish_meaning": "el çırpmak",
+    "english_explanation": "to strike one's hands together repeatedly, often to show approval",
+    "example_sentence": "The audience began to clap as the curtain fell."
+  },
+  {
+    "english": "Clay",
+    "pronunciation": "Kley",
+    "turkish_meaning": "kil, balçık",
+    "english_explanation": "a heavy, sticky type of earth used to make bricks and pottery",
+    "example_sentence": "The artist shaped a vase out of clay."
+  },
+  {
+    "english": "Client",
+    "pronunciation": "Klayınt",
+    "turkish_meaning": "müşteri, müvekkil",
+    "english_explanation": "a person who receives services from a professional or business",
+    "example_sentence": "The lawyer met with her client to discuss the contract."
+  },
+  {
+    "english": "Cloth",
+    "pronunciation": "Klot",
+    "turkish_meaning": "kumaş, bez",
+    "english_explanation": "woven or felted fabric made from fibers",
+    "example_sentence": "She wiped the table with a clean cloth."
+  },
+  {
+    "english": "Clutch",
+    "pronunciation": "Klaç",
+    "turkish_meaning": "debriyaj; sıkıca tutmak",
+    "english_explanation": "the pedal in a car used to change gears; also, to grasp something tightly",
+    "example_sentence": "He pressed the clutch before shifting into second gear."
+  },
+  {
+    "english": "Co-operate",
+    "pronunciation": "Kouopıreyt",
+    "turkish_meaning": "işbirliği yapmak",
+    "english_explanation": "to work together with others toward a common goal",
+    "example_sentence": "The two departments agreed to co-operate on the new project."
+  },
+  {
+    "english": "Coast",
+    "pronunciation": "Koust",
+    "turkish_meaning": "kıyı, sahil",
+    "english_explanation": "the land next to the sea",
+    "example_sentence": "They spent the summer in a small town on the coast."
+  },
+  {
+    "english": "Cock",
+    "pronunciation": "Kok",
+    "turkish_meaning": "horoz",
+    "english_explanation": "an adult male chicken",
+    "example_sentence": "The cock crowed loudly at dawn."
+  },
+  {
+    "english": "Collapse",
+    "pronunciation": "Kılaps",
+    "turkish_meaning": "çökmek, yıkılmak",
+    "english_explanation": "to fall down or break apart suddenly",
+    "example_sentence": "The old bridge collapsed during the storm."
+  },
+  {
+    "english": "Collective Agreement",
+    "pronunciation": "Kılektiv Egrimınt",
+    "turkish_meaning": "Toplu Sözleşme",
+    "english_explanation": "a written contract between an employer and a labor union setting work conditions",
+    "example_sentence": "The union signed a new collective agreement with management."
+  },
+  {
+    "english": "Colonel",
+    "pronunciation": "Körnıl",
+    "turkish_meaning": "albay",
+    "english_explanation": "a senior military officer rank, above a major",
+    "example_sentence": "The colonel gave the order to retreat."
+  },
+  {
+    "english": "Come across",
+    "pronunciation": "Kam ıkros",
+    "turkish_meaning": "rastlamak, karşılaşmak",
+    "english_explanation": "to find or meet someone or something unexpectedly",
+    "example_sentence": "I came across an old photo while cleaning the attic."
+  },
+  {
+    "english": "Comet",
+    "pronunciation": "Komıt",
+    "turkish_meaning": "kuyruklu yıldız",
+    "english_explanation": "a celestial object made of ice and dust that orbits the sun",
+    "example_sentence": "The comet was visible in the night sky for weeks."
+  },
+  {
+    "english": "Commemorate",
+    "pronunciation": "Kımemıreyt",
+    "turkish_meaning": "anmak, hatırlamak (tören ile)",
+    "english_explanation": "to honor the memory of someone or something with a ceremony",
+    "example_sentence": "The statue was built to commemorate the soldiers who died."
+  },
+  {
+    "english": "Commission",
+    "pronunciation": "Kımişın",
+    "turkish_meaning": "komisyon; görevlendirme",
+    "english_explanation": "a sum of money paid for a sale, or a group given authority to do something",
+    "example_sentence": "She earns a commission on every car she sells."
+  },
+  {
+    "english": "Commitment",
+    "pronunciation": "Kımitmınt",
+    "turkish_meaning": "bağlılık, taahhüt",
+    "english_explanation": "a promise or firm decision to do something",
+    "example_sentence": "He showed great commitment to finishing the marathon."
+  },
+  {
+    "english": "Commute",
+    "pronunciation": "Kımyut",
+    "turkish_meaning": "işe gidip gelmek (uzun yol)",
+    "english_explanation": "to travel regularly between home and work",
+    "example_sentence": "She commutes two hours every day to get to the office."
+  },
+  {
+    "english": "Compensate",
+    "pronunciation": "Kompınseyt",
+    "turkish_meaning": "tazmin etmek, telafi etmek",
+    "english_explanation": "to give something, usually money, to make up for loss or damage",
+    "example_sentence": "The airline agreed to compensate passengers for the delay."
+  },
+  {
+    "english": "Compensation",
+    "pronunciation": "Kompınseyşın",
+    "turkish_meaning": "tazminat, telafi",
+    "english_explanation": "money paid to make up for loss, damage, or injury",
+    "example_sentence": "He received compensation after the workplace accident."
+  },
+  {
+    "english": "Compose",
+    "pronunciation": "Kımpouz",
+    "turkish_meaning": "oluşturmak; beste yapmak",
+    "english_explanation": "to create or write something, especially music; also, to make up the parts of something",
+    "example_sentence": "She composed a beautiful melody for the film."
+  },
+  {
+    "english": "Composition",
+    "pronunciation": "Kompızişın",
+    "turkish_meaning": "Birleşik (bir şeyin bileşimi/yapısı)",
+    "english_explanation": "the parts that something is made of; also, a piece of music or writing",
+    "example_sentence": "The composition of the soil affects how well plants grow here."
+  },
+  {
+    "english": "Compromise",
+    "pronunciation": "Komprımayz",
+    "turkish_meaning": "uzlaşma, taviz",
+    "english_explanation": "an agreement reached by each side giving up some demands",
+    "example_sentence": "They reached a compromise after hours of negotiation."
+  },
+  {
+    "english": "Concern",
+    "pronunciation": "Kınsörn",
+    "turkish_meaning": "kaygı, ilgi; ilgilendirmek",
+    "english_explanation": "a feeling of worry, or a matter that affects someone",
+    "example_sentence": "Pollution is a growing concern in the city."
+  },
+  {
+    "english": "Condemn",
+    "pronunciation": "Kındem",
+    "turkish_meaning": "kınamak, mahkum etmek",
+    "english_explanation": "to express strong disapproval of something, or to sentence someone to punishment",
+    "example_sentence": "World leaders condemned the attack immediately."
+  },
+  {
+    "english": "Conduct",
+    "pronunciation": "Kondakt (isim) / Kındakt (fiil)",
+    "turkish_meaning": "davranış; yönetmek, yürütmek",
+    "english_explanation": "the way a person behaves, or to organize and carry out an activity",
+    "example_sentence": "The company will conduct an investigation into the complaint."
+  },
+  {
+    "english": "Confine",
+    "pronunciation": "Kınfayn",
+    "turkish_meaning": "sınırlamak, hapsetmek",
+    "english_explanation": "to keep someone or something within limits",
+    "example_sentence": "The patient was confined to bed for a week."
+  },
+  {
+    "english": "Conflict",
+    "pronunciation": "Konflikt",
+    "turkish_meaning": "çatışma, anlaşmazlık",
+    "english_explanation": "a serious disagreement or fight",
+    "example_sentence": "The conflict between the two companies lasted for years."
+  },
+  {
+    "english": "Consent",
+    "pronunciation": "Kınsent",
+    "turkish_meaning": "onay, izin",
+    "english_explanation": "permission for something to happen",
+    "example_sentence": "The doctor needed the patient's consent before the surgery."
+  },
+  {
+    "english": "Consequently",
+    "pronunciation": "Konsıkventli",
+    "turkish_meaning": "bu nedenle, sonuç olarak",
+    "english_explanation": "as a result; therefore",
+    "example_sentence": "He missed the deadline; consequently, his proposal was rejected."
+  },
+  {
+    "english": "Consign",
+    "pronunciation": "Kınsayn",
+    "turkish_meaning": "teslim etmek, göndermek",
+    "english_explanation": "to send or deliver goods, often for sale",
+    "example_sentence": "The artist consigned her paintings to the gallery for sale."
+  },
+  {
+    "english": "Consistent",
+    "pronunciation": "Kınsistınt",
+    "turkish_meaning": "tutarlı, istikrarlı",
+    "english_explanation": "always behaving or happening in the same way",
+    "example_sentence": "Her grades have been consistent throughout the semester."
+  },
+  {
+    "english": "Constitute",
+    "pronunciation": "Konstityut",
+    "turkish_meaning": "oluşturmak, teşkil etmek",
+    "english_explanation": "to be a part of a whole, or to form something",
+    "example_sentence": "These five departments constitute the entire company."
+  },
+  {
+    "english": "Constitution",
+    "pronunciation": "Konstityuşın",
+    "turkish_meaning": "anayasa; yapı (bünye)",
+    "english_explanation": "the basic principles by which a country or organization is governed",
+    "example_sentence": "The new constitution was approved by referendum."
+  },
+  {
+    "english": "Construct",
+    "pronunciation": "Kınstrakt",
+    "turkish_meaning": "inşa etmek, kurmak",
+    "english_explanation": "to build something, or to form an idea or theory",
+    "example_sentence": "Workers will construct the new bridge next year."
+  },
+  {
+    "english": "Consumption",
+    "pronunciation": "Kınsampşın",
+    "turkish_meaning": "tüketim",
+    "english_explanation": "the act of using up resources, food, or energy",
+    "example_sentence": "Electricity consumption rises sharply in the summer."
+  },
+  {
+    "english": "Contest",
+    "pronunciation": "Kontest (isim) / Kıntest (fiil)",
+    "turkish_meaning": "yarışma; itiraz etmek",
+    "english_explanation": "a competition, or to formally challenge a decision",
+    "example_sentence": "She decided to contest the result of the election."
+  },
+  {
+    "english": "Continent",
+    "pronunciation": "Kontınınt",
+    "turkish_meaning": "kıta",
+    "english_explanation": "one of the world's main landmasses, such as Asia or Africa",
+    "example_sentence": "Africa is the second largest continent in the world."
+  },
+  {
+    "english": "Contribute",
+    "pronunciation": "Kıntribyut",
+    "turkish_meaning": "katkıda bulunmak",
+    "english_explanation": "to give something, especially money, help, or ideas, toward a shared purpose",
+    "example_sentence": "Everyone on the team contributed to the project's success."
+  },
+  {
+    "english": "Convict",
+    "pronunciation": "Konvikt (isim) / Kınvikt (fiil)",
+    "turkish_meaning": "mahkum (kişi); mahkum etmek",
+    "english_explanation": "a person found guilty of a crime, or to find someone guilty in court",
+    "example_sentence": "The jury convicted him of fraud."
+  },
+  {
+    "english": "Convince",
+    "pronunciation": "Kınvins",
+    "turkish_meaning": "ikna etmek",
+    "english_explanation": "to persuade someone to believe or do something",
+    "example_sentence": "She convinced her boss to approve the new budget."
+  },
+  {
+    "english": "Cope",
+    "pronunciation": "Koup",
+    "turkish_meaning": "başa çıkmak, üstesinden gelmek",
+    "english_explanation": "to deal successfully with a difficult situation",
+    "example_sentence": "It was hard for him to cope with the loss of his job."
+  },
+  {
+    "english": "Cordon",
+    "pronunciation": "Kordın",
+    "turkish_meaning": "kordon, çevirme (polis vb.)",
+    "english_explanation": "a line of police, soldiers, or guards preventing access to an area",
+    "example_sentence": "Police set up a cordon around the crime scene."
+  },
+  {
+    "english": "Cork",
+    "pronunciation": "Kork",
+    "turkish_meaning": "mantar (şişe tıpası)",
+    "english_explanation": "a material from tree bark used to seal bottles",
+    "example_sentence": "He struggled to pull the cork out of the wine bottle."
+  },
+  {
+    "english": "Corpse",
+    "pronunciation": "Korps",
+    "turkish_meaning": "ceset",
+    "english_explanation": "a dead body, usually of a human",
+    "example_sentence": "Police found a corpse near the river."
+  },
+  {
+    "english": "Correspondent",
+    "pronunciation": "Korıspondınt",
+    "turkish_meaning": "muhabir; mektup arkadaşı",
+    "english_explanation": "a journalist who reports from a particular place, or someone who exchanges letters",
+    "example_sentence": "Our correspondent in Paris reported live from the scene."
+  },
+  {
+    "english": "Corruption",
+    "pronunciation": "Kırapşın",
+    "turkish_meaning": "yolsuzluk, rüşvet, bozulma",
+    "english_explanation": "dishonest or illegal behavior, especially by people in power",
+    "example_sentence": "The scandal exposed widespread corruption in the government."
+  },
+  {
+    "english": "Coupe",
+    "pronunciation": "Kup",
+    "turkish_meaning": "iki kapılı spor araba",
+    "english_explanation": "a car with two doors and a sloping back, usually sporty",
+    "example_sentence": "He bought a sleek black coupe last year."
+  },
+  {
+    "english": "Crane",
+    "pronunciation": "Kreyn",
+    "turkish_meaning": "vinç; turna kuşu",
+    "english_explanation": "a machine for lifting heavy objects; also, a large wading bird",
+    "example_sentence": "A crane lifted the steel beams onto the roof."
+  },
+  {
+    "english": "Crisp",
+    "pronunciation": "Krisp",
+    "turkish_meaning": "temiz, düzgün (crisp eyebrow: düzgün kaş gibi anlamda)",
+    "english_explanation": "clean, sharp, and well-defined; also, firm and slightly hard (food)",
+    "example_sentence": "She has crisp, well-shaped eyebrows."
+  },
+  {
+    "english": "Crow",
+    "pronunciation": "Krou",
+    "turkish_meaning": "karga",
+    "english_explanation": "a large black bird known for its loud call",
+    "example_sentence": "A crow perched on the fence, watching us closely."
+  },
+  {
+    "english": "Crucial",
+    "pronunciation": "Kruşıl",
+    "turkish_meaning": "En önemli an (karar vb için.)",
+    "english_explanation": "extremely important, especially in deciding the outcome of something",
+    "example_sentence": "This is a crucial moment for the negotiations."
+  },
+  {
+    "english": "Crude",
+    "pronunciation": "Krud",
+    "turkish_meaning": "Ham (Crude oil= Ham petrol)",
+    "english_explanation": "in a natural or raw state, not yet processed; also, rude or vulgar",
+    "example_sentence": "Crude oil prices rose sharply this week."
+  },
+  {
+    "english": "Curry",
+    "pronunciation": "Kari",
+    "turkish_meaning": "köri (yemek)",
+    "english_explanation": "a dish made with meat or vegetables in a spiced sauce, originally from South Asia",
+    "example_sentence": "We ordered chicken curry with rice for dinner."
+  },
+  {
+    "english": "Cushion",
+    "pronunciation": "Kuşın",
+    "turkish_meaning": "yastık, minder",
+    "english_explanation": "a soft pillow or pad used for sitting or leaning on for comfort",
+    "example_sentence": "She placed a cushion on the chair for extra comfort."
+  },
+  {
+    "english": "Daisy",
+    "pronunciation": "Deyzi",
+    "turkish_meaning": "papatya",
+    "english_explanation": "a small white flower with a yellow center",
+    "example_sentence": "She picked a daisy from the garden."
+  },
+  {
+    "english": "Date",
+    "pronunciation": "Deyt",
+    "turkish_meaning": "Hurma",
+    "english_explanation": "the sweet fruit of the date palm tree",
+    "example_sentence": "He added chopped dates to the cake batter."
+  },
+  {
+    "english": "Deadlock",
+    "pronunciation": "Dedlok",
+    "turkish_meaning": "çıkmaz, anlaşmazlık",
+    "english_explanation": "a situation in which no progress can be made because neither side will change position",
+    "example_sentence": "The negotiations ended in a deadlock."
+  },
+  {
+    "english": "Deaf",
+    "pronunciation": "Def",
+    "turkish_meaning": "Sağır",
+    "english_explanation": "unable to hear, partially or completely",
+    "example_sentence": "He has been deaf in one ear since childhood."
+  },
+  {
+    "english": "Debatable",
+    "pronunciation": "Dibeytıbıl",
+    "turkish_meaning": "tartışmaya açık, su götürür",
+    "english_explanation": "open to discussion or argument; not certain",
+    "example_sentence": "Whether the plan will work is still debatable."
+  },
+  {
+    "english": "Debate",
+    "pronunciation": "Dibeyt",
+    "turkish_meaning": "tartışma, münazara",
+    "english_explanation": "a formal discussion of opposing views on a topic",
+    "example_sentence": "The candidates had a heated debate on television."
+  },
+  {
+    "english": "Debt",
+    "pronunciation": "Det",
+    "turkish_meaning": "borç",
+    "english_explanation": "money owed to someone else",
+    "example_sentence": "She finally paid off her student debt."
+  },
+  {
+    "english": "Decay",
+    "pronunciation": "Dikey",
+    "turkish_meaning": "çürümek, bozulmak",
+    "english_explanation": "to gradually rot or be destroyed by natural processes",
+    "example_sentence": "The old wooden house began to decay over the years."
+  },
+  {
+    "english": "Decent",
+    "pronunciation": "Disınt",
+    "turkish_meaning": "düzgün, makul, dürüst",
+    "english_explanation": "satisfactory, good enough, or morally correct",
+    "example_sentence": "He earns a decent salary at his new job."
+  },
+  {
+    "english": "Decline",
+    "pronunciation": "Diklayn",
+    "turkish_meaning": "azalmak, düşüş; reddetmek",
+    "english_explanation": "to become smaller or worse, or to politely refuse an offer",
+    "example_sentence": "Sales declined sharply during the recession."
+  },
+  {
+    "english": "Decrease",
+    "pronunciation": "Dikris",
+    "turkish_meaning": "azalmak, azaltmak",
+    "english_explanation": "to become or make something smaller in size or quantity",
+    "example_sentence": "The number of accidents decreased after the new traffic law."
+  },
+  {
+    "english": "Default",
+    "pronunciation": "Difolt",
+    "turkish_meaning": "varsayılan; borcunu ödememe",
+    "english_explanation": "a preset option used automatically; also, failure to fulfill an obligation, especially financial",
+    "example_sentence": "The company defaulted on its loan payments."
+  },
+  {
+    "english": "Defer",
+    "pronunciation": "Diför",
+    "turkish_meaning": "ertelemek; (saygıyla) uymak",
+    "english_explanation": "to postpone something, or to accept someone else's decision out of respect",
+    "example_sentence": "They decided to defer the meeting until next month."
+  },
+  {
+    "english": "Deficit",
+    "pronunciation": "Defisit",
+    "turkish_meaning": "açık (bütçe), eksiklik",
+    "english_explanation": "the amount by which spending exceeds income",
+    "example_sentence": "The country is struggling with a large budget deficit."
+  },
+  {
+    "english": "Delibaretely",
+    "pronunciation": "Dilibırıtli",
+    "turkish_meaning": "kasıtlı olarak, bilerek",
+    "english_explanation": "in a way that is planned or intended, not accidental",
+    "example_sentence": "He deliberately ignored her messages."
+  },
+  {
+    "english": "Deputation",
+    "pronunciation": "Depyuteyşın",
+    "turkish_meaning": "heyet, temsilci grubu",
+    "english_explanation": "a group of people sent to represent others, often to make a request",
+    "example_sentence": "A deputation of workers met with the company's management."
+  },
+  {
+    "english": "Deputy",
+    "pronunciation": "Depyuti",
+    "turkish_meaning": "vekil, yardımcı",
+    "english_explanation": "a person appointed to act as a substitute or assistant for another",
+    "example_sentence": "The deputy manager took charge while the boss was away."
+  },
+  {
+    "english": "Desperate",
+    "pronunciation": "Despırıt",
+    "turkish_meaning": "çaresiz, ümitsiz",
+    "english_explanation": "feeling or showing a loss of hope; willing to do anything",
+    "example_sentence": "They were desperate to find a solution before the deadline."
+  },
+  {
+    "english": "Despite",
+    "pronunciation": "Dispayt",
+    "turkish_meaning": "-e rağmen",
+    "english_explanation": "without being affected by something; in spite of",
+    "example_sentence": "Despite the rain, the match continued as planned."
+  },
+  {
+    "english": "Detach",
+    "pronunciation": "Ditaç",
+    "turkish_meaning": "ayırmak, sökmek",
+    "english_explanation": "to remove or separate something from a larger piece or group",
+    "example_sentence": "Please detach the form along the dotted line."
+  },
+  {
+    "english": "Dew",
+    "pronunciation": "Dyu",
+    "turkish_meaning": "çiy (sabah nemi)",
+    "english_explanation": "tiny drops of water that form on cool surfaces overnight",
+    "example_sentence": "The morning dew covered the grass like a thin blanket."
+  },
+  {
+    "english": "Digest",
+    "pronunciation": "Dayject",
+    "turkish_meaning": "sindirmek; özet",
+    "english_explanation": "to break down food in the stomach; or a short summary of information",
+    "example_sentence": "It took her a while to digest the news about the accident."
+  },
+  {
+    "english": "Dim",
+    "pronunciation": "Dim",
+    "turkish_meaning": "loş, soluk; azaltmak",
+    "english_explanation": "not bright; to make a light less bright",
+    "example_sentence": "The lights in the cinema were dimmed before the film started."
+  },
+  {
+    "english": "Dip",
+    "pronunciation": "Dip",
+    "turkish_meaning": "daldırmak; düşüş",
+    "english_explanation": "to put something briefly into a liquid; a slight drop",
+    "example_sentence": "She dipped the bread into the soup."
+  },
+  {
+    "english": "Directory",
+    "pronunciation": "Dırektıri",
+    "turkish_meaning": "rehber, dizin",
+    "english_explanation": "a book or database listing names, addresses, or files",
+    "example_sentence": "You can find her number in the telephone directory."
+  },
+  {
+    "english": "Disclose",
+    "pronunciation": "Dısklouz",
+    "turkish_meaning": "açıklamak, ifşa etmek",
+    "english_explanation": "to make secret information known to others",
+    "example_sentence": "The company was forced to disclose its financial losses."
+  },
+  {
+    "english": "Dismay",
+    "pronunciation": "Dismey",
+    "turkish_meaning": "dehşet, hayal kırıklığı; yıldırmak",
+    "english_explanation": "a strong feeling of shock and worry; to make someone feel shocked or disappointed",
+    "example_sentence": "She looked at the damage with dismay."
+  },
+  {
+    "english": "Dispatch",
+    "pronunciation": "Dispäç",
+    "turkish_meaning": "göndermek; sevkiyat",
+    "english_explanation": "to send someone or something quickly to a place for a purpose",
+    "example_sentence": "The company dispatched a team to handle the emergency."
+  },
+  {
+    "english": "Distinction",
+    "pronunciation": "Distinkşın",
+    "turkish_meaning": "ayrım, üstünlük, şeref",
+    "english_explanation": "a clear difference; or outstanding achievement",
+    "example_sentence": "She graduated with distinction from the university."
+  },
+  {
+    "english": "Dive",
+    "pronunciation": "Dayv",
+    "turkish_meaning": "dalmak; dalış",
+    "english_explanation": "to jump headfirst into water; to move downward quickly",
+    "example_sentence": "He dove into the pool to save the child."
+  },
+  {
+    "english": "Diver",
+    "pronunciation": "Dayvır",
+    "turkish_meaning": "dalgıç",
+    "english_explanation": "a person who dives underwater, especially as a sport or job",
+    "example_sentence": "The diver explored the coral reef for hours."
+  },
+  {
+    "english": "Dominate",
+    "pronunciation": "Domineit",
+    "turkish_meaning": "hâkim olmak, egemen olmak",
+    "english_explanation": "to have control or power over something or someone",
+    "example_sentence": "The team dominated the game from start to finish."
+  },
+  {
+    "english": "Doom",
+    "pronunciation": "Dum",
+    "turkish_meaning": "yıkım, kaçınılmaz son",
+    "english_explanation": "death, destruction, or a terrible fate that cannot be avoided",
+    "example_sentence": "The soldier walked toward his doom without fear."
+  },
+  {
+    "english": "Doomsday",
+    "pronunciation": "Dumzdey",
+    "turkish_meaning": "kıyamet günü",
+    "english_explanation": "the last day of the world; a time of complete destruction",
+    "example_sentence": "Some people believe doomsday is approaching."
+  },
+  {
+    "english": "Dose",
+    "pronunciation": "Dous",
+    "turkish_meaning": "doz, miktar (ilaç)",
+    "english_explanation": "a measured amount of medicine or a substance taken at one time",
+    "example_sentence": "The doctor prescribed two doses of antibiotics per day."
+  },
+  {
+    "english": "Down Payment",
+    "pronunciation": "Daun Peymınt",
+    "turkish_meaning": "peşinat",
+    "english_explanation": "an initial payment made when buying something expensive, with the rest paid later",
+    "example_sentence": "They made a down payment on their new house."
+  },
+  {
+    "english": "Doze",
+    "pronunciation": "Douz",
+    "turkish_meaning": "uyuklamak, şekerleme yapmak",
+    "english_explanation": "to sleep lightly or for a short time",
+    "example_sentence": "He dozed off during the long lecture."
+  },
+  {
+    "english": "Dozen",
+    "pronunciation": "Dazın",
+    "turkish_meaning": "düzine (12 adet)",
+    "english_explanation": "a group of twelve of something",
+    "example_sentence": "She bought a dozen eggs from the market."
+  },
+  {
+    "english": "Draft",
+    "pronunciation": "Draft",
+    "turkish_meaning": "taslak; askerlik celbi",
+    "english_explanation": "a rough first version of a document; or to call someone for military service",
+    "example_sentence": "He wrote three drafts before finishing the essay."
+  },
+  {
+    "english": "Drag",
+    "pronunciation": "Dreg",
+    "turkish_meaning": "sürüklemek; yük",
+    "english_explanation": "to pull something heavy along the ground; something boring or tiring",
+    "example_sentence": "She dragged the heavy suitcase up the stairs."
+  },
+  {
+    "english": "Drain",
+    "pronunciation": "Dreyn",
+    "turkish_meaning": "boşaltmak, süzmek; lağım",
+    "english_explanation": "to remove liquid from something; a pipe that carries water away",
+    "example_sentence": "Please drain the pasta before adding the sauce."
+  },
+  {
+    "english": "Draught",
+    "pronunciation": "Draft",
+    "turkish_meaning": "cereyan; bir yudum; taslak",
+    "english_explanation": "a current of cold air; a drink taken in one swallow",
+    "example_sentence": "There was a cold draught coming through the window."
+  },
+  {
+    "english": "Draughts",
+    "pronunciation": "Drafts",
+    "turkish_meaning": "dama oyunu",
+    "english_explanation": "a board game played by two people with round pieces (called checkers in American English)",
+    "example_sentence": "They spent the afternoon playing draughts."
+  },
+  {
+    "english": "Drawer",
+    "pronunciation": "Drour",
+    "turkish_meaning": "çekmece",
+    "english_explanation": "a sliding box in a piece of furniture used for storing things",
+    "example_sentence": "She kept her jewelry in the top drawer of the dresser."
+  },
+  {
+    "english": "Drawn",
+    "pronunciation": "Dron",
+    "turkish_meaning": "çekilmiş; yorgun görünümlü; berabere",
+    "english_explanation": "looking tired and strained; pulled; a tied result in a game",
+    "example_sentence": "His face looked pale and drawn after the long illness."
+  },
+  {
+    "english": "Duckling",
+    "pronunciation": "Dakling",
+    "turkish_meaning": "ördek yavrusu",
+    "english_explanation": "a young duck",
+    "example_sentence": "The ugly duckling grew into a beautiful swan."
+  },
+  {
+    "english": "Duel",
+    "pronunciation": "Dyuıl",
+    "turkish_meaning": "düello; iki kişilik rekabet",
+    "english_explanation": "a formal fight between two people with weapons; any contest between two sides",
+    "example_sentence": "The two knights agreed to settle the argument with a duel."
+  },
+  {
+    "english": "Dustbin",
+    "pronunciation": "Dastbin",
+    "turkish_meaning": "çöp kutusu",
+    "english_explanation": "a large container kept outside for putting rubbish in",
+    "example_sentence": "Please put the rubbish in the dustbin."
+  },
+  {
+    "english": "Dye",
+    "pronunciation": "Day",
+    "turkish_meaning": "boyamak; boya",
+    "english_explanation": "to change the colour of something using a special substance",
+    "example_sentence": "She decided to dye her hair red."
+  },
+  {
+    "english": "Dynasty",
+    "pronunciation": "Daynısti",
+    "turkish_meaning": "hanedan, sülale",
+    "english_explanation": "a series of rulers from the same family; a powerful family or group that stays powerful for a long time",
+    "example_sentence": "The Tang Dynasty is considered a golden age in Chinese history."
+  },
+  {
+    "english": "Eel",
+    "pronunciation": "İl",
+    "turkish_meaning": "yılan balığı",
+    "english_explanation": "a long, thin fish that looks like a snake",
+    "example_sentence": "Eels can live in both salt water and fresh water."
+  },
+  {
+    "english": "Elapse",
+    "pronunciation": "İläps",
+    "turkish_meaning": "geçmek (zaman için)",
+    "english_explanation": "(of time) to pass",
+    "example_sentence": "Several years elapsed before they met again."
+  },
+  {
+    "english": "Embark",
+    "pronunciation": "İmbark",
+    "turkish_meaning": "gemiye/uçağa binmek; başlamak",
+    "english_explanation": "to get on a ship or plane; to begin a new project or activity",
+    "example_sentence": "They embarked on a new business venture together."
+  },
+  {
+    "english": "Embrace",
+    "pronunciation": "İmbreys",
+    "turkish_meaning": "kucaklamak; benimsemek",
+    "english_explanation": "to hold someone in your arms; to accept something enthusiastically",
+    "example_sentence": "She embraced her daughter at the airport."
+  },
+  {
+    "english": "Emphasis",
+    "pronunciation": "Emfısis",
+    "turkish_meaning": "vurgu, önem",
+    "english_explanation": "special importance or attention given to something",
+    "example_sentence": "The school places great emphasis on sport."
+  },
+  {
+    "english": "Emphatic",
+    "pronunciation": "İmfätik",
+    "turkish_meaning": "vurgulu, kesin",
+    "english_explanation": "said or done in a strong, clear way",
+    "example_sentence": "He gave an emphatic no to the proposal."
+  },
+  {
+    "english": "Enormous",
+    "pronunciation": "İnormus",
+    "turkish_meaning": "dev gibi, çok büyük",
+    "english_explanation": "extremely large in size or amount",
+    "example_sentence": "The earthquake caused enormous damage to the city."
+  },
+  {
+    "english": "Entitle",
+    "pronunciation": "İntaytıl",
+    "turkish_meaning": "hak tanımak; başlık vermek",
+    "english_explanation": "to give someone the right to do or have something",
+    "example_sentence": "This ticket entitles you to one free meal."
+  },
+  {
+    "english": "Epitaph",
+    "pronunciation": "Epitäf",
+    "turkish_meaning": "mezar yazıtı",
+    "english_explanation": "words written on a gravestone in memory of the person buried there",
+    "example_sentence": "The epitaph on his tombstone read 'A loving father and friend'."
+  },
+  {
+    "english": "Equip",
+    "pronunciation": "İkvip",
+    "turkish_meaning": "donatmak, teçhiz etmek",
+    "english_explanation": "to provide someone or something with the necessary tools or skills",
+    "example_sentence": "The soldiers were equipped with the latest weapons."
+  },
+  {
+    "english": "Estate",
+    "pronunciation": "İsteyt",
+    "turkish_meaning": "mülk, miras; arazi",
+    "english_explanation": "a large area of land owned by one person; all the property left by someone after death",
+    "example_sentence": "He inherited a large estate in the countryside."
+  },
+  {
+    "english": "Evacuate",
+    "pronunciation": "İväkyueyt",
+    "turkish_meaning": "tahliye etmek",
+    "english_explanation": "to move people from a dangerous place to somewhere safe",
+    "example_sentence": "The building was evacuated after a bomb threat."
+  },
+  {
+    "english": "Exceed",
+    "pronunciation": "İksid",
+    "turkish_meaning": "aşmak, geçmek",
+    "english_explanation": "to be greater than a number or amount; to go beyond a limit",
+    "example_sentence": "Do not exceed the speed limit."
+  },
+  {
+    "english": "Exclaim",
+    "pronunciation": "İkskleym",
+    "turkish_meaning": "haykırmak, bağırmak",
+    "english_explanation": "to say something suddenly and loudly because of surprise or strong emotion",
+    "example_sentence": "'What a beautiful day!' she exclaimed."
+  },
+  {
+    "english": "Exclusive",
+    "pronunciation": "İkskluziv",
+    "turkish_meaning": "özel, sadece belirli kişilere ait",
+    "english_explanation": "limited to only one person or group; very expensive and only for the rich",
+    "example_sentence": "This is an exclusive club for members only."
+  },
+  {
+    "english": "Execute",
+    "pronunciation": "Eksıkyut",
+    "turkish_meaning": "idam etmek; uygulamak",
+    "english_explanation": "to carry out a plan or order; to kill someone as a legal punishment",
+    "example_sentence": "The plan was executed perfectly by the team."
+  },
+  {
+    "english": "Exhaust",
+    "pronunciation": "İgzost",
+    "turkish_meaning": "tüketmek, bitirmek; egzoz",
+    "english_explanation": "to make someone very tired; to use up all of something; the gas from an engine",
+    "example_sentence": "The long hike exhausted all of them."
+  },
+  {
+    "english": "Exhibit",
+    "pronunciation": "İgzibit",
+    "turkish_meaning": "sergilemek; sergi",
+    "english_explanation": "to show something publicly; an item shown in a museum or gallery",
+    "example_sentence": "The museum will exhibit ancient Roman artifacts."
+  },
+  {
+    "english": "Exhibition",
+    "pronunciation": "Eksibişın",
+    "turkish_meaning": "sergi, fuar",
+    "english_explanation": "a public display of art, products, or other things",
+    "example_sentence": "We visited a photography exhibition at the art gallery."
+  },
+  {
+    "english": "Expand",
+    "pronunciation": "İkspänd",
+    "turkish_meaning": "genişlemek, büyümek",
+    "english_explanation": "to become larger or to make something larger",
+    "example_sentence": "The company plans to expand its business into new markets."
+  },
+  {
+    "english": "Expansion",
+    "pronunciation": "İkspänşın",
+    "turkish_meaning": "genişleme, büyüme",
+    "english_explanation": "the process of becoming or making something larger",
+    "example_sentence": "The expansion of the city led to traffic problems."
+  },
+  {
+    "english": "Expire",
+    "pronunciation": "İkspayr",
+    "turkish_meaning": "sona ermek, geçersiz olmak",
+    "english_explanation": "to come to an end; (of a document or agreement) to be no longer valid",
+    "example_sentence": "My passport expired last year and I need to renew it."
+  },
+  {
+    "english": "Explosive",
+    "pronunciation": "İksplousiv",
+    "turkish_meaning": "patlayıcı; ani ve şiddetli",
+    "english_explanation": "a substance that can cause an explosion; able to explode",
+    "example_sentence": "The construction workers used explosives to clear the rocks."
+  },
+  {
+    "english": "Extinguish",
+    "pronunciation": "İkstingwış",
+    "turkish_meaning": "söndürmek",
+    "english_explanation": "to cause a fire or light to stop burning",
+    "example_sentence": "Firefighters worked hard to extinguish the blaze."
+  },
+  {
+    "english": "Eyebrow",
+    "pronunciation": "Aybrau",
+    "turkish_meaning": "kaş",
+    "english_explanation": "the strip of hair above each eye",
+    "example_sentence": "She raised an eyebrow in surprise."
+  },
+  {
+    "english": "Eyelash",
+    "pronunciation": "Ayläş",
+    "turkish_meaning": "kirpik",
+    "english_explanation": "one of the short hairs that grow along the edge of the eyelid",
+    "example_sentence": "She curled her eyelashes before applying mascara."
+  },
+  {
+    "english": "Eyelid",
+    "pronunciation": "Aylid",
+    "turkish_meaning": "göz kapağı",
+    "english_explanation": "either of the two pieces of skin that can cover each eye",
+    "example_sentence": "His eyelids drooped as he became sleepy."
+  },
+  {
+    "english": "Fable",
+    "pronunciation": "Feybıl",
+    "turkish_meaning": "fabl, masal (ders içeren)",
+    "english_explanation": "a short story with animals as characters that teaches a moral lesson",
+    "example_sentence": "Aesop's fables are still read by children all over the world."
+  },
+  {
+    "english": "Fabulous",
+    "pronunciation": "Fäbyulıs",
+    "turkish_meaning": "harika, muhteşem",
+    "english_explanation": "extremely good; wonderful",
+    "example_sentence": "She looked fabulous in her new dress."
+  },
+  {
+    "english": "Fancy",
+    "pronunciation": "Fänsi",
+    "turkish_meaning": "süslü; istemek; hayal etmek",
+    "english_explanation": "elaborate or expensive; to want something; to imagine",
+    "example_sentence": "Do you fancy going out for dinner tonight?"
+  },
+  {
+    "english": "Fed up",
+    "pronunciation": "Fed ap",
+    "turkish_meaning": "bıkmış, usanmış",
+    "english_explanation": "bored, annoyed, or unhappy, especially with a situation that has continued too long",
+    "example_sentence": "I'm fed up with waiting for the bus every morning."
+  },
+  {
+    "english": "Ferry",
+    "pronunciation": "Feri",
+    "turkish_meaning": "feribot; taşımak",
+    "english_explanation": "a boat that carries people and vehicles across water; to transport",
+    "example_sentence": "We took the ferry across the river."
+  },
+  {
+    "english": "Fertile",
+    "pronunciation": "Förtıl",
+    "turkish_meaning": "verimli (toprak); üretken",
+    "english_explanation": "(of land) able to produce many plants; able to produce young",
+    "example_sentence": "The Nile valley has some of the most fertile land in the world."
+  },
+  {
+    "english": "Fertilize",
+    "pronunciation": "Förtılayz",
+    "turkish_meaning": "gübrelemek; döllemek",
+    "english_explanation": "to add substances to soil to make it more fertile; to cause an egg to be fertilized",
+    "example_sentence": "Farmers fertilize their fields in spring to improve the harvest."
+  },
+  {
+    "english": "Fiction",
+    "pronunciation": "Fikşın",
+    "turkish_meaning": "kurgu, roman (türü)",
+    "english_explanation": "stories and novels about imaginary events and people",
+    "example_sentence": "She prefers reading fiction to non-fiction books."
+  },
+  {
+    "english": "Fig",
+    "pronunciation": "Fig",
+    "turkish_meaning": "incir",
+    "english_explanation": "a soft sweet fruit with many seeds inside, often dried",
+    "example_sentence": "The market stall was selling fresh figs."
+  },
+  {
+    "english": "Fire brigade",
+    "pronunciation": "Fayr brigheyd",
+    "turkish_meaning": "itfaiye",
+    "english_explanation": "an organization of people trained to put out fires",
+    "example_sentence": "The fire brigade arrived within minutes of the call."
+  },
+  {
+    "english": "Fiscal",
+    "pronunciation": "Fiskıl",
+    "turkish_meaning": "mali, fiskal",
+    "english_explanation": "relating to government money or financial matters",
+    "example_sentence": "The government announced new fiscal policies to reduce debt."
+  },
+  {
+    "english": "Flea",
+    "pronunciation": "Fli",
+    "turkish_meaning": "pire",
+    "english_explanation": "a very small jumping insect that feeds on the blood of animals and humans",
+    "example_sentence": "The dog had fleas so we took it to the vet."
+  },
+  {
+    "english": "Flee",
+    "pronunciation": "Fli",
+    "turkish_meaning": "kaçmak (tehlikeden)",
+    "english_explanation": "to run away from a place or situation of danger",
+    "example_sentence": "Thousands of people had to flee the country because of the war."
+  },
+  {
+    "english": "Fleet",
+    "pronunciation": "Flit",
+    "turkish_meaning": "filo (araç/gemi grubu)",
+    "english_explanation": "a group of ships, aircraft, or vehicles",
+    "example_sentence": "The navy sent a fleet of warships to the region."
+  },
+  {
+    "english": "Flipper",
+    "pronunciation": "Flipır",
+    "turkish_meaning": "yüzgeç; dalış paleti",
+    "english_explanation": "a broad flat limb used by sea animals for swimming; a rubber shoe used in swimming",
+    "example_sentence": "Seals use their flippers to swim very fast."
+  },
+  {
+    "english": "Florist",
+    "pronunciation": "Florist",
+    "turkish_meaning": "çiçekçi",
+    "english_explanation": "a person who sells flowers and plants",
+    "example_sentence": "She ordered a bouquet from the local florist."
+  },
+  {
+    "english": "Foam Rubber",
+    "pronunciation": "Foum Rabır",
+    "turkish_meaning": "sünger (köpük kauçuk)",
+    "english_explanation": "a soft, light material made from rubber, used for cushions and mattresses",
+    "example_sentence": "The sofa cushions were made of foam rubber."
+  },
+  {
+    "english": "Folk",
+    "pronunciation": "Fouk",
+    "turkish_meaning": "halk; insanlar",
+    "english_explanation": "people in general; traditional customs of ordinary people",
+    "example_sentence": "Folk music has been passed down through generations."
+  },
+  {
+    "english": "Forge",
+    "pronunciation": "Forc",
+    "turkish_meaning": "sahte üretmek; dövmek (metal); ocak",
+    "english_explanation": "to make a copy of something in order to deceive; to shape metal by heating and hammering",
+    "example_sentence": "He was arrested for trying to forge a passport."
+  },
+  {
+    "english": "Forger",
+    "pronunciation": "Forcır",
+    "turkish_meaning": "sahtekâr, kalpazan",
+    "english_explanation": "a person who makes illegal copies of documents, money, or art",
+    "example_sentence": "The forger was caught after selling a fake painting."
+  },
+  {
+    "english": "Forthwith",
+    "pronunciation": "Forthwith",
+    "turkish_meaning": "derhal, hemen",
+    "english_explanation": "immediately; without delay (formal)",
+    "example_sentence": "You are required to leave the premises forthwith."
+  },
+  {
+    "english": "Foul",
+    "pronunciation": "Faul",
+    "turkish_meaning": "kötü, pis; faul (spor)",
+    "english_explanation": "very unpleasant or offensive; an action in sport that breaks the rules",
+    "example_sentence": "The referee stopped the game after a foul."
+  },
+  {
+    "english": "Found",
+    "pronunciation": "Faund",
+    "turkish_meaning": "kurmak, tesis etmek",
+    "english_explanation": "to establish or create an organisation or institution",
+    "example_sentence": "The university was founded in 1889."
+  },
+  {
+    "english": "Frank",
+    "pronunciation": "Fränk",
+    "turkish_meaning": "açık sözlü, dürüst",
+    "english_explanation": "honest and direct in speech, even if it seems rude",
+    "example_sentence": "Let me be frank with you — the report needs a lot of work."
+  },
+  {
+    "english": "Freight",
+    "pronunciation": "Freyt",
+    "turkish_meaning": "yük, navlun",
+    "english_explanation": "goods transported by trucks, trains, ships, or aircraft",
+    "example_sentence": "The ship was carrying a freight of electronics."
+  },
+  {
+    "english": "Frontier",
+    "pronunciation": "Frantir",
+    "turkish_meaning": "sınır, hudut; yeni keşfedilen alan",
+    "english_explanation": "the border between two countries; the limit of what is known or explored",
+    "example_sentence": "Scientists are pushing the frontiers of medical research."
+  },
+  {
+    "english": "Fry",
+    "pronunciation": "Fray",
+    "turkish_meaning": "kızartmak",
+    "english_explanation": "to cook food in hot oil or fat",
+    "example_sentence": "She fried the eggs in butter."
+  },
+  {
+    "english": "Furthermore",
+    "pronunciation": "Fördhırmour",
+    "turkish_meaning": "ayrıca, bunun yanı sıra",
+    "english_explanation": "in addition to what has just been said (formal)",
+    "example_sentence": "The plan is costly; furthermore, it is unlikely to succeed."
+  },
+  {
+    "english": "Fuse",
+    "pronunciation": "Fyuz",
+    "turkish_meaning": "sigorta; birleştirmek",
+    "english_explanation": "a safety device in electrical equipment; to join or blend together",
+    "example_sentence": "The fuse blew when she plugged in the heater."
+  },
+  {
+    "english": "Fuss",
+    "pronunciation": "Fas",
+    "turkish_meaning": "yaygara, telaş",
+    "english_explanation": "unnecessary worry or excitement about something small",
+    "example_sentence": "Don't make such a fuss — it's just a small scratch."
+  },
+  {
+    "english": "Gaol",
+    "pronunciation": "Ceyl",
+    "turkish_meaning": "hapishane (Britanya İngilizcesi)",
+    "english_explanation": "a prison (British spelling of 'jail')",
+    "example_sentence": "He was sent to gaol for five years."
+  },
+  {
+    "english": "Germ",
+    "pronunciation": "Cörm",
+    "turkish_meaning": "mikrop, bakteri",
+    "english_explanation": "a very small organism that causes disease; the beginning of an idea",
+    "example_sentence": "Wash your hands to stop germs from spreading."
+  },
+  {
+    "english": "Globe",
+    "pronunciation": "Gloub",
+    "turkish_meaning": "küre, dünya",
+    "english_explanation": "the world; a round model of the Earth",
+    "example_sentence": "The internet has connected people across the globe."
+  },
+  {
+    "english": "Greengrocer",
+    "pronunciation": "Gringrosır",
+    "turkish_meaning": "manav",
+    "english_explanation": "a shopkeeper who sells fruit and vegetables",
+    "example_sentence": "She bought tomatoes and cucumbers from the greengrocer."
+  },
+  {
+    "english": "Grumble",
+    "pronunciation": "Grambıl",
+    "turkish_meaning": "homurdanmak, şikâyet etmek",
+    "english_explanation": "to complain in a bad-tempered way",
+    "example_sentence": "He grumbled about the cold weather all morning."
+  },
+  {
+    "english": "Guided Missile",
+    "pronunciation": "Gaydıd Misıl",
+    "turkish_meaning": "güdümlü füze",
+    "english_explanation": "a missile whose direction can be controlled after it has been launched",
+    "example_sentence": "The army used guided missiles to hit the target precisely."
+  },
+  {
+    "english": "Gulf",
+    "pronunciation": "Galf",
+    "turkish_meaning": "körfez; büyük uçurum",
+    "english_explanation": "a large area of sea partly surrounded by land; a large difference between people",
+    "example_sentence": "There is a growing gulf between the rich and the poor."
+  },
+  {
+    "english": "Halt",
+    "pronunciation": "Holt",
+    "turkish_meaning": "durmak, durdurmak; dur",
+    "english_explanation": "to stop moving or to make something stop",
+    "example_sentence": "The officer shouted 'Halt!' and the soldier stopped."
+  },
+  {
+    "english": "Handicap",
+    "pronunciation": "Händikhäp",
+    "turkish_meaning": "engel, dezavantaj; handikap",
+    "english_explanation": "a condition that limits what someone can do; a disadvantage",
+    "example_sentence": "His lack of experience was a serious handicap in the competition."
+  },
+  {
+    "english": "Head Quarters",
+    "pronunciation": "Hed Kvortırz",
+    "turkish_meaning": "genel merkez, karargâh",
+    "english_explanation": "the main office or centre of control of an organisation",
+    "example_sentence": "The company's headquarters are located in New York."
+  },
+  {
+    "english": "Headline",
+    "pronunciation": "Hedlayn",
+    "turkish_meaning": "manşet, başlık",
+    "english_explanation": "the title of a newspaper article; to be the main performer",
+    "example_sentence": "The story made the headline of every newspaper."
+  },
+  {
+    "english": "Heritage",
+    "pronunciation": "Heritıc",
+    "turkish_meaning": "miras, kültürel değerler",
+    "english_explanation": "the traditions, buildings, and values of a country or group that are passed from one generation to the next",
+    "example_sentence": "The old castle is an important part of our national heritage."
+  },
+  {
+    "english": "Hinge",
+    "pronunciation": "Hinc",
+    "turkish_meaning": "menteşe; bağlı olmak",
+    "english_explanation": "a metal joint on which a door or lid opens and closes; to depend on something",
+    "example_sentence": "The door swung open on its hinges."
+  },
+  {
+    "english": "Holy",
+    "pronunciation": "Houli",
+    "turkish_meaning": "kutsal, mübarek",
+    "english_explanation": "connected with God or religion; regarded as sacred",
+    "example_sentence": "Jerusalem is a holy city for three major religions."
+  },
+  {
+    "english": "Hook",
+    "pronunciation": "Huk",
+    "turkish_meaning": "kanca; takılmak",
+    "english_explanation": "a curved piece of metal or plastic used for hanging things; to catch with a hook",
+    "example_sentence": "She hung her coat on the hook by the door."
+  },
+  {
+    "english": "Hose",
+    "pronunciation": "Houz",
+    "turkish_meaning": "hortum; taytlar",
+    "english_explanation": "a flexible tube used to carry water; stockings or tights",
+    "example_sentence": "He used a hose to water the garden."
+  },
+  {
+    "english": "Hubbub",
+    "pronunciation": "Habab",
+    "turkish_meaning": "gürültü, kargaşa",
+    "english_explanation": "a loud mixture of sounds caused by a lot of people talking at the same time",
+    "example_sentence": "There was a great hubbub in the marketplace."
+  },
+  {
+    "english": "Hush",
+    "pronunciation": "Haş",
+    "turkish_meaning": "sus; sessizlik",
+    "english_explanation": "to tell someone to be quiet; a sudden silence",
+    "example_sentence": "A hush fell over the crowd when the president walked in."
+  },
+  {
+    "english": "Hut",
+    "pronunciation": "Hat",
+    "turkish_meaning": "kulübe, baraka",
+    "english_explanation": "a small, simple building with one or two rooms",
+    "example_sentence": "The soldiers slept in wooden huts during the war."
+  },
+  {
+    "english": "Ignition",
+    "pronunciation": "İgnişın",
+    "turkish_meaning": "ateşleme; kontak",
+    "english_explanation": "the process of starting to burn; the device that starts an engine",
+    "example_sentence": "She turned the key in the ignition to start the car."
+  },
+  {
+    "english": "Ignore",
+    "pronunciation": "İgnour",
+    "turkish_meaning": "görmezden gelmek",
+    "english_explanation": "to pay no attention to someone or something",
+    "example_sentence": "He ignored all the warning signs and continued driving."
+  },
+  {
+    "english": "Illustrate",
+    "pronunciation": "İlıstreyt",
+    "turkish_meaning": "resimlemek; örneklemek",
+    "english_explanation": "to add pictures to a text; to make something clear by using examples",
+    "example_sentence": "The teacher used diagrams to illustrate the concept."
+  },
+  {
+    "english": "Imitate",
+    "pronunciation": "İmiteyt",
+    "turkish_meaning": "taklit etmek",
+    "english_explanation": "to copy the way someone speaks, moves, or behaves",
+    "example_sentence": "Children often imitate the behaviour of their parents."
+  },
+  {
+    "english": "Immoral",
+    "pronunciation": "İmmorıl",
+    "turkish_meaning": "ahlaksız, ahlaka aykırı",
+    "english_explanation": "not following accepted standards of good behaviour",
+    "example_sentence": "Many people consider corruption to be deeply immoral."
+  },
+  {
+    "english": "Impair",
+    "pronunciation": "İmpeyr",
+    "turkish_meaning": "zayıflatmak, bozmak",
+    "english_explanation": "to damage or weaken something so that it is less effective",
+    "example_sentence": "Lack of sleep can seriously impair your ability to concentrate."
+  },
+  {
+    "english": "Implement",
+    "pronunciation": "İmpliment",
+    "turkish_meaning": "uygulamak; araç, gereç",
+    "english_explanation": "to put a plan or system into action; a tool or piece of equipment",
+    "example_sentence": "The new law will be implemented next year."
+  },
+  {
+    "english": "Imply",
+    "pronunciation": "İmplay",
+    "turkish_meaning": "ima etmek, çıkarımda bulunmak",
+    "english_explanation": "to suggest something without saying it directly",
+    "example_sentence": "Are you implying that I am lying?"
+  },
+  {
+    "english": "Incentive",
+    "pronunciation": "İnsentiv",
+    "turkish_meaning": "teşvik, güdü",
+    "english_explanation": "something that encourages a person to do something",
+    "example_sentence": "The company offered bonuses as an incentive to work harder."
+  },
+  {
+    "english": "Incidentally",
+    "pronunciation": "İnsidentıli",
+    "turkish_meaning": "bu arada, tesadüfen",
+    "english_explanation": "used to add a comment or piece of information that is not directly related to the main subject",
+    "example_sentence": "Incidentally, did you hear that Tom got promoted?"
+  },
+  {
+    "english": "Indefinite",
+    "pronunciation": "İndefiknit",
+    "turkish_meaning": "belirsiz, sonsuz",
+    "english_explanation": "lasting for an unknown or unstated length of time; not clearly defined",
+    "example_sentence": "The meeting was postponed for an indefinite period."
+  },
+  {
+    "english": "Indemnify",
+    "pronunciation": "İndemnifay",
+    "turkish_meaning": "tazmin etmek, zararı karşılamak",
+    "english_explanation": "to compensate someone for harm or loss; to protect against future loss",
+    "example_sentence": "The insurance company agreed to indemnify the homeowners after the flood."
+  },
+  {
+    "english": "Indemnity",
+    "pronunciation": "İndemniti",
+    "turkish_meaning": "tazminat, zarar karşılığı",
+    "english_explanation": "protection or insurance against damage or loss; compensation for damage",
+    "example_sentence": "The contract included an indemnity clause."
+  },
+  {
+    "english": "Indorse",
+    "pronunciation": "İndors",
+    "turkish_meaning": "onaylamak; ciro etmek",
+    "english_explanation": "to sign the back of a cheque; to publicly support something (variant of 'endorse')",
+    "example_sentence": "He indorsed the cheque before depositing it."
+  },
+  {
+    "english": "Endorsement",
+    "pronunciation": "İndorsmınt",
+    "turkish_meaning": "onay; ciro; reklam desteği",
+    "english_explanation": "public support for someone or something; a signature on the back of a cheque",
+    "example_sentence": "The athlete received a large endorsement deal from the sports brand."
+  },
+  {
+    "english": "Inevitable",
+    "pronunciation": "İnevitıbıl",
+    "turkish_meaning": "kaçınılmaz",
+    "english_explanation": "certain to happen and impossible to prevent",
+    "example_sentence": "Change is inevitable in any growing organisation."
+  },
+  {
+    "english": "Inflate",
+    "pronunciation": "İnfleyt",
+    "turkish_meaning": "şişirmek; enflasyona yol açmak",
+    "english_explanation": "to fill something with air or gas; to increase prices or numbers beyond a real level",
+    "example_sentence": "He inflated the tyres before the long journey."
+  },
+  {
+    "english": "Initiative",
+    "pronunciation": "İnişıtiv",
+    "turkish_meaning": "inisiyatif; girişim",
+    "english_explanation": "the ability to decide and act on your own; a new plan or action to solve a problem",
+    "example_sentence": "She showed great initiative by solving the problem without being asked."
+  },
+  {
+    "english": "Insolvent",
+    "pronunciation": "İnsolvınt",
+    "turkish_meaning": "iflas etmiş, ödeme gücü olmayan",
+    "english_explanation": "not having enough money to pay debts; bankrupt",
+    "example_sentence": "The company was declared insolvent and had to close."
+  },
+  {
+    "english": "Inspire",
+    "pronunciation": "İnspayr",
+    "turkish_meaning": "ilham vermek",
+    "english_explanation": "to make someone feel that they want to do something great or creative",
+    "example_sentence": "Her courage inspired everyone around her."
+  },
+  {
+    "english": "Instant",
+    "pronunciation": "İnstınt",
+    "turkish_meaning": "an; anlık, hazır",
+    "english_explanation": "happening immediately; a very short period of time",
+    "example_sentence": "Instant noodles are quick and easy to prepare."
+  },
+  {
+    "english": "Insulate",
+    "pronunciation": "İnsyuleyt",
+    "turkish_meaning": "yalıtmak, izole etmek",
+    "english_explanation": "to cover something with a material that prevents heat, sound, or electricity from passing through",
+    "example_sentence": "The walls were insulated to keep the house warm in winter."
+  },
+  {
+    "english": "Insult",
+    "pronunciation": "İnsalt",
+    "turkish_meaning": "hakaret etmek; hakaret",
+    "english_explanation": "to speak to someone in a rude or offensive way; a rude or offensive remark",
+    "example_sentence": "He felt deeply insulted by her comment."
+  },
+  {
+    "english": "Intangible",
+    "pronunciation": "İntäncibl",
+    "turkish_meaning": "soyut, elle tutulamaz",
+    "english_explanation": "difficult to define or measure; not physical",
+    "example_sentence": "Brand reputation is an intangible asset of great value."
+  },
+  {
+    "english": "Intense",
+    "pronunciation": "İntens",
+    "turkish_meaning": "yoğun, şiddetli",
+    "english_explanation": "very strong or extreme; very serious and concentrated",
+    "example_sentence": "The heat was so intense that we had to stay indoors."
+  },
+  {
+    "english": "Intensive",
+    "pronunciation": "İntensiv",
+    "turkish_meaning": "yoğun (çalışma/bakım)",
+    "english_explanation": "involving a lot of effort or activity in a short time",
+    "example_sentence": "She completed an intensive English course in two weeks."
+  },
+  {
+    "english": "Interfere",
+    "pronunciation": "İntırfir",
+    "turkish_meaning": "karışmak, müdahale etmek",
+    "english_explanation": "to get involved in a situation when you are not wanted or needed",
+    "example_sentence": "Please don't interfere in matters that don't concern you."
+  },
+  {
+    "english": "Intestines",
+    "pronunciation": "İntestinz",
+    "turkish_meaning": "bağırsaklar",
+    "english_explanation": "the long tube in the body that food passes through after leaving the stomach",
+    "example_sentence": "The surgeon operated on the patient's intestines."
+  },
+  {
+    "english": "Invade",
+    "pronunciation": "İnveyd",
+    "turkish_meaning": "işgal etmek, istila etmek",
+    "english_explanation": "to enter a country or region with an army in order to take control",
+    "example_sentence": "The army invaded the neighbouring country at dawn."
+  },
+  {
+    "english": "Invoice",
+    "pronunciation": "İnvoys",
+    "turkish_meaning": "fatura",
+    "english_explanation": "a list of goods or services provided with the total amount to be paid",
+    "example_sentence": "Please send the invoice to our accounts department."
+  },
+  {
+    "english": "Involve",
+    "pronunciation": "İnvolv",
+    "turkish_meaning": "içermek, kapsamak; dahil etmek",
+    "english_explanation": "to include something as a necessary part; to make someone take part",
+    "example_sentence": "The job involves a lot of travelling."
+  },
+  {
+    "english": "Ironically",
+    "pronunciation": "Ayronikli",
+    "turkish_meaning": "ironik bir şekilde, tam tersine",
+    "english_explanation": "in a way that is opposite to what you might expect",
+    "example_sentence": "Ironically, the fire station burned down."
+  },
+  {
+    "english": "Irritate",
+    "pronunciation": "İriteyt",
+    "turkish_meaning": "kızdırmak, tahriş etmek",
+    "english_explanation": "to make someone feel annoyed; to make a part of the body sore",
+    "example_sentence": "The smoke irritated his eyes."
+  },
+  {
+    "english": "Itch",
+    "pronunciation": "İç",
+    "turkish_meaning": "kaşınmak; kaşıntı",
+    "english_explanation": "an uncomfortable feeling on the skin that makes you want to scratch; to feel this sensation",
+    "example_sentence": "The mosquito bite made her arm itch terribly."
+  },
+  {
+    "english": "Jack",
+    "pronunciation": "Cäk",
+    "turkish_meaning": "kriko; fiş; çöp balığı",
+    "english_explanation": "a device for lifting heavy objects; a socket for connecting electrical equipment",
+    "example_sentence": "He used a jack to lift the car and change the tyre."
+  },
+  {
+    "english": "Jackel",
+    "pronunciation": "Cäkıl",
+    "turkish_meaning": "çakal",
+    "english_explanation": "a wild animal related to the dog that lives in Africa and Asia (also spelled 'jackal')",
+    "example_sentence": "Jackals often feed on animals killed by larger predators."
+  },
+  {
+    "english": "Jar",
+    "pronunciation": "Car",
+    "turkish_meaning": "kavanoz; sarsmak",
+    "english_explanation": "a glass container with a wide mouth; to cause a sudden shock or discomfort",
+    "example_sentence": "She opened a jar of strawberry jam."
+  },
+  {
+    "english": "Jellyfish",
+    "pronunciation": "Celifış",
+    "turkish_meaning": "denizanası",
+    "english_explanation": "a sea creature with a soft, transparent body that can sting",
+    "example_sentence": "The beach was closed because of jellyfish in the water."
+  },
+  {
+    "english": "Keen",
+    "pronunciation": "Kin",
+    "turkish_meaning": "istekli, hevesli; keskin",
+    "english_explanation": "very interested and enthusiastic; sharp (for a blade)",
+    "example_sentence": "She is keen to learn new languages."
+  },
+  {
+    "english": "Keen on",
+    "pronunciation": "Kin on",
+    "turkish_meaning": "meraklı, düşkün",
+    "english_explanation": "very interested in or enthusiastic about something",
+    "example_sentence": "He's really keen on photography."
+  },
+  {
+    "english": "Kidnap",
+    "pronunciation": "Kidnäp",
+    "turkish_meaning": "kaçırmak, adam kaçırmak",
+    "english_explanation": "to take someone away illegally by force, usually to demand money",
+    "example_sentence": "The businessman was kidnapped and held for ransom."
+  },
+  {
+    "english": "Kin",
+    "pronunciation": "Kin",
+    "turkish_meaning": "akraba, hısım",
+    "english_explanation": "your family and relatives",
+    "example_sentence": "They notified his next of kin after the accident."
+  },
+  {
+    "english": "Knob",
+    "pronunciation": "Nob",
+    "turkish_meaning": "topuz, düğme; çıkıntı",
+    "english_explanation": "a round handle on a door or drawer; a round button for controlling a device",
+    "example_sentence": "Turn the knob to the right to increase the volume."
+  },
+  {
+    "english": "Ladle",
+    "pronunciation": "Leydıl",
+    "turkish_meaning": "kepçe",
+    "english_explanation": "a large spoon with a long handle and a deep cup, used for serving soup",
+    "example_sentence": "She used a ladle to serve the soup into the bowls."
+  },
+  {
+    "english": "Lamppost",
+    "pronunciation": "Lämppoust",
+    "turkish_meaning": "sokak lambası direği",
+    "english_explanation": "a tall post in the street with a light on top",
+    "example_sentence": "The car crashed into a lamppost on the icy road."
+  },
+  {
+    "english": "Lampshade",
+    "pronunciation": "Lämpşeyd",
+    "turkish_meaning": "abajur",
+    "english_explanation": "a cover placed over a light bulb to soften the light",
+    "example_sentence": "The lampshade cast a warm glow across the room."
+  },
+  {
+    "english": "Lash",
+    "pronunciation": "Läş",
+    "turkish_meaning": "kirpik; kamçılamak; bağlamak",
+    "english_explanation": "an eyelash; to strike with a whip; to tie something firmly",
+    "example_sentence": "Rain lashed against the windows during the storm."
+  },
+  {
+    "english": "Launch",
+    "pronunciation": "Lonç",
+    "turkish_meaning": "fırlatmak; başlatmak; lansman",
+    "english_explanation": "to send a rocket or ship into motion; to start a new product or campaign",
+    "example_sentence": "The company launched its new product at a big event."
+  },
+  {
+    "english": "League",
+    "pronunciation": "Lig",
+    "turkish_meaning": "lig; birlik, dernek",
+    "english_explanation": "a group of sports clubs that compete against each other; an alliance of people or nations",
+    "example_sentence": "Their team finished first in the league this season."
+  },
+  {
+    "english": "Leak",
+    "pronunciation": "Lik",
+    "turkish_meaning": "sızmak; sızıntı",
+    "english_explanation": "to let liquid or gas escape through a hole; a hole through which liquid escapes",
+    "example_sentence": "The pipe had a leak and water was dripping onto the floor."
+  },
+  {
+    "english": "Lease",
+    "pronunciation": "Lis",
+    "turkish_meaning": "kiralamak; kira sözleşmesi",
+    "english_explanation": "a legal agreement to use property for a period in exchange for payment",
+    "example_sentence": "They signed a two-year lease on the apartment."
+  },
+  {
+    "english": "Lettuce",
+    "pronunciation": "Letis",
+    "turkish_meaning": "marul",
+    "english_explanation": "a plant with large green leaves eaten raw in salads",
+    "example_sentence": "The salad was made with fresh lettuce and tomatoes."
+  },
+  {
+    "english": "Lever",
+    "pronunciation": "Livır",
+    "turkish_meaning": "kaldıraç; kolu",
+    "english_explanation": "a bar used to lift or move something heavy; a handle on a machine",
+    "example_sentence": "He pulled the lever to stop the machine."
+  },
+  {
+    "english": "Lick",
+    "pronunciation": "Lik",
+    "turkish_meaning": "yalamak",
+    "english_explanation": "to move the tongue across the surface of something",
+    "example_sentence": "The cat licked its paws after eating."
+  },
+  {
+    "english": "Lid",
+    "pronunciation": "Lid",
+    "turkish_meaning": "kapak",
+    "english_explanation": "a cover for a container such as a pot or box",
+    "example_sentence": "She lifted the lid of the pot to check on the soup."
+  },
+  {
+    "english": "Liquidate",
+    "pronunciation": "Likvideit",
+    "turkish_meaning": "tasfiye etmek; öldürmek",
+    "english_explanation": "to close a business and sell its assets to pay debts; to get rid of someone",
+    "example_sentence": "The company was liquidated after it ran out of money."
+  },
+  {
+    "english": "Litter",
+    "pronunciation": "Litır",
+    "turkish_meaning": "çöp (yere atılan); yavrular",
+    "english_explanation": "rubbish left in a public place; a group of young animals born at the same time",
+    "example_sentence": "Do not litter — use the bin provided."
+  },
+  {
+    "english": "Loaf",
+    "pronunciation": "Louf",
+    "turkish_meaning": "somun (ekmek); tembelce oturmak",
+    "english_explanation": "a shaped mass of bread baked in one piece; to spend time doing nothing",
+    "example_sentence": "She bought a loaf of bread from the bakery."
+  },
+  {
+    "english": "Lorry",
+    "pronunciation": "Lori",
+    "turkish_meaning": "kamyon",
+    "english_explanation": "a large motor vehicle for transporting goods (British English)",
+    "example_sentence": "The lorry was carrying furniture to the new warehouse."
+  },
+  {
+    "english": "Magazine",
+    "pronunciation": "Mägızin",
+    "turkish_meaning": "dergi; şarjör; silah deposu",
+    "english_explanation": "a periodical publication with articles and pictures; the part of a gun that holds bullets",
+    "example_sentence": "She reads a fashion magazine every month."
+  },
+  {
+    "english": "Magnificent",
+    "pronunciation": "Mägnifisınt",
+    "turkish_meaning": "muhteşem, görkemli",
+    "english_explanation": "very impressive and beautiful",
+    "example_sentence": "The view from the mountain top was magnificent."
+  },
+  {
+    "english": "Magnifying glass",
+    "pronunciation": "Mägnifaying glas",
+    "turkish_meaning": "büyüteç",
+    "english_explanation": "a lens with a handle that makes objects appear larger when you look through it",
+    "example_sentence": "The detective examined the clue with a magnifying glass."
+  },
+  {
+    "english": "Maid",
+    "pronunciation": "Meyd",
+    "turkish_meaning": "hizmetçi, temizlikçi; genç kız",
+    "english_explanation": "a woman employed to clean a house or hotel; an old word for a young woman",
+    "example_sentence": "The maid cleaned the hotel room every morning."
+  },
+  {
+    "english": "Maintain",
+    "pronunciation": "Meynteyn",
+    "turkish_meaning": "korumak, idame ettirmek; iddia etmek",
+    "english_explanation": "to keep something in good condition; to continue having something; to claim something is true",
+    "example_sentence": "It is important to maintain a healthy lifestyle."
+  },
+  {
+    "english": "Majority",
+    "pronunciation": "Mıcoriti",
+    "turkish_meaning": "çoğunluk",
+    "english_explanation": "more than half of a group; the larger part of something",
+    "example_sentence": "The majority of students passed the exam."
+  },
+  {
+    "english": "Margin",
+    "pronunciation": "Marcın",
+    "turkish_meaning": "kenar boşluğu; kâr marjı; fark",
+    "english_explanation": "the blank space at the edge of a page; the difference between two amounts",
+    "example_sentence": "She wrote notes in the margin of her book."
+  },
+  {
+    "english": "Massacre",
+    "pronunciation": "Mäsıkır",
+    "turkish_meaning": "katliam; katletmek",
+    "english_explanation": "the killing of a large number of people in a cruel and unfair way",
+    "example_sentence": "The massacre of innocent civilians shocked the world."
+  },
+  {
+    "english": "Massive",
+    "pronunciation": "Mäsiv",
+    "turkish_meaning": "devasa, çok büyük",
+    "english_explanation": "very large in size, amount, or extent",
+    "example_sentence": "There was a massive earthquake in the region last night."
+  },
+  {
+    "english": "Mat",
+    "pronunciation": "Mät",
+    "turkish_meaning": "paspas; mat",
+    "english_explanation": "a small piece of thick material used as a floor covering; not shiny",
+    "example_sentence": "Please wipe your feet on the mat before coming in."
+  },
+  {
+    "english": "Mattress",
+    "pronunciation": "Mätris",
+    "turkish_meaning": "yatak (şilte)",
+    "english_explanation": "the thick, soft part of a bed that you lie on",
+    "example_sentence": "They bought a new mattress for the spare room."
+  },
+  {
+    "english": "Maturity",
+    "pronunciation": "Mıçuriti",
+    "turkish_meaning": "olgunluk; vade (finans)",
+    "english_explanation": "the quality of thinking and behaving like an adult; the time when a loan becomes due",
+    "example_sentence": "The bond will reach maturity in five years."
+  },
+  {
+    "english": "Meadow",
+    "pronunciation": "Medou",
+    "turkish_meaning": "çayır, mera",
+    "english_explanation": "a field covered with grass and wild flowers",
+    "example_sentence": "The children played in the meadow on a sunny afternoon."
+  },
+  {
+    "english": "Mechanic",
+    "pronunciation": "Mıkänik",
+    "turkish_meaning": "tamirci, mekanikçi",
+    "english_explanation": "a person who repairs engines and machines, especially cars",
+    "example_sentence": "The mechanic fixed the brakes on the car."
+  },
+  {
+    "english": "Merely",
+    "pronunciation": "Mirli",
+    "turkish_meaning": "sadece, yalnızca",
+    "english_explanation": "used to emphasise that something is not large or important",
+    "example_sentence": "I was merely trying to help — I didn't mean to offend."
+  },
+  {
+    "english": "Merge",
+    "pronunciation": "Mörc",
+    "turkish_meaning": "birleşmek, kaynaşmak",
+    "english_explanation": "to combine or join together to form one thing",
+    "example_sentence": "The two companies merged to form a larger corporation."
+  },
+  {
+    "english": "Merit",
+    "pronunciation": "Merit",
+    "turkish_meaning": "değer, liyakat; hak etmek",
+    "english_explanation": "the quality of being good and deserving praise; to deserve something",
+    "example_sentence": "The idea has great merit and should be considered seriously."
+  },
+  {
+    "english": "Mike",
+    "pronunciation": "Mayk",
+    "turkish_meaning": "mikrofon (kısaltma)",
+    "english_explanation": "informal word for microphone",
+    "example_sentence": "The singer held the mike close and began to perform."
+  },
+  {
+    "english": "Mild",
+    "pronunciation": "Mayld",
+    "turkish_meaning": "hafif, ılıman; yumuşak",
+    "english_explanation": "not severe, strong, or extreme; gentle in manner",
+    "example_sentence": "The weather was mild and pleasant for autumn."
+  },
+  {
+    "english": "Millet",
+    "pronunciation": "Milit",
+    "turkish_meaning": "darı",
+    "english_explanation": "a type of grain grown as food in Africa and Asia",
+    "example_sentence": "Millet is an important crop in many African countries."
+  },
+  {
+    "english": "Mince",
+    "pronunciation": "Mins",
+    "turkish_meaning": "kıymak; kıyma",
+    "english_explanation": "to cut food into very small pieces; minced meat",
+    "example_sentence": "The recipe calls for 500 grams of minced beef."
+  },
+  {
+    "english": "Miser",
+    "pronunciation": "Mayzır",
+    "turkish_meaning": "cimri, pinti",
+    "english_explanation": "a person who hates spending money and tries to avoid doing so",
+    "example_sentence": "The old miser refused to turn on the heating even in winter."
+  },
+  {
+    "english": "Misery",
+    "pronunciation": "Mizıri",
+    "turkish_meaning": "sefalet, derin üzüntü",
+    "english_explanation": "a state of great unhappiness or discomfort",
+    "example_sentence": "The refugees lived in absolute misery in the camps."
+  },
+  {
+    "english": "Mislay",
+    "pronunciation": "Misley",
+    "turkish_meaning": "yanlış yere koymak, kaybetmek",
+    "english_explanation": "to put something somewhere and then be unable to find it",
+    "example_sentence": "I've mislaid my keys again — I can't find them anywhere."
+  },
+  {
+    "english": "Moisture",
+    "pronunciation": "Moyçır",
+    "turkish_meaning": "nem, rutubet",
+    "english_explanation": "a small amount of water or liquid in the air, on a surface, or in a material",
+    "example_sentence": "Keep the cream in a cool place away from moisture."
+  },
+  {
+    "english": "Mole",
+    "pronunciation": "Moul",
+    "turkish_meaning": "köstebek; vücuttaki ben; casus",
+    "english_explanation": "a small furry animal that lives underground; a dark spot on the skin; a spy within an organisation",
+    "example_sentence": "The mole dug a tunnel under the garden."
+  },
+  {
+    "english": "Monument",
+    "pronunciation": "Monyumınt",
+    "turkish_meaning": "anıt, abide",
+    "english_explanation": "a structure built to honour a person or event",
+    "example_sentence": "The monument was built in memory of the soldiers who died in the war."
+  },
+  {
+    "english": "Moral",
+    "pronunciation": "Morıl",
+    "turkish_meaning": "ahlaki; ders (bir hikayenin)",
+    "english_explanation": "relating to right and wrong behaviour; the lesson of a story",
+    "example_sentence": "The moral of the fable is that slow and steady wins the race."
+  },
+  {
+    "english": "Mortgage",
+    "pronunciation": "Morgıc",
+    "turkish_meaning": "ipotek; konut kredisi",
+    "english_explanation": "a loan taken to buy property, which is repaid over many years",
+    "example_sentence": "They took out a mortgage to buy their first home."
+  },
+  {
+    "english": "Mosquito",
+    "pronunciation": "Moskitu",
+    "turkish_meaning": "sivrisinek",
+    "english_explanation": "a small flying insect that bites and sucks blood, sometimes spreading disease",
+    "example_sentence": "She was bitten by a mosquito and got malaria."
+  },
+  {
+    "english": "Moss",
+    "pronunciation": "Mos",
+    "turkish_meaning": "yosun",
+    "english_explanation": "a small, soft, flat green plant that grows on wet surfaces like rocks and trees",
+    "example_sentence": "The old stone wall was covered in green moss."
+  },
+  {
+    "english": "Mud guard",
+    "pronunciation": "Mad gard",
+    "turkish_meaning": "çamurluk",
+    "english_explanation": "a curved cover over a wheel of a vehicle to prevent mud from splashing",
+    "example_sentence": "The bicycle's mud guard was bent after the accident."
+  },
+  {
+    "english": "Multiply",
+    "pronunciation": "Maltıplay",
+    "turkish_meaning": "çarpmak; çoğalmak",
+    "english_explanation": "to increase in number; to perform the mathematical operation of multiplication",
+    "example_sentence": "Bacteria can multiply very rapidly in warm conditions."
+  },
+  {
+    "english": "Mustard",
+    "pronunciation": "Mastırd",
+    "turkish_meaning": "hardal",
+    "english_explanation": "a yellow or brown spicy paste or powder used as a condiment; the plant it comes from",
+    "example_sentence": "He spread mustard on his hot dog."
+  },
+  {
+    "english": "Mutter",
+    "pronunciation": "Matır",
+    "turkish_meaning": "mırıldanmak, homurdanmak",
+    "english_explanation": "to speak quietly in a way that is hard to hear, often when complaining",
+    "example_sentence": "He muttered something under his breath and walked away."
+  },
+  {
+    "english": "Mutual",
+    "pronunciation": "Myuçuıl",
+    "turkish_meaning": "karşılıklı, ortak",
+    "english_explanation": "shared by or felt by two or more people equally",
+    "example_sentence": "They had a mutual respect for each other's work."
+  },
+  {
+    "english": "Napkin",
+    "pronunciation": "Näpkin",
+    "turkish_meaning": "peçete",
+    "english_explanation": "a piece of cloth or paper used at meals to wipe the mouth and protect clothing",
+    "example_sentence": "She placed a napkin on her lap before eating."
+  },
+  {
+    "english": "Narrate",
+    "pronunciation": "Näreyt",
+    "turkish_meaning": "anlatmak, hikâye etmek",
+    "english_explanation": "to tell a story or give a spoken commentary",
+    "example_sentence": "He narrated the events of that night in great detail."
+  },
+  {
+    "english": "Nasty",
+    "pronunciation": "Nasti",
+    "turkish_meaning": "kötü, iğrenç, kaba",
+    "english_explanation": "very unpleasant or unkind",
+    "example_sentence": "That was a nasty thing to say to her."
+  },
+  {
+    "english": "Naughty",
+    "pronunciation": "Noti",
+    "turkish_meaning": "yaramaz, haylaz",
+    "english_explanation": "behaving badly, especially said of a child",
+    "example_sentence": "The naughty boy was sent to stand in the corner."
+  },
+  {
+    "english": "Negotiate",
+    "pronunciation": "Nigouşieyt",
+    "turkish_meaning": "müzakere etmek, pazarlık yapmak",
+    "english_explanation": "to discuss something in order to reach an agreement",
+    "example_sentence": "The two sides negotiated a peace agreement after months of talks."
+  },
+  {
+    "english": "Nominate",
+    "pronunciation": "Nomineit",
+    "turkish_meaning": "aday göstermek, atamak",
+    "english_explanation": "to officially suggest someone for a position or award",
+    "example_sentence": "She was nominated for the best actress award."
+  },
+  {
+    "english": "Nonsense",
+    "pronunciation": "Nonsens",
+    "turkish_meaning": "saçmalık, anlamsız söz",
+    "english_explanation": "words or ideas that have no meaning or make no sense",
+    "example_sentence": "Don't talk nonsense — that story can't possibly be true."
+  },
+  {
+    "english": "Notorious",
+    "pronunciation": "Nıtoriıs",
+    "turkish_meaning": "kötü şöhretiyle tanınan",
+    "english_explanation": "famous for something bad",
+    "example_sentence": "The criminal was notorious for his daring prison escapes."
+  },
+  {
+    "english": "Oar",
+    "pronunciation": "Or",
+    "turkish_meaning": "kürek (kürek çekmek için)",
+    "english_explanation": "a long pole with a flat blade used to row a boat",
+    "example_sentence": "He rowed the boat using a single oar."
+  },
+  {
+    "english": "Oasis",
+    "pronunciation": "Oueyisis",
+    "turkish_meaning": "vaha; huzur adası",
+    "english_explanation": "a place in a desert where water is found; a pleasant place in an unpleasant situation",
+    "example_sentence": "The travellers rested at the oasis before continuing across the desert."
+  },
+  {
+    "english": "Oblige",
+    "pronunciation": "Iblayk",
+    "turkish_meaning": "mecbur etmek; iyilik yapmak",
+    "english_explanation": "to make someone feel they must do something; to do something as a favour",
+    "example_sentence": "I felt obliged to help her carry the bags."
+  },
+  {
+    "english": "Occur",
+    "pronunciation": "Ikör",
+    "turkish_meaning": "meydana gelmek, olmak",
+    "english_explanation": "to happen; to come to mind",
+    "example_sentence": "The accident occurred at a busy crossroads."
+  },
+  {
+    "english": "Odd",
+    "pronunciation": "Od",
+    "turkish_meaning": "tuhaf; tek (sayı); ara sıra",
+    "english_explanation": "strange or unusual; not divisible by two",
+    "example_sentence": "It's odd that she didn't call — she always does."
+  },
+  {
+    "english": "Omit",
+    "pronunciation": "Oumit",
+    "turkish_meaning": "atlamak, dışarıda bırakmak",
+    "english_explanation": "to leave something out; to fail to include",
+    "example_sentence": "He accidentally omitted a key paragraph from the report."
+  },
+  {
+    "english": "Orchard",
+    "pronunciation": "Orçırd",
+    "turkish_meaning": "meyve bahçesi",
+    "english_explanation": "an area of land where fruit trees are grown",
+    "example_sentence": "They picked apples from the orchard every autumn."
+  },
+  {
+    "english": "Overdo",
+    "pronunciation": "Ouvırdu",
+    "turkish_meaning": "aşırıya kaçmak; fazla pişirmek",
+    "english_explanation": "to do something too much; to cook something too long",
+    "example_sentence": "Don't overdo the exercise if you're still recovering."
+  },
+  {
+    "english": "Overdue",
+    "pronunciation": "Ouvırdyu",
+    "turkish_meaning": "gecikmiş, vadesi geçmiş",
+    "english_explanation": "not done or paid by the expected time",
+    "example_sentence": "The library book is overdue and she owes a fine."
+  },
+  {
+    "english": "Overtake",
+    "pronunciation": "Ouvırteyk",
+    "turkish_meaning": "geçmek (araç); üstesinden gelmek",
+    "english_explanation": "to pass a moving vehicle or person; to become more important or larger than something else",
+    "example_sentence": "He signalled and overtook the slow lorry on the motorway."
+  },
+  {
+    "english": "Overtime",
+    "pronunciation": "Ouvırtaym",
+    "turkish_meaning": "mesai, fazla mesai",
+    "english_explanation": "time worked beyond normal working hours; extra pay for this",
+    "example_sentence": "She worked overtime every weekend to meet the deadline."
+  },
+  {
+    "english": "Oyster",
+    "pronunciation": "Oystır",
+    "turkish_meaning": "istiridye",
+    "english_explanation": "a shellfish that lives in the sea and can produce pearls",
+    "example_sentence": "He ordered a dozen oysters at the seafood restaurant."
+  },
+  {
+    "english": "Packed",
+    "pronunciation": "Päkt",
+    "turkish_meaning": "tıklım tıklım dolu",
+    "english_explanation": "extremely crowded; full of people or things",
+    "example_sentence": "The stadium was packed with excited fans."
+  },
+  {
+    "english": "Palm",
+    "pronunciation": "Pam",
+    "turkish_meaning": "avuç içi; palmiye ağacı",
+    "english_explanation": "the flat inner surface of the hand; a tropical tree with large leaves at the top",
+    "example_sentence": "She held the small coin in the palm of her hand."
+  },
+  {
+    "english": "Parade",
+    "pronunciation": "Preyd",
+    "turkish_meaning": "geçit töreni; gösteriş yapmak",
+    "english_explanation": "a public procession held as a celebration; to march in a public place",
+    "example_sentence": "Thousands of people lined the streets to watch the parade."
+  },
+  {
+    "english": "Paste",
+    "pronunciation": "Peyst",
+    "turkish_meaning": "yapıştırıcı; macun; hamur; yapıştırmak",
+    "english_explanation": "a thick soft substance used as glue or food; to stick something using paste",
+    "example_sentence": "He used paste to stick the pictures into his scrapbook."
+  },
+  {
+    "english": "Pastime",
+    "pronunciation": "Pastaym",
+    "turkish_meaning": "hobi, boş zaman uğraşı",
+    "english_explanation": "an activity that you enjoy doing in your free time",
+    "example_sentence": "Reading is her favourite pastime."
+  },
+  {
+    "english": "Patrol",
+    "pronunciation": "Pıtrol",
+    "turkish_meaning": "devriye gezmek; devriye",
+    "english_explanation": "to go around an area at regular times to check that it is safe",
+    "example_sentence": "Police officers patrolled the streets throughout the night."
+  },
+  {
+    "english": "Patron",
+    "pronunciation": "Peytron",
+    "turkish_meaning": "koruyucu, destekçi; müşteri",
+    "english_explanation": "a person who supports an artist or charity; a regular customer",
+    "example_sentence": "The art gallery found a wealthy patron to fund its new exhibition."
+  },
+  {
+    "english": "Pause",
+    "pronunciation": "Poz",
+    "turkish_meaning": "durmak, ara vermek; duraklama",
+    "english_explanation": "to stop doing something for a short time before continuing",
+    "example_sentence": "She paused for a moment before answering the question."
+  },
+  {
+    "english": "Paw",
+    "pronunciation": "Po",
+    "turkish_meaning": "pençe, patı",
+    "english_explanation": "the foot of an animal that has claws or nails",
+    "example_sentence": "The dog rested its paw on her knee."
+  },
+  {
+    "english": "Pea",
+    "pronunciation": "Pi",
+    "turkish_meaning": "bezelye",
+    "english_explanation": "a small round green seed eaten as a vegetable",
+    "example_sentence": "She added peas to the soup for extra colour."
+  },
+  {
+    "english": "Pearl",
+    "pronunciation": "Pörl",
+    "turkish_meaning": "inci",
+    "english_explanation": "a hard, shiny white ball formed inside an oyster and used in jewellery",
+    "example_sentence": "She wore a string of pearls around her neck."
+  },
+  {
+    "english": "Peasant",
+    "pronunciation": "Pezınt",
+    "turkish_meaning": "köylü, çiftçi (yoksul)",
+    "english_explanation": "a poor farmer who owns or rents a small piece of land",
+    "example_sentence": "In medieval times, peasants worked the land owned by nobles."
+  },
+  {
+    "english": "Pedestrian",
+    "pronunciation": "Pıdestriın",
+    "turkish_meaning": "yaya",
+    "english_explanation": "a person who is walking, especially in a town or city",
+    "example_sentence": "Drivers must give way to pedestrians at zebra crossings."
+  },
+  {
+    "english": "Peel",
+    "pronunciation": "Pil",
+    "turkish_meaning": "soymak; kabuk",
+    "english_explanation": "to remove the skin from a fruit or vegetable; the outer skin of a fruit",
+    "example_sentence": "She peeled the potatoes before boiling them."
+  },
+  {
+    "english": "Penknife",
+    "pronunciation": "Pennaif",
+    "turkish_meaning": "çakı",
+    "english_explanation": "a small knife with a blade that folds into the handle",
+    "example_sentence": "He used a penknife to sharpen his pencil."
+  },
+  {
+    "english": "Pension",
+    "pronunciation": "Penşın",
+    "turkish_meaning": "emekli maaşı; pansiyon",
+    "english_explanation": "a regular payment made to a retired person; a small hotel providing meals",
+    "example_sentence": "He receives a pension after forty years of service."
+  },
+  {
+    "english": "Peril",
+    "pronunciation": "Peril",
+    "turkish_meaning": "tehlike",
+    "english_explanation": "serious and immediate danger",
+    "example_sentence": "The sailors were in great peril during the storm."
+  },
+  {
+    "english": "Period",
+    "pronunciation": "Piırıd",
+    "turkish_meaning": "dönem, çağ; nokta (yazım)",
+    "english_explanation": "a length of time; a full stop in punctuation; a historical era",
+    "example_sentence": "The Renaissance was a remarkable period in European history."
+  },
+  {
+    "english": "Persist",
+    "pronunciation": "Pırsist",
+    "turkish_meaning": "ısrar etmek; devam etmek",
+    "english_explanation": "to continue doing something despite difficulty or opposition",
+    "example_sentence": "She persisted with her studies even when things were difficult."
+  },
+  {
+    "english": "Picket",
+    "pronunciation": "Pikit",
+    "turkish_meaning": "grevci nöbetçisi; kazık",
+    "english_explanation": "a person or group standing outside a workplace on strike; a pointed stake",
+    "example_sentence": "Workers stood on the picket line outside the factory."
+  },
+  {
+    "english": "Pinch",
+    "pronunciation": "Pinç",
+    "turkish_meaning": "çimdiklemek; bir tutam",
+    "english_explanation": "to squeeze tightly between finger and thumb; a small amount of something",
+    "example_sentence": "Add a pinch of salt to the sauce."
+  },
+  {
+    "english": "Pincers",
+    "pronunciation": "Pinsırz",
+    "turkish_meaning": "kerpeten; kıskaç (hayvan)",
+    "english_explanation": "a tool used for gripping and pulling things; the claws of a crab or lobster",
+    "example_sentence": "He used pincers to pull out the bent nail."
+  },
+  {
+    "english": "Pioneer",
+    "pronunciation": "Payınir",
+    "turkish_meaning": "öncü, kaşif; öncülük etmek",
+    "english_explanation": "one of the first people to do something or go somewhere new",
+    "example_sentence": "Marie Curie was a pioneer in the field of radioactivity."
+  },
+  {
+    "english": "Pity",
+    "pronunciation": "Piti",
+    "turkish_meaning": "acımak; yazık; merhamet",
+    "english_explanation": "a feeling of sadness for someone who is suffering; something unfortunate",
+    "example_sentence": "It's a pity that you can't come to the party."
+  },
+  {
+    "english": "Plum",
+    "pronunciation": "Plam",
+    "turkish_meaning": "erik",
+    "english_explanation": "a small sweet fruit with a smooth red, purple, or yellow skin and a stone inside",
+    "example_sentence": "She made jam from the plums in the garden."
+  },
+  {
+    "english": "Plumber",
+    "pronunciation": "Plamır",
+    "turkish_meaning": "tesisatçı, sıhhi tesisatçı",
+    "english_explanation": "a person whose job is to fit and repair water pipes and equipment",
+    "example_sentence": "We called a plumber to fix the leaking pipe."
+  },
+  {
+    "english": "Pole",
+    "pronunciation": "Poul",
+    "turkish_meaning": "direk, sırık; kutup",
+    "english_explanation": "a long thin piece of wood or metal; either end of the Earth's axis",
+    "example_sentence": "The flag was raised on a tall pole."
+  },
+  {
+    "english": "Porter",
+    "pronunciation": "Portır",
+    "turkish_meaning": "hamal; kapıcı",
+    "english_explanation": "a person employed to carry luggage; a person who guards the entrance of a building",
+    "example_sentence": "The porter helped carry our bags to the hotel room."
+  },
+  {
+    "english": "Poverty",
+    "pronunciation": "Povırti",
+    "turkish_meaning": "yoksulluk, fakirlik",
+    "english_explanation": "the state of being very poor",
+    "example_sentence": "Millions of people around the world still live in poverty."
+  },
+  {
+    "english": "Power of Attorney",
+    "pronunciation": "Pauır ov Ötörni",
+    "turkish_meaning": "vekâletname",
+    "english_explanation": "a legal document giving someone the authority to act on another person's behalf",
+    "example_sentence": "She gave her son power of attorney while she was in hospital."
+  },
+  {
+    "english": "Precious",
+    "pronunciation": "Preşıs",
+    "turkish_meaning": "değerli, kıymetli",
+    "english_explanation": "of great value; very important and special",
+    "example_sentence": "Time is precious — don't waste it."
+  },
+  {
+    "english": "Precisely",
+    "pronunciation": "Prisaysli",
+    "turkish_meaning": "tam olarak, kesinlikle",
+    "english_explanation": "exactly and accurately",
+    "example_sentence": "The train arrived at precisely 9:15."
+  },
+  {
+    "english": "Prescription",
+    "pronunciation": "Priskripşın",
+    "turkish_meaning": "reçete",
+    "english_explanation": "a doctor's written instruction for medicine",
+    "example_sentence": "You need a prescription to buy that medication."
+  },
+  {
+    "english": "Preserve",
+    "pronunciation": "Prizörv",
+    "turkish_meaning": "korumak, muhafaza etmek; reçel",
+    "english_explanation": "to keep something safe from harm or change; food prepared to last a long time",
+    "example_sentence": "We must preserve the natural environment for future generations."
+  },
+  {
+    "english": "Primitive",
+    "pronunciation": "Primitiv",
+    "turkish_meaning": "ilkel, basit",
+    "english_explanation": "relating to an early stage of development; very simple and basic",
+    "example_sentence": "The cave paintings are examples of primitive art."
+  },
+  {
+    "english": "Privilege",
+    "pronunciation": "Privilic",
+    "turkish_meaning": "ayrıcalık, imtiyaz",
+    "english_explanation": "a special right or advantage available only to a particular person or group",
+    "example_sentence": "It was a privilege to meet such an inspirational leader."
+  },
+  {
+    "english": "Prohibit",
+    "pronunciation": "Prouhibit",
+    "turkish_meaning": "yasaklamak",
+    "english_explanation": "to officially forbid something by law or rule",
+    "example_sentence": "Smoking is prohibited in all public buildings."
+  },
+  {
+    "english": "Promote",
+    "pronunciation": "Prımout",
+    "turkish_meaning": "terfi ettirmek; tanıtmak, desteklemek",
+    "english_explanation": "to raise someone to a higher position; to advertise or support something",
+    "example_sentence": "She was promoted to manager after two years."
+  },
+  {
+    "english": "Promotion",
+    "pronunciation": "Prımoşın",
+    "turkish_meaning": "terfi; tanıtım, promosyon",
+    "english_explanation": "a move to a higher job; an activity to increase sales or awareness",
+    "example_sentence": "He celebrated his promotion with his colleagues."
+  },
+  {
+    "english": "Propeller",
+    "pronunciation": "Prıpelır",
+    "turkish_meaning": "pervane, uskur",
+    "english_explanation": "a set of rotating blades that drives a ship or aircraft forward",
+    "example_sentence": "The plane's propeller spun rapidly as it prepared for takeoff."
+  },
+  {
+    "english": "Proportion",
+    "pronunciation": "Prıporşın",
+    "turkish_meaning": "oran, orantı; bölüm",
+    "english_explanation": "a part or share of a whole; the correct relationship in size between things",
+    "example_sentence": "A large proportion of the budget was spent on education."
+  },
+  {
+    "english": "Prosecute",
+    "pronunciation": "Prosikyu:t",
+    "turkish_meaning": "kovuşturmak, dava açmak",
+    "english_explanation": "to officially charge someone with a crime and take them to court",
+    "example_sentence": "The company was prosecuted for violating environmental laws."
+  },
+  {
+    "english": "Prostitution",
+    "pronunciation": "Prostityuşın",
+    "turkish_meaning": "fuhuş",
+    "english_explanation": "the practice of engaging in sexual activity in exchange for payment",
+    "example_sentence": "Prostitution is illegal in many countries."
+  },
+  {
+    "english": "Proverb",
+    "pronunciation": "Provörb",
+    "turkish_meaning": "atasözü",
+    "english_explanation": "a short, well-known saying that expresses a general truth",
+    "example_sentence": "The proverb 'actions speak louder than words' is well known in English."
+  },
+  {
+    "english": "Publicity",
+    "pronunciation": "Pablisiti",
+    "turkish_meaning": "tanıtım, reklamcılık; kamuoyunun ilgisi",
+    "english_explanation": "attention given to someone or something by the media",
+    "example_sentence": "The new film received a lot of publicity before its release."
+  },
+  {
+    "english": "Pull up",
+    "pronunciation": "Pul ap",
+    "turkish_meaning": "çekmek (araç durdurmak); azarlamak",
+    "english_explanation": "to stop a vehicle; to criticise someone sharply",
+    "example_sentence": "The taxi pulled up outside the hotel."
+  },
+  {
+    "english": "Pulse",
+    "pronunciation": "Pals",
+    "turkish_meaning": "nabız; titreşim",
+    "english_explanation": "the regular beating of the heart felt through the skin; a steady beat or rhythm",
+    "example_sentence": "The nurse checked the patient's pulse."
+  },
+  {
+    "english": "Punctual",
+    "pronunciation": "Pankçuıl",
+    "turkish_meaning": "dakik, vaktinde",
+    "english_explanation": "arriving or doing things at the correct time",
+    "example_sentence": "She is always punctual and never keeps anyone waiting."
+  },
+  {
+    "english": "Purse",
+    "pronunciation": "Pörs",
+    "turkish_meaning": "cüzdan (kadın); para çantası",
+    "english_explanation": "a small bag for carrying money, used especially by women",
+    "example_sentence": "She took some coins from her purse to pay for the bus."
+  },
+  {
+    "english": "Quota",
+    "pronunciation": "Kvoutı",
+    "turkish_meaning": "kota, pay",
+    "english_explanation": "a fixed amount or number that is officially allowed",
+    "example_sentence": "The country set a quota on the number of immigrants allowed each year."
+  },
+  {
+    "english": "Quote",
+    "pronunciation": "Kvout",
+    "turkish_meaning": "alıntı yapmak; fiyat vermek; alıntı",
+    "english_explanation": "to repeat the words of another person; to give a price for a service",
+    "example_sentence": "She quoted a famous line from Shakespeare in her speech."
+  },
+  {
+    "english": "Railing",
+    "pronunciation": "Reyling",
+    "turkish_meaning": "parmaklık, korkuluk",
+    "english_explanation": "a fence made of metal bars, used as a barrier or support",
+    "example_sentence": "He held onto the railing to avoid slipping on the wet stairs."
+  },
+  {
+    "english": "Ram",
+    "pronunciation": "Räm",
+    "turkish_meaning": "koç; çarpmak, zorla girmek",
+    "english_explanation": "a male sheep; to strike something with great force",
+    "example_sentence": "The car rammed into the barrier at high speed."
+  },
+  {
+    "english": "Rat",
+    "pronunciation": "Rät",
+    "turkish_meaning": "fare (büyük); ispiyoncu",
+    "english_explanation": "a rodent larger than a mouse; an informal word for an untrustworthy person",
+    "example_sentence": "Rats can spread disease if they get into food storage areas."
+  },
+  {
+    "english": "Rear",
+    "pronunciation": "Riır",
+    "turkish_meaning": "arka, geri; yetiştirmek (hayvan/çocuk)",
+    "english_explanation": "the back part of something; to care for children or animals until fully grown",
+    "example_sentence": "The rear of the building faces the park."
+  },
+  {
+    "english": "Recession",
+    "pronunciation": "Riseşın",
+    "turkish_meaning": "ekonomik durgunluk, resesyon",
+    "english_explanation": "a period when economic activity slows down significantly",
+    "example_sentence": "Many businesses closed during the recession."
+  },
+  {
+    "english": "Recollect",
+    "pronunciation": "Rekılekt",
+    "turkish_meaning": "hatırlamak, anımsamak",
+    "english_explanation": "to remember something from the past",
+    "example_sentence": "I cannot recollect exactly what he said that day."
+  },
+  {
+    "english": "Reconcile",
+    "pronunciation": "Rekınsayl",
+    "turkish_meaning": "barıştırmak; uzlaştırmak",
+    "english_explanation": "to make two people become friendly again after a disagreement; to make two things compatible",
+    "example_sentence": "After years of conflict, the two brothers finally reconciled."
+  },
+  {
+    "english": "Refill",
+    "pronunciation": "Rifil",
+    "turkish_meaning": "yeniden doldurmak; yedek",
+    "english_explanation": "to fill something again; a replacement supply",
+    "example_sentence": "Could I have a refill of water, please?"
+  },
+  {
+    "english": "Refreshments",
+    "pronunciation": "Rifreşmınts",
+    "turkish_meaning": "hafif yiyecek ve içecekler",
+    "english_explanation": "small amounts of food and drink served at an event",
+    "example_sentence": "Refreshments will be provided at the end of the meeting."
+  },
+  {
+    "english": "Register",
+    "pronunciation": "Recistır",
+    "turkish_meaning": "kayıt yaptırmak; kayıt defteri",
+    "english_explanation": "to officially record a name or event; an official list or record",
+    "example_sentence": "All students must register before the first day of class."
+  },
+  {
+    "english": "Regulation",
+    "pronunciation": "Regyuleyşın",
+    "turkish_meaning": "yönetmelik, kural; denetleme",
+    "english_explanation": "an official rule or law; the process of controlling something",
+    "example_sentence": "New safety regulations were introduced in the factory."
+  },
+  {
+    "english": "Relate",
+    "pronunciation": "Rileyt",
+    "turkish_meaning": "ilişkilendirmek; anlatmak",
+    "english_explanation": "to show a connection between two things; to tell a story",
+    "example_sentence": "Can you relate these symptoms to your recent stress?"
+  },
+  {
+    "english": "Relevant",
+    "pronunciation": "Relivınt",
+    "turkish_meaning": "ilgili, alakalı",
+    "english_explanation": "closely connected to what is being discussed or done",
+    "example_sentence": "Please make sure all the information you include is relevant to the topic."
+  },
+  {
+    "english": "Reluctant",
+    "pronunciation": "Rilaktınt",
+    "turkish_meaning": "isteksiz, gönülsüz",
+    "english_explanation": "not wanting to do something and therefore slow to do it",
+    "example_sentence": "She was reluctant to accept the job because it required too much travel."
+  },
+  {
+    "english": "Remedy",
+    "pronunciation": "Remidi",
+    "turkish_meaning": "çözüm, çare; ilaç",
+    "english_explanation": "a solution to a problem; a treatment for an illness",
+    "example_sentence": "Honey and lemon is a popular home remedy for a sore throat."
+  },
+  {
+    "english": "Remit",
+    "pronunciation": "Rimıt",
+    "turkish_meaning": "para göndermek; bağışlamak; yetki alanı",
+    "english_explanation": "to send money; to cancel a debt or punishment; the area of authority or responsibility",
+    "example_sentence": "He remitted the payment by bank transfer."
+  },
+  {
+    "english": "Remittance",
+    "pronunciation": "Rimıtıns",
+    "turkish_meaning": "havale, para transferi",
+    "english_explanation": "money sent to someone, especially abroad",
+    "example_sentence": "Many workers send remittances to their families back home."
+  },
+  {
+    "english": "Reputation",
+    "pronunciation": "Repyuteyşın",
+    "turkish_meaning": "itibar, şöhret",
+    "english_explanation": "the general opinion that people have about someone or something",
+    "example_sentence": "The restaurant has an excellent reputation for its seafood."
+  },
+  {
+    "english": "Resent",
+    "pronunciation": "Rizent",
+    "turkish_meaning": "içerlenmek, kızgınlık duymak",
+    "english_explanation": "to feel angry or bitter about something you think is unfair",
+    "example_sentence": "She resented being left out of the decision-making process."
+  },
+  {
+    "english": "Reside",
+    "pronunciation": "Rizayd",
+    "turkish_meaning": "ikamet etmek, oturmak",
+    "english_explanation": "to live in a particular place",
+    "example_sentence": "He resides in a small town on the coast."
+  },
+  {
+    "english": "Resident",
+    "pronunciation": "Rezidınt",
+    "turkish_meaning": "ikamet eden, sakin; mukim",
+    "english_explanation": "a person who lives in a particular place",
+    "example_sentence": "Local residents protested against the new road development."
+  },
+  {
+    "english": "Restore",
+    "pronunciation": "Ristour",
+    "turkish_meaning": "geri vermek; onarmak; eski haline getirmek",
+    "english_explanation": "to return something to its original condition; to give something back",
+    "example_sentence": "The old painting was carefully restored by experts."
+  },
+  {
+    "english": "Restrict",
+    "pronunciation": "Ristrikt",
+    "turkish_meaning": "kısıtlamak, sınırlandırmak",
+    "english_explanation": "to limit the size, amount, or range of something",
+    "example_sentence": "Access to the building is restricted to staff only."
+  },
+  {
+    "english": "Resume",
+    "pronunciation": "Rizyum",
+    "turkish_meaning": "yeniden başlamak; özgeçmiş",
+    "english_explanation": "to begin again after a pause; a document listing your work experience",
+    "example_sentence": "The game resumed after the rain stopped."
+  },
+  {
+    "english": "Retail",
+    "pronunciation": "Riteyl",
+    "turkish_meaning": "perakende satış",
+    "english_explanation": "the sale of goods to the public in shops",
+    "example_sentence": "She works in retail at a large department store."
+  },
+  {
+    "english": "Retaliation",
+    "pronunciation": "Ritaliyeyşın",
+    "turkish_meaning": "misilleme, intikam",
+    "english_explanation": "the act of harming someone because they have harmed you",
+    "example_sentence": "The attack was carried out in retaliation for the earlier bombing."
+  },
+  {
+    "english": "Roundabout",
+    "pronunciation": "Raundıbaut",
+    "turkish_meaning": "dönel kavşak; dolaylı; atlıkarınca",
+    "english_explanation": "a road junction where traffic moves in a circle; not direct in speech; a merry-go-round",
+    "example_sentence": "Turn left at the roundabout and continue for half a mile."
+  },
+  {
+    "english": "Route",
+    "pronunciation": "Rut / Raut",
+    "turkish_meaning": "güzergah, yol, rota",
+    "english_explanation": "a road or path taken to get from one place to another",
+    "example_sentence": "We took the scenic route through the mountains."
+  },
+  {
+    "english": "Rubber",
+    "pronunciation": "Rabır",
+    "turkish_meaning": "lastik; silgi",
+    "english_explanation": "a strong elastic material; a piece of rubber used to erase pencil marks",
+    "example_sentence": "Can I borrow your rubber? I made a mistake."
+  },
+  {
+    "english": "Rug",
+    "pronunciation": "Rag",
+    "turkish_meaning": "halı (küçük), kilim",
+    "english_explanation": "a small carpet that covers part of a floor",
+    "example_sentence": "There was a colourful rug in front of the fireplace."
+  },
+  {
+    "english": "Rust",
+    "pronunciation": "Rast",
+    "turkish_meaning": "pas; paslanmak",
+    "english_explanation": "a reddish-brown coating that forms on iron when exposed to moisture; to become covered in rust",
+    "example_sentence": "The old bicycle was covered in rust."
+  },
+  {
+    "english": "Safety pin",
+    "pronunciation": "Seyfti pin",
+    "turkish_meaning": "çengelli iğne",
+    "english_explanation": "a pin with a guard that covers the point when it is closed",
+    "example_sentence": "She used a safety pin to fix the torn hem of her dress."
+  },
+  {
+    "english": "Salmon",
+    "pronunciation": "Sämın",
+    "turkish_meaning": "somon balığı; somon rengi (açık pembe)",
+    "english_explanation": "a large fish with pink flesh eaten as food; a pale pinkish-orange colour",
+    "example_sentence": "She ordered grilled salmon with vegetables."
+  },
+  {
+    "english": "Salute",
+    "pronunciation": "Sılyu:t",
+    "turkish_meaning": "selam vermek (askeri); selamlama",
+    "english_explanation": "a gesture of respect, especially in the military; to make such a gesture",
+    "example_sentence": "The soldier stood to attention and saluted the officer."
+  },
+  {
+    "english": "Sandpaper",
+    "pronunciation": "Sändpeypr",
+    "turkish_meaning": "zımpara kağıdı",
+    "english_explanation": "strong paper coated with sand, used for smoothing surfaces",
+    "example_sentence": "He used sandpaper to smooth the wooden surface before painting."
+  },
+  {
+    "english": "Sardine",
+    "pronunciation": "Sardin",
+    "turkish_meaning": "sardalya",
+    "english_explanation": "a small saltwater fish, often sold in tins",
+    "example_sentence": "They packed into the train like sardines in a tin."
+  },
+  {
+    "english": "Satellite",
+    "pronunciation": "Sätılayt",
+    "turkish_meaning": "uydu",
+    "english_explanation": "an object sent into orbit around a planet; a smaller country controlled by a larger one",
+    "example_sentence": "The satellite sends weather images back to Earth."
+  },
+  {
+    "english": "Satin",
+    "pronunciation": "Sätin",
+    "turkish_meaning": "saten (parlak kumaş)",
+    "english_explanation": "a smooth, shiny fabric often used in formal clothing",
+    "example_sentence": "She wore a beautiful satin dress to the gala."
+  },
+  {
+    "english": "Saucer",
+    "pronunciation": "Sosır",
+    "turkish_meaning": "çay tabağı, fincan tabağı",
+    "english_explanation": "a small shallow dish on which a cup is placed",
+    "example_sentence": "She placed her teacup carefully on the saucer."
+  },
+  {
+    "english": "Savage",
+    "pronunciation": "Säviç",
+    "turkish_meaning": "vahşi, acımasız; vahşi kişi",
+    "english_explanation": "fierce and violent; cruelly harsh",
+    "example_sentence": "The boxer received savage criticism after the fight."
+  },
+  {
+    "english": "Savour",
+    "pronunciation": "Seyvır",
+    "turkish_meaning": "tadını çıkarmak; lezzet",
+    "english_explanation": "to enjoy food or an experience slowly and completely",
+    "example_sentence": "She savoured every bite of the delicious meal."
+  },
+  {
+    "english": "Saw",
+    "pronunciation": "So",
+    "turkish_meaning": "testere; kesmek (testereyle)",
+    "english_explanation": "a tool with a jagged edge used for cutting wood or metal; to cut with a saw",
+    "example_sentence": "He used a saw to cut the wooden plank in half."
+  },
+  {
+    "english": "Scone",
+    "pronunciation": "Skon / Skoun",
+    "turkish_meaning": "scone (İngiliz çörekleri)",
+    "english_explanation": "a small plain cake, often eaten with butter, jam and cream",
+    "example_sentence": "They had scones with clotted cream at afternoon tea."
+  },
+  {
+    "english": "Scorpion",
+    "pronunciation": "Skorpiın",
+    "turkish_meaning": "akrep",
+    "english_explanation": "a small creature with a curved tail that can sting, found in hot countries",
+    "example_sentence": "Be careful in the desert — scorpions hide under rocks."
+  },
+  {
+    "english": "Scramble",
+    "pronunciation": "Skhrämbıl",
+    "turkish_meaning": "tırmanmak; koşuşturmak; karıştırmak",
+    "english_explanation": "to climb using hands and feet; to move in a hurry; to mix eggs while cooking",
+    "example_sentence": "The children scrambled up the hill to reach the top first."
+  },
+  {
+    "english": "Scruff",
+    "pronunciation": "Skraf",
+    "turkish_meaning": "ense; özensiz kişi",
+    "english_explanation": "the back of the neck; a person who looks untidy",
+    "example_sentence": "She grabbed the cat by the scruff of its neck."
+  },
+  {
+    "english": "Seal",
+    "pronunciation": "Sil",
+    "turkish_meaning": "mühürlemek; fok balığı; mühür",
+    "english_explanation": "to close something firmly; a sea mammal; an official stamp",
+    "example_sentence": "Make sure you seal the envelope before posting it."
+  },
+  {
+    "english": "See over",
+    "pronunciation": "Si ouvır",
+    "turkish_meaning": "gezip görmek, incelemek",
+    "english_explanation": "to visit and look around a place, especially a house",
+    "example_sentence": "We arranged to see over the house before making an offer."
+  },
+  {
+    "english": "Segment",
+    "pronunciation": "Segmınt",
+    "turkish_meaning": "bölüm, dilim, parça",
+    "english_explanation": "a part of something that is separated from the rest",
+    "example_sentence": "She divided the orange into segments."
+  },
+  {
+    "english": "Senior",
+    "pronunciation": "Siniır",
+    "turkish_meaning": "kıdemli, üst düzey; yaşlı",
+    "english_explanation": "higher in rank or older in age",
+    "example_sentence": "He is a senior manager at the company."
+  },
+  {
+    "english": "Sergeant",
+    "pronunciation": "Sarcınt",
+    "turkish_meaning": "çavuş; polis memuru",
+    "english_explanation": "a middle-ranking officer in the army or police",
+    "example_sentence": "The sergeant gave orders to the soldiers."
+  },
+  {
+    "english": "Serviette",
+    "pronunciation": "Sörviet",
+    "turkish_meaning": "peçete (masa peçetesi)",
+    "english_explanation": "a napkin used at meals (mainly British English)",
+    "example_sentence": "She wiped her mouth with the serviette."
+  },
+  {
+    "english": "Set off",
+    "pronunciation": "Set of",
+    "turkish_meaning": "yola çıkmak; patlatmak",
+    "english_explanation": "to begin a journey; to cause something to explode or start",
+    "example_sentence": "We set off early in the morning to avoid traffic."
+  },
+  {
+    "english": "Set out",
+    "pronunciation": "Set aut",
+    "turkish_meaning": "yola çıkmak; düzenlemek; açıklamak",
+    "english_explanation": "to begin a journey or task; to arrange things; to explain something clearly",
+    "example_sentence": "She set out her ideas clearly in the report."
+  },
+  {
+    "english": "Set on",
+    "pronunciation": "Set on",
+    "turkish_meaning": "saldırtmak; kararlı olmak",
+    "english_explanation": "to attack or cause someone to be attacked; to be determined to do something",
+    "example_sentence": "The dog was set on the intruder by its owner."
+  },
+  {
+    "english": "Shallow",
+    "pronunciation": "Şälou",
+    "turkish_meaning": "sığ; yüzeysel",
+    "english_explanation": "not deep; lacking depth of thought or feeling",
+    "example_sentence": "The children paddled in the shallow end of the pool."
+  },
+  {
+    "english": "Shave",
+    "pronunciation": "Şeyv",
+    "turkish_meaning": "traş olmak; traş etmek",
+    "english_explanation": "to cut hair from the skin with a razor",
+    "example_sentence": "He shaved every morning before going to work."
+  },
+  {
+    "english": "Shelf",
+    "pronunciation": "Şelf",
+    "turkish_meaning": "raf",
+    "english_explanation": "a flat board fixed to a wall or in a cupboard for storing things",
+    "example_sentence": "She placed the books on the shelf in alphabetical order."
+  },
+  {
+    "english": "Shield",
+    "pronunciation": "Şild",
+    "turkish_meaning": "kalkan; korumak",
+    "english_explanation": "a piece of armour held to protect the body; to protect from harm",
+    "example_sentence": "He used his bag to shield his head from the rain."
+  },
+  {
+    "english": "Shoelace",
+    "pronunciation": "Şuleyis",
+    "turkish_meaning": "ayakkabı bağı",
+    "english_explanation": "a cord used to fasten a shoe",
+    "example_sentence": "He stopped to tie his shoelace before the race."
+  },
+  {
+    "english": "Shoot down",
+    "pronunciation": "Şut daun",
+    "turkish_meaning": "düşürmek (uçak); reddetmek",
+    "english_explanation": "to cause an aircraft to fall by hitting it; to reject an idea firmly",
+    "example_sentence": "The enemy plane was shot down over the sea."
+  },
+  {
+    "english": "Shrink",
+    "pronunciation": "Şrink",
+    "turkish_meaning": "küçülmek, çekmek (kumaş); geri çekilmek",
+    "english_explanation": "to become smaller, especially when washed; to move back in fear",
+    "example_sentence": "My jumper shrank in the wash."
+  },
+  {
+    "english": "Signpost",
+    "pronunciation": "Saynpoust",
+    "turkish_meaning": "yön levhası, tabela",
+    "english_explanation": "a post at a road junction showing directions and distances",
+    "example_sentence": "Follow the signpost to the town centre."
+  },
+  {
+    "english": "Silo",
+    "pronunciation": "Saylou",
+    "turkish_meaning": "silo (tahıl/füze deposu)",
+    "english_explanation": "a tall tower used to store grain; an underground structure for storing missiles",
+    "example_sentence": "The farmer stored wheat in the large silo."
+  },
+  {
+    "english": "Sincere",
+    "pronunciation": "Sinsiır",
+    "turkish_meaning": "samimi, içten",
+    "english_explanation": "genuinely meaning what you say; honest and true",
+    "example_sentence": "Please accept my sincere apologies for the delay."
+  },
+  {
+    "english": "Skim",
+    "pronunciation": "Skim",
+    "turkish_meaning": "yüzeyden almak; hızlıca okumak; kaymak",
+    "english_explanation": "to remove something from the surface of a liquid; to read something quickly",
+    "example_sentence": "She skimmed through the report before the meeting."
+  },
+  {
+    "english": "Skull",
+    "pronunciation": "Skal",
+    "turkish_meaning": "kafatası",
+    "english_explanation": "the bony structure of the head that protects the brain",
+    "example_sentence": "The skull and crossbones symbol is used to show danger."
+  },
+  {
+    "english": "Slot",
+    "pronunciation": "Slot",
+    "turkish_meaning": "yarık, delik; yer, zaman dilimi",
+    "english_explanation": "a narrow opening for inserting something; a time or position in a schedule",
+    "example_sentence": "Insert a coin into the slot to use the machine."
+  },
+  {
+    "english": "Smuggle",
+    "pronunciation": "Smagıl",
+    "turkish_meaning": "kaçakçılık yapmak, gizlice sokmak",
+    "english_explanation": "to bring goods or people into or out of a country illegally",
+    "example_sentence": "He was caught trying to smuggle drugs across the border."
+  },
+  {
+    "english": "Snag",
+    "pronunciation": "Snäg",
+    "turkish_meaning": "engel, sorun; takılmak",
+    "english_explanation": "an unexpected problem or difficulty; to catch on something sharp",
+    "example_sentence": "The only snag is that we don't have enough budget."
+  },
+  {
+    "english": "Snub",
+    "pronunciation": "Snab",
+    "turkish_meaning": "küçümsemek, hafife almak; hakaret",
+    "english_explanation": "to ignore or treat someone rudely, especially in public",
+    "example_sentence": "She felt snubbed when he walked past without saying hello."
+  },
+  {
+    "english": "Soak",
+    "pronunciation": "Souk",
+    "turkish_meaning": "islatmak, sırılsıklam etmek; ıslanmak",
+    "english_explanation": "to make something very wet; to stay in water for a long time",
+    "example_sentence": "Soak the beans in water overnight before cooking."
+  },
+  {
+    "english": "Put a sock ın it",
+    "pronunciation": "Put ı sok in it",
+    "turkish_meaning": "sus, çeneni kapat (kaba)",
+    "english_explanation": "an informal phrase meaning to stop talking or making noise",
+    "example_sentence": "He was so noisy that she finally told him to put a sock in it."
+  },
+  {
+    "english": "Solidarity",
+    "pronunciation": "Solidäriti",
+    "turkish_meaning": "dayanışma",
+    "english_explanation": "unity and support among a group of people with shared goals",
+    "example_sentence": "Workers showed solidarity by going on strike together."
+  },
+  {
+    "english": "Sophisticated",
+    "pronunciation": "Sıfistikeitid",
+    "turkish_meaning": "sofistike, gelişmiş; kültürlü",
+    "english_explanation": "having a good understanding of culture; complex and advanced",
+    "example_sentence": "The new software is highly sophisticated."
+  },
+  {
+    "english": "Souvenir",
+    "pronunciation": "Suvınir",
+    "turkish_meaning": "hatıra, hediyelik eşya",
+    "english_explanation": "an object kept as a reminder of a place or event",
+    "example_sentence": "She bought a souvenir from every country she visited."
+  },
+  {
+    "english": "Span",
+    "pronunciation": "Spän",
+    "turkish_meaning": "süre, mesafe; kapsamak",
+    "english_explanation": "a length of time or distance; to extend across",
+    "example_sentence": "The bridge spans the entire width of the river."
+  },
+  {
+    "english": "Spanner",
+    "pronunciation": "Spänır",
+    "turkish_meaning": "somun anahtarı",
+    "english_explanation": "a tool used to turn nuts and bolts (called a wrench in American English)",
+    "example_sentence": "He tightened the bolt with a spanner."
+  },
+  {
+    "english": "Adjustable Spanner",
+    "pronunciation": "Icastıbıl Spänır",
+    "turkish_meaning": "ayarlanabilir somun anahtarı",
+    "english_explanation": "a spanner whose jaw can be adjusted to fit different sized nuts",
+    "example_sentence": "An adjustable spanner is useful when you don't know the exact bolt size."
+  },
+  {
+    "english": "Spectacular",
+    "pronunciation": "Spektäkyulır",
+    "turkish_meaning": "muhteşem, görkemli",
+    "english_explanation": "very impressive or dramatic to look at",
+    "example_sentence": "The fireworks display was absolutely spectacular."
+  },
+  {
+    "english": "Spectator",
+    "pronunciation": "Spekteytır",
+    "turkish_meaning": "seyirci, izleyici",
+    "english_explanation": "a person who watches an event, especially a sport",
+    "example_sentence": "Thousands of spectators attended the football match."
+  },
+  {
+    "english": "Spill",
+    "pronunciation": "Spil",
+    "turkish_meaning": "dökmek, akıtmak; dökülme",
+    "english_explanation": "to accidentally cause liquid to flow out of its container",
+    "example_sentence": "She spilled coffee on her white shirt."
+  },
+  {
+    "english": "Splash",
+    "pronunciation": "Spläş",
+    "turkish_meaning": "sıçratmak; çağlama sesi",
+    "english_explanation": "to make water fly through the air; the sound of this",
+    "example_sentence": "The children splashed around happily in the puddles."
+  },
+  {
+    "english": "Squash",
+    "pronunciation": "Skvoş",
+    "turkish_meaning": "ezmek; squash (spor); meyve suyu",
+    "english_explanation": "to press something flat; a sport played in a court; a sweet drink diluted with water",
+    "example_sentence": "She accidentally sat on and squashed the sandwich."
+  },
+  {
+    "english": "Stabilize",
+    "pronunciation": "Steybılayz",
+    "turkish_meaning": "istikrar kazandırmak, dengelemek",
+    "english_explanation": "to become or make something steady and unlikely to change",
+    "example_sentence": "Doctors worked to stabilize the patient's condition."
+  },
+  {
+    "english": "Stable",
+    "pronunciation": "Steybıl",
+    "turkish_meaning": "kararlı, sabit; ahır",
+    "english_explanation": "not likely to move or change; a building where horses are kept",
+    "example_sentence": "The patient's condition is now stable."
+  },
+  {
+    "english": "Stall",
+    "pronunciation": "Stol",
+    "turkish_meaning": "tezgah, stand; zaman kazanmak; boğulmak (motor)",
+    "english_explanation": "a small shop or table where things are sold; to delay; when an engine stops suddenly",
+    "example_sentence": "She bought fresh fruit from a market stall."
+  },
+  {
+    "english": "Stapler",
+    "pronunciation": "Steypılır",
+    "turkish_meaning": "zımba makinesi",
+    "english_explanation": "a device used to fasten papers together with small metal staples",
+    "example_sentence": "He used a stapler to attach the pages of the report."
+  },
+  {
+    "english": "Stationery",
+    "pronunciation": "Steyşınıri",
+    "turkish_meaning": "kırtasiye malzemeleri",
+    "english_explanation": "paper, envelopes, pens, and other writing materials",
+    "example_sentence": "She went to the shop to buy stationery for school."
+  },
+  {
+    "english": "Statue",
+    "pronunciation": "Stäçu",
+    "turkish_meaning": "heykel",
+    "english_explanation": "a model of a person or animal made from stone, metal, or another material",
+    "example_sentence": "The Statue of Liberty is a famous landmark in New York."
+  },
+  {
+    "english": "Steep",
+    "pronunciation": "Stip",
+    "turkish_meaning": "dik (yokuş); pahalı; ıslatmak",
+    "english_explanation": "rising or falling sharply; higher than expected in price; to soak in liquid",
+    "example_sentence": "The path up the mountain was very steep."
+  },
+  {
+    "english": "Sterile",
+    "pronunciation": "Sterıyl",
+    "turkish_meaning": "steril, mikroptan arındırılmış; kısır",
+    "english_explanation": "completely clean and free from bacteria; unable to produce children or plants",
+    "example_sentence": "All surgical instruments must be sterile before use."
+  },
+  {
+    "english": "Sterilize",
+    "pronunciation": "Sterılayz",
+    "turkish_meaning": "sterilize etmek, dezenfekte etmek",
+    "english_explanation": "to make something completely free from bacteria or germs",
+    "example_sentence": "The nurse sterilized the needle before giving the injection."
+  },
+  {
+    "english": "Steward",
+    "pronunciation": "Styu:ırd",
+    "turkish_meaning": "hostes/hostes erkek; yönetici",
+    "english_explanation": "a person who serves passengers on a plane or ship; someone who manages an event or property",
+    "example_sentence": "The steward offered drinks to the passengers."
+  },
+  {
+    "english": "Stock Certificate",
+    "pronunciation": "Stok Sörtifikıt",
+    "turkish_meaning": "hisse senedi belgesi",
+    "english_explanation": "an official document proving ownership of shares in a company",
+    "example_sentence": "He kept his stock certificates in a safe deposit box."
+  },
+  {
+    "english": "Stool",
+    "pronunciation": "Stul",
+    "turkish_meaning": "tabure; dışkı",
+    "english_explanation": "a seat without a back or arms; faeces (medical)",
+    "example_sentence": "She sat on a stool at the kitchen counter."
+  },
+  {
+    "english": "Strain",
+    "pronunciation": "Streyn",
+    "turkish_meaning": "germek; zorlamak; süzmek; gerilim",
+    "english_explanation": "to injure a muscle by using it too much; to filter a liquid; tension or pressure",
+    "example_sentence": "He strained his back lifting heavy boxes."
+  },
+  {
+    "english": "Strainer",
+    "pronunciation": "Streynır",
+    "turkish_meaning": "süzgeç",
+    "english_explanation": "a kitchen tool with small holes used to separate liquids from solids",
+    "example_sentence": "Use a strainer to drain the pasta."
+  },
+  {
+    "english": "Strap",
+    "pronunciation": "Sträp",
+    "turkish_meaning": "kayış, şerit; bağlamak",
+    "english_explanation": "a narrow piece of material used to fasten or carry something",
+    "example_sentence": "The strap of her bag broke on the way to work."
+  },
+  {
+    "english": "Strecher",
+    "pronunciation": "Streçır",
+    "turkish_meaning": "sedye",
+    "english_explanation": "a frame covered with material used to carry a sick or injured person",
+    "example_sentence": "The injured player was carried off the field on a stretcher."
+  },
+  {
+    "english": "Stutter",
+    "pronunciation": "Statır",
+    "turkish_meaning": "kekelemek; kekeleme",
+    "english_explanation": "to speak with difficulty, repeating sounds or words involuntarily",
+    "example_sentence": "He stuttered when he was nervous in front of large audiences."
+  },
+  {
+    "english": "Submit",
+    "pronunciation": "Sibmit",
+    "turkish_meaning": "teslim etmek, sunmak; boyun eğmek",
+    "english_explanation": "to give something to someone in authority for consideration; to accept someone's control",
+    "example_sentence": "Please submit your assignment before Friday."
+  },
+  {
+    "english": "Subscribe",
+    "pronunciation": "Sibskrayb",
+    "turkish_meaning": "abone olmak",
+    "english_explanation": "to pay money to receive a newspaper, service, or channel regularly",
+    "example_sentence": "She subscribed to a weekly magazine."
+  },
+  {
+    "english": "Subsidize",
+    "pronunciation": "Sabsidayz",
+    "turkish_meaning": "sübvanse etmek, desteklemek",
+    "english_explanation": "to support an activity or organisation financially, often by a government",
+    "example_sentence": "The government subsidizes public transport to keep fares low."
+  },
+  {
+    "english": "Subsidy",
+    "pronunciation": "Sabsidi",
+    "turkish_meaning": "sübvansiyon, devlet desteği",
+    "english_explanation": "money paid by a government to help keep the price of something low",
+    "example_sentence": "Farmers received a subsidy to grow certain crops."
+  },
+  {
+    "english": "Substance",
+    "pronunciation": "Sabstıns",
+    "turkish_meaning": "madde, cisim; öz, önem",
+    "english_explanation": "a type of solid, liquid, or gas; the most important part of something",
+    "example_sentence": "The scientist analysed the unknown substance in the laboratory."
+  },
+  {
+    "english": "Substitute",
+    "pronunciation": "Sabstityu:t",
+    "turkish_meaning": "yedek, ikame; yerine koymak",
+    "english_explanation": "a person or thing that takes the place of another",
+    "example_sentence": "You can use honey as a substitute for sugar in this recipe."
+  },
+  {
+    "english": "Subtract",
+    "pronunciation": "Sibtrak",
+    "turkish_meaning": "çıkarmak (matematik)",
+    "english_explanation": "to take one number away from another",
+    "example_sentence": "If you subtract 4 from 10, you get 6."
+  },
+  {
+    "english": "Commit suicide",
+    "pronunciation": "Komit su:isayd",
+    "turkish_meaning": "intihar etmek",
+    "english_explanation": "to deliberately end one's own life",
+    "example_sentence": "Mental health support is vital in preventing people from committing suicide."
+  },
+  {
+    "english": "Summit",
+    "pronunciation": "Samit",
+    "turkish_meaning": "zirve (dağ); zirve toplantısı",
+    "english_explanation": "the highest point of a mountain; a meeting between leaders of countries",
+    "example_sentence": "They reached the summit of the mountain after a two-day climb."
+  },
+  {
+    "english": "Supervise",
+    "pronunciation": "Su:pırvayz",
+    "turkish_meaning": "denetlemek, gözetmek",
+    "english_explanation": "to watch over and direct work or workers",
+    "example_sentence": "She was asked to supervise the new employees during training."
+  },
+  {
+    "english": "Suppress",
+    "pronunciation": "Sipres",
+    "turkish_meaning": "bastırmak, önlemek",
+    "english_explanation": "to stop something by force; to prevent feelings or information from being expressed",
+    "example_sentence": "The government tried to suppress the news report."
+  },
+  {
+    "english": "Supreme",
+    "pronunciation": "Su:prim",
+    "turkish_meaning": "en yüksek, en üstün",
+    "english_explanation": "highest in authority or importance; greatest in degree",
+    "example_sentence": "The Supreme Court made a landmark decision."
+  },
+  {
+    "english": "Surgeon",
+    "pronunciation": "Sörcın",
+    "turkish_meaning": "cerrah",
+    "english_explanation": "a doctor who performs operations",
+    "example_sentence": "The surgeon operated on the patient for six hours."
+  },
+  {
+    "english": "Surrender",
+    "pronunciation": "Sirendır",
+    "turkish_meaning": "teslim olmak; vazgeçmek",
+    "english_explanation": "to stop fighting and admit defeat; to give something up",
+    "example_sentence": "The soldiers were forced to surrender at the end of the battle."
+  },
+  {
+    "english": "Suspend",
+    "pronunciation": "Sispend",
+    "turkish_meaning": "askıya almak; uzaklaştırmak",
+    "english_explanation": "to hang something; to officially stop something temporarily; to stop someone from working",
+    "example_sentence": "The player was suspended for three games after the incident."
+  },
+  {
+    "english": "Suspension",
+    "pronunciation": "Sispenşın",
+    "turkish_meaning": "askıya alma; süspansiyon",
+    "english_explanation": "the act of stopping something temporarily; the system of springs in a vehicle",
+    "example_sentence": "His suspension from school lasted two weeks."
+  },
+  {
+    "english": "Swan",
+    "pronunciation": "Svan",
+    "turkish_meaning": "kuğu",
+    "english_explanation": "a large white bird with a long neck that lives on lakes and rivers",
+    "example_sentence": "A pair of swans glided gracefully across the lake."
+  },
+  {
+    "english": "Swollen",
+    "pronunciation": "Svoulın",
+    "turkish_meaning": "şişmiş, şiş",
+    "english_explanation": "larger than normal because of injury or illness",
+    "example_sentence": "Her ankle was swollen after she twisted it during the game."
+  },
+  {
+    "english": "Syrup",
+    "pronunciation": "Sirıp",
+    "turkish_meaning": "şurup",
+    "english_explanation": "a thick sweet liquid made from sugar and water, or used as medicine",
+    "example_sentence": "The doctor prescribed a cough syrup for his cold."
+  },
+  {
+    "english": "Tease",
+    "pronunciation": "Tiz",
+    "turkish_meaning": "takılmak, alay etmek; kışkırtmak",
+    "english_explanation": "to make fun of someone in a playful or unkind way",
+    "example_sentence": "His classmates teased him about his new haircut."
+  },
+  {
+    "english": "Temple",
+    "pronunciation": "Tempıl",
+    "turkish_meaning": "tapınak; şakak (baş)",
+    "english_explanation": "a building used for worship; the flat area on the side of the head",
+    "example_sentence": "They visited an ancient temple on their trip to Greece."
+  },
+  {
+    "english": "Tempt",
+    "pronunciation": "Tempt",
+    "turkish_meaning": "cazip gelmek, ayartmak",
+    "english_explanation": "to make someone want to do or have something, often something they shouldn't",
+    "example_sentence": "The smell of fresh bread tempted her to go inside the bakery."
+  },
+  {
+    "english": "Tenant",
+    "pronunciation": "Tenınt",
+    "turkish_meaning": "kiracı",
+    "english_explanation": "a person who pays rent to use land or a building owned by someone else",
+    "example_sentence": "The landlord asked the tenant to renew the lease."
+  },
+  {
+    "english": "Tend",
+    "pronunciation": "Tend",
+    "turkish_meaning": "eğiliminde olmak; bakmak, ilgilenmek",
+    "english_explanation": "to usually do or be something; to care for someone or something",
+    "example_sentence": "She tends to wake up early on weekdays."
+  },
+  {
+    "english": "Terrace",
+    "pronunciation": "Terıs",
+    "turkish_meaning": "teras; sıra evler; tribün",
+    "english_explanation": "a flat area outside a house; a row of houses joined together; steps in a football ground",
+    "example_sentence": "They had breakfast on the terrace overlooking the garden."
+  },
+  {
+    "english": "Terrify",
+    "pronunciation": "Terifay",
+    "turkish_meaning": "dehşete düşürmek, korkutmak",
+    "english_explanation": "to make someone feel extreme fear",
+    "example_sentence": "The loud thunder terrified the young child."
+  },
+  {
+    "english": "Territory",
+    "pronunciation": "Teritori",
+    "turkish_meaning": "toprak, bölge; alan",
+    "english_explanation": "an area of land under the control of a particular country or person",
+    "example_sentence": "The two countries disputed the territory along the border."
+  },
+  {
+    "english": "Throughly",
+    "pronunciation": "Thöroli",
+    "turkish_meaning": "iyice, tamamen, eksiksizce",
+    "english_explanation": "in a careful and complete way",
+    "example_sentence": "Make sure you thoroughly wash your hands before cooking."
+  },
+  {
+    "english": "Thumb",
+    "pronunciation": "Tham",
+    "turkish_meaning": "baş parmak (el)",
+    "english_explanation": "the short thick finger at the side of the hand",
+    "example_sentence": "She hurt her thumb while hammering the nail."
+  },
+  {
+    "english": "Tide",
+    "pronunciation": "Tayd",
+    "turkish_meaning": "gelgit, med-cezir; akım",
+    "english_explanation": "the regular rise and fall of the sea; a current or trend",
+    "example_sentence": "The tide was coming in so we moved our towels up the beach."
+  },
+  {
+    "english": "Tooth Pick",
+    "pronunciation": "Tuth pik",
+    "turkish_meaning": "kürdan",
+    "english_explanation": "a small thin stick used for removing food from between the teeth",
+    "example_sentence": "He used a toothpick after dinner."
+  },
+  {
+    "english": "Torch",
+    "pronunciation": "Torç",
+    "turkish_meaning": "el feneri; meşale",
+    "english_explanation": "a small electric light carried in the hand; a stick that burns at one end",
+    "example_sentence": "She used a torch to find her way in the dark cave."
+  },
+  {
+    "english": "Torpedo",
+    "pronunciation": "Torpidou",
+    "turkish_meaning": "torpido, su altı füzesi",
+    "english_explanation": "a weapon fired underwater that explodes when it hits a ship",
+    "example_sentence": "The submarine launched a torpedo at the enemy vessel."
+  },
+  {
+    "english": "Tortoise",
+    "pronunciation": "Tortıs",
+    "turkish_meaning": "kaplumbağa (kara)",
+    "english_explanation": "a slow-moving reptile with a hard shell that lives on land",
+    "example_sentence": "The tortoise slowly made its way across the garden."
+  },
+  {
+    "english": "Tremendous",
+    "pronunciation": "Trimendıs",
+    "turkish_meaning": "muazzam, büyük; harika",
+    "english_explanation": "very great in amount, size, or degree; excellent",
+    "example_sentence": "She made a tremendous effort to finish the project on time."
+  },
+  {
+    "english": "Troop",
+    "pronunciation": "Trup",
+    "turkish_meaning": "grup, topluluk; birlik",
+    "english_explanation": "a group of soldiers; a group of people or animals",
+    "example_sentence": "A troop of scouts marched through the park."
+  },
+  {
+    "english": "Troops",
+    "pronunciation": "Trups",
+    "turkish_meaning": "askerler, kuvvetler",
+    "english_explanation": "soldiers, especially in large groups",
+    "example_sentence": "The government sent troops to secure the border."
+  },
+  {
+    "english": "Tuition",
+    "pronunciation": "Tyu:işın",
+    "turkish_meaning": "özel ders; öğretim ücreti",
+    "english_explanation": "teaching or instruction; the money paid for education",
+    "example_sentence": "She received extra tuition in maths before her exams."
+  },
+  {
+    "english": "Tulip",
+    "pronunciation": "Tyu:lip",
+    "turkish_meaning": "lale",
+    "english_explanation": "a brightly coloured spring flower shaped like a cup",
+    "example_sentence": "The Netherlands is famous for its colourful tulip fields."
+  },
+  {
+    "english": "Tummy",
+    "pronunciation": "Tami",
+    "turkish_meaning": "mide, karın (çocukça)",
+    "english_explanation": "an informal word for stomach",
+    "example_sentence": "The child complained of a tummy ache after eating too much."
+  },
+  {
+    "english": "Turnkey",
+    "pronunciation": "Törn-ki",
+    "turkish_meaning": "anahtar teslim; gardiyan (eski)",
+    "english_explanation": "ready to use immediately after being handed over; an old word for a prison guard",
+    "example_sentence": "The construction company offered a turnkey solution for the new office."
+  },
+  {
+    "english": "Turnover",
+    "pronunciation": "Törnouvır",
+    "turkish_meaning": "ciro; devir hızı; çalışan değişim oranı",
+    "english_explanation": "the total amount of money a business earns; the rate at which employees leave and are replaced",
+    "example_sentence": "The company's annual turnover increased by 15% last year."
+  },
+  {
+    "english": "Typist",
+    "pronunciation": "Taypist",
+    "turkish_meaning": "daktilograf, yazı yazan kişi",
+    "english_explanation": "a person who types, especially as a job",
+    "example_sentence": "She worked as a typist in a law firm for many years."
+  },
+  {
+    "english": "Tyre",
+    "pronunciation": "Tayır",
+    "turkish_meaning": "lastik (araç)",
+    "english_explanation": "a rubber covering fitted around a wheel of a vehicle",
+    "example_sentence": "He had to change the tyre after getting a puncture on the motorway."
+  },
+  {
+    "english": "Undergo",
+    "pronunciation": "Andırgou",
+    "turkish_meaning": "geçirmek, maruz kalmak",
+    "english_explanation": "to experience something, especially something difficult or unpleasant",
+    "example_sentence": "She had to undergo surgery after the accident."
+  },
+  {
+    "english": "Upon",
+    "pronunciation": "Ipon",
+    "turkish_meaning": "üstünde, üzerine; -ince",
+    "english_explanation": "on or on top of something; immediately after",
+    "example_sentence": "Once upon a time, there lived a brave knight."
+  },
+  {
+    "english": "Urban Life",
+    "pronunciation": "Örbın layf",
+    "turkish_meaning": "şehir hayatı",
+    "english_explanation": "life in a city or town, as opposed to rural life",
+    "example_sentence": "Urban life can be exciting but also stressful."
+  },
+  {
+    "english": "Van",
+    "pronunciation": "Vän",
+    "turkish_meaning": "minibüs, panelvan; öncü",
+    "english_explanation": "a medium-sized covered vehicle used for transporting goods or people",
+    "example_sentence": "The removal company arrived with a large van to collect the furniture."
+  },
+  {
+    "english": "Vaporize",
+    "pronunciation": "Veyprıayz",
+    "turkish_meaning": "buharlaşmak; buharlaştırmak",
+    "english_explanation": "to turn into vapour or gas; to destroy something completely",
+    "example_sentence": "The intense heat vaporized the water almost instantly."
+  },
+  {
+    "english": "Veil",
+    "pronunciation": "Veyl",
+    "turkish_meaning": "peçe, örtü; gizlemek",
+    "english_explanation": "a piece of thin material worn to cover the face or head; to hide something",
+    "example_sentence": "The bride lifted her veil before the ceremony."
+  },
+  {
+    "english": "Vein",
+    "pronunciation": "Veyn",
+    "turkish_meaning": "damar (kan); damarca; üslup",
+    "english_explanation": "a tube carrying blood back to the heart; a long thin line in rock or a leaf",
+    "example_sentence": "The nurse found a vein in his arm to take a blood sample."
+  },
+  {
+    "english": "Velvet",
+    "pronunciation": "Velvıt",
+    "turkish_meaning": "kadife",
+    "english_explanation": "a soft fabric with a short thick pile on one side",
+    "example_sentence": "She wore a deep red velvet dress to the Christmas party."
+  },
+  {
+    "english": "Verdict",
+    "pronunciation": "Vördikt",
+    "turkish_meaning": "karar, hüküm (mahkeme)",
+    "english_explanation": "the decision made by a jury at the end of a trial; any decision or judgement",
+    "example_sentence": "The jury returned a verdict of not guilty."
+  },
+  {
+    "english": "Vest",
+    "pronunciation": "Vest",
+    "turkish_meaning": "atlet, iç çamaşırı; yelek (ABD)",
+    "english_explanation": "an undergarment worn on the upper body (British English); a waistcoat (American English)",
+    "example_sentence": "He wore a cotton vest under his shirt."
+  },
+  {
+    "english": "Viable",
+    "pronunciation": "Vayıbıl",
+    "turkish_meaning": "uygulanabilir, işe yarar",
+    "english_explanation": "capable of working successfully; having a good chance of success",
+    "example_sentence": "The committee decided that the plan was not financially viable."
+  },
+  {
+    "english": "Vice",
+    "pronunciation": "Vays",
+    "turkish_meaning": "kötü huy, ahlaksızlık; mengene; yardımcı",
+    "english_explanation": "a bad habit or immoral behaviour; a tool for gripping objects; second in command",
+    "example_sentence": "Greed is often considered a vice."
+  },
+  {
+    "english": "Vicious Circle",
+    "pronunciation": "Vişıs sörkıl",
+    "turkish_meaning": "kısır döngü",
+    "english_explanation": "a situation where one problem causes another, which makes the first worse",
+    "example_sentence": "Poverty and poor education create a vicious circle that is hard to break."
+  },
+  {
+    "english": "Vinegar",
+    "pronunciation": "Vinigır",
+    "turkish_meaning": "sirke",
+    "english_explanation": "a sour liquid made from wine or malt, used in cooking and for preserving food",
+    "example_sentence": "She dressed the salad with olive oil and vinegar."
+  },
+  {
+    "english": "Vital",
+    "pronunciation": "Vaytıl",
+    "turkish_meaning": "hayati, çok önemli",
+    "english_explanation": "absolutely necessary or important; connected with life",
+    "example_sentence": "It is vital that you take your medication every day."
+  },
+  {
+    "english": "Vomit",
+    "pronunciation": "Vomit",
+    "turkish_meaning": "kusmak; kusmuk",
+    "english_explanation": "to bring food back up from the stomach through the mouth",
+    "example_sentence": "He felt so ill that he had to vomit."
+  },
+  {
+    "english": "Vowel",
+    "pronunciation": "Vauıl",
+    "turkish_meaning": "sesli harf (a, e, i, o, u)",
+    "english_explanation": "a speech sound made with the mouth open and the voice used; the letters a, e, i, o, u",
+    "example_sentence": "The word 'orange' starts with a vowel."
+  },
+  {
+    "english": "Vulnerable",
+    "pronunciation": "Valnırıbıl",
+    "turkish_meaning": "savunmasız, korunmasız",
+    "english_explanation": "open to being hurt physically or emotionally; in a weak position",
+    "example_sentence": "Elderly people are often more vulnerable to illness in winter."
+  },
+  {
+    "english": "Vulture",
+    "pronunciation": "Valçır",
+    "turkish_meaning": "akbaba",
+    "english_explanation": "a large bird that feeds on dead animals; a person who exploits others",
+    "example_sentence": "Vultures circled high above the desert."
+  },
+  {
+    "english": "Wager",
+    "pronunciation": "Weycır",
+    "turkish_meaning": "bahse girmek; bahis",
+    "english_explanation": "to bet money on the result of something; a bet",
+    "example_sentence": "He wagered fifty pounds on the horse race."
+  },
+  {
+    "english": "Waist",
+    "pronunciation": "Weyst",
+    "turkish_meaning": "bel",
+    "english_explanation": "the narrow part of the body between the chest and hips",
+    "example_sentence": "She tied a belt around her waist."
+  },
+  {
+    "english": "Waistcoat",
+    "pronunciation": "Weskit",
+    "turkish_meaning": "yelek",
+    "english_explanation": "a sleeveless garment worn over a shirt and under a jacket",
+    "example_sentence": "He wore a three-piece suit with a matching waistcoat."
+  },
+  {
+    "english": "Walnut",
+    "pronunciation": "Volnıt",
+    "turkish_meaning": "ceviz",
+    "english_explanation": "a type of nut with a wrinkled surface and a hard shell; the tree it grows on",
+    "example_sentence": "She added walnuts and honey to the salad."
+  },
+  {
+    "english": "Warder",
+    "pronunciation": "Vordır",
+    "turkish_meaning": "gardiyan, cezaevi görevlisi",
+    "english_explanation": "a person who guards prisoners in a jail",
+    "example_sentence": "The warder escorted the prisoner back to his cell."
+  },
+  {
+    "english": "Wardrobe",
+    "pronunciation": "Vordroub",
+    "turkish_meaning": "gardırop, dolap; kıyafet koleksiyonu",
+    "english_explanation": "a large cupboard for storing clothes; all the clothes a person owns",
+    "example_sentence": "She organised her wardrobe by colour."
+  },
+  {
+    "english": "Ware",
+    "pronunciation": "Veyr",
+    "turkish_meaning": "mal, ürün; eşya",
+    "english_explanation": "manufactured goods or products of a particular type",
+    "example_sentence": "The market stall sold handmade ceramic wares."
+  },
+  {
+    "english": "Warrant",
+    "pronunciation": "Vorınt",
+    "turkish_meaning": "arama emri; gerekçe; garanti etmek",
+    "english_explanation": "an official document authorising an action; to justify or deserve something",
+    "example_sentence": "The police obtained a warrant to search the suspect's home."
+  },
+  {
+    "english": "Wasp",
+    "pronunciation": "Vosp",
+    "turkish_meaning": "eşekarısı",
+    "english_explanation": "a stinging insect with black and yellow stripes",
+    "example_sentence": "A wasp stung him on the arm during the picnic."
+  },
+  {
+    "english": "Water proof",
+    "pronunciation": "Votırpruf",
+    "turkish_meaning": "su geçirmez; yağmurluk",
+    "english_explanation": "not allowing water to pass through; a garment that keeps out rain",
+    "example_sentence": "Make sure you wear a waterproof jacket — it might rain."
+  },
+  {
+    "english": "Whale",
+    "pronunciation": "Veyl",
+    "turkish_meaning": "balina",
+    "english_explanation": "a very large mammal that lives in the sea",
+    "example_sentence": "They went on a boat trip to watch whales in the ocean."
+  },
+  {
+    "english": "Whim",
+    "pronunciation": "Vim",
+    "turkish_meaning": "ani istek, kapris",
+    "english_explanation": "a sudden desire or idea, often one that is unusual or unexpected",
+    "example_sentence": "On a whim, they decided to drive to the coast for the day."
+  },
+  {
+    "english": "Wind screen",
+    "pronunciation": "Vind skrin",
+    "turkish_meaning": "ön cam (araç)",
+    "english_explanation": "the front window of a vehicle",
+    "example_sentence": "The stone cracked the windscreen of his car."
+  },
+  {
+    "english": "Acute",
+    "pronunciation": "Ikyu:t",
+    "turkish_meaning": "şiddetli, akut; keskin, zeki",
+    "english_explanation": "very serious or severe; having a sharp ability to understand",
+    "example_sentence": "She suffered from acute pain after the operation."
+  },
+  {
+    "english": "Windpipe",
+    "pronunciation": "Vindpayp",
+    "turkish_meaning": "nefes borusu, soluk borusu",
+    "english_explanation": "the tube in the throat that carries air to the lungs",
+    "example_sentence": "A piece of food became stuck in his windpipe."
+  },
+  {
+    "english": "Wing",
+    "pronunciation": "Ving",
+    "turkish_meaning": "kanat; kanat koşusu (futbol); bölüm",
+    "english_explanation": "the part of a bird or aircraft that is used for flying; a section of a building",
+    "example_sentence": "The eagle spread its wings and soared into the sky."
+  },
+  {
+    "english": "Wisdom",
+    "pronunciation": "Vizdım",
+    "turkish_meaning": "bilgelik, hikmet",
+    "english_explanation": "the quality of having experience and knowledge and the ability to use them well",
+    "example_sentence": "With age comes wisdom."
+  },
+  {
+    "english": "Worship",
+    "pronunciation": "Vörşıp",
+    "turkish_meaning": "ibadet etmek; tapmak; ibadet",
+    "english_explanation": "to show great respect and love for God; to admire someone greatly",
+    "example_sentence": "People of many faiths gather here to worship."
+  }
+]
