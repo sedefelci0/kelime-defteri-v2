@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kelime Defteri — Desteler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/decks.css" />
+</head>
+<body>
+<div class="app-shell">
+  <div class="topbar">
+    <div class="brand">Kelime Defteri</div>
+    <div class="user-area">
+      <span class="user-name" id="user-name"></span>
+      <button class="btn btn-danger-ghost" id="logout-btn" type="button">Çıkış yap</button>
+    </div>
+  </div>
+
+  <div class="decks-page">
+    <h2 class="page-title">Hangi seti çalışmak istersin?</h2>
+
+    <div id="loading" class="loading-state">Yükleniyor…</div>
+    <div id="deck-list" class="deck-grid" style="display:none;"></div>
+    <div id="unit-list" class="unit-grid" style="display:none;">
+      <button class="btn btn-secondary back-btn" id="back-to-decks" type="button">← Desteler</button>
+      <h3 id="unit-deck-title"></h3>
+      <div id="unit-buttons" class="unit-buttons"></div>
+    </div>
+
+    <button class="owner-link" id="owner-link" type="button">Öğretmen Girişi</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="owner-modal" style="display:none;">
+  <div class="modal-card">
+    <h3>Öğretmen Girişi</h3>
+    <div id="owner-error" class="error-banner" role="alert"></div>
+    <div class="field">
+      <label for="owner-password">Şifre</label>
+      <input id="owner-password" type="password" autocomplete="current-password" />
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" id="owner-cancel" type="button">İptal</button>
+      <button class="btn btn-primary" id="owner-submit" type="button">Aç</button>
+    </div>
+  </div>
+</div>
+
+<script src="/js/decks.js"></script>
+</body>
+</html>
