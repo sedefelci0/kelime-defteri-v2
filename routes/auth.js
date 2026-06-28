@@ -87,12 +87,18 @@ router.get('/me', async (req, res) => {
   if (!req.session.userId) {
     return res.status(401).json({ error: 'Giriş yapılmamış.' });
   }
-  const result = await pool.query('SELECT id, email, display_name FROM users WHERE id = $1', [
-    req.session.userId,
-  ]);
+  const result = await pool.query(
+    'SELECT id, email, display_name, total_study_seconds FROM users WHERE id = $1',
+    [req.session.userId]
+  );
   const user = result.rows[0];
   if (!user) return res.status(401).json({ error: 'Giriş yapılmamış.' });
-  res.json({ id: user.id, email: user.email, displayName: user.display_name });
+  res.json({
+    id: user.id,
+    email: user.email,
+    displayName: user.display_name,
+    totalStudySeconds: user.total_study_seconds,
+  });
 });
 
 module.exports = router;
