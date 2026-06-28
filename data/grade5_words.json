@@ -712,3 +712,267 @@
     "image": "/images/words/flags/es.svg"
   },
   {
+    "unit": 1,
+    "english": "Spanish",
+    "pronunciation": "Speniş",
+    "turkish_meaning": "İspanyol",
+    "example_sentence": "He is Spanish.",
+    "image": "/images/words/flags/es.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Russia",
+    "pronunciation": "Raşı",
+    "turkish_meaning": "Rusya",
+    "example_sentence": "Russia is a very large country.",
+    "image": "/images/words/flags/ru.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Russian",
+    "pronunciation": "Raşın",
+    "turkish_meaning": "Rus",
+    "example_sentence": "She is Russian.",
+    "image": "/images/words/flags/ru.svg"
+  },
+  {
+    "unit": 1,
+    "english": "India",
+    "pronunciation": "İndiyı",
+    "turkish_meaning": "Hindistan",
+    "example_sentence": "India has a big population.",
+    "image": "/images/words/flags/in.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Indian",
+    "pronunciation": "İndiyın",
+    "turkish_meaning": "Hintli",
+    "example_sentence": "He is Indian.",
+    "image": "/images/words/flags/in.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Greece",
+    "pronunciation": "Gris",
+    "turkish_meaning": "Yunanistan",
+    "example_sentence": "Greece has many islands.",
+    "image": "/images/words/flags/gr.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Greek",
+    "pronunciation": "Grik",
+    "turkish_meaning": "Yunan",
+    "example_sentence": "She is Greek.",
+    "image": "/images/words/flags/gr.svg"
+  },
+  {
+    "unit": 1,
+    "english": "The United States (America/USA)",
+    "pronunciation": "Dı Yunaytıd Steyts",
+    "turkish_meaning": "Amerika",
+    "example_sentence": "The United States is in North America.",
+    "image": "/images/words/flags/us.svg"
+  },
+  {
+    "unit": 1,
+    "english": "American",
+    "pronunciation": "Imerikın",
+    "turkish_meaning": "Amerikan",
+    "example_sentence": "He is American.",
+    "image": "/images/words/flags/us.svg"
+  },
+  {
+    "unit": 1,
+    "english": "The United Kingdom (UK/Britain)",
+    "pronunciation": "Dı Yunaytıd Kingdım",
+    "turkish_meaning": "Birleşik Krallık",
+    "example_sentence": "The United Kingdom has four countries.",
+    "image": "/images/words/flags/gb.svg"
+  },
+  {
+    "unit": 1,
+    "english": "British",
+    "pronunciation": "Britiş",
+    "turkish_meaning": "Britanyalı / İngiliz",
+    "example_sentence": "She is British.",
+    "image": "/images/words/flags/gb.svg"
+  },
+  {
+    "unit": 1,
+    "english": "England",
+    "pronunciation": "İnglınd",
+    "turkish_meaning": "İngiltere",
+    "example_sentence": "England is part of the UK.",
+    "image": "/images/words/flags/england.svg"
+  },
+  {
+    "unit": 1,
+    "english": "English",
+    "pronunciation": "İnglış",
+    "turkish_meaning": "İngiliz (milliyet)",
+    "example_sentence": "He is English.",
+    "image": "/images/words/flags/england.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Canada",
+    "pronunciation": "Kenıdı",
+    "turkish_meaning": "Kanada",
+    "example_sentence": "Canada is very cold in winter.",
+    "image": "/images/words/flags/ca.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Canadian",
+    "pronunciation": "Kıneydiın",
+    "turkish_meaning": "Kanadalı",
+    "example_sentence": "She is Canadian.",
+    "image": "/images/words/flags/ca.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Singapore",
+    "pronunciation": "Singıpor",
+    "turkish_meaning": "Singapur",
+    "example_sentence": "Singapore is a small country.",
+    "image": "/images/words/flags/sg.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Singaporean",
+    "pronunciation": "Singıpıriın",
+    "turkish_meaning": "Singapurlu",
+    "example_sentence": "He is Singaporean.",
+    "image": "/images/words/flags/sg.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Azerbaijan",
+    "pronunciation": "Azırbaycan",
+    "turkish_meaning": "Azerbaycan",
+    "example_sentence": "Azerbaijan is our neighbour.",
+    "image": "/images/words/flags/az.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Azerbaijani",
+    "pronunciation": "Azırbaycani",
+    "turkish_meaning": "Azeri",
+    "example_sentence": "She is Azerbaijani.",
+    "image": "/images/words/flags/az.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Syria",
+    "pronunciation": "Siriyı",
+    "turkish_meaning": "Suriye",
+    "example_sentence": "Syria is near Türkiye.",
+    "image": "/images/words/flags/sy.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Syrian",
+    "pronunciation": "Siriyın",
+    "turkish_meaning": "Suriyeli",
+    "example_sentence": "He is Syrian.",
+    "image": "/images/words/flags/sy.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Australia",
+    "pronunciation": "Ostreylyı",
+    "turkish_meaning": "Avustralya",
+    "example_sentence": "Australia is a big island.",
+    "image": "/images/words/flags/au.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Australian",
+    "pronunciation": "Ostreylyın",
+    "turkish_meaning": "Avustralyalı",
+    "example_sentence": "She is Australian.",
+    "image": "/images/words/flags/au.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Mexico",
+    "pronunciation": "Meksiko",
+    "turkish_meaning": "Meksika",
+    "example_sentence": "Mexico is in North America.",
+    "image": "/images/words/flags/mx.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Mexican",
+    "pronunciation": "Meksikın",
+    "turkish_meaning": "Meksikalı",
+    "example_sentence": "He is Mexican.",
+    "image": "/images/words/flags/mx.svg"
+  },
+  {
+    "unit": 1,
+    "english": "South Korea",
+    "pronunciation": "Sauth Kıriyı",
+    "turkish_meaning": "Güney Kore",
+    "example_sentence": "South Korea makes many cars.",
+    "image": "/images/words/flags/kr.svg"
+  },
+  {
+    "unit": 1,
+    "english": "South Korean",
+    "pronunciation": "Sauth Kıriyın",
+    "turkish_meaning": "Güney Koreli",
+    "example_sentence": "She is South Korean.",
+    "image": "/images/words/flags/kr.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Scotland",
+    "pronunciation": "Skotlınd",
+    "turkish_meaning": "İskoçya",
+    "example_sentence": "Scotland is part of the UK.",
+    "image": "/images/words/flags/scotland.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Scottish",
+    "pronunciation": "Skotiş",
+    "turkish_meaning": "İskoç",
+    "example_sentence": "He is Scottish.",
+    "image": "/images/words/flags/scotland.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Uzbekistan",
+    "pronunciation": "Uzbekistan",
+    "turkish_meaning": "Özbekistan",
+    "example_sentence": "Uzbekistan is in Asia.",
+    "image": "/images/words/flags/uz.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Uzbek",
+    "pronunciation": "Uzbek",
+    "turkish_meaning": "Özbek",
+    "example_sentence": "She is Uzbek.",
+    "image": "/images/words/flags/uz.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Argentina",
+    "pronunciation": "Arcıntinı",
+    "turkish_meaning": "Arjantin",
+    "example_sentence": "Argentina is in South America.",
+    "image": "/images/words/flags/ar.svg"
+  },
+  {
+    "unit": 1,
+    "english": "Argentine",
+    "pronunciation": "Arcıntayn",
+    "turkish_meaning": "Arjantinli",
+    "example_sentence": "He is Argentine.",
+    "image": "/images/words/flags/ar.svg"
+  }
+]
