@@ -26,6 +26,14 @@
   font-size: 14px;
   color: var(--muted);
 }
+.study-timer {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--moss-deep);
+  background: rgba(74,107,90,0.08);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
 
 .progress-strip {
   display: flex;
@@ -125,6 +133,42 @@
 }
 .card-face-back .card-eyebrow {
   color: rgba(250,246,238,0.6);
+}
+
+.card-image {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+  justify-content: center;
+}
+.nav-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  border: 1.5px solid var(--rule);
+  background: var(--paper-raised);
+  font-size: 18px;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+.nav-btn:hover:not(:disabled) {
+  border-color: var(--moss);
+  background: rgba(74,107,90,0.06);
+}
+.nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
 }
 
 .card-word {
