@@ -1,0 +1,117 @@
+.decks-page {
+  flex: 1;
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.page-title {
+  font-size: 28px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.deck-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.deck-card {
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 26px 22px;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.deck-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(43,38,32,0.1);
+}
+.deck-card .deck-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+}
+.deck-card .deck-desc {
+  font-size: 14px;
+  color: var(--muted);
+}
+.deck-card .deck-meta {
+  margin-top: 8px;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--moss-deep);
+}
+
+.unit-grid {
+  text-align: center;
+}
+.back-btn {
+  margin-bottom: 18px;
+}
+.unit-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+.unit-buttons button {
+  padding: 22px 0;
+  border-radius: 12px;
+  border: 1px solid var(--rule);
+  background: var(--paper-raised);
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.unit-buttons button:hover {
+  border-color: var(--moss);
+  background: rgba(74,107,90,0.06);
+}
+
+.owner-link {
+  display: block;
+  margin: 48px auto 0;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(43,38,32,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 50;
+}
+.modal-card {
+  background: var(--paper-raised);
+  border-radius: 14px;
+  padding: 28px;
+  width: 100%;
+  max-width: 360px;
+}
+.modal-card h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+.modal-actions .btn { flex: 1; }
