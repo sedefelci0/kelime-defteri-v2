@@ -177,6 +177,7 @@ document.getElementById('logout-btn').addEventListener('click', async () => {
 });
 
 // --- Quiz modu ---
+const QUIZ_SESSION_SIZE = 15;
 const quizToggleBtn = document.getElementById('quiz-toggle-btn');
 const quizCounterEl = document.getElementById('quiz-counter');
 const quizEyebrowEl = document.getElementById('quiz-eyebrow');
@@ -184,6 +185,11 @@ const quizPromptEl = document.getElementById('quiz-prompt');
 const quizPromptSubEl = document.getElementById('quiz-prompt-sub');
 const quizOptionsEl = document.getElementById('quiz-options');
 const quizNextBtn = document.getElementById('quiz-next-btn');
+const quizDoneEl = document.getElementById('quiz-done');
+const quizDoneScoreEl = document.getElementById('quiz-done-score');
+
+let quizCorrectCount = 0;
+let quizWrongCount = 0;
 
 function shuffleQuiz(arr) {
   const copy = [...arr];
@@ -194,6 +200,51 @@ function shuffleQuiz(arr) {
   return copy;
 }
 
+function quizStorageKey() {
+  return `quizRemaining:${deckSlug}:${unitParam || 'all'}`;
+}
+
+function loadRemainingIds() {
+  try {
+    const raw = localStorage.getItem(quizStorageKey());
+    const ids = raw ? JSON.parse(raw) : null;
+    return Array.isArray(ids) && ids.length > 0 ? ids : null;
+  } catch (err) {
+    return null;
+  }
+}
+
+function saveRemainingIds(ids) {
+  try {
+    localStorage.setItem(quizStorageKey(), JSON.stringify(ids));
+  } catch (err) {
+    // localStorage kullanılamıyorsa (gizli sekme vs.) sessizce geç, quiz yine çalışır
+  }
+}
+
+function startQuizSession() {
+  let remainingIds = loadRemainingIds();
+  if (!remainingIds) {
+    remainingIds = shuffleQuiz(allWords.map((w) => w.id));
+  }
+
+  const sessionIds = remainingIds.slice(0, QUIZ_SESSION_SIZE);
+  const leftoverIds = remainingIds.slice(QUIZ_SESSION_SIZE);
+  saveRemainingIds(leftoverIds);
+
+  quizQueue = sessionIds.map((id) => allWords.find((w) => w.id === id)).filter(Boolean);
+  quizPos = 0;
+  quizCorrectCount = 0;
+  quizWrongCount = 0;
+
+  quizDoneEl.style.display = 'none';
+  quizOptionsEl.style.display = '';
+  document.querySelector('.quiz-prompt-card').style.display = '';
+
+  showOnly(quizZoneEl);
+  renderQuizQuestion();
+}
+
 quizToggleBtn.addEventListener('click', () => {
   if (allWords.length < 4) {
     alert('Quiz için en az 4 kelime gerekiyor.');
@@ -202,10 +253,7 @@ quizToggleBtn.addEventListener('click', () => {
   quizActive = !quizActive;
   if (quizActive) {
     quizToggleBtn.textContent = 'Kart modu';
-    quizQueue = shuffleQuiz(allWords);
-    quizPos = 0;
-    showOnly(quizZoneEl);
-    renderQuizQuestion();
+    startQuizSession();
   } else {
     quizToggleBtn.textContent = 'Quiz modu';
     renderCard();
@@ -213,10 +261,6 @@ quizToggleBtn.addEventListener('click', () => {
 });
 
 function renderQuizQuestion() {
-  if (quizPos >= quizQueue.length) {
-    quizQueue = shuffleQuiz(allWords);
-    quizPos = 0;
-  }
   const word = quizQueue[quizPos];
   const direction = Math.random() < 0.5 ? 'en-to-tr' : 'tr-to-en';
 
@@ -259,6 +303,8 @@ async function handleQuizAnswer(word, chosen, correctAnswer, chosenBtn) {
   allButtons.forEach((b) => { b.disabled = true; });
 
   const isCorrect = chosen === correctAnswer;
+  if (isCorrect) quizCorrectCount += 1; else quizWrongCount += 1;
+
   allButtons.forEach((b) => {
     if (b.textContent === correctAnswer) {
       b.classList.add('is-correct');
@@ -279,12 +325,37 @@ async function handleQuizAnswer(word, chosen, correctAnswer, chosenBtn) {
     // sessizce geç, quiz akışını bozmayalım
   }
 
-  quizNextBtn.style.display = '';
+  if (quizPos < quizQueue.length - 1) {
+    quizNextBtn.style.display = '';
+  } else {
+    quizNextBtn.style.display = 'none';
+    showQuizDone();
+  }
+}
+
+function showQuizDone() {
+  quizOptionsEl.style.display = 'none';
+  document.querySelector('.quiz-prompt-card').style.display = 'none';
+  quizDoneScoreEl.textContent = `${quizCorrectCount} doğru, ${quizWrongCount} yanlış (${quizQueue.length} soru)`;
+  const remaining = loadRemainingIds();
+  document.getElementById('quiz-done-again').textContent = remaining
+    ? `Devam et (${Math.min(QUIZ_SESSION_SIZE, remaining.length)} soru daha)`
+    : 'Yeni tur başlat (baştan, 15 soru)';
+  quizDoneEl.style.display = '';
 }
 
 quizNextBtn.addEventListener('click', () => {
   quizPos += 1;
   renderQuizQuestion();
+});
+
+document.getElementById('quiz-done-cards').addEventListener('click', () => {
+  quizActive = false;
+  quizToggleBtn.textContent = 'Quiz modu';
+  renderCard();
+});
+document.getElementById('quiz-done-again').addEventListener('click', () => {
+  startQuizSession();
 });
 
 // --- Süre sayacı ---
