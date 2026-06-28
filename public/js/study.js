@@ -13,9 +13,14 @@ let deckInfo = { hasExplanation: true, hasImage: false, title: 'Kelime Defteri' 
 let totalStudySeconds = 0;
 let sessionSeconds = 0; // bu sayfa açıldığından beri geçen, henüz sunucuya gönderilmemiş süre
 
+let quizActive = false;
+let quizQueue = [];
+let quizPos = 0;
+
 const loadingEl = document.getElementById('loading');
 const cardZoneEl = document.getElementById('card-zone');
 const emptyStateEl = document.getElementById('empty-state');
+const quizZoneEl = document.getElementById('quiz-zone');
 
 const flipCardEl = document.getElementById('flip-card');
 const cardCounterEl = document.getElementById('card-counter');
@@ -34,7 +39,7 @@ const navNext = document.getElementById('nav-next');
 const navLast = document.getElementById('nav-last');
 
 function showOnly(el) {
-  [loadingEl, cardZoneEl, emptyStateEl].forEach((e) => {
+  [loadingEl, cardZoneEl, emptyStateEl, quizZoneEl].forEach((e) => {
     e.style.display = e === el ? '' : 'none';
   });
 }
@@ -100,11 +105,12 @@ function renderCard() {
   if (!word) return;
   flipCardEl.classList.remove('is-flipped');
 
+  const imagePanelEl = document.getElementById('image-panel');
   if (deckInfo.hasImage && word.image_url) {
     wordImageEl.src = word.image_url;
-    wordImageEl.style.display = '';
+    imagePanelEl.style.display = '';
   } else {
-    wordImageEl.style.display = 'none';
+    imagePanelEl.style.display = 'none';
   }
 
   wordEnglishEl.textContent = word.english;
@@ -170,6 +176,117 @@ document.getElementById('logout-btn').addEventListener('click', async () => {
   window.location.href = '/';
 });
 
+// --- Quiz modu ---
+const quizToggleBtn = document.getElementById('quiz-toggle-btn');
+const quizCounterEl = document.getElementById('quiz-counter');
+const quizEyebrowEl = document.getElementById('quiz-eyebrow');
+const quizPromptEl = document.getElementById('quiz-prompt');
+const quizPromptSubEl = document.getElementById('quiz-prompt-sub');
+const quizOptionsEl = document.getElementById('quiz-options');
+const quizNextBtn = document.getElementById('quiz-next-btn');
+
+function shuffleQuiz(arr) {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+quizToggleBtn.addEventListener('click', () => {
+  if (allWords.length < 4) {
+    alert('Quiz için en az 4 kelime gerekiyor.');
+    return;
+  }
+  quizActive = !quizActive;
+  if (quizActive) {
+    quizToggleBtn.textContent = 'Kart modu';
+    quizQueue = shuffleQuiz(allWords);
+    quizPos = 0;
+    showOnly(quizZoneEl);
+    renderQuizQuestion();
+  } else {
+    quizToggleBtn.textContent = 'Quiz modu';
+    renderCard();
+  }
+});
+
+function renderQuizQuestion() {
+  if (quizPos >= quizQueue.length) {
+    quizQueue = shuffleQuiz(allWords);
+    quizPos = 0;
+  }
+  const word = quizQueue[quizPos];
+  const direction = Math.random() < 0.5 ? 'en-to-tr' : 'tr-to-en';
+
+  let correctAnswer, promptText, promptSub, optionPool;
+  if (direction === 'en-to-tr') {
+    quizEyebrowEl.textContent = 'Bu kelimenin Türkçesi ne?';
+    promptText = word.english;
+    promptSub = word.pronunciation;
+    correctAnswer = word.turkish_meaning;
+    optionPool = allWords.filter((w) => w.id !== word.id).map((w) => w.turkish_meaning);
+  } else {
+    quizEyebrowEl.textContent = 'Bunun İngilizcesi ne?';
+    promptText = word.turkish_meaning;
+    promptSub = '';
+    correctAnswer = word.english;
+    optionPool = allWords.filter((w) => w.id !== word.id).map((w) => w.english);
+  }
+
+  quizPromptEl.textContent = promptText;
+  quizPromptSubEl.textContent = promptSub;
+  quizCounterEl.textContent = `Soru ${quizPos + 1} / ${quizQueue.length}`;
+
+  const distractors = shuffleQuiz([...new Set(optionPool.filter((o) => o !== correctAnswer))]).slice(0, 3);
+  const options = shuffleQuiz([correctAnswer, ...distractors]);
+
+  quizOptionsEl.innerHTML = '';
+  quizNextBtn.style.display = 'none';
+
+  options.forEach((opt) => {
+    const btn = document.createElement('button');
+    btn.className = 'quiz-option';
+    btn.textContent = opt;
+    btn.addEventListener('click', () => handleQuizAnswer(word, opt, correctAnswer, btn));
+    quizOptionsEl.appendChild(btn);
+  });
+}
+
+async function handleQuizAnswer(word, chosen, correctAnswer, chosenBtn) {
+  const allButtons = Array.from(quizOptionsEl.querySelectorAll('.quiz-option'));
+  allButtons.forEach((b) => { b.disabled = true; });
+
+  const isCorrect = chosen === correctAnswer;
+  allButtons.forEach((b) => {
+    if (b.textContent === correctAnswer) {
+      b.classList.add('is-correct');
+    } else if (b === chosenBtn && !isCorrect) {
+      b.classList.add('is-wrong');
+    } else {
+      b.classList.add('is-dimmed');
+    }
+  });
+
+  try {
+    const result = await postJSON(`/api/progress/${word.id}`, { knewIt: isCorrect });
+    word.status = result.status;
+    word.times_correct = result.timesCorrect;
+    word.times_wrong = result.timesWrong;
+    await loadSummary();
+  } catch (err) {
+    // sessizce geç, quiz akışını bozmayalım
+  }
+
+  quizNextBtn.style.display = '';
+}
+
+quizNextBtn.addEventListener('click', () => {
+  quizPos += 1;
+  renderQuizQuestion();
+});
+
 // --- Süre sayacı ---
 // Her saniye ekrandaki sayacı güncelle; her 20 saniyede sunucuya gönderip sıfırla.
 setInterval(() => {
@@ -186,7 +303,6 @@ setInterval(() => {
 
 window.addEventListener('beforeunload', () => {
   if (sessionSeconds > 0) {
-    // Sayfa kapanırken kalan süreyi göndermeyi dene (garanti değildir ama denemeye değer)
     navigator.sendBeacon && navigator.sendBeacon(
       '/api/progress/heartbeat',
       new Blob([JSON.stringify({ seconds: sessionSeconds })], { type: 'application/json' })
@@ -209,6 +325,10 @@ async function init() {
     if (allWords.length === 0) {
       showOnly(emptyStateEl);
       return;
+    }
+    if (allWords.length < 4) {
+      quizToggleBtn.disabled = true;
+      quizToggleBtn.title = 'Quiz için en az 4 kelime gerekiyor';
     }
 
     const firstUnknown = allWords.findIndex((w) => w.status !== 'known');
