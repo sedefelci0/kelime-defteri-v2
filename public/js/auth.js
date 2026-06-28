@@ -60,7 +60,7 @@ loginForm.addEventListener('submit', async (e) => {
   submitBtn.disabled = true;
   try {
     await postJSON('/api/auth/login', { email, password });
-    window.location.href = '/study.html';
+    window.location.href = '/decks.html';
   } catch (err) {
     showError(err.message);
   } finally {
@@ -78,7 +78,7 @@ signupForm.addEventListener('submit', async (e) => {
   submitBtn.disabled = true;
   try {
     await postJSON('/api/auth/signup', { displayName, email, password });
-    window.location.href = '/study.html';
+    window.location.href = '/decks.html';
   } catch (err) {
     showError(err.message);
   } finally {
@@ -86,10 +86,10 @@ signupForm.addEventListener('submit', async (e) => {
   }
 });
 
-// Zaten giriş yapılmışsa direkt çalışma ekranına yönlendir
+// Zaten giriş yapılmışsa direkt deste seçim ekranına yönlendir
 (async () => {
   try {
     const res = await fetch('/api/auth/me', { credentials: 'same-origin' });
-    if (res.ok) window.location.href = '/study.html';
+    if (res.ok) window.location.href = '/decks.html';
   } catch (_) {}
 })();
