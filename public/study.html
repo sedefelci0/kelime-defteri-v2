@@ -12,9 +12,11 @@
 <body>
 <div class="app-shell">
   <div class="topbar">
-    <div class="brand">Kelime Defteri</div>
+    <div class="brand" id="deck-brand">Kelime Defteri</div>
     <div class="user-area">
+      <span class="study-timer" id="study-timer" title="Toplam çalışma süren">⏱ 0 dk</span>
       <span class="user-name" id="user-name"></span>
+      <button class="btn btn-secondary" id="back-to-decks-btn" type="button">Desteler</button>
       <button class="btn btn-danger-ghost" id="logout-btn" type="button">Çıkış yap</button>
     </div>
   </div>
@@ -38,6 +40,7 @@
         <div class="flip-card-inner">
           <div class="card-face card-face-front">
             <span class="card-eyebrow">İngilizce</span>
+            <img id="word-image" class="card-image" alt="" style="display:none;" />
             <div class="card-word" id="word-english"></div>
             <div class="card-pron" id="word-pron"></div>
             <div class="card-explanation" id="word-explanation"></div>
@@ -51,6 +54,13 @@
       </div>
       <div class="flip-hint">Kartı çevirmek için tıkla</div>
 
+      <div class="nav-buttons">
+        <button class="nav-btn" id="nav-first" type="button" title="En başa dön">⏮</button>
+        <button class="nav-btn" id="nav-prev" type="button" title="Önceki">←</button>
+        <button class="nav-btn" id="nav-next" type="button" title="Sonraki">→</button>
+        <button class="nav-btn" id="nav-last" type="button" title="En sona git">⏭</button>
+      </div>
+
       <div class="answer-buttons">
         <button class="btn btn-again" id="btn-again" type="button">Tekrar göster</button>
         <button class="btn btn-know" id="btn-know" type="button">Biliyorum</button>
@@ -59,13 +69,7 @@
 
     <div id="empty-state" class="empty-state" style="display:none;">
       <h2>Henüz kelime yok</h2>
-      <p>Kelime listesi şu an boş görünüyor. Yönetici kelimeleri ekleyene kadar bekleyebilirsin.</p>
-    </div>
-
-    <div id="done-state" class="done-state" style="display:none;">
-      <h2>Bugünlük bu kadar! 🎉</h2>
-      <p>Şu an gösterilecek yeni veya öğrenilmekte olan kelime yok. Daha sonra tekrar gel ya da tüm kelimeleri sıfırdan tekrar etmek için aşağıdaki butonu kullan.</p>
-      <button class="btn btn-secondary" id="restart-btn" type="button">Tüm kelimeleri tekrar göster</button>
+      <p>Bu destede henüz kelime bulunmuyor.</p>
     </div>
   </div>
 </div>
