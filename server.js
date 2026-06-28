@@ -9,6 +9,7 @@ const { ensureDatabaseReady } = require('./db/setup');
 const authRoutes = require('./routes/auth');
 const wordsRoutes = require('./routes/words');
 const progressRoutes = require('./routes/progress');
+const decksRoutes = require('./routes/decks');
 
 const app = express();
 app.set('trust proxy', 1);
@@ -37,6 +38,7 @@ app.use(
 app.use('/api/auth', authRoutes);
 app.use('/api/words', wordsRoutes);
 app.use('/api/progress', progressRoutes);
+app.use('/api/decks', decksRoutes);
 
 // Statik dosyalar (HTML/CSS/JS)
 app.use(express.static(path.join(__dirname, 'public')));
