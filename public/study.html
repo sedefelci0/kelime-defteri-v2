@@ -16,6 +16,7 @@
     <div class="user-area">
       <span class="study-timer" id="study-timer" title="Toplam çalışma süren">⏱ 0 dk</span>
       <span class="user-name" id="user-name"></span>
+      <button class="btn btn-secondary" id="quiz-toggle-btn" type="button">Quiz modu</button>
       <button class="btn btn-secondary" id="back-to-decks-btn" type="button">Desteler</button>
       <button class="btn btn-danger-ghost" id="logout-btn" type="button">Çıkış yap</button>
     </div>
@@ -36,19 +37,23 @@
 
     <div id="card-zone" class="card-zone" style="display:none;">
       <div class="card-counter" id="card-counter"></div>
-      <div class="flip-card" id="flip-card">
-        <div class="flip-card-inner">
-          <div class="card-face card-face-front">
-            <span class="card-eyebrow">İngilizce</span>
-            <img id="word-image" class="card-image" alt="" style="display:none;" />
-            <div class="card-word" id="word-english"></div>
-            <div class="card-pron" id="word-pron"></div>
-            <div class="card-explanation" id="word-explanation"></div>
-          </div>
-          <div class="card-face card-face-back">
-            <span class="card-eyebrow">Türkçe</span>
-            <div class="card-meaning" id="word-meaning"></div>
-            <div class="card-example" id="word-example"></div>
+      <div class="study-row">
+        <div class="image-panel" id="image-panel" style="display:none;">
+          <img id="word-image" alt="" />
+        </div>
+        <div class="flip-card" id="flip-card">
+          <div class="flip-card-inner">
+            <div class="card-face card-face-front">
+              <span class="card-eyebrow">İngilizce</span>
+              <div class="card-word" id="word-english"></div>
+              <div class="card-pron" id="word-pron"></div>
+              <div class="card-explanation" id="word-explanation"></div>
+            </div>
+            <div class="card-face card-face-back">
+              <span class="card-eyebrow">Türkçe</span>
+              <div class="card-meaning" id="word-meaning"></div>
+              <div class="card-example" id="word-example"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -70,6 +75,17 @@
     <div id="empty-state" class="empty-state" style="display:none;">
       <h2>Henüz kelime yok</h2>
       <p>Bu destede henüz kelime bulunmuyor.</p>
+    </div>
+
+    <div id="quiz-zone" class="quiz-zone" style="display:none;">
+      <div class="card-counter" id="quiz-counter"></div>
+      <div class="quiz-prompt-card">
+        <span class="card-eyebrow" id="quiz-eyebrow">İngilizce</span>
+        <div class="quiz-prompt" id="quiz-prompt"></div>
+        <div class="quiz-prompt-sub" id="quiz-prompt-sub"></div>
+      </div>
+      <div class="quiz-options" id="quiz-options"></div>
+      <button class="btn btn-primary quiz-next-btn" id="quiz-next-btn" type="button" style="display:none;">Sonraki soru →</button>
     </div>
   </div>
 </div>
