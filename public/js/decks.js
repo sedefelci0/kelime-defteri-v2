@@ -100,6 +100,7 @@ document.getElementById('owner-submit').addEventListener('click', async () => {
   try {
     await postJSON('/api/decks/unlock', { password });
     ownerModal.style.display = 'none';
+    document.getElementById('admin-panel-btn').style.display = '';
     loadDecks();
   } catch (err) {
     ownerError.textContent = err.message;
@@ -107,10 +108,17 @@ document.getElementById('owner-submit').addEventListener('click', async () => {
   }
 });
 
+document.getElementById('admin-panel-btn').addEventListener('click', () => {
+  window.location.href = '/admin.html';
+});
+
 (async function init() {
   try {
     const me = await getJSON('/api/auth/me');
     document.getElementById('user-name').textContent = me.displayName;
+    if (me.isOwner) {
+      document.getElementById('admin-panel-btn').style.display = '';
+    }
     await loadDecks();
   } catch (err) {
     // getJSON zaten 401'de yönlendiriyor
