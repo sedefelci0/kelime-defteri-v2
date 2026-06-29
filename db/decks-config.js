@@ -18,7 +18,7 @@ module.exports = [
     description: 'Üniteler halinde kelimeler',
     requiresOwner: false,
     hasExplanation: false,
-    hasImage: true,
+    hasImage: false,
     sortOrder: 2,
     wordsFile: '../data/grade5_words.json',
   },
