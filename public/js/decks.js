@@ -75,6 +75,10 @@ async function loadDecks() {
 
 document.getElementById('back-to-decks').addEventListener('click', loadDecks);
 
+document.getElementById('notes-btn').addEventListener('click', () => {
+  window.location.href = '/notes.html';
+});
+
 document.getElementById('logout-btn').addEventListener('click', async () => {
   await fetch('/api/auth/logout', { method: 'POST', credentials: 'same-origin' });
   window.location.href = '/';
