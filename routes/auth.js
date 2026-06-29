@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const pool = require('../db/pool');
-const CLASS_LIST = require('../db/classes-config');
+const { ALL_CLASSES } = require('../db/classes-config');
 
 const router = express.Router();
 
@@ -22,7 +22,7 @@ router.post('/signup', async (req, res) => {
     if (password.length < 8) {
       return res.status(400).json({ error: 'Şifre en az 8 karakter olmalı.' });
     }
-    if (!CLASS_LIST.includes(className)) {
+    if (!ALL_CLASSES.includes(className)) {
       return res.status(400).json({ error: 'Geçerli bir sınıf seçmelisin.' });
     }
 
