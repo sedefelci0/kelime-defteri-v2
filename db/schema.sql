@@ -54,4 +54,14 @@ CREATE TABLE IF NOT EXISTS user_progress (
 CREATE INDEX IF NOT EXISTS idx_progress_user ON user_progress(user_id);
 CREATE INDEX IF NOT EXISTS idx_progress_status ON user_progress(user_id, status);
 
+-- Kullanıcıların kendi serbest notları
+CREATE TABLE IF NOT EXISTS notes (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  title TEXT NOT NULL DEFAULT '',
+  content TEXT NOT NULL DEFAULT '',
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS idx_notes_user ON notes(user_id, updated_at DESC);
+
 -- Oturum (session) verisi için connect-pg-simple bu tabloyu kendisi oluşturur (session.sql ile)
