@@ -1,7 +1,7 @@
 const express = require('express');
 const pool = require('../db/pool');
 const { requireAuth } = require('../middleware/auth');
-const CLASS_LIST = require('../db/classes-config');
+const { STUDENT_CLASSES, TEACHER_LABEL } = require('../db/classes-config');
 
 const router = express.Router();
 
@@ -12,21 +12,21 @@ function requireOwner(req, res, next) {
   next();
 }
 
-// Sınıf listesi (kayıt formundaki ile aynı, filtre dropdown'u için)
+// Sınıf listesi (öğretmen hariç, sadece gerçek öğrenci sınıfları — filtre dropdown'u için)
 router.get('/classes', requireAuth, requireOwner, (req, res) => {
-  res.json(CLASS_LIST);
+  res.json(STUDENT_CLASSES);
 });
 
-// Tüm öğrencileri (ve istersen tek bir sınıfı) ilerleme özetiyle listele
+// Tüm öğrencileri (öğretmen hesapları hariç, ve istersen tek bir sınıfı) ilerleme özetiyle listele
 router.get('/students', requireAuth, requireOwner, async (req, res) => {
   try {
     const { class: classFilter } = req.query;
 
-    const params = [];
-    let classWhere = '';
+    const params = [TEACHER_LABEL];
+    let classWhere = 'WHERE (u.class_name IS DISTINCT FROM $1)';
     if (classFilter) {
       params.push(classFilter);
-      classWhere = `WHERE u.class_name = $${params.length}`;
+      classWhere += ` AND u.class_name = $${params.length}`;
     }
 
     const { rows: students } = await pool.query(
