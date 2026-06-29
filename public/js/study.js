@@ -288,6 +288,7 @@ function renderQuizQuestion() {
 
   quizOptionsEl.innerHTML = '';
   quizNextBtn.style.display = 'none';
+  document.getElementById('quiz-roast').style.display = 'none';
 
   options.forEach((opt) => {
     const btn = document.createElement('button');
@@ -314,6 +315,14 @@ async function handleQuizAnswer(word, chosen, correctAnswer, chosenBtn) {
       b.classList.add('is-dimmed');
     }
   });
+
+  const roastEl = document.getElementById('quiz-roast');
+  if (!isCorrect && deckSlug === 'benim-kelimelerim') {
+    roastEl.textContent = 'Slk mısın? Bunu mu çözemedin? 😅';
+    roastEl.style.display = '';
+  } else {
+    roastEl.style.display = 'none';
+  }
 
   try {
     const result = await postJSON(`/api/progress/${word.id}`, { knewIt: isCorrect });
@@ -374,6 +383,7 @@ setInterval(() => {
 
 window.addEventListener('beforeunload', () => {
   if (sessionSeconds > 0) {
+    // Sayfa kapanırken kalan süreyi göndermeyi dene (garanti değildir ama denemeye değer)
     navigator.sendBeacon && navigator.sendBeacon(
       '/api/progress/heartbeat',
       new Blob([JSON.stringify({ seconds: sessionSeconds })], { type: 'application/json' })
