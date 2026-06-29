@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kelime Defteri — Öğrenci Paneli</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/admin.css" />
+</head>
+<body>
+<div class="app-shell">
+  <div class="topbar">
+    <div class="brand">Kelime Defteri — Öğrenci Paneli</div>
+    <div class="user-area">
+      <span class="user-name" id="user-name"></span>
+      <button class="btn btn-secondary" id="back-to-decks-btn" type="button">Desteler</button>
+      <button class="btn btn-danger-ghost" id="logout-btn" type="button">Çıkış yap</button>
+    </div>
+  </div>
+
+  <div class="admin-page">
+    <div class="admin-toolbar">
+      <label for="class-filter">Sınıf filtrele:</label>
+      <select id="class-filter">
+        <option value="">Tüm sınıflar</option>
+      </select>
+    </div>
+
+    <div id="loading" class="loading-state">Yükleniyor…</div>
+    <div id="no-access" class="empty-state" style="display:none;">
+      <h2>Erişim yok</h2>
+      <p>Bu sayfayı görmek için Desteler sayfasından "Öğretmen Girişi" yapmalısın.</p>
+    </div>
+
+    <div id="students-table-wrap" style="display:none;">
+      <table class="students-table">
+        <thead>
+          <tr>
+            <th>Ad</th>
+            <th>Sınıf</th>
+            <th>E-posta</th>
+            <th>Çalışma Süresi</th>
+            <th>Doğru</th>
+            <th>Yanlış</th>
+            <th>Notlar</th>
+          </tr>
+        </thead>
+        <tbody id="students-tbody"></tbody>
+      </table>
+      <div id="empty-students" class="empty-state" style="display:none;">
+        <h2>Bu sınıfta öğrenci yok</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="notes-modal" style="display:none;">
+  <div class="modal-card notes-modal-card">
+    <h3 id="notes-modal-title">Notlar</h3>
+    <div id="notes-modal-list" class="notes-modal-list"></div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" id="notes-modal-close" type="button">Kapat</button>
+    </div>
+  </div>
+</div>
+
+<script src="/js/admin.js"></script>
+</body>
+</html>
