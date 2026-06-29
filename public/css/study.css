@@ -199,6 +199,54 @@
   margin-bottom: 10px;
   line-height: 1.1;
 }
+.card-word-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.card-word-row .card-word {
+  margin-bottom: 0;
+}
+.speak-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--rule);
+  background: var(--paper-raised);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.12s ease, border-color 0.12s ease, transform 0.1s ease;
+}
+.speak-btn:hover {
+  border-color: var(--moss);
+  background: rgba(74,107,90,0.08);
+}
+.speak-btn:active {
+  transform: scale(0.92);
+}
+.speak-btn-dark {
+  border-color: rgba(250,246,238,0.35);
+  background: rgba(250,246,238,0.1);
+}
+.speak-btn-dark:hover {
+  border-color: rgba(250,246,238,0.6);
+  background: rgba(250,246,238,0.18);
+}
+
+.card-example-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.card-example-row .card-example {
+  margin: 0;
+}
 .card-pron {
   font-family: var(--font-mono);
   font-size: 16px;
