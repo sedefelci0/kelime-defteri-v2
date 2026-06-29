@@ -135,6 +135,16 @@ p { margin: 0; }
   color: var(--ink);
 }
 .field input:focus { border-color: var(--moss); outline: none; box-shadow: 0 0 0 3px rgba(74,107,90,0.15); }
+.field select {
+  padding: 12px 14px;
+  border: 1.5px solid var(--rule);
+  border-radius: 8px;
+  background: var(--paper-raised);
+  font-size: 16px;
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+.field select:focus { border-color: var(--moss); outline: none; box-shadow: 0 0 0 3px rgba(74,107,90,0.15); }
 
 .error-banner {
   background: #fbeee8;
