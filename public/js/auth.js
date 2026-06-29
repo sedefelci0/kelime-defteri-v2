@@ -39,8 +39,8 @@ tabSignup.addEventListener('click', showSignup);
 document.getElementById('goto-signup').addEventListener('click', showSignup);
 document.getElementById('goto-login').addEventListener('click', showLogin);
 
-// Sınıf dropdown'unu doldur (5,6,7,8 sınıf x A-F şube)
-const CLASS_LIST = [];
+// Sınıf dropdown'unu doldur ("Öğretmen" + 5,6,7,8 sınıf x A-F şube)
+const CLASS_LIST = ['Öğretmen'];
 for (const grade of [5, 6, 7, 8]) {
   for (const section of ['A', 'B', 'C', 'D', 'E', 'F']) {
     CLASS_LIST.push(`${grade}-${section}`);
