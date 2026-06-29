@@ -45,14 +45,20 @@
           <div class="flip-card-inner">
             <div class="card-face card-face-front">
               <span class="card-eyebrow">İngilizce</span>
-              <div class="card-word" id="word-english"></div>
+              <div class="card-word-row">
+                <div class="card-word" id="word-english"></div>
+                <button class="speak-btn" id="speak-word-btn" type="button" title="Sesli dinle">🔊</button>
+              </div>
               <div class="card-pron" id="word-pron"></div>
               <div class="card-explanation" id="word-explanation"></div>
             </div>
             <div class="card-face card-face-back">
               <span class="card-eyebrow">Türkçe</span>
               <div class="card-meaning" id="word-meaning"></div>
-              <div class="card-example" id="word-example"></div>
+              <div class="card-example-row">
+                <div class="card-example" id="word-example"></div>
+                <button class="speak-btn speak-btn-dark" id="speak-example-btn" type="button" title="Sesli dinle">🔊</button>
+              </div>
             </div>
           </div>
         </div>
