@@ -137,6 +137,31 @@ flipCardEl.addEventListener('click', () => {
   flipCardEl.classList.toggle('is-flipped');
 });
 
+// --- Sesli okuma (tarayıcının kendi text-to-speech özelliği, dosya gerektirmez) ---
+function speakEnglish(text) {
+  if (!text) return;
+  if (!('speechSynthesis' in window)) {
+    alert('Tarayıcın sesli okumayı desteklemiyor.');
+    return;
+  }
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'en-US';
+  utterance.rate = 0.88;
+  window.speechSynthesis.speak(utterance);
+}
+
+document.getElementById('speak-word-btn').addEventListener('click', (e) => {
+  e.stopPropagation();
+  const word = allWords[currentIndex];
+  if (word) speakEnglish(word.english);
+});
+document.getElementById('speak-example-btn').addEventListener('click', (e) => {
+  e.stopPropagation();
+  const word = allWords[currentIndex];
+  if (word) speakEnglish(word.example_sentence);
+});
+
 navFirst.addEventListener('click', () => { currentIndex = 0; renderCard(); });
 navPrev.addEventListener('click', () => { currentIndex = Math.max(0, currentIndex - 1); renderCard(); });
 navNext.addEventListener('click', () => { currentIndex = Math.min(allWords.length - 1, currentIndex + 1); renderCard(); });
