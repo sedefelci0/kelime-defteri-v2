@@ -1,0 +1,112 @@
+.admin-page {
+  flex: 1;
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+
+.admin-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.admin-toolbar select {
+  padding: 8px 12px;
+  border: 1.5px solid var(--rule);
+  border-radius: 8px;
+  background: var(--paper-raised);
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--paper-raised);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(43,38,32,0.06);
+}
+.students-table th {
+  text-align: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  padding: 12px 14px;
+  border-bottom: 2px solid var(--rule);
+}
+.students-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--rule);
+  font-size: 14px;
+  color: var(--ink);
+}
+.students-table tr:last-child td {
+  border-bottom: none;
+}
+.students-table .num-correct { color: var(--moss-deep); font-weight: 600; }
+.students-table .num-wrong { color: var(--clay-deep); font-weight: 600; }
+
+.notes-count-btn {
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--ink);
+}
+.notes-count-btn:hover {
+  border-color: var(--moss);
+  background: rgba(74,107,90,0.06);
+}
+.notes-count-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.notes-modal-card {
+  max-width: 520px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+.notes-modal-list {
+  overflow-y: auto;
+  flex: 1;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.notes-modal-note {
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.notes-modal-note .note-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.notes-modal-note .note-content {
+  font-size: 14px;
+  color: var(--ink);
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+.notes-modal-note .note-date {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 700px) {
+  .students-table { font-size: 13px; }
+  .students-table th, .students-table td { padding: 8px 10px; }
+}
