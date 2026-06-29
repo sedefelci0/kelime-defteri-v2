@@ -34,15 +34,17 @@
   </div>
 
   <div class="study-area">
-    <div id="loading" class="loading-state">Kelimeler yükleniyor…</div>
+    <div class="study-layout">
+      <div class="study-main">
+        <div id="loading" class="loading-state">Kelimeler yükleniyor…</div>
 
-    <div id="card-zone" class="card-zone" style="display:none;">
-      <div class="card-counter" id="card-counter"></div>
-      <div class="study-row">
-        <div class="image-panel" id="image-panel" style="display:none;">
-          <img id="word-image" alt="" />
-        </div>
-        <div class="flip-card" id="flip-card">
+        <div id="card-zone" class="card-zone" style="display:none;">
+          <div class="card-counter" id="card-counter"></div>
+          <div class="study-row">
+            <div class="image-panel" id="image-panel" style="display:none;">
+              <img id="word-image" alt="" />
+            </div>
+            <div class="flip-card" id="flip-card">
           <div class="flip-card-inner">
             <div class="card-face card-face-front">
               <span class="card-eyebrow">İngilizce</span>
@@ -103,6 +105,28 @@
           <button class="btn btn-primary" id="quiz-done-again" type="button">Devam et (15 soru daha)</button>
         </div>
       </div>
+    </div>
+      </div>
+
+      <div class="notes-sidebar">
+        <div class="notes-sidebar-header">
+          <h3>Notlarım</h3>
+          <button class="notes-add-btn" id="sidebar-add-note-btn" type="button" title="Yeni not">+</button>
+        </div>
+        <div id="sidebar-notes-list" class="sidebar-notes-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="note-modal" style="display:none;">
+  <div class="modal-card note-modal-card">
+    <input type="text" id="note-modal-title" class="note-title-input" placeholder="Başlık (isteğe bağlı)" />
+    <textarea id="note-modal-content" class="note-content-area" placeholder="Buraya yazmaya başla…"></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-danger-ghost" id="note-modal-delete" type="button" style="display:none;">Sil</button>
+      <button class="btn btn-secondary" id="note-modal-cancel" type="button">Kapat</button>
+      <button class="btn btn-primary" id="note-modal-save" type="button">Kaydet</button>
     </div>
   </div>
 </div>
