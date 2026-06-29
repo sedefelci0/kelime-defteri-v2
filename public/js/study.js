@@ -196,6 +196,9 @@ btnKnow.addEventListener('click', () => answer(true));
 document.getElementById('back-to-decks-btn').addEventListener('click', () => {
   window.location.href = '/decks.html';
 });
+document.getElementById('notes-btn').addEventListener('click', () => {
+  window.location.href = '/notes.html';
+});
 document.getElementById('logout-btn').addEventListener('click', async () => {
   await fetch('/api/auth/logout', { method: 'POST', credentials: 'same-origin' });
   window.location.href = '/';
