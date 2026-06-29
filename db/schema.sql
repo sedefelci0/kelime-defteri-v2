@@ -5,10 +5,12 @@ CREATE TABLE IF NOT EXISTS users (
   email TEXT UNIQUE NOT NULL,
   password_hash TEXT NOT NULL,
   display_name TEXT NOT NULL,
+  class_name TEXT,
   total_study_seconds INTEGER NOT NULL DEFAULT 0,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 ALTER TABLE users ADD COLUMN IF NOT EXISTS total_study_seconds INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS class_name TEXT;
 
 -- Bir "deste": örn. "Benim Kelimelerim" (sahibe özel) veya "5. Sınıf"
 CREATE TABLE IF NOT EXISTS decks (
