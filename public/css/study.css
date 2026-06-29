@@ -364,6 +364,14 @@
   padding: 14px 32px;
 }
 
+.quiz-roast {
+  margin-top: 16px;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--clay-deep);
+  text-align: center;
+}
+
 .quiz-done {
   width: 100%;
   text-align: center;
