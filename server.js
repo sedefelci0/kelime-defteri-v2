@@ -10,6 +10,7 @@ const authRoutes = require('./routes/auth');
 const wordsRoutes = require('./routes/words');
 const progressRoutes = require('./routes/progress');
 const decksRoutes = require('./routes/decks');
+const notesRoutes = require('./routes/notes');
 
 const app = express();
 app.set('trust proxy', 1);
@@ -39,6 +40,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/words', wordsRoutes);
 app.use('/api/progress', progressRoutes);
 app.use('/api/decks', decksRoutes);
+app.use('/api/notes', notesRoutes);
 
 // Statik dosyalar (HTML/CSS/JS)
 app.use(express.static(path.join(__dirname, 'public')));
