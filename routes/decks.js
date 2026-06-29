@@ -61,10 +61,11 @@ router.get('/:slug/units', requireAuth, async (req, res) => {
 // Sahibe özel desteyi bu oturum için aç
 router.post('/unlock', requireAuth, async (req, res) => {
   const { password } = req.body || {};
-  if (!process.env.OWNER_PASSWORD) {
+  const expected = process.env.OWNER_PASSWORD;
+  if (!expected) {
     return res.status(500).json({ error: 'Sunucu yapılandırması eksik (OWNER_PASSWORD tanımlı değil).' });
   }
-  if (password !== process.env.OWNER_PASSWORD) {
+  if (!password || password.trim() !== expected.trim()) {
     return res.status(401).json({ error: 'Şifre yanlış.' });
   }
   req.session.ownerUnlocked = true;
