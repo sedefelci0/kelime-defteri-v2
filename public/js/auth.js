@@ -39,6 +39,21 @@ tabSignup.addEventListener('click', showSignup);
 document.getElementById('goto-signup').addEventListener('click', showSignup);
 document.getElementById('goto-login').addEventListener('click', showLogin);
 
+// Sınıf dropdown'unu doldur (5,6,7,8 sınıf x A-F şube)
+const CLASS_LIST = [];
+for (const grade of [5, 6, 7, 8]) {
+  for (const section of ['A', 'B', 'C', 'D', 'E', 'F']) {
+    CLASS_LIST.push(`${grade}-${section}`);
+  }
+}
+const classSelect = document.getElementById('signup-class');
+CLASS_LIST.forEach((c) => {
+  const opt = document.createElement('option');
+  opt.value = c;
+  opt.textContent = c;
+  classSelect.appendChild(opt);
+});
+
 async function postJSON(url, body) {
   const res = await fetch(url, {
     method: 'POST',
@@ -72,12 +87,13 @@ signupForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   clearError();
   const displayName = document.getElementById('signup-name').value.trim();
+  const className = document.getElementById('signup-class').value;
   const email = document.getElementById('signup-email').value.trim();
   const password = document.getElementById('signup-password').value;
   const submitBtn = signupForm.querySelector('button[type="submit"]');
   submitBtn.disabled = true;
   try {
-    await postJSON('/api/auth/signup', { displayName, email, password });
+    await postJSON('/api/auth/signup', { displayName, className, email, password });
     window.location.href = '/decks.html';
   } catch (err) {
     showError(err.message);
