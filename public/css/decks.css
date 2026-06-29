@@ -88,6 +88,11 @@
   cursor: pointer;
 }
 
+.admin-panel-btn {
+  display: block;
+  margin: 18px auto 0;
+}
+
 .modal-overlay {
   position: fixed;
   inset: 0;
