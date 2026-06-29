@@ -1,6 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const pool = require('../db/pool');
+const CLASS_LIST = require('../db/classes-config');
 
 const router = express.Router();
 
@@ -10,16 +11,19 @@ function isValidEmail(email) {
 
 router.post('/signup', async (req, res) => {
   try {
-    const { email, password, displayName } = req.body || {};
+    const { email, password, displayName, className } = req.body || {};
 
-    if (!email || !password || !displayName) {
-      return res.status(400).json({ error: 'E-posta, şifre ve ad alanları zorunludur.' });
+    if (!email || !password || !displayName || !className) {
+      return res.status(400).json({ error: 'E-posta, şifre, ad ve sınıf alanları zorunludur.' });
     }
     if (!isValidEmail(email)) {
       return res.status(400).json({ error: 'Geçerli bir e-posta adresi girmelisin.' });
     }
     if (password.length < 8) {
       return res.status(400).json({ error: 'Şifre en az 8 karakter olmalı.' });
+    }
+    if (!CLASS_LIST.includes(className)) {
+      return res.status(400).json({ error: 'Geçerli bir sınıf seçmelisin.' });
     }
 
     const existing = await pool.query('SELECT id FROM users WHERE email = $1', [
@@ -32,15 +36,20 @@ router.post('/signup', async (req, res) => {
     const passwordHash = await bcrypt.hash(password, 12);
 
     const result = await pool.query(
-      `INSERT INTO users (email, password_hash, display_name) VALUES ($1, $2, $3)
-       RETURNING id, email, display_name`,
-      [email.toLowerCase(), passwordHash, displayName.trim()]
+      `INSERT INTO users (email, password_hash, display_name, class_name) VALUES ($1, $2, $3, $4)
+       RETURNING id, email, display_name, class_name`,
+      [email.toLowerCase(), passwordHash, displayName.trim(), className]
     );
 
     const user = result.rows[0];
     req.session.userId = user.id;
 
-    res.status(201).json({ id: user.id, email: user.email, displayName: user.display_name });
+    res.status(201).json({
+      id: user.id,
+      email: user.email,
+      displayName: user.display_name,
+      className: user.class_name,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Kayıt sırasında bir hata oluştu.' });
@@ -88,7 +97,7 @@ router.get('/me', async (req, res) => {
     return res.status(401).json({ error: 'Giriş yapılmamış.' });
   }
   const result = await pool.query(
-    'SELECT id, email, display_name, total_study_seconds FROM users WHERE id = $1',
+    'SELECT id, email, display_name, class_name, total_study_seconds FROM users WHERE id = $1',
     [req.session.userId]
   );
   const user = result.rows[0];
@@ -97,7 +106,9 @@ router.get('/me', async (req, res) => {
     id: user.id,
     email: user.email,
     displayName: user.display_name,
+    className: user.class_name,
     totalStudySeconds: user.total_study_seconds,
+    isOwner: req.session.ownerUnlocked === true,
   });
 });
 
