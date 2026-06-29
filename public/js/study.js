@@ -197,11 +197,113 @@ document.getElementById('back-to-decks-btn').addEventListener('click', () => {
   window.location.href = '/decks.html';
 });
 document.getElementById('notes-btn').addEventListener('click', () => {
-  window.location.href = '/notes.html';
+  const sidebar = document.querySelector('.notes-sidebar');
+  if (sidebar) sidebar.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 document.getElementById('logout-btn').addEventListener('click', async () => {
   await fetch('/api/auth/logout', { method: 'POST', credentials: 'same-origin' });
   window.location.href = '/';
+});
+
+// --- Notlar (sağ panel + modal) ---
+const sidebarNotesListEl = document.getElementById('sidebar-notes-list');
+const noteModal = document.getElementById('note-modal');
+const noteModalTitleEl = document.getElementById('note-modal-title');
+const noteModalContentEl = document.getElementById('note-modal-content');
+const noteModalDeleteBtn = document.getElementById('note-modal-delete');
+let sidebarNotes = [];
+let currentNoteId = null;
+
+async function sendJSON(url, method, body) {
+  const res = await fetch(url, {
+    method,
+    headers: { 'Content-Type': 'application/json' },
+    credentials: 'same-origin',
+    body: body !== undefined ? JSON.stringify(body) : undefined,
+  });
+  if (!res.ok) throw new Error('İstek başarısız');
+  return res.json();
+}
+
+function noteSnippet(note) {
+  return (note.content || '').replace(/\n/g, ' ').slice(0, 50);
+}
+
+function renderSidebarNotes() {
+  sidebarNotesListEl.innerHTML = '';
+  if (sidebarNotes.length === 0) {
+    sidebarNotesListEl.innerHTML = '<p class="notes-empty-hint">Henüz not yok. "+" ile ekle.</p>';
+    return;
+  }
+  sidebarNotes.forEach((note) => {
+    const item = document.createElement('button');
+    item.className = 'sidebar-note-item';
+    const title = note.title && note.title.trim() ? note.title : '(Başlıksız not)';
+    item.innerHTML = `
+      <div class="sidebar-note-title">${title}</div>
+      <div class="sidebar-note-snippet">${noteSnippet(note)}</div>
+    `;
+    item.addEventListener('click', () => openNoteModal(note));
+    sidebarNotesListEl.appendChild(item);
+  });
+}
+
+async function loadSidebarNotes() {
+  try {
+    sidebarNotes = await getJSON('/api/notes');
+    renderSidebarNotes();
+  } catch (err) {
+    sidebarNotesListEl.innerHTML = '<p class="notes-empty-hint">Notlar yüklenemedi.</p>';
+  }
+}
+
+function openNoteModal(note) {
+  if (note) {
+    currentNoteId = note.id;
+    noteModalTitleEl.value = note.title || '';
+    noteModalContentEl.value = note.content || '';
+    noteModalDeleteBtn.style.display = '';
+  } else {
+    currentNoteId = null;
+    noteModalTitleEl.value = '';
+    noteModalContentEl.value = '';
+    noteModalDeleteBtn.style.display = 'none';
+  }
+  noteModal.style.display = 'flex';
+  noteModalContentEl.focus();
+}
+
+document.getElementById('sidebar-add-note-btn').addEventListener('click', () => openNoteModal(null));
+document.getElementById('note-modal-cancel').addEventListener('click', () => {
+  noteModal.style.display = 'none';
+});
+
+document.getElementById('note-modal-save').addEventListener('click', async () => {
+  const title = noteModalTitleEl.value;
+  const content = noteModalContentEl.value;
+  try {
+    if (currentNoteId) {
+      await sendJSON(`/api/notes/${currentNoteId}`, 'PUT', { title, content });
+    } else {
+      await sendJSON('/api/notes', 'POST', { title, content });
+    }
+    noteModal.style.display = 'none';
+    await loadSidebarNotes();
+  } catch (err) {
+    alert('Not kaydedilemedi, tekrar dene.');
+  }
+});
+
+noteModalDeleteBtn.addEventListener('click', async () => {
+  if (!currentNoteId) return;
+  if (!confirm('Bu notu silmek istediğine emin misin?')) return;
+  try {
+    await sendJSON(`/api/notes/${currentNoteId}`, 'DELETE');
+    noteModal.style.display = 'none';
+    await loadSidebarNotes();
+  } catch (err) {
+    alert('Not silinemedi, tekrar dene.');
+  }
 });
 
 // --- Quiz modu ---
@@ -430,6 +532,8 @@ async function init() {
     deckInfo = data.deck;
     allWords = data.words;
     document.getElementById('deck-brand').textContent = deckInfo.title;
+
+    await loadSidebarNotes();
 
     if (allWords.length === 0) {
       showOnly(emptyStateEl);
