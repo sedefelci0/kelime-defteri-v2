@@ -538,5 +538,137 @@
     "option_d": "Teenagers hate playing online games.",
     "correct_option": "C",
     "source": "2020 LGS"
+  },
+  {
+    "question_text": "The most powerful ---- to parachuting is fear, but one should also take its high cost into account, as a total outfit for parachuting can be extremely expensive.",
+    "option_a": "resemblance",
+    "option_b": "adjustment",
+    "option_c": "deterrent",
+    "option_d": "submission",
+    "option_e": "adherence",
+    "correct_option": "C",
+    "source": "2021 YDS/1",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "Peanut may very well be the most common food allergy in some populations, but the ---- of a particular food allergy varies according to age and group.",
+    "option_a": "utilisation",
+    "option_b": "withdrawal",
+    "option_c": "precaution",
+    "option_d": "termination",
+    "option_e": "prevalence",
+    "correct_option": "E",
+    "source": "2021 YDS/1",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "Heating and cooling of the Earth are not ----, as it takes time for land, water, and air to either absorb heat and warm up or release stored heat and cool down.",
+    "option_a": "hospitable",
+    "option_b": "convertible",
+    "option_c": "instantaneous",
+    "option_d": "detrimental",
+    "option_e": "preliminary",
+    "correct_option": "C",
+    "source": "2021 YDS/1",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "Since the mid-20th century, plastic pollution has increased ----, and resulting pollution has become a global environmental issue.",
+    "option_a": "exponentially",
+    "option_b": "conveniently",
+    "option_c": "alternatively",
+    "option_d": "precisely",
+    "option_e": "fruitfully",
+    "correct_option": "A",
+    "source": "2021 YDS/1",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "The most basic path to computer literacy is to ---- competence in using computers to perform personal or vocational tasks.",
+    "option_a": "exclude",
+    "option_b": "relieve",
+    "option_c": "deteriorate",
+    "option_d": "restrict",
+    "option_e": "attain",
+    "correct_option": "E",
+    "source": "2021 YDS/1",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "Making videos should be a lot of fun, but it can also be a bit of a minefield, as lots of people ---- problems and lose momentum before they even get started.",
+    "option_a": "hand over",
+    "option_b": "look for",
+    "option_c": "turn down",
+    "option_d": "give up",
+    "option_e": "run into",
+    "correct_option": "E",
+    "source": "2021 YDS/1",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "Attaining ---- in the current job is a basic career strategy, given that organisations make promotion decisions, at least in part, on an employee's present performance.",
+    "option_a": "assurance",
+    "option_b": "competence",
+    "option_c": "balance",
+    "option_d": "recession",
+    "option_e": "insurance",
+    "correct_option": "B",
+    "source": "2021 YDS/2",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "Despite its being a remote and harsh environment, there is ---- about ownership of the North Pole as there could be rich natural resources beneath the ice.",
+    "option_a": "discrimination",
+    "option_b": "substitution",
+    "option_c": "exposure",
+    "option_d": "controversy",
+    "option_e": "neglect",
+    "correct_option": "D",
+    "source": "2021 YDS/2",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "The reasons for an urban climate are heat storage, trapping of radiation, increasing roughness and less evaporation, which are seen in cities worldwide but are most ---- in densely built-up megacities.",
+    "option_a": "evident",
+    "option_b": "arbitrary",
+    "option_c": "convenient",
+    "option_d": "constructive",
+    "option_e": "mediocre",
+    "correct_option": "A",
+    "source": "2021 YDS/2",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "The population of koalas dropped ---- during the early part of the 20th century because they were over-hunted for their fur.",
+    "option_a": "strictly",
+    "option_b": "drastically",
+    "option_c": "cautiously",
+    "option_d": "ardently",
+    "option_e": "merely",
+    "correct_option": "B",
+    "source": "2021 YDS/2",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "When neurological issues like aphasia and dyslexia arise, they often ---- themselves in the things we say and how we say them.",
+    "option_a": "alienate",
+    "option_b": "improve",
+    "option_c": "manifest",
+    "option_d": "diminish",
+    "option_e": "receive",
+    "correct_option": "C",
+    "source": "2021 YDS/2",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "When you cook meat, a chemical reaction turns creatine into a group of compounds called heterocyclic amines and there is some evidence that these compounds ---- cancer in high concentrations.",
+    "option_a": "rely on",
+    "option_b": "break into",
+    "option_c": "pass for",
+    "option_d": "call off",
+    "option_e": "lead to",
+    "correct_option": "E",
+    "source": "2021 YDS/2",
+    "restrict_deck_slug": "benim-kelimelerim"
   }
 ]
