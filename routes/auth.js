@@ -11,15 +11,6 @@ pool
   .then(() => console.log('[db] is_teacher kolonu hazır.'))
   .catch((e) => console.error('[db] is_teacher kolonu eklenemedi:', e.message));
 
-// TEK SEFERLİK: Render'da WIPE_USERS=yes iken tüm hesapları siler.
-// Silindikten sonra Render'dan WIPE_USERS değişkenini KALDIR.
-if (process.env.WIPE_USERS === 'yes') {
-  pool
-    .query('TRUNCATE users CASCADE')
-    .then(() => console.log('[db] WIPE_USERS=yes → TÜM HESAPLAR SİLİNDİ. Şimdi WIPE_USERS değişkenini kaldır!'))
-    .catch((e) => console.error('[db] Hesaplar silinemedi:', e.message));
-}
-
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -42,6 +33,7 @@ router.post('/signup', async (req, res) => {
     let finalClassName = null;
 
     if (role === 'teacher') {
+      console.log('[teacher-debug] gelen:', JSON.stringify(teacherPassword), '| env:', JSON.stringify(process.env.OWNER_PASSWORD), '| esit mi:', teacherPassword === process.env.OWNER_PASSWORD);
       // ÖĞRETMEN: şifre SUNUCUDA kontrol edilir. Öğrenci tahmin edip geçemez.
       if (!process.env.OWNER_PASSWORD) {
         return res.status(500).json({ error: 'Sunucu yapılandırması eksik (OWNER_PASSWORD yok).' });
