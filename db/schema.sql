@@ -57,11 +57,26 @@ CREATE TABLE IF NOT EXISTS exam_questions (
   option_b TEXT NOT NULL,
   option_c TEXT NOT NULL,
   option_d TEXT NOT NULL,
-  correct_option TEXT NOT NULL CHECK (correct_option IN ('A', 'B', 'C', 'D')),
+  option_e TEXT,
+  correct_option TEXT NOT NULL CHECK (correct_option IN ('A', 'B', 'C', 'D', 'E')),
   explanation TEXT,
   source TEXT,
+  restrict_deck_slug TEXT,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+-- option_e: YDS/YÖKDİL gibi 5 şıklı sınavlar için (LGS soruları 4 şıklı kalır, E boş).
+ALTER TABLE exam_questions ADD COLUMN IF NOT EXISTS option_e TEXT;
+ALTER TABLE exam_questions DROP CONSTRAINT IF EXISTS exam_questions_correct_option_check;
+ALTER TABLE exam_questions ADD CONSTRAINT exam_questions_correct_option_check
+  CHECK (correct_option IN ('A', 'B', 'C', 'D', 'E'));
+-- restrict_deck_slug: NULL ise soru tüm destelerde eşleşebilir (örn. LGS soruları — 5./8. sınıf
+-- ve Benim Kelimelerim'de geçerli). Bir deste slug'ı verilirse (örn. 'benim-kelimelerim'),
+-- soru SADECE o destede eşleşir (örn. YDS/YÖKDİL soruları diğer sınıflara sızmasın diye).
+ALTER TABLE exam_questions ADD COLUMN IF NOT EXISTS restrict_deck_slug TEXT;
+-- data/exam_questions.json zaman içinde büyüyecek (LGS + YDS/YÖKDİL); seed script'i her
+-- başlangıçta tüm dosyayı bu unique index'e ON CONFLICT DO NOTHING ile yazar, böylece
+-- sadece yeni eklenen sorular eklenir, mevcutlar tekrar eklenmez.
+CREATE UNIQUE INDEX IF NOT EXISTS idx_exam_questions_text ON exam_questions(question_text);
 
 -- Her kullanıcının her kelimeyle ilişkisi: hiç görmedi / öğreniyor / öğrendi
 CREATE TABLE IF NOT EXISTS user_progress (

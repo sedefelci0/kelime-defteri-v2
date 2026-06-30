@@ -78,6 +78,7 @@
             <input type="text" id="q-option-c" class="q-text-input" placeholder="C şıkkı" />
             <input type="text" id="q-option-d" class="q-text-input" placeholder="D şıkkı" />
           </div>
+          <input type="text" id="q-option-e" class="q-text-input" placeholder="E şıkkı — isteğe bağlı (YDS/YÖKDİL gibi 5 şıklı sorular için)" />
 
           <div class="q-form-grid">
             <select id="q-correct-option">
@@ -85,8 +86,15 @@
               <option value="B">Doğru şık: B</option>
               <option value="C">Doğru şık: C</option>
               <option value="D">Doğru şık: D</option>
+              <option value="E">Doğru şık: E</option>
             </select>
             <input type="text" id="q-source" class="q-text-input" placeholder="Kaynak (örn. 2025 LGS) — isteğe bağlı" />
+          </div>
+
+          <div class="q-form-grid">
+            <select id="q-restrict-deck">
+              <option value="">Tüm destelerde geçerli (varsayılan)</option>
+            </select>
           </div>
 
           <textarea id="q-explanation" class="q-textarea" placeholder="Açıklama (isteğe bağlı)" rows="2"></textarea>

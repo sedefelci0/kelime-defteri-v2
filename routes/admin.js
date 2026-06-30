@@ -80,8 +80,8 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
 router.get('/questions', requireAuth, requireOwner, async (req, res) => {
   try {
     const { rows } = await pool.query(
-      `SELECT id, question_text, option_a, option_b, option_c, option_d,
-              correct_option, explanation, source, created_at
+      `SELECT id, question_text, option_a, option_b, option_c, option_d, option_e,
+              correct_option, explanation, source, restrict_deck_slug, created_at
        FROM exam_questions
        ORDER BY created_at DESC`
     );
@@ -93,9 +93,11 @@ router.get('/questions', requireAuth, requireOwner, async (req, res) => {
         optionB: q.option_b,
         optionC: q.option_c,
         optionD: q.option_d,
+        optionE: q.option_e,
         correctOption: q.correct_option,
         explanation: q.explanation,
         source: q.source,
+        restrictDeckSlug: q.restrict_deck_slug,
         createdAt: q.created_at,
       }))
     );
@@ -109,7 +111,7 @@ function validateQuestionBody(body) {
   const { questionText, optionA, optionB, optionC, optionD, correctOption } = body || {};
   if (!questionText || !questionText.trim()) return 'Soru metni zorunludur.';
   if (!optionA || !optionB || !optionC || !optionD) return '4 şıkkın hepsi doldurulmalı.';
-  if (!['A', 'B', 'C', 'D'].includes(correctOption)) return 'Doğru şık A/B/C/D olmalı.';
+  if (!['A', 'B', 'C', 'D', 'E'].includes(correctOption)) return 'Doğru şık A/B/C/D/E olmalı.';
   return null;
 }
 
@@ -118,10 +120,10 @@ router.post('/questions', requireAuth, requireOwner, async (req, res) => {
     const error = validateQuestionBody(req.body);
     if (error) return res.status(400).json({ error });
 
-    const { questionText, optionA, optionB, optionC, optionD, correctOption, explanation, source } = req.body;
+    const { questionText, optionA, optionB, optionC, optionD, optionE, correctOption, explanation, source, restrictDeckSlug } = req.body;
     const { rows } = await pool.query(
-      `INSERT INTO exam_questions (question_text, option_a, option_b, option_c, option_d, correct_option, explanation, source)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+      `INSERT INTO exam_questions (question_text, option_a, option_b, option_c, option_d, option_e, correct_option, explanation, source, restrict_deck_slug)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
        RETURNING id`,
       [
         questionText.trim(),
@@ -129,9 +131,11 @@ router.post('/questions', requireAuth, requireOwner, async (req, res) => {
         optionB.trim(),
         optionC.trim(),
         optionD.trim(),
+        optionE && optionE.trim() ? optionE.trim() : null,
         correctOption,
         explanation ? explanation.trim() : null,
         source ? source.trim() : null,
+        restrictDeckSlug ? restrictDeckSlug.trim() : null,
       ]
     );
     res.status(201).json({ id: rows[0].id });
@@ -149,20 +153,22 @@ router.put('/questions/:id', requireAuth, requireOwner, async (req, res) => {
     const error = validateQuestionBody(req.body);
     if (error) return res.status(400).json({ error });
 
-    const { questionText, optionA, optionB, optionC, optionD, correctOption, explanation, source } = req.body;
+    const { questionText, optionA, optionB, optionC, optionD, optionE, correctOption, explanation, source, restrictDeckSlug } = req.body;
     const { rowCount } = await pool.query(
       `UPDATE exam_questions SET question_text = $1, option_a = $2, option_b = $3, option_c = $4,
-              option_d = $5, correct_option = $6, explanation = $7, source = $8
-       WHERE id = $9`,
+              option_d = $5, option_e = $6, correct_option = $7, explanation = $8, source = $9, restrict_deck_slug = $10
+       WHERE id = $11`,
       [
         questionText.trim(),
         optionA.trim(),
         optionB.trim(),
         optionC.trim(),
         optionD.trim(),
+        optionE && optionE.trim() ? optionE.trim() : null,
         correctOption,
         explanation ? explanation.trim() : null,
         source ? source.trim() : null,
+        restrictDeckSlug ? restrictDeckSlug.trim() : null,
         id,
       ]
     );

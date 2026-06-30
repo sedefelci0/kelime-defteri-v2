@@ -27,6 +27,9 @@ router.get('/', requireAuth, async (req, res) => {
       unitFilter = `AND w.unit = $${params.length}`;
     }
     params.push(req.session.userId);
+    const userIdParamIndex = params.length;
+    params.push(deckSlug);
+    const deckSlugParamIndex = params.length;
 
     // Bir kelimenin "sorusu" diye sabit bir kaydı yok: genel soru havuzunda (exam_questions)
     // kelimenin metni soru kökünde ya da şıklardan birinde geçiyorsa otomatik eşleşir.
@@ -35,29 +38,35 @@ router.get('/', requireAuth, async (req, res) => {
     // kelimeler onlarca alakasız soruda geçtiği için: bir kelime havuzda 2'den fazla soruyla
     // eşleşiyorsa (belirsiz/yaygın kelime demektir) hiç soru gösterilmez; sadece az sayıda
     // (1-2) soruyla eşleşen, gerçekten o kelimeye özgü eşleşmelerde soru gösterilir.
+    // restrict_deck_slug doluysa (örn. YDS/YÖKDİL soruları), o soru SADECE o destede eşleşir.
     const { rows } = await pool.query(
       `SELECT w.id, w.english, w.pronunciation, w.turkish_meaning,
               w.english_explanation, w.example_sentence, w.unit,
               COALESCE(up.status, 'new') AS status,
               up.times_correct, up.times_wrong,
-              q.id AS question_id, q.question_text, q.option_a, q.option_b, q.option_c, q.option_d,
+              q.id AS question_id, q.question_text, q.option_a, q.option_b, q.option_c, q.option_d, q.option_e,
               q.correct_option, q.explanation AS question_explanation, q.source AS question_source
        FROM words w
-       LEFT JOIN user_progress up ON up.word_id = w.id AND up.user_id = $${params.length}
+       LEFT JOIN user_progress up ON up.word_id = w.id AND up.user_id = $${userIdParamIndex}
        LEFT JOIN LATERAL (
          SELECT ranked.* FROM (
            SELECT eq.*, COUNT(*) OVER() AS match_count
            FROM exam_questions eq
-           WHERE (' ' || regexp_replace(lower(eq.question_text), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
-                   LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
-              OR (' ' || regexp_replace(lower(eq.option_a), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
-                   LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
-              OR (' ' || regexp_replace(lower(eq.option_b), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
-                   LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
-              OR (' ' || regexp_replace(lower(eq.option_c), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
-                   LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
-              OR (' ' || regexp_replace(lower(eq.option_d), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
-                   LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+           WHERE (eq.restrict_deck_slug IS NULL OR eq.restrict_deck_slug = $${deckSlugParamIndex})
+             AND (
+               (' ' || regexp_replace(lower(eq.question_text), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                       LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+                  OR (' ' || regexp_replace(lower(eq.option_a), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                       LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+                  OR (' ' || regexp_replace(lower(eq.option_b), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                       LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+                  OR (' ' || regexp_replace(lower(eq.option_c), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                       LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+                  OR (' ' || regexp_replace(lower(eq.option_d), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                       LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+                  OR (' ' || regexp_replace(lower(COALESCE(eq.option_e, '')), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                       LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+             )
          ) ranked
          WHERE ranked.match_count <= 2
          ORDER BY ranked.created_at DESC

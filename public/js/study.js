@@ -122,6 +122,7 @@ function showQuestionForWord(word) {
     ['C', word.option_c],
     ['D', word.option_d],
   ];
+  if (word.option_e) options.push(['E', word.option_e]);
 
   options.forEach(([letter, text]) => {
     const btn = document.createElement('button');

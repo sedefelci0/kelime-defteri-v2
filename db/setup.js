@@ -63,39 +63,43 @@ async function ensureDatabaseReady() {
   await ensureExamQuestionsReady();
 }
 
-// data/exam_questions.json içindeki genel soru havuzunu (örn. çıkmış LGS soruları) yükler.
-// Bu sorular belirli bir kelimeye/desteye bağlı değildir; routes/words.js her kelime için
-// metin eşleştirmesiyle uygun bir soru arar. Birden fazla çalıştırılması güvenlidir.
+// data/exam_questions.json içindeki genel soru havuzunu (örn. çıkmış LGS/YDS/YÖKDİL soruları)
+// yükler. Bu sorular belirli bir kelimeye/desteye bağlı değildir; routes/words.js her kelime
+// için metin eşleştirmesiyle uygun bir soru arar. Dosya zamanla büyüyebileceği için her
+// başlangıçta tüm liste taranır, ama question_text üzerindeki unique index sayesinde zaten
+// var olan sorular ON CONFLICT DO NOTHING ile atlanır — sadece yeni eklenenler işlenir.
 async function ensureExamQuestionsReady() {
-  const { rows: existing } = await pool.query('SELECT COUNT(*)::int AS count FROM exam_questions');
-  if (existing[0].count > 0) {
-    console.log(`[db] exam_questions havuzunda zaten ${existing[0].count} soru var, atlanıyor.`);
-    return;
-  }
-
   const filePath = path.join(__dirname, '../data/exam_questions.json');
   if (!fs.existsSync(filePath)) return;
 
   const questions = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-  console.log(`[db] exam_questions havuzuna ${questions.length} soru yükleniyor...`);
+  let inserted = 0;
 
   for (const q of questions) {
-    await pool.query(
-      `INSERT INTO exam_questions (question_text, option_a, option_b, option_c, option_d, correct_option, explanation, source)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
+    const { rowCount } = await pool.query(
+      `INSERT INTO exam_questions (question_text, option_a, option_b, option_c, option_d, option_e, correct_option, explanation, source, restrict_deck_slug)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+       ON CONFLICT (question_text) DO NOTHING`,
       [
         q.question_text,
         q.option_a,
         q.option_b,
         q.option_c,
         q.option_d,
+        q.option_e || null,
         q.correct_option,
         q.explanation || null,
         q.source || null,
+        q.restrict_deck_slug || null,
       ]
     );
+    inserted += rowCount;
   }
-  console.log('[db] exam_questions yükleme tamamlandı.');
+  if (inserted > 0) {
+    console.log(`[db] exam_questions havuzuna ${inserted} yeni soru eklendi (toplam ${questions.length} taranan).`);
+  } else {
+    console.log(`[db] exam_questions havuzunda yeni soru yok, ${questions.length} soru zaten mevcut.`);
+  }
 }
 
 module.exports = { ensureDatabaseReady };

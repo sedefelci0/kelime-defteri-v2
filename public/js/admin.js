@@ -151,6 +151,7 @@ function activateTab(name) {
   tabStudents.style.display = isStudents ? '' : 'none';
   tabQuestions.style.display = isStudents ? 'none' : '';
   if (!isStudents && !questionsLoaded) {
+    loadDecksForRestrictOptions();
     loadAllQuestions();
   }
 }
@@ -164,9 +165,11 @@ const qOptionA = document.getElementById('q-option-a');
 const qOptionB = document.getElementById('q-option-b');
 const qOptionC = document.getElementById('q-option-c');
 const qOptionD = document.getElementById('q-option-d');
+const qOptionE = document.getElementById('q-option-e');
 const qCorrectOption = document.getElementById('q-correct-option');
 const qExplanation = document.getElementById('q-explanation');
 const qSource = document.getElementById('q-source');
+const qRestrictDeck = document.getElementById('q-restrict-deck');
 const qFormError = document.getElementById('q-form-error');
 const qFormTitle = document.getElementById('q-form-title');
 const qSaveBtn = document.getElementById('q-save-btn');
@@ -176,6 +179,26 @@ const questionsEmptyHintEl = document.getElementById('questions-empty-hint');
 
 let editingQuestionId = null;
 let questionsLoaded = false;
+let decksForRestrictLoaded = false;
+const deckTitleBySlug = {};
+
+async function loadDecksForRestrictOptions() {
+  if (decksForRestrictLoaded) return;
+  try {
+    const decks = await getJSON('/api/decks');
+    decks.forEach((d) => {
+      deckTitleBySlug[d.slug] = d.title;
+      const opt = document.createElement('option');
+      opt.value = d.slug;
+      opt.textContent = `Sadece: ${d.title}`;
+      qRestrictDeck.appendChild(opt);
+    });
+    decksForRestrictLoaded = true;
+    renderQuestionsList();
+  } catch (err) {
+    // sessizce geç
+  }
+}
 
 function resetQuestionForm() {
   editingQuestionId = null;
@@ -187,9 +210,11 @@ function resetQuestionForm() {
   qOptionB.value = '';
   qOptionC.value = '';
   qOptionD.value = '';
+  qOptionE.value = '';
   qCorrectOption.value = 'A';
   qExplanation.value = '';
   qSource.value = '';
+  qRestrictDeck.value = '';
   qFormError.style.display = 'none';
 }
 
@@ -204,12 +229,19 @@ qSaveBtn.addEventListener('click', async () => {
     optionB: qOptionB.value.trim(),
     optionC: qOptionC.value.trim(),
     optionD: qOptionD.value.trim(),
+    optionE: qOptionE.value.trim(),
     correctOption: qCorrectOption.value,
     explanation: qExplanation.value.trim(),
     source: qSource.value.trim(),
+    restrictDeckSlug: qRestrictDeck.value,
   };
   if (!body.questionText || !body.optionA || !body.optionB || !body.optionC || !body.optionD) {
     qFormError.textContent = 'Soru metni ve 4 şıkkın hepsi zorunludur.';
+    qFormError.style.display = '';
+    return;
+  }
+  if (body.correctOption === 'E' && !body.optionE) {
+    qFormError.textContent = 'Doğru şık E seçildi ama E şıkkı boş.';
     qFormError.style.display = '';
     return;
   }
@@ -254,10 +286,13 @@ function renderQuestionsList() {
   allQuestionsCache.forEach((q) => {
     const item = document.createElement('div');
     item.className = 'question-item';
+    const restrictLabel = q.restrictDeckSlug
+      ? ` · Sadece: ${deckTitleBySlug[q.restrictDeckSlug] || q.restrictDeckSlug}`
+      : '';
     item.innerHTML = `
       <div class="question-item-top">
         <div>
-          <div class="question-item-meta">${q.source || 'Kaynak belirtilmemiş'}</div>
+          <div class="question-item-meta">${q.source || 'Kaynak belirtilmemiş'}${restrictLabel}</div>
           <div class="question-item-text">${q.questionText}</div>
         </div>
         <div class="question-item-actions">
@@ -283,9 +318,11 @@ function editQuestion(q) {
   qOptionB.value = q.optionB;
   qOptionC.value = q.optionC;
   qOptionD.value = q.optionD;
+  qOptionE.value = q.optionE || '';
   qCorrectOption.value = q.correctOption;
   qExplanation.value = q.explanation || '';
   qSource.value = q.source || '';
+  qRestrictDeck.value = q.restrictDeckSlug || '';
   qFormError.style.display = 'none';
 
   document.querySelector('.question-form-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
