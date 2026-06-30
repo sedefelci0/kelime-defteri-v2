@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const pool = require('../db/pool');
-cconst { STUDENT_CLASSES } = require('../db/classes-config');
+const { STUDENT_CLASSES } = require('../db/classes-config');
 
 const router = express.Router();
 
@@ -34,7 +34,6 @@ router.post('/signup', async (req, res) => {
 
     if (role === 'teacher') {
       console.log('[teacher-debug] gelen:', JSON.stringify(teacherPassword), '| env:', JSON.stringify(process.env.OWNER_PASSWORD), '| esit mi:', teacherPassword === process.env.OWNER_PASSWORD);
-      // ÖĞRETMEN: şifre SUNUCUDA kontrol edilir. Öğrenci tahmin edip geçemez.
       if (!process.env.OWNER_PASSWORD) {
         return res.status(500).json({ error: 'Sunucu yapılandırması eksik (OWNER_PASSWORD yok).' });
       }
@@ -44,8 +43,7 @@ router.post('/signup', async (req, res) => {
       isTeacher = true;
       finalClassName = null;
     } else {
-      // ÖĞRENCI: sınıf seçimi zorunlu.
-      if (!className || !CLASS_LIST.includes(className)) {
+      if (!className || !STUDENT_CLASSES.includes(className)) {
         return res.status(400).json({ error: 'Geçerli bir sınıf seçmelisin.' });
       }
       finalClassName = className;
@@ -67,7 +65,7 @@ router.post('/signup', async (req, res) => {
 
     const user = result.rows[0];
     req.session.userId = user.id;
-    req.session.ownerUnlocked = user.is_teacher === true; // admin paneli bunu kullanıyor
+    req.session.ownerUnlocked = user.is_teacher === true;
 
     res.status(201).json({
       id: user.id,
@@ -100,7 +98,7 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.userId = user.id;
-    req.session.ownerUnlocked = user.is_teacher === true; // öğretmense panel açık
+    req.session.ownerUnlocked = user.is_teacher === true;
     res.json({ id: user.id, email: user.email, displayName: user.display_name });
   } catch (err) {
     console.error(err);
