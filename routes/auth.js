@@ -11,6 +11,15 @@ pool
   .then(() => console.log('[db] is_teacher kolonu hazır.'))
   .catch((e) => console.error('[db] is_teacher kolonu eklenemedi:', e.message));
 
+// TEK SEFERLİK: Render'da WIPE_USERS=yes iken tüm hesapları siler.
+// Silindikten sonra Render'dan WIPE_USERS değişkenini KALDIR.
+if (process.env.WIPE_USERS === 'yes') {
+  pool
+    .query('TRUNCATE users CASCADE')
+    .then(() => console.log('[db] WIPE_USERS=yes → TÜM HESAPLAR SİLİNDİ. Şimdi WIPE_USERS değişkenini kaldır!'))
+    .catch((e) => console.error('[db] Hesaplar silinemedi:', e.message));
+}
+
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
