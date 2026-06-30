@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const pool = require('../db/pool');
-const CLASS_LIST = require('../db/classes-config');
+cconst { STUDENT_CLASSES } = require('../db/classes-config');
 
 const router = express.Router();
 
