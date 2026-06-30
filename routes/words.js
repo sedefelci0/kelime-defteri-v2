@@ -28,6 +28,10 @@ router.get('/', requireAuth, async (req, res) => {
     }
     params.push(req.session.userId);
 
+    // Bir kelimenin "sorusu" diye sabit bir kaydı yok: genel soru havuzunda (exam_questions)
+    // kelimenin metni soru kökünde ya da şıklardan birinde geçiyorsa otomatik eşleşir.
+    // Noktalama farklarından etkilenmemek için her iki taraf da harf-dışı karakterlerden
+    // arındırılıp kelime sınırlarıyla karşılaştırılıyor.
     const { rows } = await pool.query(
       `SELECT w.id, w.english, w.pronunciation, w.turkish_meaning,
               w.english_explanation, w.example_sentence, w.unit,
@@ -38,7 +42,19 @@ router.get('/', requireAuth, async (req, res) => {
        FROM words w
        LEFT JOIN user_progress up ON up.word_id = w.id AND up.user_id = $${params.length}
        LEFT JOIN LATERAL (
-         SELECT * FROM questions WHERE questions.word_id = w.id ORDER BY created_at DESC LIMIT 1
+         SELECT eq.* FROM exam_questions eq
+         WHERE (' ' || regexp_replace(lower(eq.question_text), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                 LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+            OR (' ' || regexp_replace(lower(eq.option_a), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                 LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+            OR (' ' || regexp_replace(lower(eq.option_b), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                 LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+            OR (' ' || regexp_replace(lower(eq.option_c), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                 LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+            OR (' ' || regexp_replace(lower(eq.option_d), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                 LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+         ORDER BY eq.created_at DESC
+         LIMIT 1
        ) q ON true
        WHERE w.deck_id = $1 ${unitFilter}
        ORDER BY w.id ASC`,

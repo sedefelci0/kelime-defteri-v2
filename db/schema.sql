@@ -42,10 +42,16 @@ ALTER TABLE words ALTER COLUMN english_explanation DROP NOT NULL;
 
 CREATE INDEX IF NOT EXISTS idx_words_deck ON words(deck_id, unit);
 
--- Bir kelimeye bağlı çoktan seçmeli soru (örn. çıkmış sınav sorusu)
-CREATE TABLE IF NOT EXISTS questions (
+-- Eski tasarım: tek bir kelimeye sabitlenmiş soru. Genel soru havuzu (exam_questions)
+-- ile değiştirildi, hiç veri girilmemişti, güvenle kaldırılabilir.
+DROP TABLE IF EXISTS questions;
+
+-- Genel çoktan seçmeli soru havuzu (örn. çıkmış LGS soruları). Belirli bir kelimeye/desteye
+-- bağlı değildir; bir kelimenin sorusu var mı diye bakılırken, kelimenin metni soru kökünde
+-- veya şıklarda geçiyor mu diye eşleştirilir (bkz. routes/words.js). Böylece yeni üniteler/
+-- desteler eklendiğinde mevcut soru havuzu otomatik olarak onlarla da eşleşir.
+CREATE TABLE IF NOT EXISTS exam_questions (
   id SERIAL PRIMARY KEY,
-  word_id INTEGER NOT NULL REFERENCES words(id) ON DELETE CASCADE,
   question_text TEXT NOT NULL,
   option_a TEXT NOT NULL,
   option_b TEXT NOT NULL,
@@ -56,7 +62,6 @@ CREATE TABLE IF NOT EXISTS questions (
   source TEXT,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
-CREATE INDEX IF NOT EXISTS idx_questions_word ON questions(word_id);
 
 -- Her kullanıcının her kelimeyle ilişkisi: hiç görmedi / öğreniyor / öğrendi
 CREATE TABLE IF NOT EXISTS user_progress (

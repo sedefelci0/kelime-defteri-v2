@@ -138,6 +138,12 @@
 }
 
 /* === Soru Ekle formu === */
+.q-form-hint {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
 .question-form-card,
 .questions-list-card {
   background: var(--paper-raised);
@@ -184,49 +190,6 @@
 }
 .q-textarea {
   resize: vertical;
-}
-
-.q-word-results {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  max-height: 180px;
-  overflow-y: auto;
-  margin-bottom: 10px;
-}
-.q-word-results:empty {
-  margin-bottom: 0;
-}
-.q-word-result-item {
-  text-align: left;
-  background: var(--paper);
-  border: 1px solid var(--rule);
-  border-radius: 6px;
-  padding: 8px 10px;
-  font-size: 13px;
-  cursor: pointer;
-}
-.q-word-result-item:hover {
-  border-color: var(--moss);
-  background: rgba(74,107,90,0.06);
-}
-
-.q-selected-word {
-  background: rgba(74,107,90,0.08);
-  border: 1px solid var(--moss);
-  border-radius: 8px;
-  padding: 10px 12px;
-  font-size: 13px;
-  margin-bottom: 10px;
-}
-.q-selected-word button {
-  margin-left: 10px;
-  background: none;
-  border: 1px solid var(--rule);
-  border-radius: 6px;
-  padding: 3px 8px;
-  font-size: 12px;
-  cursor: pointer;
 }
 
 .q-options-grid {

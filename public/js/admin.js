@@ -150,22 +150,15 @@ function activateTab(name) {
   tabBtnQuestions.classList.toggle('is-active', !isStudents);
   tabStudents.style.display = isStudents ? '' : 'none';
   tabQuestions.style.display = isStudents ? 'none' : '';
-  if (!isStudents && decksCache.length === 0) {
-    loadDecksForQuestionForm();
+  if (!isStudents && !questionsLoaded) {
+    loadAllQuestions();
   }
 }
 
 tabBtnStudents.addEventListener('click', () => activateTab('students'));
 tabBtnQuestions.addEventListener('click', () => activateTab('questions'));
 
-// --- Soru Ekle sekmesi ---
-const qDeckSelect = document.getElementById('q-deck-select');
-const qUnitSelect = document.getElementById('q-unit-select');
-const qWordSearch = document.getElementById('q-word-search');
-const qWordResults = document.getElementById('q-word-results');
-const qSelectedWordEl = document.getElementById('q-selected-word');
-const qSelectedWordLabel = document.getElementById('q-selected-word-label');
-const qClearWordBtn = document.getElementById('q-clear-word-btn');
+// --- Soru Ekle sekmesi (genel soru havuzu, kelimeye bağlı değil) ---
 const qQuestionText = document.getElementById('q-question-text');
 const qOptionA = document.getElementById('q-option-a');
 const qOptionB = document.getElementById('q-option-b');
@@ -181,107 +174,8 @@ const qCancelEditBtn = document.getElementById('q-cancel-edit-btn');
 const questionsListEl = document.getElementById('questions-list');
 const questionsEmptyHintEl = document.getElementById('questions-empty-hint');
 
-let decksCache = [];
-let selectedWord = null;
 let editingQuestionId = null;
-let wordSearchTimer = null;
-
-async function loadDecksForQuestionForm() {
-  try {
-    decksCache = await getJSON('/api/decks');
-    qDeckSelect.innerHTML = '<option value="">Deste seç…</option>';
-    decksCache.forEach((d) => {
-      const opt = document.createElement('option');
-      opt.value = d.slug;
-      opt.textContent = d.title;
-      qDeckSelect.appendChild(opt);
-    });
-    await loadAllQuestions();
-  } catch (err) {
-    // sessizce geç
-  }
-}
-
-qDeckSelect.addEventListener('change', async () => {
-  clearSelectedWord();
-  qWordResults.innerHTML = '';
-  qUnitSelect.innerHTML = '<option value="">Tüm üniteler</option>';
-  qUnitSelect.style.display = 'none';
-
-  const slug = qDeckSelect.value;
-  if (!slug) {
-    qWordSearch.disabled = true;
-    return;
-  }
-  qWordSearch.disabled = false;
-
-  try {
-    const units = await getJSON(`/api/decks/${slug}/units`);
-    if (units.length > 0) {
-      units.forEach((u) => {
-        const opt = document.createElement('option');
-        opt.value = u.unit;
-        opt.textContent = `Ünite ${u.unit}`;
-        qUnitSelect.appendChild(opt);
-      });
-      qUnitSelect.style.display = '';
-    }
-  } catch (err) {
-    // sessizce geç, ünitesiz deste olabilir
-  }
-  searchWords();
-});
-
-qUnitSelect.addEventListener('change', () => {
-  searchWords();
-});
-
-qWordSearch.addEventListener('input', () => {
-  clearTimeout(wordSearchTimer);
-  wordSearchTimer = setTimeout(searchWords, 250);
-});
-
-async function searchWords() {
-  const slug = qDeckSelect.value;
-  if (!slug) return;
-  const unit = qUnitSelect.value;
-  const search = qWordSearch.value.trim();
-
-  const p = new URLSearchParams({ deck: slug });
-  if (unit) p.set('unit', unit);
-  if (search) p.set('search', search);
-
-  try {
-    const words = await getJSON(`/api/admin/words?${p.toString()}`);
-    qWordResults.innerHTML = '';
-    words.forEach((w) => {
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'q-word-result-item';
-      btn.textContent = `${w.english} — ${w.turkishMeaning}${w.unit ? ` (Ünite ${w.unit})` : ''}`;
-      btn.addEventListener('click', () => selectWord(w));
-      qWordResults.appendChild(btn);
-    });
-  } catch (err) {
-    // sessizce geç
-  }
-}
-
-function selectWord(word) {
-  selectedWord = word;
-  qSelectedWordLabel.textContent = `${word.english} — ${word.turkishMeaning}`;
-  qSelectedWordEl.style.display = '';
-  qWordResults.innerHTML = '';
-  qWordSearch.value = '';
-}
-
-function clearSelectedWord() {
-  selectedWord = null;
-  qSelectedWordEl.style.display = 'none';
-  qSelectedWordLabel.textContent = '';
-}
-
-qClearWordBtn.addEventListener('click', clearSelectedWord);
+let questionsLoaded = false;
 
 function resetQuestionForm() {
   editingQuestionId = null;
@@ -297,7 +191,6 @@ function resetQuestionForm() {
   qExplanation.value = '';
   qSource.value = '';
   qFormError.style.display = 'none';
-  clearSelectedWord();
 }
 
 qCancelEditBtn.addEventListener('click', resetQuestionForm);
@@ -305,13 +198,7 @@ qCancelEditBtn.addEventListener('click', resetQuestionForm);
 qSaveBtn.addEventListener('click', async () => {
   qFormError.style.display = 'none';
 
-  if (!selectedWord) {
-    qFormError.textContent = 'Önce bir kelime seçmelisin.';
-    qFormError.style.display = '';
-    return;
-  }
   const body = {
-    wordId: selectedWord.id,
     questionText: qQuestionText.value.trim(),
     optionA: qOptionA.value.trim(),
     optionB: qOptionB.value.trim(),
@@ -349,6 +236,7 @@ let allQuestionsCache = [];
 async function loadAllQuestions() {
   try {
     allQuestionsCache = await getJSON('/api/admin/questions');
+    questionsLoaded = true;
     renderQuestionsList();
   } catch (err) {
     // sessizce geç
@@ -369,7 +257,7 @@ function renderQuestionsList() {
     item.innerHTML = `
       <div class="question-item-top">
         <div>
-          <div class="question-item-meta">${q.deckTitle}${q.wordUnit ? ` · Ünite ${q.wordUnit}` : ''} · ${q.wordEnglish}${q.source ? ` · ${q.source}` : ''}</div>
+          <div class="question-item-meta">${q.source || 'Kaynak belirtilmemiş'}</div>
           <div class="question-item-text">${q.questionText}</div>
         </div>
         <div class="question-item-actions">
@@ -389,11 +277,6 @@ function editQuestion(q) {
   qFormTitle.textContent = 'Soruyu Düzenle';
   qSaveBtn.textContent = 'Güncelle';
   qCancelEditBtn.style.display = '';
-
-  selectedWord = { id: q.wordId, english: q.wordEnglish, turkishMeaning: '' };
-  qSelectedWordLabel.textContent = q.wordEnglish;
-  qSelectedWordEl.style.display = '';
-  qWordResults.innerHTML = '';
 
   qQuestionText.value = q.questionText;
   qOptionA.value = q.optionA;

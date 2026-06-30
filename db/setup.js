@@ -59,6 +59,43 @@ async function ensureDatabaseReady() {
     }
     console.log(`[db] "${deck.title}" yükleme tamamlandı.`);
   }
+
+  await ensureExamQuestionsReady();
+}
+
+// data/exam_questions.json içindeki genel soru havuzunu (örn. çıkmış LGS soruları) yükler.
+// Bu sorular belirli bir kelimeye/desteye bağlı değildir; routes/words.js her kelime için
+// metin eşleştirmesiyle uygun bir soru arar. Birden fazla çalıştırılması güvenlidir.
+async function ensureExamQuestionsReady() {
+  const { rows: existing } = await pool.query('SELECT COUNT(*)::int AS count FROM exam_questions');
+  if (existing[0].count > 0) {
+    console.log(`[db] exam_questions havuzunda zaten ${existing[0].count} soru var, atlanıyor.`);
+    return;
+  }
+
+  const filePath = path.join(__dirname, '../data/exam_questions.json');
+  if (!fs.existsSync(filePath)) return;
+
+  const questions = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  console.log(`[db] exam_questions havuzuna ${questions.length} soru yükleniyor...`);
+
+  for (const q of questions) {
+    await pool.query(
+      `INSERT INTO exam_questions (question_text, option_a, option_b, option_c, option_d, correct_option, explanation, source)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
+      [
+        q.question_text,
+        q.option_a,
+        q.option_b,
+        q.option_c,
+        q.option_d,
+        q.correct_option,
+        q.explanation || null,
+        q.source || null,
+      ]
+    );
+  }
+  console.log('[db] exam_questions yükleme tamamlandı.');
 }
 
 module.exports = { ensureDatabaseReady };
