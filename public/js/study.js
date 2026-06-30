@@ -216,12 +216,16 @@ async function answer(knewIt) {
     word.times_correct = result.timesCorrect;
     word.times_wrong = result.timesWrong;
     await loadSummary();
-    if (currentIndex < allWords.length - 1) {
-      currentIndex += 1;
-    }
-    renderCard();
-    if (knewIt) {
+    if (knewIt && word.question_id) {
+      // Sorusu olan bir kelime öğrenildiyse, bir sonraki karta geçmeden önce
+      // soruyu hâlâ aynı kartın yanında göster.
+      renderCard();
       showQuestionForWord(word);
+    } else {
+      if (currentIndex < allWords.length - 1) {
+        currentIndex += 1;
+      }
+      renderCard();
     }
   } catch (err) {
     alert('Bir hata oluştu, lütfen tekrar dene.');
