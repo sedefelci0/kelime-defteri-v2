@@ -19,10 +19,8 @@
       <button class="btn btn-danger-ghost" id="logout-btn" type="button">Çıkış yap</button>
     </div>
   </div>
-
   <div class="decks-page">
     <h2 class="page-title">Hangi seti çalışmak istersin?</h2>
-
     <div id="loading" class="loading-state">Yükleniyor…</div>
     <div id="deck-list" class="deck-grid" style="display:none;"></div>
     <div id="unit-list" class="unit-grid" style="display:none;">
@@ -30,30 +28,9 @@
       <h3 id="unit-deck-title"></h3>
       <div id="unit-buttons" class="unit-buttons"></div>
     </div>
-
-    <button class="owner-link" id="owner-link" type="button">Öğretmen Girişi</button>
     <button class="btn btn-secondary admin-panel-btn" id="admin-panel-btn" type="button" style="display:none;">📊 Öğrenci Paneli</button>
   </div>
 </div>
-
-<div class="modal-overlay" id="owner-modal" style="display:none;">
-  <div class="modal-card">
-    <h3>Öğretmen Girişi</h3>
-    <div id="owner-error" class="error-banner" role="alert"></div>
-    <div class="field">
-      <label for="owner-secret">Şifre</label>
-      <input id="owner-secret" name="erisim-kodu-x7y9" type="text"
-             style="-webkit-text-security: disc; text-security: disc;"
-             autocomplete="off" autocapitalize="off" autocorrect="off"
-             spellcheck="false" data-lpignore="true" data-1p-ignore="true" />
-    </div>
-    <div class="modal-actions">
-      <button class="btn btn-secondary" id="owner-cancel" type="button">İptal</button>
-      <button class="btn btn-primary" id="owner-submit" type="button">Aç</button>
-    </div>
-  </div>
-</div>
-
 <script src="/js/decks.js"></script>
 </body>
 </html>
