@@ -8,112 +8,45 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css" />
 <style>
-  .auth-shell {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-  }
+  .auth-shell { min-height: 100vh; display: grid; grid-template-columns: 1.1fr 1fr; }
   @media (max-width: 860px) {
     .auth-shell { grid-template-columns: 1fr; }
     .auth-art { display: none; }
   }
   .auth-art {
-    background: var(--moss-deep);
-    color: var(--paper);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 56px;
-    position: relative;
-    overflow: hidden;
+    background: var(--moss-deep); color: var(--paper);
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 56px; position: relative; overflow: hidden;
   }
   .auth-art::before {
-    content: "";
-    position: absolute;
-    inset: 0;
+    content: ""; position: absolute; inset: 0;
     background-image: repeating-linear-gradient(
       transparent, transparent 31px, rgba(250,246,238,0.06) 31px, rgba(250,246,238,0.06) 32px
     );
   }
-  .brand-mark {
-    font-family: var(--font-display);
-    font-size: 22px;
-    font-weight: 600;
-    position: relative;
-    z-index: 1;
-  }
-  .auth-art .pitch {
-    position: relative;
-    z-index: 1;
-    max-width: 420px;
-  }
-  .auth-art .pitch h1 {
-    font-size: 40px;
-    line-height: 1.15;
-    margin-bottom: 16px;
-    color: var(--paper);
-  }
-  .auth-art .pitch p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: rgba(250,246,238,0.78);
-  }
-  .auth-art .stat-row {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    gap: 36px;
-  }
-  .auth-art .stat-row div strong {
-    font-family: var(--font-display);
-    font-size: 28px;
-    display: block;
-    color: var(--gold);
-  }
-  .auth-art .stat-row div span {
-    font-size: 13px;
-    color: rgba(250,246,238,0.65);
-  }
-
-  .auth-panel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 32px;
-  }
-  .auth-card {
-    width: 100%;
-    max-width: 380px;
-  }
+  .brand-mark { font-family: var(--font-display); font-size: 22px; font-weight: 600; position: relative; z-index: 1; }
+  .auth-art .pitch { position: relative; z-index: 1; max-width: 420px; }
+  .auth-art .pitch h1 { font-size: 40px; line-height: 1.15; margin-bottom: 16px; color: var(--paper); }
+  .auth-art .pitch p { font-size: 16px; line-height: 1.6; color: rgba(250,246,238,0.78); }
+  .auth-art .stat-row { position: relative; z-index: 1; display: flex; gap: 36px; }
+  .auth-art .stat-row div strong { font-family: var(--font-display); font-size: 28px; display: block; color: var(--gold); }
+  .auth-art .stat-row div span { font-size: 13px; color: rgba(250,246,238,0.65); }
+  .auth-panel { display: flex; align-items: center; justify-content: center; padding: 32px; }
+  .auth-card { width: 100%; max-width: 380px; }
   .auth-card .tabs {
-    display: flex;
-    gap: 4px;
-    background: var(--rule);
-    border-radius: 9px;
-    padding: 3px;
-    margin-bottom: 28px;
+    display: flex; gap: 4px; background: var(--rule);
+    border-radius: 9px; padding: 3px; margin-bottom: 28px;
   }
   .auth-card .tabs button {
-    flex: 1;
-    padding: 9px 0;
-    border: none;
-    background: transparent;
-    border-radius: 7px;
-    font-weight: 600;
-    font-size: 14px;
-    color: var(--muted);
+    flex: 1; padding: 9px 0; border: none; background: transparent;
+    border-radius: 7px; font-weight: 600; font-size: 14px; color: var(--muted);
   }
-  .auth-card .tabs button.active {
-    background: var(--paper-raised);
-    color: var(--ink);
-    box-shadow: var(--shadow);
-  }
+  .auth-card .tabs button.active { background: var(--paper-raised); color: var(--ink); box-shadow: var(--shadow); }
   .auth-card h2 { font-size: 24px; margin-bottom: 6px; }
   .auth-card .sub { color: var(--muted); font-size: 14px; margin-bottom: 24px; display: block; }
+  .role-tabs { margin-bottom: 18px !important; }
   .switch-hint { margin-top: 18px; font-size: 14px; color: var(--muted); text-align: center; }
-  .switch-hint button {
-    background: none; border: none; color: var(--moss-deep); font-weight: 600; padding: 0; font-size: 14px;
-  }
+  .switch-hint button { background: none; border: none; color: var(--moss-deep); font-weight: 600; padding: 0; font-size: 14px; }
 </style>
 </head>
 <body>
@@ -156,17 +89,30 @@
 
         <form id="signup-form" style="display:none;">
           <h2>Hesap oluştur</h2>
-          <span class="sub">30 saniyede başla, ilerlemen otomatik kaydedilsin.</span>
+          <span class="sub">Önce hesap türünü seç, sonra bilgilerini gir.</span>
+
+          <div class="tabs role-tabs">
+            <button type="button" id="role-student" class="active">Öğrenci</button>
+            <button type="button" id="role-teacher">Öğretmen</button>
+          </div>
+
           <div class="field">
             <label for="signup-name">Adın</label>
             <input id="signup-name" type="text" autocomplete="name" required />
           </div>
-          <div class="field">
+
+          <div class="field" id="field-class">
             <label for="signup-class">Sınıfın</label>
             <select id="signup-class" required>
               <option value="" disabled selected>Sınıfını seç</option>
             </select>
           </div>
+
+          <div class="field" id="field-teacher-password" style="display:none;">
+            <label for="signup-teacher-password">Öğretmen şifresi</label>
+            <input id="signup-teacher-password" type="password" autocomplete="off" />
+          </div>
+
           <div class="field">
             <label for="signup-email">E-posta</label>
             <input id="signup-email" type="email" autocomplete="email" required />
