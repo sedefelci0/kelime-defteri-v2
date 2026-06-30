@@ -20,4 +20,13 @@ module.exports = [
     sortOrder: 2,
     wordsFile: '../data/grade5_words.json',
   },
+  {
+    slug: '8-sinif',
+    title: '8. Sınıf',
+    description: 'Üniteler halinde kelimeler',
+    requiresOwner: false,
+    hasExplanation: false,
+    sortOrder: 3,
+    wordsFile: '../data/grade8_unit1.json',
+  },
 ];

@@ -21,36 +21,101 @@
   </div>
 
   <div class="admin-page">
-    <div class="admin-toolbar">
-      <label for="class-filter">Sınıf filtrele:</label>
-      <select id="class-filter">
-        <option value="">Tüm sınıflar</option>
-      </select>
-    </div>
-
     <div id="loading" class="loading-state">Yükleniyor…</div>
     <div id="no-access" class="empty-state" style="display:none;">
       <h2>Erişim yok</h2>
       <p>Bu sayfayı görmek için Desteler sayfasından "Öğretmen Girişi" yapmalısın.</p>
     </div>
 
-    <div id="students-table-wrap" style="display:none;">
-      <table class="students-table">
-        <thead>
-          <tr>
-            <th>Ad</th>
-            <th>Sınıf</th>
-            <th>E-posta</th>
-            <th>Çalışma Süresi</th>
-            <th>Doğru</th>
-            <th>Yanlış</th>
-            <th>Notlar</th>
-          </tr>
-        </thead>
-        <tbody id="students-tbody"></tbody>
-      </table>
-      <div id="empty-students" class="empty-state" style="display:none;">
-        <h2>Bu sınıfta öğrenci yok</h2>
+    <div id="admin-content" style="display:none;">
+      <div class="admin-tabs">
+        <button class="admin-tab-btn is-active" id="tab-btn-students" type="button">Öğrenciler</button>
+        <button class="admin-tab-btn" id="tab-btn-questions" type="button">Soru Ekle</button>
+      </div>
+
+      <div id="tab-students">
+        <div class="admin-toolbar">
+          <label for="class-filter">Sınıf filtrele:</label>
+          <select id="class-filter">
+            <option value="">Tüm sınıflar</option>
+          </select>
+        </div>
+
+        <div id="students-table-wrap">
+          <table class="students-table">
+            <thead>
+              <tr>
+                <th>Ad</th>
+                <th>Sınıf</th>
+                <th>E-posta</th>
+                <th>Çalışma Süresi</th>
+                <th>Doğru</th>
+                <th>Yanlış</th>
+                <th>Notlar</th>
+              </tr>
+            </thead>
+            <tbody id="students-tbody"></tbody>
+          </table>
+          <div id="empty-students" class="empty-state" style="display:none;">
+            <h2>Bu sınıfta öğrenci yok</h2>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-questions" style="display:none;">
+        <div class="question-form-card">
+          <h3 id="q-form-title">Yeni Soru Ekle</h3>
+
+          <div class="q-form-grid">
+            <select id="q-deck-select">
+              <option value="">Deste seç…</option>
+            </select>
+            <select id="q-unit-select" style="display:none;">
+              <option value="">Tüm üniteler</option>
+            </select>
+          </div>
+
+          <input type="text" id="q-word-search" class="q-text-input" placeholder="Kelime ara (İngilizce veya Türkçe)…" disabled />
+          <div id="q-word-results" class="q-word-results"></div>
+          <div id="q-selected-word" class="q-selected-word" style="display:none;">
+            Seçilen kelime: <strong id="q-selected-word-label"></strong>
+            <button id="q-clear-word-btn" type="button">Değiştir</button>
+          </div>
+
+          <textarea id="q-question-text" class="q-textarea" placeholder="Soru metni" rows="2"></textarea>
+
+          <div class="q-options-grid">
+            <input type="text" id="q-option-a" class="q-text-input" placeholder="A şıkkı" />
+            <input type="text" id="q-option-b" class="q-text-input" placeholder="B şıkkı" />
+            <input type="text" id="q-option-c" class="q-text-input" placeholder="C şıkkı" />
+            <input type="text" id="q-option-d" class="q-text-input" placeholder="D şıkkı" />
+          </div>
+
+          <div class="q-form-grid">
+            <select id="q-correct-option">
+              <option value="A">Doğru şık: A</option>
+              <option value="B">Doğru şık: B</option>
+              <option value="C">Doğru şık: C</option>
+              <option value="D">Doğru şık: D</option>
+            </select>
+            <input type="text" id="q-source" class="q-text-input" placeholder="Kaynak (örn. 2025 LGS) — isteğe bağlı" />
+          </div>
+
+          <textarea id="q-explanation" class="q-textarea" placeholder="Açıklama (isteğe bağlı)" rows="2"></textarea>
+
+          <p id="q-form-error" class="q-form-error" style="display:none;"></p>
+
+          <div class="modal-actions">
+            <button class="btn btn-secondary" id="q-cancel-edit-btn" type="button" style="display:none;">Düzenlemeyi iptal et</button>
+            <button class="btn btn-primary" id="q-save-btn" type="button">Kaydet</button>
+          </div>
+        </div>
+
+        <div class="questions-list-card">
+          <h3>Eklenmiş Sorular</h3>
+          <div id="questions-list" class="questions-list"></div>
+          <p id="questions-empty-hint" class="q-empty-hint" style="display:none;">Henüz soru eklenmemiş.</p>
+        </div>
       </div>
     </div>
   </div>

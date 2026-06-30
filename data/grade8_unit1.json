@@ -1,0 +1,611 @@
+[
+  {
+    "unit": 1,
+    "english": "Honest",
+    "pronunciation": "Onist",
+    "turkish_meaning": "Dürüst",
+    "example_sentence": "She is always honest with her friends."
+  },
+  {
+    "unit": 1,
+    "english": "Generous",
+    "pronunciation": "Ceniris",
+    "turkish_meaning": "Cömert",
+    "example_sentence": "He is very generous; he shares everything."
+  },
+  {
+    "unit": 1,
+    "english": "Funny",
+    "pronunciation": "Fani",
+    "turkish_meaning": "Komik",
+    "example_sentence": "My best friend is really funny."
+  },
+  {
+    "unit": 1,
+    "english": "Amusing",
+    "pronunciation": "Amyuzing",
+    "turkish_meaning": "Eğlenceli",
+    "example_sentence": "It was an amusing story."
+  },
+  {
+    "unit": 1,
+    "english": "Fair",
+    "pronunciation": "Fer",
+    "turkish_meaning": "Adil",
+    "example_sentence": "A good teacher is fair to all students."
+  },
+  {
+    "unit": 1,
+    "english": "Crazy",
+    "pronunciation": "Kreyzi",
+    "turkish_meaning": "Deli, çılgın",
+    "example_sentence": "We had a crazy adventure last summer."
+  },
+  {
+    "unit": 1,
+    "english": "Cool",
+    "pronunciation": "Kul",
+    "turkish_meaning": "Havalı",
+    "example_sentence": "Everyone thinks he is cool."
+  },
+  {
+    "unit": 1,
+    "english": "Relaxed",
+    "pronunciation": "Rilekst",
+    "turkish_meaning": "Sakin",
+    "example_sentence": "She stayed relaxed during the exam."
+  },
+  {
+    "unit": 1,
+    "english": "Calm",
+    "pronunciation": "Kam",
+    "turkish_meaning": "Sakin",
+    "example_sentence": "He remained calm in the difficult situation."
+  },
+  {
+    "unit": 1,
+    "english": "Respectful",
+    "pronunciation": "Rispektful",
+    "turkish_meaning": "Saygılı",
+    "example_sentence": "Students should be respectful to teachers."
+  },
+  {
+    "unit": 1,
+    "english": "Selfish",
+    "pronunciation": "Selfiş",
+    "turkish_meaning": "Bencil",
+    "example_sentence": "A selfish friend only thinks about himself."
+  },
+  {
+    "unit": 1,
+    "english": "Punctual",
+    "pronunciation": "Panktuıl",
+    "turkish_meaning": "Dakik",
+    "example_sentence": "He is always punctual for meetings."
+  },
+  {
+    "unit": 1,
+    "english": "Helpful",
+    "pronunciation": "Helpful",
+    "turkish_meaning": "Yardımsever",
+    "example_sentence": "My neighbor is very helpful."
+  },
+  {
+    "unit": 1,
+    "english": "Patient",
+    "pronunciation": "Peyşınt",
+    "turkish_meaning": "Sabırlı",
+    "example_sentence": "A good teacher is patient with students."
+  },
+  {
+    "unit": 1,
+    "english": "Outgoing",
+    "pronunciation": "Autgoing",
+    "turkish_meaning": "Dışa dönük",
+    "example_sentence": "She is outgoing and loves meeting new people."
+  },
+  {
+    "unit": 1,
+    "english": "Loyal",
+    "pronunciation": "Loyıl",
+    "turkish_meaning": "Sadık",
+    "example_sentence": "A loyal friend never lets you down."
+  },
+  {
+    "unit": 1,
+    "english": "Kind",
+    "pronunciation": "Kayind",
+    "turkish_meaning": "Kibar",
+    "example_sentence": "He is kind to everyone he meets."
+  },
+  {
+    "unit": 1,
+    "english": "Laid back",
+    "pronunciation": "Leyd bek",
+    "turkish_meaning": "Umursamaz",
+    "example_sentence": "My brother has a laid back attitude about life."
+  },
+  {
+    "unit": 1,
+    "english": "Sneaky",
+    "pronunciation": "Sniki",
+    "turkish_meaning": "Sinsi",
+    "example_sentence": "The sneaky cat stole the food quietly."
+  },
+  {
+    "unit": 1,
+    "english": "Tactful",
+    "pronunciation": "Taktful",
+    "turkish_meaning": "İnce düşünceli",
+    "example_sentence": "She gave tactful advice without hurting anyone."
+  },
+  {
+    "unit": 1,
+    "english": "Jealous",
+    "pronunciation": "Celıs",
+    "turkish_meaning": "Kıskanç",
+    "example_sentence": "He felt jealous of his friend\u0027s new bike."
+  },
+  {
+    "unit": 1,
+    "english": "Serious",
+    "pronunciation": "Siriıs",
+    "turkish_meaning": "Ciddi",
+    "example_sentence": "This is a serious problem we need to solve."
+  },
+  {
+    "unit": 1,
+    "english": "Solemn",
+    "pronunciation": "Solım",
+    "turkish_meaning": "Ciddi",
+    "example_sentence": "He made a solemn promise to his family."
+  },
+  {
+    "unit": 1,
+    "english": "Understanding",
+    "pronunciation": "Andırstending",
+    "turkish_meaning": "Anlayışlı",
+    "example_sentence": "My mother is very understanding."
+  },
+  {
+    "unit": 1,
+    "english": "Alone",
+    "pronunciation": "Alon",
+    "turkish_meaning": "Yalnız",
+    "example_sentence": "He prefers to study alone."
+  },
+  {
+    "unit": 1,
+    "english": "Stubborn",
+    "pronunciation": "Stabırn",
+    "turkish_meaning": "İnatçı",
+    "example_sentence": "My little sister is so stubborn."
+  },
+  {
+    "unit": 1,
+    "english": "Reliable",
+    "pronunciation": "Rilayıbıl",
+    "turkish_meaning": "Güvenilir",
+    "example_sentence": "He is a reliable person; you can count on him."
+  },
+  {
+    "unit": 1,
+    "english": "Unreliable",
+    "pronunciation": "Anrilayıbıl",
+    "turkish_meaning": "Güvenilmez",
+    "example_sentence": "I don\u0027t trust him, he is unreliable."
+  },
+  {
+    "unit": 1,
+    "english": "Aggressive",
+    "pronunciation": "Egresiv",
+    "turkish_meaning": "Agresif",
+    "example_sentence": "The dog became aggressive when scared."
+  },
+  {
+    "unit": 1,
+    "english": "Determined",
+    "pronunciation": "Ditörmind",
+    "turkish_meaning": "Kararlı",
+    "example_sentence": "She is determined to pass the exam."
+  },
+  {
+    "unit": 1,
+    "english": "Adventurous",
+    "pronunciation": "Edvençırıs",
+    "turkish_meaning": "Maceracı",
+    "example_sentence": "He is an adventurous traveler."
+  },
+  {
+    "unit": 1,
+    "english": "Arrogant",
+    "pronunciation": "Erıgınt",
+    "turkish_meaning": "Kibirli",
+    "example_sentence": "Nobody likes an arrogant person."
+  },
+  {
+    "unit": 1,
+    "english": "Mean",
+    "pronunciation": "Min",
+    "turkish_meaning": "Kaba",
+    "example_sentence": "Don\u0027t be mean to your classmates."
+  },
+  {
+    "unit": 1,
+    "english": "Supportive",
+    "pronunciation": "Sıportiv",
+    "turkish_meaning": "Destekleyici",
+    "example_sentence": "My parents are always supportive of my dreams."
+  },
+  {
+    "unit": 1,
+    "english": "Self-centered",
+    "pronunciation": "Self sentırd",
+    "turkish_meaning": "Benmerkezci",
+    "example_sentence": "A self-centered person only cares about himself."
+  },
+  {
+    "unit": 1,
+    "english": "Bad-tempered",
+    "pronunciation": "Bed tempırd",
+    "turkish_meaning": "Sinirli",
+    "example_sentence": "He gets bad-tempered when he is tired."
+  },
+  {
+    "unit": 1,
+    "english": "Self disciplined",
+    "pronunciation": "Self disiplind",
+    "turkish_meaning": "Disiplinli",
+    "example_sentence": "She is a self disciplined student who studies every day."
+  },
+  {
+    "unit": 1,
+    "english": "Liar",
+    "pronunciation": "Layır",
+    "turkish_meaning": "Yalancı",
+    "example_sentence": "Nobody trusts a liar."
+  },
+  {
+    "unit": 1,
+    "english": "Caring",
+    "pronunciation": "Kering",
+    "turkish_meaning": "Şefkatli",
+    "example_sentence": "She is a caring and kind person."
+  },
+  {
+    "unit": 1,
+    "english": "Ask",
+    "pronunciation": "Ask",
+    "turkish_meaning": "Sormak",
+    "example_sentence": "You can ask me for help anytime."
+  },
+  {
+    "unit": 1,
+    "english": "Argue",
+    "pronunciation": "Argyu",
+    "turkish_meaning": "Tartışmak",
+    "example_sentence": "Friends sometimes argue but then make up."
+  },
+  {
+    "unit": 1,
+    "english": "Call",
+    "pronunciation": "Kol",
+    "turkish_meaning": "Aramak",
+    "example_sentence": "I will call you tonight."
+  },
+  {
+    "unit": 1,
+    "english": "Back up",
+    "pronunciation": "Bek ap",
+    "turkish_meaning": "Desteklemek",
+    "example_sentence": "A true friend will always back you up."
+  },
+  {
+    "unit": 1,
+    "english": "Support",
+    "pronunciation": "Sıport",
+    "turkish_meaning": "Desteklemek",
+    "example_sentence": "Friends should support each other."
+  },
+  {
+    "unit": 1,
+    "english": "Buddy",
+    "pronunciation": "Badi",
+    "turkish_meaning": "Arkadaş",
+    "example_sentence": "He is my best buddy from school."
+  },
+  {
+    "unit": 1,
+    "english": "Friend",
+    "pronunciation": "Frend",
+    "turkish_meaning": "Arkadaş",
+    "example_sentence": "She is my closest friend."
+  },
+  {
+    "unit": 1,
+    "english": "Mate",
+    "pronunciation": "Meyt",
+    "turkish_meaning": "Arkadaş",
+    "example_sentence": "He is a good mate of mine."
+  },
+  {
+    "unit": 1,
+    "english": "Decide",
+    "pronunciation": "Disayd",
+    "turkish_meaning": "Karar vermek",
+    "example_sentence": "We need to decide where to go."
+  },
+  {
+    "unit": 1,
+    "english": "Count on",
+    "pronunciation": "Kaunt on",
+    "turkish_meaning": "Güvenmek",
+    "example_sentence": "You can always count on me."
+  },
+  {
+    "unit": 1,
+    "english": "Rely on",
+    "pronunciation": "Rilay on",
+    "turkish_meaning": "Güvenmek",
+    "example_sentence": "I rely on my friends for advice."
+  },
+  {
+    "unit": 1,
+    "english": "Trust",
+    "pronunciation": "Trast",
+    "turkish_meaning": "Güvenmek",
+    "example_sentence": "I trust my best friend completely."
+  },
+  {
+    "unit": 1,
+    "english": "Friendship",
+    "pronunciation": "Frendşip",
+    "turkish_meaning": "Arkadaşlık",
+    "example_sentence": "Their friendship lasted for many years."
+  },
+  {
+    "unit": 1,
+    "english": "Get on well with",
+    "pronunciation": "Get on vel vit",
+    "turkish_meaning": "İyi anlaşmak",
+    "example_sentence": "I get on well with my classmates."
+  },
+  {
+    "unit": 1,
+    "english": "Have fun",
+    "pronunciation": "Hev fan",
+    "turkish_meaning": "Eğlenmek",
+    "example_sentence": "We always have fun together."
+  },
+  {
+    "unit": 1,
+    "english": "Have similar interests",
+    "pronunciation": "Hev simılır intrests",
+    "turkish_meaning": "Benzer ilgi alanlarına sahip olmak",
+    "example_sentence": "We have similar interests in music."
+  },
+  {
+    "unit": 1,
+    "english": "Have in common",
+    "pronunciation": "Hev in komın",
+    "turkish_meaning": "Ortak noktası olmak",
+    "example_sentence": "We have a lot in common."
+  },
+  {
+    "unit": 1,
+    "english": "Help",
+    "pronunciation": "Help",
+    "turkish_meaning": "Yardım",
+    "example_sentence": "Thank you for your help."
+  },
+  {
+    "unit": 1,
+    "english": "Promise",
+    "pronunciation": "Promis",
+    "turkish_meaning": "Söz vermek",
+    "example_sentence": "I promise to be there on time."
+  },
+  {
+    "unit": 1,
+    "english": "Keep promise",
+    "pronunciation": "Kip promis",
+    "turkish_meaning": "Sözünü tutmak",
+    "example_sentence": "A good friend always keeps a promise."
+  },
+  {
+    "unit": 1,
+    "english": "Relationship",
+    "pronunciation": "Rileyşınşip",
+    "turkish_meaning": "İlişki",
+    "example_sentence": "They have a strong relationship."
+  },
+  {
+    "unit": 1,
+    "english": "Respect",
+    "pronunciation": "Rispekt",
+    "turkish_meaning": "Saygı",
+    "example_sentence": "We should treat others with respect."
+  },
+  {
+    "unit": 1,
+    "english": "Secret",
+    "pronunciation": "Sikrit",
+    "turkish_meaning": "Sır",
+    "example_sentence": "I will never tell your secret."
+  },
+  {
+    "unit": 1,
+    "english": "Keep secret",
+    "pronunciation": "Kip sikrit",
+    "turkish_meaning": "Sır tutmak",
+    "example_sentence": "Can you keep a secret?"
+  },
+  {
+    "unit": 1,
+    "english": "Occupied",
+    "pronunciation": "Okyupayd",
+    "turkish_meaning": "Meşgul",
+    "example_sentence": "Sorry, I am occupied right now."
+  },
+  {
+    "unit": 1,
+    "english": "Hungry",
+    "pronunciation": "Hangri",
+    "turkish_meaning": "Aç",
+    "example_sentence": "I am very hungry after school."
+  },
+  {
+    "unit": 1,
+    "english": "Full",
+    "pronunciation": "Ful",
+    "turkish_meaning": "Tok, dolu",
+    "example_sentence": "I am full after that big meal."
+  },
+  {
+    "unit": 1,
+    "english": "Stuffed",
+    "pronunciation": "Staft",
+    "turkish_meaning": "Tıka basa dolu",
+    "example_sentence": "I am stuffed after the dinner."
+  },
+  {
+    "unit": 1,
+    "english": "Share",
+    "pronunciation": "Şer",
+    "turkish_meaning": "Paylaşmak",
+    "example_sentence": "Friends should share their problems."
+  },
+  {
+    "unit": 1,
+    "english": "Spend time",
+    "pronunciation": "Spend taym",
+    "turkish_meaning": "Zaman geçirmek",
+    "example_sentence": "I love to spend time with my friends."
+  },
+  {
+    "unit": 1,
+    "english": "Tell a lie",
+    "pronunciation": "Tel ı lay",
+    "turkish_meaning": "Yalan söylemek",
+    "example_sentence": "A good friend never tells a lie."
+  },
+  {
+    "unit": 1,
+    "english": "Tell the truth",
+    "pronunciation": "Tel dı truth",
+    "turkish_meaning": "Doğruyu söylemek",
+    "example_sentence": "Always tell the truth to your friends."
+  },
+  {
+    "unit": 1,
+    "english": "Understand",
+    "pronunciation": "Andırstand",
+    "turkish_meaning": "Anlamak",
+    "example_sentence": "I understand your problem."
+  },
+  {
+    "unit": 1,
+    "english": "Invite",
+    "pronunciation": "İnvayt",
+    "turkish_meaning": "Davet etmek",
+    "example_sentence": "I want to invite you to my party."
+  },
+  {
+    "unit": 1,
+    "english": "Accept",
+    "pronunciation": "Aksept",
+    "turkish_meaning": "Kabul etmek",
+    "example_sentence": "She accepted my invitation."
+  },
+  {
+    "unit": 1,
+    "english": "Refuse",
+    "pronunciation": "Rifyuz",
+    "turkish_meaning": "Reddetmek",
+    "example_sentence": "He refused to come to the party."
+  },
+  {
+    "unit": 1,
+    "english": "Apologize",
+    "pronunciation": "Apolocayz",
+    "turkish_meaning": "Özür dilemek",
+    "example_sentence": "You should apologize for your mistake."
+  },
+  {
+    "unit": 1,
+    "english": "Attend/Join",
+    "pronunciation": "Atend/Coyn",
+    "turkish_meaning": "Katılmak",
+    "example_sentence": "Will you attend the meeting tomorrow?"
+  },
+  {
+    "unit": 1,
+    "english": "Date",
+    "pronunciation": "Deyt",
+    "turkish_meaning": "Tarih",
+    "example_sentence": "What is the date of the event?"
+  },
+  {
+    "unit": 1,
+    "english": "Give a reason",
+    "pronunciation": "Giv ı rizın",
+    "turkish_meaning": "Neden bildirmek",
+    "example_sentence": "Please give a reason for being late."
+  },
+  {
+    "unit": 1,
+    "english": "Make an excuse",
+    "pronunciation": "Meyk ın ekskyuz",
+    "turkish_meaning": "Mazeret bildirmek",
+    "example_sentence": "Don\u0027t make an excuse, just apologize."
+  },
+  {
+    "unit": 1,
+    "english": "Offer",
+    "pronunciation": "Ofır",
+    "turkish_meaning": "Önermek",
+    "example_sentence": "She offered to help me with my homework."
+  },
+  {
+    "unit": 1,
+    "english": "Place",
+    "pronunciation": "Pleys",
+    "turkish_meaning": "Yer",
+    "example_sentence": "This is a nice place to meet friends."
+  },
+  {
+    "unit": 1,
+    "english": "Day",
+    "pronunciation": "Dey",
+    "turkish_meaning": "Gün",
+    "example_sentence": "What day is the party?"
+  },
+  {
+    "unit": 1,
+    "english": "Time",
+    "pronunciation": "Taym",
+    "turkish_meaning": "Zaman",
+    "example_sentence": "What time does the event start?"
+  },
+  {
+    "unit": 1,
+    "english": "Ticket",
+    "pronunciation": "Tikit",
+    "turkish_meaning": "Bilet",
+    "example_sentence": "I bought two tickets for the concert."
+  },
+  {
+    "unit": 1,
+    "english": "Event",
+    "pronunciation": "İvent",
+    "turkish_meaning": "Etkinlik",
+    "example_sentence": "The school is organizing a special event."
+  },
+  {
+    "unit": 1,
+    "english": "Visit",
+    "pronunciation": "Vizit",
+    "turkish_meaning": "Ziyaret etmek",
+    "example_sentence": "We will visit our grandparents this weekend."
+  }
+]

@@ -32,9 +32,14 @@ router.get('/', requireAuth, async (req, res) => {
       `SELECT w.id, w.english, w.pronunciation, w.turkish_meaning,
               w.english_explanation, w.example_sentence, w.unit,
               COALESCE(up.status, 'new') AS status,
-              up.times_correct, up.times_wrong
+              up.times_correct, up.times_wrong,
+              q.id AS question_id, q.question_text, q.option_a, q.option_b, q.option_c, q.option_d,
+              q.correct_option, q.explanation AS question_explanation, q.source AS question_source
        FROM words w
        LEFT JOIN user_progress up ON up.word_id = w.id AND up.user_id = $${params.length}
+       LEFT JOIN LATERAL (
+         SELECT * FROM questions WHERE questions.word_id = w.id ORDER BY created_at DESC LIMIT 1
+       ) q ON true
        WHERE w.deck_id = $1 ${unitFilter}
        ORDER BY w.id ASC`,
       params

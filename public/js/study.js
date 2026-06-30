@@ -30,6 +30,11 @@ const wordExplanationEl = document.getElementById('word-explanation');
 const wordMeaningEl = document.getElementById('word-meaning');
 const wordExampleEl = document.getElementById('word-example');
 
+const questionPanelEl = document.getElementById('question-panel');
+const questionTextEl = document.getElementById('question-text');
+const questionOptionsEl = document.getElementById('question-options');
+const questionExplanationEl = document.getElementById('question-explanation');
+
 const btnAgain = document.getElementById('btn-again');
 const btnKnow = document.getElementById('btn-know');
 const navFirst = document.getElementById('nav-first');
@@ -99,10 +104,52 @@ async function loadSummary() {
   text.textContent = `${summary.known}/${summary.total} öğrenildi`;
 }
 
+function resetQuestionPanel() {
+  questionPanelEl.style.display = 'none';
+  questionOptionsEl.innerHTML = '';
+  questionExplanationEl.style.display = 'none';
+  questionExplanationEl.textContent = '';
+}
+
+function showQuestionForWord(word) {
+  if (!word.question_id) return;
+  questionTextEl.textContent = word.question_text;
+  questionOptionsEl.innerHTML = '';
+
+  const options = [
+    ['A', word.option_a],
+    ['B', word.option_b],
+    ['C', word.option_c],
+    ['D', word.option_d],
+  ];
+
+  options.forEach(([letter, text]) => {
+    const btn = document.createElement('button');
+    btn.className = 'question-option';
+    btn.textContent = text;
+    btn.addEventListener('click', () => {
+      const allButtons = Array.from(questionOptionsEl.querySelectorAll('.question-option'));
+      allButtons.forEach((b, i) => {
+        b.disabled = true;
+        if (options[i][0] === word.correct_option) b.classList.add('is-correct');
+        else if (b === btn) b.classList.add('is-wrong');
+      });
+      if (word.question_explanation) {
+        questionExplanationEl.textContent = word.question_explanation;
+        questionExplanationEl.style.display = '';
+      }
+    });
+    questionOptionsEl.appendChild(btn);
+  });
+
+  questionPanelEl.style.display = '';
+}
+
 function renderCard() {
   const word = allWords[currentIndex];
   if (!word) return;
   flipCardEl.classList.remove('is-flipped');
+  resetQuestionPanel();
 
   wordEnglishEl.textContent = word.english;
   wordPronEl.textContent = word.pronunciation;
@@ -173,6 +220,9 @@ async function answer(knewIt) {
       currentIndex += 1;
     }
     renderCard();
+    if (knewIt) {
+      showQuestionForWord(word);
+    }
   } catch (err) {
     alert('Bir hata oluştu, lütfen tekrar dene.');
   } finally {

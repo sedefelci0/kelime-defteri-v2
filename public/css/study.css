@@ -241,7 +241,7 @@
 
 .card-zone {
   width: 100%;
-  max-width: 780px;
+  max-width: 980px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,6 +260,73 @@
   justify-content: center;
   align-items: stretch;
   width: 100%;
+}
+
+.question-panel {
+  flex: 0 0 320px;
+  border-radius: 16px;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  box-shadow: 0 8px 24px rgba(43,38,32,0.08);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.question-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.question-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+.question-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.question-option {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1.5px solid var(--rule);
+  background: var(--paper);
+  font-size: 13px;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+.question-option:hover:not(:disabled) {
+  border-color: var(--moss);
+  background: rgba(74,107,90,0.06);
+}
+.question-option:disabled {
+  cursor: not-allowed;
+}
+.question-option.is-correct {
+  border-color: var(--moss-deep);
+  background: var(--moss-deep);
+  color: var(--paper);
+}
+.question-option.is-wrong {
+  border-color: var(--clay);
+  background: var(--clay);
+  color: var(--paper);
+}
+.question-explanation {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
 }
 
 .flip-card {
@@ -483,6 +550,7 @@
 
 @media (max-width: 700px) {
   .study-row { flex-direction: column; }
+  .question-panel { flex: none; width: 100%; }
 }
 
 /* === Quiz modu === */

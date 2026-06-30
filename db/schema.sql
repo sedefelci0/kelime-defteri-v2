@@ -42,6 +42,22 @@ ALTER TABLE words ALTER COLUMN english_explanation DROP NOT NULL;
 
 CREATE INDEX IF NOT EXISTS idx_words_deck ON words(deck_id, unit);
 
+-- Bir kelimeye bağlı çoktan seçmeli soru (örn. çıkmış sınav sorusu)
+CREATE TABLE IF NOT EXISTS questions (
+  id SERIAL PRIMARY KEY,
+  word_id INTEGER NOT NULL REFERENCES words(id) ON DELETE CASCADE,
+  question_text TEXT NOT NULL,
+  option_a TEXT NOT NULL,
+  option_b TEXT NOT NULL,
+  option_c TEXT NOT NULL,
+  option_d TEXT NOT NULL,
+  correct_option TEXT NOT NULL CHECK (correct_option IN ('A', 'B', 'C', 'D')),
+  explanation TEXT,
+  source TEXT,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS idx_questions_word ON questions(word_id);
+
 -- Her kullanıcının her kelimeyle ilişkisi: hiç görmedi / öğreniyor / öğrendi
 CREATE TABLE IF NOT EXISTS user_progress (
   user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
