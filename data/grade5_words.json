@@ -4,975 +4,853 @@
     "english": "Headmaster",
     "pronunciation": "Hedmastır",
     "turkish_meaning": "Müdür",
-    "example_sentence": "The headmaster is in his office.",
-    "image": "/images/words/headmaster.svg"
+    "example_sentence": "The headmaster is in his office."
   },
   {
     "unit": 1,
     "english": "Assistant to the headmaster",
     "pronunciation": "Esistınt tu dı hedmastır",
     "turkish_meaning": "Müdür yardımcısı",
-    "example_sentence": "The assistant helps the headmaster.",
-    "image": null
+    "example_sentence": "The assistant helps the headmaster."
   },
   {
     "unit": 1,
     "english": "Secretary",
     "pronunciation": "Sekrıtiri",
     "turkish_meaning": "Sekreter",
-    "example_sentence": "The secretary works at the school office.",
-    "image": null
+    "example_sentence": "The secretary works at the school office."
   },
   {
     "unit": 1,
     "english": "Teacher",
     "pronunciation": "Tiçır",
     "turkish_meaning": "Öğretmen",
-    "example_sentence": "My teacher is very kind.",
-    "image": "/images/words/teacher.svg"
+    "example_sentence": "My teacher is very kind."
   },
   {
     "unit": 1,
     "english": "Coach",
     "pronunciation": "Koç",
     "turkish_meaning": "Antrenör",
-    "example_sentence": "The coach trains the football team.",
-    "image": null
+    "example_sentence": "The coach trains the football team."
   },
   {
     "unit": 1,
     "english": "Student",
     "pronunciation": "Styudınt",
     "turkish_meaning": "Öğrenci",
-    "example_sentence": "I am a student.",
-    "image": null
+    "example_sentence": "I am a student."
   },
   {
     "unit": 1,
     "english": "Cook",
     "pronunciation": "Kuk",
     "turkish_meaning": "Aşçı",
-    "example_sentence": "The cook makes our lunch.",
-    "image": null
+    "example_sentence": "The cook makes our lunch."
   },
   {
     "unit": 1,
     "english": "Gate",
     "pronunciation": "Geyt",
     "turkish_meaning": "Kapı",
-    "example_sentence": "We meet at the school gate.",
-    "image": null
+    "example_sentence": "We meet at the school gate."
   },
   {
     "unit": 1,
     "english": "Sports Field",
     "pronunciation": "Sports Fild",
     "turkish_meaning": "Spor sahası",
-    "example_sentence": "We play football on the sports field.",
-    "image": null
+    "example_sentence": "We play football on the sports field."
   },
   {
     "unit": 1,
     "english": "Canteen",
     "pronunciation": "Kentin",
     "turkish_meaning": "Kantin",
-    "example_sentence": "I buy a sandwich at the canteen.",
-    "image": null
+    "example_sentence": "I buy a sandwich at the canteen."
   },
   {
     "unit": 1,
     "english": "Administration Department",
     "pronunciation": "Edministreyşın Dipartmınt",
     "turkish_meaning": "Müdür odası",
-    "example_sentence": "The administration department is on the first floor.",
-    "image": null
+    "example_sentence": "The administration department is on the first floor."
   },
   {
     "unit": 1,
     "english": "Classroom",
     "pronunciation": "Klasrum",
     "turkish_meaning": "Sınıf",
-    "example_sentence": "Our classroom is big and bright.",
-    "image": "/images/words/classroom.svg"
+    "example_sentence": "Our classroom is big and bright."
   },
   {
     "unit": 1,
     "english": "Library",
     "pronunciation": "Laybrıri",
     "turkish_meaning": "Kütüphane",
-    "example_sentence": "I read books in the library.",
-    "image": "/images/words/library.svg"
+    "example_sentence": "I read books in the library."
   },
   {
     "unit": 1,
     "english": "Science Lab",
     "pronunciation": "Sayıns Leb",
     "turkish_meaning": "Fen laboratuvarı",
-    "example_sentence": "We do experiments in the science lab.",
-    "image": null
+    "example_sentence": "We do experiments in the science lab."
   },
   {
     "unit": 1,
     "english": "Conference Hall",
     "pronunciation": "Konfırıns Hol",
     "turkish_meaning": "Konferans salonu",
-    "example_sentence": "The meeting is in the conference hall.",
-    "image": null
+    "example_sentence": "The meeting is in the conference hall."
   },
   {
     "unit": 1,
     "english": "Science Club",
     "pronunciation": "Sayıns Klab",
     "turkish_meaning": "Bilim kulübü",
-    "example_sentence": "He is a member of the science club.",
-    "image": null
+    "example_sentence": "He is a member of the science club."
   },
   {
     "unit": 1,
     "english": "Film Club",
     "pronunciation": "Film Klab",
     "turkish_meaning": "Film kulübü",
-    "example_sentence": "We watch movies in the film club.",
-    "image": null
+    "example_sentence": "We watch movies in the film club."
   },
   {
     "unit": 1,
     "english": "Chess Club",
     "pronunciation": "Çes Klab",
     "turkish_meaning": "Satranç kulübü",
-    "example_sentence": "I play chess in the chess club.",
-    "image": null
+    "example_sentence": "I play chess in the chess club."
   },
   {
     "unit": 1,
     "english": "Sports Club",
     "pronunciation": "Sports Klab",
     "turkish_meaning": "Spor kulübü",
-    "example_sentence": "She joined the sports club.",
-    "image": null
+    "example_sentence": "She joined the sports club."
   },
   {
     "unit": 1,
     "english": "Book Club",
     "pronunciation": "Buk Klab",
     "turkish_meaning": "Kitap kulübü",
-    "example_sentence": "We read books in the book club.",
-    "image": null
+    "example_sentence": "We read books in the book club."
   },
   {
     "unit": 1,
     "english": "Drama Club",
     "pronunciation": "Drama Klab",
     "turkish_meaning": "Drama kulübü",
-    "example_sentence": "He acts in the drama club.",
-    "image": null
+    "example_sentence": "He acts in the drama club."
   },
   {
     "unit": 1,
     "english": "Art Club",
     "pronunciation": "Art Klab",
     "turkish_meaning": "Resim kulübü",
-    "example_sentence": "I draw pictures in the art club.",
-    "image": null
+    "example_sentence": "I draw pictures in the art club."
   },
   {
     "unit": 1,
     "english": "Environment Club",
     "pronunciation": "İnvayrınmınt Klab",
     "turkish_meaning": "Çevre kulübü",
-    "example_sentence": "We clean the garden in the environment club.",
-    "image": null
+    "example_sentence": "We clean the garden in the environment club."
   },
   {
     "unit": 1,
     "english": "Folk Dance Club",
     "pronunciation": "Fok Dens Klab",
     "turkish_meaning": "Halk oyunları kulübü",
-    "example_sentence": "They dance in the folk dance club.",
-    "image": null
+    "example_sentence": "They dance in the folk dance club."
   },
   {
     "unit": 1,
     "english": "Music Club",
     "pronunciation": "Myuzik Klab",
     "turkish_meaning": "Müzik kulübü",
-    "example_sentence": "We sing songs in the music club.",
-    "image": null
+    "example_sentence": "We sing songs in the music club."
   },
   {
     "unit": 1,
     "english": "Technology Club",
     "pronunciation": "Teknolıci Klab",
     "turkish_meaning": "Teknoloji kulübü",
-    "example_sentence": "I build robots in the technology club.",
-    "image": null
+    "example_sentence": "I build robots in the technology club."
   },
   {
     "unit": 1,
     "english": "Math Club",
     "pronunciation": "Mat Klab",
     "turkish_meaning": "Matematik kulübü",
-    "example_sentence": "We solve problems in the math club.",
-    "image": null
+    "example_sentence": "We solve problems in the math club."
   },
   {
     "unit": 1,
     "english": "Visual Arts",
     "pronunciation": "Vijuıl Arts",
     "turkish_meaning": "Görsel sanatlar",
-    "example_sentence": "I like Visual Arts lessons.",
-    "image": null
+    "example_sentence": "I like Visual Arts lessons."
   },
   {
     "unit": 1,
     "english": "Geography",
     "pronunciation": "Ciografi",
     "turkish_meaning": "Coğrafya",
-    "example_sentence": "We study maps in Geography.",
-    "image": null
+    "example_sentence": "We study maps in Geography."
   },
   {
     "unit": 1,
     "english": "Social Studies",
     "pronunciation": "Sışıl Stadiz",
     "turkish_meaning": "Sosyal bilimler",
-    "example_sentence": "Social Studies is interesting.",
-    "image": null
+    "example_sentence": "Social Studies is interesting."
   },
   {
     "unit": 1,
     "english": "Maths",
     "pronunciation": "Mats",
     "turkish_meaning": "Matematik",
-    "example_sentence": "I have Maths on Monday.",
-    "image": null
+    "example_sentence": "I have Maths on Monday."
   },
   {
     "unit": 1,
     "english": "History",
     "pronunciation": "Histıri",
     "turkish_meaning": "Tarih",
-    "example_sentence": "We learn about the past in History.",
-    "image": null
+    "example_sentence": "We learn about the past in History."
   },
   {
     "unit": 1,
     "english": "Language Class",
     "pronunciation": "Lengwıc Klas",
     "turkish_meaning": "Dil dersi",
-    "example_sentence": "I enjoy my Language Class.",
-    "image": null
+    "example_sentence": "I enjoy my Language Class."
   },
   {
     "unit": 1,
     "english": "Physical Education (P.E.)",
     "pronunciation": "Fizikıl Edyukeyşın",
     "turkish_meaning": "Beden Eğitimi",
-    "example_sentence": "We play games in P.E.",
-    "image": null
+    "example_sentence": "We play games in P.E."
   },
   {
     "unit": 1,
     "english": "Science",
     "pronunciation": "Sayıns",
     "turkish_meaning": "Fen bilimleri",
-    "example_sentence": "We do experiments in Science.",
-    "image": null
+    "example_sentence": "We do experiments in Science."
   },
   {
     "unit": 1,
     "english": "English",
     "pronunciation": "İnglış",
     "turkish_meaning": "İngilizce (ders)",
-    "example_sentence": "I learn new words in English.",
-    "image": null
+    "example_sentence": "I learn new words in English."
   },
   {
     "unit": 1,
     "english": "Turkish",
     "pronunciation": "Törkiş",
     "turkish_meaning": "Türkçe (ders)",
-    "example_sentence": "Turkish is my favourite lesson.",
-    "image": null
+    "example_sentence": "Turkish is my favourite lesson."
   },
   {
     "unit": 1,
     "english": "Elective Course",
     "pronunciation": "İlektiv Kors",
     "turkish_meaning": "Seçmeli ders",
-    "example_sentence": "I chose chess as my elective course.",
-    "image": null
+    "example_sentence": "I chose chess as my elective course."
   },
   {
     "unit": 1,
     "english": "Music",
     "pronunciation": "Myuzik",
     "turkish_meaning": "Müzik",
-    "example_sentence": "We sing songs in Music.",
-    "image": null
+    "example_sentence": "We sing songs in Music."
   },
   {
     "unit": 1,
     "english": "Religion and Morals",
     "pronunciation": "Rilicın End Morıls",
     "turkish_meaning": "Din Kültürü ve Ahlak Bilgisi",
-    "example_sentence": "We learn good values in Religion and Morals.",
-    "image": null
+    "example_sentence": "We learn good values in Religion and Morals."
   },
   {
     "unit": 1,
     "english": "Information Technology (I.T.)",
     "pronunciation": "İnfırmeyşın Teknolıci",
     "turkish_meaning": "Bilişim Teknolojisi",
-    "example_sentence": "We use computers in I.T.",
-    "image": null
+    "example_sentence": "We use computers in I.T."
   },
   {
     "unit": 1,
     "english": "Be quiet",
     "pronunciation": "Bi Kuayıt",
     "turkish_meaning": "Sessiz ol",
-    "example_sentence": "Please be quiet in the library.",
-    "image": null
+    "example_sentence": "Please be quiet in the library."
   },
   {
     "unit": 1,
     "english": "Clean the board",
     "pronunciation": "Klin Dı Bord",
     "turkish_meaning": "Tahtayı sil",
-    "example_sentence": "Can you clean the board, please?",
-    "image": null
+    "example_sentence": "Can you clean the board, please?"
   },
   {
     "unit": 1,
     "english": "Do your homework",
     "pronunciation": "Du Yor Homwörk",
     "turkish_meaning": "Ödevini yap",
-    "example_sentence": "I do my homework every day.",
-    "image": null
+    "example_sentence": "I do my homework every day."
   },
   {
     "unit": 1,
     "english": "Obey the rules",
     "pronunciation": "Ibey Dı Ruls",
     "turkish_meaning": "Kurallara uy",
-    "example_sentence": "We obey the rules at school.",
-    "image": null
+    "example_sentence": "We obey the rules at school."
   },
   {
     "unit": 1,
     "english": "Listen to the teacher",
     "pronunciation": "Lisın Tu Dı Tiçır",
     "turkish_meaning": "Öğretmenini dinle",
-    "example_sentence": "Please listen to the teacher.",
-    "image": null
+    "example_sentence": "Please listen to the teacher."
   },
   {
     "unit": 1,
     "english": "Raise your hand",
     "pronunciation": "Reyz Yor Hend",
     "turkish_meaning": "Elini kaldır",
-    "example_sentence": "Raise your hand before you speak.",
-    "image": null
+    "example_sentence": "Raise your hand before you speak."
   },
   {
     "unit": 1,
     "english": "Respect your friends",
     "pronunciation": "Rispekt Yor Frends",
     "turkish_meaning": "Arkadaşlarına saygılı ol",
-    "example_sentence": "We respect our friends.",
-    "image": null
+    "example_sentence": "We respect our friends."
   },
   {
     "unit": 1,
     "english": "Wear your uniform",
     "pronunciation": "Weır Yor Yunıform",
     "turkish_meaning": "Formanı giy",
-    "example_sentence": "Students wear their uniform every day.",
-    "image": null
+    "example_sentence": "Students wear their uniform every day."
   },
   {
     "unit": 1,
     "english": "Don't be late",
     "pronunciation": "Dont Bi Leyt",
     "turkish_meaning": "Geç kalma",
-    "example_sentence": "Don't be late for class.",
-    "image": null
+    "example_sentence": "Don't be late for class."
   },
   {
     "unit": 1,
     "english": "Don't fight",
     "pronunciation": "Dont Fayt",
     "turkish_meaning": "Kavga etme",
-    "example_sentence": "Don't fight with your friends.",
-    "image": null
+    "example_sentence": "Don't fight with your friends."
   },
   {
     "unit": 1,
     "english": "Don't run in the corridors",
     "pronunciation": "Dont Ran İn Dı Koridors",
     "turkish_meaning": "Koridorda koşma",
-    "example_sentence": "Don't run in the corridors.",
-    "image": null
+    "example_sentence": "Don't run in the corridors."
   },
   {
     "unit": 1,
     "english": "Don't shout",
     "pronunciation": "Dont Şaut",
     "turkish_meaning": "Bağırma",
-    "example_sentence": "Don't shout in the classroom.",
-    "image": null
+    "example_sentence": "Don't shout in the classroom."
   },
   {
     "unit": 1,
     "english": "Don't be rude",
     "pronunciation": "Dont Bi Rud",
     "turkish_meaning": "Kaba olma",
-    "example_sentence": "Don't be rude to your teacher.",
-    "image": null
+    "example_sentence": "Don't be rude to your teacher."
   },
   {
     "unit": 1,
     "english": "Line up",
     "pronunciation": "Layn Ap",
     "turkish_meaning": "Sıraya gir",
-    "example_sentence": "Please line up at the door.",
-    "image": null
+    "example_sentence": "Please line up at the door."
   },
   {
     "unit": 1,
     "english": "30 August Victory Day",
     "pronunciation": "Törtiyıth Ogıst Viktıri Dey",
     "turkish_meaning": "30 Ağustos Zafer Bayramı",
-    "example_sentence": "We celebrate 30 August Victory Day every year.",
-    "image": null
+    "example_sentence": "We celebrate 30 August Victory Day every year."
   },
   {
     "unit": 1,
     "english": "23 April National Sovereignty and Children's Day",
     "pronunciation": "Tuventi Törd Eyprıl Neşınıl Sovrınti End Çildrınz Dey",
     "turkish_meaning": "23 Nisan Ulusal Egemenlik ve Çocuk Bayramı",
-    "example_sentence": "Children dance on 23 April National Sovereignty and Children's Day.",
-    "image": null
+    "example_sentence": "Children dance on 23 April National Sovereignty and Children's Day."
   },
   {
     "unit": 1,
     "english": "29 October Republic Day",
     "pronunciation": "Tuventi Nayn Oktobır Ripablik Dey",
     "turkish_meaning": "29 Ekim Cumhuriyet Bayramı",
-    "example_sentence": "We have a holiday on 29 October Republic Day.",
-    "image": null
+    "example_sentence": "We have a holiday on 29 October Republic Day."
   },
   {
     "unit": 1,
     "english": "Eid-al-Fitr",
     "pronunciation": "İyd El Fitr",
     "turkish_meaning": "Ramazan Bayramı",
-    "example_sentence": "We visit our family on Eid-al-Fitr.",
-    "image": null
+    "example_sentence": "We visit our family on Eid-al-Fitr."
   },
   {
     "unit": 1,
     "english": "19 May Commemoration of Atatürk, Youth and Sports Day",
     "pronunciation": "Nayntin Mey Komemoreyşın Ov Atatürk Yuth End Sports Dey",
     "turkish_meaning": "19 Mayıs Atatürk'ü Anma, Gençlik ve Spor Bayramı",
-    "example_sentence": "Students do sports shows on 19 May.",
-    "image": null
+    "example_sentence": "Students do sports shows on 19 May."
   },
   {
     "unit": 1,
     "english": "Eid-al-Adha",
     "pronunciation": "İyd El Adha",
     "turkish_meaning": "Kurban Bayramı",
-    "example_sentence": "We eat special food on Eid-al-Adha.",
-    "image": null
+    "example_sentence": "We eat special food on Eid-al-Adha."
   },
   {
     "unit": 1,
     "english": "Do experiment",
     "pronunciation": "Du İkspirimınt",
     "turkish_meaning": "Deney yapmak",
-    "example_sentence": "We do an experiment in Science class.",
-    "image": null
+    "example_sentence": "We do an experiment in Science class."
   },
   {
     "unit": 1,
     "english": "Watch a movie",
     "pronunciation": "Waç ı Muvi",
     "turkish_meaning": "Film izlemek",
-    "example_sentence": "I watch a movie at the weekend.",
-    "image": null
+    "example_sentence": "I watch a movie at the weekend."
   },
   {
     "unit": 1,
     "english": "Play chess",
     "pronunciation": "Pley Çes",
     "turkish_meaning": "Satranç oynamak",
-    "example_sentence": "I play chess with my friend.",
-    "image": "/images/words/chess.svg"
+    "example_sentence": "I play chess with my friend."
   },
   {
     "unit": 1,
     "english": "Play football",
     "pronunciation": "Pley Futbol",
     "turkish_meaning": "Futbol oynamak",
-    "example_sentence": "Boys play football in the garden.",
-    "image": "/images/words/football.svg"
+    "example_sentence": "Boys play football in the garden."
   },
   {
     "unit": 1,
     "english": "Read a book",
     "pronunciation": "Rid ı Buk",
     "turkish_meaning": "Kitap okumak",
-    "example_sentence": "I read a book before bed.",
-    "image": "/images/words/book.svg"
+    "example_sentence": "I read a book before bed."
   },
   {
     "unit": 1,
     "english": "Act",
     "pronunciation": "Ekt",
     "turkish_meaning": "Rol yapmak",
-    "example_sentence": "She can act very well.",
-    "image": null
+    "example_sentence": "She can act very well."
   },
   {
     "unit": 1,
     "english": "Draw pictures",
     "pronunciation": "Dro Pikçırs",
     "turkish_meaning": "Resim çizmek",
-    "example_sentence": "I draw pictures of animals.",
-    "image": "/images/words/art.svg"
+    "example_sentence": "I draw pictures of animals."
   },
   {
     "unit": 1,
     "english": "Dance",
     "pronunciation": "Dens",
     "turkish_meaning": "Dans etmek",
-    "example_sentence": "We dance at the party.",
-    "image": null
+    "example_sentence": "We dance at the party."
   },
   {
     "unit": 1,
     "english": "Sing a song",
     "pronunciation": "Sing ı Song",
     "turkish_meaning": "Şarkı söylemek",
-    "example_sentence": "She sings a song every morning.",
-    "image": "/images/words/music-note.svg"
+    "example_sentence": "She sings a song every morning."
   },
   {
     "unit": 1,
     "english": "Play guitar",
     "pronunciation": "Pley Gitar",
     "turkish_meaning": "Gitar çalmak",
-    "example_sentence": "He plays the guitar very well.",
-    "image": "/images/words/guitar.svg"
+    "example_sentence": "He plays the guitar very well."
   },
   {
     "unit": 1,
     "english": "Solve problems",
     "pronunciation": "Solv Problıms",
     "turkish_meaning": "Problem çözmek",
-    "example_sentence": "We solve problems in Maths.",
-    "image": null
+    "example_sentence": "We solve problems in Maths."
   },
   {
     "unit": 1,
     "english": "Türkiye",
     "pronunciation": "Törkiye",
     "turkish_meaning": "Türkiye",
-    "example_sentence": "Türkiye is a beautiful country.",
-    "image": "/images/words/flags/tr.svg"
+    "example_sentence": "Türkiye is a beautiful country."
   },
   {
     "unit": 1,
     "english": "Turkish",
     "pronunciation": "Törkiş",
     "turkish_meaning": "Türk (milliyet)",
-    "example_sentence": "My friend is Turkish.",
-    "image": "/images/words/flags/tr.svg"
+    "example_sentence": "My friend is Turkish."
   },
   {
     "unit": 1,
     "english": "Germany",
     "pronunciation": "Cörmıni",
     "turkish_meaning": "Almanya",
-    "example_sentence": "Germany is in Europe.",
-    "image": "/images/words/flags/de.svg"
+    "example_sentence": "Germany is in Europe."
   },
   {
     "unit": 1,
     "english": "German",
     "pronunciation": "Cörmın",
     "turkish_meaning": "Alman",
-    "example_sentence": "She is German.",
-    "image": "/images/words/flags/de.svg"
+    "example_sentence": "She is German."
   },
   {
     "unit": 1,
     "english": "France",
     "pronunciation": "Frens",
     "turkish_meaning": "Fransa",
-    "example_sentence": "France is famous for its food.",
-    "image": "/images/words/flags/fr.svg"
+    "example_sentence": "France is famous for its food."
   },
   {
     "unit": 1,
     "english": "French",
     "pronunciation": "Frenç",
     "turkish_meaning": "Fransız",
-    "example_sentence": "He is French.",
-    "image": "/images/words/flags/fr.svg"
+    "example_sentence": "He is French."
   },
   {
     "unit": 1,
     "english": "Italy",
     "pronunciation": "İtıli",
     "turkish_meaning": "İtalya",
-    "example_sentence": "Italy is famous for pizza.",
-    "image": "/images/words/flags/it.svg"
+    "example_sentence": "Italy is famous for pizza."
   },
   {
     "unit": 1,
     "english": "Italian",
     "pronunciation": "İtelyın",
     "turkish_meaning": "İtalyan",
-    "example_sentence": "She is Italian.",
-    "image": "/images/words/flags/it.svg"
+    "example_sentence": "She is Italian."
   },
   {
     "unit": 1,
     "english": "Brazil",
     "pronunciation": "Brızil",
     "turkish_meaning": "Brezilya",
-    "example_sentence": "Brazil is a big country.",
-    "image": "/images/words/flags/br.svg"
+    "example_sentence": "Brazil is a big country."
   },
   {
     "unit": 1,
     "english": "Brazilian",
     "pronunciation": "Brızilyın",
     "turkish_meaning": "Brezilyalı",
-    "example_sentence": "He is Brazilian.",
-    "image": "/images/words/flags/br.svg"
+    "example_sentence": "He is Brazilian."
   },
   {
     "unit": 1,
     "english": "Portugal",
     "pronunciation": "Porçugıl",
     "turkish_meaning": "Portekiz",
-    "example_sentence": "Portugal is in Europe.",
-    "image": "/images/words/flags/pt.svg"
+    "example_sentence": "Portugal is in Europe."
   },
   {
     "unit": 1,
     "english": "Portuguese",
     "pronunciation": "Porçugiz",
     "turkish_meaning": "Portekizli",
-    "example_sentence": "She is Portuguese.",
-    "image": "/images/words/flags/pt.svg"
+    "example_sentence": "She is Portuguese."
   },
   {
     "unit": 1,
     "english": "Japan",
     "pronunciation": "Cıpen",
     "turkish_meaning": "Japonya",
-    "example_sentence": "Japan has many islands.",
-    "image": "/images/words/flags/jp.svg"
+    "example_sentence": "Japan has many islands."
   },
   {
     "unit": 1,
     "english": "Japanese",
     "pronunciation": "Cepıniz",
     "turkish_meaning": "Japon",
-    "example_sentence": "He is Japanese.",
-    "image": "/images/words/flags/jp.svg"
+    "example_sentence": "He is Japanese."
   },
   {
     "unit": 1,
     "english": "China",
     "pronunciation": "Çayna",
     "turkish_meaning": "Çin",
-    "example_sentence": "China is a very big country.",
-    "image": "/images/words/flags/cn.svg"
+    "example_sentence": "China is a very big country."
   },
   {
     "unit": 1,
     "english": "Chinese",
     "pronunciation": "Çayniz",
     "turkish_meaning": "Çinli",
-    "example_sentence": "She is Chinese.",
-    "image": "/images/words/flags/cn.svg"
+    "example_sentence": "She is Chinese."
   },
   {
     "unit": 1,
     "english": "Spain",
     "pronunciation": "Speyn",
     "turkish_meaning": "İspanya",
-    "example_sentence": "Spain is sunny in summer.",
-    "image": "/images/words/flags/es.svg"
+    "example_sentence": "Spain is sunny in summer."
   },
   {
     "unit": 1,
     "english": "Spanish",
     "pronunciation": "Speniş",
     "turkish_meaning": "İspanyol",
-    "example_sentence": "He is Spanish.",
-    "image": "/images/words/flags/es.svg"
+    "example_sentence": "He is Spanish."
   },
   {
     "unit": 1,
     "english": "Russia",
     "pronunciation": "Raşı",
     "turkish_meaning": "Rusya",
-    "example_sentence": "Russia is a very large country.",
-    "image": "/images/words/flags/ru.svg"
+    "example_sentence": "Russia is a very large country."
   },
   {
     "unit": 1,
     "english": "Russian",
     "pronunciation": "Raşın",
     "turkish_meaning": "Rus",
-    "example_sentence": "She is Russian.",
-    "image": "/images/words/flags/ru.svg"
+    "example_sentence": "She is Russian."
   },
   {
     "unit": 1,
     "english": "India",
     "pronunciation": "İndiyı",
     "turkish_meaning": "Hindistan",
-    "example_sentence": "India has a big population.",
-    "image": "/images/words/flags/in.svg"
+    "example_sentence": "India has a big population."
   },
   {
     "unit": 1,
     "english": "Indian",
     "pronunciation": "İndiyın",
     "turkish_meaning": "Hintli",
-    "example_sentence": "He is Indian.",
-    "image": "/images/words/flags/in.svg"
+    "example_sentence": "He is Indian."
   },
   {
     "unit": 1,
     "english": "Greece",
     "pronunciation": "Gris",
     "turkish_meaning": "Yunanistan",
-    "example_sentence": "Greece has many islands.",
-    "image": "/images/words/flags/gr.svg"
+    "example_sentence": "Greece has many islands."
   },
   {
     "unit": 1,
     "english": "Greek",
     "pronunciation": "Grik",
     "turkish_meaning": "Yunan",
-    "example_sentence": "She is Greek.",
-    "image": "/images/words/flags/gr.svg"
+    "example_sentence": "She is Greek."
   },
   {
     "unit": 1,
     "english": "The United States (America/USA)",
     "pronunciation": "Dı Yunaytıd Steyts",
     "turkish_meaning": "Amerika",
-    "example_sentence": "The United States is in North America.",
-    "image": "/images/words/flags/us.svg"
+    "example_sentence": "The United States is in North America."
   },
   {
     "unit": 1,
     "english": "American",
     "pronunciation": "Imerikın",
     "turkish_meaning": "Amerikan",
-    "example_sentence": "He is American.",
-    "image": "/images/words/flags/us.svg"
+    "example_sentence": "He is American."
   },
   {
     "unit": 1,
     "english": "The United Kingdom (UK/Britain)",
     "pronunciation": "Dı Yunaytıd Kingdım",
     "turkish_meaning": "Birleşik Krallık",
-    "example_sentence": "The United Kingdom has four countries.",
-    "image": "/images/words/flags/gb.svg"
+    "example_sentence": "The United Kingdom has four countries."
   },
   {
     "unit": 1,
     "english": "British",
     "pronunciation": "Britiş",
     "turkish_meaning": "Britanyalı / İngiliz",
-    "example_sentence": "She is British.",
-    "image": "/images/words/flags/gb.svg"
+    "example_sentence": "She is British."
   },
   {
     "unit": 1,
     "english": "England",
     "pronunciation": "İnglınd",
     "turkish_meaning": "İngiltere",
-    "example_sentence": "England is part of the UK.",
-    "image": "/images/words/flags/england.svg"
+    "example_sentence": "England is part of the UK."
   },
   {
     "unit": 1,
     "english": "English",
     "pronunciation": "İnglış",
     "turkish_meaning": "İngiliz (milliyet)",
-    "example_sentence": "He is English.",
-    "image": "/images/words/flags/england.svg"
+    "example_sentence": "He is English."
   },
   {
     "unit": 1,
     "english": "Canada",
     "pronunciation": "Kenıdı",
     "turkish_meaning": "Kanada",
-    "example_sentence": "Canada is very cold in winter.",
-    "image": "/images/words/flags/ca.svg"
+    "example_sentence": "Canada is very cold in winter."
   },
   {
     "unit": 1,
     "english": "Canadian",
     "pronunciation": "Kıneydiın",
     "turkish_meaning": "Kanadalı",
-    "example_sentence": "She is Canadian.",
-    "image": "/images/words/flags/ca.svg"
+    "example_sentence": "She is Canadian."
   },
   {
     "unit": 1,
     "english": "Singapore",
     "pronunciation": "Singıpor",
     "turkish_meaning": "Singapur",
-    "example_sentence": "Singapore is a small country.",
-    "image": "/images/words/flags/sg.svg"
+    "example_sentence": "Singapore is a small country."
   },
   {
     "unit": 1,
     "english": "Singaporean",
     "pronunciation": "Singıpıriın",
     "turkish_meaning": "Singapurlu",
-    "example_sentence": "He is Singaporean.",
-    "image": "/images/words/flags/sg.svg"
+    "example_sentence": "He is Singaporean."
   },
   {
     "unit": 1,
     "english": "Azerbaijan",
     "pronunciation": "Azırbaycan",
     "turkish_meaning": "Azerbaycan",
-    "example_sentence": "Azerbaijan is our neighbour.",
-    "image": "/images/words/flags/az.svg"
+    "example_sentence": "Azerbaijan is our neighbour."
   },
   {
     "unit": 1,
     "english": "Azerbaijani",
     "pronunciation": "Azırbaycani",
     "turkish_meaning": "Azeri",
-    "example_sentence": "She is Azerbaijani.",
-    "image": "/images/words/flags/az.svg"
+    "example_sentence": "She is Azerbaijani."
   },
   {
     "unit": 1,
     "english": "Syria",
     "pronunciation": "Siriyı",
     "turkish_meaning": "Suriye",
-    "example_sentence": "Syria is near Türkiye.",
-    "image": "/images/words/flags/sy.svg"
+    "example_sentence": "Syria is near Türkiye."
   },
   {
     "unit": 1,
     "english": "Syrian",
     "pronunciation": "Siriyın",
     "turkish_meaning": "Suriyeli",
-    "example_sentence": "He is Syrian.",
-    "image": "/images/words/flags/sy.svg"
+    "example_sentence": "He is Syrian."
   },
   {
     "unit": 1,
     "english": "Australia",
     "pronunciation": "Ostreylyı",
     "turkish_meaning": "Avustralya",
-    "example_sentence": "Australia is a big island.",
-    "image": "/images/words/flags/au.svg"
+    "example_sentence": "Australia is a big island."
   },
   {
     "unit": 1,
     "english": "Australian",
     "pronunciation": "Ostreylyın",
     "turkish_meaning": "Avustralyalı",
-    "example_sentence": "She is Australian.",
-    "image": "/images/words/flags/au.svg"
+    "example_sentence": "She is Australian."
   },
   {
     "unit": 1,
     "english": "Mexico",
     "pronunciation": "Meksiko",
     "turkish_meaning": "Meksika",
-    "example_sentence": "Mexico is in North America.",
-    "image": "/images/words/flags/mx.svg"
+    "example_sentence": "Mexico is in North America."
   },
   {
     "unit": 1,
     "english": "Mexican",
     "pronunciation": "Meksikın",
     "turkish_meaning": "Meksikalı",
-    "example_sentence": "He is Mexican.",
-    "image": "/images/words/flags/mx.svg"
+    "example_sentence": "He is Mexican."
   },
   {
     "unit": 1,
     "english": "South Korea",
     "pronunciation": "Sauth Kıriyı",
     "turkish_meaning": "Güney Kore",
-    "example_sentence": "South Korea makes many cars.",
-    "image": "/images/words/flags/kr.svg"
+    "example_sentence": "South Korea makes many cars."
   },
   {
     "unit": 1,
     "english": "South Korean",
     "pronunciation": "Sauth Kıriyın",
     "turkish_meaning": "Güney Koreli",
-    "example_sentence": "She is South Korean.",
-    "image": "/images/words/flags/kr.svg"
+    "example_sentence": "She is South Korean."
   },
   {
     "unit": 1,
     "english": "Scotland",
     "pronunciation": "Skotlınd",
     "turkish_meaning": "İskoçya",
-    "example_sentence": "Scotland is part of the UK.",
-    "image": "/images/words/flags/scotland.svg"
+    "example_sentence": "Scotland is part of the UK."
   },
   {
     "unit": 1,
     "english": "Scottish",
     "pronunciation": "Skotiş",
     "turkish_meaning": "İskoç",
-    "example_sentence": "He is Scottish.",
-    "image": "/images/words/flags/scotland.svg"
+    "example_sentence": "He is Scottish."
   },
   {
     "unit": 1,
     "english": "Uzbekistan",
     "pronunciation": "Uzbekistan",
     "turkish_meaning": "Özbekistan",
-    "example_sentence": "Uzbekistan is in Asia.",
-    "image": "/images/words/flags/uz.svg"
+    "example_sentence": "Uzbekistan is in Asia."
   },
   {
     "unit": 1,
     "english": "Uzbek",
     "pronunciation": "Uzbek",
     "turkish_meaning": "Özbek",
-    "example_sentence": "She is Uzbek.",
-    "image": "/images/words/flags/uz.svg"
+    "example_sentence": "She is Uzbek."
   },
   {
     "unit": 1,
     "english": "Argentina",
     "pronunciation": "Arcıntinı",
     "turkish_meaning": "Arjantin",
-    "example_sentence": "Argentina is in South America.",
-    "image": "/images/words/flags/ar.svg"
+    "example_sentence": "Argentina is in South America."
   },
   {
     "unit": 1,
     "english": "Argentine",
     "pronunciation": "Arcıntayn",
     "turkish_meaning": "Arjantinli",
-    "example_sentence": "He is Argentine.",
-    "image": "/images/words/flags/ar.svg"
+    "example_sentence": "He is Argentine."
   }
 ]

@@ -10,7 +10,7 @@ const router = express.Router();
 router.get('/', requireAuth, async (req, res) => {
   try {
     const { rows } = await pool.query(
-      `SELECT d.id, d.slug, d.title, d.description, d.requires_owner, d.has_explanation, d.has_image,
+      `SELECT d.id, d.slug, d.title, d.description, d.requires_owner, d.has_explanation,
               COUNT(DISTINCT w.unit) FILTER (WHERE w.unit IS NOT NULL) AS unit_count,
               COUNT(w.id) AS word_count
        FROM decks d
@@ -25,7 +25,6 @@ router.get('/', requireAuth, async (req, res) => {
       title: d.title,
       description: d.description,
       hasExplanation: d.has_explanation,
-      hasImage: d.has_image,
       unitCount: Number(d.unit_count),
       wordCount: Number(d.word_count),
     })));

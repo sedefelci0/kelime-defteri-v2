@@ -30,7 +30,7 @@ router.get('/', requireAuth, async (req, res) => {
 
     const { rows } = await pool.query(
       `SELECT w.id, w.english, w.pronunciation, w.turkish_meaning,
-              w.english_explanation, w.example_sentence, w.image_url, w.unit,
+              w.english_explanation, w.example_sentence, w.unit,
               COALESCE(up.status, 'new') AS status,
               up.times_correct, up.times_wrong
        FROM words w
@@ -45,7 +45,6 @@ router.get('/', requireAuth, async (req, res) => {
         slug: deck.slug,
         title: deck.title,
         hasExplanation: deck.has_explanation,
-        hasImage: deck.has_image,
       },
       words: rows,
     });

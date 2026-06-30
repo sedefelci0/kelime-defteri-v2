@@ -8,7 +8,7 @@ if (!deckSlug) {
 
 let allWords = [];
 let currentIndex = 0;
-let deckInfo = { hasExplanation: true, hasImage: false, title: 'Kelime Defteri' };
+let deckInfo = { hasExplanation: true, title: 'Kelime Defteri' };
 
 let totalStudySeconds = 0;
 let sessionSeconds = 0; // bu sayfa açıldığından beri geçen, henüz sunucuya gönderilmemiş süre
@@ -24,7 +24,6 @@ const quizZoneEl = document.getElementById('quiz-zone');
 
 const flipCardEl = document.getElementById('flip-card');
 const cardCounterEl = document.getElementById('card-counter');
-const wordImageEl = document.getElementById('word-image');
 const wordEnglishEl = document.getElementById('word-english');
 const wordPronEl = document.getElementById('word-pron');
 const wordExplanationEl = document.getElementById('word-explanation');
@@ -104,14 +103,6 @@ function renderCard() {
   const word = allWords[currentIndex];
   if (!word) return;
   flipCardEl.classList.remove('is-flipped');
-
-  const imagePanelEl = document.getElementById('image-panel');
-  if (deckInfo.hasImage && word.image_url) {
-    wordImageEl.src = word.image_url;
-    imagePanelEl.style.display = '';
-  } else {
-    imagePanelEl.style.display = 'none';
-  }
 
   wordEnglishEl.textContent = word.english;
   wordPronEl.textContent = word.pronunciation;
