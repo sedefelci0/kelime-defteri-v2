@@ -84,33 +84,6 @@ document.getElementById('logout-btn').addEventListener('click', async () => {
   window.location.href = '/';
 });
 
-// Öğretmen girişi modalı
-const ownerModal = document.getElementById('owner-modal');
-const ownerError = document.getElementById('owner-error');
-document.getElementById('owner-link').addEventListener('click', () => {
-  ownerError.classList.remove('visible');
-  const field = document.getElementById('owner-secret');
-  field.value = '';
-  ownerModal.style.display = 'flex';
-  field.setAttribute('readonly', 'readonly');
-  setTimeout(() => field.removeAttribute('readonly'), 100);
-});
-document.getElementById('owner-cancel').addEventListener('click', () => {
-  ownerModal.style.display = 'none';
-});
-document.getElementById('owner-submit').addEventListener('click', async () => {
-  const password = document.getElementById('owner-secret').value;
-  try {
-    await postJSON('/api/decks/unlock', { password });
-    ownerModal.style.display = 'none';
-    document.getElementById('admin-panel-btn').style.display = '';
-    loadDecks();
-  } catch (err) {
-    ownerError.textContent = err.message;
-    ownerError.classList.add('visible');
-  }
-});
-
 document.getElementById('admin-panel-btn').addEventListener('click', () => {
   window.location.href = '/admin.html';
 });
