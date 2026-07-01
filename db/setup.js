@@ -62,6 +62,20 @@ async function ensureDatabaseReady() {
   }
 
   await ensureExamQuestionsReady();
+  await fixTypos();
+}
+
+async function fixTypos() {
+  const fixes = [
+    { wrong: 'ablolition', correct: 'Abolition' },
+  ];
+  for (const { wrong, correct } of fixes) {
+    const { rowCount } = await pool.query(
+      'UPDATE words SET english = $1 WHERE english = $2',
+      [correct, wrong]
+    );
+    if (rowCount > 0) console.log(`[db] Typo düzeltildi: "${wrong}" → "${correct}"`);
+  }
 }
 
 // data/exam_questions.json içindeki genel soru havuzunu (örn. çıkmış LGS/YDS/YÖKDİL soruları)
