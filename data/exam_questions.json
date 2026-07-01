@@ -670,5 +670,71 @@
     "correct_option": "E",
     "source": "2021 YDS/2",
     "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "Rome fought three great wars against the Phoenician city of Carthage in Africa, which ended with the total destruction of Carthage and the ---- of its inhabitants in 146 BCE.",
+    "option_a": "accumulation",
+    "option_b": "commitment",
+    "option_c": "negotiation",
+    "option_d": "enslavement",
+    "option_e": "correspondence",
+    "correct_option": "D",
+    "source": "2021 YÖKDİL/2",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "Cambodia is one of the world's poorest economies, and thus economic development is its highest ----.",
+    "option_a": "reflection",
+    "option_b": "triumph",
+    "option_c": "structure",
+    "option_d": "priority",
+    "option_e": "sanction",
+    "correct_option": "D",
+    "source": "2021 YÖKDİL/2",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "The sociology of knowledge is a discipline ---- to investigating the role played by conventions, institutions, traditions and interests in the creation and evaluation of knowledge.",
+    "option_a": "convertible",
+    "option_b": "sentenced",
+    "option_c": "devoted",
+    "option_d": "vulnerable",
+    "option_e": "harmful",
+    "correct_option": "C",
+    "source": "2021 YÖKDİL/2",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "Originating in China and voyaging first in trading caravans and then along maritime routes, tea ---- conquered Western tastes.",
+    "option_a": "accurately",
+    "option_b": "similarly",
+    "option_c": "presently",
+    "option_d": "adversely",
+    "option_e": "gradually",
+    "correct_option": "E",
+    "source": "2021 YÖKDİL/2",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "Infants become emotionally attached to the people with whom they ---- most often and most lovingly.",
+    "option_a": "consult",
+    "option_b": "compete",
+    "option_c": "quarrel",
+    "option_d": "interact",
+    "option_e": "speculate",
+    "correct_option": "D",
+    "source": "2021 YÖKDİL/2",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "The domestication of fire by humans was the first great ecological transformation ---- by humans, as it changed forever the way humans dealt with their surroundings.",
+    "option_a": "brought about",
+    "option_b": "pulled down",
+    "option_c": "filled out",
+    "option_d": "put through",
+    "option_e": "given up",
+    "correct_option": "A",
+    "source": "2021 YÖKDİL/2",
+    "restrict_deck_slug": "benim-kelimelerim"
   }
 ]
