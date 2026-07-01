@@ -3,6 +3,21 @@
 
 module.exports = [
   {
+    slug: 'yokdil',
+    title: 'YÖKDİL',
+    description: 'YÖKDİL / YDS sınav hazırlık kelimeleri',
+    requiresOwner: false,
+    hasExplanation: true,
+    sortOrder: 0,
+    wordsFile: '../data/yokdil_words.json',
+    unitNames: {
+      1: 'Karma Kelimeler',
+      2: 'Bağlaçlar',
+      3: 'Sıfatlar',
+      4: 'Zarflar',
+    },
+  },
+  {
     slug: 'benim-kelimelerim',
     title: 'Benim Kelimelerim',
     description: '617 kelime',

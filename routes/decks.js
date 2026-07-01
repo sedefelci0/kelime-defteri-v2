@@ -1,5 +1,6 @@
 const express = require('express');
 const pool = require('../db/pool');
+const DECKS = require('../db/decks-config');
 const { requireAuth } = require('../middleware/auth');
 
 const router = express.Router();
@@ -50,7 +51,9 @@ router.get('/:slug/units', requireAuth, async (req, res) => {
        GROUP BY unit ORDER BY unit ASC`,
       [deck.id]
     );
-    res.json(rows.map((r) => ({ unit: r.unit, wordCount: r.word_count })));
+    const deckConfig = DECKS.find((d) => d.slug === req.params.slug);
+    const unitNames = deckConfig?.unitNames || {};
+    res.json(rows.map((r) => ({ unit: r.unit, wordCount: r.word_count, name: unitNames[r.unit] || null })));
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Üniteler yüklenirken hata oluştu.' });

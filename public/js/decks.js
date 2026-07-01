@@ -45,7 +45,7 @@ async function openDeck(deck) {
     unitButtonsEl.innerHTML = '';
     units.forEach((u) => {
       const btn = document.createElement('button');
-      btn.textContent = `Ünite ${u.unit}`;
+      btn.textContent = u.name || `Ünite ${u.unit}`;
       btn.addEventListener('click', () => goToStudy(deck.slug, u.unit));
       unitButtonsEl.appendChild(btn);
     });

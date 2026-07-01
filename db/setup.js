@@ -44,16 +44,17 @@ async function ensureDatabaseReady() {
 
     for (const w of words) {
       await pool.query(
-        `INSERT INTO words (deck_id, unit, english, pronunciation, turkish_meaning, english_explanation, example_sentence)
-         VALUES ($1, $2, $3, $4, $5, $6, $7)`,
+        `INSERT INTO words (deck_id, unit, english, pronunciation, turkish_meaning, english_explanation, example_sentence, part_of_speech)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
         [
           deckId,
           w.unit || null,
           w.english,
-          w.pronunciation,
+          w.pronunciation || null,
           w.turkish_meaning,
           w.english_explanation || null,
           w.example_sentence,
+          w.part_of_speech || null,
         ]
       );
     }
