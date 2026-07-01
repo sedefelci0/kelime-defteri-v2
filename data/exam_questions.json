@@ -736,5 +736,71 @@
     "correct_option": "A",
     "source": "2021 YÖKDİL/2",
     "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "Skills assessment tests try to find out how well you are likely to satisfy the technical or operational ---- of a job.",
+    "option_a": "requirements",
+    "option_b": "solutions",
+    "option_c": "shortcomings",
+    "option_d": "conflicts",
+    "option_e": "punishments",
+    "correct_option": "A",
+    "source": "2021 YÖKDİL/1",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "The introduction of printing was delayed in Europe because of the ---- of paper until the 14th century.",
+    "option_a": "occupation",
+    "option_b": "variety",
+    "option_c": "expansion",
+    "option_d": "absence",
+    "option_e": "validation",
+    "correct_option": "D",
+    "source": "2021 YÖKDİL/1",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "The human face is a highly meaningful stimulus that provides scholars with ---- information for adaptive social interaction with people.",
+    "option_a": "weak",
+    "option_b": "deceptive",
+    "option_c": "redundant",
+    "option_d": "diverse",
+    "option_e": "erroneous",
+    "correct_option": "D",
+    "source": "2021 YÖKDİL/1",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "Centres and programmes that support excellence in college and university teaching have grown ---- since the mid-20th century, and offer a broad range of services and resources to various institutions.",
+    "option_a": "accurately",
+    "option_b": "severely",
+    "option_c": "incidentally",
+    "option_d": "extensively",
+    "option_e": "temporarily",
+    "correct_option": "D",
+    "source": "2021 YÖKDİL/1",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "If people ---- a group, they want to be like the group's members and to hold similar characteristics and opinions.",
+    "option_a": "admire",
+    "option_b": "offend",
+    "option_c": "leave",
+    "option_d": "divide",
+    "option_e": "defeat",
+    "correct_option": "A",
+    "source": "2021 YÖKDİL/1",
+    "restrict_deck_slug": "benim-kelimelerim"
+  },
+  {
+    "question_text": "Millions of immigrants and refugees change homes each year in pursuit of freedom, security, economic betterment, or simply to ---- a more desirable environment in which to live.",
+    "option_a": "turn down",
+    "option_b": "look for",
+    "option_c": "give up",
+    "option_d": "take off",
+    "option_e": "fall behind",
+    "correct_option": "B",
+    "source": "2021 YÖKDİL/1",
+    "restrict_deck_slug": "benim-kelimelerim"
   }
 ]
