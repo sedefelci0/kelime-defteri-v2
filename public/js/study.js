@@ -30,10 +30,7 @@ const wordExplanationEl = document.getElementById('word-explanation');
 const wordMeaningEl = document.getElementById('word-meaning');
 const wordExampleEl = document.getElementById('word-example');
 
-const questionPanelEl = document.getElementById('question-panel');
-const questionTextEl = document.getElementById('question-text');
-const questionOptionsEl = document.getElementById('question-options');
-const questionExplanationEl = document.getElementById('question-explanation');
+const questionsAccordionEl = document.getElementById('questions-accordion');
 
 const btnAgain = document.getElementById('btn-again');
 const btnKnow = document.getElementById('btn-know');
@@ -104,53 +101,91 @@ async function loadSummary() {
   text.textContent = `${summary.known}/${summary.total} öğrenildi`;
 }
 
-function resetQuestionPanel() {
-  questionPanelEl.style.display = 'none';
-  questionOptionsEl.innerHTML = '';
-  questionExplanationEl.style.display = 'none';
-  questionExplanationEl.textContent = '';
+function resetQuestions() {
+  questionsAccordionEl.style.display = 'none';
+  questionsAccordionEl.innerHTML = '';
 }
 
-function showQuestionForWord(word) {
-  if (!word.question_id) return;
-  questionTextEl.textContent = word.question_text;
-  questionOptionsEl.innerHTML = '';
+function buildAccordionItem(q, index) {
+  const item = document.createElement('div');
+  item.className = 'accordion-item';
 
-  const options = [
-    ['A', word.option_a],
-    ['B', word.option_b],
-    ['C', word.option_c],
-    ['D', word.option_d],
-  ];
-  if (word.option_e) options.push(['E', word.option_e]);
+  const header = document.createElement('button');
+  header.className = 'accordion-header';
+  header.type = 'button';
+  const sourceLabel = q.source ? `<span class="accordion-source">${q.source}</span>` : '';
+  header.innerHTML = `<span class="accordion-num">Soru ${index + 1}</span>${sourceLabel}<span class="accordion-arrow">›</span>`;
 
-  options.forEach(([letter, text]) => {
+  const body = document.createElement('div');
+  body.className = 'accordion-body';
+  body.hidden = true;
+
+  const qText = document.createElement('div');
+  qText.className = 'question-text';
+  qText.textContent = q.question_text;
+  body.appendChild(qText);
+
+  const optionsEl = document.createElement('div');
+  optionsEl.className = 'question-options';
+
+  const opts = [['A', q.option_a], ['B', q.option_b], ['C', q.option_c], ['D', q.option_d]];
+  if (q.option_e) opts.push(['E', q.option_e]);
+
+  let answered = false;
+  opts.forEach(([letter, text]) => {
     const btn = document.createElement('button');
     btn.className = 'question-option';
+    btn.type = 'button';
     btn.textContent = text;
     btn.addEventListener('click', () => {
-      const allButtons = Array.from(questionOptionsEl.querySelectorAll('.question-option'));
-      allButtons.forEach((b, i) => {
+      if (answered) return;
+      answered = true;
+      const allBtns = Array.from(optionsEl.querySelectorAll('.question-option'));
+      allBtns.forEach((b, i) => {
         b.disabled = true;
-        if (options[i][0] === word.correct_option) b.classList.add('is-correct');
+        if (opts[i][0] === q.correct_option) b.classList.add('is-correct');
         else if (b === btn) b.classList.add('is-wrong');
       });
-      if (word.question_explanation) {
-        questionExplanationEl.textContent = word.question_explanation;
-        questionExplanationEl.style.display = '';
+      if (q.explanation) {
+        const expEl = document.createElement('div');
+        expEl.className = 'question-explanation';
+        expEl.textContent = q.explanation;
+        body.appendChild(expEl);
       }
     });
-    questionOptionsEl.appendChild(btn);
+    optionsEl.appendChild(btn);
+  });
+  body.appendChild(optionsEl);
+
+  header.addEventListener('click', () => {
+    const isOpen = !body.hidden;
+    body.hidden = isOpen;
+    header.classList.toggle('is-open', !isOpen);
   });
 
-  questionPanelEl.style.display = '';
+  item.appendChild(header);
+  item.appendChild(body);
+  return item;
+}
+
+function showQuestionsAccordion(questions) {
+  if (!questions || questions.length === 0) return;
+  questionsAccordionEl.innerHTML = '';
+
+  const heading = document.createElement('div');
+  heading.className = 'accordion-heading';
+  heading.textContent = `Sınav Soruları (${questions.length})`;
+  questionsAccordionEl.appendChild(heading);
+
+  questions.forEach((q, i) => questionsAccordionEl.appendChild(buildAccordionItem(q, i)));
+  questionsAccordionEl.style.display = '';
 }
 
 function renderCard() {
   const word = allWords[currentIndex];
   if (!word) return;
   flipCardEl.classList.remove('is-flipped');
-  resetQuestionPanel();
+  resetQuestions();
 
   wordEnglishEl.textContent = word.english;
   wordPronEl.textContent = word.pronunciation;
@@ -217,11 +252,9 @@ async function answer(knewIt) {
     word.times_correct = result.timesCorrect;
     word.times_wrong = result.timesWrong;
     await loadSummary();
-    if (knewIt && word.question_id) {
-      // Sorusu olan bir kelime öğrenildiyse, bir sonraki karta geçmeden önce
-      // soruyu hâlâ aynı kartın yanında göster.
+    if (knewIt && word.questions && word.questions.length > 0) {
       renderCard();
-      showQuestionForWord(word);
+      showQuestionsAccordion(word.questions);
     } else {
       if (currentIndex < allWords.length - 1) {
         currentIndex += 1;

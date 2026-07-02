@@ -262,23 +262,69 @@
   width: 100%;
 }
 
-.question-panel {
-  flex: 0 0 320px;
-  border-radius: 16px;
-  background: var(--paper-raised);
+.questions-accordion {
+  width: 100%;
+  max-width: 640px;
+  margin-top: 28px;
   border: 1px solid var(--rule);
-  box-shadow: 0 8px 24px rgba(43,38,32,0.08);
-  padding: 22px 20px;
-  display: flex;
-  flex-direction: column;
+  border-radius: 14px;
+  overflow: hidden;
 }
-.question-eyebrow {
+.accordion-heading {
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--muted);
-  margin-bottom: 10px;
+  padding: 12px 18px;
+  background: var(--paper-raised);
+  border-bottom: 1px solid var(--rule);
+}
+.accordion-item {
+  border-bottom: 1px solid var(--rule);
+}
+.accordion-item:last-child {
+  border-bottom: none;
+}
+.accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  background: var(--paper-raised);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.12s ease;
+}
+.accordion-header:hover {
+  background: rgba(74,107,90,0.06);
+}
+.accordion-num {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.accordion-source {
+  font-size: 12px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  flex: 1;
+}
+.accordion-arrow {
+  font-size: 16px;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+.accordion-header.is-open .accordion-arrow {
+  transform: rotate(90deg);
+}
+.accordion-body {
+  padding: 18px 18px 20px;
+  background: var(--paper);
+  border-top: 1px solid var(--rule);
 }
 .question-text {
   font-size: 15px;
@@ -550,7 +596,7 @@
 
 @media (max-width: 700px) {
   .study-row { flex-direction: column; }
-  .question-panel { flex: none; width: 100%; }
+  .questions-accordion { max-width: 100%; }
 }
 
 /* === Quiz modu === */

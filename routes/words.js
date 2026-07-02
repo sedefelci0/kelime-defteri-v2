@@ -31,47 +31,55 @@ router.get('/', requireAuth, async (req, res) => {
     params.push(deckSlug);
     const deckSlugParamIndex = params.length;
 
-    // Bir kelimenin "sorusu" diye sabit bir kaydı yok: genel soru havuzunda (exam_questions)
-    // kelimenin metni soru kökünde ya da şıklardan birinde geçiyorsa otomatik eşleşir.
-    // Noktalama farklarından etkilenmemek için her iki taraf da harf-dışı karakterlerden
-    // arındırılıp kelime sınırlarıyla karşılaştırılıyor. "Help", "Time", "Day" gibi yaygın
-    // kelimeler onlarca alakasız soruda geçtiği için: bir kelime havuzda 2'den fazla soruyla
-    // eşleşiyorsa (belirsiz/yaygın kelime demektir) hiç soru gösterilmez; sadece az sayıda
-    // (1-2) soruyla eşleşen, gerçekten o kelimeye özgü eşleşmelerde soru gösterilir.
-    // restrict_deck_slug doluysa (örn. YDS/YÖKDİL soruları), o soru SADECE o destede eşleşir.
+    // Her kelime için eşleşen TÜM sınavı sorularını JSON dizisi olarak döner.
+    // restrict_deck_slug IS NULL → kısıtsız (tüm desteler görebilir, örn. LGS soruları).
+    // restrict_deck_slug = deck slug → sadece o deste.
+    // yokdil destesi için benim-kelimelerim'e kısıtlı YDS/YÖKDİL soruları da dahil edilir;
+    // bu iki deste aynı seviyedir ve kelime eşleşmesi zaten alakasız soruları ezer.
     const { rows } = await pool.query(
       `SELECT w.id, w.english, w.pronunciation, w.turkish_meaning,
               w.english_explanation, w.example_sentence, w.unit,
               COALESCE(up.status, 'new') AS status,
               up.times_correct, up.times_wrong,
-              q.id AS question_id, q.question_text, q.option_a, q.option_b, q.option_c, q.option_d, q.option_e,
-              q.correct_option, q.explanation AS question_explanation, q.source AS question_source
+              COALESCE(
+                (SELECT json_agg(
+                   json_build_object(
+                     'id', eq.id,
+                     'question_text', eq.question_text,
+                     'option_a', eq.option_a,
+                     'option_b', eq.option_b,
+                     'option_c', eq.option_c,
+                     'option_d', eq.option_d,
+                     'option_e', eq.option_e,
+                     'correct_option', eq.correct_option,
+                     'explanation', eq.explanation,
+                     'source', eq.source
+                   ) ORDER BY eq.created_at DESC
+                 )
+                 FROM exam_questions eq
+                 WHERE (
+                   eq.restrict_deck_slug IS NULL
+                   OR eq.restrict_deck_slug = $${deckSlugParamIndex}
+                   OR ($${deckSlugParamIndex} = 'yokdil' AND eq.restrict_deck_slug = 'benim-kelimelerim')
+                 )
+                 AND (
+                   (' ' || regexp_replace(lower(eq.question_text), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                           LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+                      OR (' ' || regexp_replace(lower(eq.option_a), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                           LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+                      OR (' ' || regexp_replace(lower(eq.option_b), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                           LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+                      OR (' ' || regexp_replace(lower(eq.option_c), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                           LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+                      OR (' ' || regexp_replace(lower(eq.option_d), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                           LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+                      OR (' ' || regexp_replace(lower(COALESCE(eq.option_e, '')), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
+                           LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
+                 )
+                ), '[]'::json
+              ) AS questions
        FROM words w
        LEFT JOIN user_progress up ON up.word_id = w.id AND up.user_id = $${userIdParamIndex}
-       LEFT JOIN LATERAL (
-         SELECT ranked.* FROM (
-           SELECT eq.*, COUNT(*) OVER() AS match_count
-           FROM exam_questions eq
-           WHERE (eq.restrict_deck_slug IS NULL OR eq.restrict_deck_slug = $${deckSlugParamIndex})
-             AND (
-               (' ' || regexp_replace(lower(eq.question_text), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
-                       LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
-                  OR (' ' || regexp_replace(lower(eq.option_a), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
-                       LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
-                  OR (' ' || regexp_replace(lower(eq.option_b), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
-                       LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
-                  OR (' ' || regexp_replace(lower(eq.option_c), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
-                       LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
-                  OR (' ' || regexp_replace(lower(eq.option_d), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
-                       LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
-                  OR (' ' || regexp_replace(lower(COALESCE(eq.option_e, '')), '[^a-zçğıöşü]+', ' ', 'g') || ' ')
-                       LIKE ('% ' || regexp_replace(lower(w.english), '[^a-zçğıöşü]+', ' ', 'g') || ' %')
-             )
-         ) ranked
-         WHERE ranked.match_count <= 2
-         ORDER BY ranked.created_at DESC
-         LIMIT 1
-       ) q ON true
        WHERE w.deck_id = $1 ${unitFilter}
        ORDER BY w.id ASC`,
       params
