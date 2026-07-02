@@ -115,7 +115,7 @@ router.get('/me', async (req, res) => {
     return res.status(401).json({ error: 'Giriş yapılmamış.' });
   }
   const result = await pool.query(
-    'SELECT id, email, display_name, class_name, total_study_seconds, is_teacher FROM users WHERE id = $1',
+    'SELECT id, email, display_name, class_name, total_study_seconds, is_teacher, created_at FROM users WHERE id = $1',
     [req.session.userId]
   );
   const user = result.rows[0];
@@ -127,6 +127,7 @@ router.get('/me', async (req, res) => {
     className: user.class_name,
     totalStudySeconds: user.total_study_seconds,
     isOwner: user.is_teacher === true,
+    createdAt: user.created_at,
   });
 });
 

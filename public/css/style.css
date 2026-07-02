@@ -1,20 +1,30 @@
 /* ===== Temel ===== */
 :root {
-  --ink: #2b2620;
-  --paper: #faf6ee;
+  --ink: #1a1a2e;
+  --paper: #F7F5F0;
   --paper-raised: #ffffff;
-  --rule: #ded3bd;
+  --rule: #e2ddd6;
   --moss: #4a6b5a;
   --moss-deep: #324b3e;
   --clay: #b5563a;
   --clay-deep: #8f3f28;
   --gold: #c79a3f;
-  --muted: #8a7f6d;
+  --muted: #6b6b80;
   --danger: #b5563a;
-  --shadow: 0 1px 0 rgba(43,38,32,0.06);
+  --shadow: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
   --font-display: 'Source Serif 4', 'Iowan Old Style', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
+  /* Deck renk temaları */
+  --deck-purple: #EEEDFE;
+  --deck-purple-accent: #7C6CE0;
+  --deck-green: #E1F5EE;
+  --deck-green-accent: #2D9B6F;
+  --deck-orange: #FAECE7;
+  --deck-orange-accent: #D96B38;
+  --deck-yellow: #FEF3DC;
+  --deck-yellow-accent: #C99010;
 }
 
 * { box-sizing: border-box; }
@@ -29,9 +39,6 @@ html, body {
 }
 
 body {
-  background-image:
-    radial-gradient(circle at 1px 1px, rgba(43,38,32,0.035) 1px, transparent 0);
-  background-size: 22px 22px;
   min-height: 100vh;
 }
 

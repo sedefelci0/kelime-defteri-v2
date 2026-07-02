@@ -66,6 +66,105 @@ router.post('/heartbeat', requireAuth, async (req, res) => {
   }
 });
 
+// Profil sayfası: genel istatistikler + deste bazında ilerleme
+router.get('/profile', requireAuth, async (req, res) => {
+  try {
+    const statsResult = await pool.query(
+      `SELECT
+         COALESCE(SUM(CASE WHEN up.status = 'known' THEN 1 ELSE 0 END), 0)::int AS known,
+         COALESCE(SUM(CASE WHEN up.status = 'learning' THEN 1 ELSE 0 END), 0)::int AS learning,
+         COALESCE(SUM(up.times_wrong), 0)::int AS total_wrong,
+         COALESCE(SUM(up.times_correct), 0)::int AS total_correct,
+         COUNT(CASE WHEN up.times_wrong > 0 THEN 1 END)::int AS words_with_wrong
+       FROM user_progress up
+       WHERE up.user_id = $1`,
+      [req.session.userId]
+    );
+    const s = statsResult.rows[0];
+    const totalAns = s.total_correct + s.total_wrong;
+    const successRate = totalAns > 0 ? Math.round((s.total_correct / totalAns) * 100) : 0;
+
+    const deckResult = await pool.query(
+      `SELECT d.slug, d.title,
+              COUNT(w.id)::int AS total,
+              COALESCE(SUM(CASE WHEN up.status = 'known' THEN 1 ELSE 0 END), 0)::int AS known
+       FROM decks d
+       JOIN words w ON w.deck_id = d.id
+       LEFT JOIN user_progress up ON up.word_id = w.id AND up.user_id = $1
+       GROUP BY d.id, d.slug, d.title, d.sort_order
+       ORDER BY d.sort_order ASC`,
+      [req.session.userId]
+    );
+
+    const decks = deckResult.rows.map(r => ({
+      slug: r.slug,
+      title: r.title,
+      total: r.total,
+      known: r.known,
+      pct: r.total > 0 ? Math.round((r.known / r.total) * 100) : 0,
+    }));
+
+    res.json({
+      stats: {
+        known: s.known,
+        learning: s.learning,
+        wrong: s.words_with_wrong,
+        successRate,
+      },
+      decks,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Profil yüklenirken hata oluştu.' });
+  }
+});
+
+// Profil sekmesi için kelime listeleri: ?status=wrong|learning|known
+router.get('/words', requireAuth, async (req, res) => {
+  try {
+    const { status } = req.query;
+    let condition;
+    if (status === 'wrong') condition = 'up.times_wrong > 0';
+    else if (status === 'learning') condition = "up.status = 'learning'";
+    else if (status === 'known') condition = "up.status = 'known'";
+    else return res.status(400).json({ error: 'Geçersiz status parametresi.' });
+
+    const { rows } = await pool.query(
+      `SELECT w.english, w.turkish_meaning, up.times_wrong, up.times_correct, up.status, d.title AS deck_title
+       FROM user_progress up
+       JOIN words w ON w.id = up.word_id
+       JOIN decks d ON d.id = w.deck_id
+       WHERE up.user_id = $1 AND ${condition}
+       ORDER BY up.times_wrong DESC NULLS LAST, w.english ASC
+       LIMIT 300`,
+      [req.session.userId]
+    );
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Kelimeler yüklenirken hata oluştu.' });
+  }
+});
+
+// Aktivite ısı haritası: son 90 günlük günlük çalışma sayısı
+router.get('/activity', requireAuth, async (req, res) => {
+  try {
+    const { rows } = await pool.query(
+      `SELECT DATE(last_reviewed_at AT TIME ZONE 'Europe/Istanbul') AS date,
+              COUNT(*)::int AS count
+       FROM user_progress
+       WHERE user_id = $1 AND last_reviewed_at >= now() - interval '90 days'
+       GROUP BY DATE(last_reviewed_at AT TIME ZONE 'Europe/Istanbul')
+       ORDER BY date ASC`,
+      [req.session.userId]
+    );
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Aktivite yüklenirken hata oluştu.' });
+  }
+});
+
 // Bir kelimeyi "biliyorum" veya "tekrar göster" olarak işaretle
 router.post('/:wordId', requireAuth, async (req, res) => {
   try {

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kelime Defteri — Profilim</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/profil.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a href="/decks.html" class="navbar-home-link">
+      <span class="navbar-icon">📚</span>
+      <span class="navbar-title">Kelime Defteri</span>
+    </a>
+  </div>
+  <div class="navbar-actions">
+    <button class="navbar-link" id="notes-btn" type="button">Notlarım</button>
+    <button class="navbar-link navbar-logout" id="logout-btn" type="button">Çıkış yap</button>
+  </div>
+</nav>
+
+<main class="profil-page">
+  <div id="loading" class="loading-state">Yükleniyor…</div>
+
+  <div id="profil-content" class="profil-layout" style="display:none;">
+
+    <!-- Sidebar -->
+    <aside class="profil-sidebar">
+      <div class="avatar-section">
+        <div class="avatar-circle" id="avatar-circle"></div>
+        <div class="avatar-name" id="avatar-name"></div>
+        <div class="avatar-meta" id="avatar-meta"></div>
+      </div>
+
+      <div class="stat-boxes">
+        <div class="stat-box stat-box--green">
+          <div class="stat-value" id="stat-known">—</div>
+          <div class="stat-label">Öğrenilen</div>
+        </div>
+        <div class="stat-box stat-box--yellow">
+          <div class="stat-value" id="stat-learning">—</div>
+          <div class="stat-label">Tekrar lazım</div>
+        </div>
+        <div class="stat-box stat-box--red">
+          <div class="stat-value" id="stat-wrong">—</div>
+          <div class="stat-label">Yanlış</div>
+        </div>
+        <div class="stat-box stat-box--purple">
+          <div class="stat-value" id="stat-success">—</div>
+          <div class="stat-label">Başarı oranı</div>
+        </div>
+      </div>
+
+      <div class="deck-progress-section">
+        <div class="sidebar-section-title">Set İlerlemesi</div>
+        <div id="deck-progress-list" class="deck-progress-list"></div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <section class="profil-main">
+      <div class="tabs" role="tablist">
+        <button class="tab-btn tab-btn--active" id="tab-wrong"    role="tab" data-status="wrong">Yanlışlarım</button>
+        <button class="tab-btn"                  id="tab-learning" role="tab" data-status="learning">Tekrar Lazım</button>
+        <button class="tab-btn"                  id="tab-known"    role="tab" data-status="known">Öğrendiklerim</button>
+        <button class="tab-btn"                  id="tab-activity" role="tab" data-status="activity">Aktivite</button>
+      </div>
+
+      <div id="tab-panel-words" class="tab-panel">
+        <div id="words-loading" class="tab-loading">Yükleniyor…</div>
+        <div id="words-empty"  class="tab-empty" style="display:none;">Henüz kelime yok.</div>
+        <table id="words-table" class="words-table" style="display:none;">
+          <thead>
+            <tr>
+              <th>İngilizce</th>
+              <th>Türkçe</th>
+              <th>Set</th>
+              <th>Yanlış</th>
+              <th>Durum</th>
+            </tr>
+          </thead>
+          <tbody id="words-tbody"></tbody>
+        </table>
+      </div>
+
+      <div id="tab-panel-activity" class="tab-panel" style="display:none;">
+        <div class="heatmap-header">
+          <span class="heatmap-title">Son 3 ay</span>
+          <span class="heatmap-legend">
+            <span>Az</span>
+            <span class="heatmap-swatch heatmap-swatch--0"></span>
+            <span class="heatmap-swatch heatmap-swatch--1"></span>
+            <span class="heatmap-swatch heatmap-swatch--2"></span>
+            <span class="heatmap-swatch heatmap-swatch--3"></span>
+            <span class="heatmap-swatch heatmap-swatch--4"></span>
+            <span>Çok</span>
+          </span>
+        </div>
+        <div class="heatmap-wrapper">
+          <div class="heatmap-day-labels">
+            <span></span>
+            <span>Pzt</span>
+            <span></span>
+            <span>Çar</span>
+            <span></span>
+            <span>Cum</span>
+            <span></span>
+          </div>
+          <div id="heatmap-container" class="heatmap-container"></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<script src="/js/profil.js"></script>
+</body>
+</html>
