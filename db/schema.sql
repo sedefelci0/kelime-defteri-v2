@@ -40,6 +40,7 @@ ALTER TABLE words ADD COLUMN IF NOT EXISTS unit INTEGER;
 ALTER TABLE words ADD COLUMN IF NOT EXISTS image_url TEXT;
 ALTER TABLE words ADD COLUMN IF NOT EXISTS part_of_speech TEXT;
 ALTER TABLE words ALTER COLUMN english_explanation DROP NOT NULL;
+ALTER TABLE words ALTER COLUMN pronunciation DROP NOT NULL;
 
 CREATE INDEX IF NOT EXISTS idx_words_deck ON words(deck_id, unit);
 
