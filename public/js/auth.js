@@ -39,9 +39,14 @@ tabSignup.addEventListener('click', showSignup);
 document.getElementById('goto-signup').addEventListener('click', showSignup);
 document.getElementById('goto-login').addEventListener('click', showLogin);
 
-// Sınıf listesini doldur (5-A ... 8-F)
+// Sınıf listesini doldur — YÖKDİL, 5-A...8-F
 const classSelect = document.getElementById('signup-class');
 (function fillClasses() {
+  const yokdil = document.createElement('option');
+  yokdil.value = 'YOKDIL';
+  yokdil.textContent = 'YÖKDİL';
+  classSelect.appendChild(yokdil);
+
   const grades = [5, 6, 7, 8];
   const sections = ['A', 'B', 'C', 'D', 'E', 'F'];
   for (const g of grades) {
@@ -94,8 +99,8 @@ loginForm.addEventListener('submit', async (e) => {
   const submitBtn = loginForm.querySelector('button[type="submit"]');
   submitBtn.disabled = true;
   try {
-    await postJSON('/api/auth/login', { email, password });
-    window.location.href = '/decks.html';
+    const data = await postJSON('/api/auth/login', { email, password });
+    window.location.href = data.isTeacher ? '/admin.html' : '/decks.html';
   } catch (err) {
     showError(err.message);
   } finally {
@@ -124,8 +129,8 @@ signupForm.addEventListener('submit', async (e) => {
 
   submitBtn.disabled = true;
   try {
-    await postJSON('/api/auth/signup', body);
-    window.location.href = '/decks.html';
+    const data = await postJSON('/api/auth/signup', body);
+    window.location.href = data.isTeacher ? '/admin.html' : '/decks.html';
   } catch (err) {
     showError(err.message);
   } finally {
@@ -133,10 +138,13 @@ signupForm.addEventListener('submit', async (e) => {
   }
 });
 
-// Zaten giriş yapılmışsa direkt deste seçim ekranına yönlendir
+// Zaten giriş yapılmışsa rol bazlı yönlendir
 (async () => {
   try {
     const res = await fetch('/api/auth/me', { credentials: 'same-origin' });
-    if (res.ok) window.location.href = '/decks.html';
+    if (res.ok) {
+      const me = await res.json();
+      window.location.href = me.isOwner ? '/admin.html' : '/decks.html';
+    }
   } catch (_) {}
 })();

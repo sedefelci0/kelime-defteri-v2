@@ -8,7 +8,7 @@
 const GRADES = [5, 6, 7, 8];
 const SECTIONS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
-const STUDENT_CLASSES = [];
+const STUDENT_CLASSES = ['YOKDIL'];
 for (const grade of GRADES) {
   for (const section of SECTIONS) {
     STUDENT_CLASSES.push(`${grade}-${section}`);

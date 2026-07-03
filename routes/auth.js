@@ -11,6 +11,11 @@ pool
   .then(() => console.log('[db] is_teacher kolonu hazır.'))
   .catch((e) => console.error('[db] is_teacher kolonu eklenemedi:', e.message));
 
+pool
+  .query(`UPDATE words SET english = 'Abolition' WHERE lower(english) = 'ablolition'`)
+  .then(() => console.log('[db] abolition typo migration done.'))
+  .catch((e) => console.error('[db] abolition migration error:', e.message));
+
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -99,7 +104,7 @@ router.post('/login', async (req, res) => {
 
     req.session.userId = user.id;
     req.session.ownerUnlocked = user.is_teacher === true;
-    res.json({ id: user.id, email: user.email, displayName: user.display_name });
+    res.json({ id: user.id, email: user.email, displayName: user.display_name, isTeacher: user.is_teacher === true });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Giriş sırasında bir hata oluştu.' });
