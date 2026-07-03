@@ -178,6 +178,19 @@ function showQuestionsAccordion(questions) {
   questionsAccordionEl.appendChild(heading);
 
   questions.forEach((q, i) => questionsAccordionEl.appendChild(buildAccordionItem(q, i)));
+
+  const nextBtn = document.createElement('button');
+  nextBtn.className = 'accordion-next-btn';
+  nextBtn.type = 'button';
+  nextBtn.textContent = 'Sonraki kelime →';
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < allWords.length - 1) {
+      currentIndex += 1;
+    }
+    renderCard();
+  });
+  questionsAccordionEl.appendChild(nextBtn);
+
   questionsAccordionEl.style.display = '';
 }
 

@@ -286,6 +286,21 @@
 .accordion-item:last-child {
   border-bottom: none;
 }
+.accordion-next-btn {
+  display: block;
+  width: 100%;
+  padding: 13px 18px;
+  background: var(--moss-deep);
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  text-align: right;
+  transition: background 0.12s;
+}
+.accordion-next-btn:hover { background: var(--moss); }
 .accordion-header {
   width: 100%;
   display: flex;
