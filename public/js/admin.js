@@ -215,23 +215,100 @@ document.getElementById('logout-btn').addEventListener('click', async () => {
 // --- Sekmeler ---
 const tabBtnStudents = document.getElementById('tab-btn-students');
 const tabBtnQuestions = document.getElementById('tab-btn-questions');
-const tabStudents = document.getElementById('tab-students');
-const tabQuestions = document.getElementById('tab-questions');
+const tabBtnRequests  = document.getElementById('tab-btn-requests');
+const tabStudents     = document.getElementById('tab-students');
+const tabQuestions    = document.getElementById('tab-questions');
+const tabRequests     = document.getElementById('tab-requests');
 
 function activateTab(name) {
-  const isStudents = name === 'students';
-  tabBtnStudents.classList.toggle('is-active', isStudents);
-  tabBtnQuestions.classList.toggle('is-active', !isStudents);
-  tabStudents.style.display = isStudents ? '' : 'none';
-  tabQuestions.style.display = isStudents ? 'none' : '';
-  if (!isStudents && !questionsLoaded) {
+  tabBtnStudents.classList.toggle('is-active', name === 'students');
+  tabBtnQuestions.classList.toggle('is-active', name === 'questions');
+  tabBtnRequests.classList.toggle('is-active', name === 'requests');
+  tabStudents.style.display  = name === 'students'  ? '' : 'none';
+  tabQuestions.style.display = name === 'questions' ? '' : 'none';
+  tabRequests.style.display  = name === 'requests'  ? '' : 'none';
+  if (name === 'questions' && !questionsLoaded) {
     loadDecksForRestrictOptions();
     loadAllQuestions();
   }
+  if (name === 'requests') loadWordRequests();
 }
 
 tabBtnStudents.addEventListener('click', () => activateTab('students'));
 tabBtnQuestions.addEventListener('click', () => activateTab('questions'));
+tabBtnRequests.addEventListener('click',  () => activateTab('requests'));
+
+// --- Kelime Talepleri sekmesi ---
+const requestsListEl = document.getElementById('requests-list');
+const requestsEmptyEl = document.getElementById('requests-empty-hint');
+const requestsBadgeEl = document.getElementById('requests-badge');
+let wordRequestsCache = [];
+
+async function loadWordRequests() {
+  try {
+    wordRequestsCache = await getJSON('/api/admin/word-requests');
+    renderWordRequests();
+  } catch (err) {
+    // sessizce geç
+  }
+}
+
+function updateRequestsBadge() {
+  if (wordRequestsCache.length > 0) {
+    requestsBadgeEl.textContent = wordRequestsCache.length;
+    requestsBadgeEl.style.display = '';
+  } else {
+    requestsBadgeEl.style.display = 'none';
+  }
+}
+
+function renderWordRequests() {
+  updateRequestsBadge();
+  requestsListEl.innerHTML = '';
+  if (wordRequestsCache.length === 0) {
+    requestsEmptyEl.style.display = '';
+    return;
+  }
+  requestsEmptyEl.style.display = 'none';
+  wordRequestsCache.forEach((r) => {
+    const item = document.createElement('div');
+    item.className = 'request-item';
+    item.innerHTML = `
+      <div>
+        <div class="request-word">${r.word}</div>
+        <div class="request-meta">${r.userName || 'Bilinmeyen'} · ${r.className || '—'} · ${formatDate(r.requestedAt)}</div>
+      </div>
+      <div class="request-actions">
+        <button class="req-approve-btn" type="button">Onayla</button>
+        <button class="req-reject-btn" type="button">Reddet</button>
+      </div>
+    `;
+    item.querySelector('.req-approve-btn').addEventListener('click', () => approveRequest(r.id));
+    item.querySelector('.req-reject-btn').addEventListener('click', () => rejectRequest(r.id));
+    requestsListEl.appendChild(item);
+  });
+}
+
+async function approveRequest(id) {
+  try {
+    await sendJSON(`/api/admin/word-requests/${id}/approve`, 'POST');
+    wordRequestsCache = wordRequestsCache.filter((r) => r.id !== id);
+    renderWordRequests();
+  } catch (err) {
+    alert(err.message || 'Onaylanırken hata oluştu.');
+  }
+}
+
+async function rejectRequest(id) {
+  if (!confirm('Bu talebi reddet ve sil?')) return;
+  try {
+    await sendJSON(`/api/admin/word-requests/${id}/reject`, 'POST');
+    wordRequestsCache = wordRequestsCache.filter((r) => r.id !== id);
+    renderWordRequests();
+  } catch (err) {
+    alert(err.message || 'Reddedilirken hata oluştu.');
+  }
+}
 
 // --- Soru Ekle sekmesi (genel soru havuzu, kelimeye bağlı değil) ---
 const qQuestionText = document.getElementById('q-question-text');
@@ -424,6 +501,8 @@ async function deleteQuestion(q) {
     showOnly(adminContentEl);
     await loadClassFilterOptions();
     await loadStudents();
+    // Badge için bekleyen talep sayısını arka planda çek
+    loadWordRequests();
   } catch (err) {
     // getJSON zaten yönlendirdi/no-access gösterdi
   }

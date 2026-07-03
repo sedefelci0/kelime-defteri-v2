@@ -726,3 +726,127 @@
   .quiz-prompt { font-size: 26px; }
   .quiz-done-buttons { flex-direction: column; }
 }
+
+/* === Kutlama toast === */
+.celebration-toast {
+  position: fixed;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.75);
+  background: #fff;
+  border-radius: 22px;
+  padding: 18px 36px;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.16), 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  white-space: nowrap;
+}
+.celebration-toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* === Kelime arama === */
+.word-search {
+  position: relative;
+}
+.word-search-input {
+  height: 34px;
+  padding: 0 12px;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  font-size: 13px;
+  width: 140px;
+  background: var(--paper-raised);
+  color: var(--ink);
+  transition: width 0.2s ease, border-color 0.15s;
+  outline: none;
+  font-family: var(--font-body);
+}
+.word-search-input:focus {
+  width: 200px;
+  border-color: var(--moss-deep);
+}
+.word-search-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  width: 290px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.13);
+  z-index: 500;
+  overflow: hidden;
+}
+.word-search-list {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+}
+.word-search-list li {
+  padding: 9px 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.word-search-list li:hover,
+.word-search-list li.is-active {
+  background: rgba(74,107,90,0.07);
+}
+.srch-en {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.srch-tr {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 130px;
+  text-align: right;
+}
+.word-search-empty {
+  padding: 16px;
+  text-align: center;
+}
+.word-search-empty p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+.word-search-request-btn {
+  padding: 8px 14px;
+  background: rgba(45,155,111,0.1);
+  color: var(--moss-deep);
+  border: 1px solid rgba(45,155,111,0.3);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background 0.12s;
+}
+.word-search-request-btn:hover:not(:disabled) {
+  background: rgba(45,155,111,0.18);
+}
+.word-search-request-btn:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+@media (max-width: 700px) {
+  .word-search-input { width: 110px; }
+  .word-search-input:focus { width: 150px; }
+  .word-search-dropdown { width: 260px; }
+}

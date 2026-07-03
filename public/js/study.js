@@ -32,6 +32,12 @@ const wordExampleEl = document.getElementById('word-example');
 
 const questionsAccordionEl = document.getElementById('questions-accordion');
 
+const searchInputEl = document.getElementById('search-input');
+const searchDropdownEl = document.getElementById('search-dropdown');
+const searchSuggestionsEl = document.getElementById('search-suggestions');
+const searchNoResultEl = document.getElementById('search-no-result');
+const searchRequestBtnEl = document.getElementById('search-request-btn');
+
 const btnAgain = document.getElementById('btn-again');
 const btnKnow = document.getElementById('btn-know');
 const navFirst = document.getElementById('nav-first');
@@ -101,6 +107,23 @@ async function loadSummary() {
   text.textContent = `${summary.known}/${summary.total} öğrenildi`;
 }
 
+const CELEBRATE_MSGS = [
+  'Harika! 🎉', '🌟 Mükemmel!', '🔥 Süpersin!',
+  '💯 Doğru cevap!', '👏 Bravo!', '⚡ İnanılmaz!',
+];
+
+function showCelebration() {
+  const el = document.createElement('div');
+  el.className = 'celebration-toast';
+  el.textContent = CELEBRATE_MSGS[Math.floor(Math.random() * CELEBRATE_MSGS.length)];
+  document.body.appendChild(el);
+  requestAnimationFrame(() => el.classList.add('is-visible'));
+  setTimeout(() => {
+    el.classList.remove('is-visible');
+    el.addEventListener('transitionend', () => el.remove(), { once: true });
+  }, 1500);
+}
+
 function resetQuestions() {
   questionsAccordionEl.style.display = 'none';
   questionsAccordionEl.innerHTML = '';
@@ -152,6 +175,7 @@ function buildAccordionItem(q, index) {
         expEl.textContent = q.explanation;
         body.appendChild(expEl);
       }
+      if (letter === q.correct_option) showCelebration();
       postJSON('/api/progress/exam-answer', { isCorrect: letter === q.correct_option }).catch(() => {});
     });
     optionsEl.appendChild(btn);
@@ -525,7 +549,7 @@ async function handleQuizAnswer(word, chosen, correctAnswer, chosenBtn) {
   allButtons.forEach((b) => { b.disabled = true; });
 
   const isCorrect = chosen === correctAnswer;
-  if (isCorrect) quizCorrectCount += 1; else quizWrongCount += 1;
+  if (isCorrect) { quizCorrectCount += 1; showCelebration(); } else quizWrongCount += 1;
 
   allButtons.forEach((b) => {
     if (b.textContent === correctAnswer) {
@@ -609,6 +633,104 @@ window.addEventListener('beforeunload', () => {
       '/api/progress/heartbeat',
       new Blob([JSON.stringify({ seconds: sessionSeconds })], { type: 'application/json' })
     );
+  }
+});
+
+// --- Kelime arama ---
+let searchDebounce = null;
+let activeSearchIdx = -1;
+
+function performSearch(raw) {
+  const q = raw.trim().toLowerCase();
+  searchSuggestionsEl.innerHTML = '';
+  searchNoResultEl.hidden = true;
+  activeSearchIdx = -1;
+
+  if (!q) { searchDropdownEl.hidden = true; return; }
+
+  const hits = allWords
+    .filter((w) =>
+      w.english.toLowerCase().includes(q) ||
+      w.turkish_meaning.toLowerCase().includes(q)
+    )
+    .slice(0, 8);
+
+  if (hits.length > 0) {
+    hits.forEach((w) => {
+      const li = document.createElement('li');
+      li.dataset.wordIdx = String(allWords.indexOf(w));
+      li.innerHTML = `<span class="srch-en">${w.english}</span><span class="srch-tr">${w.turkish_meaning}</span>`;
+      li.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        selectWord(Number(li.dataset.wordIdx));
+      });
+      searchSuggestionsEl.appendChild(li);
+    });
+  } else {
+    searchNoResultEl.hidden = false;
+    searchRequestBtnEl.textContent = '➕ Eklenmesini talep et';
+    searchRequestBtnEl.disabled = false;
+    searchRequestBtnEl.dataset.word = raw.trim();
+  }
+  searchDropdownEl.hidden = false;
+}
+
+function selectWord(idx) {
+  if (quizActive) {
+    quizActive = false;
+    quizToggleBtn.textContent = 'Quiz modu';
+  }
+  currentIndex = idx;
+  renderCard();
+  searchInputEl.value = '';
+  searchDropdownEl.hidden = true;
+}
+
+searchInputEl.addEventListener('input', () => {
+  clearTimeout(searchDebounce);
+  searchDebounce = setTimeout(() => performSearch(searchInputEl.value), 300);
+});
+
+searchInputEl.addEventListener('keydown', (e) => {
+  const items = Array.from(searchSuggestionsEl.querySelectorAll('li'));
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    activeSearchIdx = Math.min(activeSearchIdx + 1, items.length - 1);
+    items.forEach((li, i) => li.classList.toggle('is-active', i === activeSearchIdx));
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    activeSearchIdx = Math.max(activeSearchIdx - 1, -1);
+    items.forEach((li, i) => li.classList.toggle('is-active', i === activeSearchIdx));
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    if (activeSearchIdx >= 0 && items[activeSearchIdx]) {
+      selectWord(Number(items[activeSearchIdx].dataset.wordIdx));
+    }
+  } else if (e.key === 'Escape') {
+    searchDropdownEl.hidden = true;
+    searchInputEl.blur();
+  }
+});
+
+searchInputEl.addEventListener('focus', () => {
+  if (searchInputEl.value.trim()) performSearch(searchInputEl.value);
+});
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('#word-search')) searchDropdownEl.hidden = true;
+});
+
+searchRequestBtnEl.addEventListener('click', async () => {
+  const word = searchRequestBtnEl.dataset.word;
+  if (!word) return;
+  searchRequestBtnEl.disabled = true;
+  searchRequestBtnEl.textContent = 'Gönderiliyor…';
+  try {
+    const res = await postJSON('/api/words/request', { word });
+    searchRequestBtnEl.textContent = res.duplicate ? '✓ Daha önce talep edildi.' : '✓ Talebiniz alındı!';
+  } catch {
+    searchRequestBtnEl.textContent = 'Hata oluştu, tekrar dene.';
+    searchRequestBtnEl.disabled = false;
   }
 });
 

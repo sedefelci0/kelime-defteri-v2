@@ -4,6 +4,19 @@ const { requireAuth } = require('../middleware/auth');
 
 const router = express.Router();
 
+// Kelime talebi tablosunu sunucu açılışında oluştur
+pool
+  .query(`CREATE TABLE IF NOT EXISTS word_requests (
+    id           SERIAL PRIMARY KEY,
+    word         TEXT NOT NULL,
+    requested_by INTEGER REFERENCES users(id) ON DELETE SET NULL,
+    requested_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    status       TEXT NOT NULL DEFAULT 'pending'
+                   CHECK (status IN ('pending','approved','rejected'))
+  )`)
+  .then(() => console.log('[db] word_requests hazır.'))
+  .catch((e) => console.error('[db] word_requests oluşturulamadı:', e.message));
+
 // Giriş yapmış kullanıcı için: belirtilen deste (ve varsa ünite) içindeki kelimeler + durum
 // Örnek: GET /api/words?deck=5-sinif&unit=1
 router.get('/', requireAuth, async (req, res) => {
@@ -96,6 +109,30 @@ router.get('/', requireAuth, async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Kelimeler yüklenirken hata oluştu.' });
+  }
+});
+
+// Veritabanında bulunmayan kelime için ekleme talebi gönder
+router.post('/request', requireAuth, async (req, res) => {
+  try {
+    const { word } = req.body || {};
+    if (!word || !word.trim()) return res.status(400).json({ error: 'Kelime zorunludur.' });
+
+    const { rows: dup } = await pool.query(
+      `SELECT id FROM word_requests
+       WHERE requested_by = $1 AND lower(word) = lower($2) AND status = 'pending'`,
+      [req.session.userId, word.trim()]
+    );
+    if (dup.length > 0) return res.json({ ok: true, duplicate: true });
+
+    await pool.query(
+      `INSERT INTO word_requests (word, requested_by) VALUES ($1, $2)`,
+      [word.trim(), req.session.userId]
+    );
+    res.json({ ok: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Talep kaydedilemedi.' });
   }
 });
 

@@ -15,6 +15,16 @@
     <div class="brand" id="deck-brand">Kelime Defteri</div>
     <div class="user-area">
       <span class="study-timer" id="study-timer" title="Toplam çalışma süren">⏱ 0 dk</span>
+      <div class="word-search" id="word-search">
+        <input type="text" id="search-input" class="word-search-input" placeholder="Kelime ara…" autocomplete="off" />
+        <div class="word-search-dropdown" id="search-dropdown" hidden>
+          <ul class="word-search-list" id="search-suggestions"></ul>
+          <div class="word-search-empty" id="search-no-result" hidden>
+            <p>Bu kelime veritabanımızda henüz bulunmuyor.</p>
+            <button type="button" id="search-request-btn" class="word-search-request-btn">➕ Eklenmesini talep et</button>
+          </div>
+        </div>
+      </div>
       <span class="user-name" id="user-name"></span>
       <button class="btn btn-secondary" id="quiz-toggle-btn" type="button">Quiz modu</button>
       <button class="btn btn-secondary" id="notes-btn" type="button">Notlarım</button>

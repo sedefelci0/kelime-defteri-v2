@@ -185,6 +185,64 @@ router.put('/questions/:id', requireAuth, requireOwner, async (req, res) => {
   }
 });
 
+// --- Kelime talepleri ---
+
+router.get('/word-requests', requireAuth, requireOwner, async (req, res) => {
+  try {
+    const { rows } = await pool.query(
+      `SELECT wr.id, wr.word, wr.requested_at, wr.status,
+              u.display_name AS user_name, u.class_name
+       FROM word_requests wr
+       LEFT JOIN users u ON u.id = wr.requested_by
+       WHERE wr.status = 'pending'
+       ORDER BY wr.requested_at DESC`
+    );
+    res.json(rows.map((r) => ({
+      id: r.id,
+      word: r.word,
+      requestedAt: r.requested_at,
+      status: r.status,
+      userName: r.user_name,
+      className: r.class_name,
+    })));
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Talepler yüklenirken hata oluştu.' });
+  }
+});
+
+router.post('/word-requests/:id/approve', requireAuth, requireOwner, async (req, res) => {
+  try {
+    const id = Number(req.params.id);
+    if (!Number.isInteger(id)) return res.status(400).json({ error: 'Geçersiz id.' });
+    const { rowCount } = await pool.query(
+      `UPDATE word_requests SET status = 'approved' WHERE id = $1 AND status = 'pending'`,
+      [id]
+    );
+    if (rowCount === 0) return res.status(404).json({ error: 'Talep bulunamadı.' });
+    res.json({ ok: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Onaylanırken hata oluştu.' });
+  }
+});
+
+router.post('/word-requests/:id/reject', requireAuth, requireOwner, async (req, res) => {
+  try {
+    const id = Number(req.params.id);
+    if (!Number.isInteger(id)) return res.status(400).json({ error: 'Geçersiz id.' });
+    const { rowCount } = await pool.query(
+      `DELETE FROM word_requests WHERE id = $1`,
+      [id]
+    );
+    if (rowCount === 0) return res.status(404).json({ error: 'Talep bulunamadı.' });
+    res.json({ ok: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Reddedilirken hata oluştu.' });
+  }
+});
+
 router.delete('/questions/:id', requireAuth, requireOwner, async (req, res) => {
   try {
     const id = Number(req.params.id);
