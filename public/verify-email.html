@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kelime Defteri — E-posta Doğrulama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css" />
+<style>
+  body { display:flex; align-items:center; justify-content:center; min-height:100vh; background:var(--paper); }
+  .verify-card { max-width:400px; width:100%; padding:40px 32px; text-align:center; }
+  .verify-icon { font-size:56px; margin-bottom:16px; }
+  .verify-card h1 { font-size:22px; margin-bottom:10px; }
+  .verify-card p { color:var(--muted); font-size:15px; line-height:1.6; margin-bottom:24px; }
+  .verify-card a { color:var(--moss-deep); font-weight:600; text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="verify-card" id="verify-card">
+  <div class="verify-icon">⏳</div>
+  <h1>Doğrulanıyor…</h1>
+  <p>Lütfen bekle.</p>
+</div>
+<script>
+  const card = document.getElementById('verify-card');
+  const params = new URLSearchParams(location.search);
+  const error = params.get('error');
+
+  if (error) {
+    const msgs = {
+      missing: 'Doğrulama bağlantısı eksik.',
+      invalid: 'Bu bağlantı geçersiz veya süresi dolmuş.',
+      server: 'Sunucu hatası. Lütfen tekrar dene.',
+    };
+    card.innerHTML = `
+      <div class="verify-icon">❌</div>
+      <h1>Doğrulama başarısız</h1>
+      <p>${msgs[error] || 'Bir hata oluştu.'}</p>
+      <a href="/">Giriş sayfasına dön</a>
+    `;
+  } else {
+    const token = params.get('token');
+    if (!token) {
+      card.innerHTML = `
+        <div class="verify-icon">❌</div>
+        <h1>Bağlantı eksik</h1>
+        <p>Doğrulama tokeni bulunamadı.</p>
+        <a href="/">Giriş sayfasına dön</a>
+      `;
+    } else {
+      // Token varsa browser'ı API endpoint'ine yönlendir; sunucu redirect yapar
+      window.location.href = '/api/auth/verify-email?token=' + encodeURIComponent(token);
+    }
+  }
+</script>
+</body>
+</html>

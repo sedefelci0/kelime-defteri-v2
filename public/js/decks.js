@@ -55,6 +55,43 @@ async function openDeck(deck) {
   }
 }
 
+const MEDAL_ICONS = ['🥇', '🥈', '🥉'];
+
+function renderLeaderboard(data) {
+  const section = document.getElementById('leaderboard-section');
+  const gradesEl = document.getElementById('leaderboard-grades');
+  const grades = Object.keys(data).sort();
+  if (!grades.length) return;
+
+  gradesEl.innerHTML = grades.map((grade) => {
+    const students = data[grade];
+    if (!students.length) return '';
+    const rows = students.map((s, i) => `
+      <div class="lb-row lb-row--${i + 1}">
+        <span class="lb-medal">${MEDAL_ICONS[i]}</span>
+        <span class="lb-name">${s.displayName}</span>
+        <span class="lb-class">${s.className}</span>
+        <span class="lb-score">${s.correctCount.toLocaleString('tr-TR')} doğru</span>
+      </div>
+    `).join('');
+    return `
+      <div class="lb-grade-card">
+        <div class="lb-grade-title">${grade}. Sınıf</div>
+        ${rows}
+      </div>
+    `;
+  }).join('');
+
+  section.style.display = '';
+}
+
+async function loadLeaderboard() {
+  try {
+    const data = await getJSON('/api/progress/leaderboard');
+    renderLeaderboard(data);
+  } catch (_) {}
+}
+
 async function loadDecks() {
   showView('loading');
   const decks = await getJSON('/api/decks');
@@ -117,6 +154,7 @@ document.getElementById('admin-panel-btn').addEventListener('click', () => {
       document.getElementById('admin-panel-btn').style.display = '';
     }
     await loadDecks();
+    await loadLeaderboard();
   } catch (err) {
     // getJSON 401'de zaten yönlendiriyor
   }

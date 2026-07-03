@@ -85,7 +85,42 @@
             <input id="login-password" type="password" autocomplete="current-password" required />
           </div>
           <button class="btn btn-primary btn-block" type="submit">Giriş yap</button>
+          <div style="text-align:right;margin-top:10px;">
+            <button type="button" id="goto-forgot" style="background:none;border:none;color:var(--muted);font-size:13px;padding:0;cursor:pointer;">Şifremi unuttum</button>
+          </div>
         </form>
+
+        <form id="forgot-form" style="display:none;">
+          <h2>Şifremi unuttum</h2>
+          <span class="sub">E-postanı gir, sıfırlama bağlantısı gönderelim.</span>
+          <div class="field">
+            <label for="forgot-email">E-posta</label>
+            <input id="forgot-email" type="email" autocomplete="email" required />
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Bağlantı gönder</button>
+          <div class="switch-hint" style="margin-top:14px;">
+            <button type="button" id="back-to-login">← Giriş ekranına dön</button>
+          </div>
+        </form>
+
+        <div id="forgot-sent-panel" style="display:none;">
+          <h2>E-posta gönderildi</h2>
+          <p class="sub">Gelen kutunu kontrol et. Bağlantı 1 saat geçerlidir.</p>
+          <div class="switch-hint">
+            <button type="button" id="back-to-login-2">← Giriş ekranına dön</button>
+          </div>
+        </div>
+
+        <div id="verify-pending-panel" style="display:none;">
+          <h2>E-postanı doğrula</h2>
+          <p class="sub">Hesabın oluşturuldu! Gelen kutunda doğrulama bağlantısı var — tıklayınca giriş yapılır.</p>
+          <p id="verify-email-display" class="sub" style="font-weight:600;color:var(--ink);margin-bottom:20px;"></p>
+          <button class="btn btn-primary btn-block" id="resend-verify-btn" type="button">Tekrar gönder</button>
+          <p id="resend-msg" style="font-size:13px;color:var(--moss-deep);margin-top:10px;display:none;">Yeniden gönderildi!</p>
+          <div class="switch-hint" style="margin-top:14px;">
+            <button type="button" id="back-to-login-3">← Giriş ekranına dön</button>
+          </div>
+        </div>
 
         <form id="signup-form" style="display:none;">
           <h2>Hesap oluştur</h2>
