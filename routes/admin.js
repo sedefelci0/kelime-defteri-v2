@@ -31,12 +31,15 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
 
     const { rows: students } = await pool.query(
       `SELECT u.id, u.display_name, u.email, u.class_name, u.total_study_seconds,
-              COALESCE(SUM(up.times_correct), 0)::int AS total_correct,
-              COALESCE(SUM(up.times_wrong), 0)::int AS total_wrong
+              COALESCE(SUM(up.times_correct), 0)::int AS quiz_correct,
+              COALESCE(SUM(up.times_wrong), 0)::int AS quiz_wrong,
+              COALESCE(eas.correct_count, 0)::int AS exam_correct,
+              COALESCE(eas.wrong_count, 0)::int AS exam_wrong
        FROM users u
        LEFT JOIN user_progress up ON up.user_id = u.id
+       LEFT JOIN exam_answer_stats eas ON eas.user_id = u.id
        ${classWhere}
-       GROUP BY u.id
+       GROUP BY u.id, eas.correct_count, eas.wrong_count
        ORDER BY u.class_name ASC, u.display_name ASC`,
       params
     );
@@ -63,8 +66,10 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
         email: s.email,
         className: s.class_name,
         totalStudySeconds: s.total_study_seconds,
-        totalCorrect: s.total_correct,
-        totalWrong: s.total_wrong,
+        quizCorrect: s.quiz_correct,
+        quizWrong: s.quiz_wrong,
+        examCorrect: s.exam_correct,
+        examWrong: s.exam_wrong,
         notes: notesByUser[s.id] || [],
       }))
     );

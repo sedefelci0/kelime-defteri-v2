@@ -152,6 +152,7 @@ function buildAccordionItem(q, index) {
         expEl.textContent = q.explanation;
         body.appendChild(expEl);
       }
+      postJSON('/api/progress/exam-answer', { isCorrect: letter === q.correct_option }).catch(() => {});
     });
     optionsEl.appendChild(btn);
   });

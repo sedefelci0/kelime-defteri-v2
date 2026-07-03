@@ -75,17 +75,17 @@ function formatDate(iso) {
 function renderStudents() {
   tbodyEl.innerHTML = '';
 
-  const totalCorrect = students.reduce((sum, s) => sum + (s.totalCorrect || 0), 0);
-  const totalWrong = students.reduce((sum, s) => sum + (s.totalWrong || 0), 0);
-  const totalAns = totalCorrect + totalWrong;
-  const accuracy = totalAns > 0 ? Math.round(totalCorrect / totalAns * 100) : 0;
+  const totalQuizCorrect = students.reduce((sum, s) => sum + (s.quizCorrect || 0), 0);
+  const totalQuizWrong = students.reduce((sum, s) => sum + (s.quizWrong || 0), 0);
+  const totalAns = totalQuizCorrect + totalQuizWrong;
+  const accuracy = totalAns > 0 ? Math.round(totalQuizCorrect / totalAns * 100) : 0;
 
   if (students.length > 0) {
     document.getElementById('sum-students').textContent = students.length;
-    document.getElementById('sum-correct').textContent = totalCorrect.toLocaleString('tr-TR');
+    document.getElementById('sum-correct').textContent = totalQuizCorrect.toLocaleString('tr-TR');
     document.getElementById('sum-accuracy').textContent = `%${accuracy}`;
     document.getElementById('sum-accuracy').nextElementSibling.textContent =
-      `Genel başarı · ${totalWrong.toLocaleString('tr-TR')} yanlış`;
+      `Quiz başarı · ${totalQuizWrong.toLocaleString('tr-TR')} yanlış`;
     summaryCardsEl.style.display = '';
   } else {
     summaryCardsEl.style.display = 'none';
@@ -100,10 +100,14 @@ function renderStudents() {
   students.forEach((s, i) => {
     const color = AVATAR_COLORS[i % AVATAR_COLORS.length];
     const initials = getInitials(s.displayName);
-    const correct = s.totalCorrect || 0;
-    const wrong = s.totalWrong || 0;
-    const ans = correct + wrong;
-    const acc = ans > 0 ? Math.round(correct / ans * 100) : 0;
+    const quizCorrect = s.quizCorrect || 0;
+    const quizWrong = s.quizWrong || 0;
+    const examCorrect = s.examCorrect || 0;
+    const examWrong = s.examWrong || 0;
+    const quizAns = quizCorrect + quizWrong;
+    const quizAcc = quizAns > 0 ? Math.round(quizCorrect / quizAns * 100) : 0;
+    const examAns = examCorrect + examWrong;
+    const examAcc = examAns > 0 ? Math.round(examCorrect / examAns * 100) : null;
 
     const tr = document.createElement('tr');
     tr.innerHTML = `
@@ -119,16 +123,22 @@ function renderStudents() {
       <td>${s.className ? `<span class="class-badge">${s.className}</span>` : '<span class="muted-dash">—</span>'}</td>
       <td>${formatDuration(s.totalStudySeconds)}</td>
       <td>
-        <span class="score-correct">${correct}</span>
+        <span class="score-correct">${quizCorrect}</span>
         <span class="score-sep"> / </span>
-        <span class="${wrong === 0 ? 'score-wrong-zero' : 'score-wrong'}">${wrong}</span>
+        <span class="${quizWrong === 0 ? 'score-wrong-zero' : 'score-wrong'}">${quizWrong}</span>
+      </td>
+      <td>
+        ${examAns > 0
+          ? `<span class="score-correct">${examCorrect}</span><span class="score-sep"> / </span><span class="${examWrong === 0 ? 'score-wrong-zero' : 'score-wrong'}">${examWrong}</span>`
+          : '<span class="muted-dash">—</span>'}
       </td>
       <td>
         <div class="accuracy-cell">
           <div class="accuracy-bar-track">
-            <div class="accuracy-bar-fill" style="width:${acc}%"></div>
+            <div class="accuracy-bar-fill" style="width:${quizAcc}%"></div>
           </div>
-          <span class="accuracy-pct">%${acc}</span>
+          <span class="accuracy-pct">%${quizAcc}</span>
+          ${examAcc !== null ? `<span class="accuracy-exam-pct">Sınav %${examAcc}</span>` : ''}
         </div>
       </td>
       <td><button class="notes-count-btn" ${s.notes.length === 0 ? 'disabled' : ''}>${s.notes.length} not</button></td>

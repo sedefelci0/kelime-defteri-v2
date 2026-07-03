@@ -4,6 +4,16 @@ const { requireAuth } = require('../middleware/auth');
 
 const router = express.Router();
 
+// Sınav sorusu cevaplarını takip eden tablo (sunucu açılışında oluştur)
+pool
+  .query(`CREATE TABLE IF NOT EXISTS exam_answer_stats (
+    user_id INTEGER PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,
+    correct_count INTEGER NOT NULL DEFAULT 0,
+    wrong_count   INTEGER NOT NULL DEFAULT 0
+  )`)
+  .then(() => console.log('[db] exam_answer_stats hazır.'))
+  .catch((e) => console.error('[db] exam_answer_stats oluşturulamadı:', e.message));
+
 // Belirli bir deste (ve varsa ünite) için özet: kaç kelime new / learning / known
 // Örnek: GET /api/progress/summary?deck=5-sinif&unit=1
 router.get('/summary', requireAuth, async (req, res) => {
@@ -162,6 +172,28 @@ router.get('/activity', requireAuth, async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Aktivite yüklenirken hata oluştu.' });
+  }
+});
+
+// Sınav sorusu (çıkmış soru) cevabını kaydet
+router.post('/exam-answer', requireAuth, async (req, res) => {
+  try {
+    const { isCorrect } = req.body || {};
+    if (typeof isCorrect !== 'boolean') {
+      return res.status(400).json({ error: 'isCorrect (true/false) zorunludur.' });
+    }
+    await pool.query(
+      `INSERT INTO exam_answer_stats (user_id, correct_count, wrong_count)
+       VALUES ($1, $2, $3)
+       ON CONFLICT (user_id) DO UPDATE SET
+         correct_count = exam_answer_stats.correct_count + $2,
+         wrong_count   = exam_answer_stats.wrong_count   + $3`,
+      [req.session.userId, isCorrect ? 1 : 0, isCorrect ? 0 : 1]
+    );
+    res.json({ ok: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Sınav cevabı kaydedilemedi.' });
   }
 });
 
