@@ -6,6 +6,26 @@ const adminContentEl = document.getElementById('admin-content');
 const tbodyEl = document.getElementById('students-tbody');
 const emptyStudentsEl = document.getElementById('empty-students');
 const classFilterEl = document.getElementById('class-filter');
+const summaryCardsEl = document.getElementById('summary-cards');
+
+const AVATAR_COLORS = [
+  { bg: '#EEEDFE', fg: '#7C6CE0' },
+  { bg: '#E1F5EE', fg: '#2D9B6F' },
+  { bg: '#FAECE7', fg: '#D96B38' },
+  { bg: '#FEF3DC', fg: '#C99010' },
+  { bg: '#fce7f3', fg: '#be185d' },
+  { bg: '#dbeafe', fg: '#1d4ed8' },
+];
+
+function getInitials(name) {
+  return (name || '?')
+    .split(' ')
+    .filter(Boolean)
+    .map((w) => w[0])
+    .join('')
+    .slice(0, 2)
+    .toUpperCase();
+}
 
 async function getJSON(url) {
   const res = await fetch(url, { credentials: 'same-origin' });
@@ -54,24 +74,68 @@ function formatDate(iso) {
 
 function renderStudents() {
   tbodyEl.innerHTML = '';
+
+  const totalCorrect = students.reduce((sum, s) => sum + (s.totalCorrect || 0), 0);
+  const totalWrong = students.reduce((sum, s) => sum + (s.totalWrong || 0), 0);
+  const totalAns = totalCorrect + totalWrong;
+  const accuracy = totalAns > 0 ? Math.round(totalCorrect / totalAns * 100) : 0;
+
+  if (students.length > 0) {
+    document.getElementById('sum-students').textContent = students.length;
+    document.getElementById('sum-correct').textContent = totalCorrect.toLocaleString('tr-TR');
+    document.getElementById('sum-accuracy').textContent = `%${accuracy}`;
+    document.getElementById('sum-accuracy').nextElementSibling.textContent =
+      `Genel başarı · ${totalWrong.toLocaleString('tr-TR')} yanlış`;
+    summaryCardsEl.style.display = '';
+  } else {
+    summaryCardsEl.style.display = 'none';
+  }
+
   if (students.length === 0) {
     emptyStudentsEl.style.display = '';
     return;
   }
   emptyStudentsEl.style.display = 'none';
 
-  students.forEach((s) => {
+  students.forEach((s, i) => {
+    const color = AVATAR_COLORS[i % AVATAR_COLORS.length];
+    const initials = getInitials(s.displayName);
+    const correct = s.totalCorrect || 0;
+    const wrong = s.totalWrong || 0;
+    const ans = correct + wrong;
+    const acc = ans > 0 ? Math.round(correct / ans * 100) : 0;
+
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td>${s.displayName}</td>
-      <td>${s.className || '—'}</td>
-      <td>${s.email}</td>
+      <td>
+        <div class="student-cell">
+          <div class="student-avatar" style="background:${color.bg};color:${color.fg}">${initials}</div>
+          <div>
+            <div class="student-name">${s.displayName}</div>
+            <div class="student-email">${s.email}</div>
+          </div>
+        </div>
+      </td>
+      <td>${s.className ? `<span class="class-badge">${s.className}</span>` : '<span class="muted-dash">—</span>'}</td>
       <td>${formatDuration(s.totalStudySeconds)}</td>
-      <td class="num-correct">${s.totalCorrect}</td>
-      <td class="num-wrong">${s.totalWrong}</td>
+      <td>
+        <span class="score-correct">${correct}</span>
+        <span class="score-sep"> / </span>
+        <span class="${wrong === 0 ? 'score-wrong-zero' : 'score-wrong'}">${wrong}</span>
+      </td>
+      <td>
+        <div class="accuracy-cell">
+          <div class="accuracy-bar-track">
+            <div class="accuracy-bar-fill" style="width:${acc}%"></div>
+          </div>
+          <span class="accuracy-pct">%${acc}</span>
+        </div>
+      </td>
       <td><button class="notes-count-btn" ${s.notes.length === 0 ? 'disabled' : ''}>${s.notes.length} not</button></td>
     `;
-    tr.querySelector('.notes-count-btn').addEventListener('click', () => openNotesModal(s));
+    tr.querySelector('.notes-count-btn').addEventListener('click', () => {
+      if (s.notes.length > 0) openNotesModal(s);
+    });
     tbodyEl.appendChild(tr);
   });
 }
