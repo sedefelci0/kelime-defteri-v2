@@ -266,12 +266,10 @@ async function answer(knewIt) {
     word.times_wrong = result.timesWrong;
     await loadSummary();
     if (knewIt && word.questions && word.questions.length > 0) {
-      renderCard();
       showQuestionsAccordion(word.questions);
+      questionsAccordionEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     } else {
-      if (currentIndex < allWords.length - 1) {
-        currentIndex += 1;
-      }
+      if (currentIndex < allWords.length - 1) currentIndex += 1;
       renderCard();
     }
   } catch (err) {
