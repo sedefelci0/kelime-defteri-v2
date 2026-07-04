@@ -1,67 +1,3 @@
-/* ===== Navbar ===== */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 28px;
-  height: 60px;
-  background: rgba(247, 245, 240, 0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--rule);
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.navbar-icon { font-size: 22px; }
-.navbar-title {
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.02em;
-}
-
-.navbar-actions {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.navbar-user-btn {
-  padding: 7px 14px;
-  background: var(--paper-raised);
-  border: 1.5px solid var(--rule);
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--ink);
-  cursor: pointer;
-  transition: border-color 0.12s, background 0.12s;
-}
-.navbar-user-btn:hover {
-  border-color: #b0a8e0;
-  background: #f5f3ff;
-}
-
-.navbar-link {
-  padding: 7px 14px;
-  background: transparent;
-  border: none;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--muted);
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background 0.12s, color 0.12s;
-}
-.navbar-link:hover { background: rgba(0,0,0,0.05); color: var(--ink); }
-.navbar-logout:hover { color: var(--clay-deep); background: rgba(181,86,58,0.07); }
-
 /* ===== Page layout ===== */
 .decks-page h1, .decks-page h2, .decks-page h3 {
   font-family: var(--font-body);
@@ -186,7 +122,9 @@
 
 /* ===== Tools section ===== */
 .tools-section {
-  margin-top: 52px;
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--rule);
 }
 .tools-heading {
   font-size: 13px;
@@ -306,7 +244,9 @@
 /* ===== Leaderboard ===== */
 .leaderboard-section {
   max-width: 860px;
-  margin: 0 auto 48px;
+  margin: 56px auto 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--rule);
 }
 .leaderboard-sub {
   font-size: 14px;
