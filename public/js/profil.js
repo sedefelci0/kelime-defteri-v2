@@ -124,9 +124,8 @@ function setActiveTab(activeBtn) {
     getJSON('/api/progress/medals').then((medals) => {
       const total = medals.gold + medals.silver + medals.bronze;
       if (total > 0) {
-        document.getElementById('medal-gold').textContent   = medals.gold;
-        document.getElementById('medal-silver').textContent = medals.silver;
-        document.getElementById('medal-bronze').textContent = medals.bronze;
+        document.getElementById('medal-gold').textContent  = medals.gold;
+        document.getElementById('medal-total').textContent = total;
         document.getElementById('medals-section').style.display = '';
       }
     }).catch(() => {});
