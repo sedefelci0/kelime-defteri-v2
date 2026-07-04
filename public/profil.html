@@ -40,7 +40,7 @@
       <div class="stat-boxes">
         <div class="stat-box stat-box--green">
           <div class="stat-value" id="stat-known">—</div>
-          <div class="stat-label">Öğrenilen</div>
+          <div class="stat-label">Öğrenilen kelime</div>
         </div>
         <div class="stat-box stat-box--yellow">
           <div class="stat-value" id="stat-learning">—</div>
@@ -48,24 +48,66 @@
         </div>
         <div class="stat-box stat-box--red">
           <div class="stat-value" id="stat-wrong">—</div>
-          <div class="stat-label">Yanlış</div>
+          <div class="stat-label">Yanlış kelime</div>
         </div>
         <div class="stat-box stat-box--purple">
           <div class="stat-value" id="stat-success">—</div>
-          <div class="stat-label">Başarı oranı</div>
+          <div class="stat-label">Quiz doğruluk</div>
+        </div>
+      </div>
+
+      <div class="stat-detail-section">
+        <div class="sidebar-section-title">Soru İstatistikleri</div>
+        <div class="stat-detail-row">
+          <span class="stat-detail-label">Çözülen soru</span>
+          <span class="stat-detail-val" id="stat-total-q">—</span>
+        </div>
+        <div class="stat-detail-row">
+          <span class="stat-detail-label">Doğru cevap</span>
+          <span class="stat-detail-val stat-detail-val--green" id="stat-exam-correct">—</span>
+        </div>
+        <div class="stat-detail-row">
+          <span class="stat-detail-label">Yanlış cevap</span>
+          <span class="stat-detail-val stat-detail-val--red" id="stat-exam-wrong">—</span>
+        </div>
+        <div class="stat-detail-row">
+          <span class="stat-detail-label">Doğruluk oranı</span>
+          <span class="stat-detail-val stat-detail-val--purple" id="stat-exam-acc">—</span>
+        </div>
+      </div>
+
+      <div id="ranking-section" class="stat-detail-section" style="display:none;">
+        <div class="sidebar-section-title">Sınıf Sıralaması</div>
+        <div class="rank-display">
+          <span class="rank-number" id="rank-number">—</span>
+          <span class="rank-of" id="rank-of">— öğrenci içinde</span>
+        </div>
+        <div class="stat-detail-row" style="margin-top:10px;">
+          <span class="stat-detail-label">🏆 Günlük Şampiyonluk</span>
+          <span class="stat-detail-val" id="stat-champion">0</span>
         </div>
       </div>
 
       <div id="medals-section" class="medals-section" style="display:none;">
-        <div class="sidebar-section-title">Madalyalar</div>
+        <div class="sidebar-section-title">Mücadele Madalyaları</div>
         <div class="medal-line">
           <span class="medal-line-icon">🥇</span>
-          <span class="medal-line-label">Günün Birincisi</span>
+          <span class="medal-line-label">Altın</span>
           <span class="medal-line-count" id="medal-gold">0</span>
         </div>
         <div class="medal-line">
+          <span class="medal-line-icon">🥈</span>
+          <span class="medal-line-label">Gümüş</span>
+          <span class="medal-line-count" id="medal-silver">0</span>
+        </div>
+        <div class="medal-line">
+          <span class="medal-line-icon">🥉</span>
+          <span class="medal-line-label">Bronz</span>
+          <span class="medal-line-count" id="medal-bronze">0</span>
+        </div>
+        <div class="medal-line medal-line--total">
           <span class="medal-line-icon">🏅</span>
-          <span class="medal-line-label">Kazanılan Madalya</span>
+          <span class="medal-line-label">Toplam</span>
           <span class="medal-line-count" id="medal-total">0</span>
         </div>
       </div>

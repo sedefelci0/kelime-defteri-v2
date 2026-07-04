@@ -294,6 +294,15 @@
   border-color: #b0a8e0;
 }
 
+.tool-card--challenge {
+  background: linear-gradient(135deg, var(--deck-orange) 0%, #FEF3DC 100%);
+  border-color: var(--deck-orange-accent);
+}
+.tool-card--challenge:hover {
+  border-color: var(--deck-orange-accent);
+  box-shadow: 0 6px 18px rgba(217,107,56,0.18);
+}
+
 /* ===== Leaderboard ===== */
 .leaderboard-section {
   max-width: 860px;

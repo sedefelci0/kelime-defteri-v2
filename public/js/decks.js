@@ -153,6 +153,21 @@ document.getElementById('admin-panel-btn').addEventListener('click', () => {
     if (me.isOwner) {
       document.getElementById('admin-panel-btn').style.display = '';
     }
+    // Gunluk mucadele butonu — sadece 5-8. sinif ogrencileri
+    if (me.className && /^[5-8]-[A-F]$/.test(me.className)) {
+      const challengeBtn = document.getElementById('challenge-btn');
+      challengeBtn.style.display = '';
+      challengeBtn.addEventListener('click', () => { window.location.href = '/challenge.html'; });
+      // Bugun katildiysa butonu guncelle
+      fetch('/api/challenge/today', { credentials: 'same-origin' })
+        .then((r) => r.json())
+        .then((d) => {
+          if (d.alreadyPlayed) {
+            document.getElementById('challenge-desc').textContent = `Bugün katıldın · ${d.result.score}/5`;
+          }
+        }).catch(() => {});
+    }
+
     await loadDecks();
     await loadLeaderboard();
   } catch (err) {

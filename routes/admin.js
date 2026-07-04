@@ -243,6 +243,80 @@ router.post('/word-requests/:id/reject', requireAuth, requireOwner, async (req, 
   }
 });
 
+// --- Analitik ---
+
+router.get('/analytics', requireAuth, requireOwner, async (req, res) => {
+  try {
+    const [userStatsRes, classDistRes, wordStatsRes, hardestRes, easiestRes] = await Promise.all([
+      pool.query(`
+        SELECT
+          COUNT(*)::int AS total_users,
+          COUNT(CASE WHEN EXISTS (
+            SELECT 1 FROM user_progress up2
+            WHERE up2.user_id = u.id AND up2.last_reviewed_at >= NOW() - INTERVAL '7 days'
+          ) THEN 1 END)::int AS active_7d,
+          COUNT(CASE WHEN EXISTS (
+            SELECT 1 FROM user_progress up3
+            WHERE up3.user_id = u.id AND up3.last_reviewed_at >= CURRENT_DATE
+          ) THEN 1 END)::int AS active_today
+        FROM users u WHERE u.is_teacher = FALSE
+      `),
+      pool.query(`
+        SELECT class_name, COUNT(*)::int AS count
+        FROM users WHERE is_teacher = FALSE AND class_name IS NOT NULL
+        GROUP BY class_name ORDER BY class_name
+      `),
+      pool.query(`
+        SELECT w.english, w.turkish_meaning, d.title AS deck_title,
+               COALESCE(SUM(up.times_correct + up.times_wrong), 0)::int AS times_studied,
+               COALESCE(SUM(up.times_correct), 0)::int AS total_correct,
+               COALESCE(SUM(up.times_wrong), 0)::int AS total_wrong
+        FROM words w
+        JOIN decks d ON d.id = w.deck_id
+        LEFT JOIN user_progress up ON up.word_id = w.id
+        GROUP BY w.id, w.english, w.turkish_meaning, d.title
+        ORDER BY times_studied DESC
+        LIMIT 10
+      `),
+      pool.query(`
+        SELECT w.english, w.turkish_meaning, d.title AS deck_title,
+               SUM(up.times_wrong)::int AS total_wrong,
+               SUM(up.times_correct)::int AS total_correct,
+               ROUND(SUM(up.times_correct)::numeric / NULLIF(SUM(up.times_correct + up.times_wrong), 0) * 100)::int AS accuracy
+        FROM words w
+        JOIN decks d ON d.id = w.deck_id
+        JOIN user_progress up ON up.word_id = w.id
+        GROUP BY w.id, w.english, w.turkish_meaning, d.title
+        HAVING SUM(up.times_wrong) > 0
+        ORDER BY total_wrong DESC
+        LIMIT 10
+      `),
+      pool.query(`
+        SELECT w.english, w.turkish_meaning, d.title AS deck_title,
+               SUM(up.times_correct)::int AS total_correct,
+               SUM(up.times_wrong)::int AS total_wrong
+        FROM words w
+        JOIN decks d ON d.id = w.deck_id
+        JOIN user_progress up ON up.word_id = w.id
+        GROUP BY w.id, w.english, w.turkish_meaning, d.title
+        ORDER BY total_correct DESC
+        LIMIT 10
+      `),
+    ]);
+
+    res.json({
+      users: userStatsRes.rows[0],
+      classDistribution: classDistRes.rows,
+      mostStudied: wordStatsRes.rows,
+      hardestWords: hardestRes.rows,
+      easiestWords: easiestRes.rows,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Analitik yuklenirken hata olustu.' });
+  }
+});
+
 router.delete('/questions/:id', requireAuth, requireOwner, async (req, res) => {
   try {
     const id = Number(req.params.id);

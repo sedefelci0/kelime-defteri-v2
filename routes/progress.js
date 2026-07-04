@@ -89,34 +89,93 @@ router.post('/heartbeat', requireAuth, async (req, res) => {
 // Profil sayfası: genel istatistikler + deste bazında ilerleme
 router.get('/profile', requireAuth, async (req, res) => {
   try {
-    const statsResult = await pool.query(
-      `SELECT
-         COALESCE(SUM(CASE WHEN up.status = 'known' THEN 1 ELSE 0 END), 0)::int AS known,
-         COALESCE(SUM(CASE WHEN up.status = 'learning' THEN 1 ELSE 0 END), 0)::int AS learning,
-         COALESCE(SUM(up.times_wrong), 0)::int AS total_wrong,
-         COALESCE(SUM(up.times_correct), 0)::int AS total_correct,
-         COUNT(CASE WHEN up.times_wrong > 0 THEN 1 END)::int AS words_with_wrong
-       FROM user_progress up
-       WHERE up.user_id = $1`,
-      [req.session.userId]
-    );
-    const s = statsResult.rows[0];
+    const uid = req.session.userId;
+
+    const [quizResult, examResult, deckResult, userResult] = await Promise.all([
+      pool.query(
+        `SELECT
+           COALESCE(SUM(CASE WHEN up.status = 'known' THEN 1 ELSE 0 END), 0)::int AS known,
+           COALESCE(SUM(CASE WHEN up.status = 'learning' THEN 1 ELSE 0 END), 0)::int AS learning,
+           COALESCE(SUM(up.times_wrong), 0)::int AS total_wrong,
+           COALESCE(SUM(up.times_correct), 0)::int AS total_correct,
+           COUNT(CASE WHEN up.times_wrong > 0 THEN 1 END)::int AS words_with_wrong
+         FROM user_progress up WHERE up.user_id = $1`,
+        [uid]
+      ),
+      pool.query(
+        `SELECT COALESCE(correct_count, 0)::int AS exam_correct,
+                COALESCE(wrong_count, 0)::int AS exam_wrong
+         FROM exam_answer_stats WHERE user_id = $1`,
+        [uid]
+      ),
+      pool.query(
+        `SELECT d.slug, d.title,
+                COUNT(w.id)::int AS total,
+                COALESCE(SUM(CASE WHEN up.status = 'known' THEN 1 ELSE 0 END), 0)::int AS known
+         FROM decks d
+         JOIN words w ON w.deck_id = d.id
+         LEFT JOIN user_progress up ON up.word_id = w.id AND up.user_id = $1
+         GROUP BY d.id, d.slug, d.title, d.sort_order
+         ORDER BY d.sort_order ASC`,
+        [uid]
+      ),
+      pool.query('SELECT class_name FROM users WHERE id = $1', [uid]),
+    ]);
+
+    const s = quizResult.rows[0];
+    const e = examResult.rows[0] || { exam_correct: 0, exam_wrong: 0 };
+    const className = userResult.rows[0]?.class_name;
+
     const totalAns = s.total_correct + s.total_wrong;
-    const successRate = totalAns > 0 ? Math.round((s.total_correct / totalAns) * 100) : 0;
+    const quizAccuracy = totalAns > 0 ? Math.round((s.total_correct / totalAns) * 100) : 0;
+    const examTotal = e.exam_correct + e.exam_wrong;
+    const examAccuracy = examTotal > 0 ? Math.round((e.exam_correct / examTotal) * 100) : 0;
 
-    const deckResult = await pool.query(
-      `SELECT d.slug, d.title,
-              COUNT(w.id)::int AS total,
-              COALESCE(SUM(CASE WHEN up.status = 'known' THEN 1 ELSE 0 END), 0)::int AS known
-       FROM decks d
-       JOIN words w ON w.deck_id = d.id
-       LEFT JOIN user_progress up ON up.word_id = w.id AND up.user_id = $1
-       GROUP BY d.id, d.slug, d.title, d.sort_order
-       ORDER BY d.sort_order ASC`,
-      [req.session.userId]
-    );
+    // Sınıf sıralaması (sadece sınıf öğrencileri için)
+    let classRank = null;
+    let classSize = null;
+    if (className && /^[5-8]-[A-F]$/.test(className)) {
+      const [rankRes, sizeRes] = await Promise.all([
+        pool.query(
+          `SELECT COUNT(DISTINCT u2.id)::int + 1 AS rank
+           FROM users u2
+           LEFT JOIN (
+             SELECT user_id, SUM(times_correct)::int AS correct FROM user_progress GROUP BY user_id
+           ) up2 ON up2.user_id = u2.id
+           WHERE u2.class_name = $1 AND u2.is_teacher = FALSE AND u2.id != $2
+             AND COALESCE(up2.correct, 0) > $3`,
+          [className, uid, s.total_correct]
+        ),
+        pool.query(
+          'SELECT COUNT(*)::int AS cnt FROM users WHERE class_name = $1 AND is_teacher = FALSE',
+          [className]
+        ),
+      ]);
+      classRank = rankRes.rows[0].rank;
+      classSize = sizeRes.rows[0].cnt;
+    }
 
-    const decks = deckResult.rows.map(r => ({
+    // Şampiyonluk sayısı (daily_champions)
+    let championCount = 0;
+    try {
+      const { rows: chRows } = await pool.query(
+        'SELECT COUNT(*)::int AS cnt FROM daily_champions WHERE user_id = $1 AND medal_type = $2',
+        [uid, 'gold']
+      );
+      championCount = chRows[0]?.cnt || 0;
+    } catch (_) {}
+
+    // Mücadele madalyaları (daily_medals)
+    const medals = { gold: 0, silver: 0, bronze: 0 };
+    try {
+      const { rows: mRows } = await pool.query(
+        'SELECT medal_type, COUNT(*)::int AS cnt FROM daily_medals WHERE user_id = $1 GROUP BY medal_type',
+        [uid]
+      );
+      mRows.forEach((r) => { if (r.medal_type in medals) medals[r.medal_type] = r.cnt; });
+    } catch (_) {}
+
+    const decks = deckResult.rows.map((r) => ({
       slug: r.slug,
       title: r.title,
       total: r.total,
@@ -129,13 +188,23 @@ router.get('/profile', requireAuth, async (req, res) => {
         known: s.known,
         learning: s.learning,
         wrong: s.words_with_wrong,
-        successRate,
+        quizCorrect: s.total_correct,
+        quizWrong: s.total_wrong,
+        quizAccuracy,
+        examCorrect: e.exam_correct,
+        examWrong: e.exam_wrong,
+        examAccuracy,
+        totalQuestions: examTotal,
+        classRank,
+        classSize,
+        championCount,
+        medals,
       },
       decks,
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: 'Profil yüklenirken hata oluştu.' });
+    res.status(500).json({ error: 'Profil yuklenirken hata olustu.' });
   }
 });
 
@@ -233,12 +302,12 @@ router.get('/leaderboard', requireAuth, async (req, res) => {
   }
 });
 
-// Madalyalar: kullanicinin kazandigi gunluk birinci madalyalari
+// Madalyalar: kullanicinin gunluk mucadeleden kazandigi madalyalar
 router.get('/medals', requireAuth, async (req, res) => {
   try {
     const { rows } = await pool.query(
       `SELECT medal_type, COUNT(*)::int AS count
-       FROM daily_champions
+       FROM daily_medals
        WHERE user_id = $1
        GROUP BY medal_type`,
       [req.session.userId]
@@ -247,10 +316,7 @@ router.get('/medals', requireAuth, async (req, res) => {
     rows.forEach((r) => { if (r.medal_type in medals) medals[r.medal_type] = r.count; });
     res.json(medals);
   } catch (err) {
-    if (err.message && err.message.includes('daily_champions')) {
-      return res.json({ gold: 0, silver: 0, bronze: 0 });
-    }
-    res.status(500).json({ error: 'Madalyalar yüklenirken hata oluştu.' });
+    return res.json({ gold: 0, silver: 0, bronze: 0 });
   }
 });
 

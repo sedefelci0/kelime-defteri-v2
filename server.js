@@ -15,6 +15,7 @@ const progressRoutes = require('./routes/progress');
 const decksRoutes = require('./routes/decks');
 const notesRoutes = require('./routes/notes');
 const adminRoutes = require('./routes/admin');
+const { router: challengeRoutes, awardDailyMedals } = require('./routes/challenge');
 
 const app = express();
 app.set('trust proxy', 1);
@@ -46,6 +47,7 @@ app.use('/api/progress', progressRoutes);
 app.use('/api/decks', decksRoutes);
 app.use('/api/notes', notesRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/challenge', challengeRoutes);
 
 // Statik dosyalar (HTML/CSS/JS)
 app.use(express.static(path.join(__dirname, 'public')));
@@ -112,8 +114,11 @@ async function start() {
   await setupDailyChampions();
 
   if (cron) {
-    cron.schedule('59 23 * * *', runDailyChampion, { timezone: 'Europe/Istanbul' });
-    console.log('[cron] Gunluk birinci zamanlanicisi aktif (23:59 Istanbul).');
+    cron.schedule('59 23 * * *', async () => {
+      await runDailyChampion();
+      await awardDailyMedals();
+    }, { timezone: 'Europe/Istanbul' });
+    console.log('[cron] 23:59 Istanbul zamanlanicisi aktif (gunluk birinci + mucadele madalyalari).');
   }
 
   app.listen(PORT, () => {

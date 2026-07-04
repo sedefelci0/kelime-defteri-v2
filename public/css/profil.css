@@ -339,23 +339,62 @@
 .heatmap-cell--3 { background: #30A14E; }
 .heatmap-cell--4 { background: #216E39; }
 
+/* ===== Soru istatistikleri + Siralama ===== */
+.stat-detail-section {
+  background: var(--paper-raised);
+  border: 1.5px solid var(--rule);
+  border-radius: 14px;
+  padding: 16px 18px;
+}
+.stat-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 13px;
+}
+.stat-detail-row:last-child { border-bottom: none; }
+.stat-detail-label { color: var(--muted); }
+.stat-detail-val { font-weight: 700; color: var(--ink); }
+.stat-detail-val--green  { color: var(--moss-deep); }
+.stat-detail-val--red    { color: var(--clay); }
+.stat-detail-val--purple { color: var(--deck-purple-accent); }
+
+.rank-display {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.rank-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+.rank-of { font-size: 13px; color: var(--muted); }
+
 /* ===== Madalyalar ===== */
 .medals-section {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid var(--rule);
+  background: var(--paper-raised);
+  border: 1.5px solid var(--rule);
+  border-radius: 14px;
+  padding: 16px 18px;
 }
 .medal-line {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 7px 0;
+  padding: 6px 0;
   border-bottom: 1px solid var(--rule);
 }
 .medal-line:last-child { border-bottom: none; }
-.medal-line-icon { font-size: 20px; flex-shrink: 0; }
+.medal-line--total { margin-top: 2px; }
+.medal-line-icon { font-size: 18px; flex-shrink: 0; }
 .medal-line-label { font-size: 13px; color: var(--muted); flex: 1; }
 .medal-line-count { font-size: 15px; font-weight: 700; color: var(--ink); }
+.medal-line--total .medal-line-count { color: var(--moss-deep); }
 
 /* ===== Responsive ===== */
 @media (max-width: 720px) {

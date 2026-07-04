@@ -120,15 +120,30 @@ function setActiveTab(activeBtn) {
       getJSON('/api/progress/profile'),
     ]);
 
-    // Madalyalar (hata olursa sessizce gec)
-    getJSON('/api/progress/medals').then((medals) => {
-      const total = medals.gold + medals.silver + medals.bronze;
-      if (total > 0) {
-        document.getElementById('medal-gold').textContent  = medals.gold;
-        document.getElementById('medal-total').textContent = total;
-        document.getElementById('medals-section').style.display = '';
-      }
-    }).catch(() => {});
+    // Soru istatistikleri
+    document.getElementById('stat-total-q').textContent   = profile.stats.totalQuestions.toLocaleString('tr-TR');
+    document.getElementById('stat-exam-correct').textContent = profile.stats.examCorrect.toLocaleString('tr-TR');
+    document.getElementById('stat-exam-wrong').textContent   = profile.stats.examWrong.toLocaleString('tr-TR');
+    document.getElementById('stat-exam-acc').textContent     = profile.stats.totalQuestions > 0 ? `%${profile.stats.examAccuracy}` : '—';
+
+    // Sinif siralaması
+    if (profile.stats.classRank !== null) {
+      document.getElementById('rank-number').textContent = `${profile.stats.classRank}.`;
+      document.getElementById('rank-of').textContent     = `${profile.stats.classSize} öğrenci içinde`;
+      document.getElementById('ranking-section').style.display = '';
+    }
+    document.getElementById('stat-champion').textContent = profile.stats.championCount;
+
+    // Mücadele madalyaları
+    const { medals } = profile.stats;
+    const totalMedals = medals.gold + medals.silver + medals.bronze;
+    if (totalMedals > 0) {
+      document.getElementById('medal-gold').textContent   = medals.gold;
+      document.getElementById('medal-silver').textContent = medals.silver;
+      document.getElementById('medal-bronze').textContent = medals.bronze;
+      document.getElementById('medal-total').textContent  = totalMedals;
+      document.getElementById('medals-section').style.display = '';
+    }
 
     // Avatar
     document.getElementById('avatar-circle').textContent = initials(me.displayName);

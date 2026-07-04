@@ -36,6 +36,7 @@
       <button class="admin-tab-btn is-active" id="tab-btn-students" type="button">Öğrenciler</button>
       <button class="admin-tab-btn" id="tab-btn-questions" type="button">Soru Ekle</button>
       <button class="admin-tab-btn" id="tab-btn-requests" type="button">Kelime Talepleri <span class="tab-badge" id="requests-badge" style="display:none;"></span></button>
+      <button class="admin-tab-btn" id="tab-btn-analytics" type="button">Analitik</button>
     </div>
 
     <!-- Öğrenciler sekmesi -->
@@ -90,6 +91,45 @@
         <p class="q-form-hint">Öğrencilerden gelen kelime ekleme talepleri. Onaylanan kelimeyi uygun desteye eklemeyi unutma.</p>
         <div id="requests-list" class="requests-list"></div>
         <p id="requests-empty-hint" class="q-empty-hint" style="display:none;">Bekleyen talep yok.</p>
+      </div>
+    </div>
+
+    <!-- Analitik sekmesi -->
+    <div id="tab-analytics" style="display:none;">
+      <div id="analytics-loading" class="loading-state">Yükleniyor…</div>
+      <div id="analytics-content" style="display:none;">
+
+        <div class="analytics-cards" id="analytics-user-cards"></div>
+
+        <div class="analytics-section">
+          <h3 class="analytics-heading">Sınıflara Göre Öğrenci Dağılımı</h3>
+          <div class="class-dist-chart" id="class-dist-chart"></div>
+        </div>
+
+        <div class="analytics-grid">
+          <div class="analytics-word-card">
+            <h3 class="analytics-heading">En Zorlanılan Kelimeler</h3>
+            <table class="analytics-table" id="hardest-words-table">
+              <thead><tr><th>Kelime</th><th>Yanlış</th><th>Doğruluk</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="analytics-word-card">
+            <h3 class="analytics-heading">En Çok Doğru Yapılan</h3>
+            <table class="analytics-table" id="easiest-words-table">
+              <thead><tr><th>Kelime</th><th>Doğru</th><th>Set</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="analytics-section">
+          <h3 class="analytics-heading">En Çok Çalışılan 10 Kelime</h3>
+          <table class="analytics-table" id="most-studied-table">
+            <thead><tr><th>Kelime</th><th>Türkçe</th><th>Set</th><th>Çalışma</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
       </div>
     </div>
 

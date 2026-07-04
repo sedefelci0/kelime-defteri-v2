@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kelime Defteri — Günlük Mücadele</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/challenge.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a href="/decks.html" class="navbar-home-link">
+      <span class="navbar-icon">📚</span>
+      <span class="navbar-title">Kelime Defteri</span>
+    </a>
+  </div>
+  <div class="navbar-actions">
+    <button class="navbar-link navbar-logout" id="logout-btn" type="button">Çıkış yap</button>
+  </div>
+</nav>
+
+<main class="challenge-page">
+  <div id="loading-panel" class="ch-panel">
+    <div class="loading-state">Yükleniyor…</div>
+  </div>
+
+  <!-- Zaten katıldıysa -->
+  <div id="already-panel" class="ch-panel" style="display:none;">
+    <div class="ch-card ch-card--center">
+      <div class="ch-result-icon">✅</div>
+      <h1>Bugünkü mücadeleye katıldın</h1>
+      <p id="already-score-text" class="ch-sub"></p>
+      <button class="btn btn-primary" id="view-board-btn" type="button">Sıralamaya bak</button>
+      <a class="ch-back-link" href="/decks.html">← Desteler</a>
+    </div>
+    <div id="leaderboard-after" class="ch-leaderboard" style="display:none;"></div>
+  </div>
+
+  <!-- Mücadele -->
+  <div id="challenge-panel" class="ch-panel" style="display:none;">
+    <div class="ch-header">
+      <div>
+        <h1 class="ch-title">Günlük Mücadele</h1>
+        <p class="ch-sub" id="ch-class-info"></p>
+      </div>
+      <div class="ch-timer-wrap">
+        <div class="ch-timer" id="ch-timer">3:00</div>
+        <div class="ch-timer-label">kalan süre</div>
+      </div>
+    </div>
+
+    <div class="ch-progress-bar">
+      <div class="ch-progress-fill" id="ch-progress-fill" style="width:0%"></div>
+    </div>
+    <div class="ch-progress-text" id="ch-progress-text">Soru 1 / 5</div>
+
+    <div id="ch-question-area" class="ch-question-area">
+      <div class="ch-question-text" id="ch-question-text"></div>
+      <div class="ch-options" id="ch-options"></div>
+      <div class="ch-explanation" id="ch-explanation" style="display:none;"></div>
+      <button class="btn btn-primary ch-next-btn" id="ch-next-btn" type="button" style="display:none;">Sonraki →</button>
+    </div>
+  </div>
+
+  <!-- Süre doldu -->
+  <div id="timeout-panel" class="ch-panel" style="display:none;">
+    <div class="ch-card ch-card--center">
+      <div class="ch-result-icon">⏰</div>
+      <h1>Süre doldu!</h1>
+      <p class="ch-sub" id="timeout-score-text"></p>
+      <div id="leaderboard-timeout" class="ch-leaderboard"></div>
+    </div>
+  </div>
+
+  <!-- Sonuç -->
+  <div id="result-panel" class="ch-panel" style="display:none;">
+    <div class="ch-card ch-card--center">
+      <div class="ch-result-icon" id="result-icon">🎉</div>
+      <h1 id="result-title">Tebrikler!</h1>
+      <div class="ch-result-score" id="result-score"></div>
+      <p class="ch-sub" id="result-rank-text"></p>
+      <div id="leaderboard-result" class="ch-leaderboard"></div>
+      <a class="ch-back-link" href="/decks.html">← Desteler</a>
+    </div>
+  </div>
+</main>
+
+<script src="/js/challenge.js"></script>
+</body>
+</html>

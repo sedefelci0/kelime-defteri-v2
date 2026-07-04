@@ -213,30 +213,124 @@ document.getElementById('logout-btn').addEventListener('click', async () => {
 });
 
 // --- Sekmeler ---
-const tabBtnStudents = document.getElementById('tab-btn-students');
+const tabBtnStudents  = document.getElementById('tab-btn-students');
 const tabBtnQuestions = document.getElementById('tab-btn-questions');
 const tabBtnRequests  = document.getElementById('tab-btn-requests');
+const tabBtnAnalytics = document.getElementById('tab-btn-analytics');
 const tabStudents     = document.getElementById('tab-students');
 const tabQuestions    = document.getElementById('tab-questions');
 const tabRequests     = document.getElementById('tab-requests');
+const tabAnalytics    = document.getElementById('tab-analytics');
+
+let analyticsLoaded = false;
 
 function activateTab(name) {
-  tabBtnStudents.classList.toggle('is-active', name === 'students');
-  tabBtnQuestions.classList.toggle('is-active', name === 'questions');
-  tabBtnRequests.classList.toggle('is-active', name === 'requests');
-  tabStudents.style.display  = name === 'students'  ? '' : 'none';
-  tabQuestions.style.display = name === 'questions' ? '' : 'none';
-  tabRequests.style.display  = name === 'requests'  ? '' : 'none';
+  [tabBtnStudents, tabBtnQuestions, tabBtnRequests, tabBtnAnalytics].forEach((b, i) => {
+    const names = ['students', 'questions', 'requests', 'analytics'];
+    b.classList.toggle('is-active', names[i] === name);
+  });
+  tabStudents.style.display   = name === 'students'  ? '' : 'none';
+  tabQuestions.style.display  = name === 'questions' ? '' : 'none';
+  tabRequests.style.display   = name === 'requests'  ? '' : 'none';
+  tabAnalytics.style.display  = name === 'analytics' ? '' : 'none';
+
   if (name === 'questions' && !questionsLoaded) {
     loadDecksForRestrictOptions();
     loadAllQuestions();
   }
   if (name === 'requests') loadWordRequests();
+  if (name === 'analytics' && !analyticsLoaded) loadAnalytics();
 }
 
-tabBtnStudents.addEventListener('click', () => activateTab('students'));
+tabBtnStudents.addEventListener('click',  () => activateTab('students'));
 tabBtnQuestions.addEventListener('click', () => activateTab('questions'));
 tabBtnRequests.addEventListener('click',  () => activateTab('requests'));
+tabBtnAnalytics.addEventListener('click', () => activateTab('analytics'));
+
+// --- Analitik sekmesi ---
+async function loadAnalytics() {
+  const loadingEl = document.getElementById('analytics-loading');
+  const contentEl = document.getElementById('analytics-content');
+  loadingEl.style.display = '';
+  contentEl.style.display = 'none';
+  try {
+    const data = await getJSON('/api/admin/analytics');
+    renderAnalytics(data);
+    analyticsLoaded = true;
+    loadingEl.style.display = 'none';
+    contentEl.style.display = '';
+  } catch (err) {
+    loadingEl.textContent = 'Yüklenemedi.';
+  }
+}
+
+function renderAnalytics(data) {
+  const { users, classDistribution, mostStudied, hardestWords, easiestWords } = data;
+
+  // Kullanıcı kartları
+  const userCardsEl = document.getElementById('analytics-user-cards');
+  userCardsEl.innerHTML = `
+    <div class="analytics-stat-card">
+      <div class="analytics-stat-value">${users.total_users}</div>
+      <div class="analytics-stat-label">Toplam Öğrenci</div>
+    </div>
+    <div class="analytics-stat-card analytics-stat-card--green">
+      <div class="analytics-stat-value">${users.active_7d}</div>
+      <div class="analytics-stat-label">Son 7 Günde Aktif</div>
+    </div>
+    <div class="analytics-stat-card analytics-stat-card--blue">
+      <div class="analytics-stat-value">${users.active_today}</div>
+      <div class="analytics-stat-label">Bugün Çalışan</div>
+    </div>
+  `;
+
+  // Sınıf dağılımı bar chart
+  const chartEl = document.getElementById('class-dist-chart');
+  if (classDistribution.length) {
+    const maxCount = Math.max(...classDistribution.map((r) => r.count));
+    chartEl.innerHTML = classDistribution.map((r) => {
+      const pct = maxCount > 0 ? Math.round((r.count / maxCount) * 100) : 0;
+      return `
+        <div class="dist-bar-row">
+          <span class="dist-bar-label">${r.class_name}</span>
+          <div class="dist-bar-track"><div class="dist-bar-fill" style="width:${pct}%"></div></div>
+          <span class="dist-bar-count">${r.count}</span>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // En zorlanılan kelimeler
+  const hardestTbody = document.querySelector('#hardest-words-table tbody');
+  hardestTbody.innerHTML = hardestWords.map((w) => `
+    <tr>
+      <td class="word-en">${w.english}</td>
+      <td><span class="score-wrong">${w.total_wrong}</span></td>
+      <td>${w.accuracy !== null ? `%${w.accuracy}` : '—'}</td>
+    </tr>
+  `).join('');
+
+  // En çok doğru yapılan
+  const easiestTbody = document.querySelector('#easiest-words-table tbody');
+  easiestTbody.innerHTML = easiestWords.map((w) => `
+    <tr>
+      <td class="word-en">${w.english}</td>
+      <td><span class="score-correct">${w.total_correct}</span></td>
+      <td style="font-size:12px;color:var(--muted)">${w.deck_title}</td>
+    </tr>
+  `).join('');
+
+  // En çok çalışılan
+  const studiedTbody = document.querySelector('#most-studied-table tbody');
+  studiedTbody.innerHTML = mostStudied.map((w) => `
+    <tr>
+      <td class="word-en">${w.english}</td>
+      <td style="font-size:13px;color:var(--muted)">${w.turkish_meaning}</td>
+      <td style="font-size:12px;color:var(--muted)">${w.deck_title}</td>
+      <td><strong>${w.times_studied}</strong></td>
+    </tr>
+  `).join('');
+}
 
 // --- Kelime Talepleri sekmesi ---
 const requestsListEl = document.getElementById('requests-list');
