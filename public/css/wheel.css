@@ -56,43 +56,15 @@
   justify-content: center;
 }
 
+/* Çark artık <canvas> ile çiziliyor (bkz. wheel.js > buildWheel) — dilimler, renkler,
+   emoji ve etiketler tamamen Canvas API ile piksel piksel çiziliyor. Dönüş animasyonu
+   yine CSS transform/transition ile yapılıyor (canvas da normal bir DOM elemanı). */
 .wheel-disc {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  transition: transform 4.5s cubic-bezier(0.18, 0.86, 0.1, 1);
+  transition: transform 4.5s cubic-bezier(0.16, 1, 0.3, 1); /* easeOutExpo: hızlı başlar, yumuşak yavaşlar */
   will-change: transform;
-}
-
-/* Her dilimin etiketi: merkezden dışa doğru, dilimin orta açısına hizalı (radyal) —
-   dilimler eşit olduğu için her etiket için tutarlı, okunabilir bir alan var. */
-.wheel-slice-label {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 22px;
-  width: 150px;
-  margin-top: -11px;
-  transform-origin: 0 50%;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding-left: 40px;
-  pointer-events: none;
-}
-.wheel-slice-emoji-inline {
-  font-size: 17px;
-  line-height: 1;
-  flex-shrink: 0;
-}
-.wheel-slice-text {
-  font-size: 9.5px;
-  font-weight: 700;
-  color: #fff;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.45);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .wheel-center {

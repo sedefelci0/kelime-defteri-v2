@@ -1,6 +1,7 @@
 const loadingEl = document.getElementById('loading');
 const contentEl = document.getElementById('wheel-content');
-const wheelDiscEl = document.getElementById('wheel-disc');
+const wheelCanvasEl = document.getElementById('wheel-canvas');
+const wheelCtx = wheelCanvasEl.getContext('2d');
 const spinBtn = document.getElementById('spin-btn');
 const lockedEl = document.getElementById('wheel-locked');
 const countdownEl = document.getElementById('wheel-countdown');
@@ -45,35 +46,75 @@ document.getElementById('logout-btn').addEventListener('click', async () => {
   window.location.href = '/';
 });
 
-// --- Çarkı çiz (conic-gradient dilimler + emoji'ler) ---
+// --- Çarkı Canvas ile çiz ---
 // Dilimler GÖRSEL olarak her zaman eşit boyutta (360° / ödül sayısı) — kazanma olasılığı
-// bununla ilgisiz, tamamen sunucudaki ağırlıklı seçime dayanıyor (bkz. spin-btn handler).
-// Çark sadece sunucunun döndürdüğü sonucun (eşit) diliminde durana kadar animasyonla döner.
+// bununla ilgisiz, tamamen sunucudaki ağırlıklı seçime dayanıyor (bkz. doSpin). Çark sadece
+// sunucunun döndürdüğü sonucun (eşit) diliminde durana kadar CSS transition ile döner —
+// canvas da normal bir DOM elemanı olduğu için transform/transition sorunsuz çalışır.
+//
+// Canvas açı sistemi: 0 rad = saat 3 yönü, açı arttıkça saat yönünde döner (y ekseni aşağı
+// baktığı için). Dilim 0'ı üstten (saat 12, -90°) başlatıp saat yönünde ilerletiyoruz —
+// böylece p._midAngle (derece, üstten saat yönünde) eski conic-gradient ile aynı sözleşmeyi
+// korur ve spinWheelTo'nun açı hesabı değişmeden çalışır.
 function buildWheel() {
-  const sliceWidth = 360 / prizes.length;
-  const gradientParts = [];
-  wheelDiscEl.innerHTML = '';
+  const size = 340;
+  const dpr = window.devicePixelRatio || 1;
+  wheelCanvasEl.width = size * dpr;
+  wheelCanvasEl.height = size * dpr;
+  wheelCanvasEl.style.width = `${size}px`;
+  wheelCanvasEl.style.height = `${size}px`;
+  wheelCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  const cx = size / 2;
+  const cy = size / 2;
+  const radius = size / 2 - 2;
+  const sliceRad = (2 * Math.PI) / prizes.length;
+  const sliceDeg = 360 / prizes.length;
+
+  wheelCtx.clearRect(0, 0, size, size);
 
   prizes.forEach((p, i) => {
-    const start = i * sliceWidth;
-    const end = start + sliceWidth;
-    p._midAngle = start + sliceWidth / 2;
-    gradientParts.push(`${p.color} ${start}deg ${end}deg`);
+    const startRad = i * sliceRad - Math.PI / 2;
+    const endRad = startRad + sliceRad;
+    const midRad = startRad + sliceRad / 2;
+    p._midAngle = i * sliceDeg + sliceDeg / 2;
 
-    const labelEl = document.createElement('div');
-    labelEl.className = 'wheel-slice-label';
-    labelEl.style.transform = `rotate(${p._midAngle - 90}deg)`;
-    labelEl.innerHTML = `
-      <span class="wheel-slice-emoji-inline">${p.emoji}</span>
-      <span class="wheel-slice-text">${p.short || p.label}</span>
-    `;
-    wheelDiscEl.appendChild(labelEl);
+    // Dilim (kama şeklinde: merkezden dışa)
+    wheelCtx.beginPath();
+    wheelCtx.moveTo(cx, cy);
+    wheelCtx.arc(cx, cy, radius, startRad, endRad);
+    wheelCtx.closePath();
+    wheelCtx.fillStyle = p.color;
+    wheelCtx.fill();
+    wheelCtx.strokeStyle = 'rgba(255,255,255,0.65)';
+    wheelCtx.lineWidth = 2;
+    wheelCtx.stroke();
+
+    // Emoji (dış kenara yakın) + kısa etiket (iç tarafta), dilimin orta açısında radyal yazı
+    wheelCtx.save();
+    wheelCtx.translate(cx, cy);
+    wheelCtx.rotate(midRad);
+    wheelCtx.textAlign = 'center';
+    wheelCtx.textBaseline = 'middle';
+
+    wheelCtx.font = '22px "Segoe UI Emoji", "Apple Color Emoji", sans-serif';
+    wheelCtx.fillText(p.emoji, radius * 0.74, 0);
+
+    wheelCtx.font = '700 10.5px Inter, sans-serif';
+    wheelCtx.fillStyle = '#ffffff';
+    wheelCtx.shadowColor = 'rgba(0,0,0,0.55)';
+    wheelCtx.shadowBlur = 3;
+    wheelCtx.fillText(p.short || p.label, radius * 0.42, 0);
+
+    wheelCtx.restore();
   });
 
-  // İnce ayraç çizgileri: dilimleri birbirinden görsel olarak ayırmak için renk katmanının
-  // üstüne, her dilim sınırında ince beyaz bir çizgi bırakan ikinci bir conic-gradient.
-  const dividerGradient = `repeating-conic-gradient(from 0deg, transparent 0deg calc(${sliceWidth}deg - 1.5px), rgba(255,255,255,0.55) calc(${sliceWidth}deg - 1.5px) ${sliceWidth}deg)`;
-  wheelDiscEl.style.background = `${dividerGradient}, conic-gradient(from 0deg, ${gradientParts.join(', ')})`;
+  // Dış çerçeve çizgisi
+  wheelCtx.beginPath();
+  wheelCtx.arc(cx, cy, radius, 0, Math.PI * 2);
+  wheelCtx.strokeStyle = 'rgba(255,255,255,0.9)';
+  wheelCtx.lineWidth = 3;
+  wheelCtx.stroke();
 }
 
 function findMidAngle(prizeKey) {
@@ -87,7 +128,7 @@ function spinWheelTo(prizeKey) {
   const currentMod = ((currentRotation % 360) + 360) % 360;
   const delta = ((targetMod - currentMod) + 360) % 360;
   currentRotation += 8 * 360 + delta;
-  wheelDiscEl.style.transform = `rotate(${currentRotation}deg)`;
+  wheelCanvasEl.style.transform = `rotate(${currentRotation}deg)`;
 }
 
 // --- Geri sayım ---
