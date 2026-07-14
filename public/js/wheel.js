@@ -46,29 +46,34 @@ document.getElementById('logout-btn').addEventListener('click', async () => {
 });
 
 // --- Çarkı çiz (conic-gradient dilimler + emoji'ler) ---
+// Dilimler GÖRSEL olarak her zaman eşit boyutta (360° / ödül sayısı) — kazanma olasılığı
+// bununla ilgisiz, tamamen sunucudaki ağırlıklı seçime dayanıyor (bkz. spin-btn handler).
+// Çark sadece sunucunun döndürdüğü sonucun (eşit) diliminde durana kadar animasyonla döner.
 function buildWheel() {
-  const total = prizes.reduce((sum, p) => sum + p.weight, 0);
-  let cum = 0;
+  const sliceWidth = 360 / prizes.length;
   const gradientParts = [];
   wheelDiscEl.innerHTML = '';
 
-  prizes.forEach((p) => {
-    const width = (p.weight / total) * 360;
-    const start = cum;
-    const end = cum + width;
-    p._midAngle = start + width / 2;
+  prizes.forEach((p, i) => {
+    const start = i * sliceWidth;
+    const end = start + sliceWidth;
+    p._midAngle = start + sliceWidth / 2;
     gradientParts.push(`${p.color} ${start}deg ${end}deg`);
 
-    const emojiEl = document.createElement('span');
-    emojiEl.className = 'wheel-slice-emoji';
-    emojiEl.textContent = p.emoji;
-    emojiEl.style.transform = `rotate(${p._midAngle}deg) translate(0, -128px) rotate(${-p._midAngle}deg)`;
-    wheelDiscEl.appendChild(emojiEl);
-
-    cum = end;
+    const labelEl = document.createElement('div');
+    labelEl.className = 'wheel-slice-label';
+    labelEl.style.transform = `rotate(${p._midAngle - 90}deg)`;
+    labelEl.innerHTML = `
+      <span class="wheel-slice-emoji-inline">${p.emoji}</span>
+      <span class="wheel-slice-text">${p.short || p.label}</span>
+    `;
+    wheelDiscEl.appendChild(labelEl);
   });
 
-  wheelDiscEl.style.background = `conic-gradient(from 0deg, ${gradientParts.join(', ')})`;
+  // İnce ayraç çizgileri: dilimleri birbirinden görsel olarak ayırmak için renk katmanının
+  // üstüne, her dilim sınırında ince beyaz bir çizgi bırakan ikinci bir conic-gradient.
+  const dividerGradient = `repeating-conic-gradient(from 0deg, transparent 0deg calc(${sliceWidth}deg - 1.5px), rgba(255,255,255,0.55) calc(${sliceWidth}deg - 1.5px) ${sliceWidth}deg)`;
+  wheelDiscEl.style.background = `${dividerGradient}, conic-gradient(from 0deg, ${gradientParts.join(', ')})`;
 }
 
 function findMidAngle(prizeKey) {

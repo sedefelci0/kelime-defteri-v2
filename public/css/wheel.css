@@ -20,14 +20,17 @@
 }
 
 /* ===== Çark ===== */
+/* Dilimler artık HER ZAMAN eşit boyutta (360° / ödül sayısı) — sadece görsel amaçlı.
+   Kazanma olasılığı tamamen sunucudaki ağırlıklı seçime dayanıyor (wheel.js > spinWheelTo),
+   çark sadece o sonucun dilimine denk gelecek şekilde döndürülüyor. */
 .wheel-stage {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 32px;
-  width: 300px;
-  height: 300px;
+  width: 340px;
+  height: 340px;
 }
 
 .wheel-pointer {
@@ -43,8 +46,8 @@
 
 .wheel-outer {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 340px;
+  height: 340px;
   border-radius: 50%;
   border: 8px solid var(--paper-raised);
   box-shadow: 0 0 0 4px var(--moss-deep), 0 14px 40px rgba(0,0,0,0.25);
@@ -61,16 +64,35 @@
   will-change: transform;
 }
 
-.wheel-slice-emoji {
+/* Her dilimin etiketi: merkezden dışa doğru, dilimin orta açısına hizalı (radyal) —
+   dilimler eşit olduğu için her etiket için tutarlı, okunabilir bir alan var. */
+.wheel-slice-label {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 22px;
-  line-height: 1;
+  height: 22px;
+  width: 150px;
   margin-top: -11px;
-  margin-left: -11px;
-  transform-origin: 11px 11px;
+  transform-origin: 0 50%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-left: 40px;
   pointer-events: none;
+}
+.wheel-slice-emoji-inline {
+  font-size: 17px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.wheel-slice-text {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.45);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .wheel-center {
@@ -192,6 +214,6 @@
 }
 
 @media (max-width: 420px) {
-  .wheel-stage { transform: scale(0.82); margin-bottom: 8px; }
+  .wheel-stage { transform: scale(0.78); margin-bottom: -20px; }
   .wheel-page-title { font-size: 24px; }
 }
