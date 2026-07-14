@@ -164,23 +164,27 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
 
 // --- Öğrenci verisini sıfırlama ---
 
-// Bir öğrencinin quiz/sınav/çalışma süresi/konu özeti/kişisel cevap/boşluk doldurma/
-// notlar/günlük mücadele verisinin tamamını siler. Kelime desteleri, kullanıcı hesabı
-// ve şifresi ETKİLENMEZ — sadece ilerleme/aktivite verisi temizlenir.
-async function resetStudentData(client, userId) {
-  await client.query('DELETE FROM user_progress WHERE user_id = $1', [userId]);
-  await client.query('DELETE FROM exam_answer_stats WHERE user_id = $1', [userId]);
-  await client.query('UPDATE users SET total_study_seconds = 0 WHERE id = $1', [userId]);
-  await client.query('DELETE FROM topic_progress WHERE user_id = $1', [userId]);
-  await client.query('DELETE FROM topic_personal_answers WHERE user_id = $1', [userId]);
-  await client.query('DELETE FROM topic_fillblank_attempts WHERE user_id = $1', [userId]);
-  await client.query('DELETE FROM daily_stats WHERE user_id = $1', [userId]);
-  await client.query('DELETE FROM notes WHERE user_id = $1', [userId]);
-  await client.query('DELETE FROM daily_challenge_results WHERE user_id = $1', [userId]).catch(() => {});
-  await client.query('DELETE FROM daily_medals WHERE user_id = $1', [userId]).catch(() => {});
-  await client.query('DELETE FROM daily_champions WHERE user_id = $1', [userId]).catch(() => {});
-  await client.query('DELETE FROM wheel_spins WHERE user_id = $1', [userId]).catch(() => {});
-  await client.query('UPDATE users SET wheel_next_spin_at = NULL WHERE id = $1', [userId]).catch(() => {});
+// Bir veya birden çok öğrencinin quiz/sınav/çalışma süresi/konu özeti/kişisel cevap/
+// boşluk doldurma/notlar/günlük mücadele verisinin tamamını siler. Kelime desteleri,
+// kullanıcı hesabı ve şifresi ETKİLENMEZ — sadece ilerleme/aktivite verisi temizlenir.
+// Tek tek satır satır değil, tüm id'ler için TEK bir toplu sorgu (WHERE ... = ANY($1))
+// kullanılır — öğrenci sayısı arttıkça sorgu sayısı artmaz, "Tümünü Sıfırla" büyük
+// sınıflarda da zaman aşımına uğramadan çalışır.
+async function resetStudentsData(client, userIds) {
+  if (!userIds || userIds.length === 0) return;
+  await client.query('DELETE FROM user_progress WHERE user_id = ANY($1)', [userIds]);
+  await client.query('DELETE FROM exam_answer_stats WHERE user_id = ANY($1)', [userIds]);
+  await client.query('UPDATE users SET total_study_seconds = 0 WHERE id = ANY($1)', [userIds]);
+  await client.query('DELETE FROM topic_progress WHERE user_id = ANY($1)', [userIds]);
+  await client.query('DELETE FROM topic_personal_answers WHERE user_id = ANY($1)', [userIds]);
+  await client.query('DELETE FROM topic_fillblank_attempts WHERE user_id = ANY($1)', [userIds]);
+  await client.query('DELETE FROM daily_stats WHERE user_id = ANY($1)', [userIds]);
+  await client.query('DELETE FROM notes WHERE user_id = ANY($1)', [userIds]);
+  await client.query('DELETE FROM daily_challenge_results WHERE user_id = ANY($1)', [userIds]).catch(() => {});
+  await client.query('DELETE FROM daily_medals WHERE user_id = ANY($1)', [userIds]).catch(() => {});
+  await client.query('DELETE FROM daily_champions WHERE user_id = ANY($1)', [userIds]).catch(() => {});
+  await client.query('DELETE FROM wheel_spins WHERE user_id = ANY($1)', [userIds]).catch(() => {});
+  await client.query('UPDATE users SET wheel_next_spin_at = NULL WHERE id = ANY($1)', [userIds]).catch(() => {});
 }
 
 router.post('/students/:id/reset', requireAuth, requireOwner, async (req, res) => {
@@ -190,7 +194,7 @@ router.post('/students/:id/reset', requireAuth, requireOwner, async (req, res) =
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
-    await resetStudentData(client, id);
+    await resetStudentsData(client, [id]);
     await client.query('COMMIT');
     res.json({ ok: true });
   } catch (err) {
@@ -207,11 +211,10 @@ router.post('/students/reset-all', requireAuth, requireOwner, async (req, res) =
   try {
     await client.query('BEGIN');
     const { rows } = await client.query('SELECT id FROM users WHERE is_teacher = FALSE');
-    for (const r of rows) {
-      await resetStudentData(client, r.id);
-    }
+    const ids = rows.map((r) => r.id);
+    await resetStudentsData(client, ids);
     await client.query('COMMIT');
-    res.json({ ok: true, count: rows.length });
+    res.json({ ok: true, count: ids.length });
   } catch (err) {
     await client.query('ROLLBACK');
     console.error(err);

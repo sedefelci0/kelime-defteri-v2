@@ -218,8 +218,8 @@ document.getElementById('admin-panel-btn').addEventListener('click', () => {
         }).catch(() => {});
     }
 
-    // Ödül Çarkı butonu — öğretmen hesabı hariç herkes görebilir
-    if (!me.isOwner) {
+    // Ödül Çarkı butonu — herkese (öğretmen dahil) görünür, öğretmen de test/deneme amaçlı çevirebilir
+    {
       const wheelBtn = document.getElementById('wheel-btn');
       wheelBtn.style.display = '';
       wheelBtn.addEventListener('click', () => { window.location.href = '/wheel.html'; });
