@@ -260,41 +260,125 @@ document.getElementById('personal-answers-modal-close').addEventListener('click'
   personalAnswersModal.style.display = 'none';
 });
 
-// Konu Özetleri detay modalı (ünite bazında skor + boşluk doldurma denemeleri)
+// Konu Özetleri detay modalı — 3 görünüm: liste → ünite detay / boşluk doldurma detay
 const topicDetailModal = document.getElementById('topic-detail-modal');
 const topicDetailModalTitle = document.getElementById('topic-detail-modal-title');
 const topicDetailModalList = document.getElementById('topic-detail-modal-list');
+const topicDetailBackBtn = document.getElementById('topic-detail-back-btn');
+
+let topicModalStudent = null;
+
+function unitLabelFor(unit) {
+  return GRADE5_UNIT_NAMES[unit] ? `Ünite ${unit} — ${GRADE5_UNIT_NAMES[unit]}` : `Ünite ${unit}`;
+}
 
 function openTopicDetailModal(student) {
-  topicDetailModalTitle.textContent = `${student.displayName} — Konu Özetleri`;
+  topicModalStudent = student;
+  topicDetailBackBtn.style.display = 'none';
+  renderTopicModalList();
+  topicDetailModal.style.display = 'flex';
+}
+
+function renderTopicModalList() {
+  topicDetailBackBtn.style.display = 'none';
+  topicDetailBackBtn.onclick = null;
+  topicDetailModalTitle.textContent = `${topicModalStudent.displayName} — Konu Özetleri`;
   topicDetailModalList.innerHTML = '';
 
-  const sorted = [...student.topicProgressDetail].sort((a, b) => a.unit - b.unit);
+  const sorted = [...topicModalStudent.topicProgressDetail].sort((a, b) => a.unit - b.unit);
   sorted.forEach((t) => {
-    const div = document.createElement('div');
-    div.className = 'notes-modal-note';
-    const unitLabel = GRADE5_UNIT_NAMES[t.unit] ? `Ünite ${t.unit} — ${GRADE5_UNIT_NAMES[t.unit]}` : `Ünite ${t.unit}`;
     const pct = t.bestTotal > 0 ? Math.round((t.bestScore / t.bestTotal) * 100) : 0;
+    const row = document.createElement('button');
+    row.className = 'topic-modal-row';
+    row.type = 'button';
+    row.innerHTML = `
+      <div class="topic-modal-row-main">
+        <div class="topic-modal-row-title">${unitLabelFor(t.unit)}</div>
+        <div class="topic-modal-row-sub">${t.bestScore} / ${t.bestTotal} doğru · %${pct} · ${t.attempts} deneme</div>
+      </div>
+      <span class="topic-modal-row-arrow">›</span>
+    `;
+    row.addEventListener('click', () => renderTopicModalUnitDetail(t.unit));
+    topicDetailModalList.appendChild(row);
+  });
+
+  if (topicModalStudent.fillBlank) {
+    const fb = topicModalStudent.fillBlank;
+    const firstTryPct = fb.total > 0 ? Math.round((fb.firstTry / fb.total) * 100) : 0;
+    const row = document.createElement('button');
+    row.className = 'topic-modal-row topic-modal-row--fillblank';
+    row.type = 'button';
+    row.innerHTML = `
+      <div class="topic-modal-row-main">
+        <div class="topic-modal-row-title">📝 Boşluk Doldurma Özeti</div>
+        <div class="topic-modal-row-sub">${fb.total} soru · %${firstTryPct} ilk denemede · ort. ${fb.avgAttempts} deneme</div>
+      </div>
+      <span class="topic-modal-row-arrow">›</span>
+    `;
+    row.addEventListener('click', renderTopicModalFillBlankDetail);
+    topicDetailModalList.appendChild(row);
+  }
+
+  if (sorted.length === 0 && !topicModalStudent.fillBlank) {
+    topicDetailModalList.innerHTML = '<p class="q-empty-hint">Henüz konu özeti çözmemiş.</p>';
+  }
+}
+
+function renderTopicModalUnitDetail(unit) {
+  topicDetailBackBtn.style.display = '';
+  topicDetailBackBtn.onclick = renderTopicModalList;
+
+  const t = topicModalStudent.topicProgressDetail.find((x) => x.unit === unit);
+  const pct = t.bestTotal > 0 ? Math.round((t.bestScore / t.bestTotal) * 100) : 0;
+  topicDetailModalTitle.textContent = `${unitLabelFor(unit)} · ${t.bestScore}/${t.bestTotal} (%${pct})`;
+  topicDetailModalList.innerHTML = '';
+
+  const results = topicModalStudent.topicActivityResults
+    .filter((r) => r.unit === unit)
+    .sort((a, b) => a.index - b.index);
+
+  if (results.length === 0) {
+    topicDetailModalList.innerHTML = '<p class="q-empty-hint">Bu ünite için soru bazlı döküm kaydedilmemiş (eski bir sonuç olabilir).</p>';
+    return;
+  }
+
+  results.forEach((r, i) => {
+    const div = document.createElement('div');
+    div.className = `notes-modal-note ${r.isCorrect ? 'topic-q-correct' : 'topic-q-wrong'}`;
+    let attemptNote = '';
+    if (r.type === 'fill_blank') {
+      const fbEntry = (topicModalStudent.fillBlankDetail || []).find((f) => f.unit === unit && f.prompt === r.prompt);
+      if (fbEntry) attemptNote = ` · ${fbEntry.attempts}. denemede`;
+    }
     div.innerHTML = `
-      <div class="note-title">${unitLabel}</div>
-      <div class="note-content">${t.bestScore} / ${t.bestTotal} doğru (%${pct}) · ${t.attempts} deneme</div>
+      <div class="note-title">${r.isCorrect ? '✓' : '✗'} Soru ${i + 1}${attemptNote}</div>
+      <div class="note-content">${r.prompt}</div>
+      ${!r.isCorrect && r.explanation ? `<div class="note-date">${r.explanation}</div>` : ''}
     `;
     topicDetailModalList.appendChild(div);
   });
+}
 
-  if (student.fillBlank) {
-    const fb = student.fillBlank;
+function renderTopicModalFillBlankDetail() {
+  topicDetailBackBtn.style.display = '';
+  topicDetailBackBtn.onclick = renderTopicModalList;
+  topicDetailModalTitle.textContent = `${topicModalStudent.displayName} — Boşluk Doldurma`;
+  topicDetailModalList.innerHTML = '';
+
+  const entries = topicModalStudent.fillBlankDetail || [];
+  if (entries.length === 0) {
+    topicDetailModalList.innerHTML = '<p class="q-empty-hint">Henüz boşluk doldurma verisi yok.</p>';
+    return;
+  }
+  entries.forEach((e) => {
     const div = document.createElement('div');
-    div.className = 'notes-modal-note';
-    const firstTryPct = fb.total > 0 ? Math.round((fb.firstTry / fb.total) * 100) : 0;
+    div.className = `notes-modal-note ${e.attempts === 1 ? 'topic-q-correct' : ''}`;
     div.innerHTML = `
-      <div class="note-title">Boşluk Doldurma</div>
-      <div class="note-content">${fb.total} soru · %${firstTryPct} ilk denemede doğru · ortalama ${fb.avgAttempts} deneme</div>
+      <div class="note-title">${e.attempts === 1 ? '✓ İlk denemede doğru' : `${e.attempts}. denemede doğru`}</div>
+      <div class="note-content">${e.prompt}</div>
     `;
     topicDetailModalList.appendChild(div);
-  }
-
-  topicDetailModal.style.display = 'flex';
+  });
 }
 
 document.getElementById('topic-detail-modal-close').addEventListener('click', () => {
@@ -776,6 +860,21 @@ async function deleteQuestion(q) {
     alert(err.message || 'Soru silinemedi.');
   }
 }
+
+// --- Tüm popup'lar için: ESC ile kapatma + arka plana tıklayınca kapatma ---
+const ALL_MODALS = [notesModal, personalAnswersModal, topicDetailModal, wheelModal];
+
+document.addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape') return;
+  ALL_MODALS.forEach((m) => { if (m && m.style.display !== 'none') m.style.display = 'none'; });
+});
+
+ALL_MODALS.forEach((modal) => {
+  if (!modal) return;
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) modal.style.display = 'none';
+  });
+});
 
 (async function init() {
   try {

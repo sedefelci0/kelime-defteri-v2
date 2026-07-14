@@ -70,10 +70,11 @@ function updateProgress() {
   finishBtn.textContent = allScorableDone ? 'Skoru Gör' : 'Önce tüm soruları tamamla';
 }
 
-function markDone(index, correctPoints, totalPoints) {
+function markDone(index, correctPoints, totalPoints, extra) {
   activityMeta[index].done = true;
   activityMeta[index].correctPoints = correctPoints;
   activityMeta[index].points = totalPoints;
+  if (extra) Object.assign(activityMeta[index], extra);
   updateProgress();
 }
 
@@ -194,7 +195,7 @@ function renderMC(activity, index) {
         explanationEl.textContent = activity.explanation;
         explanationEl.hidden = false;
       }
-      markDone(index, isCorrect ? 1 : 0, 1);
+      markDone(index, isCorrect ? 1 : 0, 1, { explanation: !isCorrect ? (activity.explanation || null) : null });
     });
     optionsEl.appendChild(btn);
   });
@@ -236,7 +237,7 @@ function renderTF(activity, index) {
         explanationEl.textContent = activity.explanation;
         explanationEl.hidden = false;
       }
-      markDone(index, isCorrect ? 1 : 0, 1);
+      markDone(index, isCorrect ? 1 : 0, 1, { explanation: !isCorrect ? (activity.explanation || null) : null });
     });
     optionsEl.appendChild(btn);
   });
@@ -389,6 +390,12 @@ function scorablePointsFor(activity) {
   return 1;
 }
 
+function promptTextFor(activity) {
+  if (activity.type === 'tf') return activity.statement;
+  if (activity.type === 'matching') return 'Eşleştirme';
+  return activity.prompt || '';
+}
+
 function renderActivities() {
   listEl.innerHTML = '';
   activityMeta = activities.map((a) => ({
@@ -396,6 +403,9 @@ function renderActivities() {
     done: false,
     correctPoints: 0,
     points: scorablePointsFor(a),
+    activityType: a.type,
+    promptText: promptTextFor(a),
+    explanation: null,
   }));
 
   activities.forEach((activity, index) => {
@@ -411,10 +421,21 @@ finishBtn.addEventListener('click', async () => {
   const totalScore = activityMeta.reduce((sum, m) => sum + m.points, 0);
   const correctScore = activityMeta.reduce((sum, m) => sum + m.correctPoints, 0);
 
+  const details = activityMeta
+    .map((m, index) => ({ m, index }))
+    .filter(({ m }) => m.scorable)
+    .map(({ m, index }) => ({
+      index,
+      type: m.activityType,
+      prompt: m.promptText,
+      isCorrect: m.points > 0 ? m.correctPoints === m.points : true,
+      explanation: m.explanation || null,
+    }));
+
   finishBtn.disabled = true;
   try {
     if (totalScore > 0) {
-      await postJSON(`/api/topics/${deckSlug}/${unitParam}/complete`, { score: correctScore, total: totalScore });
+      await postJSON(`/api/topics/${deckSlug}/${unitParam}/complete`, { score: correctScore, total: totalScore, details });
     }
   } catch (err) {
     // Skor kaydedilemese bile öğrenciye sonucu göstermeye devam ederiz.

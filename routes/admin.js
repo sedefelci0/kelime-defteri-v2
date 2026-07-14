@@ -79,6 +79,17 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
        WHERE user_id = ANY($1) GROUP BY user_id`,
       [ids]
     );
+    const { rows: fillBlankRows } = await pool.query(
+      `SELECT user_id, unit, prompt, attempts FROM topic_fillblank_attempts
+       WHERE user_id = ANY($1) ORDER BY unit ASC, submitted_at DESC`,
+      [ids]
+    );
+    const { rows: activityResults } = await pool.query(
+      `SELECT user_id, unit, activity_index, activity_type, prompt, is_correct, explanation
+       FROM topic_activity_results
+       WHERE user_id = ANY($1) ORDER BY unit ASC, activity_index ASC`,
+      [ids]
+    );
     const { rows: wheelHistory } = await pool.query(
       `SELECT id, user_id, prize_key, prize_label, prize_tier, spun_at, given, given_at
        FROM wheel_spins
@@ -121,6 +132,23 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
         avgAttempts: f.avg_attempts !== null ? Number(f.avg_attempts) : null,
       };
     }
+    const fillBlankDetailByUser = {};
+    for (const f of fillBlankRows) {
+      if (!fillBlankDetailByUser[f.user_id]) fillBlankDetailByUser[f.user_id] = [];
+      fillBlankDetailByUser[f.user_id].push({ unit: f.unit, prompt: f.prompt, attempts: f.attempts });
+    }
+    const activityResultsByUser = {};
+    for (const r of activityResults) {
+      if (!activityResultsByUser[r.user_id]) activityResultsByUser[r.user_id] = [];
+      activityResultsByUser[r.user_id].push({
+        unit: r.unit,
+        index: r.activity_index,
+        type: r.activity_type,
+        prompt: r.prompt,
+        isCorrect: r.is_correct,
+        explanation: r.explanation,
+      });
+    }
     const wheelHistoryByUser = {};
     for (const w of wheelHistory) {
       if (!wheelHistoryByUser[w.user_id]) wheelHistoryByUser[w.user_id] = [];
@@ -150,6 +178,8 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
         topicAvgPercent: s.topic_avg_percent,
         topicProgressDetail: topicDetailByUser[s.id] || [],
         fillBlank: fillBlankByUser[s.id] || null,
+        fillBlankDetail: fillBlankDetailByUser[s.id] || [],
+        topicActivityResults: activityResultsByUser[s.id] || [],
         notes: notesByUser[s.id] || [],
         personalAnswers: personalAnswersByUser[s.id] || [],
         wheelNextSpinAt: s.wheel_next_spin_at,
@@ -178,6 +208,7 @@ async function resetStudentsData(client, userIds) {
   await client.query('DELETE FROM topic_progress WHERE user_id = ANY($1)', [userIds]);
   await client.query('DELETE FROM topic_personal_answers WHERE user_id = ANY($1)', [userIds]);
   await client.query('DELETE FROM topic_fillblank_attempts WHERE user_id = ANY($1)', [userIds]);
+  await client.query('DELETE FROM topic_activity_results WHERE user_id = ANY($1)', [userIds]).catch(() => {});
   await client.query('DELETE FROM daily_stats WHERE user_id = ANY($1)', [userIds]);
   await client.query('DELETE FROM notes WHERE user_id = ANY($1)', [userIds]);
   await client.query('DELETE FROM daily_challenge_results WHERE user_id = ANY($1)', [userIds]).catch(() => {});

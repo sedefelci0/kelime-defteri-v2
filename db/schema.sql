@@ -169,4 +169,23 @@ CREATE TABLE IF NOT EXISTS wheel_spins (
 );
 CREATE INDEX IF NOT EXISTS idx_wheel_spins_user ON wheel_spins(user_id, spun_at DESC);
 
+-- Konu Özetleri ünite detay popup'ı için: bir çevirmede her tek tek aktivitenin (çoktan
+-- seçmeli/doğru-yanlış/boşluk doldurma/eşleştirme) doğru mu yanlış mı yapıldığı. Her
+-- ünite gönderiminde o ünitenin aktivite_index'leri ON CONFLICT ile üzerine yazılır —
+-- yani her zaman en SON denemenin soru bazlı dökümü saklanır (best_score'un aksine).
+CREATE TABLE IF NOT EXISTS topic_activity_results (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  deck_slug TEXT NOT NULL,
+  unit INTEGER NOT NULL,
+  activity_index INTEGER NOT NULL,
+  activity_type TEXT NOT NULL,
+  prompt TEXT NOT NULL,
+  is_correct BOOLEAN NOT NULL,
+  explanation TEXT,
+  recorded_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  UNIQUE (user_id, deck_slug, unit, activity_index)
+);
+CREATE INDEX IF NOT EXISTS idx_topic_activity_results_user ON topic_activity_results(user_id, deck_slug, unit);
+
 -- Oturum (session) verisi için connect-pg-simple bu tabloyu kendisi oluşturur (session.sql ile)

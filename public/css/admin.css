@@ -545,6 +545,48 @@
   border-radius: 10px;
 }
 
+/* Konu Özetleri popup — geri butonu */
+.modal-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border: none;
+  background: transparent;
+  color: var(--moss-deep, #324b3e);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.modal-back-btn:hover { background: rgba(74,107,90,0.08); }
+
+/* Konu Özetleri ana liste — tıklanabilir ünite/boşluk doldurma satırları */
+.topic-modal-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  background: #FAFAF9;
+  border: 1px solid #E8E4DC;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.12s, border-color 0.12s;
+}
+.topic-modal-row:hover { background: #F2F0FB; border-color: var(--deck-purple-accent, #7C6CE0); }
+.topic-modal-row--fillblank { background: #FFF7EA; border-color: #F0DDB0; }
+.topic-modal-row-title { font-size: 14px; font-weight: 600; color: var(--ink, #1a1a2e); }
+.topic-modal-row-sub { font-size: 12px; color: var(--muted, #6b6b80); margin-top: 3px; }
+.topic-modal-row-arrow { font-size: 20px; color: var(--muted, #6b6b80); flex-shrink: 0; }
+
+/* Ünite detay — soru bazlı doğru/yanlış */
+.topic-q-correct { border-left: 4px solid var(--deck-green-accent, #2D9B6F); }
+.topic-q-wrong { border-left: 4px solid var(--clay, #b5563a); background: #FBEEE8; }
+
 .note-title { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
 .note-content { font-size: 13.5px; color: var(--ink, #1a1a2e); white-space: pre-wrap; line-height: 1.5; }
 .note-date { font-size: 11.5px; color: var(--muted, #6b6b80); margin-top: 6px; }

@@ -56,7 +56,7 @@ router.get('/:deckSlug/progress', requireAuth, async (req, res) => {
 router.post('/:deckSlug/:unit/complete', requireAuth, async (req, res) => {
   try {
     const unit = Number(req.params.unit);
-    const { score, total } = req.body || {};
+    const { score, total, details } = req.body || {};
     if (!Number.isInteger(unit)) return res.status(400).json({ error: 'Geçersiz ünite.' });
     if (!Number.isInteger(score) || !Number.isInteger(total) || total <= 0 || score < 0 || score > total) {
       return res.status(400).json({ error: 'Geçersiz skor.' });
@@ -76,6 +76,29 @@ router.post('/:deckSlug/:unit/complete', requireAuth, async (req, res) => {
        RETURNING best_score, best_total, attempts`,
       [req.session.userId, req.params.deckSlug, unit, score, total]
     );
+
+    // Soru bazlı doğru/yanlış dökümü — admin panelindeki ünite detay popup'ı için.
+    // Her gönderim önceki denemenin dökümünü ezer (en son deneme gösterilir).
+    if (Array.isArray(details)) {
+      for (const d of details) {
+        if (!d || !Number.isInteger(d.index) || !d.type || !d.prompt || typeof d.isCorrect !== 'boolean') continue;
+        await pool.query(
+          `INSERT INTO topic_activity_results (user_id, deck_slug, unit, activity_index, activity_type, prompt, is_correct, explanation, recorded_at)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, now())
+           ON CONFLICT (user_id, deck_slug, unit, activity_index) DO UPDATE SET
+             activity_type = EXCLUDED.activity_type,
+             prompt = EXCLUDED.prompt,
+             is_correct = EXCLUDED.is_correct,
+             explanation = EXCLUDED.explanation,
+             recorded_at = now()`,
+          [
+            req.session.userId, req.params.deckSlug, unit, d.index, String(d.type).slice(0, 40),
+            String(d.prompt).slice(0, 500), d.isCorrect,
+            d.explanation ? String(d.explanation).slice(0, 1000) : null,
+          ]
+        ).catch(() => {});
+      }
+    }
 
     res.json({
       bestScore: rows[0].best_score,
