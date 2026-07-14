@@ -46,28 +46,30 @@ document.getElementById('logout-btn').addEventListener('click', async () => {
   window.location.href = '/';
 });
 
-// --- Çarkı Canvas ile çiz ---
+// --- Çarkı Canvas ile çiz (sadece emoji — metin yok) ---
 // Dilimler GÖRSEL olarak her zaman eşit boyutta (360° / ödül sayısı) — kazanma olasılığı
 // bununla ilgisiz, tamamen sunucudaki ağırlıklı seçime dayanıyor (bkz. doSpin). Çark sadece
 // sunucunun döndürdüğü sonucun (eşit) diliminde durana kadar CSS transition ile döner —
 // canvas da normal bir DOM elemanı olduğu için transform/transition sorunsuz çalışır.
+//
+// Canvas'ın GERÇEK render boyutu getBoundingClientRect() ile ölçülüyor (sabit bir sayı
+// varsaymak yerine) — bu fonksiyon artık #wheel-content görünür olduktan SONRA çağrılıyor
+// (bkz. init()), aksi halde display:none iken ölçüm 0 çıkar ve çark yamulurdu.
 //
 // Canvas açı sistemi: 0 rad = saat 3 yönü, açı arttıkça saat yönünde döner (y ekseni aşağı
 // baktığı için). Dilim 0'ı üstten (saat 12, -90°) başlatıp saat yönünde ilerletiyoruz —
 // böylece p._midAngle (derece, üstten saat yönünde) eski conic-gradient ile aynı sözleşmeyi
 // korur ve spinWheelTo'nun açı hesabı değişmeden çalışır.
 function buildWheel() {
-  const size = 340;
+  const size = wheelCanvasEl.getBoundingClientRect().width;
   const dpr = window.devicePixelRatio || 1;
   wheelCanvasEl.width = size * dpr;
   wheelCanvasEl.height = size * dpr;
-  wheelCanvasEl.style.width = `${size}px`;
-  wheelCanvasEl.style.height = `${size}px`;
   wheelCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
   const cx = size / 2;
   const cy = size / 2;
-  const radius = size / 2 - 2;
+  const radius = size / 2;
   const sliceRad = (2 * Math.PI) / prizes.length;
   const sliceDeg = 360 / prizes.length;
 
@@ -90,31 +92,16 @@ function buildWheel() {
     wheelCtx.lineWidth = 2;
     wheelCtx.stroke();
 
-    // Emoji (dış kenara yakın) + kısa etiket (iç tarafta), dilimin orta açısında radyal yazı
+    // Sadece emoji — dilimin orta açısında, dış kenara yakın
     wheelCtx.save();
     wheelCtx.translate(cx, cy);
     wheelCtx.rotate(midRad);
     wheelCtx.textAlign = 'center';
     wheelCtx.textBaseline = 'middle';
-
-    wheelCtx.font = '22px "Segoe UI Emoji", "Apple Color Emoji", sans-serif';
-    wheelCtx.fillText(p.emoji, radius * 0.74, 0);
-
-    wheelCtx.font = '700 10.5px Inter, sans-serif';
-    wheelCtx.fillStyle = '#ffffff';
-    wheelCtx.shadowColor = 'rgba(0,0,0,0.55)';
-    wheelCtx.shadowBlur = 3;
-    wheelCtx.fillText(p.short || p.label, radius * 0.42, 0);
-
+    wheelCtx.font = `${Math.round(radius * 0.17)}px "Segoe UI Emoji", "Apple Color Emoji", sans-serif`;
+    wheelCtx.fillText(p.emoji, radius * 0.68, 0);
     wheelCtx.restore();
   });
-
-  // Dış çerçeve çizgisi
-  wheelCtx.beginPath();
-  wheelCtx.arc(cx, cy, radius, 0, Math.PI * 2);
-  wheelCtx.strokeStyle = 'rgba(255,255,255,0.9)';
-  wheelCtx.lineWidth = 3;
-  wheelCtx.stroke();
 }
 
 function findMidAngle(prizeKey) {
@@ -242,11 +229,13 @@ async function init() {
   try {
     await getJSON('/api/auth/me');
     prizes = await getJSON('/api/wheel/prizes');
-    buildWheel();
-
     const status = await getJSON('/api/wheel/status');
+
     loadingEl.style.display = 'none';
     contentEl.style.display = '';
+    // Çark ancak konteyner görünür olduktan (display:none kalkınca) sonra çizilmeli,
+    // yoksa getBoundingClientRect() 0 döner ve çark yamulur/taşar.
+    buildWheel();
 
     if (status.canSpin) {
       showReadyState();

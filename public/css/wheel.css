@@ -54,21 +54,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden; /* güvenlik: hiçbir çizim daire sınırını taşmasın */
+  box-sizing: border-box;
 }
 
-/* Çark artık <canvas> ile çiziliyor (bkz. wheel.js > buildWheel) — dilimler, renkler,
-   emoji ve etiketler tamamen Canvas API ile piksel piksel çiziliyor. Dönüş animasyonu
-   yine CSS transform/transition ile yapılıyor (canvas da normal bir DOM elemanı). */
+/* Çark <canvas> ile çiziliyor (bkz. wheel.js > buildWheel). Kasıtlı olarak position:absolute
+   + inset KULLANMIYORUZ — bu, önceki sürümde canvas'ın CSS kutusuyla iç çizim tamponunun
+   boyutu çakışıp şeklin yamulmasına/taşmasına sebep oluyordu. Bunun yerine canvas normal bir
+   flex-child: width/height %100 ile ebeveynin (border hariç) iç alanını tam ve tutarlı dolduruyor. */
 .wheel-disc {
-  position: absolute;
-  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   transition: transform 4.5s cubic-bezier(0.16, 1, 0.3, 1); /* easeOutExpo: hızlı başlar, yumuşak yavaşlar */
   will-change: transform;
 }
 
 .wheel-center {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 5;
   width: 56px;
   height: 56px;
