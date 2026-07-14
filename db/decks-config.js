@@ -34,6 +34,16 @@ module.exports = [
     hasExplanation: false,
     sortOrder: 2,
     wordsFile: '../data/grade5_words.json',
+    unitNames: {
+      1: 'Okul Hayatı',
+      2: 'Sınıf Hayatı',
+      3: 'Kişisel Hayat',
+      4: 'Aile Hayatı',
+      5: 'Mahalle ve Şehir Hayatı',
+      6: 'Dünyada Hayat',
+      7: 'Doğada Hayat',
+      8: 'Evren ve Gelecekte Hayat',
+    },
   },
   {
     slug: '8-sinif',

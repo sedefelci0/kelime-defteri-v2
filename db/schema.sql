@@ -104,4 +104,20 @@ CREATE TABLE IF NOT EXISTS notes (
 );
 CREATE INDEX IF NOT EXISTS idx_notes_user ON notes(user_id, updated_at DESC);
 
+-- Konu Özetleri: bir kullanıcının bir destenin bir ünitesindeki interaktif aktivite
+-- setini (gramer/soru-cevap alıştırmaları) en iyi ve son skoru. words/user_progress'ten
+-- ayrı tutulur çünkü kelime kartı ilerlemesiyle ilgisi yok.
+CREATE TABLE IF NOT EXISTS topic_progress (
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  deck_slug TEXT NOT NULL,
+  unit INTEGER NOT NULL,
+  best_score INTEGER NOT NULL,
+  best_total INTEGER NOT NULL,
+  last_score INTEGER NOT NULL,
+  last_total INTEGER NOT NULL,
+  attempts INTEGER NOT NULL DEFAULT 1,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  PRIMARY KEY (user_id, deck_slug, unit)
+);
+
 -- Oturum (session) verisi için connect-pg-simple bu tabloyu kendisi oluşturur (session.sql ile)

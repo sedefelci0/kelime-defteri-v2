@@ -96,6 +96,23 @@ Yeni kelimeler eklemek istediğinde excel dosyasını tekrar bana gönder, ben `
 1. GitHub'da `data/words.json` dosyasını yeni haliyle değiştirirsin (dosyaya tıkla → kalem ikonu → içeriği değiştir → Commit),
 2. Render Shell'den şunu çalıştırırsın: `node -e "require('./scripts/setup-db')"` — ama bu sadece tablo boşsa kelime ekler, mevcut ilerlemeni bozmaz. İstersen bu adımı senin için otomatikleştiren ayrı bir "kelime ekle" komutu da hazırlayabilirim.
 
+## 5. Sınıf Ünite 2-8 ve Konu Özetleri Nasıl Devreye Alınır
+
+5. Sınıf destesine Ünite 2-8'in kelimeleri ve her ünite için "Konu Özetleri" bölümü (interaktif alıştırmalar) eklendi. Bunların canlı siteye yansıması için, GitHub'a yükledikten sonra **tek seferlik** şu adımı yapman gerekiyor (Ünite 1 zaten dolu olduğu için normal `npm run setup-db` yeni üniteleri atlar):
+
+1. Değişiklikleri her zamanki gibi GitHub'a yükle (Commit changes).
+2. Render'ın otomatik olarak yeni kodu yayınlamasını bekle (Render panelinde "Deploying" yazısı biter, "Live" olur).
+3. Render panelinde web servisinin **"Shell"** sekmesine git.
+4. Şunu yaz ve Enter'a bas:
+   ```
+   node scripts/sync-grade5-words.js
+   ```
+5. Her ünite için "X kelime eklendi" satırlarını görmelisin. Bu script sadece eksik olan üniteleri ekler, mevcut öğrenci ilerlemesine dokunmaz — güvenle tekrar da çalıştırabilirsin.
+
+Konu Özetleri bölümü için ekstra bir adım gerekmiyor — veritabanı şeması (`topic_progress` tablosu) sunucu her açıldığında otomatik oluşturulur.
+
+**Not:** Ünite 4 (Aile Hayatı) ve Ünite 6 (Dünyada Hayat) için kaynak PDF'lerinde konu özeti/gramer içeriği bulunmadığından, bu iki ünitede öğrenciler "Yakında eklenecek" mesajı görecek — kelime kartları bu ünitelerde de tam ve çalışır durumda.
+
 ## Bir Sorun Olursa
 
 Render'daki web servisinin **"Logs"** sekmesinde hata mesajlarını görebilirsin. Oradaki kırmızı satırı bana yapıştır, birlikte çözeriz.

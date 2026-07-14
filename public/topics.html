@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kelime Defteri — Konu Özetleri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/study.css" />
+<link rel="stylesheet" href="/css/topics.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a href="/decks.html" class="navbar-home-link">
+      <span class="navbar-icon">📚</span>
+      <span class="navbar-title">Kelime Defteri</span>
+    </a>
+  </div>
+  <div class="navbar-actions">
+    <button class="navbar-link" id="back-btn" type="button">← Ünitelere dön</button>
+    <button class="navbar-link navbar-logout" id="logout-btn" type="button">Çıkış yap</button>
+  </div>
+</nav>
+
+<main class="topics-page">
+  <div id="loading" class="loading-state">Yükleniyor…</div>
+
+  <div id="coming-soon" class="coming-soon-state" style="display:none;">
+    <div class="coming-soon-emoji">🚧</div>
+    <h2>Bu ünite için konu özeti yakında eklenecek</h2>
+    <p>Şimdilik bu ünitenin kelime kartlarını çalışabilirsin.</p>
+    <button class="btn btn-primary" id="coming-soon-back" type="button">Ünitelere dön</button>
+  </div>
+
+  <div id="topics-content" style="display:none;">
+    <div class="topics-header">
+      <span class="topics-eyebrow">Konu Özeti</span>
+      <h1 id="topics-title" class="topics-title"></h1>
+    </div>
+
+    <div id="activities-list" class="activities-list"></div>
+
+    <div id="finish-zone" class="finish-zone">
+      <button class="btn btn-primary btn-block" id="finish-btn" type="button">Skoru Gör</button>
+    </div>
+
+    <div id="score-result" class="score-result" style="display:none;">
+      <div class="score-result-emoji" id="score-emoji">🎉</div>
+      <h2 id="score-title"></h2>
+      <p id="score-detail"></p>
+      <div class="score-result-buttons">
+        <button class="btn btn-secondary" id="score-back-btn" type="button">Ünitelere dön</button>
+        <button class="btn btn-primary" id="score-retry-btn" type="button">Tekrar Dene</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="progress-pill" id="progress-pill" style="display:none;">
+  <span id="progress-pill-text">0 / 0 tamamlandı</span>
+</div>
+
+<script src="/js/topics.js"></script>
+</body>
+</html>

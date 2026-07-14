@@ -34,12 +34,20 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
               COALESCE(SUM(up.times_correct), 0)::int AS quiz_correct,
               COALESCE(SUM(up.times_wrong), 0)::int AS quiz_wrong,
               COALESCE(eas.correct_count, 0)::int AS exam_correct,
-              COALESCE(eas.wrong_count, 0)::int AS exam_wrong
+              COALESCE(eas.wrong_count, 0)::int AS exam_wrong,
+              COALESCE(tp.units_completed, 0)::int AS topic_units_completed,
+              tp.avg_percent AS topic_avg_percent
        FROM users u
        LEFT JOIN user_progress up ON up.user_id = u.id
        LEFT JOIN exam_answer_stats eas ON eas.user_id = u.id
+       LEFT JOIN (
+         SELECT user_id, COUNT(*)::int AS units_completed,
+                ROUND(AVG(best_score::numeric / NULLIF(best_total, 0)) * 100)::int AS avg_percent
+         FROM topic_progress
+         GROUP BY user_id
+       ) tp ON tp.user_id = u.id
        ${classWhere}
-       GROUP BY u.id, eas.correct_count, eas.wrong_count
+       GROUP BY u.id, eas.correct_count, eas.wrong_count, tp.units_completed, tp.avg_percent
        ORDER BY u.class_name ASC, u.display_name ASC`,
       params
     );
@@ -70,6 +78,8 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
         quizWrong: s.quiz_wrong,
         examCorrect: s.exam_correct,
         examWrong: s.exam_wrong,
+        topicUnitsCompleted: s.topic_units_completed,
+        topicAvgPercent: s.topic_avg_percent,
         notes: notesByUser[s.id] || [],
       }))
     );

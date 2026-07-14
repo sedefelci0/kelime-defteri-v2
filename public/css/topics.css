@@ -1,0 +1,234 @@
+.topics-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 20px 120px;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 80px 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* ===== Yakında ===== */
+.coming-soon-state {
+  max-width: 480px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+.coming-soon-emoji { font-size: 56px; margin-bottom: 16px; }
+.coming-soon-state h2 { font-size: 22px; margin-bottom: 10px; }
+.coming-soon-state p { color: var(--muted); margin-bottom: 24px; line-height: 1.6; }
+
+/* ===== Başlık ===== */
+.topics-header { text-align: center; margin-bottom: 32px; }
+.topics-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--deck-orange-accent);
+  background: var(--deck-orange);
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+.topics-title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* ===== Aktivite listesi ===== */
+.activities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.activity-card {
+  background: var(--paper-raised);
+  border: 1.5px solid var(--rule);
+  border-radius: 16px;
+  padding: 24px 22px;
+  box-shadow: var(--shadow);
+}
+
+.activity-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 11px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.activity-badge-personal { background: var(--deck-green); color: var(--deck-green-accent); }
+.activity-badge-mc       { background: var(--deck-purple); color: var(--deck-purple-accent); }
+.activity-badge-tf       { background: var(--deck-yellow); color: var(--deck-yellow-accent); }
+.activity-badge-fill     { background: var(--deck-orange); color: var(--deck-orange-accent); }
+.activity-badge-matching { background: rgba(74,107,90,0.14); color: var(--moss-deep); }
+
+.activity-question {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.activity-question-tr {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.activity-explanation {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* Çoktan seçmeli / Doğru-Yanlış: quiz-option sınıfını yeniden kullanır (study.css) */
+.activity-mc-options { grid-template-columns: 1fr; margin-top: 14px; }
+.activity-tf-options { grid-template-columns: 1fr 1fr; margin-top: 14px; }
+.activity-option { text-align: left; padding: 14px 16px; font-size: 15px; }
+.activity-tf-options .activity-option { text-align: center; }
+
+/* ===== Kişisel soru ===== */
+.activity-personal .activity-question { margin-top: 4px; }
+.personal-answer-input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1.5px solid var(--rule);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  resize: vertical;
+  margin-bottom: 12px;
+}
+.personal-answer-input:focus { outline: none; border-color: var(--moss); }
+.model-answer {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: var(--deck-green);
+  border-radius: 10px;
+}
+.model-answer-en { font-weight: 600; color: var(--deck-green-accent); margin-bottom: 4px; }
+.model-answer-tr { font-size: 13px; color: var(--moss-deep); }
+
+/* ===== Boşluk doldurma ===== */
+.fill-blank-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+.fill-blank-input {
+  flex: 1;
+  min-width: 0;
+  border: 1.5px solid var(--rule);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 16px;
+  font-family: var(--font-mono);
+  color: var(--ink);
+  background: var(--paper);
+}
+.fill-blank-input:focus { outline: none; border-color: var(--moss); }
+.fill-blank-input.is-correct { border-color: var(--moss-deep); background: rgba(74,107,90,0.06); }
+.fill-blank-input.is-wrong { border-color: var(--clay); animation: shake 0.3s; }
+@keyframes shake {
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+.fill-blank-feedback {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.fill-blank-feedback.is-correct { color: var(--moss-deep); }
+.fill-blank-feedback.is-wrong { color: var(--clay-deep); }
+
+/* ===== Eşleştirme ===== */
+.matching-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 14px;
+}
+.matching-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.matching-item {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1.5px solid var(--rule);
+  background: var(--paper);
+  font-size: 14px;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s, transform 0.12s;
+}
+.matching-item:hover:not(.is-matched) { border-color: var(--moss); }
+.matching-item.is-selected { border-color: var(--moss-deep); background: rgba(74,107,90,0.1); }
+.matching-item.is-matched {
+  border-color: var(--moss-deep);
+  background: var(--moss-deep);
+  color: var(--paper);
+  cursor: default;
+}
+.matching-item.is-wrong-flash { border-color: var(--clay); background: rgba(181,86,58,0.1); }
+
+/* ===== Bitirme / Skor ===== */
+.finish-zone { margin-top: 32px; }
+.finish-zone .btn { padding: 16px 0; font-size: 16px; }
+
+.score-result {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 20px;
+  background: var(--paper-raised);
+  border: 1.5px solid var(--rule);
+  border-radius: 16px;
+}
+.score-result-emoji { font-size: 56px; margin-bottom: 12px; }
+.score-result h2 { font-size: 28px; margin-bottom: 8px; }
+.score-result p { color: var(--muted); margin-bottom: 24px; }
+.score-result-buttons { display: flex; gap: 12px; justify-content: center; }
+
+/* ===== İlerleme baloncuğu ===== */
+.progress-pill {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--moss-deep);
+  color: var(--paper);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  z-index: 40;
+}
+
+@media (max-width: 560px) {
+  .matching-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .matching-item { font-size: 13px; padding: 10px; }
+  .activity-tf-options { grid-template-columns: 1fr 1fr; }
+  .topics-title { font-size: 22px; }
+  .activity-question { font-size: 16px; }
+}

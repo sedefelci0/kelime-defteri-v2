@@ -1,0 +1,793 @@
+{
+  "5-sinif": {
+    "1": {
+      "theme": "Okul Hayatı",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What is your name?",
+          "questionTr": "Adın nedir?",
+          "modelAnswer": "My name is Fatih.",
+          "modelAnswerTr": "Benim adım Fatih."
+        },
+        {
+          "type": "personal",
+          "question": "Where are you from?",
+          "questionTr": "Nerelisin?",
+          "modelAnswer": "I'm from Türkiye.",
+          "modelAnswerTr": "Ben Türkiye'denim."
+        },
+        {
+          "type": "personal",
+          "question": "How are you?",
+          "questionTr": "Nasılsın?",
+          "modelAnswer": "Fine, thanks and you?",
+          "modelAnswerTr": "İyiyim, teşekkürler, ya sen?"
+        },
+        {
+          "type": "personal",
+          "question": "What is your favourite school club?",
+          "questionTr": "En sevdiğin okul kulübü nedir?",
+          "modelAnswer": "My favourite school club is music.",
+          "modelAnswerTr": "En sevdiğim okul kulübü müziktir."
+        },
+        {
+          "type": "personal",
+          "question": "What is your favourite school subject?",
+          "questionTr": "En sevdiğin okul dersi nedir?",
+          "modelAnswer": "My favourite school subject is Science.",
+          "modelAnswerTr": "Benim en sevdiğim ders Fen'dir."
+        },
+        {
+          "type": "personal",
+          "question": "Who is your best friend?",
+          "questionTr": "En iyi arkadaşın kimdir?",
+          "modelAnswer": "My best friend is Erkan.",
+          "modelAnswerTr": "Benim en iyi arkadaşım Erkan'dır."
+        },
+        {
+          "type": "personal",
+          "question": "Who is your English teacher?",
+          "questionTr": "İngilizce öğretmenin kimdir?",
+          "modelAnswer": "My English teacher is Tülin.",
+          "modelAnswerTr": "Benim İngilizce öğretmenim Tülin'dir."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "She ______ (love) science club.",
+          "answer": "loves"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ahmet ______ (like) music.",
+          "answer": "likes"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Zeynep ______ (enjoy) maths club.",
+          "answer": "enjoys"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "We ______ (enjoy) maths club.",
+          "answer": "enjoy"
+        },
+        {
+          "type": "mc",
+          "prompt": "'Okul üniformanı giymelisin.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "You must wear your school uniform.",
+            "You mustn't wear your school uniform.",
+            "You can wear your school uniform.",
+            "You wear your school uniform sometimes."
+          ],
+          "correctIndex": 0,
+          "explanation": "'must' zorunluluk bildirir, yani 'yapmalısın' anlamına gelir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Koridorlarda koşmamalısın.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "You must run in the corridors.",
+            "You mustn't run in the corridors.",
+            "You can run in the corridors.",
+            "You don't run in the corridors."
+          ],
+          "correctIndex": 1,
+          "explanation": "Yapılmaması gerekenler 'mustn't' ile anlatılır."
+        },
+        {
+          "type": "tf",
+          "statement": "'You can't shout in class.' cümlesi 'Sınıfta bağırabilirsin.' anlamına gelir.",
+          "correct": false,
+          "explanation": "'can't' yapamamak demektir, doğrusu: 'Sınıfta bağıramazsın.'"
+        },
+        {
+          "type": "tf",
+          "statement": "'You must keep your classroom clean.' cümlesi 'Sınıfını temiz tutmalısın.' anlamına gelir.",
+          "correct": true
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "What is your name?",
+              "tr": "Adın nedir?"
+            },
+            {
+              "en": "Where are you from?",
+              "tr": "Nerelisin?"
+            },
+            {
+              "en": "How are you?",
+              "tr": "Nasılsın?"
+            },
+            {
+              "en": "Who is your best friend?",
+              "tr": "En iyi arkadaşın kimdir?"
+            },
+            {
+              "en": "What is your favourite school subject?",
+              "tr": "En sevdiğin okul dersi nedir?"
+            }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "theme": "Sınıf Hayatı",
+      "activities": [
+        {
+          "type": "tf",
+          "statement": "'Is there a book on the desk?' sorusunun Türkçesi 'Sırada kitap var mı?'dır.",
+          "correct": true
+        },
+        {
+          "type": "mc",
+          "prompt": "'Sıranın üstünde kaç tane kitap var?' sorusunun İngilizcesi hangisidir?",
+          "options": [
+            "How many books are there on the desk?",
+            "Where is the book on the desk?",
+            "What is the book on the desk?",
+            "Is there a book on the desk?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "personal",
+          "question": "What is your favourite school subject?",
+          "questionTr": "En sevdiğin okul dersi nedir?",
+          "modelAnswer": "My favourite school subject is english.",
+          "modelAnswerTr": "En sevdiğim okul dersi İngilizcedir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Kalemini ödünç verir misin?' sorusuna doğal cevap hangisidir?",
+          "options": [
+            "Of course. Here you are.",
+            "I don't know.",
+            "It is Monday.",
+            "There are five."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "3:00 → It is three ______.",
+          "answer": "o'clock"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "2:30 → It is ______ past two.",
+          "answer": "half"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "12:15 → It is ______ past twelve.",
+          "answer": "quarter"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "12:45 → It is quarter ______ one.",
+          "answer": "to"
+        },
+        {
+          "type": "mc",
+          "prompt": "07:20 nasıl okunur?",
+          "options": [
+            "It is twenty past seven.",
+            "It is twenty to seven.",
+            "It is seven o'clock.",
+            "It is quarter past seven."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "06:55 nasıl okunur?",
+          "options": [
+            "It is five to seven.",
+            "It is five past six.",
+            "It is six o'clock.",
+            "It is half past six."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "It is three o'clock",
+              "tr": "3:00"
+            },
+            {
+              "en": "It is half past four",
+              "tr": "4:30"
+            },
+            {
+              "en": "It is quarter past two",
+              "tr": "2:15"
+            },
+            {
+              "en": "It is quarter to four",
+              "tr": "3:45"
+            },
+            {
+              "en": "It is ten past four",
+              "tr": "4:10"
+            }
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "23 → ______",
+          "answer": "twenty-three"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "45 → ______",
+          "answer": "forty-five"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "68 → ______",
+          "answer": "sixty-eight"
+        },
+        {
+          "type": "tf",
+          "statement": "'Is there a music lesson on Monday?' sorusuna evet cevabı 'Yes, there is a music lesson on Monday.' şeklindedir.",
+          "correct": true
+        },
+        {
+          "type": "mc",
+          "prompt": "'Beden eğitimi dersi onbir buçukta başlıyor.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "It starts at half past eleven.",
+            "It starts at quarter past eleven.",
+            "It starts at eleven o'clock.",
+            "It starts at quarter to eleven."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "How many art lessons are there in a week?",
+              "tr": "Bir haftada kaç tane resim dersi var?"
+            },
+            {
+              "en": "What is your favourite school subject?",
+              "tr": "En sevdiğin okul dersi nedir?"
+            },
+            {
+              "en": "When is the science lesson?",
+              "tr": "Fen bilimleri dersi ne zaman?"
+            }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "theme": "Kişisel Hayat",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What do you wear in cold weather?",
+          "questionTr": "Soğuk havalarda ne giyersin?",
+          "modelAnswer": "I wear a jumper and coat.",
+          "modelAnswerTr": "Kazak ve palto giyerim."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Kevin ne giyer?' sorusunun İngilizcesi hangisidir?",
+          "options": [
+            "What does Kevin wear?",
+            "What does Kevin look like?",
+            "How often does Kevin wear?",
+            "Where does Kevin wear?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'What does Mary look like?' sorusunun Türkçesi nedir?",
+          "options": [
+            "Mary nasıl görünüyor?",
+            "Mary nereli?",
+            "Mary ne giyer?",
+            "Mary kaç yaşında?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "statement": "'He is short. He has blue eyes.' cümlesi 'O uzun boyludur ve yeşil gözlüdür.' anlamına gelir.",
+          "correct": false,
+          "explanation": "Doğrusu: 'O kısadır ve mavi gözlüdür.'"
+        },
+        {
+          "type": "personal",
+          "question": "How often do you read a book?",
+          "questionTr": "Ne sıklıkla kitap okursun?",
+          "modelAnswer": "I always read a book.",
+          "modelAnswerTr": "Ben daima kitap okurum."
+        },
+        {
+          "type": "mc",
+          "prompt": "'He always reads a book.' cümlesindeki 'always' kelimesinin anlamı nedir?",
+          "options": [
+            "Daima, her zaman",
+            "Bazen",
+            "Hiçbir zaman",
+            "Genellikle"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I have a T-shirt. ______ T-shirt is white. (Benim)",
+          "answer": "My"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "You have a coat. ______ coat is black. (Senin)",
+          "answer": "Your"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "He has a ball. ______ ball is blue. (Onun - erkek)",
+          "answer": "His"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "She has boots. ______ boots are red. (Onun - kız)",
+          "answer": "Her"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "It has short hair. ______ hair is purple. (Onun - hayvan/nesne)",
+          "answer": "Its"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "We have socks. ______ socks are yellow. (Bizim)",
+          "answer": "Our"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "They have toys. ______ toys are new. (Onların)",
+          "answer": "Their"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "My",
+              "tr": "Benim"
+            },
+            {
+              "en": "Your",
+              "tr": "Senin"
+            },
+            {
+              "en": "His",
+              "tr": "Onun (erkek)"
+            },
+            {
+              "en": "Her",
+              "tr": "Onun (kız)"
+            },
+            {
+              "en": "Their",
+              "tr": "Onların"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "What does Mary look like?",
+              "tr": "Mary nasıl görünüyor?"
+            },
+            {
+              "en": "What do you wear in cold weather?",
+              "tr": "Soğuk havalarda ne giyersin?"
+            },
+            {
+              "en": "How often does Ecem go to the cinema?",
+              "tr": "Ecem ne sıklıkla sinemaya gider?"
+            }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "theme": "Aile Hayatı",
+      "comingSoon": true
+    },
+    "5": {
+      "theme": "Mahalle ve Şehir Hayatı",
+      "activities": [
+        {
+          "type": "tf",
+          "statement": "'There is a museum in my neighbourhood.' cümlesi 'Mahallemde bir müze var.' anlamına gelir.",
+          "correct": true
+        },
+        {
+          "type": "mc",
+          "prompt": "'Bizim evimizde dört oda var.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "There are four rooms in our house.",
+            "There is four room in our house.",
+            "There are four room in our house.",
+            "There is a room in our house."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'Şehrinde bir kale var mı?' sorusunun İngilizcesi hangisidir?",
+          "options": [
+            "Is there a castle in your city?",
+            "Are there a castle in your city?",
+            "There is a castle in your city?",
+            "Is a castle in your city?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "statement": "'Are there two beds in the bedroom?' sorusuna hayır cevabı 'No, there are not two beds in the bedroom.' şeklindedir.",
+          "correct": true
+        },
+        {
+          "type": "mc",
+          "prompt": "'Bulaşık makinesi nerede?' sorusunun İngilizcesi hangisidir?",
+          "options": [
+            "Where is the dishwasher?",
+            "What is the dishwasher?",
+            "How is the dishwasher?",
+            "Which is the dishwasher?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "personal",
+          "question": "How many rooms are there in your home?",
+          "questionTr": "Evinde kaç tane oda var?",
+          "modelAnswer": "There are four rooms in my home.",
+          "modelAnswerTr": "Evimde dört tane oda var."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "small → smaller (tek heceli sıfat + er). big → ______",
+          "answer": "bigger"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "cold → colder. tall → ______",
+          "answer": "taller"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "crowded → more crowded (çok heceli sıfat + more). comfortable → ______ comfortable",
+          "answer": "more"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "expensive → ______ expensive (daha pahalı)",
+          "answer": "more"
+        },
+        {
+          "type": "mc",
+          "prompt": "'Bir sandalye, bir kanepeden daha küçüktür.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "A chair is smaller than a sofa.",
+            "A chair is small than a sofa.",
+            "A chair is more small than a sofa.",
+            "A chair is smallest than a sofa."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "statement": "'Istanbul is more crowded than Konya.' cümlesi doğrudur çünkü 'crowded' çok heceli bir sıfattır ve 'more' ile kullanılır.",
+          "correct": true
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "Where is the table?",
+              "tr": "Masa nerede?"
+            },
+            {
+              "en": "How many forks are there on the table?",
+              "tr": "Masanın üzerinde kaç tane çatal var?"
+            },
+            {
+              "en": "Is there a castle in your city?",
+              "tr": "Şehrinde bir kale var mı?"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "taller",
+              "tr": "daha uzun"
+            },
+            {
+              "en": "shorter",
+              "tr": "daha kısa"
+            },
+            {
+              "en": "more expensive",
+              "tr": "daha pahalı"
+            },
+            {
+              "en": "more comfortable",
+              "tr": "daha rahat"
+            }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "theme": "Dünyada Hayat",
+      "comingSoon": true
+    },
+    "7": {
+      "theme": "Doğada Hayat",
+      "activities": [
+        {
+          "type": "mc",
+          "prompt": "'Bir aslan nerede yaşar?' sorusunun İngilizcesi hangisidir?",
+          "options": [
+            "Where does a lion live?",
+            "Where is a lion living?",
+            "Where lion lives?",
+            "Where do a lion live?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "statement": "'What type of animal is a crocodile?' sorusunun cevabı 'It is a reptile.'dir.",
+          "correct": true
+        },
+        {
+          "type": "mc",
+          "prompt": "'Bir zürafa ne yer?' sorusuna doğru cevap hangisidir?",
+          "options": [
+            "It eats leaves of trees.",
+            "It eats meat.",
+            "It eats fish.",
+            "It eats insects."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "statement": "'Can a parrot talk?' sorusuna 'Yes, it can.' cevabı verilir.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'Can a snake fly?' sorusuna 'Yes, it can.' cevabı verilir.",
+          "correct": false,
+          "explanation": "Doğrusu: 'No, it can't.' çünkü yılanlar uçamaz."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "big → bigger → the ______ (en büyük)",
+          "answer": "biggest"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "dangerous → more dangerous → the most ______",
+          "answer": "dangerous"
+        },
+        {
+          "type": "mc",
+          "prompt": "'Bir çita, karadaki en hızlı hayvandır.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "A cheetah is the fastest animal on the land.",
+            "A cheetah is fast animal on the land.",
+            "A cheetah is faster animal on the land.",
+            "A cheetah is the fast animal on the land."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Animals ______ find food to survive. (zorunluluk)",
+          "answer": "must"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "The zebra ______ be quick to survive.",
+          "answer": "must"
+        },
+        {
+          "type": "mc",
+          "prompt": "'Maymun, güvende kalabilmek için ağaçlara tırmanmalıdır.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "The monkey must climb trees to be safe.",
+            "The monkey can climb trees to be safe.",
+            "The monkey climbs trees to be safe.",
+            "The monkey mustn't climb trees to be safe."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "personal",
+          "question": "What is your favourite wild animal? Why?",
+          "questionTr": "En sevdiğin vahşi hayvan nedir? Neden?",
+          "modelAnswer": "My favourite wild animal is the lion because it is very strong.",
+          "modelAnswerTr": "En sevdiğim vahşi hayvan aslandır çünkü çok güçlüdür."
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "Where does a lion live?",
+              "tr": "Bir aslan nerede yaşar?"
+            },
+            {
+              "en": "What type of animal is a crocodile?",
+              "tr": "Timsah ne tür bir hayvandır?"
+            },
+            {
+              "en": "Can a parrot talk?",
+              "tr": "Bir papağan konuşabilir mi?"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "can",
+              "tr": "yapabilmek"
+            },
+            {
+              "en": "can't",
+              "tr": "yapamamak"
+            },
+            {
+              "en": "must",
+              "tr": "-meli / -malı"
+            }
+          ]
+        }
+      ]
+    },
+    "8": {
+      "theme": "Evren ve Gelecekte Hayat",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What are you going to do for your half-term holiday?",
+          "questionTr": "Yarıyıl tatilinde ne yapacaksın?",
+          "modelAnswer": "I'm going to go skiing.",
+          "modelAnswerTr": "Ben, kar kayağına gideceğim."
+        },
+        {
+          "type": "personal",
+          "question": "Where are you going to go on your holiday?",
+          "questionTr": "Tatilde nereye gideceksin?",
+          "modelAnswer": "I'm going to go to Antalya.",
+          "modelAnswerTr": "Ben, Antalya'ya gideceğim."
+        },
+        {
+          "type": "personal",
+          "question": "When are you going to go there?",
+          "questionTr": "Oraya ne zaman gideceksin?",
+          "modelAnswer": "I'm going to go there in summer.",
+          "modelAnswerTr": "Oraya yazın gideceğim."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Onlar çölde ne yapacak?' sorusunun İngilizcesi hangisidir?",
+          "options": [
+            "What are they going to do in the desert?",
+            "What did they do in the desert?",
+            "What do they do in the desert?",
+            "What are they doing in the desert?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "statement": "'They are going to ride a camel.' cümlesi 'Onlar deveye binecek.' anlamına gelir.",
+          "correct": true
+        },
+        {
+          "type": "mc",
+          "prompt": "'İsmail plajda kumdan kale yapacak.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "He is going to build a sandcastle at the beach.",
+            "He built a sandcastle at the beach.",
+            "He builds a sandcastle at the beach.",
+            "He is building a sandcastle at the beach yesterday."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "She ______ going to ride a bike. (is/are/am)",
+          "answer": "is"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I ______ going to go to Antalya. (is/are/am)",
+          "answer": "am"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "They ______ going to visit a museum. (is/are/am)",
+          "answer": "are"
+        },
+        {
+          "type": "mc",
+          "prompt": "'going to' yapısı ne için kullanılır?",
+          "options": [
+            "Gelecekteki plan ve niyetleri anlatmak için",
+            "Geçmişte olan bir olayı anlatmak için",
+            "Şu anda olan bir eylemi anlatmak için",
+            "Bir alışkanlığı anlatmak için"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "personal",
+          "question": "What are they going to do in the desert?",
+          "questionTr": "Onlar çölde ne yapacak?",
+          "modelAnswer": "They are going to ride a camel.",
+          "modelAnswerTr": "Onlar deveye binecek."
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "What is Zeynep going to do?",
+              "tr": "Zeynep ne yapacak?"
+            },
+            {
+              "en": "Where are you going to go on your holiday?",
+              "tr": "Tatilde nereye gideceksin?"
+            },
+            {
+              "en": "When are you going to go to Antalya?",
+              "tr": "Antalya'ya ne zaman gideceksin?"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

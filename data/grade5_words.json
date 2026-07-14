@@ -852,5 +852,5248 @@
     "pronunciation": "Arcıntayn",
     "turkish_meaning": "Arjantinli",
     "example_sentence": "He is Argentine."
+  },
+  {
+    "unit": 2,
+    "english": "Board",
+    "pronunciation": "Bord",
+    "turkish_meaning": "Yazı tahtası",
+    "example_sentence": "The teacher writes on the board."
+  },
+  {
+    "unit": 2,
+    "english": "Board marker",
+    "pronunciation": "Bord markır",
+    "turkish_meaning": "Tahta kalemi",
+    "example_sentence": "I need a red board marker."
+  },
+  {
+    "unit": 2,
+    "english": "Book",
+    "pronunciation": "Buk",
+    "turkish_meaning": "Kitap",
+    "example_sentence": "There is a book on the desk."
+  },
+  {
+    "unit": 2,
+    "english": "Bookcase",
+    "pronunciation": "Bukkeys",
+    "turkish_meaning": "Kitaplık",
+    "example_sentence": "The bookcase is next to the door."
+  },
+  {
+    "unit": 2,
+    "english": "Bookshelf",
+    "pronunciation": "Bukşelf",
+    "turkish_meaning": "Raf",
+    "example_sentence": "Put the dictionary on the bookshelf."
+  },
+  {
+    "unit": 2,
+    "english": "Crayon",
+    "pronunciation": "Kreyın",
+    "turkish_meaning": "Pastel boya",
+    "example_sentence": "She draws with a blue crayon."
+  },
+  {
+    "unit": 2,
+    "english": "Desk",
+    "pronunciation": "Desk",
+    "turkish_meaning": "Sıra",
+    "example_sentence": "There is a book on my desk."
+  },
+  {
+    "unit": 2,
+    "english": "Dictionary",
+    "pronunciation": "Dikşınıri",
+    "turkish_meaning": "Sözlük",
+    "example_sentence": "Look up the word in the dictionary."
+  },
+  {
+    "unit": 2,
+    "english": "Glue",
+    "pronunciation": "Gluu",
+    "turkish_meaning": "Yapıştırıcı",
+    "example_sentence": "Can I borrow your glue, please?"
+  },
+  {
+    "unit": 2,
+    "english": "Notebook",
+    "pronunciation": "Noutbuk",
+    "turkish_meaning": "Defter",
+    "example_sentence": "Write the homework in your notebook."
+  },
+  {
+    "unit": 2,
+    "english": "Pencil",
+    "pronunciation": "Pensıl",
+    "turkish_meaning": "Kurşun kalem",
+    "example_sentence": "I write with a pencil."
+  },
+  {
+    "unit": 2,
+    "english": "Pencil case",
+    "pronunciation": "Pensıl keys",
+    "turkish_meaning": "Kalem kutusu",
+    "example_sentence": "My pencil case is full of crayons."
+  },
+  {
+    "unit": 2,
+    "english": "Poster",
+    "pronunciation": "Poustır",
+    "turkish_meaning": "Afiş, poster",
+    "example_sentence": "There is a poster on the classroom wall."
+  },
+  {
+    "unit": 2,
+    "english": "Rubber",
+    "pronunciation": "Rabır",
+    "turkish_meaning": "Silgi",
+    "example_sentence": "Can you lend me your rubber?"
+  },
+  {
+    "unit": 2,
+    "english": "Rubbish bin",
+    "pronunciation": "Rabiş bin",
+    "turkish_meaning": "Çöp kutusu",
+    "example_sentence": "Put the paper in the rubbish bin."
+  },
+  {
+    "unit": 2,
+    "english": "Ruler",
+    "pronunciation": "Ruulır",
+    "turkish_meaning": "Cetvel",
+    "example_sentence": "I draw a line with my ruler."
+  },
+  {
+    "unit": 2,
+    "english": "School bag",
+    "pronunciation": "Skuul beg",
+    "turkish_meaning": "Okul çantası",
+    "example_sentence": "My books are in my school bag."
+  },
+  {
+    "unit": 2,
+    "english": "Scissors",
+    "pronunciation": "Sizırz",
+    "turkish_meaning": "Makas",
+    "example_sentence": "We use scissors in the art lesson."
+  },
+  {
+    "unit": 2,
+    "english": "Seat",
+    "pronunciation": "Siit",
+    "turkish_meaning": "Oturacak yer, sandalye",
+    "example_sentence": "Please take your seat."
+  },
+  {
+    "unit": 2,
+    "english": "Sheet",
+    "pronunciation": "Şiit",
+    "turkish_meaning": "Kağıt",
+    "example_sentence": "Write your name on the sheet."
+  },
+  {
+    "unit": 2,
+    "english": "Smart board",
+    "pronunciation": "Smart bord",
+    "turkish_meaning": "Akıllı tahta",
+    "example_sentence": "The teacher shows a video on the smart board."
+  },
+  {
+    "unit": 2,
+    "english": "After school activities",
+    "pronunciation": "Aftır skuul äktivitiz",
+    "turkish_meaning": "Okul sonrası aktiviteleri",
+    "example_sentence": "I join after school activities on Fridays."
+  },
+  {
+    "unit": 2,
+    "english": "Borrow",
+    "pronunciation": "Borou",
+    "turkish_meaning": "Ödünç almak",
+    "example_sentence": "Can I borrow your pencil?"
+  },
+  {
+    "unit": 2,
+    "english": "Bring",
+    "pronunciation": "Bring",
+    "turkish_meaning": "Getirmek",
+    "example_sentence": "Please bring your book tomorrow."
+  },
+  {
+    "unit": 2,
+    "english": "Careful",
+    "pronunciation": "Keırfıl",
+    "turkish_meaning": "Dikkatli",
+    "example_sentence": "Be careful with the scissors."
+  },
+  {
+    "unit": 2,
+    "english": "Carefully",
+    "pronunciation": "Keırfıli",
+    "turkish_meaning": "Dikkatlice",
+    "example_sentence": "Listen to the teacher carefully."
+  },
+  {
+    "unit": 2,
+    "english": "Classroom",
+    "pronunciation": "Klasruum",
+    "turkish_meaning": "Sınıf",
+    "example_sentence": "There are twenty desks in our classroom."
+  },
+  {
+    "unit": 2,
+    "english": "Double",
+    "pronunciation": "Dabıl",
+    "turkish_meaning": "Çift",
+    "example_sentence": "We have a double maths lesson today."
+  },
+  {
+    "unit": 2,
+    "english": "Exercise",
+    "pronunciation": "Eksırsayz",
+    "turkish_meaning": "Egzersiz",
+    "example_sentence": "Do exercise three on page five."
+  },
+  {
+    "unit": 2,
+    "english": "Finish",
+    "pronunciation": "Finiş",
+    "turkish_meaning": "Bitirmek",
+    "example_sentence": "Finish your homework before dinner."
+  },
+  {
+    "unit": 2,
+    "english": "Follow",
+    "pronunciation": "Folou",
+    "turkish_meaning": "Takip etmek",
+    "example_sentence": "Follow the teacher's instructions."
+  },
+  {
+    "unit": 2,
+    "english": "Foreign language",
+    "pronunciation": "Forın länggwic",
+    "turkish_meaning": "Yabancı dil",
+    "example_sentence": "English is a foreign language for us."
+  },
+  {
+    "unit": 2,
+    "english": "Forget",
+    "pronunciation": "Forget",
+    "turkish_meaning": "Unutmak",
+    "example_sentence": "Don't forget your school bag."
+  },
+  {
+    "unit": 2,
+    "english": "Fruit and vegetables",
+    "pronunciation": "Fruut end vecıtıbılz",
+    "turkish_meaning": "Meyve ve sebzeler",
+    "example_sentence": "We eat fruit and vegetables every day."
+  },
+  {
+    "unit": 2,
+    "english": "Grow",
+    "pronunciation": "Grou",
+    "turkish_meaning": "Yetiştirmek",
+    "example_sentence": "We grow flowers in the school garden."
+  },
+  {
+    "unit": 2,
+    "english": "Healthy",
+    "pronunciation": "Helthi",
+    "turkish_meaning": "Sağlıklı",
+    "example_sentence": "Fruit is a healthy snack."
+  },
+  {
+    "unit": 2,
+    "english": "Here you are",
+    "pronunciation": "Hir yu ar",
+    "turkish_meaning": "Buyurun",
+    "example_sentence": "Here you are, take my ruler."
+  },
+  {
+    "unit": 2,
+    "english": "Homework",
+    "pronunciation": "Houmwörk",
+    "turkish_meaning": "Ev ödevi",
+    "example_sentence": "I do my homework after school."
+  },
+  {
+    "unit": 2,
+    "english": "Horseback riding",
+    "pronunciation": "Horsbek rayding",
+    "turkish_meaning": "Ata binme",
+    "example_sentence": "She goes horseback riding at the weekend."
+  },
+  {
+    "unit": 2,
+    "english": "Learn",
+    "pronunciation": "Lörn",
+    "turkish_meaning": "Öğrenmek",
+    "example_sentence": "We learn new words every day."
+  },
+  {
+    "unit": 2,
+    "english": "Lend",
+    "pronunciation": "Lend",
+    "turkish_meaning": "Ödünç vermek",
+    "example_sentence": "Can you lend me your dictionary?"
+  },
+  {
+    "unit": 2,
+    "english": "Look up",
+    "pronunciation": "Luk ap",
+    "turkish_meaning": "Sözlükte aramak",
+    "example_sentence": "Look up the word in your dictionary."
+  },
+  {
+    "unit": 2,
+    "english": "Loudly",
+    "pronunciation": "Laudli",
+    "turkish_meaning": "Yüksek sesle",
+    "example_sentence": "Don't talk loudly in the library."
+  },
+  {
+    "unit": 2,
+    "english": "Lunch break",
+    "pronunciation": "Lanç breyk",
+    "turkish_meaning": "Öğle arası",
+    "example_sentence": "We play football at lunch break."
+  },
+  {
+    "unit": 2,
+    "english": "Lunchtime",
+    "pronunciation": "Lançtaym",
+    "turkish_meaning": "Öğle yemeği vakti",
+    "example_sentence": "It is lunchtime at half past twelve."
+  },
+  {
+    "unit": 2,
+    "english": "Maths club",
+    "pronunciation": "Mets klab",
+    "turkish_meaning": "Matematik kulübü",
+    "example_sentence": "Zeynep enjoys maths club."
+  },
+  {
+    "unit": 2,
+    "english": "Mistake",
+    "pronunciation": "Misteyk",
+    "turkish_meaning": "Hata",
+    "example_sentence": "Everyone makes mistakes sometimes."
+  },
+  {
+    "unit": 2,
+    "english": "Of course",
+    "pronunciation": "Ov kors",
+    "turkish_meaning": "Tabiki, elbette",
+    "example_sentence": "Of course, here you are."
+  },
+  {
+    "unit": 2,
+    "english": "Quietly",
+    "pronunciation": "Kuayıtli",
+    "turkish_meaning": "Sessizce",
+    "example_sentence": "Please work quietly in the library."
+  },
+  {
+    "unit": 2,
+    "english": "Raise a hand",
+    "pronunciation": "Reyz ı hend",
+    "turkish_meaning": "El kaldırmak",
+    "example_sentence": "Raise your hand to speak."
+  },
+  {
+    "unit": 2,
+    "english": "Remind",
+    "pronunciation": "Rimaynd",
+    "turkish_meaning": "Hatırlatmak",
+    "example_sentence": "Please remind me about the homework."
+  },
+  {
+    "unit": 2,
+    "english": "Shout",
+    "pronunciation": "Şaut",
+    "turkish_meaning": "Bağırmak",
+    "example_sentence": "Don't shout at your friends."
+  },
+  {
+    "unit": 2,
+    "english": "Slowly",
+    "pronunciation": "Slouli",
+    "turkish_meaning": "Yavaşça",
+    "example_sentence": "Read the sentence slowly."
+  },
+  {
+    "unit": 2,
+    "english": "Solve a problem",
+    "pronunciation": "Solv ı problım",
+    "turkish_meaning": "Problem çözmek",
+    "example_sentence": "We solve a problem in maths class."
+  },
+  {
+    "unit": 2,
+    "english": "Subject",
+    "pronunciation": "Sabcikt",
+    "turkish_meaning": "Ders",
+    "example_sentence": "My favourite subject is science."
+  },
+  {
+    "unit": 2,
+    "english": "Teamwork",
+    "pronunciation": "Tiimwörk",
+    "turkish_meaning": "Takım çalışması",
+    "example_sentence": "We learn teamwork in P.E. lessons."
+  },
+  {
+    "unit": 2,
+    "english": "Tidy",
+    "pronunciation": "Taydi",
+    "turkish_meaning": "Düzenli",
+    "example_sentence": "Keep your desk tidy."
+  },
+  {
+    "unit": 2,
+    "english": "Timetable",
+    "pronunciation": "Taymteybıl",
+    "turkish_meaning": "Ders programı",
+    "example_sentence": "Check the timetable for tomorrow's lessons."
+  },
+  {
+    "unit": 2,
+    "english": "Together",
+    "pronunciation": "Tıgedır",
+    "turkish_meaning": "Birlikte",
+    "example_sentence": "We work together in class."
+  },
+  {
+    "unit": 2,
+    "english": "Walk",
+    "pronunciation": "Vok",
+    "turkish_meaning": "Yürümek",
+    "example_sentence": "I walk to school every morning."
+  },
+  {
+    "unit": 2,
+    "english": "Warn",
+    "pronunciation": "Vorn",
+    "turkish_meaning": "Uyarmak",
+    "example_sentence": "The teacher warns us about the rules."
+  },
+  {
+    "unit": 2,
+    "english": "Wrestling",
+    "pronunciation": "Reslin",
+    "turkish_meaning": "Güreş",
+    "example_sentence": "He does wrestling after school."
+  },
+  {
+    "unit": 2,
+    "english": "Monday",
+    "pronunciation": "Mandi",
+    "turkish_meaning": "Pazartesi",
+    "example_sentence": "We have a music lesson on Monday."
+  },
+  {
+    "unit": 2,
+    "english": "Tuesday",
+    "pronunciation": "Tyuzdi",
+    "turkish_meaning": "Salı",
+    "example_sentence": "I go to maths club on Tuesday."
+  },
+  {
+    "unit": 2,
+    "english": "Wednesday",
+    "pronunciation": "Venzdi",
+    "turkish_meaning": "Çarşamba",
+    "example_sentence": "We have P.E. on Wednesday."
+  },
+  {
+    "unit": 2,
+    "english": "Thursday",
+    "pronunciation": "Törzdi",
+    "turkish_meaning": "Perşembe",
+    "example_sentence": "The science lesson is on Thursday."
+  },
+  {
+    "unit": 2,
+    "english": "Friday",
+    "pronunciation": "Fraydi",
+    "turkish_meaning": "Cuma",
+    "example_sentence": "I love Fridays."
+  },
+  {
+    "unit": 2,
+    "english": "Saturday",
+    "pronunciation": "Setırdi",
+    "turkish_meaning": "Cumartesi",
+    "example_sentence": "We don't go to school on Saturday."
+  },
+  {
+    "unit": 2,
+    "english": "Sunday",
+    "pronunciation": "Sandi",
+    "turkish_meaning": "Pazar",
+    "example_sentence": "We visit our grandparents on Sunday."
+  },
+  {
+    "unit": 2,
+    "english": "Weekdays",
+    "pronunciation": "Viikdeyz",
+    "turkish_meaning": "Hafta içi",
+    "example_sentence": "I go to school on weekdays."
+  },
+  {
+    "unit": 2,
+    "english": "Weekend",
+    "pronunciation": "Viikend",
+    "turkish_meaning": "Hafta sonu",
+    "example_sentence": "I relax at the weekend."
+  },
+  {
+    "unit": 2,
+    "english": "How many",
+    "pronunciation": "Hau meni",
+    "turkish_meaning": "Kaç tane?",
+    "example_sentence": "How many books are there on the desk?"
+  },
+  {
+    "unit": 2,
+    "english": "What time",
+    "pronunciation": "Vat taym",
+    "turkish_meaning": "Saat kaç? / Saat kaçta?",
+    "example_sentence": "What time does the lesson start?"
+  },
+  {
+    "unit": 2,
+    "english": "When",
+    "pronunciation": "Ven",
+    "turkish_meaning": "Ne zaman?",
+    "example_sentence": "When is the science lesson?"
+  },
+  {
+    "unit": 2,
+    "english": "Where",
+    "pronunciation": "Veır",
+    "turkish_meaning": "Nerede? Nereye?",
+    "example_sentence": "Where is the smart board?"
+  },
+  {
+    "unit": 2,
+    "english": "Which",
+    "pronunciation": "Viç",
+    "turkish_meaning": "Hangi? Hangisi?",
+    "example_sentence": "Which subject do you like best?"
+  },
+  {
+    "unit": 2,
+    "english": "Why",
+    "pronunciation": "Vay",
+    "turkish_meaning": "Niçin? Neden?",
+    "example_sentence": "Why are you late for school?"
+  },
+  {
+    "unit": 2,
+    "english": "Art",
+    "pronunciation": "Art",
+    "turkish_meaning": "Sanat, resim dersi",
+    "example_sentence": "We paint pictures in art class."
+  },
+  {
+    "unit": 2,
+    "english": "Drama",
+    "pronunciation": "Draamı",
+    "turkish_meaning": "Drama",
+    "example_sentence": "We act out a story in drama class."
+  },
+  {
+    "unit": 2,
+    "english": "Elective lesson",
+    "pronunciation": "İlektiv lesın",
+    "turkish_meaning": "Seçmeli ders",
+    "example_sentence": "Chess is my elective lesson."
+  },
+  {
+    "unit": 2,
+    "english": "English",
+    "pronunciation": "İngliş",
+    "turkish_meaning": "İngilizce",
+    "example_sentence": "My favourite school subject is English."
+  },
+  {
+    "unit": 2,
+    "english": "Information technology (I.T.)",
+    "pronunciation": "İnformeyşın teknolıci",
+    "turkish_meaning": "Bilişim teknolojisi",
+    "example_sentence": "We use computers in information technology class."
+  },
+  {
+    "unit": 2,
+    "english": "Maths",
+    "pronunciation": "Mets",
+    "turkish_meaning": "Matematik",
+    "example_sentence": "I solve problems in maths class."
+  },
+  {
+    "unit": 2,
+    "english": "Music",
+    "pronunciation": "Myuuzik",
+    "turkish_meaning": "Müzik",
+    "example_sentence": "We sing songs in music class."
+  },
+  {
+    "unit": 2,
+    "english": "Physical education (P.E.)",
+    "pronunciation": "Fizikıl edyukeyşın",
+    "turkish_meaning": "Beden eğitimi",
+    "example_sentence": "P.E. lesson starts at half past eleven."
+  },
+  {
+    "unit": 2,
+    "english": "Religion and morals",
+    "pronunciation": "Rilicın end morılz",
+    "turkish_meaning": "Din kültürü ve ahlak bilgisi",
+    "example_sentence": "We talk about values in religion and morals class."
+  },
+  {
+    "unit": 2,
+    "english": "Science",
+    "pronunciation": "Sayıns",
+    "turkish_meaning": "Fen bilimleri",
+    "example_sentence": "We do experiments in science class."
+  },
+  {
+    "unit": 2,
+    "english": "Social studies",
+    "pronunciation": "Souşıl stadiz",
+    "turkish_meaning": "Sosyal bilgiler",
+    "example_sentence": "We learn about history in social studies."
+  },
+  {
+    "unit": 2,
+    "english": "Turkish",
+    "pronunciation": "Törkiş",
+    "turkish_meaning": "Türkçe",
+    "example_sentence": "We read stories in Turkish class."
+  },
+  {
+    "unit": 2,
+    "english": "One",
+    "pronunciation": "Van",
+    "turkish_meaning": "Bir (1)",
+    "example_sentence": "I have one pencil case."
+  },
+  {
+    "unit": 2,
+    "english": "Two",
+    "pronunciation": "Tuu",
+    "turkish_meaning": "İki (2)",
+    "example_sentence": "There are two rulers on the desk."
+  },
+  {
+    "unit": 2,
+    "english": "Three",
+    "pronunciation": "Thrii",
+    "turkish_meaning": "Üç (3)",
+    "example_sentence": "I have three notebooks."
+  },
+  {
+    "unit": 2,
+    "english": "Four",
+    "pronunciation": "For",
+    "turkish_meaning": "Dört (4)",
+    "example_sentence": "There are four windows in our classroom."
+  },
+  {
+    "unit": 2,
+    "english": "Five",
+    "pronunciation": "Fayv",
+    "turkish_meaning": "Beş (5)",
+    "example_sentence": "There are five books on the desk."
+  },
+  {
+    "unit": 2,
+    "english": "Six",
+    "pronunciation": "Siks",
+    "turkish_meaning": "Altı (6)",
+    "example_sentence": "We have six lessons today."
+  },
+  {
+    "unit": 2,
+    "english": "Seven",
+    "pronunciation": "Sevın",
+    "turkish_meaning": "Yedi (7)",
+    "example_sentence": "I wake up at seven o'clock."
+  },
+  {
+    "unit": 2,
+    "english": "Eight",
+    "pronunciation": "Eyt",
+    "turkish_meaning": "Sekiz (8)",
+    "example_sentence": "School starts at eight o'clock."
+  },
+  {
+    "unit": 2,
+    "english": "Nine",
+    "pronunciation": "Nayn",
+    "turkish_meaning": "Dokuz (9)",
+    "example_sentence": "There are nine crayons in the box."
+  },
+  {
+    "unit": 2,
+    "english": "Ten",
+    "pronunciation": "Ten",
+    "turkish_meaning": "On (10)",
+    "example_sentence": "I count to ten."
+  },
+  {
+    "unit": 2,
+    "english": "Eleven",
+    "pronunciation": "İlevın",
+    "turkish_meaning": "On bir (11)",
+    "example_sentence": "P.E. starts at eleven o'clock."
+  },
+  {
+    "unit": 2,
+    "english": "Twelve",
+    "pronunciation": "Twelv",
+    "turkish_meaning": "On iki (12)",
+    "example_sentence": "There are twelve students in this group."
+  },
+  {
+    "unit": 2,
+    "english": "Thirteen",
+    "pronunciation": "Törtiin",
+    "turkish_meaning": "On üç (13)",
+    "example_sentence": "My cousin is thirteen years old."
+  },
+  {
+    "unit": 2,
+    "english": "Fourteen",
+    "pronunciation": "Fortiin",
+    "turkish_meaning": "On dört (14)",
+    "example_sentence": "There are fourteen crayons in my box."
+  },
+  {
+    "unit": 2,
+    "english": "Fifteen",
+    "pronunciation": "Fiftiin",
+    "turkish_meaning": "On beş (15)",
+    "example_sentence": "We have fifteen minutes for lunch."
+  },
+  {
+    "unit": 2,
+    "english": "Sixteen",
+    "pronunciation": "Sikstiin",
+    "turkish_meaning": "On altı (16)",
+    "example_sentence": "There are sixteen desks in the classroom."
+  },
+  {
+    "unit": 2,
+    "english": "Seventeen",
+    "pronunciation": "Sevıntiin",
+    "turkish_meaning": "On yedi (17)",
+    "example_sentence": "My sister is seventeen years old."
+  },
+  {
+    "unit": 2,
+    "english": "Eighteen",
+    "pronunciation": "Eytiin",
+    "turkish_meaning": "On sekiz (18)",
+    "example_sentence": "There are eighteen books on the shelf."
+  },
+  {
+    "unit": 2,
+    "english": "Nineteen",
+    "pronunciation": "Nayntiin",
+    "turkish_meaning": "On dokuz (19)",
+    "example_sentence": "We have nineteen new words this week."
+  },
+  {
+    "unit": 2,
+    "english": "Twenty",
+    "pronunciation": "Twenti",
+    "turkish_meaning": "Yirmi (20)",
+    "example_sentence": "There are twenty students in our class."
+  },
+  {
+    "unit": 2,
+    "english": "Thirty",
+    "pronunciation": "Thörti",
+    "turkish_meaning": "Otuz (30)",
+    "example_sentence": "The lesson is thirty minutes long."
+  },
+  {
+    "unit": 2,
+    "english": "Forty",
+    "pronunciation": "Forti",
+    "turkish_meaning": "Kırk (40)",
+    "example_sentence": "There are forty students in the hall."
+  },
+  {
+    "unit": 2,
+    "english": "Fifty",
+    "pronunciation": "Fifti",
+    "turkish_meaning": "Elli (50)",
+    "example_sentence": "The book has fifty pages."
+  },
+  {
+    "unit": 2,
+    "english": "Sixty",
+    "pronunciation": "Siksti",
+    "turkish_meaning": "Altmış (60)",
+    "example_sentence": "One hour has sixty minutes."
+  },
+  {
+    "unit": 2,
+    "english": "Seventy",
+    "pronunciation": "Sevınti",
+    "turkish_meaning": "Yetmiş (70)",
+    "example_sentence": "My grandfather is seventy years old."
+  },
+  {
+    "unit": 2,
+    "english": "Eighty",
+    "pronunciation": "Eyti",
+    "turkish_meaning": "Seksen (80)",
+    "example_sentence": "There are eighty students on this floor."
+  },
+  {
+    "unit": 2,
+    "english": "Ninety",
+    "pronunciation": "Naynti",
+    "turkish_meaning": "Doksan (90)",
+    "example_sentence": "The test score was ninety."
+  },
+  {
+    "unit": 2,
+    "english": "One hundred",
+    "pronunciation": "Van handrıd",
+    "turkish_meaning": "Yüz (100)",
+    "example_sentence": "I can count to one hundred."
+  },
+  {
+    "unit": 3,
+    "english": "Blouse",
+    "pronunciation": "Blauz",
+    "turkish_meaning": "Bluz",
+    "example_sentence": "She is wearing a white blouse."
+  },
+  {
+    "unit": 3,
+    "english": "Coat",
+    "pronunciation": "Kout",
+    "turkish_meaning": "Palto",
+    "example_sentence": "Wear your coat, it is cold outside."
+  },
+  {
+    "unit": 3,
+    "english": "Dress",
+    "pronunciation": "Dres",
+    "turkish_meaning": "Elbise",
+    "example_sentence": "She has a pink dress."
+  },
+  {
+    "unit": 3,
+    "english": "Jacket",
+    "pronunciation": "Cekıt",
+    "turkish_meaning": "Ceket",
+    "example_sentence": "He is wearing a blue jacket."
+  },
+  {
+    "unit": 3,
+    "english": "Jeans",
+    "pronunciation": "Ciinz",
+    "turkish_meaning": "Kot pantolon",
+    "example_sentence": "I like wearing jeans."
+  },
+  {
+    "unit": 3,
+    "english": "Jumper",
+    "pronunciation": "Campır",
+    "turkish_meaning": "Kazak",
+    "example_sentence": "I wear a jumper in cold weather."
+  },
+  {
+    "unit": 3,
+    "english": "Raincoat",
+    "pronunciation": "Reynkout",
+    "turkish_meaning": "Yağmurluk",
+    "example_sentence": "Take your raincoat, it is rainy today."
+  },
+  {
+    "unit": 3,
+    "english": "Shirt",
+    "pronunciation": "Şört",
+    "turkish_meaning": "Gömlek",
+    "example_sentence": "He wears a white shirt to school."
+  },
+  {
+    "unit": 3,
+    "english": "Shorts",
+    "pronunciation": "Şorts",
+    "turkish_meaning": "Şort",
+    "example_sentence": "She wears shorts in summer."
+  },
+  {
+    "unit": 3,
+    "english": "Skirt",
+    "pronunciation": "Skört",
+    "turkish_meaning": "Etek",
+    "example_sentence": "My sister has a red skirt."
+  },
+  {
+    "unit": 3,
+    "english": "Trousers",
+    "pronunciation": "Trauzırz",
+    "turkish_meaning": "Pantolon",
+    "example_sentence": "He is wearing black trousers."
+  },
+  {
+    "unit": 3,
+    "english": "T-shirt",
+    "pronunciation": "Tii-şört",
+    "turkish_meaning": "Tişört",
+    "example_sentence": "My T-shirt is white."
+  },
+  {
+    "unit": 3,
+    "english": "Backpack",
+    "pronunciation": "Bekpek",
+    "turkish_meaning": "Sırt çantası",
+    "example_sentence": "I carry my books in my backpack."
+  },
+  {
+    "unit": 3,
+    "english": "Belt",
+    "pronunciation": "Belt",
+    "turkish_meaning": "Kemer",
+    "example_sentence": "He is wearing a brown belt."
+  },
+  {
+    "unit": 3,
+    "english": "Boots",
+    "pronunciation": "Buuts",
+    "turkish_meaning": "Çizmeler, botlar",
+    "example_sentence": "She wears boots in winter."
+  },
+  {
+    "unit": 3,
+    "english": "Bow",
+    "pronunciation": "Bou",
+    "turkish_meaning": "Papyon",
+    "example_sentence": "He is wearing a black bow."
+  },
+  {
+    "unit": 3,
+    "english": "Cap",
+    "pronunciation": "Kep",
+    "turkish_meaning": "Şapka",
+    "example_sentence": "He wears a cap when it is sunny."
+  },
+  {
+    "unit": 3,
+    "english": "Earring",
+    "pronunciation": "İırring",
+    "turkish_meaning": "Küpe",
+    "example_sentence": "She is wearing gold earrings."
+  },
+  {
+    "unit": 3,
+    "english": "Glasses",
+    "pronunciation": "Glasız",
+    "turkish_meaning": "Gözlük",
+    "example_sentence": "He wears glasses to read."
+  },
+  {
+    "unit": 3,
+    "english": "Gloves",
+    "pronunciation": "Glavz",
+    "turkish_meaning": "Eldiven",
+    "example_sentence": "Wear your gloves, it is cold."
+  },
+  {
+    "unit": 3,
+    "english": "Handbag",
+    "pronunciation": "Hendbeg",
+    "turkish_meaning": "El çantası",
+    "example_sentence": "My mother has a red handbag."
+  },
+  {
+    "unit": 3,
+    "english": "Hat",
+    "pronunciation": "Het",
+    "turkish_meaning": "Şapka",
+    "example_sentence": "She wears a hat at the beach."
+  },
+  {
+    "unit": 3,
+    "english": "Headscarf",
+    "pronunciation": "Hedskarf",
+    "turkish_meaning": "Başörtüsü",
+    "example_sentence": "My grandmother wears a headscarf."
+  },
+  {
+    "unit": 3,
+    "english": "Necklace",
+    "pronunciation": "Neklıs",
+    "turkish_meaning": "Kolye",
+    "example_sentence": "She is wearing a silver necklace."
+  },
+  {
+    "unit": 3,
+    "english": "Ring",
+    "pronunciation": "Ring",
+    "turkish_meaning": "Yüzük",
+    "example_sentence": "My mother has a gold ring."
+  },
+  {
+    "unit": 3,
+    "english": "Scarf",
+    "pronunciation": "Skarf",
+    "turkish_meaning": "Atkı",
+    "example_sentence": "He wears a scarf in winter."
+  },
+  {
+    "unit": 3,
+    "english": "Shoes",
+    "pronunciation": "Şuuz",
+    "turkish_meaning": "Ayakkabı",
+    "example_sentence": "I wear my new shoes to school."
+  },
+  {
+    "unit": 3,
+    "english": "Socks",
+    "pronunciation": "Soks",
+    "turkish_meaning": "Çorap",
+    "example_sentence": "Our socks are yellow."
+  },
+  {
+    "unit": 3,
+    "english": "Sunglasses",
+    "pronunciation": "Sanglasız",
+    "turkish_meaning": "Güneş gözlüğü",
+    "example_sentence": "She wears sunglasses in summer."
+  },
+  {
+    "unit": 3,
+    "english": "Umbrella",
+    "pronunciation": "Ambrelı",
+    "turkish_meaning": "Şemsiye",
+    "example_sentence": "Take an umbrella, it is rainy."
+  },
+  {
+    "unit": 3,
+    "english": "Watch",
+    "pronunciation": "Voç",
+    "turkish_meaning": "Kol saati",
+    "example_sentence": "He has a blue watch."
+  },
+  {
+    "unit": 3,
+    "english": "Body",
+    "pronunciation": "Bodi",
+    "turkish_meaning": "Vücut",
+    "example_sentence": "Exercise is good for your body."
+  },
+  {
+    "unit": 3,
+    "english": "Bright",
+    "pronunciation": "Brayt",
+    "turkish_meaning": "Parlak",
+    "example_sentence": "She likes bright colours."
+  },
+  {
+    "unit": 3,
+    "english": "Casual clothes",
+    "pronunciation": "Kejuıl klouz",
+    "turkish_meaning": "Günlük kıyafetler",
+    "example_sentence": "I wear casual clothes at the weekend."
+  },
+  {
+    "unit": 3,
+    "english": "Cold",
+    "pronunciation": "Kould",
+    "turkish_meaning": "Soğuk",
+    "example_sentence": "It is cold today, wear your coat."
+  },
+  {
+    "unit": 3,
+    "english": "Comfortable",
+    "pronunciation": "Kamftıbıl",
+    "turkish_meaning": "Rahat",
+    "example_sentence": "These shoes are very comfortable."
+  },
+  {
+    "unit": 3,
+    "english": "Costume",
+    "pronunciation": "Kostyum",
+    "turkish_meaning": "Kostüm",
+    "example_sentence": "She is wearing a fairy costume."
+  },
+  {
+    "unit": 3,
+    "english": "Cotton",
+    "pronunciation": "Kotın",
+    "turkish_meaning": "Pamuk",
+    "example_sentence": "This T-shirt is made of cotton."
+  },
+  {
+    "unit": 3,
+    "english": "Fabric",
+    "pronunciation": "Febrik",
+    "turkish_meaning": "Kumaş",
+    "example_sentence": "This dress is made of soft fabric."
+  },
+  {
+    "unit": 3,
+    "english": "Fairy",
+    "pronunciation": "Feıri",
+    "turkish_meaning": "Peri",
+    "example_sentence": "The little girl is dressed as a fairy."
+  },
+  {
+    "unit": 3,
+    "english": "Family members",
+    "pronunciation": "Femili membırz",
+    "turkish_meaning": "Aile üyeleri",
+    "example_sentence": "I love all my family members."
+  },
+  {
+    "unit": 3,
+    "english": "Fashion",
+    "pronunciation": "Feşın",
+    "turkish_meaning": "Moda",
+    "example_sentence": "She is interested in fashion."
+  },
+  {
+    "unit": 3,
+    "english": "Fashionable",
+    "pronunciation": "Feşınıbıl",
+    "turkish_meaning": "Modaya uygun",
+    "example_sentence": "Her new dress is very fashionable."
+  },
+  {
+    "unit": 3,
+    "english": "Female",
+    "pronunciation": "Fiimeyl",
+    "turkish_meaning": "Kadın",
+    "example_sentence": "The doctor is female."
+  },
+  {
+    "unit": 3,
+    "english": "Gender",
+    "pronunciation": "Cendır",
+    "turkish_meaning": "Cinsiyet",
+    "example_sentence": "Please write your name and gender."
+  },
+  {
+    "unit": 3,
+    "english": "Height",
+    "pronunciation": "Hayt",
+    "turkish_meaning": "Boy",
+    "example_sentence": "What is your height?"
+  },
+  {
+    "unit": 3,
+    "english": "Hot",
+    "pronunciation": "Hot",
+    "turkish_meaning": "Sıcak",
+    "example_sentence": "It is hot in summer."
+  },
+  {
+    "unit": 3,
+    "english": "Loose",
+    "pronunciation": "Luus",
+    "turkish_meaning": "Bol",
+    "example_sentence": "This jumper is loose on me."
+  },
+  {
+    "unit": 3,
+    "english": "Male",
+    "pronunciation": "Meyl",
+    "turkish_meaning": "Erkek",
+    "example_sentence": "My teacher is male."
+  },
+  {
+    "unit": 3,
+    "english": "Outfit",
+    "pronunciation": "Autfit",
+    "turkish_meaning": "Kıyafet",
+    "example_sentence": "I like your new outfit."
+  },
+  {
+    "unit": 3,
+    "english": "Rainy",
+    "pronunciation": "Reyni",
+    "turkish_meaning": "Yağmurlu",
+    "example_sentence": "It is rainy today, take your umbrella."
+  },
+  {
+    "unit": 3,
+    "english": "Read a map",
+    "pronunciation": "Riid ı mep",
+    "turkish_meaning": "Harita okumak",
+    "example_sentence": "My father can read a map well."
+  },
+  {
+    "unit": 3,
+    "english": "Recycled",
+    "pronunciation": "Riisaykıld",
+    "turkish_meaning": "Geri dönüştürülmüş",
+    "example_sentence": "This bag is made of recycled materials."
+  },
+  {
+    "unit": 3,
+    "english": "Silk",
+    "pronunciation": "Silk",
+    "turkish_meaning": "İpek",
+    "example_sentence": "Her scarf is made of silk."
+  },
+  {
+    "unit": 3,
+    "english": "Silver",
+    "pronunciation": "Silvır",
+    "turkish_meaning": "Gümüş",
+    "example_sentence": "She has a silver ring."
+  },
+  {
+    "unit": 3,
+    "english": "Spend money",
+    "pronunciation": "Spend mani",
+    "turkish_meaning": "Para harcamak",
+    "example_sentence": "I don't like to spend money on toys."
+  },
+  {
+    "unit": 3,
+    "english": "Stylish",
+    "pronunciation": "Staylış",
+    "turkish_meaning": "Şık",
+    "example_sentence": "My aunt always looks stylish."
+  },
+  {
+    "unit": 3,
+    "english": "Thick",
+    "pronunciation": "Thik",
+    "turkish_meaning": "Kalın",
+    "example_sentence": "Wear a thick coat, it is very cold."
+  },
+  {
+    "unit": 3,
+    "english": "Travel around the world",
+    "pronunciation": "Trevıl ıraund dı vörld",
+    "turkish_meaning": "Dünyayı dolaşmak",
+    "example_sentence": "I want to travel around the world."
+  },
+  {
+    "unit": 3,
+    "english": "Treasure chest",
+    "pronunciation": "Trejır çest",
+    "turkish_meaning": "Hazine sandığı",
+    "example_sentence": "The pirates found a treasure chest."
+  },
+  {
+    "unit": 3,
+    "english": "Trendy",
+    "pronunciation": "Trendi",
+    "turkish_meaning": "Modaya uygun",
+    "example_sentence": "Her new shoes are very trendy."
+  },
+  {
+    "unit": 3,
+    "english": "Try on",
+    "pronunciation": "Tray on",
+    "turkish_meaning": "Denemek",
+    "example_sentence": "Can I try on this jacket?"
+  },
+  {
+    "unit": 3,
+    "english": "Wardrobe",
+    "pronunciation": "Vordroub",
+    "turkish_meaning": "Gardırop",
+    "example_sentence": "My clothes are in the wardrobe."
+  },
+  {
+    "unit": 3,
+    "english": "Wear",
+    "pronunciation": "Veır",
+    "turkish_meaning": "Giymek",
+    "example_sentence": "What do you wear in cold weather?"
+  },
+  {
+    "unit": 3,
+    "english": "Weather",
+    "pronunciation": "Vedır",
+    "turkish_meaning": "Hava",
+    "example_sentence": "The weather is nice today."
+  },
+  {
+    "unit": 3,
+    "english": "Wool",
+    "pronunciation": "Vuul",
+    "turkish_meaning": "Yün",
+    "example_sentence": "This jumper is made of wool."
+  },
+  {
+    "unit": 3,
+    "english": "Arm",
+    "pronunciation": "Arm",
+    "turkish_meaning": "Kol",
+    "example_sentence": "I hurt my arm playing football."
+  },
+  {
+    "unit": 3,
+    "english": "Eye",
+    "pronunciation": "Ay",
+    "turkish_meaning": "Göz",
+    "example_sentence": "She has blue eyes."
+  },
+  {
+    "unit": 3,
+    "english": "Finger",
+    "pronunciation": "Fingır",
+    "turkish_meaning": "Parmak",
+    "example_sentence": "She wears a ring on her finger."
+  },
+  {
+    "unit": 3,
+    "english": "Foot",
+    "pronunciation": "Fut",
+    "turkish_meaning": "Ayak",
+    "example_sentence": "My foot hurts after running."
+  },
+  {
+    "unit": 3,
+    "english": "Hand",
+    "pronunciation": "Hend",
+    "turkish_meaning": "El",
+    "example_sentence": "Raise your hand to answer."
+  },
+  {
+    "unit": 3,
+    "english": "Head",
+    "pronunciation": "Hed",
+    "turkish_meaning": "Baş",
+    "example_sentence": "He wears a cap on his head."
+  },
+  {
+    "unit": 3,
+    "english": "Leg",
+    "pronunciation": "Leg",
+    "turkish_meaning": "Bacak",
+    "example_sentence": "She has long legs."
+  },
+  {
+    "unit": 3,
+    "english": "Neck",
+    "pronunciation": "Nek",
+    "turkish_meaning": "Boyun",
+    "example_sentence": "She wears a necklace on her neck."
+  },
+  {
+    "unit": 3,
+    "english": "Nose",
+    "pronunciation": "Nouz",
+    "turkish_meaning": "Burun",
+    "example_sentence": "My little brother has a small nose."
+  },
+  {
+    "unit": 3,
+    "english": "Teeth",
+    "pronunciation": "Tiith",
+    "turkish_meaning": "Dişler",
+    "example_sentence": "Brush your teeth every morning."
+  },
+  {
+    "unit": 3,
+    "english": "Medium height",
+    "pronunciation": "Miidiım hayt",
+    "turkish_meaning": "Orta boy",
+    "example_sentence": "My father is medium height."
+  },
+  {
+    "unit": 3,
+    "english": "Short",
+    "pronunciation": "Şort",
+    "turkish_meaning": "Kısa",
+    "example_sentence": "He is short. He has blue eyes."
+  },
+  {
+    "unit": 3,
+    "english": "Slim",
+    "pronunciation": "Slim",
+    "turkish_meaning": "İnce",
+    "example_sentence": "She is tall and slim."
+  },
+  {
+    "unit": 3,
+    "english": "Tall",
+    "pronunciation": "Tol",
+    "turkish_meaning": "Uzun",
+    "example_sentence": "She is tall and thin."
+  },
+  {
+    "unit": 3,
+    "english": "Thin",
+    "pronunciation": "Thin",
+    "turkish_meaning": "İnce, zayıf",
+    "example_sentence": "My uncle is tall and thin."
+  },
+  {
+    "unit": 3,
+    "english": "Curly",
+    "pronunciation": "Körli",
+    "turkish_meaning": "Kıvırcık",
+    "example_sentence": "She has curly hair."
+  },
+  {
+    "unit": 3,
+    "english": "Dark",
+    "pronunciation": "Dark",
+    "turkish_meaning": "Koyu",
+    "example_sentence": "He has dark hair."
+  },
+  {
+    "unit": 3,
+    "english": "Light",
+    "pronunciation": "Layt",
+    "turkish_meaning": "Açık (renk)",
+    "example_sentence": "My sister has light brown hair."
+  },
+  {
+    "unit": 3,
+    "english": "Straight",
+    "pronunciation": "Streyt",
+    "turkish_meaning": "Düz (saç)",
+    "example_sentence": "She has long, straight hair."
+  },
+  {
+    "unit": 3,
+    "english": "Wavy",
+    "pronunciation": "Veyvi",
+    "turkish_meaning": "Dalgalı",
+    "example_sentence": "She has wavy black hair."
+  },
+  {
+    "unit": 3,
+    "english": "Black",
+    "pronunciation": "Blek",
+    "turkish_meaning": "Siyah",
+    "example_sentence": "My coat is black."
+  },
+  {
+    "unit": 3,
+    "english": "Blue",
+    "pronunciation": "Bluu",
+    "turkish_meaning": "Mavi",
+    "example_sentence": "He has blue eyes."
+  },
+  {
+    "unit": 3,
+    "english": "Brown",
+    "pronunciation": "Braun",
+    "turkish_meaning": "Kahverengi",
+    "example_sentence": "She has brown hair."
+  },
+  {
+    "unit": 3,
+    "english": "Green",
+    "pronunciation": "Griin",
+    "turkish_meaning": "Yeşil",
+    "example_sentence": "My favourite colour is green."
+  },
+  {
+    "unit": 3,
+    "english": "Orange",
+    "pronunciation": "Orınc",
+    "turkish_meaning": "Turuncu",
+    "example_sentence": "Her bag is orange."
+  },
+  {
+    "unit": 3,
+    "english": "Pink",
+    "pronunciation": "Pink",
+    "turkish_meaning": "Pembe",
+    "example_sentence": "Its hair is pink."
+  },
+  {
+    "unit": 3,
+    "english": "Purple",
+    "pronunciation": "Pörpıl",
+    "turkish_meaning": "Mor",
+    "example_sentence": "Its hair is purple."
+  },
+  {
+    "unit": 3,
+    "english": "Red",
+    "pronunciation": "Red",
+    "turkish_meaning": "Kırmızı",
+    "example_sentence": "Her boots are red."
+  },
+  {
+    "unit": 3,
+    "english": "White",
+    "pronunciation": "Vayt",
+    "turkish_meaning": "Beyaz",
+    "example_sentence": "My T-shirt is white."
+  },
+  {
+    "unit": 3,
+    "english": "Yellow",
+    "pronunciation": "Yelou",
+    "turkish_meaning": "Sarı",
+    "example_sentence": "Our socks are yellow."
+  },
+  {
+    "unit": 3,
+    "english": "Draw pictures",
+    "pronunciation": "Dro pikçırz",
+    "turkish_meaning": "Resim çizmek",
+    "example_sentence": "I like to draw pictures at the weekend."
+  },
+  {
+    "unit": 3,
+    "english": "Get up late",
+    "pronunciation": "Get ap leyt",
+    "turkish_meaning": "Geç kalkmak",
+    "example_sentence": "I get up late on Sundays."
+  },
+  {
+    "unit": 3,
+    "english": "Go jogging",
+    "pronunciation": "Gou coging",
+    "turkish_meaning": "Yürüyüşe / koşuya gitmek",
+    "example_sentence": "My father goes jogging every morning."
+  },
+  {
+    "unit": 3,
+    "english": "Go shopping",
+    "pronunciation": "Gou şoping",
+    "turkish_meaning": "Alışverişe gitmek",
+    "example_sentence": "We go shopping on Saturdays."
+  },
+  {
+    "unit": 3,
+    "english": "Go to the park",
+    "pronunciation": "Gou tu dı park",
+    "turkish_meaning": "Parka gitmek",
+    "example_sentence": "I go to the park with my friends."
+  },
+  {
+    "unit": 3,
+    "english": "Listen to music",
+    "pronunciation": "Lisın tu myuuzik",
+    "turkish_meaning": "Müzik dinlemek",
+    "example_sentence": "She listens to music every evening."
+  },
+  {
+    "unit": 3,
+    "english": "Meet friends",
+    "pronunciation": "Miit frends",
+    "turkish_meaning": "Arkadaşlarla buluşmak",
+    "example_sentence": "I meet friends after school."
+  },
+  {
+    "unit": 3,
+    "english": "Play chess",
+    "pronunciation": "Pley çes",
+    "turkish_meaning": "Satranç oynamak",
+    "example_sentence": "He plays chess with his grandfather."
+  },
+  {
+    "unit": 3,
+    "english": "Play video games",
+    "pronunciation": "Pley vidiou geymz",
+    "turkish_meaning": "Video oyunları oynamak",
+    "example_sentence": "My brother plays video games at the weekend."
+  },
+  {
+    "unit": 3,
+    "english": "Read a book",
+    "pronunciation": "Riid ı buk",
+    "turkish_meaning": "Kitap okumak",
+    "example_sentence": "He always reads a book before bed."
+  },
+  {
+    "unit": 3,
+    "english": "Read a magazine",
+    "pronunciation": "Riid ı megıziin",
+    "turkish_meaning": "Dergi okumak",
+    "example_sentence": "My mother reads a magazine on Sundays."
+  },
+  {
+    "unit": 3,
+    "english": "Watch TV",
+    "pronunciation": "Voç tii-vii",
+    "turkish_meaning": "TV izlemek",
+    "example_sentence": "We watch TV in the evening."
+  },
+  {
+    "unit": 3,
+    "english": "Always",
+    "pronunciation": "Olveyz",
+    "turkish_meaning": "Daima, her zaman",
+    "example_sentence": "He always reads a book."
+  },
+  {
+    "unit": 3,
+    "english": "Usually",
+    "pronunciation": "Yujıli",
+    "turkish_meaning": "Genellikle",
+    "example_sentence": "I usually walk to school."
+  },
+  {
+    "unit": 3,
+    "english": "Sometimes",
+    "pronunciation": "Samtaymz",
+    "turkish_meaning": "Bazen, ara sıra",
+    "example_sentence": "She sometimes goes to the cinema."
+  },
+  {
+    "unit": 3,
+    "english": "Never",
+    "pronunciation": "Nevır",
+    "turkish_meaning": "Hiç, asla",
+    "example_sentence": "I never eat breakfast late."
+  },
+  {
+    "unit": 3,
+    "english": "Spring",
+    "pronunciation": "Spring",
+    "turkish_meaning": "İlkbahar",
+    "example_sentence": "Flowers grow in spring."
+  },
+  {
+    "unit": 3,
+    "english": "Summer",
+    "pronunciation": "Samır",
+    "turkish_meaning": "Yaz",
+    "example_sentence": "We wear shorts in summer."
+  },
+  {
+    "unit": 3,
+    "english": "Autumn",
+    "pronunciation": "Otım",
+    "turkish_meaning": "Sonbahar",
+    "example_sentence": "Leaves fall in autumn."
+  },
+  {
+    "unit": 3,
+    "english": "Winter",
+    "pronunciation": "Vintır",
+    "turkish_meaning": "Kış",
+    "example_sentence": "It is cold and snowy in winter."
+  },
+  {
+    "unit": 3,
+    "english": "Who",
+    "pronunciation": "Huu",
+    "turkish_meaning": "Kim",
+    "example_sentence": "Who is your best friend?"
+  },
+  {
+    "unit": 3,
+    "english": "Which",
+    "pronunciation": "Viç",
+    "turkish_meaning": "Hangi / Hangisi?",
+    "example_sentence": "Which coat is yours?"
+  },
+  {
+    "unit": 3,
+    "english": "How often",
+    "pronunciation": "Hau ofın",
+    "turkish_meaning": "Ne sıklıkla?",
+    "example_sentence": "How often do you read a book?"
+  },
+  {
+    "unit": 4,
+    "english": "Aunt",
+    "pronunciation": "Ant",
+    "turkish_meaning": "Hala, teyze",
+    "example_sentence": "My aunt visits us every summer."
+  },
+  {
+    "unit": 4,
+    "english": "Brother",
+    "pronunciation": "Bradır",
+    "turkish_meaning": "Erkek kardeş",
+    "example_sentence": "My brother plays football."
+  },
+  {
+    "unit": 4,
+    "english": "Father",
+    "pronunciation": "Fadır",
+    "turkish_meaning": "Baba",
+    "example_sentence": "My father is fishing by the lake."
+  },
+  {
+    "unit": 4,
+    "english": "Grandfather",
+    "pronunciation": "Grendfadır",
+    "turkish_meaning": "Büyükbaba",
+    "example_sentence": "My grandfather tells great stories."
+  },
+  {
+    "unit": 4,
+    "english": "Grandmother",
+    "pronunciation": "Grendmadır",
+    "turkish_meaning": "Büyükanne",
+    "example_sentence": "My grandmother bakes a cake every Sunday."
+  },
+  {
+    "unit": 4,
+    "english": "Mother",
+    "pronunciation": "Madır",
+    "turkish_meaning": "Anne",
+    "example_sentence": "She is making a cake in the kitchen."
+  },
+  {
+    "unit": 4,
+    "english": "Sister",
+    "pronunciation": "Sistır",
+    "turkish_meaning": "Kız kardeş",
+    "example_sentence": "My sister likes to sing a song."
+  },
+  {
+    "unit": 4,
+    "english": "Uncle",
+    "pronunciation": "Ankıl",
+    "turkish_meaning": "Amca, dayı",
+    "example_sentence": "My uncle is riding a bike in the garden."
+  },
+  {
+    "unit": 4,
+    "english": "Brush teeth",
+    "pronunciation": "Braş tiith",
+    "turkish_meaning": "Diş fırçalamak",
+    "example_sentence": "I brush my teeth twice a day."
+  },
+  {
+    "unit": 4,
+    "english": "Camping",
+    "pronunciation": "Kemping",
+    "turkish_meaning": "Kamp",
+    "example_sentence": "We go camping in the forest every summer."
+  },
+  {
+    "unit": 4,
+    "english": "Cooking",
+    "pronunciation": "Kuking",
+    "turkish_meaning": "Yemek pişirmek",
+    "example_sentence": "My mother enjoys cooking at the weekend."
+  },
+  {
+    "unit": 4,
+    "english": "Cycling",
+    "pronunciation": "Sayklıng",
+    "turkish_meaning": "Bisiklete binmek",
+    "example_sentence": "We go cycling in the park."
+  },
+  {
+    "unit": 4,
+    "english": "Dancing",
+    "pronunciation": "Densıng",
+    "turkish_meaning": "Dans etmek",
+    "example_sentence": "She loves dancing at parties."
+  },
+  {
+    "unit": 4,
+    "english": "Fishing",
+    "pronunciation": "Fişıng",
+    "turkish_meaning": "Balık tutmak",
+    "example_sentence": "My father is fishing by the lake."
+  },
+  {
+    "unit": 4,
+    "english": "Have a barbeque",
+    "pronunciation": "Hev ı barbikyu",
+    "turkish_meaning": "Mangal yapmak",
+    "example_sentence": "We have a barbeque in the garden on Sundays."
+  },
+  {
+    "unit": 4,
+    "english": "Make a cake",
+    "pronunciation": "Meyk ı keyk",
+    "turkish_meaning": "Kek, pasta yapmak",
+    "example_sentence": "She is making a cake in the kitchen."
+  },
+  {
+    "unit": 4,
+    "english": "Play a board game",
+    "pronunciation": "Pley ı bord geym",
+    "turkish_meaning": "Masa oyunu oynamak",
+    "example_sentence": "We play a board game after dinner."
+  },
+  {
+    "unit": 4,
+    "english": "Play computer games",
+    "pronunciation": "Pley kımpyutır geymz",
+    "turkish_meaning": "Bilgisayar oyunu oynamak",
+    "example_sentence": "My brother plays computer games every evening."
+  },
+  {
+    "unit": 4,
+    "english": "Play the guitar",
+    "pronunciation": "Pley dı gitar",
+    "turkish_meaning": "Gitar çalmak",
+    "example_sentence": "I like playing the guitar."
+  },
+  {
+    "unit": 4,
+    "english": "Rest",
+    "pronunciation": "Rest",
+    "turkish_meaning": "Dinlenmek",
+    "example_sentence": "My grandfather likes to rest in the garden."
+  },
+  {
+    "unit": 4,
+    "english": "Sing a song",
+    "pronunciation": "Sing ı song",
+    "turkish_meaning": "Şarkı söylemek",
+    "example_sentence": "My sister likes to sing a song."
+  },
+  {
+    "unit": 4,
+    "english": "Take care of pet",
+    "pronunciation": "Teyk keır ov pet",
+    "turkish_meaning": "Evcil hayvan ile ilgilenmek",
+    "example_sentence": "I take care of my pet every day."
+  },
+  {
+    "unit": 4,
+    "english": "Take photographs",
+    "pronunciation": "Teyk foutıgrafs",
+    "turkish_meaning": "Fotoğraf çekmek",
+    "example_sentence": "My father likes to take photographs on trips."
+  },
+  {
+    "unit": 4,
+    "english": "Tidy up",
+    "pronunciation": "Taydi ap",
+    "turkish_meaning": "Toparlamak",
+    "example_sentence": "We tidy up our rooms on Saturday."
+  },
+  {
+    "unit": 4,
+    "english": "Visit a museum",
+    "pronunciation": "Vizit ı myuuziım",
+    "turkish_meaning": "Müzeyi ziyaret etmek",
+    "example_sentence": "We visited a museum last weekend."
+  },
+  {
+    "unit": 4,
+    "english": "Walk",
+    "pronunciation": "Vok",
+    "turkish_meaning": "Yürümek",
+    "example_sentence": "You are walking to school, aren't you?"
+  },
+  {
+    "unit": 4,
+    "english": "Washing the car",
+    "pronunciation": "Voşıng dı kar",
+    "turkish_meaning": "Arabayı yıkamak",
+    "example_sentence": "My father is washing the car today."
+  },
+  {
+    "unit": 4,
+    "english": "Write diary",
+    "pronunciation": "Rayt dayıri",
+    "turkish_meaning": "Günlük yazmak",
+    "example_sentence": "I write my diary every night."
+  },
+  {
+    "unit": 4,
+    "english": "Always",
+    "pronunciation": "Olveyz",
+    "turkish_meaning": "Daima, her zaman",
+    "example_sentence": "I always brush my teeth before bed."
+  },
+  {
+    "unit": 4,
+    "english": "Usually",
+    "pronunciation": "Yujıli",
+    "turkish_meaning": "Genellikle",
+    "example_sentence": "We usually visit our grandparents on Sundays."
+  },
+  {
+    "unit": 4,
+    "english": "Sometimes",
+    "pronunciation": "Samtaymz",
+    "turkish_meaning": "Bazen, ara sıra",
+    "example_sentence": "Sometimes we go camping in summer."
+  },
+  {
+    "unit": 4,
+    "english": "Never",
+    "pronunciation": "Nevır",
+    "turkish_meaning": "Hiç, asla",
+    "example_sentence": "My father never forgets our birthdays."
+  },
+  {
+    "unit": 4,
+    "english": "Art museum",
+    "pronunciation": "Art myuuziım",
+    "turkish_meaning": "Sanat/resim müzesi",
+    "example_sentence": "We visited the art museum yesterday."
+  },
+  {
+    "unit": 4,
+    "english": "Beach",
+    "pronunciation": "Biiç",
+    "turkish_meaning": "Sahil, kumsal",
+    "example_sentence": "We swim at the beach in summer."
+  },
+  {
+    "unit": 4,
+    "english": "Forest",
+    "pronunciation": "Forıst",
+    "turkish_meaning": "Orman",
+    "example_sentence": "They are in the forest."
+  },
+  {
+    "unit": 4,
+    "english": "Garden",
+    "pronunciation": "Gardın",
+    "turkish_meaning": "Bahçe",
+    "example_sentence": "He is riding a bike in the garden."
+  },
+  {
+    "unit": 4,
+    "english": "Kitchen",
+    "pronunciation": "Kiçın",
+    "turkish_meaning": "Mutfak",
+    "example_sentence": "She is making a cake in the kitchen."
+  },
+  {
+    "unit": 4,
+    "english": "Lake",
+    "pronunciation": "Leyk",
+    "turkish_meaning": "Göl",
+    "example_sentence": "My father is fishing by the lake."
+  },
+  {
+    "unit": 4,
+    "english": "At the moment",
+    "pronunciation": "Et dı moumınt",
+    "turkish_meaning": "Şimdi",
+    "example_sentence": "What is Tom doing at the moment?"
+  },
+  {
+    "unit": 4,
+    "english": "Bicycle",
+    "pronunciation": "Baysikıl",
+    "turkish_meaning": "Bisiklet",
+    "example_sentence": "I ride my bicycle every weekend."
+  },
+  {
+    "unit": 4,
+    "english": "Birthday party",
+    "pronunciation": "Börsdey parti",
+    "turkish_meaning": "Doğum günü partisi",
+    "example_sentence": "We are going to a birthday party today."
+  },
+  {
+    "unit": 4,
+    "english": "Camera",
+    "pronunciation": "Kemırı",
+    "turkish_meaning": "Kamera, fotoğraf makinesi",
+    "example_sentence": "My father has a new camera."
+  },
+  {
+    "unit": 4,
+    "english": "Classmate",
+    "pronunciation": "Klasmeyt",
+    "turkish_meaning": "Sınıf arkadaşı",
+    "example_sentence": "My classmate helps me with homework."
+  },
+  {
+    "unit": 4,
+    "english": "Famous",
+    "pronunciation": "Feymıs",
+    "turkish_meaning": "Ünlü",
+    "example_sentence": "She wants to be a famous singer."
+  },
+  {
+    "unit": 4,
+    "english": "Feed",
+    "pronunciation": "Fiid",
+    "turkish_meaning": "Beslemek",
+    "example_sentence": "I feed my cat every morning."
+  },
+  {
+    "unit": 4,
+    "english": "Festival",
+    "pronunciation": "Festıvıl",
+    "turkish_meaning": "Festival",
+    "example_sentence": "We go to a music festival every year."
+  },
+  {
+    "unit": 4,
+    "english": "Flowers",
+    "pronunciation": "Flauırz",
+    "turkish_meaning": "Çiçekler",
+    "example_sentence": "There are flowers in the garden."
+  },
+  {
+    "unit": 4,
+    "english": "Folding paper",
+    "pronunciation": "Fouldıng peypır",
+    "turkish_meaning": "Kağıt katlamak",
+    "example_sentence": "She is folding paper to make origami."
+  },
+  {
+    "unit": 4,
+    "english": "Fond of",
+    "pronunciation": "Fond ov",
+    "turkish_meaning": "Düşkün olmak",
+    "example_sentence": "I am fond of animals."
+  },
+  {
+    "unit": 4,
+    "english": "Food",
+    "pronunciation": "Fuud",
+    "turkish_meaning": "Yiyecek",
+    "example_sentence": "We bring food for the barbeque."
+  },
+  {
+    "unit": 4,
+    "english": "Indoor activities",
+    "pronunciation": "İndor äktivitiz",
+    "turkish_meaning": "İçeride yapılan aktiviteler",
+    "example_sentence": "Reading is one of my indoor activities."
+  },
+  {
+    "unit": 4,
+    "english": "Interested in",
+    "pronunciation": "İntrıstıd in",
+    "turkish_meaning": "İlgili olmak",
+    "example_sentence": "I am interested in photography."
+  },
+  {
+    "unit": 4,
+    "english": "Jumping",
+    "pronunciation": "Campıng",
+    "turkish_meaning": "Zıplamak",
+    "example_sentence": "The children are jumping in the garden."
+  },
+  {
+    "unit": 4,
+    "english": "Magazines",
+    "pronunciation": "Megıziinz",
+    "turkish_meaning": "Dergiler",
+    "example_sentence": "My mother reads magazines on Sundays."
+  },
+  {
+    "unit": 4,
+    "english": "Nature",
+    "pronunciation": "Neyçır",
+    "turkish_meaning": "Doğa",
+    "example_sentence": "We love spending time in nature."
+  },
+  {
+    "unit": 4,
+    "english": "Newspaper",
+    "pronunciation": "Nyuuzpeypır",
+    "turkish_meaning": "Gazete",
+    "example_sentence": "My grandfather reads the newspaper every morning."
+  },
+  {
+    "unit": 4,
+    "english": "Now",
+    "pronunciation": "Nau",
+    "turkish_meaning": "Şimdi",
+    "example_sentence": "What are you doing now?"
+  },
+  {
+    "unit": 4,
+    "english": "Organise",
+    "pronunciation": "Orgınayz",
+    "turkish_meaning": "Düzenlemek",
+    "example_sentence": "We organise a picnic every May."
+  },
+  {
+    "unit": 4,
+    "english": "Origami",
+    "pronunciation": "Origami",
+    "turkish_meaning": "Kağıt katlama sanatı",
+    "example_sentence": "She is good at origami."
+  },
+  {
+    "unit": 4,
+    "english": "Outdoor activities",
+    "pronunciation": "Autdor äktivitiz",
+    "turkish_meaning": "Dışarıda yapılan aktiviteler",
+    "example_sentence": "Cycling is my favourite outdoor activity."
+  },
+  {
+    "unit": 4,
+    "english": "Parents",
+    "pronunciation": "Peırınts",
+    "turkish_meaning": "Ebeveynler (anne-baba)",
+    "example_sentence": "My parents work in the city."
+  },
+  {
+    "unit": 4,
+    "english": "Pasta",
+    "pronunciation": "Pastı",
+    "turkish_meaning": "Makarna",
+    "example_sentence": "We cook pasta for dinner."
+  },
+  {
+    "unit": 4,
+    "english": "Photo",
+    "pronunciation": "Foutou",
+    "turkish_meaning": "Fotoğraf",
+    "example_sentence": "This is a photo of my family."
+  },
+  {
+    "unit": 4,
+    "english": "School friends",
+    "pronunciation": "Skuul frendz",
+    "turkish_meaning": "Okul arkadaşları",
+    "example_sentence": "I play with my school friends at lunch break."
+  },
+  {
+    "unit": 4,
+    "english": "Sit",
+    "pronunciation": "Sit",
+    "turkish_meaning": "Oturmak",
+    "example_sentence": "Please sit on this chair."
+  },
+  {
+    "unit": 4,
+    "english": "Surf",
+    "pronunciation": "Sörf",
+    "turkish_meaning": "Sörf",
+    "example_sentence": "He can surf very well."
+  },
+  {
+    "unit": 4,
+    "english": "Talk about",
+    "pronunciation": "Tok ıbaut",
+    "turkish_meaning": "Hakkında konuşmak",
+    "example_sentence": "Bill is talking about school."
+  },
+  {
+    "unit": 4,
+    "english": "Teddy bear",
+    "pronunciation": "Tedi beır",
+    "turkish_meaning": "Oyuncak ayıcık",
+    "example_sentence": "My little sister sleeps with her teddy bear."
+  },
+  {
+    "unit": 4,
+    "english": "Tent",
+    "pronunciation": "Tent",
+    "turkish_meaning": "Çadır",
+    "example_sentence": "We set up the tent near the lake."
+  },
+  {
+    "unit": 4,
+    "english": "Today",
+    "pronunciation": "Tıdey",
+    "turkish_meaning": "Bugün",
+    "example_sentence": "We are visiting a museum today."
+  },
+  {
+    "unit": 4,
+    "english": "Trip",
+    "pronunciation": "Trip",
+    "turkish_meaning": "Gezi, seyahat",
+    "example_sentence": "We are going on a trip this weekend."
+  },
+  {
+    "unit": 4,
+    "english": "Who",
+    "pronunciation": "Huu",
+    "turkish_meaning": "Kim",
+    "example_sentence": "Who is fishing by the lake?"
+  },
+  {
+    "unit": 4,
+    "english": "Where",
+    "pronunciation": "Veır",
+    "turkish_meaning": "Nerede, nereye?",
+    "example_sentence": "Where are they in this photo?"
+  },
+  {
+    "unit": 4,
+    "english": "What",
+    "pronunciation": "Vat",
+    "turkish_meaning": "Ne?",
+    "example_sentence": "What is Lisa doing?"
+  },
+  {
+    "unit": 4,
+    "english": "How many",
+    "pronunciation": "Hau meni",
+    "turkish_meaning": "Kaç tane?",
+    "example_sentence": "How many photos did you take?"
+  },
+  {
+    "unit": 5,
+    "english": "Balcony",
+    "pronunciation": "Belkıni",
+    "turkish_meaning": "Balkon",
+    "example_sentence": "We drink tea on the balcony."
+  },
+  {
+    "unit": 5,
+    "english": "Bathroom",
+    "pronunciation": "Bathruum",
+    "turkish_meaning": "Banyo",
+    "example_sentence": "The bathroom is next to my bedroom."
+  },
+  {
+    "unit": 5,
+    "english": "Bedroom",
+    "pronunciation": "Bedruum",
+    "turkish_meaning": "Yatak odası",
+    "example_sentence": "There are three beds in the bedroom."
+  },
+  {
+    "unit": 5,
+    "english": "Corridor",
+    "pronunciation": "Koridor",
+    "turkish_meaning": "Koridor",
+    "example_sentence": "You mustn't run in the corridor."
+  },
+  {
+    "unit": 5,
+    "english": "Dining room",
+    "pronunciation": "Daynıng ruum",
+    "turkish_meaning": "Yemek odası",
+    "example_sentence": "The table is in the dining room."
+  },
+  {
+    "unit": 5,
+    "english": "Floor",
+    "pronunciation": "Flor",
+    "turkish_meaning": "Kat",
+    "example_sentence": "Our flat is on the third floor."
+  },
+  {
+    "unit": 5,
+    "english": "Garage",
+    "pronunciation": "Garaj",
+    "turkish_meaning": "Garaj",
+    "example_sentence": "The car is in the garage."
+  },
+  {
+    "unit": 5,
+    "english": "Garden",
+    "pronunciation": "Gardın",
+    "turkish_meaning": "Bahçe",
+    "example_sentence": "There are flowers in the garden."
+  },
+  {
+    "unit": 5,
+    "english": "Kitchen",
+    "pronunciation": "Kiçın",
+    "turkish_meaning": "Mutfak",
+    "example_sentence": "The dishwasher is in the kitchen."
+  },
+  {
+    "unit": 5,
+    "english": "Roof",
+    "pronunciation": "Ruuf",
+    "turkish_meaning": "Çatı",
+    "example_sentence": "A bird is sitting on the roof."
+  },
+  {
+    "unit": 5,
+    "english": "Sitting room",
+    "pronunciation": "Sitıng ruum",
+    "turkish_meaning": "Oturma odası",
+    "example_sentence": "The armchair is in the sitting room."
+  },
+  {
+    "unit": 5,
+    "english": "Terrace",
+    "pronunciation": "Terıs",
+    "turkish_meaning": "Teras",
+    "example_sentence": "We have breakfast on the terrace."
+  },
+  {
+    "unit": 5,
+    "english": "Toilet",
+    "pronunciation": "Toylıt",
+    "turkish_meaning": "Tuvalet",
+    "example_sentence": "The toilet is next to the bathroom."
+  },
+  {
+    "unit": 5,
+    "english": "Window",
+    "pronunciation": "Vindou",
+    "turkish_meaning": "Pencere",
+    "example_sentence": "Please open the window."
+  },
+  {
+    "unit": 5,
+    "english": "Armchair",
+    "pronunciation": "Armçeır",
+    "turkish_meaning": "Koltuk",
+    "example_sentence": "It is in the sitting room."
+  },
+  {
+    "unit": 5,
+    "english": "Bed",
+    "pronunciation": "Bed",
+    "turkish_meaning": "Yatak",
+    "example_sentence": "There are two beds in the bedroom."
+  },
+  {
+    "unit": 5,
+    "english": "Bookcase",
+    "pronunciation": "Bukkeys",
+    "turkish_meaning": "Kitaplık",
+    "example_sentence": "There is a book in the bookcase."
+  },
+  {
+    "unit": 5,
+    "english": "Chair",
+    "pronunciation": "Çeır",
+    "turkish_meaning": "Sandalye",
+    "example_sentence": "There is a chair in the kitchen."
+  },
+  {
+    "unit": 5,
+    "english": "Cupboard",
+    "pronunciation": "Kabırd",
+    "turkish_meaning": "Dolap",
+    "example_sentence": "The plates are in the cupboard."
+  },
+  {
+    "unit": 5,
+    "english": "Dishwasher",
+    "pronunciation": "Dişvoşır",
+    "turkish_meaning": "Bulaşık makinesi",
+    "example_sentence": "It is in the kitchen."
+  },
+  {
+    "unit": 5,
+    "english": "Fork",
+    "pronunciation": "Fork",
+    "turkish_meaning": "Çatal",
+    "example_sentence": "There are seven forks on the table."
+  },
+  {
+    "unit": 5,
+    "english": "Fridge",
+    "pronunciation": "Fric",
+    "turkish_meaning": "Buzdolabı",
+    "example_sentence": "The milk is in the fridge."
+  },
+  {
+    "unit": 5,
+    "english": "Furniture",
+    "pronunciation": "Förnıçır",
+    "turkish_meaning": "Mobilya",
+    "example_sentence": "We bought new furniture for the sitting room."
+  },
+  {
+    "unit": 5,
+    "english": "Knife",
+    "pronunciation": "Nayf",
+    "turkish_meaning": "Bıçak",
+    "example_sentence": "Be careful with the knife."
+  },
+  {
+    "unit": 5,
+    "english": "Lamp",
+    "pronunciation": "Lemp",
+    "turkish_meaning": "Lamba",
+    "example_sentence": "There is a lamp on the table."
+  },
+  {
+    "unit": 5,
+    "english": "Oven",
+    "pronunciation": "Avın",
+    "turkish_meaning": "Fırın",
+    "example_sentence": "My mother cooks in the oven."
+  },
+  {
+    "unit": 5,
+    "english": "Pillow",
+    "pronunciation": "Pilou",
+    "turkish_meaning": "Yastık",
+    "example_sentence": "There is a soft pillow on my bed."
+  },
+  {
+    "unit": 5,
+    "english": "Plate",
+    "pronunciation": "Pleyt",
+    "turkish_meaning": "Tabak",
+    "example_sentence": "Put the plate on the table."
+  },
+  {
+    "unit": 5,
+    "english": "Sofa",
+    "pronunciation": "Soufı",
+    "turkish_meaning": "Kanepe",
+    "example_sentence": "A sofa is bigger than an armchair."
+  },
+  {
+    "unit": 5,
+    "english": "Spoon",
+    "pronunciation": "Spuun",
+    "turkish_meaning": "Kaşık",
+    "example_sentence": "There are six spoons on the table."
+  },
+  {
+    "unit": 5,
+    "english": "Table",
+    "pronunciation": "Teybıl",
+    "turkish_meaning": "Masa",
+    "example_sentence": "It is in the dining room."
+  },
+  {
+    "unit": 5,
+    "english": "Wardrobe",
+    "pronunciation": "Vordroub",
+    "turkish_meaning": "Gardırop",
+    "example_sentence": "My clothes are in the wardrobe."
+  },
+  {
+    "unit": 5,
+    "english": "Big",
+    "pronunciation": "Big",
+    "turkish_meaning": "Büyük",
+    "example_sentence": "A house is bigger than a flat."
+  },
+  {
+    "unit": 5,
+    "english": "Close",
+    "pronunciation": "Klous",
+    "turkish_meaning": "Yakın",
+    "example_sentence": "Our house is close to the park."
+  },
+  {
+    "unit": 5,
+    "english": "Cold",
+    "pronunciation": "Kould",
+    "turkish_meaning": "Soğuk",
+    "example_sentence": "Erzurum is colder than Antalya."
+  },
+  {
+    "unit": 5,
+    "english": "Comfortable",
+    "pronunciation": "Kamftıbıl",
+    "turkish_meaning": "Konforlu, rahat",
+    "example_sentence": "A car is more comfortable than a bus."
+  },
+  {
+    "unit": 5,
+    "english": "Crowded",
+    "pronunciation": "Kraudıd",
+    "turkish_meaning": "Kalabalık",
+    "example_sentence": "Istanbul is more crowded than Konya."
+  },
+  {
+    "unit": 5,
+    "english": "Different",
+    "pronunciation": "Difırınt",
+    "turkish_meaning": "Farklı",
+    "example_sentence": "Our houses are different."
+  },
+  {
+    "unit": 5,
+    "english": "Expensive",
+    "pronunciation": "Ikspensiv",
+    "turkish_meaning": "Pahalı",
+    "example_sentence": "A dishwasher is more expensive than a spoon."
+  },
+  {
+    "unit": 5,
+    "english": "Hot",
+    "pronunciation": "Hot",
+    "turkish_meaning": "Sıcak",
+    "example_sentence": "It is very hot in the city today."
+  },
+  {
+    "unit": 5,
+    "english": "Interesting",
+    "pronunciation": "İntrıstıng",
+    "turkish_meaning": "İlginç",
+    "example_sentence": "This museum is very interesting."
+  },
+  {
+    "unit": 5,
+    "english": "Large",
+    "pronunciation": "Larc",
+    "turkish_meaning": "Geniş",
+    "example_sentence": "A house is larger than a flat."
+  },
+  {
+    "unit": 5,
+    "english": "Peaceful",
+    "pronunciation": "Piisfıl",
+    "turkish_meaning": "Huzurlu",
+    "example_sentence": "Our neighbourhood is very peaceful."
+  },
+  {
+    "unit": 5,
+    "english": "Quiet",
+    "pronunciation": "Kuayıt",
+    "turkish_meaning": "Sessiz",
+    "example_sentence": "My street is quiet at night."
+  },
+  {
+    "unit": 5,
+    "english": "Short",
+    "pronunciation": "Şort",
+    "turkish_meaning": "Kısa",
+    "example_sentence": "It is a short street."
+  },
+  {
+    "unit": 5,
+    "english": "Small",
+    "pronunciation": "Smol",
+    "turkish_meaning": "Küçük",
+    "example_sentence": "A chair is smaller than a sofa."
+  },
+  {
+    "unit": 5,
+    "english": "Tall",
+    "pronunciation": "Tol",
+    "turkish_meaning": "Uzun",
+    "example_sentence": "That skyscraper is very tall."
+  },
+  {
+    "unit": 5,
+    "english": "Wide",
+    "pronunciation": "Vayd",
+    "turkish_meaning": "Geniş",
+    "example_sentence": "This is a wide street."
+  },
+  {
+    "unit": 5,
+    "english": "Art gallery",
+    "pronunciation": "Art gelıri",
+    "turkish_meaning": "Sanat galerisi",
+    "example_sentence": "There is an art gallery in the city centre."
+  },
+  {
+    "unit": 5,
+    "english": "Castle",
+    "pronunciation": "Kasıl",
+    "turkish_meaning": "Kale",
+    "example_sentence": "Is there a castle in your city?"
+  },
+  {
+    "unit": 5,
+    "english": "Cinema",
+    "pronunciation": "Sinımı",
+    "turkish_meaning": "Sinema",
+    "example_sentence": "There is a cinema near my house."
+  },
+  {
+    "unit": 5,
+    "english": "Coast",
+    "pronunciation": "Koust",
+    "turkish_meaning": "Kıyı, sahil",
+    "example_sentence": "Our city is on the coast."
+  },
+  {
+    "unit": 5,
+    "english": "Flat",
+    "pronunciation": "Flet",
+    "turkish_meaning": "Apartman dairesi",
+    "example_sentence": "We live in a flat."
+  },
+  {
+    "unit": 5,
+    "english": "Gym",
+    "pronunciation": "Cim",
+    "turkish_meaning": "Spor salonu",
+    "example_sentence": "My brother goes to the gym every day."
+  },
+  {
+    "unit": 5,
+    "english": "House",
+    "pronunciation": "Haus",
+    "turkish_meaning": "Ev",
+    "example_sentence": "There are four rooms in our house."
+  },
+  {
+    "unit": 5,
+    "english": "Mosque",
+    "pronunciation": "Mosk",
+    "turkish_meaning": "Cami",
+    "example_sentence": "There is a mosque in our neighbourhood."
+  },
+  {
+    "unit": 5,
+    "english": "Museum",
+    "pronunciation": "Myuuziım",
+    "turkish_meaning": "Müze",
+    "example_sentence": "There is a museum in my neighbourhood."
+  },
+  {
+    "unit": 5,
+    "english": "Open air cinema",
+    "pronunciation": "Oupın eır sinımı",
+    "turkish_meaning": "Açık hava sineması",
+    "example_sentence": "We watch films at the open air cinema in summer."
+  },
+  {
+    "unit": 5,
+    "english": "Playground",
+    "pronunciation": "Pleygraund",
+    "turkish_meaning": "Oyun alanı",
+    "example_sentence": "The children are playing in the playground."
+  },
+  {
+    "unit": 5,
+    "english": "Shoe shop",
+    "pronunciation": "Şuu şop",
+    "turkish_meaning": "Ayakkabı dükkanı",
+    "example_sentence": "We bought boots at the shoe shop."
+  },
+  {
+    "unit": 5,
+    "english": "Shop",
+    "pronunciation": "Şop",
+    "turkish_meaning": "Dükkan",
+    "example_sentence": "There is a small shop on our street."
+  },
+  {
+    "unit": 5,
+    "english": "Skyscraper",
+    "pronunciation": "Skaykreypır",
+    "turkish_meaning": "Gökdelen",
+    "example_sentence": "That skyscraper is very tall."
+  },
+  {
+    "unit": 5,
+    "english": "Sports centre",
+    "pronunciation": "Sports sentır",
+    "turkish_meaning": "Spor merkezi",
+    "example_sentence": "There is a new sports centre in our town."
+  },
+  {
+    "unit": 5,
+    "english": "Square",
+    "pronunciation": "Skweır",
+    "turkish_meaning": "Meydan",
+    "example_sentence": "We meet at the square on Fridays."
+  },
+  {
+    "unit": 5,
+    "english": "Tower",
+    "pronunciation": "Tauır",
+    "turkish_meaning": "Kule",
+    "example_sentence": "There is a tall tower in the city centre."
+  },
+  {
+    "unit": 5,
+    "english": "Town",
+    "pronunciation": "Taun",
+    "turkish_meaning": "İlçe / şehir",
+    "example_sentence": "I live in a small town."
+  },
+  {
+    "unit": 5,
+    "english": "Accessories",
+    "pronunciation": "Iksesıriz",
+    "turkish_meaning": "Aksesuarlar",
+    "example_sentence": "The shop sells clothes and accessories."
+  },
+  {
+    "unit": 5,
+    "english": "Ancient",
+    "pronunciation": "Eynşınt",
+    "turkish_meaning": "Antik",
+    "example_sentence": "There is an ancient castle in our city."
+  },
+  {
+    "unit": 5,
+    "english": "Attractions",
+    "pronunciation": "Itrekşınz",
+    "turkish_meaning": "Turistik yerler",
+    "example_sentence": "The museum is one of the city's attractions."
+  },
+  {
+    "unit": 5,
+    "english": "Bottom",
+    "pronunciation": "Botım",
+    "turkish_meaning": "Alt, zemin",
+    "example_sentence": "The kitchen is at the bottom of the house."
+  },
+  {
+    "unit": 5,
+    "english": "Building",
+    "pronunciation": "Bildıng",
+    "turkish_meaning": "Bina",
+    "example_sentence": "That is a very tall building."
+  },
+  {
+    "unit": 5,
+    "english": "Caravan",
+    "pronunciation": "Kerıven",
+    "turkish_meaning": "Karavan",
+    "example_sentence": "We travelled around in a caravan."
+  },
+  {
+    "unit": 5,
+    "english": "City",
+    "pronunciation": "Siti",
+    "turkish_meaning": "Şehir",
+    "example_sentence": "Istanbul is a big city."
+  },
+  {
+    "unit": 5,
+    "english": "Corner",
+    "pronunciation": "Kornır",
+    "turkish_meaning": "Köşe",
+    "example_sentence": "There is a shop on the corner."
+  },
+  {
+    "unit": 5,
+    "english": "Culture",
+    "pronunciation": "Kalçır",
+    "turkish_meaning": "Kültür",
+    "example_sentence": "We learn about our culture at school."
+  },
+  {
+    "unit": 5,
+    "english": "Cycle",
+    "pronunciation": "Saykıl",
+    "turkish_meaning": "Bisiklet sürmek",
+    "example_sentence": "We cycle around the neighbourhood."
+  },
+  {
+    "unit": 5,
+    "english": "Describe",
+    "pronunciation": "Diskrayb",
+    "turkish_meaning": "Anlatmak, tanımlamak",
+    "example_sentence": "Can you describe your house?"
+  },
+  {
+    "unit": 5,
+    "english": "Dinner",
+    "pronunciation": "Dinır",
+    "turkish_meaning": "Akşam yemeği",
+    "example_sentence": "We have dinner in the dining room."
+  },
+  {
+    "unit": 5,
+    "english": "Double-decker bus",
+    "pronunciation": "Dabıl-dekır bas",
+    "turkish_meaning": "Çift katlı otobüs",
+    "example_sentence": "There is a double-decker bus in London."
+  },
+  {
+    "unit": 5,
+    "english": "Environment",
+    "pronunciation": "İnvayrınmınt",
+    "turkish_meaning": "Çevre",
+    "example_sentence": "We should protect our environment."
+  },
+  {
+    "unit": 5,
+    "english": "Experience",
+    "pronunciation": "İkspiriıns",
+    "turkish_meaning": "Deneyimlemek",
+    "example_sentence": "We experience new things in the city."
+  },
+  {
+    "unit": 5,
+    "english": "Hire",
+    "pronunciation": "Hayır",
+    "turkish_meaning": "Kiralamak",
+    "example_sentence": "We hire bikes at the park."
+  },
+  {
+    "unit": 5,
+    "english": "Historical",
+    "pronunciation": "Histrikıl",
+    "turkish_meaning": "Tarihi",
+    "example_sentence": "There is a historical castle in our city."
+  },
+  {
+    "unit": 5,
+    "english": "Information",
+    "pronunciation": "İnformeyşın",
+    "turkish_meaning": "Bilgi",
+    "example_sentence": "You can find information at the museum."
+  },
+  {
+    "unit": 5,
+    "english": "Inside",
+    "pronunciation": "İnsayd",
+    "turkish_meaning": "İçeride",
+    "example_sentence": "It is warm inside the house."
+  },
+  {
+    "unit": 5,
+    "english": "Lift",
+    "pronunciation": "Lift",
+    "turkish_meaning": "Asansör",
+    "example_sentence": "We take the lift to the fifth floor."
+  },
+  {
+    "unit": 5,
+    "english": "Live",
+    "pronunciation": "Liv",
+    "turkish_meaning": "Yaşamak",
+    "example_sentence": "I live in a flat with my family."
+  },
+  {
+    "unit": 5,
+    "english": "Location",
+    "pronunciation": "Loukeyşın",
+    "turkish_meaning": "Konum",
+    "example_sentence": "Our house has a great location."
+  },
+  {
+    "unit": 5,
+    "english": "Made of",
+    "pronunciation": "Meyd ov",
+    "turkish_meaning": "Yapılmak (malzemeden)",
+    "example_sentence": "This table is made of wood."
+  },
+  {
+    "unit": 5,
+    "english": "Meal",
+    "pronunciation": "Miil",
+    "turkish_meaning": "Yemek",
+    "example_sentence": "We eat our meal in the dining room."
+  },
+  {
+    "unit": 5,
+    "english": "Natural",
+    "pronunciation": "Neçırıl",
+    "turkish_meaning": "Doğal",
+    "example_sentence": "There is a natural lake near our town."
+  },
+  {
+    "unit": 5,
+    "english": "Nature",
+    "pronunciation": "Neyçır",
+    "turkish_meaning": "Doğa",
+    "example_sentence": "We enjoy nature at the weekend."
+  },
+  {
+    "unit": 5,
+    "english": "Near",
+    "pronunciation": "Niır",
+    "turkish_meaning": "Yanında",
+    "example_sentence": "The shop is near our house."
+  },
+  {
+    "unit": 5,
+    "english": "Neighbourhood",
+    "pronunciation": "Neybırhud",
+    "turkish_meaning": "Mahalle",
+    "example_sentence": "There is a museum in my neighbourhood."
+  },
+  {
+    "unit": 5,
+    "english": "Outside",
+    "pronunciation": "Autsayd",
+    "turkish_meaning": "Dışarıda",
+    "example_sentence": "The children are playing outside."
+  },
+  {
+    "unit": 5,
+    "english": "Plastic",
+    "pronunciation": "Plestik",
+    "turkish_meaning": "Plastik",
+    "example_sentence": "This chair is made of plastic."
+  },
+  {
+    "unit": 5,
+    "english": "Size",
+    "pronunciation": "Sayz",
+    "turkish_meaning": "Boyut, boy",
+    "example_sentence": "What size is your house?"
+  },
+  {
+    "unit": 5,
+    "english": "Sleep",
+    "pronunciation": "Sliip",
+    "turkish_meaning": "Uyumak",
+    "example_sentence": "I sleep in my bedroom."
+  },
+  {
+    "unit": 5,
+    "english": "Social events",
+    "pronunciation": "Souşıl ivents",
+    "turkish_meaning": "Sosyal etkinlikler",
+    "example_sentence": "There are many social events in our town."
+  },
+  {
+    "unit": 5,
+    "english": "Steel",
+    "pronunciation": "Stiil",
+    "turkish_meaning": "Çelik",
+    "example_sentence": "The bridge is made of steel."
+  },
+  {
+    "unit": 5,
+    "english": "Stone",
+    "pronunciation": "Stoun",
+    "turkish_meaning": "Taş",
+    "example_sentence": "The old castle is made of stone."
+  },
+  {
+    "unit": 5,
+    "english": "Street fair",
+    "pronunciation": "Striit feır",
+    "turkish_meaning": "Sokak panayırı",
+    "example_sentence": "There is a street fair in our neighbourhood."
+  },
+  {
+    "unit": 5,
+    "english": "Tiny house",
+    "pronunciation": "Tayni haus",
+    "turkish_meaning": "Küçük ev",
+    "example_sentence": "They live in a tiny house near the forest."
+  },
+  {
+    "unit": 5,
+    "english": "Top",
+    "pronunciation": "Top",
+    "turkish_meaning": "Üst",
+    "example_sentence": "My bedroom is at the top of the house."
+  },
+  {
+    "unit": 5,
+    "english": "Traditional",
+    "pronunciation": "Tridişınıl",
+    "turkish_meaning": "Geleneksel",
+    "example_sentence": "We eat traditional food at home."
+  },
+  {
+    "unit": 5,
+    "english": "Travel",
+    "pronunciation": "Trevıl",
+    "turkish_meaning": "Seyahat etmek",
+    "example_sentence": "We travel to different cities every summer."
+  },
+  {
+    "unit": 5,
+    "english": "Wood",
+    "pronunciation": "Vud",
+    "turkish_meaning": "Tahta, ahşap, odun",
+    "example_sentence": "This table is made of wood."
+  },
+  {
+    "unit": 5,
+    "english": "Wooden",
+    "pronunciation": "Vudın",
+    "turkish_meaning": "Ahşap",
+    "example_sentence": "We have a wooden table in the kitchen."
+  },
+  {
+    "unit": 5,
+    "english": "How many",
+    "pronunciation": "Hau meni",
+    "turkish_meaning": "Kaç tane?",
+    "example_sentence": "How many rooms are there in your home?"
+  },
+  {
+    "unit": 5,
+    "english": "What",
+    "pronunciation": "Vat",
+    "turkish_meaning": "Ne?",
+    "example_sentence": "What is in your neighbourhood?"
+  },
+  {
+    "unit": 5,
+    "english": "Where",
+    "pronunciation": "Veır",
+    "turkish_meaning": "Nerede? Nereye?",
+    "example_sentence": "Where is the armchair?"
+  },
+  {
+    "unit": 5,
+    "english": "Which",
+    "pronunciation": "Viç",
+    "turkish_meaning": "Hangisi?",
+    "example_sentence": "Which room is your bedroom?"
+  },
+  {
+    "unit": 5,
+    "english": "Who",
+    "pronunciation": "Huu",
+    "turkish_meaning": "Kim?",
+    "example_sentence": "Who lives in the tiny house?"
+  },
+  {
+    "unit": 6,
+    "english": "Apple",
+    "pronunciation": "Epıl",
+    "turkish_meaning": "Elma",
+    "example_sentence": "I eat an apple every day."
+  },
+  {
+    "unit": 6,
+    "english": "Baking powder",
+    "pronunciation": "Beykıng paudır",
+    "turkish_meaning": "Kabartma tozu",
+    "example_sentence": "Add some baking powder to the dough."
+  },
+  {
+    "unit": 6,
+    "english": "Bean",
+    "pronunciation": "Biin",
+    "turkish_meaning": "Fasulye",
+    "example_sentence": "We eat beans with rice."
+  },
+  {
+    "unit": 6,
+    "english": "Beef",
+    "pronunciation": "Biif",
+    "turkish_meaning": "Sığır eti",
+    "example_sentence": "My father is cooking beef for dinner."
+  },
+  {
+    "unit": 6,
+    "english": "Butter",
+    "pronunciation": "Batır",
+    "turkish_meaning": "Tereyağı",
+    "example_sentence": "I put butter on my bread."
+  },
+  {
+    "unit": 6,
+    "english": "Cheese",
+    "pronunciation": "Çiiz",
+    "turkish_meaning": "Peynir",
+    "example_sentence": "I like cheese for breakfast."
+  },
+  {
+    "unit": 6,
+    "english": "Cinnamon",
+    "pronunciation": "Sinımın",
+    "turkish_meaning": "Tarçın",
+    "example_sentence": "She adds cinnamon to the cake."
+  },
+  {
+    "unit": 6,
+    "english": "Corn",
+    "pronunciation": "Korn",
+    "turkish_meaning": "Mısır",
+    "example_sentence": "We grow corn on the farm."
+  },
+  {
+    "unit": 6,
+    "english": "Cucumber",
+    "pronunciation": "Kyukambır",
+    "turkish_meaning": "Salatalık",
+    "example_sentence": "There is cucumber in the salad."
+  },
+  {
+    "unit": 6,
+    "english": "Egg",
+    "pronunciation": "Eg",
+    "turkish_meaning": "Yumurta",
+    "example_sentence": "I eat an egg every morning."
+  },
+  {
+    "unit": 6,
+    "english": "Flour",
+    "pronunciation": "Flauır",
+    "turkish_meaning": "Un",
+    "example_sentence": "We need flour to make bread."
+  },
+  {
+    "unit": 6,
+    "english": "Garlic",
+    "pronunciation": "Garlik",
+    "turkish_meaning": "Sarımsak",
+    "example_sentence": "She adds garlic to the sauce."
+  },
+  {
+    "unit": 6,
+    "english": "Jam",
+    "pronunciation": "Cem",
+    "turkish_meaning": "Reçel",
+    "example_sentence": "I have jam on my bread every morning."
+  },
+  {
+    "unit": 6,
+    "english": "Lentil",
+    "pronunciation": "Lentıl",
+    "turkish_meaning": "Mercimek",
+    "example_sentence": "My mother makes lentil soup."
+  },
+  {
+    "unit": 6,
+    "english": "Lettuce",
+    "pronunciation": "Letıs",
+    "turkish_meaning": "Marul",
+    "example_sentence": "There is lettuce in my sandwich."
+  },
+  {
+    "unit": 6,
+    "english": "Meat",
+    "pronunciation": "Miit",
+    "turkish_meaning": "Et",
+    "example_sentence": "We don't eat meat every day."
+  },
+  {
+    "unit": 6,
+    "english": "Mushroom",
+    "pronunciation": "Maşruum",
+    "turkish_meaning": "Mantar",
+    "example_sentence": "She cooks mushrooms with butter."
+  },
+  {
+    "unit": 6,
+    "english": "Nut",
+    "pronunciation": "Nat",
+    "turkish_meaning": "Fındık",
+    "example_sentence": "I like nuts as a snack."
+  },
+  {
+    "unit": 6,
+    "english": "Oil",
+    "pronunciation": "Oyıl",
+    "turkish_meaning": "Yağ",
+    "example_sentence": "Add some oil to the pan."
+  },
+  {
+    "unit": 6,
+    "english": "Olives",
+    "pronunciation": "Olivz",
+    "turkish_meaning": "Zeytinler",
+    "example_sentence": "We eat olives at breakfast."
+  },
+  {
+    "unit": 6,
+    "english": "Pepper",
+    "pronunciation": "Pepır",
+    "turkish_meaning": "Biber",
+    "example_sentence": "Add a little pepper to the soup."
+  },
+  {
+    "unit": 6,
+    "english": "Salt",
+    "pronunciation": "Solt",
+    "turkish_meaning": "Tuz",
+    "example_sentence": "Please pass the salt."
+  },
+  {
+    "unit": 6,
+    "english": "Spice",
+    "pronunciation": "Spays",
+    "turkish_meaning": "Baharat",
+    "example_sentence": "This dish has a lot of spice."
+  },
+  {
+    "unit": 6,
+    "english": "Sugar",
+    "pronunciation": "Şugır",
+    "turkish_meaning": "Şeker",
+    "example_sentence": "I don't put sugar in my tea."
+  },
+  {
+    "unit": 6,
+    "english": "Amount",
+    "pronunciation": "Iımaunt",
+    "turkish_meaning": "Miktar",
+    "example_sentence": "Use a small amount of salt."
+  },
+  {
+    "unit": 6,
+    "english": "Available",
+    "pronunciation": "Iveylıbıl",
+    "turkish_meaning": "Uygun, müsait",
+    "example_sentence": "Is a table available for tonight?"
+  },
+  {
+    "unit": 6,
+    "english": "Book a table",
+    "pronunciation": "Buk ı teybıl",
+    "turkish_meaning": "Masa ayırtmak",
+    "example_sentence": "We booked a table for six people."
+  },
+  {
+    "unit": 6,
+    "english": "Breakfast",
+    "pronunciation": "Brekfist",
+    "turkish_meaning": "Kahvaltı",
+    "example_sentence": "We eat cheese and eggs for breakfast."
+  },
+  {
+    "unit": 6,
+    "english": "Chef",
+    "pronunciation": "Şef",
+    "turkish_meaning": "Şef",
+    "example_sentence": "The chef is cooking a delicious meal."
+  },
+  {
+    "unit": 6,
+    "english": "Cuisine",
+    "pronunciation": "Kwiziin",
+    "turkish_meaning": "Mutfak (yemek türü)",
+    "example_sentence": "Turkish cuisine is famous around the world."
+  },
+  {
+    "unit": 6,
+    "english": "Customer",
+    "pronunciation": "Kastımır",
+    "turkish_meaning": "Müşteri",
+    "example_sentence": "The waiter is talking to a customer."
+  },
+  {
+    "unit": 6,
+    "english": "Delicious",
+    "pronunciation": "Dilişıs",
+    "turkish_meaning": "Lezzetli",
+    "example_sentence": "This soup is delicious."
+  },
+  {
+    "unit": 6,
+    "english": "Dessert",
+    "pronunciation": "Dizört",
+    "turkish_meaning": "Tatlı",
+    "example_sentence": "We have ice cream for dessert."
+  },
+  {
+    "unit": 6,
+    "english": "Dish",
+    "pronunciation": "Diş",
+    "turkish_meaning": "Yemek",
+    "example_sentence": "This is my favourite dish."
+  },
+  {
+    "unit": 6,
+    "english": "Dough",
+    "pronunciation": "Dou",
+    "turkish_meaning": "Hamur",
+    "example_sentence": "She is making dough for the bread."
+  },
+  {
+    "unit": 6,
+    "english": "Drink",
+    "pronunciation": "Drink",
+    "turkish_meaning": "İçecek",
+    "example_sentence": "What would you like to drink?"
+  },
+  {
+    "unit": 6,
+    "english": "Empty",
+    "pronunciation": "Empti",
+    "turkish_meaning": "Boş",
+    "example_sentence": "My glass is empty."
+  },
+  {
+    "unit": 6,
+    "english": "Enjoy",
+    "pronunciation": "İncoy",
+    "turkish_meaning": "Beğenmek",
+    "example_sentence": "We enjoy this restaurant's food."
+  },
+  {
+    "unit": 6,
+    "english": "Grilled",
+    "pronunciation": "Grild",
+    "turkish_meaning": "Izgara",
+    "example_sentence": "I ordered grilled fish."
+  },
+  {
+    "unit": 6,
+    "english": "Habit",
+    "pronunciation": "Hebit",
+    "turkish_meaning": "Alışkanlık",
+    "example_sentence": "Eating breakfast is a healthy habit."
+  },
+  {
+    "unit": 6,
+    "english": "Home-made",
+    "pronunciation": "Hoummeyd",
+    "turkish_meaning": "Ev yapımı",
+    "example_sentence": "I love home-made bread."
+  },
+  {
+    "unit": 6,
+    "english": "Ingredient",
+    "pronunciation": "İngriidiınt",
+    "turkish_meaning": "Malzeme",
+    "example_sentence": "Flour is the main ingredient of bread."
+  },
+  {
+    "unit": 6,
+    "english": "Instead of",
+    "pronunciation": "İnsted ov",
+    "turkish_meaning": "Yerine",
+    "example_sentence": "I drink water instead of soda."
+  },
+  {
+    "unit": 6,
+    "english": "Light",
+    "pronunciation": "Layt",
+    "turkish_meaning": "Hafif",
+    "example_sentence": "I prefer a light lunch."
+  },
+  {
+    "unit": 6,
+    "english": "Lose weight",
+    "pronunciation": "Luuz veyt",
+    "turkish_meaning": "Kilo vermek",
+    "example_sentence": "She eats healthy food to lose weight."
+  },
+  {
+    "unit": 6,
+    "english": "Lunch",
+    "pronunciation": "Lanç",
+    "turkish_meaning": "Öğle yemeği",
+    "example_sentence": "We have lunch at school."
+  },
+  {
+    "unit": 6,
+    "english": "Mad",
+    "pronunciation": "Med",
+    "turkish_meaning": "Kızgın, sinirli",
+    "example_sentence": "He got mad when the food was cold."
+  },
+  {
+    "unit": 6,
+    "english": "Main dish",
+    "pronunciation": "Meyn diş",
+    "turkish_meaning": "Ana yemek",
+    "example_sentence": "The main dish is grilled chicken."
+  },
+  {
+    "unit": 6,
+    "english": "Mashed potato",
+    "pronunciation": "Meşt pıteytou",
+    "turkish_meaning": "Patates püresi",
+    "example_sentence": "I love mashed potato with meatballs."
+  },
+  {
+    "unit": 6,
+    "english": "Mixture",
+    "pronunciation": "Mikstyır",
+    "turkish_meaning": "Karışım",
+    "example_sentence": "Pour the mixture into the pan."
+  },
+  {
+    "unit": 6,
+    "english": "Order",
+    "pronunciation": "Ordır",
+    "turkish_meaning": "Sipariş vermek",
+    "example_sentence": "Can I order a pizza, please?"
+  },
+  {
+    "unit": 6,
+    "english": "Pay in cash",
+    "pronunciation": "Pey in keş",
+    "turkish_meaning": "Nakit ödemek",
+    "example_sentence": "We pay in cash at this restaurant."
+  },
+  {
+    "unit": 6,
+    "english": "Put on weight",
+    "pronunciation": "Put on veyt",
+    "turkish_meaning": "Kilo almak",
+    "example_sentence": "You put on weight if you eat too much sugar."
+  },
+  {
+    "unit": 6,
+    "english": "Quickly",
+    "pronunciation": "Kuikli",
+    "turkish_meaning": "Hızlıca",
+    "example_sentence": "He ate his breakfast quickly."
+  },
+  {
+    "unit": 6,
+    "english": "Ready",
+    "pronunciation": "Redi",
+    "turkish_meaning": "Hazır",
+    "example_sentence": "Dinner is ready!"
+  },
+  {
+    "unit": 6,
+    "english": "Recipe",
+    "pronunciation": "Resıpi",
+    "turkish_meaning": "Tarif",
+    "example_sentence": "My grandmother's soup recipe is the best."
+  },
+  {
+    "unit": 6,
+    "english": "Recommend",
+    "pronunciation": "Rekımend",
+    "turkish_meaning": "Tavsiye etmek",
+    "example_sentence": "What do you recommend from the menu?"
+  },
+  {
+    "unit": 6,
+    "english": "Reservation",
+    "pronunciation": "Rezırveyşın",
+    "turkish_meaning": "Rezervasyon",
+    "example_sentence": "We made a reservation for two."
+  },
+  {
+    "unit": 6,
+    "english": "Sauce",
+    "pronunciation": "Sos",
+    "turkish_meaning": "Sos",
+    "example_sentence": "This pasta has a tomato sauce."
+  },
+  {
+    "unit": 6,
+    "english": "Share",
+    "pronunciation": "Şeır",
+    "turkish_meaning": "Paylaşmak",
+    "example_sentence": "Let's share this pizza."
+  },
+  {
+    "unit": 6,
+    "english": "Slice",
+    "pronunciation": "Slays",
+    "turkish_meaning": "Dilim, dilimlemek",
+    "example_sentence": "Can I have a slice of bread?"
+  },
+  {
+    "unit": 6,
+    "english": "Smell",
+    "pronunciation": "Smel",
+    "turkish_meaning": "Koklamak",
+    "example_sentence": "This soup smells wonderful."
+  },
+  {
+    "unit": 6,
+    "english": "Special",
+    "pronunciation": "Speşıl",
+    "turkish_meaning": "Özel",
+    "example_sentence": "Today's special is grilled fish."
+  },
+  {
+    "unit": 6,
+    "english": "Starter",
+    "pronunciation": "Startır",
+    "turkish_meaning": "Başlangıç",
+    "example_sentence": "We had soup as a starter."
+  },
+  {
+    "unit": 6,
+    "english": "Sweet",
+    "pronunciation": "Suiit",
+    "turkish_meaning": "Tatlı (tat olarak)",
+    "example_sentence": "This cake is very sweet."
+  },
+  {
+    "unit": 6,
+    "english": "Taste",
+    "pronunciation": "Teyst",
+    "turkish_meaning": "Tatmak",
+    "example_sentence": "Can I taste your soup?"
+  },
+  {
+    "unit": 6,
+    "english": "Tasty",
+    "pronunciation": "Teysti",
+    "turkish_meaning": "Lezzetli",
+    "example_sentence": "This dish is very tasty."
+  },
+  {
+    "unit": 6,
+    "english": "Tip",
+    "pronunciation": "Tip",
+    "turkish_meaning": "Tüyo, püf noktası",
+    "example_sentence": "Here is a tip for a great salad."
+  },
+  {
+    "unit": 6,
+    "english": "Try",
+    "pronunciation": "Tray",
+    "turkish_meaning": "Denemek",
+    "example_sentence": "You should try this cake."
+  },
+  {
+    "unit": 6,
+    "english": "Waiter",
+    "pronunciation": "Veytır",
+    "turkish_meaning": "Garson",
+    "example_sentence": "The waiter brought our food."
+  },
+  {
+    "unit": 6,
+    "english": "Yummy",
+    "pronunciation": "Yami",
+    "turkish_meaning": "Lezzetli",
+    "example_sentence": "This ice cream is yummy."
+  },
+  {
+    "unit": 6,
+    "english": "Biscuit",
+    "pronunciation": "Biskıt",
+    "turkish_meaning": "Kurabiye",
+    "example_sentence": "I have a biscuit with my tea."
+  },
+  {
+    "unit": 6,
+    "english": "Bread",
+    "pronunciation": "Bred",
+    "turkish_meaning": "Ekmek",
+    "example_sentence": "We eat bread with every meal."
+  },
+  {
+    "unit": 6,
+    "english": "Croissant",
+    "pronunciation": "Kruasan",
+    "turkish_meaning": "Kruvasan",
+    "example_sentence": "I eat a croissant for breakfast."
+  },
+  {
+    "unit": 6,
+    "english": "Dairy",
+    "pronunciation": "Deıri",
+    "turkish_meaning": "Süt ürünleri",
+    "example_sentence": "Cheese and milk are dairy products."
+  },
+  {
+    "unit": 6,
+    "english": "Fizzy drinks",
+    "pronunciation": "Fizi drinks",
+    "turkish_meaning": "Gazlı içecekler",
+    "example_sentence": "Fizzy drinks are not healthy."
+  },
+  {
+    "unit": 6,
+    "english": "Fruit juice",
+    "pronunciation": "Fruut cuus",
+    "turkish_meaning": "Meyve suyu",
+    "example_sentence": "I drink fruit juice at breakfast."
+  },
+  {
+    "unit": 6,
+    "english": "Ice cream",
+    "pronunciation": "Ays kriim",
+    "turkish_meaning": "Dondurma",
+    "example_sentence": "We eat ice cream in summer."
+  },
+  {
+    "unit": 6,
+    "english": "Meatball",
+    "pronunciation": "Miitbol",
+    "turkish_meaning": "Köfte",
+    "example_sentence": "I love meatballs with rice."
+  },
+  {
+    "unit": 6,
+    "english": "Muffin",
+    "pronunciation": "Mafin",
+    "turkish_meaning": "Küçük kek",
+    "example_sentence": "She baked chocolate muffins."
+  },
+  {
+    "unit": 6,
+    "english": "Noodle",
+    "pronunciation": "Nuudıl",
+    "turkish_meaning": "Erişte",
+    "example_sentence": "We had noodles for lunch."
+  },
+  {
+    "unit": 6,
+    "english": "Pancake",
+    "pronunciation": "Penkeyk",
+    "turkish_meaning": "Krep",
+    "example_sentence": "I have a pancake with honey."
+  },
+  {
+    "unit": 6,
+    "english": "Pasta",
+    "pronunciation": "Pastı",
+    "turkish_meaning": "Makarna",
+    "example_sentence": "We cook pasta for dinner."
+  },
+  {
+    "unit": 6,
+    "english": "Pie",
+    "pronunciation": "Pay",
+    "turkish_meaning": "Turta",
+    "example_sentence": "My mother made an apple pie."
+  },
+  {
+    "unit": 6,
+    "english": "Salad",
+    "pronunciation": "Selıd",
+    "turkish_meaning": "Salata",
+    "example_sentence": "I have a salad with my meal."
+  },
+  {
+    "unit": 6,
+    "english": "Soda water",
+    "pronunciation": "Soudı votır",
+    "turkish_meaning": "Maden suyu",
+    "example_sentence": "He drinks soda water with lemon."
+  },
+  {
+    "unit": 6,
+    "english": "Soup",
+    "pronunciation": "Suup",
+    "turkish_meaning": "Çorba",
+    "example_sentence": "We have lentil soup as a starter."
+  },
+  {
+    "unit": 6,
+    "english": "Tuna",
+    "pronunciation": "Tyunı",
+    "turkish_meaning": "Ton balığı",
+    "example_sentence": "I like a tuna sandwich."
+  },
+  {
+    "unit": 6,
+    "english": "Turkish delight",
+    "pronunciation": "Törkiş dilayt",
+    "turkish_meaning": "Türk lokumu",
+    "example_sentence": "Turkish delight is a famous dessert."
+  },
+  {
+    "unit": 6,
+    "english": "Bottle",
+    "pronunciation": "Botıl",
+    "turkish_meaning": "Şişe",
+    "example_sentence": "There is a bottle of water on the table."
+  },
+  {
+    "unit": 6,
+    "english": "Bowl",
+    "pronunciation": "Boul",
+    "turkish_meaning": "Kase",
+    "example_sentence": "Put the salad in a bowl."
+  },
+  {
+    "unit": 6,
+    "english": "Cooker",
+    "pronunciation": "Kukır",
+    "turkish_meaning": "Ocak, fırın",
+    "example_sentence": "The soup is on the cooker."
+  },
+  {
+    "unit": 6,
+    "english": "Cup",
+    "pronunciation": "Kap",
+    "turkish_meaning": "Fincan, bardak",
+    "example_sentence": "I drink tea from a cup."
+  },
+  {
+    "unit": 6,
+    "english": "Glass",
+    "pronunciation": "Glas",
+    "turkish_meaning": "Bardak",
+    "example_sentence": "Can I have a glass of water?"
+  },
+  {
+    "unit": 6,
+    "english": "Pan",
+    "pronunciation": "Pen",
+    "turkish_meaning": "Tava",
+    "example_sentence": "Heat the oil in the pan."
+  },
+  {
+    "unit": 6,
+    "english": "Paper towel",
+    "pronunciation": "Peypır tauıl",
+    "turkish_meaning": "Kağıt havlu",
+    "example_sentence": "Clean the table with a paper towel."
+  },
+  {
+    "unit": 6,
+    "english": "Plate",
+    "pronunciation": "Pleyt",
+    "turkish_meaning": "Tabak",
+    "example_sentence": "Put the pasta on the plate."
+  },
+  {
+    "unit": 6,
+    "english": "Pot",
+    "pronunciation": "Pot",
+    "turkish_meaning": "Kap, tencere",
+    "example_sentence": "The soup is cooking in the pot."
+  },
+  {
+    "unit": 6,
+    "english": "Tablespoon",
+    "pronunciation": "Teybılspuun",
+    "turkish_meaning": "Yemek kaşığı",
+    "example_sentence": "Add one tablespoon of sugar."
+  },
+  {
+    "unit": 6,
+    "english": "Teaspoon",
+    "pronunciation": "Tiispuun",
+    "turkish_meaning": "Çay kaşığı",
+    "example_sentence": "Add a teaspoon of salt."
+  },
+  {
+    "unit": 6,
+    "english": "First",
+    "pronunciation": "Först",
+    "turkish_meaning": "İlk olarak",
+    "example_sentence": "First, wash the vegetables."
+  },
+  {
+    "unit": 6,
+    "english": "Second",
+    "pronunciation": "Sekınd",
+    "turkish_meaning": "İkinci olarak",
+    "example_sentence": "Second, cut the tomatoes."
+  },
+  {
+    "unit": 6,
+    "english": "Third",
+    "pronunciation": "Törd",
+    "turkish_meaning": "Üçüncü olarak",
+    "example_sentence": "Third, add some salt."
+  },
+  {
+    "unit": 6,
+    "english": "Then",
+    "pronunciation": "Den",
+    "turkish_meaning": "Sonra",
+    "example_sentence": "Then, mix everything together."
+  },
+  {
+    "unit": 6,
+    "english": "Next",
+    "pronunciation": "Nekst",
+    "turkish_meaning": "Sonra",
+    "example_sentence": "Next, put it in the oven."
+  },
+  {
+    "unit": 6,
+    "english": "Finally",
+    "pronunciation": "Faynıli",
+    "turkish_meaning": "Son olarak",
+    "example_sentence": "Finally, serve the dish hot."
+  },
+  {
+    "unit": 6,
+    "english": "Boil",
+    "pronunciation": "Boyıl",
+    "turkish_meaning": "Kaynatmak",
+    "example_sentence": "Boil the water for the pasta."
+  },
+  {
+    "unit": 6,
+    "english": "Cook",
+    "pronunciation": "Kuk",
+    "turkish_meaning": "Yemek pişirmek",
+    "example_sentence": "My mother is cooking dinner."
+  },
+  {
+    "unit": 6,
+    "english": "Cover",
+    "pronunciation": "Kavır",
+    "turkish_meaning": "Kaplamak, üstünü kapatmak",
+    "example_sentence": "Cover the pot with a lid."
+  },
+  {
+    "unit": 6,
+    "english": "Cut",
+    "pronunciation": "Kat",
+    "turkish_meaning": "Kesmek",
+    "example_sentence": "Cut the bread into slices."
+  },
+  {
+    "unit": 6,
+    "english": "Dry",
+    "pronunciation": "Dray",
+    "turkish_meaning": "Kurutmak",
+    "example_sentence": "Dry the vegetables before cooking."
+  },
+  {
+    "unit": 6,
+    "english": "Grill",
+    "pronunciation": "Gril",
+    "turkish_meaning": "Izgara yapmak",
+    "example_sentence": "We grill fish on Sundays."
+  },
+  {
+    "unit": 6,
+    "english": "Heat",
+    "pronunciation": "Hiit",
+    "turkish_meaning": "Isıtmak",
+    "example_sentence": "Heat the oil in the pan."
+  },
+  {
+    "unit": 6,
+    "english": "Marinate",
+    "pronunciation": "Merıneyt",
+    "turkish_meaning": "Terbiye etmek",
+    "example_sentence": "Marinate the meat for one hour."
+  },
+  {
+    "unit": 6,
+    "english": "Mash",
+    "pronunciation": "Meş",
+    "turkish_meaning": "Pürelemek",
+    "example_sentence": "Mash the potatoes with butter."
+  },
+  {
+    "unit": 6,
+    "english": "Mix",
+    "pronunciation": "Miks",
+    "turkish_meaning": "Karıştırmak",
+    "example_sentence": "Mix the flour and eggs together."
+  },
+  {
+    "unit": 6,
+    "english": "Squeeze",
+    "pronunciation": "Skwiiz",
+    "turkish_meaning": "Sıkmak",
+    "example_sentence": "Squeeze the lemon into the water."
+  },
+  {
+    "unit": 6,
+    "english": "Stir",
+    "pronunciation": "Stör",
+    "turkish_meaning": "Karıştırmak",
+    "example_sentence": "Stir the soup slowly."
+  },
+  {
+    "unit": 6,
+    "english": "Wash",
+    "pronunciation": "Voş",
+    "turkish_meaning": "Yıkamak",
+    "example_sentence": "Wash the vegetables before cooking."
+  },
+  {
+    "unit": 6,
+    "english": "How many",
+    "pronunciation": "Hau meni",
+    "turkish_meaning": "Kaç tane?",
+    "example_sentence": "How many eggs do we need?"
+  },
+  {
+    "unit": 6,
+    "english": "How much",
+    "pronunciation": "Hau maç",
+    "turkish_meaning": "Ne kadar?",
+    "example_sentence": "How much sugar do we need?"
+  },
+  {
+    "unit": 6,
+    "english": "What",
+    "pronunciation": "Vat",
+    "turkish_meaning": "Ne?",
+    "example_sentence": "What is the main dish today?"
+  },
+  {
+    "unit": 6,
+    "english": "Where",
+    "pronunciation": "Veır",
+    "turkish_meaning": "Nerede? Nereye?",
+    "example_sentence": "Where do you have dinner?"
+  },
+  {
+    "unit": 6,
+    "english": "Which",
+    "pronunciation": "Viç",
+    "turkish_meaning": "Hangisi?",
+    "example_sentence": "Which dish do you recommend?"
+  },
+  {
+    "unit": 6,
+    "english": "Who",
+    "pronunciation": "Huu",
+    "turkish_meaning": "Kim?",
+    "example_sentence": "Who cooked this delicious meal?"
+  },
+  {
+    "unit": 6,
+    "english": "Why",
+    "pronunciation": "Vay",
+    "turkish_meaning": "Niçin? Neden?",
+    "example_sentence": "Why do you eat healthy food?"
+  },
+  {
+    "unit": 7,
+    "english": "Bear",
+    "pronunciation": "Beır",
+    "turkish_meaning": "Ayı",
+    "example_sentence": "A bear is more dangerous than a bee."
+  },
+  {
+    "unit": 7,
+    "english": "Bee",
+    "pronunciation": "Bii",
+    "turkish_meaning": "Arı",
+    "example_sentence": "A bee can fly very fast."
+  },
+  {
+    "unit": 7,
+    "english": "Bird",
+    "pronunciation": "Börd",
+    "turkish_meaning": "Kuş",
+    "example_sentence": "A bird can fly high in the sky."
+  },
+  {
+    "unit": 7,
+    "english": "Cheetah",
+    "pronunciation": "Çiitı",
+    "turkish_meaning": "Çita",
+    "example_sentence": "A cheetah is the fastest animal on the land."
+  },
+  {
+    "unit": 7,
+    "english": "Crocodile",
+    "pronunciation": "Krokıdayl",
+    "turkish_meaning": "Timsah",
+    "example_sentence": "What type of animal is a crocodile? It is a reptile."
+  },
+  {
+    "unit": 7,
+    "english": "Eagle",
+    "pronunciation": "İigıl",
+    "turkish_meaning": "Kartal",
+    "example_sentence": "An eagle can fly very high."
+  },
+  {
+    "unit": 7,
+    "english": "Elephant",
+    "pronunciation": "Elıfınt",
+    "turkish_meaning": "Fil",
+    "example_sentence": "An elephant is the biggest of all."
+  },
+  {
+    "unit": 7,
+    "english": "Giraffe",
+    "pronunciation": "Cıraf",
+    "turkish_meaning": "Zürafa",
+    "example_sentence": "A giraffe eats leaves of trees."
+  },
+  {
+    "unit": 7,
+    "english": "Gorilla",
+    "pronunciation": "Gırilı",
+    "turkish_meaning": "Goril",
+    "example_sentence": "A gorilla is bigger than a tiger."
+  },
+  {
+    "unit": 7,
+    "english": "Leopard",
+    "pronunciation": "Lepırd",
+    "turkish_meaning": "Leopar",
+    "example_sentence": "A leopard can run very fast."
+  },
+  {
+    "unit": 7,
+    "english": "Lion",
+    "pronunciation": "Layın",
+    "turkish_meaning": "Aslan",
+    "example_sentence": "A lion is the most dangerous of all."
+  },
+  {
+    "unit": 7,
+    "english": "Monkey",
+    "pronunciation": "Manki",
+    "turkish_meaning": "Maymun",
+    "example_sentence": "The monkey must climb trees to be safe."
+  },
+  {
+    "unit": 7,
+    "english": "Parrot",
+    "pronunciation": "Perıt",
+    "turkish_meaning": "Papağan",
+    "example_sentence": "Can a parrot talk? Yes, it can."
+  },
+  {
+    "unit": 7,
+    "english": "Penguin",
+    "pronunciation": "Pengwin",
+    "turkish_meaning": "Penguen",
+    "example_sentence": "A penguin is a good swimmer."
+  },
+  {
+    "unit": 7,
+    "english": "Seagull",
+    "pronunciation": "Siigal",
+    "turkish_meaning": "Martı",
+    "example_sentence": "A seagull flies over the sea."
+  },
+  {
+    "unit": 7,
+    "english": "Seal",
+    "pronunciation": "Siil",
+    "turkish_meaning": "Fok",
+    "example_sentence": "A seal can swim very well."
+  },
+  {
+    "unit": 7,
+    "english": "Shark",
+    "pronunciation": "Şark",
+    "turkish_meaning": "Köpek balığı",
+    "example_sentence": "A shark lives in the ocean."
+  },
+  {
+    "unit": 7,
+    "english": "Snake",
+    "pronunciation": "Sneyk",
+    "turkish_meaning": "Yılan",
+    "example_sentence": "Can a snake fly? No, it can't."
+  },
+  {
+    "unit": 7,
+    "english": "Tiger",
+    "pronunciation": "Taygır",
+    "turkish_meaning": "Kaplan",
+    "example_sentence": "A gorilla is bigger than a tiger."
+  },
+  {
+    "unit": 7,
+    "english": "Whale",
+    "pronunciation": "Weyl",
+    "turkish_meaning": "Balina",
+    "example_sentence": "A whale is an enormous animal."
+  },
+  {
+    "unit": 7,
+    "english": "Wolf",
+    "pronunciation": "Vulf",
+    "turkish_meaning": "Kurt",
+    "example_sentence": "A wolf hunts in a group."
+  },
+  {
+    "unit": 7,
+    "english": "Feather",
+    "pronunciation": "Fedır",
+    "turkish_meaning": "Tüy",
+    "example_sentence": "The bird has colourful feathers."
+  },
+  {
+    "unit": 7,
+    "english": "Flipper",
+    "pronunciation": "Flipır",
+    "turkish_meaning": "Yüzgeç",
+    "example_sentence": "A seal uses its flippers to swim."
+  },
+  {
+    "unit": 7,
+    "english": "Paw",
+    "pronunciation": "Po",
+    "turkish_meaning": "Pati",
+    "example_sentence": "The tiger has big paws."
+  },
+  {
+    "unit": 7,
+    "english": "Stripe",
+    "pronunciation": "Strayp",
+    "turkish_meaning": "Çizgi",
+    "example_sentence": "A tiger has black stripes."
+  },
+  {
+    "unit": 7,
+    "english": "Tail",
+    "pronunciation": "Teyl",
+    "turkish_meaning": "Kuyruk",
+    "example_sentence": "The monkey has a long tail."
+  },
+  {
+    "unit": 7,
+    "english": "Tusk",
+    "pronunciation": "Task",
+    "turkish_meaning": "Diş (fil)",
+    "example_sentence": "An elephant has two big tusks."
+  },
+  {
+    "unit": 7,
+    "english": "Wing",
+    "pronunciation": "Ving",
+    "turkish_meaning": "Kanat",
+    "example_sentence": "A bird uses its wings to fly."
+  },
+  {
+    "unit": 7,
+    "english": "Abilities",
+    "pronunciation": "Ibilitiz",
+    "turkish_meaning": "Yetenekler",
+    "example_sentence": "Animals have different abilities."
+  },
+  {
+    "unit": 7,
+    "english": "Animal",
+    "pronunciation": "Enımıl",
+    "turkish_meaning": "Hayvan",
+    "example_sentence": "A lion is a wild animal."
+  },
+  {
+    "unit": 7,
+    "english": "Attack",
+    "pronunciation": "Itek",
+    "turkish_meaning": "Saldırmak",
+    "example_sentence": "A lion can attack other animals."
+  },
+  {
+    "unit": 7,
+    "english": "Banana",
+    "pronunciation": "Bınaanı",
+    "turkish_meaning": "Muz",
+    "example_sentence": "Monkeys love eating bananas."
+  },
+  {
+    "unit": 7,
+    "english": "Careful",
+    "pronunciation": "Keırfıl",
+    "turkish_meaning": "Dikkatli",
+    "example_sentence": "Be careful near wild animals."
+  },
+  {
+    "unit": 7,
+    "english": "Colony",
+    "pronunciation": "Kolıni",
+    "turkish_meaning": "Topluluk",
+    "example_sentence": "Bees live in a large colony."
+  },
+  {
+    "unit": 7,
+    "english": "Colourful",
+    "pronunciation": "Kalırfıl",
+    "turkish_meaning": "Renkli",
+    "example_sentence": "The parrot has colourful feathers."
+  },
+  {
+    "unit": 7,
+    "english": "Communicate",
+    "pronunciation": "Kımyunıkeyt",
+    "turkish_meaning": "İletişim kurmak",
+    "example_sentence": "Dolphins communicate with sounds."
+  },
+  {
+    "unit": 7,
+    "english": "Curiosity",
+    "pronunciation": "Kyuriositi",
+    "turkish_meaning": "Merak",
+    "example_sentence": "Monkeys have a lot of curiosity."
+  },
+  {
+    "unit": 7,
+    "english": "Different",
+    "pronunciation": "Difırınt",
+    "turkish_meaning": "Farklı",
+    "example_sentence": "Animals live in different habitats."
+  },
+  {
+    "unit": 7,
+    "english": "Food",
+    "pronunciation": "Fuud",
+    "turkish_meaning": "Yiyecek",
+    "example_sentence": "Animals must find food to survive."
+  },
+  {
+    "unit": 7,
+    "english": "Furry",
+    "pronunciation": "Föri",
+    "turkish_meaning": "Tüylü",
+    "example_sentence": "The bear has a furry body."
+  },
+  {
+    "unit": 7,
+    "english": "Grass",
+    "pronunciation": "Gras",
+    "turkish_meaning": "Çim, çimen",
+    "example_sentence": "Cows eat grass on the farm."
+  },
+  {
+    "unit": 7,
+    "english": "Habitat",
+    "pronunciation": "Hebitet",
+    "turkish_meaning": "Yaşam alanı",
+    "example_sentence": "The forest is the tiger's habitat."
+  },
+  {
+    "unit": 7,
+    "english": "Hunter",
+    "pronunciation": "Hantır",
+    "turkish_meaning": "Avcı",
+    "example_sentence": "A lion is a strong hunter."
+  },
+  {
+    "unit": 7,
+    "english": "Interact",
+    "pronunciation": "İntırekt",
+    "turkish_meaning": "Etkileşim kurmak",
+    "example_sentence": "Wolves interact with each other in a group."
+  },
+  {
+    "unit": 7,
+    "english": "King",
+    "pronunciation": "King",
+    "turkish_meaning": "Kral",
+    "example_sentence": "The lion is called the king of the jungle."
+  },
+  {
+    "unit": 7,
+    "english": "Leaves",
+    "pronunciation": "Liivz",
+    "turkish_meaning": "Yapraklar",
+    "example_sentence": "A giraffe eats leaves of trees."
+  },
+  {
+    "unit": 7,
+    "english": "Live",
+    "pronunciation": "Liv",
+    "turkish_meaning": "Yaşamak",
+    "example_sentence": "Where does a lion live? It lives in the forest."
+  },
+  {
+    "unit": 7,
+    "english": "Nature",
+    "pronunciation": "Neyçır",
+    "turkish_meaning": "Doğa",
+    "example_sentence": "We must protect nature."
+  },
+  {
+    "unit": 7,
+    "english": "Pet shop",
+    "pronunciation": "Pet şop",
+    "turkish_meaning": "Evcil hayvan dükkanı",
+    "example_sentence": "We bought a fish from the pet shop."
+  },
+  {
+    "unit": 7,
+    "english": "Place",
+    "pronunciation": "Pleys",
+    "turkish_meaning": "Yer, mekân",
+    "example_sentence": "The forest is a safe place for animals."
+  },
+  {
+    "unit": 7,
+    "english": "Rest",
+    "pronunciation": "Rest",
+    "turkish_meaning": "Dinlenmek",
+    "example_sentence": "Lions rest under the trees."
+  },
+  {
+    "unit": 7,
+    "english": "Insect",
+    "pronunciation": "İnsekt",
+    "turkish_meaning": "Böcek",
+    "example_sentence": "A bee is an insect."
+  },
+  {
+    "unit": 7,
+    "english": "Mammal",
+    "pronunciation": "Memıl",
+    "turkish_meaning": "Memeli",
+    "example_sentence": "A whale is a mammal."
+  },
+  {
+    "unit": 7,
+    "english": "Reptile",
+    "pronunciation": "Reptayl",
+    "turkish_meaning": "Sürüngen",
+    "example_sentence": "A crocodile is a reptile."
+  },
+  {
+    "unit": 7,
+    "english": "Farm",
+    "pronunciation": "Farm",
+    "turkish_meaning": "Çiftlik",
+    "example_sentence": "There are many animals on the farm."
+  },
+  {
+    "unit": 7,
+    "english": "Field",
+    "pronunciation": "Fiild",
+    "turkish_meaning": "Tarla",
+    "example_sentence": "The sheep are eating grass in the field."
+  },
+  {
+    "unit": 7,
+    "english": "Forest",
+    "pronunciation": "Forıst",
+    "turkish_meaning": "Orman",
+    "example_sentence": "A lion lives in the forest."
+  },
+  {
+    "unit": 7,
+    "english": "Jungle",
+    "pronunciation": "Cangıl",
+    "turkish_meaning": "Vahşi orman",
+    "example_sentence": "The lion is the king of the jungle."
+  },
+  {
+    "unit": 7,
+    "english": "Mountain",
+    "pronunciation": "Mauntın",
+    "turkish_meaning": "Dağ",
+    "example_sentence": "Wolves live near the mountain."
+  },
+  {
+    "unit": 7,
+    "english": "Ocean",
+    "pronunciation": "Ouşın",
+    "turkish_meaning": "Okyanus",
+    "example_sentence": "A shark lives in the ocean."
+  },
+  {
+    "unit": 7,
+    "english": "River",
+    "pronunciation": "Rivır",
+    "turkish_meaning": "Nehir",
+    "example_sentence": "Crocodiles live in the river."
+  },
+  {
+    "unit": 7,
+    "english": "Savanna",
+    "pronunciation": "Sıvenı",
+    "turkish_meaning": "Savan",
+    "example_sentence": "Lions live on the savanna."
+  },
+  {
+    "unit": 7,
+    "english": "Tree",
+    "pronunciation": "Trii",
+    "turkish_meaning": "Ağaç",
+    "example_sentence": "The monkey is climbing a tree."
+  },
+  {
+    "unit": 7,
+    "english": "Water",
+    "pronunciation": "Votır",
+    "turkish_meaning": "Su",
+    "example_sentence": "Fish need water to survive."
+  },
+  {
+    "unit": 7,
+    "english": "What",
+    "pronunciation": "Vat",
+    "turkish_meaning": "Ne?",
+    "example_sentence": "What does a giraffe eat?"
+  },
+  {
+    "unit": 7,
+    "english": "What type",
+    "pronunciation": "Vat tayp",
+    "turkish_meaning": "Hangi tür / çeşit?",
+    "example_sentence": "What type of animal is a crocodile?"
+  },
+  {
+    "unit": 7,
+    "english": "Where",
+    "pronunciation": "Veır",
+    "turkish_meaning": "Nerede? Nereye?",
+    "example_sentence": "Where does a lion live?"
+  },
+  {
+    "unit": 7,
+    "english": "Which",
+    "pronunciation": "Viç",
+    "turkish_meaning": "Hangisi?",
+    "example_sentence": "Which animal is the fastest?"
+  },
+  {
+    "unit": 7,
+    "english": "Bad",
+    "pronunciation": "Bed",
+    "turkish_meaning": "Kötü",
+    "example_sentence": "It is bad to hurt animals."
+  },
+  {
+    "unit": 7,
+    "english": "Big",
+    "pronunciation": "Big",
+    "turkish_meaning": "Büyük",
+    "example_sentence": "An elephant is a big animal."
+  },
+  {
+    "unit": 7,
+    "english": "Cold",
+    "pronunciation": "Kould",
+    "turkish_meaning": "Soğuk",
+    "example_sentence": "Penguins live in cold places."
+  },
+  {
+    "unit": 7,
+    "english": "Dangerous",
+    "pronunciation": "Deyncırıs",
+    "turkish_meaning": "Tehlikeli",
+    "example_sentence": "A lion is more dangerous than a bee."
+  },
+  {
+    "unit": 7,
+    "english": "Enormous",
+    "pronunciation": "İnormıs",
+    "turkish_meaning": "İri, çok büyük",
+    "example_sentence": "A whale is an enormous animal."
+  },
+  {
+    "unit": 7,
+    "english": "Fast",
+    "pronunciation": "Fast",
+    "turkish_meaning": "Hızlı",
+    "example_sentence": "A cheetah is very fast."
+  },
+  {
+    "unit": 7,
+    "english": "Good",
+    "pronunciation": "Gud",
+    "turkish_meaning": "İyi",
+    "example_sentence": "A dolphin is a good swimmer."
+  },
+  {
+    "unit": 7,
+    "english": "Heavy",
+    "pronunciation": "Hevi",
+    "turkish_meaning": "Ağır",
+    "example_sentence": "An elephant is very heavy."
+  },
+  {
+    "unit": 7,
+    "english": "High",
+    "pronunciation": "Hay",
+    "turkish_meaning": "Uzun, yüksek",
+    "example_sentence": "An eagle can fly high."
+  },
+  {
+    "unit": 7,
+    "english": "Huge",
+    "pronunciation": "Hyuc",
+    "turkish_meaning": "Kocaman",
+    "example_sentence": "A whale is a huge animal."
+  },
+  {
+    "unit": 7,
+    "english": "Large",
+    "pronunciation": "Larc",
+    "turkish_meaning": "Geniş, büyük",
+    "example_sentence": "The elephant lives in a large habitat."
+  },
+  {
+    "unit": 7,
+    "english": "Quick",
+    "pronunciation": "Kwik",
+    "turkish_meaning": "Hızlı",
+    "example_sentence": "The zebra must be quick to survive."
+  },
+  {
+    "unit": 7,
+    "english": "Quiet",
+    "pronunciation": "Kuayıt",
+    "turkish_meaning": "Sessiz",
+    "example_sentence": "The forest is quiet at night."
+  },
+  {
+    "unit": 7,
+    "english": "Slow",
+    "pronunciation": "Slou",
+    "turkish_meaning": "Yavaş",
+    "example_sentence": "A turtle is very slow."
+  },
+  {
+    "unit": 7,
+    "english": "Small",
+    "pronunciation": "Smol",
+    "turkish_meaning": "Küçük",
+    "example_sentence": "A bee is a small insect."
+  },
+  {
+    "unit": 7,
+    "english": "Strong",
+    "pronunciation": "Strong",
+    "turkish_meaning": "Güçlü",
+    "example_sentence": "A gorilla is very strong."
+  },
+  {
+    "unit": 7,
+    "english": "Tall",
+    "pronunciation": "Tol",
+    "turkish_meaning": "Uzun",
+    "example_sentence": "A giraffe is a tall animal."
+  },
+  {
+    "unit": 7,
+    "english": "Weak",
+    "pronunciation": "Wiik",
+    "turkish_meaning": "Güçsüz",
+    "example_sentence": "A small animal can be weak."
+  },
+  {
+    "unit": 7,
+    "english": "Climb",
+    "pronunciation": "Klaym",
+    "turkish_meaning": "Tırmanmak",
+    "example_sentence": "The monkey must climb trees to be safe."
+  },
+  {
+    "unit": 7,
+    "english": "Fly",
+    "pronunciation": "Flay",
+    "turkish_meaning": "Uçmak",
+    "example_sentence": "Can a snake fly? No, it can't."
+  },
+  {
+    "unit": 7,
+    "english": "Hide",
+    "pronunciation": "Hayd",
+    "turkish_meaning": "Saklanmak",
+    "example_sentence": "The tiger can hide in the grass."
+  },
+  {
+    "unit": 7,
+    "english": "Hunt",
+    "pronunciation": "Hant",
+    "turkish_meaning": "Avlamak, avlanmak",
+    "example_sentence": "Lions hunt together."
+  },
+  {
+    "unit": 7,
+    "english": "Move",
+    "pronunciation": "Muuv",
+    "turkish_meaning": "Hareket etmek",
+    "example_sentence": "A snake can move very quietly."
+  },
+  {
+    "unit": 7,
+    "english": "Reach",
+    "pronunciation": "Riiç",
+    "turkish_meaning": "Erişmek, ulaşmak",
+    "example_sentence": "A giraffe can reach high leaves."
+  },
+  {
+    "unit": 7,
+    "english": "Run",
+    "pronunciation": "Ran",
+    "turkish_meaning": "Koşmak",
+    "example_sentence": "A cheetah can run very fast."
+  },
+  {
+    "unit": 7,
+    "english": "Swim",
+    "pronunciation": "Suim",
+    "turkish_meaning": "Yüzmek",
+    "example_sentence": "A dolphin is a great swimmer."
+  },
+  {
+    "unit": 7,
+    "english": "Talk",
+    "pronunciation": "Tok",
+    "turkish_meaning": "Konuşmak",
+    "example_sentence": "Can a parrot talk? Yes, it can."
+  },
+  {
+    "unit": 8,
+    "english": "Amusement park",
+    "pronunciation": "Iımyuuzmınt park",
+    "turkish_meaning": "Lunapark",
+    "example_sentence": "We are going to ride the roller coaster at the amusement park."
+  },
+  {
+    "unit": 8,
+    "english": "Beach",
+    "pronunciation": "Biiç",
+    "turkish_meaning": "Plaj",
+    "example_sentence": "He is going to build a sandcastle at the beach."
+  },
+  {
+    "unit": 8,
+    "english": "Canyon",
+    "pronunciation": "Kenyın",
+    "turkish_meaning": "Kanyon",
+    "example_sentence": "We are going to visit a canyon this summer."
+  },
+  {
+    "unit": 8,
+    "english": "Desert",
+    "pronunciation": "Dezırt",
+    "turkish_meaning": "Çöl",
+    "example_sentence": "They are going to ride a camel in the desert."
+  },
+  {
+    "unit": 8,
+    "english": "Hill",
+    "pronunciation": "Hil",
+    "turkish_meaning": "Tepe",
+    "example_sentence": "There is a small village on the hill."
+  },
+  {
+    "unit": 8,
+    "english": "Island",
+    "pronunciation": "Aylınd",
+    "turkish_meaning": "Ada",
+    "example_sentence": "We are going to visit an island this summer."
+  },
+  {
+    "unit": 8,
+    "english": "Lake",
+    "pronunciation": "Leyk",
+    "turkish_meaning": "Göl",
+    "example_sentence": "We are going to go fishing at the lake."
+  },
+  {
+    "unit": 8,
+    "english": "Mountain",
+    "pronunciation": "Mauntın",
+    "turkish_meaning": "Dağ",
+    "example_sentence": "We are going to go hiking in the mountains."
+  },
+  {
+    "unit": 8,
+    "english": "Museum",
+    "pronunciation": "Myuuziım",
+    "turkish_meaning": "Müze",
+    "example_sentence": "They are going to visit a museum."
+  },
+  {
+    "unit": 8,
+    "english": "National park",
+    "pronunciation": "Neşınıl park",
+    "turkish_meaning": "Milli park",
+    "example_sentence": "We are going to explore the national park."
+  },
+  {
+    "unit": 8,
+    "english": "Ocean",
+    "pronunciation": "Ouşın",
+    "turkish_meaning": "Okyanus",
+    "example_sentence": "We saw dolphins in the ocean."
+  },
+  {
+    "unit": 8,
+    "english": "River",
+    "pronunciation": "Rivır",
+    "turkish_meaning": "Nehir",
+    "example_sentence": "There is a small boat on the river."
+  },
+  {
+    "unit": 8,
+    "english": "Seaside",
+    "pronunciation": "Siisayd",
+    "turkish_meaning": "Deniz kenarı",
+    "example_sentence": "We are going to stay at the seaside."
+  },
+  {
+    "unit": 8,
+    "english": "Tower",
+    "pronunciation": "Tauır",
+    "turkish_meaning": "Kule",
+    "example_sentence": "We are going to visit the famous tower."
+  },
+  {
+    "unit": 8,
+    "english": "Valley",
+    "pronunciation": "Veli",
+    "turkish_meaning": "Vadi",
+    "example_sentence": "There is a beautiful valley near our village."
+  },
+  {
+    "unit": 8,
+    "english": "Village",
+    "pronunciation": "Vilic",
+    "turkish_meaning": "Köy",
+    "example_sentence": "My grandparents live in a small village."
+  },
+  {
+    "unit": 8,
+    "english": "Zoo",
+    "pronunciation": "Zuu",
+    "turkish_meaning": "Hayvanat bahçesi",
+    "example_sentence": "We are going to visit the zoo on Saturday."
+  },
+  {
+    "unit": 8,
+    "english": "Hiking",
+    "pronunciation": "Haykıng",
+    "turkish_meaning": "Doğa yürüyüşü",
+    "example_sentence": "We are going to go hiking in the mountains."
+  },
+  {
+    "unit": 8,
+    "english": "Riding a camel",
+    "pronunciation": "Raydıng ı kemıl",
+    "turkish_meaning": "Deveye binme",
+    "example_sentence": "They are going to ride a camel in the desert."
+  },
+  {
+    "unit": 8,
+    "english": "Scuba diving",
+    "pronunciation": "Skyubı dayvıng",
+    "turkish_meaning": "Tüplü dalış",
+    "example_sentence": "We are going to try scuba diving this summer."
+  },
+  {
+    "unit": 8,
+    "english": "Sightseeing tour",
+    "pronunciation": "Saytsiing tuır",
+    "turkish_meaning": "Gezi turu",
+    "example_sentence": "We are going on a sightseeing tour of the city."
+  },
+  {
+    "unit": 8,
+    "english": "Skiing",
+    "pronunciation": "Skiing",
+    "turkish_meaning": "Kar kayağı",
+    "example_sentence": "I'm going to go skiing for my half-term holiday."
+  },
+  {
+    "unit": 8,
+    "english": "Snorkelling",
+    "pronunciation": "Snorkıling",
+    "turkish_meaning": "Şnorkelle dalış",
+    "example_sentence": "We are going to try snorkelling at the coast."
+  },
+  {
+    "unit": 8,
+    "english": "Trip",
+    "pronunciation": "Trip",
+    "turkish_meaning": "Gezi",
+    "example_sentence": "We are going on a trip this weekend."
+  },
+  {
+    "unit": 8,
+    "english": "Visit",
+    "pronunciation": "Vizit",
+    "turkish_meaning": "Ziyaret etmek",
+    "example_sentence": "They are going to visit a museum."
+  },
+  {
+    "unit": 8,
+    "english": "Bird",
+    "pronunciation": "Börd",
+    "turkish_meaning": "Kuş",
+    "example_sentence": "We saw many birds near the lake."
+  },
+  {
+    "unit": 8,
+    "english": "Deer",
+    "pronunciation": "Diır",
+    "turkish_meaning": "Geyik",
+    "example_sentence": "We saw a deer in the national park."
+  },
+  {
+    "unit": 8,
+    "english": "Dolphin",
+    "pronunciation": "Dolfin",
+    "turkish_meaning": "Yunus balığı",
+    "example_sentence": "We watched dolphins in the ocean."
+  },
+  {
+    "unit": 8,
+    "english": "Fish",
+    "pronunciation": "Fiş",
+    "turkish_meaning": "Balık",
+    "example_sentence": "There are many fish in the coral reef."
+  },
+  {
+    "unit": 8,
+    "english": "Shark",
+    "pronunciation": "Şark",
+    "turkish_meaning": "Köpek balığı",
+    "example_sentence": "We saw a shark while snorkelling."
+  },
+  {
+    "unit": 8,
+    "english": "Turtle",
+    "pronunciation": "Törtıl",
+    "turkish_meaning": "Kaplumbağa",
+    "example_sentence": "We saw a turtle near the coral reef."
+  },
+  {
+    "unit": 8,
+    "english": "Activity",
+    "pronunciation": "Iktiviti",
+    "turkish_meaning": "Etkinlik",
+    "example_sentence": "Hiking is my favourite activity."
+  },
+  {
+    "unit": 8,
+    "english": "Amazing",
+    "pronunciation": "Imeyzıng",
+    "turkish_meaning": "İnanılmaz, şaşırtıcı",
+    "example_sentence": "The Northern Lights are amazing."
+  },
+  {
+    "unit": 8,
+    "english": "Book",
+    "pronunciation": "Buk",
+    "turkish_meaning": "Yer ayırtmak",
+    "example_sentence": "We booked a hotel for our holiday."
+  },
+  {
+    "unit": 8,
+    "english": "Build",
+    "pronunciation": "Bild",
+    "turkish_meaning": "İnşa etmek",
+    "example_sentence": "He is going to build a sandcastle at the beach."
+  },
+  {
+    "unit": 8,
+    "english": "Climate",
+    "pronunciation": "Klaymıt",
+    "turkish_meaning": "İklim",
+    "example_sentence": "The climate is hot in the desert."
+  },
+  {
+    "unit": 8,
+    "english": "Coin",
+    "pronunciation": "Koyn",
+    "turkish_meaning": "Madeni para",
+    "example_sentence": "I collect coins from different countries."
+  },
+  {
+    "unit": 8,
+    "english": "Comfortable",
+    "pronunciation": "Kamftıbıl",
+    "turkish_meaning": "Rahat, konforlu",
+    "example_sentence": "We stayed in a comfortable hotel."
+  },
+  {
+    "unit": 8,
+    "english": "Continent",
+    "pronunciation": "Kontinınt",
+    "turkish_meaning": "Kıta",
+    "example_sentence": "Africa is a big continent."
+  },
+  {
+    "unit": 8,
+    "english": "Coral",
+    "pronunciation": "Korıl",
+    "turkish_meaning": "Mercan",
+    "example_sentence": "We saw beautiful coral in the sea."
+  },
+  {
+    "unit": 8,
+    "english": "Coral reef",
+    "pronunciation": "Korıl riif",
+    "turkish_meaning": "Mercan resifi",
+    "example_sentence": "There are many fish in the coral reef."
+  },
+  {
+    "unit": 8,
+    "english": "Cosy",
+    "pronunciation": "Kouzi",
+    "turkish_meaning": "Konforlu, rahat",
+    "example_sentence": "Our cabin was small but cosy."
+  },
+  {
+    "unit": 8,
+    "english": "Definitely",
+    "pronunciation": "Definıtli",
+    "turkish_meaning": "Kesinlikle",
+    "example_sentence": "We are definitely going to visit that island."
+  },
+  {
+    "unit": 8,
+    "english": "Destination",
+    "pronunciation": "Destineyşın",
+    "turkish_meaning": "Varış yeri",
+    "example_sentence": "Antalya is a popular holiday destination."
+  },
+  {
+    "unit": 8,
+    "english": "Draw pictures",
+    "pronunciation": "Dro pikçırz",
+    "turkish_meaning": "Resimler çizmek",
+    "example_sentence": "I like to draw pictures of the mountains."
+  },
+  {
+    "unit": 8,
+    "english": "Explore",
+    "pronunciation": "Iksplor",
+    "turkish_meaning": "Keşfetmek",
+    "example_sentence": "We are going to explore the national park."
+  },
+  {
+    "unit": 8,
+    "english": "Famous",
+    "pronunciation": "Feymıs",
+    "turkish_meaning": "Ünlü",
+    "example_sentence": "We are going to visit a famous tower."
+  },
+  {
+    "unit": 8,
+    "english": "Fountain",
+    "pronunciation": "Fauntın",
+    "turkish_meaning": "Çeşme, fıskiye",
+    "example_sentence": "There is a big fountain in the square."
+  },
+  {
+    "unit": 8,
+    "english": "Generation",
+    "pronunciation": "Cenıreyşın",
+    "turkish_meaning": "Nesil",
+    "example_sentence": "This tradition passes from generation to generation."
+  },
+  {
+    "unit": 8,
+    "english": "Giant",
+    "pronunciation": "Cayınt",
+    "turkish_meaning": "Devasa, kocaman",
+    "example_sentence": "There is a giant roller coaster at the park."
+  },
+  {
+    "unit": 8,
+    "english": "Guess",
+    "pronunciation": "Ges",
+    "turkish_meaning": "Tahmin etmek",
+    "example_sentence": "Can you guess where we are going?"
+  },
+  {
+    "unit": 8,
+    "english": "Half-term",
+    "pronunciation": "Haf-törm",
+    "turkish_meaning": "Yarıyıl",
+    "example_sentence": "What are you going to do for your half-term holiday?"
+  },
+  {
+    "unit": 8,
+    "english": "Historical",
+    "pronunciation": "Histrikıl",
+    "turkish_meaning": "Tarihi",
+    "example_sentence": "We are going to visit a historical place."
+  },
+  {
+    "unit": 8,
+    "english": "Holiday",
+    "pronunciation": "Holıdey",
+    "turkish_meaning": "Tatil",
+    "example_sentence": "Where are you going to go on your holiday?"
+  },
+  {
+    "unit": 8,
+    "english": "Including",
+    "pronunciation": "İnkluudıng",
+    "turkish_meaning": "İçeren, kapsayan",
+    "example_sentence": "The tour is fun, including a boat ride."
+  },
+  {
+    "unit": 8,
+    "english": "Invite",
+    "pronunciation": "İnvayt",
+    "turkish_meaning": "Davet etmek",
+    "example_sentence": "We are going to invite our friends to the trip."
+  },
+  {
+    "unit": 8,
+    "english": "Involve",
+    "pronunciation": "İnvolv",
+    "turkish_meaning": "Dahil etmek",
+    "example_sentence": "The trip will involve a lot of walking."
+  },
+  {
+    "unit": 8,
+    "english": "Join",
+    "pronunciation": "Coyn",
+    "turkish_meaning": "Katılmak",
+    "example_sentence": "Do you want to join our trip?"
+  },
+  {
+    "unit": 8,
+    "english": "Jolly",
+    "pronunciation": "Coli",
+    "turkish_meaning": "Eğlenceli, neşeli",
+    "example_sentence": "We had a jolly time at the amusement park."
+  },
+  {
+    "unit": 8,
+    "english": "Magical",
+    "pronunciation": "Mecikıl",
+    "turkish_meaning": "Büyüleyici",
+    "example_sentence": "The Northern Lights are magical."
+  },
+  {
+    "unit": 8,
+    "english": "Make a wish",
+    "pronunciation": "Meyk ı viş",
+    "turkish_meaning": "Dilek tutmak",
+    "example_sentence": "We make a wish when we see a shooting star."
+  },
+  {
+    "unit": 8,
+    "english": "Nearby",
+    "pronunciation": "Niırbay",
+    "turkish_meaning": "Yakında, civarında",
+    "example_sentence": "There is a beach nearby our hotel."
+  },
+  {
+    "unit": 8,
+    "english": "Northern Lights",
+    "pronunciation": "Nordın Layts",
+    "turkish_meaning": "Kuzey Işıkları",
+    "example_sentence": "We want to see the Northern Lights."
+  },
+  {
+    "unit": 8,
+    "english": "Opportunity",
+    "pronunciation": "Opırtyunıti",
+    "turkish_meaning": "Fırsat",
+    "example_sentence": "This trip is a great opportunity to explore nature."
+  },
+  {
+    "unit": 8,
+    "english": "Pack",
+    "pronunciation": "Pek",
+    "turkish_meaning": "Toplamak, hazırlamak",
+    "example_sentence": "I need to pack my bag for the trip."
+  },
+  {
+    "unit": 8,
+    "english": "Peaceful",
+    "pronunciation": "Piisfıl",
+    "turkish_meaning": "Huzurlu",
+    "example_sentence": "The village is very peaceful."
+  },
+  {
+    "unit": 8,
+    "english": "Place",
+    "pronunciation": "Pleys",
+    "turkish_meaning": "Yer, mekân",
+    "example_sentence": "This is a beautiful place for a holiday."
+  },
+  {
+    "unit": 8,
+    "english": "Postcard",
+    "pronunciation": "Poustkard",
+    "turkish_meaning": "Kart postal",
+    "example_sentence": "I sent a postcard from the seaside."
+  },
+  {
+    "unit": 8,
+    "english": "Protect",
+    "pronunciation": "Prıtekt",
+    "turkish_meaning": "Korumak",
+    "example_sentence": "We must protect the coral reef."
+  },
+  {
+    "unit": 8,
+    "english": "Rainwater",
+    "pronunciation": "Reynvotır",
+    "turkish_meaning": "Yağmur suyu",
+    "example_sentence": "The village collects rainwater for the garden."
+  },
+  {
+    "unit": 8,
+    "english": "Recommend",
+    "pronunciation": "Rekımend",
+    "turkish_meaning": "Tavsiye etmek",
+    "example_sentence": "Which place do you recommend for a holiday?"
+  },
+  {
+    "unit": 8,
+    "english": "Relax",
+    "pronunciation": "Rileks",
+    "turkish_meaning": "Dinlenmek",
+    "example_sentence": "We are going to relax at the seaside."
+  },
+  {
+    "unit": 8,
+    "english": "Ride",
+    "pronunciation": "Rayd",
+    "turkish_meaning": "Binmek",
+    "example_sentence": "We are going to ride the roller coaster."
+  },
+  {
+    "unit": 8,
+    "english": "Rock",
+    "pronunciation": "Rok",
+    "turkish_meaning": "Kaya",
+    "example_sentence": "There are big rocks near the canyon."
+  },
+  {
+    "unit": 8,
+    "english": "Roller coaster",
+    "pronunciation": "Roulır koustır",
+    "turkish_meaning": "Hız treni",
+    "example_sentence": "We are going to ride the roller coaster."
+  },
+  {
+    "unit": 8,
+    "english": "Sand dune",
+    "pronunciation": "Send dyun",
+    "turkish_meaning": "Kum tepesi",
+    "example_sentence": "We climbed a big sand dune in the desert."
+  },
+  {
+    "unit": 8,
+    "english": "Sandcastle",
+    "pronunciation": "Sendkasıl",
+    "turkish_meaning": "Kumdan kale",
+    "example_sentence": "He is going to build a sandcastle at the beach."
+  },
+  {
+    "unit": 8,
+    "english": "Seashell",
+    "pronunciation": "Siişel",
+    "turkish_meaning": "Deniz kabuğu",
+    "example_sentence": "I collected seashells at the beach."
+  },
+  {
+    "unit": 8,
+    "english": "Season",
+    "pronunciation": "Siizın",
+    "turkish_meaning": "Mevsim",
+    "example_sentence": "Summer is my favourite season."
+  },
+  {
+    "unit": 8,
+    "english": "See",
+    "pronunciation": "Sii",
+    "turkish_meaning": "Görmek",
+    "example_sentence": "We want to see the Northern Lights."
+  },
+  {
+    "unit": 8,
+    "english": "Sky",
+    "pronunciation": "Skay",
+    "turkish_meaning": "Gökyüzü",
+    "example_sentence": "The sky is full of stars tonight."
+  },
+  {
+    "unit": 8,
+    "english": "Stamp",
+    "pronunciation": "Stemp",
+    "turkish_meaning": "Pul",
+    "example_sentence": "I put a stamp on the postcard."
+  },
+  {
+    "unit": 8,
+    "english": "Stay",
+    "pronunciation": "Stey",
+    "turkish_meaning": "Konaklamak, kalmak",
+    "example_sentence": "We are going to stay at a hotel near the beach."
+  },
+  {
+    "unit": 8,
+    "english": "Sunrise",
+    "pronunciation": "Sanrayz",
+    "turkish_meaning": "Gündoğumu",
+    "example_sentence": "We watched the sunrise at the seaside."
+  },
+  {
+    "unit": 8,
+    "english": "Sunglasses",
+    "pronunciation": "Sanglasız",
+    "turkish_meaning": "Güneş gözlüğü",
+    "example_sentence": "Don't forget your sunglasses for the trip."
+  },
+  {
+    "unit": 8,
+    "english": "Sunscreen",
+    "pronunciation": "Sanskriin",
+    "turkish_meaning": "Güneş kremi",
+    "example_sentence": "Put on sunscreen before going to the beach."
+  },
+  {
+    "unit": 8,
+    "english": "Temperature",
+    "pronunciation": "Tempırıçır",
+    "turkish_meaning": "Sıcaklık",
+    "example_sentence": "The temperature is very high in the desert."
+  },
+  {
+    "unit": 8,
+    "english": "Top",
+    "pronunciation": "Top",
+    "turkish_meaning": "Zirve",
+    "example_sentence": "We reached the top of the mountain."
+  },
+  {
+    "unit": 8,
+    "english": "Tourism",
+    "pronunciation": "Turizım",
+    "turkish_meaning": "Turizm",
+    "example_sentence": "Tourism is important for this city."
+  },
+  {
+    "unit": 8,
+    "english": "Type",
+    "pronunciation": "Tayp",
+    "turkish_meaning": "Tür, çeşit",
+    "example_sentence": "What type of holiday do you like?"
+  },
+  {
+    "unit": 8,
+    "english": "Van",
+    "pronunciation": "Ven",
+    "turkish_meaning": "Karavan, minibüs",
+    "example_sentence": "We travelled to the coast in a van."
+  },
+  {
+    "unit": 8,
+    "english": "Various",
+    "pronunciation": "Veıriıs",
+    "turkish_meaning": "Çeşitli",
+    "example_sentence": "There are various activities at the amusement park."
+  },
+  {
+    "unit": 8,
+    "english": "Vehicle",
+    "pronunciation": "Viıkıl",
+    "turkish_meaning": "Taşıt, araç",
+    "example_sentence": "We travelled by a big vehicle."
+  },
+  {
+    "unit": 8,
+    "english": "View",
+    "pronunciation": "Vyuu",
+    "turkish_meaning": "Manzara",
+    "example_sentence": "There is a beautiful view from the top of the mountain."
+  },
+  {
+    "unit": 8,
+    "english": "Spring",
+    "pronunciation": "Spring",
+    "turkish_meaning": "İlkbahar",
+    "example_sentence": "We visit the countryside in spring."
+  },
+  {
+    "unit": 8,
+    "english": "Summer",
+    "pronunciation": "Samır",
+    "turkish_meaning": "Yaz",
+    "example_sentence": "I'm going to go to Antalya in summer."
+  },
+  {
+    "unit": 8,
+    "english": "Autumn",
+    "pronunciation": "Otım",
+    "turkish_meaning": "Sonbahar",
+    "example_sentence": "We are going to visit the forest in autumn."
+  },
+  {
+    "unit": 8,
+    "english": "Winter",
+    "pronunciation": "Vintır",
+    "turkish_meaning": "Kış",
+    "example_sentence": "I'm going to go skiing in winter."
+  },
+  {
+    "unit": 8,
+    "english": "How many",
+    "pronunciation": "Hau meni",
+    "turkish_meaning": "Kaç tane?",
+    "example_sentence": "How many places are we going to visit?"
+  },
+  {
+    "unit": 8,
+    "english": "When",
+    "pronunciation": "Ven",
+    "turkish_meaning": "Ne zaman?",
+    "example_sentence": "When are you going to go to Antalya?"
+  },
+  {
+    "unit": 8,
+    "english": "What",
+    "pronunciation": "Vat",
+    "turkish_meaning": "Ne?",
+    "example_sentence": "What are they going to do in the desert?"
+  },
+  {
+    "unit": 8,
+    "english": "Where",
+    "pronunciation": "Veır",
+    "turkish_meaning": "Nerede? Nereye?",
+    "example_sentence": "Where are you going to go on your holiday?"
+  },
+  {
+    "unit": 8,
+    "english": "Which",
+    "pronunciation": "Viç",
+    "turkish_meaning": "Hangisi?",
+    "example_sentence": "Which place are you going to visit first?"
+  },
+  {
+    "unit": 8,
+    "english": "Who",
+    "pronunciation": "Huu",
+    "turkish_meaning": "Kim?",
+    "example_sentence": "Who is going to ride the camel?"
   }
 ]

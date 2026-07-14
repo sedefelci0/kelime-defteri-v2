@@ -14,6 +14,7 @@ const wordsRoutes = require('./routes/words');
 const progressRoutes = require('./routes/progress');
 const decksRoutes = require('./routes/decks');
 const notesRoutes = require('./routes/notes');
+const topicsRoutes = require('./routes/topics');
 const adminRoutes = require('./routes/admin');
 const { router: challengeRoutes, awardDailyMedals } = require('./routes/challenge');
 
@@ -46,6 +47,7 @@ app.use('/api/words', wordsRoutes);
 app.use('/api/progress', progressRoutes);
 app.use('/api/decks', decksRoutes);
 app.use('/api/notes', notesRoutes);
+app.use('/api/topics', topicsRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/challenge', challengeRoutes);
 

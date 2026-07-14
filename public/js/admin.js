@@ -141,6 +141,11 @@ function renderStudents() {
           ${examAcc !== null ? `<span class="accuracy-exam-pct">Sınav %${examAcc}</span>` : ''}
         </div>
       </td>
+      <td>
+        ${s.topicUnitsCompleted > 0
+          ? `<span class="score-correct">${s.topicUnitsCompleted}</span> ünite <span class="accuracy-exam-pct">· %${s.topicAvgPercent}</span>`
+          : '<span class="muted-dash">—</span>'}
+      </td>
       <td><button class="notes-count-btn" ${s.notes.length === 0 ? 'disabled' : ''}>${s.notes.length} not</button></td>
     `;
     tr.querySelector('.notes-count-btn').addEventListener('click', () => {

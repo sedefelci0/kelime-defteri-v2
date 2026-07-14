@@ -232,6 +232,39 @@
   border-color: #b0a8e0;
 }
 
+.unit-btn-badge {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--moss-deep);
+  font-family: var(--font-mono);
+}
+
+/* ===== Kelimeler / Konu Özetleri sekmesi ===== */
+.unit-mode-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.unit-mode-tab {
+  padding: 9px 18px;
+  background: var(--paper-raised);
+  border: 1.5px solid var(--rule);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.unit-mode-tab:hover { border-color: var(--deck-orange-accent); }
+.unit-mode-tab.is-active {
+  background: var(--deck-orange);
+  border-color: var(--deck-orange-accent);
+  color: var(--deck-orange-accent);
+}
+
 .tool-card--challenge {
   background: linear-gradient(135deg, var(--deck-orange) 0%, #FEF3DC 100%);
   border-color: var(--deck-orange-accent);

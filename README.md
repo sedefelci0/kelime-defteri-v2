@@ -41,3 +41,9 @@ public/                  frontend (giriş sayfası + çalışma ekranı)
 ## Yeni kelime eklemek
 
 `data/words.json` dosyasını güncelle, ardından `words` tablosu boşsa `npm run setup-db` otomatik yükler. Tablo zaten doluysa script atlar (mevcut ilerlemeyi korumak için); sadece yeni kelimeleri eklemek istersen haber ver, ayrı bir script hazırlanabilir.
+
+## 5. Sınıf üniteleri ve Konu Özetleri
+
+`data/grade5_words.json` 8 ünitenin tamamını içerir (Ünite 1 dışındakiler zaten `words` tablosunda mevcutsa `setup-db` atlar); yeni/eksik üniteleri eklemek için `node scripts/sync-grade5-words.js` çalıştırılır — canlıda nasıl yapılacağı KURULUM-REHBERI.md içinde anlatılıyor.
+
+Her ünitenin gramer/soru-cevap içeriğinden üretilen interaktif alıştırmalar `data/grade5_topics.json`'da (kişisel soru / çoktan seçmeli / doğru-yanlış / boşluk doldurma / eşleştirme), API'si `routes/topics.js`'de, arayüzü `public/topics.html` + `public/js/topics.js`'de. Skorlar `topic_progress` tablosunda öğrenci bazında saklanır ve `routes/admin.js`'deki öğrenci listesinde görünür.

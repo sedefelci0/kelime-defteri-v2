@@ -32,7 +32,56 @@ function goToStudy(deckSlug, unit) {
   window.location.href = `/study.html?${params.toString()}`;
 }
 
+function goToTopics(deckSlug, unit) {
+  window.location.href = `/topics.html?${new URLSearchParams({ deck: deckSlug, unit }).toString()}`;
+}
+
+let currentDeck = null;
+let currentUnits = [];
+let currentMode = 'words';
+let topicsProgress = {};
+
+const unitModeTabsEl = document.getElementById('unit-mode-tabs');
+const tabWordsEl = document.getElementById('tab-words');
+const tabTopicsEl = document.getElementById('tab-topics');
+
+function renderUnitButtons() {
+  unitButtonsEl.innerHTML = '';
+  currentUnits.forEach((u) => {
+    const btn = document.createElement('button');
+    btn.className = 'unit-btn';
+    const label = u.name || `Ünite ${u.unit}`;
+    if (currentMode === 'topics') {
+      const prog = topicsProgress[u.unit];
+      btn.innerHTML = `${label}${prog ? `<span class="unit-btn-badge">${prog.bestScore}/${prog.bestTotal}</span>` : ''}`;
+      btn.addEventListener('click', () => goToTopics(currentDeck.slug, u.unit));
+    } else {
+      btn.textContent = label;
+      btn.addEventListener('click', () => goToStudy(currentDeck.slug, u.unit));
+    }
+    unitButtonsEl.appendChild(btn);
+  });
+}
+
+tabWordsEl.addEventListener('click', () => {
+  currentMode = 'words';
+  tabWordsEl.classList.add('is-active');
+  tabTopicsEl.classList.remove('is-active');
+  renderUnitButtons();
+});
+tabTopicsEl.addEventListener('click', () => {
+  currentMode = 'topics';
+  tabTopicsEl.classList.add('is-active');
+  tabWordsEl.classList.remove('is-active');
+  renderUnitButtons();
+});
+
 async function openDeck(deck) {
+  currentDeck = deck;
+  currentMode = 'words';
+  tabWordsEl.classList.add('is-active');
+  tabTopicsEl.classList.remove('is-active');
+
   if (deck.unitCount > 0) {
     const t = DECK_THEMES[deck.slug] || { theme: 'purple', icon: '📚' };
     unitDeckTitleEl.textContent = deck.title;
@@ -40,15 +89,16 @@ async function openDeck(deck) {
     unitDeckIconEl.className    = `unit-deck-icon unit-deck-icon--${t.theme}`;
 
     showView('loading');
-    const units = await getJSON(`/api/decks/${deck.slug}/units`);
-    unitButtonsEl.innerHTML = '';
-    units.forEach((u) => {
-      const btn = document.createElement('button');
-      btn.className   = 'unit-btn';
-      btn.textContent = u.name || `Ünite ${u.unit}`;
-      btn.addEventListener('click', () => goToStudy(deck.slug, u.unit));
-      unitButtonsEl.appendChild(btn);
-    });
+    currentUnits = await getJSON(`/api/decks/${deck.slug}/units`);
+
+    if (deck.slug === '5-sinif') {
+      unitModeTabsEl.style.display = '';
+      topicsProgress = await getJSON(`/api/topics/${deck.slug}/progress`).catch(() => ({}));
+    } else {
+      unitModeTabsEl.style.display = 'none';
+    }
+
+    renderUnitButtons();
     showView('units');
   } else {
     goToStudy(deck.slug);
