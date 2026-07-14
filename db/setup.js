@@ -61,8 +61,49 @@ async function ensureDatabaseReady() {
     console.log(`[db] "${deck.title}" yükleme tamamlandı.`);
   }
 
+  await syncGrade5Units();
   await ensureExamQuestionsReady();
   await fixTypos();
+}
+
+// 5. Sınıf destesi Ünite 1 ile birlikte kuruldu ve artık "dolu" sayıldığı için, yukarıdaki
+// döngü sonradan eklenen üniteleri (2, 3, ...) yüklemez. Bu fonksiyon her sunucu açılışında
+// çalışır ve data/grade5_words.json'daki, veritabanında henüz olmayan üniteleri ünite ünite
+// kontrol edip ekler — Shell erişimi olmayan (ücretsiz) hosting planlarında bile elle bir
+// komut çalıştırmaya gerek kalmaz. Aynı mantık scripts/sync-grade5-words.js'de de var
+// (yerelde manuel çalıştırmak isteyenler için), birden fazla çalıştırılması güvenlidir.
+async function syncGrade5Units() {
+  const filePath = path.join(__dirname, '../data/grade5_words.json');
+  if (!fs.existsSync(filePath)) return;
+
+  const { rows: deckRows } = await pool.query("SELECT id FROM decks WHERE slug = '5-sinif'");
+  if (deckRows.length === 0) return;
+  const deckId = deckRows[0].id;
+
+  const words = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  const byUnit = {};
+  for (const w of words) {
+    const unit = w.unit || 0;
+    if (!byUnit[unit]) byUnit[unit] = [];
+    byUnit[unit].push(w);
+  }
+
+  for (const unit of Object.keys(byUnit).map(Number).sort((a, b) => a - b)) {
+    const { rows: existing } = await pool.query(
+      'SELECT COUNT(*)::int AS count FROM words WHERE deck_id = $1 AND unit = $2',
+      [deckId, unit]
+    );
+    if (existing[0].count > 0) continue;
+
+    for (const w of byUnit[unit]) {
+      await pool.query(
+        `INSERT INTO words (deck_id, unit, english, pronunciation, turkish_meaning, english_explanation, example_sentence, part_of_speech)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
+        [deckId, unit, w.english, w.pronunciation || null, w.turkish_meaning, w.english_explanation || null, w.example_sentence, w.part_of_speech || null]
+      );
+    }
+    console.log(`[db] "5. Sınıf" Ünite ${unit}: ${byUnit[unit].length} kelime eklendi.`);
+  }
 }
 
 async function fixTypos() {
@@ -117,4 +158,4 @@ async function ensureExamQuestionsReady() {
   }
 }
 
-module.exports = { ensureDatabaseReady };
+module.exports = { ensureDatabaseReady, syncGrade5Units };

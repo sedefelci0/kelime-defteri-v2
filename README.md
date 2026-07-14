@@ -44,6 +44,6 @@ public/                  frontend (giriş sayfası + çalışma ekranı)
 
 ## 5. Sınıf üniteleri ve Konu Özetleri
 
-`data/grade5_words.json` 8 ünitenin tamamını içerir (Ünite 1 dışındakiler zaten `words` tablosunda mevcutsa `setup-db` atlar); yeni/eksik üniteleri eklemek için `node scripts/sync-grade5-words.js` çalıştırılır — canlıda nasıl yapılacağı KURULUM-REHBERI.md içinde anlatılıyor.
+`data/grade5_words.json` 8 ünitenin tamamını içerir. Ünite 1 destede zaten mevcut olduğu için `setup-db`'nin genel "deste dolu mu?" kontrolü onu atlar — bu yüzden `db/setup.js` içinde ayrı bir `syncGrade5Units()` fonksiyonu var ve bu, sunucu her açıldığında (her deploy'da) eksik üniteleri ünite ünite kontrol edip otomatik ekliyor. Elle çalıştırmak istersen (yerelde veya Shell erişimi olan ortamlarda) `node scripts/sync-grade5-words.js` de aynı işi yapar.
 
 Her ünitenin gramer/soru-cevap içeriğinden üretilen interaktif alıştırmalar `data/grade5_topics.json`'da (kişisel soru / çoktan seçmeli / doğru-yanlış / boşluk doldurma / eşleştirme), API'si `routes/topics.js`'de, arayüzü `public/topics.html` + `public/js/topics.js`'de. Skorlar `topic_progress` tablosunda öğrenci bazında saklanır ve `routes/admin.js`'deki öğrenci listesinde görünür.

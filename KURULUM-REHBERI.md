@@ -98,16 +98,13 @@ Yeni kelimeler eklemek istediğinde excel dosyasını tekrar bana gönder, ben `
 
 ## 5. Sınıf Ünite 2-8 ve Konu Özetleri Nasıl Devreye Alınır
 
-5. Sınıf destesine Ünite 2-8'in kelimeleri ve her ünite için "Konu Özetleri" bölümü (interaktif alıştırmalar) eklendi. Bunların canlı siteye yansıması için, GitHub'a yükledikten sonra **tek seferlik** şu adımı yapman gerekiyor (Ünite 1 zaten dolu olduğu için normal `npm run setup-db` yeni üniteleri atlar):
+5. Sınıf destesine Ünite 2-8'in kelimeleri ve her ünite için "Konu Özetleri" bölümü (interaktif alıştırmalar) eklendi. Bunların canlı siteye yansıması için **hiçbir ekstra adım gerekmiyor** — Ünite 1 zaten dolu olduğu için normal kurulum yeni üniteleri atlasa da, sunucu her açıldığında (her deploy'da otomatik) eksik üniteleri kendisi tespit edip ekliyor (`db/setup.js`). Yani:
 
 1. Değişiklikleri her zamanki gibi GitHub'a yükle (Commit changes).
 2. Render'ın otomatik olarak yeni kodu yayınlamasını bekle (Render panelinde "Deploying" yazısı biter, "Live" olur).
-3. Render panelinde web servisinin **"Shell"** sekmesine git.
-4. Şunu yaz ve Enter'a bas:
-   ```
-   node scripts/sync-grade5-words.js
-   ```
-5. Her ünite için "X kelime eklendi" satırlarını görmelisin. Bu script sadece eksik olan üniteleri ekler, mevcut öğrenci ilerlemesine dokunmaz — güvenle tekrar da çalıştırabilirsin.
+3. Bu kadar — sunucu açılırken eksik üniteleri kendisi ekler. Render'ın loglarında (**"Logs"** sekmesi) `[db] "5. Sınıf" Ünite 2: 117 kelime eklendi.` gibi satırlar görürsün.
+
+**Not (ücretsiz Render planı için):** Ücretsiz plan **Shell** sekmesi sunmuyor — bu yüzden yukarıdaki otomatik yöntem tasarlandı, elle komut çalıştırmana hiç gerek yok. Eğer ileride Shell erişimin olursa (ücretli plan) ve hemen, sunucuyu yeniden başlatmadan eklemek istersen `node scripts/sync-grade5-words.js` de çalıştırabilirsin — o da aynı işi yapar.
 
 Konu Özetleri bölümü için ekstra bir adım gerekmiyor — veritabanı şeması (`topic_progress` tablosu) sunucu her açıldığında otomatik oluşturulur.
 
