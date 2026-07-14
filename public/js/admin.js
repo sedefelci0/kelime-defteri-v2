@@ -239,20 +239,50 @@ const personalAnswersModal = document.getElementById('personal-answers-modal');
 const personalAnswersModalTitle = document.getElementById('personal-answers-modal-title');
 const personalAnswersModalList = document.getElementById('personal-answers-modal-list');
 
+function unitLabelFor(unit) {
+  return GRADE5_UNIT_NAMES[unit] ? `Ünite ${unit} — ${GRADE5_UNIT_NAMES[unit]}` : `Ünite ${unit}`;
+}
+
+// Kişisel Cevaplar modalı — ünite ünite gruplu, her grup içinde tarihe göre (en yeni önce)
 function openPersonalAnswersModal(student) {
   personalAnswersModalTitle.textContent = `${student.displayName} — Kişisel Cevaplar`;
   personalAnswersModalList.innerHTML = '';
+
+  const byUnit = {};
   student.personalAnswers.forEach((a) => {
-    const div = document.createElement('div');
-    div.className = 'notes-modal-note';
-    const unitLabel = GRADE5_UNIT_NAMES[a.unit] ? `Ünite ${a.unit} — ${GRADE5_UNIT_NAMES[a.unit]}` : `Ünite ${a.unit}`;
-    div.innerHTML = `
-      <div class="note-title">${unitLabel}</div>
-      <div class="note-content"><em>${a.question}</em><br>${(a.answer || '').replace(/</g, '&lt;')}</div>
-      <div class="note-date">${formatDate(a.submittedAt)}</div>
-    `;
-    personalAnswersModalList.appendChild(div);
+    if (!byUnit[a.unit]) byUnit[a.unit] = [];
+    byUnit[a.unit].push(a);
   });
+  const units = Object.keys(byUnit).map(Number).sort((a, b) => a - b);
+
+  if (units.length === 0) {
+    personalAnswersModalList.innerHTML = '<p class="q-empty-hint">Henüz kişisel cevap göndermemiş.</p>';
+  }
+
+  units.forEach((unit) => {
+    const groupEl = document.createElement('div');
+    groupEl.className = 'personal-answers-group';
+
+    const heading = document.createElement('div');
+    heading.className = 'personal-answers-group-heading';
+    heading.textContent = unitLabelFor(unit);
+    groupEl.appendChild(heading);
+
+    const sortedAnswers = [...byUnit[unit]].sort((a, b) => new Date(b.submittedAt) - new Date(a.submittedAt));
+    sortedAnswers.forEach((a) => {
+      const div = document.createElement('div');
+      div.className = 'notes-modal-note';
+      div.innerHTML = `
+        <div class="note-title">${a.question}</div>
+        <div class="note-content">${(a.answer || '').replace(/</g, '&lt;')}</div>
+        <div class="note-date">${formatDate(a.submittedAt)}</div>
+      `;
+      groupEl.appendChild(div);
+    });
+
+    personalAnswersModalList.appendChild(groupEl);
+  });
+
   personalAnswersModal.style.display = 'flex';
 }
 
@@ -260,17 +290,13 @@ document.getElementById('personal-answers-modal-close').addEventListener('click'
   personalAnswersModal.style.display = 'none';
 });
 
-// Konu Özetleri detay modalı — 3 görünüm: liste → ünite detay / boşluk doldurma detay
+// Konu Özetleri detay modalı — 2 görünüm: liste → ünite detayı
 const topicDetailModal = document.getElementById('topic-detail-modal');
 const topicDetailModalTitle = document.getElementById('topic-detail-modal-title');
 const topicDetailModalList = document.getElementById('topic-detail-modal-list');
 const topicDetailBackBtn = document.getElementById('topic-detail-back-btn');
 
 let topicModalStudent = null;
-
-function unitLabelFor(unit) {
-  return GRADE5_UNIT_NAMES[unit] ? `Ünite ${unit} — ${GRADE5_UNIT_NAMES[unit]}` : `Ünite ${unit}`;
-}
 
 function openTopicDetailModal(student) {
   topicModalStudent = student;
@@ -302,26 +328,17 @@ function renderTopicModalList() {
     topicDetailModalList.appendChild(row);
   });
 
-  if (topicModalStudent.fillBlank) {
-    const fb = topicModalStudent.fillBlank;
-    const firstTryPct = fb.total > 0 ? Math.round((fb.firstTry / fb.total) * 100) : 0;
-    const row = document.createElement('button');
-    row.className = 'topic-modal-row topic-modal-row--fillblank';
-    row.type = 'button';
-    row.innerHTML = `
-      <div class="topic-modal-row-main">
-        <div class="topic-modal-row-title">📝 Boşluk Doldurma Özeti</div>
-        <div class="topic-modal-row-sub">${fb.total} soru · %${firstTryPct} ilk denemede · ort. ${fb.avgAttempts} deneme</div>
-      </div>
-      <span class="topic-modal-row-arrow">›</span>
-    `;
-    row.addEventListener('click', renderTopicModalFillBlankDetail);
-    topicDetailModalList.appendChild(row);
-  }
-
-  if (sorted.length === 0 && !topicModalStudent.fillBlank) {
+  if (sorted.length === 0) {
     topicDetailModalList.innerHTML = '<p class="q-empty-hint">Henüz konu özeti çözmemiş.</p>';
   }
+}
+
+// Belirli bir ünitede, belirli bir aktivite tipi için "ilk denemede doğru" yüzdesini hesaplar.
+function firstTryStatsFor(unit, type) {
+  const entries = (topicModalStudent.attemptDetail || []).filter((e) => e.unit === unit && e.type === type);
+  if (entries.length === 0) return null;
+  const firstTry = entries.filter((e) => e.attempts === 1).length;
+  return { count: entries.length, pct: Math.round((firstTry / entries.length) * 100) };
 }
 
 function renderTopicModalUnitDetail(unit) {
@@ -333,12 +350,29 @@ function renderTopicModalUnitDetail(unit) {
   topicDetailModalTitle.textContent = `${unitLabelFor(unit)} · ${t.bestScore}/${t.bestTotal} (%${pct})`;
   topicDetailModalList.innerHTML = '';
 
+  // Boşluk doldurma / eşleştirme için "ilk denemede doğru %" özeti
+  const fillBlankStats = firstTryStatsFor(unit, 'fill_blank');
+  const matchingStats = firstTryStatsFor(unit, 'matching');
+  if (fillBlankStats || matchingStats) {
+    const summaryEl = document.createElement('div');
+    summaryEl.className = 'topic-attempt-summary';
+    let summaryHtml = '';
+    if (fillBlankStats) {
+      summaryHtml += `<div>📝 Boşluk Doldurma: <strong>%${fillBlankStats.pct}</strong> ilk denemede doğru (${fillBlankStats.count} soru)</div>`;
+    }
+    if (matchingStats) {
+      summaryHtml += `<div>🔗 Eşleştirme: <strong>%${matchingStats.pct}</strong> ilk denemede doğru (${matchingStats.count} eşleştirme)</div>`;
+    }
+    summaryEl.innerHTML = summaryHtml;
+    topicDetailModalList.appendChild(summaryEl);
+  }
+
   const results = topicModalStudent.topicActivityResults
     .filter((r) => r.unit === unit)
     .sort((a, b) => a.index - b.index);
 
   if (results.length === 0) {
-    topicDetailModalList.innerHTML = '<p class="q-empty-hint">Bu ünite için soru bazlı döküm kaydedilmemiş (eski bir sonuç olabilir).</p>';
+    topicDetailModalList.innerHTML += '<p class="q-empty-hint">Bu ünite için soru bazlı döküm kaydedilmemiş (eski bir sonuç olabilir).</p>';
     return;
   }
 
@@ -346,36 +380,14 @@ function renderTopicModalUnitDetail(unit) {
     const div = document.createElement('div');
     div.className = `notes-modal-note ${r.isCorrect ? 'topic-q-correct' : 'topic-q-wrong'}`;
     let attemptNote = '';
-    if (r.type === 'fill_blank') {
-      const fbEntry = (topicModalStudent.fillBlankDetail || []).find((f) => f.unit === unit && f.prompt === r.prompt);
-      if (fbEntry) attemptNote = ` · ${fbEntry.attempts}. denemede`;
+    if (r.type === 'fill_blank' || r.type === 'matching') {
+      const entry = (topicModalStudent.attemptDetail || []).find((e) => e.unit === unit && e.type === r.type && e.prompt === r.prompt);
+      if (entry) attemptNote = ` · ${entry.attempts}. denemede`;
     }
     div.innerHTML = `
       <div class="note-title">${r.isCorrect ? '✓' : '✗'} Soru ${i + 1}${attemptNote}</div>
       <div class="note-content">${r.prompt}</div>
       ${!r.isCorrect && r.explanation ? `<div class="note-date">${r.explanation}</div>` : ''}
-    `;
-    topicDetailModalList.appendChild(div);
-  });
-}
-
-function renderTopicModalFillBlankDetail() {
-  topicDetailBackBtn.style.display = '';
-  topicDetailBackBtn.onclick = renderTopicModalList;
-  topicDetailModalTitle.textContent = `${topicModalStudent.displayName} — Boşluk Doldurma`;
-  topicDetailModalList.innerHTML = '';
-
-  const entries = topicModalStudent.fillBlankDetail || [];
-  if (entries.length === 0) {
-    topicDetailModalList.innerHTML = '<p class="q-empty-hint">Henüz boşluk doldurma verisi yok.</p>';
-    return;
-  }
-  entries.forEach((e) => {
-    const div = document.createElement('div');
-    div.className = `notes-modal-note ${e.attempts === 1 ? 'topic-q-correct' : ''}`;
-    div.innerHTML = `
-      <div class="note-title">${e.attempts === 1 ? '✓ İlk denemede doğru' : `${e.attempts}. denemede doğru`}</div>
-      <div class="note-content">${e.prompt}</div>
     `;
     topicDetailModalList.appendChild(div);
   });

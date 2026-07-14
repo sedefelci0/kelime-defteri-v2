@@ -285,6 +285,7 @@ function renderFillBlank(activity, index) {
       postJSON(`/api/topics/${deckSlug}/${unitParam}/fillblank-attempt`, {
         prompt: activity.prompt,
         attempts: attemptCount,
+        type: 'fill_blank',
       }).catch(() => {});
     } else {
       feedbackEl.className = 'fill-blank-feedback is-wrong';
@@ -322,6 +323,7 @@ function renderMatching(activity, index) {
   let selectedLeft = null;
   let selectedRight = null;
   let matchedCount = 0;
+  let wrongAttempts = 0; // yanlış eşleştirme denemesi sayısı — "kaçıncı denemede tamamladı" için
 
   function makeItem(pairIndex, text, side) {
     const btn = document.createElement('button');
@@ -352,8 +354,14 @@ function renderMatching(activity, index) {
           selectedRight = null;
           if (matchedCount === pairs.length) {
             markDone(index, pairs.length, pairs.length);
+            postJSON(`/api/topics/${deckSlug}/${unitParam}/fillblank-attempt`, {
+              prompt: activityMeta[index].promptText,
+              attempts: wrongAttempts + 1,
+              type: 'matching',
+            }).catch(() => {});
           }
         } else {
+          wrongAttempts += 1;
           const wrongLeft = selectedLeft;
           const wrongRight = selectedRight;
           wrongLeft.classList.add('is-wrong-flash');
@@ -390,21 +398,23 @@ function scorablePointsFor(activity) {
   return 1;
 }
 
-function promptTextFor(activity) {
+function promptTextFor(activity, index) {
   if (activity.type === 'tf') return activity.statement;
-  if (activity.type === 'matching') return 'Eşleştirme';
+  // Bir ünitede birden fazla eşleştirme aktivitesi olabilir (Ünite 3'te olduğu gibi),
+  // bu yüzden index ile ayırt ediyoruz — hem etiket için hem deneme kaydı için tekil olsun.
+  if (activity.type === 'matching') return `Eşleştirme #${index + 1}`;
   return activity.prompt || '';
 }
 
 function renderActivities() {
   listEl.innerHTML = '';
-  activityMeta = activities.map((a) => ({
+  activityMeta = activities.map((a, index) => ({
     scorable: a.type !== 'personal',
     done: false,
     correctPoints: 0,
     points: scorablePointsFor(a),
     activityType: a.type,
-    promptText: promptTextFor(a),
+    promptText: promptTextFor(a, index),
     explanation: null,
   }));
 

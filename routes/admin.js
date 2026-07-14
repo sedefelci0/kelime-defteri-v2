@@ -71,16 +71,8 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
        WHERE user_id = ANY($1) ORDER BY unit ASC`,
       [ids]
     );
-    const { rows: fillBlankStats } = await pool.query(
-      `SELECT user_id, COUNT(*)::int AS total,
-              SUM(CASE WHEN attempts = 1 THEN 1 ELSE 0 END)::int AS first_try,
-              ROUND(AVG(attempts)::numeric, 1) AS avg_attempts
-       FROM topic_fillblank_attempts
-       WHERE user_id = ANY($1) GROUP BY user_id`,
-      [ids]
-    );
-    const { rows: fillBlankRows } = await pool.query(
-      `SELECT user_id, unit, prompt, attempts FROM topic_fillblank_attempts
+    const { rows: attemptRows } = await pool.query(
+      `SELECT user_id, unit, prompt, attempts, activity_type FROM topic_fillblank_attempts
        WHERE user_id = ANY($1) ORDER BY unit ASC, submitted_at DESC`,
       [ids]
     );
@@ -124,18 +116,10 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
         attempts: t.attempts,
       });
     }
-    const fillBlankByUser = {};
-    for (const f of fillBlankStats) {
-      fillBlankByUser[f.user_id] = {
-        total: f.total,
-        firstTry: f.first_try,
-        avgAttempts: f.avg_attempts !== null ? Number(f.avg_attempts) : null,
-      };
-    }
-    const fillBlankDetailByUser = {};
-    for (const f of fillBlankRows) {
-      if (!fillBlankDetailByUser[f.user_id]) fillBlankDetailByUser[f.user_id] = [];
-      fillBlankDetailByUser[f.user_id].push({ unit: f.unit, prompt: f.prompt, attempts: f.attempts });
+    const attemptDetailByUser = {};
+    for (const f of attemptRows) {
+      if (!attemptDetailByUser[f.user_id]) attemptDetailByUser[f.user_id] = [];
+      attemptDetailByUser[f.user_id].push({ unit: f.unit, prompt: f.prompt, attempts: f.attempts, type: f.activity_type });
     }
     const activityResultsByUser = {};
     for (const r of activityResults) {
@@ -177,8 +161,7 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
         topicUnitsCompleted: s.topic_units_completed,
         topicAvgPercent: s.topic_avg_percent,
         topicProgressDetail: topicDetailByUser[s.id] || [],
-        fillBlank: fillBlankByUser[s.id] || null,
-        fillBlankDetail: fillBlankDetailByUser[s.id] || [],
+        attemptDetail: attemptDetailByUser[s.id] || [],
         topicActivityResults: activityResultsByUser[s.id] || [],
         notes: notesByUser[s.id] || [],
         personalAnswers: personalAnswersByUser[s.id] || [],

@@ -137,10 +137,11 @@ CREATE TABLE IF NOT EXISTS topic_personal_answers (
 );
 CREATE INDEX IF NOT EXISTS idx_topic_personal_user ON topic_personal_answers(user_id);
 
--- Konu Özetleri'ndeki boşluk doldurma sorularında öğrencinin doğruya ulaşana kadar
--- kaç deneme yaptığı (admin panelinde "ortalama deneme" / "ilk denemede doğru %"
--- istatistiği için). Bir soru öğrenci doğru cevaplayana kadar tekrar tekrar
--- denenebildiğinden, sadece doğru cevaplandığı andaki toplam deneme sayısı kaydedilir.
+-- Konu Özetleri'ndeki "kaç denemede doğru yapıldı" takibi — hem boşluk doldurma hem
+-- eşleştirme aktiviteleri için ortak tablo (admin panelinde ünite bazında "ilk denemede
+-- doğru %" istatistiği için). Bir aktivite öğrenci doğru yapana kadar tekrar tekrar
+-- denenebildiğinden, sadece doğru yapıldığı andaki toplam deneme sayısı kaydedilir.
+-- activity_type: 'fill_blank' | 'matching' (eşleştirmede: yanlış eşleştirme sayısı + 1).
 CREATE TABLE IF NOT EXISTS topic_fillblank_attempts (
   id SERIAL PRIMARY KEY,
   user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
@@ -151,6 +152,7 @@ CREATE TABLE IF NOT EXISTS topic_fillblank_attempts (
   submitted_at TIMESTAMPTZ NOT NULL DEFAULT now(),
   UNIQUE (user_id, deck_slug, unit, prompt)
 );
+ALTER TABLE topic_fillblank_attempts ADD COLUMN IF NOT EXISTS activity_type TEXT NOT NULL DEFAULT 'fill_blank';
 CREATE INDEX IF NOT EXISTS idx_fillblank_user ON topic_fillblank_attempts(user_id);
 
 -- Ödül Çarkı: her çevirmenin sonucu (geçmiş listesi + öğretmenin "verildi" işaretlemesi için).

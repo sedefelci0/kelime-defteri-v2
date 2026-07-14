@@ -626,7 +626,6 @@
   transition: background 0.12s, border-color 0.12s;
 }
 .topic-modal-row:hover { background: #F2F0FB; border-color: var(--deck-purple-accent, #7C6CE0); }
-.topic-modal-row--fillblank { background: #FFF7EA; border-color: #F0DDB0; }
 .topic-modal-row-title { font-size: 14px; font-weight: 600; color: var(--ink, #1a1a2e); }
 .topic-modal-row-sub { font-size: 12px; color: var(--muted, #6b6b80); margin-top: 3px; }
 .topic-modal-row-arrow { font-size: 20px; color: var(--muted, #6b6b80); flex-shrink: 0; }
@@ -634,6 +633,43 @@
 /* Ünite detay — soru bazlı doğru/yanlış */
 .topic-q-correct { border-left: 4px solid var(--deck-green-accent, #2D9B6F); }
 .topic-q-wrong { border-left: 4px solid var(--clay, #b5563a); background: #FBEEE8; }
+
+/* Ünite detayı üstünde "ilk denemede doğru %" özeti (boşluk doldurma / eşleştirme) */
+.topic-attempt-summary {
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  background: #F2F0FB;
+  border: 1px solid #E0DCED;
+  border-radius: 10px;
+  font-size: 13px;
+  color: var(--ink, #1a1a2e);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.topic-attempt-summary strong { color: var(--deck-purple-accent, #7C6CE0); }
+
+/* Kişisel Cevaplar — ünite grupları arasında görsel ayrım */
+.personal-answers-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 16px;
+  margin-top: 16px;
+  border-top: 2px solid #E8E4DC;
+}
+.personal-answers-group:first-child {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: none;
+}
+.personal-answers-group-heading {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--deck-green-accent, #2D9B6F);
+}
 
 .note-title { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
 .note-content { font-size: 13.5px; color: var(--ink, #1a1a2e); white-space: pre-wrap; line-height: 1.5; }

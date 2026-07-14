@@ -142,19 +142,21 @@ router.post('/:deckSlug/:unit/personal-answer', requireAuth, async (req, res) =>
 router.post('/:deckSlug/:unit/fillblank-attempt', requireAuth, async (req, res) => {
   try {
     const unit = Number(req.params.unit);
-    const { prompt, attempts } = req.body || {};
+    const { prompt, attempts, type } = req.body || {};
+    const activityType = type === 'matching' ? 'matching' : 'fill_blank';
     if (!Number.isInteger(unit)) return res.status(400).json({ error: 'Geçersiz ünite.' });
     if (!prompt || !Number.isInteger(attempts) || attempts < 1) {
       return res.status(400).json({ error: 'Geçersiz deneme verisi.' });
     }
 
     await pool.query(
-      `INSERT INTO topic_fillblank_attempts (user_id, deck_slug, unit, prompt, attempts, submitted_at)
-       VALUES ($1, $2, $3, $4, $5, now())
+      `INSERT INTO topic_fillblank_attempts (user_id, deck_slug, unit, prompt, attempts, activity_type, submitted_at)
+       VALUES ($1, $2, $3, $4, $5, $6, now())
        ON CONFLICT (user_id, deck_slug, unit, prompt) DO UPDATE SET
          attempts = EXCLUDED.attempts,
+         activity_type = EXCLUDED.activity_type,
          submitted_at = now()`,
-      [req.session.userId, req.params.deckSlug, unit, prompt, attempts]
+      [req.session.userId, req.params.deckSlug, unit, prompt, attempts, activityType]
     );
 
     res.json({ ok: true });
