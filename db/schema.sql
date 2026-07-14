@@ -135,4 +135,20 @@ CREATE TABLE IF NOT EXISTS topic_personal_answers (
 );
 CREATE INDEX IF NOT EXISTS idx_topic_personal_user ON topic_personal_answers(user_id);
 
+-- Konu Özetleri'ndeki boşluk doldurma sorularında öğrencinin doğruya ulaşana kadar
+-- kaç deneme yaptığı (admin panelinde "ortalama deneme" / "ilk denemede doğru %"
+-- istatistiği için). Bir soru öğrenci doğru cevaplayana kadar tekrar tekrar
+-- denenebildiğinden, sadece doğru cevaplandığı andaki toplam deneme sayısı kaydedilir.
+CREATE TABLE IF NOT EXISTS topic_fillblank_attempts (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  deck_slug TEXT NOT NULL,
+  unit INTEGER NOT NULL,
+  prompt TEXT NOT NULL,
+  attempts INTEGER NOT NULL,
+  submitted_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  UNIQUE (user_id, deck_slug, unit, prompt)
+);
+CREATE INDEX IF NOT EXISTS idx_fillblank_user ON topic_fillblank_attempts(user_id);
+
 -- Oturum (session) verisi için connect-pg-simple bu tabloyu kendisi oluşturur (session.sql ile)

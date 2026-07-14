@@ -169,16 +169,52 @@
   cursor: pointer;
 }
 
+/* Sıfırlama butonları */
+.btn-reset-all {
+  margin-left: auto;
+  padding: 8px 14px;
+  border: 1px solid var(--clay, #b5563a);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--clay-deep, #8f3f28);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s;
+  white-space: nowrap;
+}
+.btn-reset-all:hover { background: rgba(181,86,58,0.08); }
+
+.btn-reset-student {
+  padding: 4px 12px;
+  border: 1px solid #E0DCED;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--clay-deep, #8f3f28);
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+  white-space: nowrap;
+}
+.btn-reset-student:hover {
+  background: rgba(181,86,58,0.08);
+  border-color: var(--clay, #b5563a);
+}
+
 /* ── Students table ───────────────────────────────────── */
 .table-wrap {
   background: #fff;
   border: 1px solid #E8E4DC;
   border-radius: 14px;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .students-table {
   width: 100%;
+  min-width: 780px;
   border-collapse: collapse;
 }
 

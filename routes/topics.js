@@ -115,4 +115,30 @@ router.post('/:deckSlug/:unit/personal-answer', requireAuth, async (req, res) =>
   }
 });
 
+// Boşluk doldurma sorusu doğru cevaplandığında, kaç denemede çözüldüğünü kaydeder.
+router.post('/:deckSlug/:unit/fillblank-attempt', requireAuth, async (req, res) => {
+  try {
+    const unit = Number(req.params.unit);
+    const { prompt, attempts } = req.body || {};
+    if (!Number.isInteger(unit)) return res.status(400).json({ error: 'Geçersiz ünite.' });
+    if (!prompt || !Number.isInteger(attempts) || attempts < 1) {
+      return res.status(400).json({ error: 'Geçersiz deneme verisi.' });
+    }
+
+    await pool.query(
+      `INSERT INTO topic_fillblank_attempts (user_id, deck_slug, unit, prompt, attempts, submitted_at)
+       VALUES ($1, $2, $3, $4, $5, now())
+       ON CONFLICT (user_id, deck_slug, unit, prompt) DO UPDATE SET
+         attempts = EXCLUDED.attempts,
+         submitted_at = now()`,
+      [req.session.userId, req.params.deckSlug, unit, prompt, attempts]
+    );
+
+    res.json({ ok: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Deneme kaydedilirken hata oluştu.' });
+  }
+});
+
 module.exports = router;

@@ -147,16 +147,21 @@ function renderStudents() {
         </div>
       </td>
       <td>
-        ${s.topicUnitsCompleted > 0
-          ? `<span class="score-correct">${s.topicUnitsCompleted}</span> ünite <span class="accuracy-exam-pct">· %${s.topicAvgPercent}</span>`
-          : '<span class="muted-dash">—</span>'}
+        <button class="notes-count-btn topic-detail-btn" ${s.topicUnitsCompleted === 0 ? 'disabled' : ''}>
+          ${s.topicUnitsCompleted > 0 ? `${s.topicUnitsCompleted} ünite · %${s.topicAvgPercent}` : '0 ünite'}
+        </button>
       </td>
       <td><button class="notes-count-btn personal-answers-count-btn" ${s.personalAnswers.length === 0 ? 'disabled' : ''}>${s.personalAnswers.length} cevap</button></td>
-      <td><button class="notes-count-btn" ${s.notes.length === 0 ? 'disabled' : ''}>${s.notes.length} not</button></td>
+      <td><button class="notes-count-btn notes-only-btn" ${s.notes.length === 0 ? 'disabled' : ''}>${s.notes.length} not</button></td>
+      <td><button class="btn-reset-student" type="button">Sıfırla</button></td>
     `;
-    tr.querySelector('.notes-count-btn:not(.personal-answers-count-btn)').addEventListener('click', () => {
+    tr.querySelector('.notes-only-btn').addEventListener('click', () => {
       if (s.notes.length > 0) openNotesModal(s);
     });
+    tr.querySelector('.topic-detail-btn').addEventListener('click', () => {
+      if (s.topicUnitsCompleted > 0) openTopicDetailModal(s);
+    });
+    tr.querySelector('.btn-reset-student').addEventListener('click', () => resetStudent(s));
     tr.querySelector('.personal-answers-count-btn').addEventListener('click', () => {
       if (s.personalAnswers.length > 0) openPersonalAnswersModal(s);
     });
@@ -242,6 +247,73 @@ function openPersonalAnswersModal(student) {
 
 document.getElementById('personal-answers-modal-close').addEventListener('click', () => {
   personalAnswersModal.style.display = 'none';
+});
+
+// Konu Özetleri detay modalı (ünite bazında skor + boşluk doldurma denemeleri)
+const topicDetailModal = document.getElementById('topic-detail-modal');
+const topicDetailModalTitle = document.getElementById('topic-detail-modal-title');
+const topicDetailModalList = document.getElementById('topic-detail-modal-list');
+
+function openTopicDetailModal(student) {
+  topicDetailModalTitle.textContent = `${student.displayName} — Konu Özetleri`;
+  topicDetailModalList.innerHTML = '';
+
+  const sorted = [...student.topicProgressDetail].sort((a, b) => a.unit - b.unit);
+  sorted.forEach((t) => {
+    const div = document.createElement('div');
+    div.className = 'notes-modal-note';
+    const unitLabel = GRADE5_UNIT_NAMES[t.unit] ? `Ünite ${t.unit} — ${GRADE5_UNIT_NAMES[t.unit]}` : `Ünite ${t.unit}`;
+    const pct = t.bestTotal > 0 ? Math.round((t.bestScore / t.bestTotal) * 100) : 0;
+    div.innerHTML = `
+      <div class="note-title">${unitLabel}</div>
+      <div class="note-content">${t.bestScore} / ${t.bestTotal} doğru (%${pct}) · ${t.attempts} deneme</div>
+    `;
+    topicDetailModalList.appendChild(div);
+  });
+
+  if (student.fillBlank) {
+    const fb = student.fillBlank;
+    const div = document.createElement('div');
+    div.className = 'notes-modal-note';
+    const firstTryPct = fb.total > 0 ? Math.round((fb.firstTry / fb.total) * 100) : 0;
+    div.innerHTML = `
+      <div class="note-title">Boşluk Doldurma</div>
+      <div class="note-content">${fb.total} soru · %${firstTryPct} ilk denemede doğru · ortalama ${fb.avgAttempts} deneme</div>
+    `;
+    topicDetailModalList.appendChild(div);
+  }
+
+  topicDetailModal.style.display = 'flex';
+}
+
+document.getElementById('topic-detail-modal-close').addEventListener('click', () => {
+  topicDetailModal.style.display = 'none';
+});
+
+// --- Veri sıfırlama ---
+async function resetStudent(student) {
+  if (!confirm(`${student.displayName} adlı öğrencinin tüm quiz, sınav, çalışma süresi, konu özeti, kişisel cevap ve not verilerini silmek istediğine emin misin? Bu işlem geri alınamaz.`)) {
+    return;
+  }
+  try {
+    await sendJSON(`/api/admin/students/${student.id}/reset`, 'POST');
+    await loadStudents(classFilterEl.value);
+  } catch (err) {
+    alert(err.message || 'Sıfırlanırken hata oluştu.');
+  }
+}
+
+document.getElementById('reset-all-btn').addEventListener('click', async () => {
+  if (students.length === 0) return;
+  if (!confirm(`Listelenen ${students.length} öğrencinin TÜMÜNÜN verilerini sıfırlamak istediğine emin misin? Bu işlem geri alınamaz.`)) {
+    return;
+  }
+  try {
+    await sendJSON('/api/admin/students/reset-all', 'POST');
+    await loadStudents(classFilterEl.value);
+  } catch (err) {
+    alert(err.message || 'Toplu sıfırlama sırasında hata oluştu.');
+  }
 });
 
 document.getElementById('back-to-decks-btn').addEventListener('click', () => {

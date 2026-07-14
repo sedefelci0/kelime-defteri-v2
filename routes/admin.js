@@ -65,6 +65,19 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
        WHERE user_id = ANY($1) ORDER BY unit ASC, submitted_at DESC`,
       [ids]
     );
+    const { rows: topicDetail } = await pool.query(
+      `SELECT user_id, unit, best_score, best_total, attempts FROM topic_progress
+       WHERE user_id = ANY($1) ORDER BY unit ASC`,
+      [ids]
+    );
+    const { rows: fillBlankStats } = await pool.query(
+      `SELECT user_id, COUNT(*)::int AS total,
+              SUM(CASE WHEN attempts = 1 THEN 1 ELSE 0 END)::int AS first_try,
+              ROUND(AVG(attempts)::numeric, 1) AS avg_attempts
+       FROM topic_fillblank_attempts
+       WHERE user_id = ANY($1) GROUP BY user_id`,
+      [ids]
+    );
 
     const notesByUser = {};
     for (const n of notes) {
@@ -82,6 +95,24 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
         submittedAt: a.submitted_at,
       });
     }
+    const topicDetailByUser = {};
+    for (const t of topicDetail) {
+      if (!topicDetailByUser[t.user_id]) topicDetailByUser[t.user_id] = [];
+      topicDetailByUser[t.user_id].push({
+        unit: t.unit,
+        bestScore: t.best_score,
+        bestTotal: t.best_total,
+        attempts: t.attempts,
+      });
+    }
+    const fillBlankByUser = {};
+    for (const f of fillBlankStats) {
+      fillBlankByUser[f.user_id] = {
+        total: f.total,
+        firstTry: f.first_try,
+        avgAttempts: f.avg_attempts !== null ? Number(f.avg_attempts) : null,
+      };
+    }
 
     res.json(
       students.map((s) => ({
@@ -96,6 +127,8 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
         examWrong: s.exam_wrong,
         topicUnitsCompleted: s.topic_units_completed,
         topicAvgPercent: s.topic_avg_percent,
+        topicProgressDetail: topicDetailByUser[s.id] || [],
+        fillBlank: fillBlankByUser[s.id] || null,
         notes: notesByUser[s.id] || [],
         personalAnswers: personalAnswersByUser[s.id] || [],
       }))
@@ -103,6 +136,63 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Öğrenciler yüklenirken hata oluştu.' });
+  }
+});
+
+// --- Öğrenci verisini sıfırlama ---
+
+// Bir öğrencinin quiz/sınav/çalışma süresi/konu özeti/kişisel cevap/boşluk doldurma/
+// notlar/günlük mücadele verisinin tamamını siler. Kelime desteleri, kullanıcı hesabı
+// ve şifresi ETKİLENMEZ — sadece ilerleme/aktivite verisi temizlenir.
+async function resetStudentData(client, userId) {
+  await client.query('DELETE FROM user_progress WHERE user_id = $1', [userId]);
+  await client.query('DELETE FROM exam_answer_stats WHERE user_id = $1', [userId]);
+  await client.query('UPDATE users SET total_study_seconds = 0 WHERE id = $1', [userId]);
+  await client.query('DELETE FROM topic_progress WHERE user_id = $1', [userId]);
+  await client.query('DELETE FROM topic_personal_answers WHERE user_id = $1', [userId]);
+  await client.query('DELETE FROM topic_fillblank_attempts WHERE user_id = $1', [userId]);
+  await client.query('DELETE FROM daily_stats WHERE user_id = $1', [userId]);
+  await client.query('DELETE FROM notes WHERE user_id = $1', [userId]);
+  await client.query('DELETE FROM daily_challenge_results WHERE user_id = $1', [userId]).catch(() => {});
+  await client.query('DELETE FROM daily_medals WHERE user_id = $1', [userId]).catch(() => {});
+  await client.query('DELETE FROM daily_champions WHERE user_id = $1', [userId]).catch(() => {});
+}
+
+router.post('/students/:id/reset', requireAuth, requireOwner, async (req, res) => {
+  const id = Number(req.params.id);
+  if (!Number.isInteger(id)) return res.status(400).json({ error: 'Geçersiz öğrenci id.' });
+
+  const client = await pool.connect();
+  try {
+    await client.query('BEGIN');
+    await resetStudentData(client, id);
+    await client.query('COMMIT');
+    res.json({ ok: true });
+  } catch (err) {
+    await client.query('ROLLBACK');
+    console.error(err);
+    res.status(500).json({ error: 'Sıfırlanırken hata oluştu.' });
+  } finally {
+    client.release();
+  }
+});
+
+router.post('/students/reset-all', requireAuth, requireOwner, async (req, res) => {
+  const client = await pool.connect();
+  try {
+    await client.query('BEGIN');
+    const { rows } = await client.query('SELECT id FROM users WHERE is_teacher = FALSE');
+    for (const r of rows) {
+      await resetStudentData(client, r.id);
+    }
+    await client.query('COMMIT');
+    res.json({ ok: true, count: rows.length });
+  } catch (err) {
+    await client.query('ROLLBACK');
+    console.error(err);
+    res.status(500).json({ error: 'Toplu sıfırlama sırasında hata oluştu.' });
+  } finally {
+    client.release();
   }
 });
 

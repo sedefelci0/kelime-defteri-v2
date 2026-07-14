@@ -261,6 +261,7 @@ function renderFillBlank(activity, index) {
   const checkBtn = card.querySelector('.fill-blank-check');
   const feedbackEl = card.querySelector('.fill-blank-feedback');
   let solved = false;
+  let attemptCount = 0;
 
   function normalize(s) {
     return s.trim().toLowerCase().replace(/['’]/g, "'");
@@ -268,6 +269,7 @@ function renderFillBlank(activity, index) {
 
   function check() {
     if (solved) return;
+    attemptCount += 1;
     const candidates = [activity.answer, ...(activity.altAnswers || [])].map(normalize);
     const isCorrect = candidates.includes(normalize(inputEl.value));
     feedbackEl.hidden = false;
@@ -279,6 +281,10 @@ function renderFillBlank(activity, index) {
       feedbackEl.className = 'fill-blank-feedback is-correct';
       feedbackEl.textContent = '✓ Doğru!';
       markDone(index, 1, 1);
+      postJSON(`/api/topics/${deckSlug}/${unitParam}/fillblank-attempt`, {
+        prompt: activity.prompt,
+        attempts: attemptCount,
+      }).catch(() => {});
     } else {
       feedbackEl.className = 'fill-blank-feedback is-wrong';
       feedbackEl.textContent = 'Tekrar dene…';
