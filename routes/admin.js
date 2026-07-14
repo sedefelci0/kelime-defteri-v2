@@ -31,6 +31,7 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
 
     const { rows: students } = await pool.query(
       `SELECT u.id, u.display_name, u.email, u.class_name, u.total_study_seconds,
+              u.wheel_next_spin_at,
               COALESCE(SUM(up.times_correct), 0)::int AS quiz_correct,
               COALESCE(SUM(up.times_wrong), 0)::int AS quiz_wrong,
               COALESCE(eas.correct_count, 0)::int AS exam_correct,
@@ -78,6 +79,13 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
        WHERE user_id = ANY($1) GROUP BY user_id`,
       [ids]
     );
+    const { rows: wheelHistory } = await pool.query(
+      `SELECT id, user_id, prize_key, prize_label, prize_tier, spun_at, given, given_at
+       FROM wheel_spins
+       WHERE user_id = ANY($1) AND spun_at >= now() - interval '7 days'
+       ORDER BY spun_at DESC`,
+      [ids]
+    );
 
     const notesByUser = {};
     for (const n of notes) {
@@ -113,6 +121,19 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
         avgAttempts: f.avg_attempts !== null ? Number(f.avg_attempts) : null,
       };
     }
+    const wheelHistoryByUser = {};
+    for (const w of wheelHistory) {
+      if (!wheelHistoryByUser[w.user_id]) wheelHistoryByUser[w.user_id] = [];
+      wheelHistoryByUser[w.user_id].push({
+        id: w.id,
+        prizeKey: w.prize_key,
+        prizeLabel: w.prize_label,
+        prizeTier: w.prize_tier,
+        spunAt: w.spun_at,
+        given: w.given,
+        givenAt: w.given_at,
+      });
+    }
 
     res.json(
       students.map((s) => ({
@@ -131,6 +152,8 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
         fillBlank: fillBlankByUser[s.id] || null,
         notes: notesByUser[s.id] || [],
         personalAnswers: personalAnswersByUser[s.id] || [],
+        wheelNextSpinAt: s.wheel_next_spin_at,
+        wheelHistory: wheelHistoryByUser[s.id] || [],
       }))
     );
   } catch (err) {
@@ -156,6 +179,8 @@ async function resetStudentData(client, userId) {
   await client.query('DELETE FROM daily_challenge_results WHERE user_id = $1', [userId]).catch(() => {});
   await client.query('DELETE FROM daily_medals WHERE user_id = $1', [userId]).catch(() => {});
   await client.query('DELETE FROM daily_champions WHERE user_id = $1', [userId]).catch(() => {});
+  await client.query('DELETE FROM wheel_spins WHERE user_id = $1', [userId]).catch(() => {});
+  await client.query('UPDATE users SET wheel_next_spin_at = NULL WHERE id = $1', [userId]).catch(() => {});
 }
 
 router.post('/students/:id/reset', requireAuth, requireOwner, async (req, res) => {
@@ -193,6 +218,53 @@ router.post('/students/reset-all', requireAuth, requireOwner, async (req, res) =
     res.status(500).json({ error: 'Toplu sıfırlama sırasında hata oluştu.' });
   } finally {
     client.release();
+  }
+});
+
+// --- Ödül Çarkı yönetimi ---
+
+// Bir çevirmenin ödülünün fiziksel/uygulamada verilip verilmediğini işaretler (toggle).
+router.post('/wheel/:spinId/given', requireAuth, requireOwner, async (req, res) => {
+  try {
+    const spinId = Number(req.params.spinId);
+    if (!Number.isInteger(spinId)) return res.status(400).json({ error: 'Geçersiz kayıt id.' });
+
+    const { rows } = await pool.query(
+      `UPDATE wheel_spins SET given = NOT given, given_at = CASE WHEN NOT given THEN now() ELSE NULL END
+       WHERE id = $1 RETURNING given, given_at`,
+      [spinId]
+    );
+    if (rows.length === 0) return res.status(404).json({ error: 'Kayıt bulunamadı.' });
+    res.json({ given: rows[0].given, givenAt: rows[0].given_at });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'İşaretlenirken hata oluştu.' });
+  }
+});
+
+// Bir öğrencinin çark bekleme süresini kaldırır — "bugün tekrar açabilsin" (özel gün/bayram).
+router.post('/students/:id/wheel-reset', requireAuth, requireOwner, async (req, res) => {
+  try {
+    const id = Number(req.params.id);
+    if (!Number.isInteger(id)) return res.status(400).json({ error: 'Geçersiz öğrenci id.' });
+    await pool.query('UPDATE users SET wheel_next_spin_at = NULL WHERE id = $1', [id]);
+    res.json({ ok: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Çark sıfırlanırken hata oluştu.' });
+  }
+});
+
+// Tüm öğrencilerin çark bekleme süresini aynı anda kaldırır.
+router.post('/wheel-reset-all', requireAuth, requireOwner, async (req, res) => {
+  try {
+    const { rowCount } = await pool.query(
+      `UPDATE users SET wheel_next_spin_at = NULL WHERE is_teacher = FALSE`
+    );
+    res.json({ ok: true, count: rowCount });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Toplu çark sıfırlama sırasında hata oluştu.' });
   }
 });
 

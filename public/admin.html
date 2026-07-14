@@ -62,6 +62,7 @@
           <option value="">Tüm sınıflar</option>
         </select>
         <button class="btn-reset-all" id="reset-all-btn" type="button">🗑 Tümünü Sıfırla</button>
+        <button class="btn-wheel-reset-all" id="wheel-reset-all-btn" type="button">🎁 Herkese Çarkı Sıfırla</button>
       </div>
 
       <div id="students-table-wrap" class="table-wrap">
@@ -77,6 +78,7 @@
               <th>Konu Özetleri</th>
               <th>Kişisel Cevaplar</th>
               <th>Notlar</th>
+              <th>Ödül Çarkı</th>
               <th>İşlemler</th>
             </tr>
           </thead>
@@ -211,6 +213,18 @@
     <div id="topic-detail-modal-list" class="notes-modal-list"></div>
     <div class="modal-actions">
       <button class="btn btn-secondary" id="topic-detail-modal-close" type="button">Kapat</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="wheel-modal" style="display:none;">
+  <div class="modal-card notes-modal-card">
+    <h3 id="wheel-modal-title">Ödül Çarkı</h3>
+    <p class="wheel-modal-sub">Son 7 gün</p>
+    <div id="wheel-modal-list" class="notes-modal-list"></div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" id="wheel-modal-reset-btn" type="button">Çarkı Şimdi Aç</button>
+      <button class="btn btn-secondary" id="wheel-modal-close" type="button">Kapat</button>
     </div>
   </div>
 </div>

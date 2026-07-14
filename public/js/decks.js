@@ -218,6 +218,27 @@ document.getElementById('admin-panel-btn').addEventListener('click', () => {
         }).catch(() => {});
     }
 
+    // Ödül Çarkı butonu — öğretmen hesabı hariç herkes görebilir
+    if (!me.isOwner) {
+      const wheelBtn = document.getElementById('wheel-btn');
+      wheelBtn.style.display = '';
+      wheelBtn.addEventListener('click', () => { window.location.href = '/wheel.html'; });
+      fetch('/api/wheel/status', { credentials: 'same-origin' })
+        .then((r) => r.json())
+        .then((d) => {
+          const descEl = document.getElementById('wheel-desc');
+          if (d.canSpin) {
+            descEl.textContent = 'Çark hazır, çevir! 🎉';
+          } else {
+            const remaining = new Date(d.nextSpinAt).getTime() - Date.now();
+            const totalMinutes = Math.max(0, Math.floor(remaining / 60000));
+            const days = Math.floor(totalMinutes / (60 * 24));
+            const hours = Math.floor((totalMinutes % (60 * 24)) / 60);
+            descEl.textContent = days > 0 ? `${days}g ${hours}s sonra hazır` : `${hours}s sonra hazır`;
+          }
+        }).catch(() => {});
+    }
+
     await loadDecks();
     await loadLeaderboard();
   } catch (err) {

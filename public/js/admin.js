@@ -77,6 +77,15 @@ function formatDate(iso) {
   return d.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
 }
 
+function renderWheelCell(student) {
+  const last = student.wheelHistory[0];
+  if (!last) return `<button class="notes-count-btn wheel-cell-btn" disabled>Henüz çevirmedi</button>`;
+  const isLegendary = last.prizeTier === 'legendary';
+  return `<button class="notes-count-btn wheel-cell-btn ${isLegendary ? 'wheel-cell-legendary' : ''}">
+    ${isLegendary ? '✨ ' : ''}${last.prizeLabel} <span class="muted-dash">· ${formatDate(last.spunAt)}</span>
+  </button>`;
+}
+
 function renderStudents() {
   tbodyEl.innerHTML = '';
 
@@ -153,6 +162,7 @@ function renderStudents() {
       </td>
       <td><button class="notes-count-btn personal-answers-count-btn" ${s.personalAnswers.length === 0 ? 'disabled' : ''}>${s.personalAnswers.length} cevap</button></td>
       <td><button class="notes-count-btn notes-only-btn" ${s.notes.length === 0 ? 'disabled' : ''}>${s.notes.length} not</button></td>
+      <td>${renderWheelCell(s)}</td>
       <td><button class="btn-reset-student" type="button">Sıfırla</button></td>
     `;
     tr.querySelector('.notes-only-btn').addEventListener('click', () => {
@@ -165,6 +175,7 @@ function renderStudents() {
     tr.querySelector('.personal-answers-count-btn').addEventListener('click', () => {
       if (s.personalAnswers.length > 0) openPersonalAnswersModal(s);
     });
+    tr.querySelector('.wheel-cell-btn').addEventListener('click', () => openWheelModal(s));
     tbodyEl.appendChild(tr);
   });
 }
@@ -288,6 +299,76 @@ function openTopicDetailModal(student) {
 
 document.getElementById('topic-detail-modal-close').addEventListener('click', () => {
   topicDetailModal.style.display = 'none';
+});
+
+// Ödül Çarkı detay modalı (son 7 gün + verildi işaretleme + çarkı şimdi aç)
+const wheelModal = document.getElementById('wheel-modal');
+const wheelModalTitle = document.getElementById('wheel-modal-title');
+const wheelModalList = document.getElementById('wheel-modal-list');
+let wheelModalStudent = null;
+
+function renderWheelModalList(student) {
+  wheelModalList.innerHTML = '';
+  if (student.wheelHistory.length === 0) {
+    wheelModalList.innerHTML = '<p class="q-empty-hint">Son 7 günde çark çevirmemiş.</p>';
+    return;
+  }
+  student.wheelHistory.forEach((h) => {
+    const div = document.createElement('div');
+    div.className = `notes-modal-note ${h.prizeTier === 'legendary' ? 'wheel-note-legendary' : ''}`;
+    div.innerHTML = `
+      <div class="note-title">${h.prizeTier === 'legendary' ? '✨ ' : ''}${h.prizeLabel}</div>
+      <div class="note-date">${formatDate(h.spunAt)}</div>
+      <button class="wheel-given-btn ${h.given ? 'is-given' : ''}" type="button">${h.given ? '✓ Verildi' : 'Verildi olarak işaretle'}</button>
+    `;
+    div.querySelector('.wheel-given-btn').addEventListener('click', async (e) => {
+      const btn = e.currentTarget;
+      btn.disabled = true;
+      try {
+        const result = await sendJSON(`/api/admin/wheel/${h.id}/given`, 'POST');
+        h.given = result.given;
+        btn.classList.toggle('is-given', h.given);
+        btn.textContent = h.given ? '✓ Verildi' : 'Verildi olarak işaretle';
+      } catch (err) {
+        alert(err.message || 'İşaretlenirken hata oluştu.');
+      } finally {
+        btn.disabled = false;
+      }
+    });
+    wheelModalList.appendChild(div);
+  });
+}
+
+function openWheelModal(student) {
+  wheelModalStudent = student;
+  wheelModalTitle.textContent = `${student.displayName} — Ödül Çarkı`;
+  renderWheelModalList(student);
+  wheelModal.style.display = 'flex';
+}
+
+document.getElementById('wheel-modal-close').addEventListener('click', () => {
+  wheelModal.style.display = 'none';
+});
+
+document.getElementById('wheel-modal-reset-btn').addEventListener('click', async () => {
+  if (!wheelModalStudent) return;
+  try {
+    await sendJSON(`/api/admin/students/${wheelModalStudent.id}/wheel-reset`, 'POST');
+    wheelModal.style.display = 'none';
+    await loadStudents(classFilterEl.value);
+  } catch (err) {
+    alert(err.message || 'Çark sıfırlanırken hata oluştu.');
+  }
+});
+
+document.getElementById('wheel-reset-all-btn').addEventListener('click', async () => {
+  if (!confirm('Tüm öğrencilerin ödül çarkını şimdi açılabilir hale getirmek istediğine emin misin?')) return;
+  try {
+    await sendJSON('/api/admin/wheel-reset-all', 'POST');
+    await loadStudents(classFilterEl.value);
+  } catch (err) {
+    alert(err.message || 'Toplu çark sıfırlama sırasında hata oluştu.');
+  }
 });
 
 // --- Veri sıfırlama ---

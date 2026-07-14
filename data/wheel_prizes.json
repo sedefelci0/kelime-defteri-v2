@@ -1,0 +1,22 @@
+[
+  { "key": "chocolate", "emoji": "🍫", "label": "Çikolata", "tier": "common", "weight": 8.5, "color": "#FF6B6B" },
+  { "key": "ask5friends", "emoji": "📝", "label": "Bugün 5 arkadaşına İngilizce kelime sor", "tier": "uncommon", "weight": 4, "color": "#4DABF7" },
+  { "key": "juice", "emoji": "🧃", "label": "Meyve suyu", "tier": "common", "weight": 8.5, "color": "#FFA94D" },
+  { "key": "photo", "emoji": "📸", "label": "Öğretmenle fotoğraf çekil", "tier": "rare", "weight": 1.2, "color": "#DA77F2" },
+  { "key": "biscuit", "emoji": "🍪", "label": "Bisküvi", "tier": "common", "weight": 8.5, "color": "#FFD43B" },
+  { "key": "friendteaches", "emoji": "💬", "label": "Bir arkadaşın sana 1 kelime öğretsin", "tier": "uncommon", "weight": 4, "color": "#22B8CF" },
+  { "key": "sticker", "emoji": "🎈", "label": "Sticker", "tier": "common", "weight": 8.5, "color": "#94D82D" },
+  { "key": "king", "emoji": "👑", "label": "1 gün 'Sınıfın İngilizce Kralı/Kraliçesi' rozeti", "tier": "rare", "weight": 1.2, "color": "#F59F00" },
+  { "key": "pencil", "emoji": "✏️", "label": "Kalem", "tier": "common", "weight": 8.5, "color": "#40C057" },
+  { "key": "applause", "emoji": "👏", "label": "30 saniyelik alkış", "tier": "uncommon", "weight": 4, "color": "#FF8787" },
+  { "key": "bookmark", "emoji": "📖", "label": "Ayraç", "tier": "common", "weight": 8.5, "color": "#20C997" },
+  { "key": "pickmusic", "emoji": "🎵", "label": "Derste açılacak İngilizce şarkıyı sen seç", "tier": "rare", "weight": 1.2, "color": "#9775FA" },
+  { "key": "learn10words", "emoji": "📚", "label": "10 yeni kelime öğren", "tier": "common", "weight": 8.5, "color": "#15AABF" },
+  { "key": "respin", "emoji": "🔄", "label": "Tekrar çevir", "tier": "uncommon", "weight": 4, "color": "#FF922B" },
+  { "key": "teachfriend", "emoji": "🤝", "label": "Bir arkadaşına 1 kelime öğret", "tier": "common", "weight": 8.5, "color": "#5C7CFA" },
+  { "key": "chooseseat", "emoji": "🪑", "label": "İstediğin sırada otur (bir günlük)", "tier": "rare", "weight": 1.2, "color": "#12B886" },
+  { "key": "pass", "emoji": "⏭️", "label": "PAS", "tier": "common", "weight": 8.5, "color": "#ADB5BD" },
+  { "key": "teacherassist", "emoji": "🧑‍🏫", "label": "Öğretmen yardımcısı ol (bir günlük)", "tier": "rare", "weight": 1.2, "color": "#E64980" },
+  { "key": "boss", "emoji": "🏆", "label": "'Bugünün İngilizce Patronu' unvanı", "tier": "rare", "weight": 1.2, "color": "#FA5252" },
+  { "key": "mysterybox", "emoji": "🎁", "label": "Sürpriz hediye kutusu", "tier": "legendary", "weight": 0.3, "color": "#FFD700" }
+]

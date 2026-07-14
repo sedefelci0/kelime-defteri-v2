@@ -274,6 +274,15 @@
   box-shadow: 0 6px 18px rgba(217,107,56,0.18);
 }
 
+.tool-card--wheel {
+  background: linear-gradient(135deg, #FFF7D6 0%, var(--deck-purple) 100%);
+  border-color: #E0B400;
+}
+.tool-card--wheel:hover {
+  border-color: #E0B400;
+  box-shadow: 0 6px 18px rgba(224,180,0,0.22);
+}
+
 /* ===== Leaderboard ===== */
 .leaderboard-section {
   max-width: 860px;

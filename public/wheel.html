@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kelime Defteri — Ödül Çarkı</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/wheel.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a href="/decks.html" class="navbar-home-link">
+      <span class="navbar-icon">📚</span>
+      <span class="navbar-title">Kelime Defteri</span>
+    </a>
+  </div>
+  <div class="navbar-actions">
+    <button class="navbar-link" id="back-btn" type="button">← Anasayfa</button>
+    <button class="navbar-link navbar-logout" id="logout-btn" type="button">Çıkış yap</button>
+  </div>
+</nav>
+
+<main class="wheel-page">
+  <div id="loading" class="loading-state">Yükleniyor…</div>
+
+  <div id="wheel-content" style="display:none;">
+    <h1 class="wheel-page-title">🎁 Ödül Çarkı</h1>
+
+    <div class="wheel-stage">
+      <div class="wheel-pointer">▼</div>
+      <div class="wheel-outer">
+        <div class="wheel-disc" id="wheel-disc"></div>
+        <div class="wheel-center">🎯</div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary wheel-spin-btn" id="spin-btn" type="button">Çarkı Çevir!</button>
+
+    <div class="wheel-locked" id="wheel-locked" style="display:none;">
+      <div class="wheel-locked-emoji">🔒</div>
+      <div class="wheel-locked-text">Sonraki çarkın:</div>
+      <div class="wheel-countdown" id="wheel-countdown">—</div>
+      <div class="wheel-last-prize" id="wheel-last-prize"></div>
+    </div>
+  </div>
+</main>
+
+<div class="reveal-overlay" id="reveal-overlay" style="display:none;">
+  <div class="reveal-card" id="reveal-card">
+    <div class="reveal-emoji" id="reveal-emoji"></div>
+    <div class="reveal-heading" id="reveal-heading">Kazandın!</div>
+    <div class="reveal-label" id="reveal-label"></div>
+    <button class="btn btn-primary reveal-continue-btn" id="reveal-continue-btn" type="button">Harika!</button>
+    <button class="btn btn-secondary reveal-respin-btn" id="reveal-respin-btn" type="button" style="display:none;">🔄 Tekrar Çevir!</button>
+  </div>
+</div>
+
+<div class="confetti-layer" id="confetti-layer"></div>
+
+<script src="/js/wheel.js"></script>
+</body>
+</html>

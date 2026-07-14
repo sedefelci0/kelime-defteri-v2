@@ -11,6 +11,8 @@ CREATE TABLE IF NOT EXISTS users (
 );
 ALTER TABLE users ADD COLUMN IF NOT EXISTS total_study_seconds INTEGER NOT NULL DEFAULT 0;
 ALTER TABLE users ADD COLUMN IF NOT EXISTS class_name TEXT;
+-- NULL = hiç çevirmedi / hemen çevirebilir. Dolu ve gelecekte bir tarihse çark kilitli demektir.
+ALTER TABLE users ADD COLUMN IF NOT EXISTS wheel_next_spin_at TIMESTAMPTZ;
 
 -- Bir "deste": örn. "Benim Kelimelerim" (sahibe özel) veya "5. Sınıf"
 CREATE TABLE IF NOT EXISTS decks (
@@ -150,5 +152,21 @@ CREATE TABLE IF NOT EXISTS topic_fillblank_attempts (
   UNIQUE (user_id, deck_slug, unit, prompt)
 );
 CREATE INDEX IF NOT EXISTS idx_fillblank_user ON topic_fillblank_attempts(user_id);
+
+-- Ödül Çarkı: her çevirmenin sonucu (geçmiş listesi + öğretmenin "verildi" işaretlemesi için).
+-- Kilit/geri sayım mantığı burada değil, users.wheel_next_spin_at'te tutulur — "respin"
+-- (tekrar çevir) ödülü çıktığında bu tabloya kaydedilir ama cooldown'ı GÜNCELLEMEZ, böylece
+-- öğrenci beklemeden bir kez daha çevirebilir.
+CREATE TABLE IF NOT EXISTS wheel_spins (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  prize_key TEXT NOT NULL,
+  prize_label TEXT NOT NULL,
+  prize_tier TEXT NOT NULL DEFAULT 'common',
+  spun_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  given BOOLEAN NOT NULL DEFAULT false,
+  given_at TIMESTAMPTZ
+);
+CREATE INDEX IF NOT EXISTS idx_wheel_spins_user ON wheel_spins(user_id, spun_at DESC);
 
 -- Oturum (session) verisi için connect-pg-simple bu tabloyu kendisi oluşturur (session.sql ile)
