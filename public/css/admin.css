@@ -217,7 +217,7 @@
 .btn-wheel-reset-all:hover { background: #FFF9E0; }
 
 /* Ödül Çarkı hücresi */
-.wheel-cell-btn { max-width: 220px; white-space: normal; text-align: left; line-height: 1.4; }
+.wheel-cell-btn { text-align: left; }
 .wheel-cell-legendary {
   background: linear-gradient(135deg, #FFF7D6 0%, #FFE066 100%);
   border-color: #E0B400 !important;
@@ -254,23 +254,39 @@
 }
 
 /* ── Students table ───────────────────────────────────── */
+/* table-layout:fixed + yüzdelik kolon genişlikleri: tablo her zaman container'ın
+   tam genişliğini kullanır, içerik ne kadar uzun olursa olsun taşıp yatay kaydırma
+   tetiklemez (uzun metinler ellipsis ile kesilir, tıklayınca zaten popup açılıyor). */
 .table-wrap {
   background: #fff;
   border: 1px solid #E8E4DC;
   border-radius: 14px;
-  overflow-x: auto;
+  overflow-x: auto; /* çok dar ekranlarda son bir güvenlik ağı, normalde tetiklenmez */
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
 .students-table {
   width: 100%;
-  min-width: 780px;
+  table-layout: fixed;
   border-collapse: collapse;
 }
 
+/* Kolon oranları (masaüstü, 11 kolon, toplam %100) */
+.students-table th:nth-child(1)  { width: 16%; } /* Öğrenci */
+.students-table th:nth-child(2)  { width: 6%; }  /* Sınıf */
+.students-table th:nth-child(3)  { width: 7%; }  /* Çalışma */
+.students-table th:nth-child(4)  { width: 8%; }  /* Quiz D/Y */
+.students-table th:nth-child(5)  { width: 8%; }  /* Sınav D/Y */
+.students-table th:nth-child(6)  { width: 11%; } /* Doğruluk */
+.students-table th:nth-child(7)  { width: 12%; } /* Konu Özetleri */
+.students-table th:nth-child(8)  { width: 9%; }  /* Kişisel Cevaplar */
+.students-table th:nth-child(9)  { width: 7%; }  /* Notlar */
+.students-table th:nth-child(10) { width: 11%; } /* Ödül Çarkı */
+.students-table th:nth-child(11) { width: 5%; }  /* İşlemler */
+
 .students-table thead th {
-  padding: 12px 16px;
+  padding: 12px 10px;
   text-align: left;
   font-size: 11px;
   font-weight: 600;
@@ -279,6 +295,9 @@
   color: var(--muted, #6b6b80);
   border-bottom: 1px solid #E8E4DC;
   background: #FAFAF9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .students-table tbody tr:not(:last-child) { border-bottom: 1px solid #F0EDE8; }
@@ -286,14 +305,16 @@
 .students-table tbody tr:hover { background: #F7F5FC; }
 
 .students-table td {
-  padding: 14px 16px;
+  padding: 12px 10px;
   font-size: 13.5px;
   color: var(--ink, #1a1a2e);
   vertical-align: middle;
+  overflow: hidden;
 }
 
 /* Student cell */
-.student-cell { display: flex; align-items: center; gap: 12px; }
+.student-cell { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.student-cell > div { min-width: 0; flex: 1; }
 
 .student-avatar {
   flex-shrink: 0;
@@ -308,18 +329,37 @@
   line-height: 1;
 }
 
-.student-name { font-weight: 600; font-size: 14px; color: var(--ink, #1a1a2e); }
-.student-email { font-size: 12px; color: var(--muted, #6b6b80); margin-top: 1px; }
+.student-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink, #1a1a2e);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.student-email {
+  font-size: 12px;
+  color: var(--muted, #6b6b80);
+  margin-top: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 /* Class badge */
 .class-badge {
   display: inline-block;
+  max-width: 100%;
   padding: 3px 10px;
   background: var(--deck-purple, #EEEDFE);
   color: var(--deck-purple-accent, #7C6CE0);
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .muted-dash { color: #C5C3CC; }
@@ -331,10 +371,11 @@
 .score-wrong-zero { font-weight: 500; color: #C5C3CC; }
 
 /* Accuracy bar */
-.accuracy-cell { display: flex; align-items: center; gap: 8px; min-width: 110px; }
+.accuracy-cell { display: flex; align-items: center; gap: 6px; min-width: 0; }
 
 .accuracy-bar-track {
   flex: 1;
+  min-width: 24px;
   height: 6px;
   background: #EBE9F3;
   border-radius: 99px;
@@ -362,9 +403,13 @@
   white-space: nowrap;
 }
 
-/* Notes button */
+/* Notes button (ve tablodaki diğer küçük hücre butonları — Konu Özetleri, Kişisel
+   Cevaplar, Ödül Çarkı) — hücre kolonu daraldığında metin kesilip ellipsis göstersin,
+   tablonun kendisi asla genişlemesin. */
 .notes-count-btn {
-  padding: 4px 12px;
+  display: block;
+  max-width: 100%;
+  padding: 4px 10px;
   border: 1px solid #E0DCED;
   border-radius: 8px;
   background: #fff;
@@ -373,6 +418,9 @@
   color: var(--ink, #1a1a2e);
   cursor: pointer;
   transition: background 0.12s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .notes-count-btn:hover:not(:disabled) {
   background: var(--deck-purple, #EEEDFE);
@@ -763,9 +811,43 @@
 }
 
 /* ── Responsive ───────────────────────────────────────── */
-@media (max-width: 700px) {
+/* Öğrenci tablosu: masaüstünde asla yatay kaydırma gerektirmez (table-layout:fixed +
+   yukarıdaki yüzdelik genişlikler). Dar ekranlarda scroll'a düşmek yerine önce en
+   az kritik kolonları gizleyip kalanları yeniden %100'e dağıtıyoruz. */
+@media (max-width: 900px) {
+  .students-table th:nth-child(3),  .students-table td:nth-child(3),  /* Çalışma */
+  .students-table th:nth-child(5),  .students-table td:nth-child(5) { /* Sınav D/Y */
+    display: none;
+  }
+  .students-table th:nth-child(1)  { width: 20%; }
+  .students-table th:nth-child(2)  { width: 7%; }
+  .students-table th:nth-child(4)  { width: 10%; }
+  .students-table th:nth-child(6)  { width: 13%; }
+  .students-table th:nth-child(7)  { width: 14%; }
+  .students-table th:nth-child(8)  { width: 10%; }
+  .students-table th:nth-child(9)  { width: 8%; }
+  .students-table th:nth-child(10) { width: 13%; }
+  .students-table th:nth-child(11) { width: 5%; }
+  .students-table th, .students-table td { padding: 10px 8px; }
+}
+
+@media (max-width: 600px) {
   .summary-cards { grid-template-columns: 1fr; }
-  .students-table th, .students-table td { padding: 10px 12px; }
   .q-form-grid, .q-options-grid { grid-template-columns: 1fr; }
   .student-email { display: none; }
+
+  .students-table th:nth-child(8), .students-table td:nth-child(8),  /* Kişisel Cevaplar */
+  .students-table th:nth-child(9), .students-table td:nth-child(9) { /* Notlar */
+    display: none;
+  }
+  .students-table th:nth-child(1)  { width: 26%; }
+  .students-table th:nth-child(2)  { width: 8%; }
+  .students-table th:nth-child(4)  { width: 12%; }
+  .students-table th:nth-child(6)  { width: 16%; }
+  .students-table th:nth-child(7)  { width: 18%; }
+  .students-table th:nth-child(10) { width: 14%; }
+  .students-table th:nth-child(11) { width: 6%; }
+  .students-table th, .students-table td { padding: 9px 6px; font-size: 12.5px; }
+  .student-avatar { width: 30px; height: 30px; font-size: 11px; }
+  .notes-count-btn, .btn-reset-student { font-size: 11px; padding: 4px 7px; }
 }
