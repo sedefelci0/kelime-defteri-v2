@@ -120,4 +120,19 @@ CREATE TABLE IF NOT EXISTS topic_progress (
   PRIMARY KEY (user_id, deck_slug, unit)
 );
 
+-- Konu Özetleri'ndeki kişisel (açık uçlu) sorulara öğrencinin gönderdiği cevaplar.
+-- Öğretmen admin panelinden görebilsin diye kalıcı saklanır. Aynı soruya tekrar
+-- gönderim yapılırsa (question üzerinden) en son cevap eskisinin üstüne yazılır.
+CREATE TABLE IF NOT EXISTS topic_personal_answers (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  deck_slug TEXT NOT NULL,
+  unit INTEGER NOT NULL,
+  question TEXT NOT NULL,
+  answer TEXT NOT NULL,
+  submitted_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  UNIQUE (user_id, deck_slug, unit, question)
+);
+CREATE INDEX IF NOT EXISTS idx_topic_personal_user ON topic_personal_answers(user_id);
+
 -- Oturum (session) verisi için connect-pg-simple bu tabloyu kendisi oluşturur (session.sql ile)

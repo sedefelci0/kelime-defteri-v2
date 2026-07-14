@@ -127,6 +127,16 @@
 .model-answer-en { font-weight: 600; color: var(--deck-green-accent); margin-bottom: 4px; }
 .model-answer-tr { font-size: 13px; color: var(--moss-deep); }
 
+.personal-answer-actions { margin-top: 4px; }
+.personal-submit-feedback {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.personal-submit-feedback.is-correct { color: var(--moss-deep); }
+.personal-submit-feedback.is-wrong { color: var(--clay-deep); }
+.reveal-zone { margin-top: 14px; }
+
 /* ===== Boşluk doldurma ===== */
 .fill-blank-row {
   display: flex;

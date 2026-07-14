@@ -60,11 +60,27 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
        WHERE user_id = ANY($1) ORDER BY updated_at DESC`,
       [ids]
     );
+    const { rows: personalAnswers } = await pool.query(
+      `SELECT user_id, deck_slug, unit, question, answer, submitted_at FROM topic_personal_answers
+       WHERE user_id = ANY($1) ORDER BY unit ASC, submitted_at DESC`,
+      [ids]
+    );
 
     const notesByUser = {};
     for (const n of notes) {
       if (!notesByUser[n.user_id]) notesByUser[n.user_id] = [];
       notesByUser[n.user_id].push({ id: n.id, title: n.title, content: n.content, updatedAt: n.updated_at });
+    }
+    const personalAnswersByUser = {};
+    for (const a of personalAnswers) {
+      if (!personalAnswersByUser[a.user_id]) personalAnswersByUser[a.user_id] = [];
+      personalAnswersByUser[a.user_id].push({
+        deckSlug: a.deck_slug,
+        unit: a.unit,
+        question: a.question,
+        answer: a.answer,
+        submittedAt: a.submitted_at,
+      });
     }
 
     res.json(
@@ -81,6 +97,7 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
         topicUnitsCompleted: s.topic_units_completed,
         topicAvgPercent: s.topic_avg_percent,
         notes: notesByUser[s.id] || [],
+        personalAnswers: personalAnswersByUser[s.id] || [],
       }))
     );
   } catch (err) {

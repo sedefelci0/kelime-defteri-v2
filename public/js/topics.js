@@ -77,6 +77,15 @@ function markDone(index, correctPoints, totalPoints) {
   updateProgress();
 }
 
+function shuffleArray(arr) {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
 // --- Aktivite tipleri ---
 
 function renderPersonal(activity, index) {
@@ -88,20 +97,61 @@ function renderPersonal(activity, index) {
     <div class="activity-question">${activity.question}</div>
     <div class="activity-question-tr">${activity.questionTr || ''}</div>
     <textarea class="personal-answer-input" placeholder="Cevabını buraya yaz…" rows="2"></textarea>
-    <button class="btn btn-secondary reveal-btn" type="button">Örnek Cevabı Gör</button>
-    <div class="model-answer" hidden>
-      <div class="model-answer-en">${activity.modelAnswer}</div>
-      <div class="model-answer-tr">${activity.modelAnswerTr || ''}</div>
+    <div class="personal-answer-actions">
+      <button class="btn btn-primary submit-btn" type="button">Gönder</button>
+    </div>
+    <div class="personal-submit-feedback" hidden></div>
+    <div class="reveal-zone" hidden>
+      <button class="btn btn-secondary reveal-btn" type="button">Örnek Cevabı Gör</button>
+      <div class="model-answer" hidden>
+        <div class="model-answer-en">${activity.modelAnswer}</div>
+        <div class="model-answer-tr">${activity.modelAnswerTr || ''}</div>
+      </div>
     </div>
   `;
 
+  const textareaEl = card.querySelector('.personal-answer-input');
+  const submitBtn = card.querySelector('.submit-btn');
+  const feedbackEl = card.querySelector('.personal-submit-feedback');
+  const revealZoneEl = card.querySelector('.reveal-zone');
   const revealBtn = card.querySelector('.reveal-btn');
   const modelAnswerEl = card.querySelector('.model-answer');
+
+  submitBtn.addEventListener('click', async () => {
+    const answer = textareaEl.value.trim();
+    if (!answer) {
+      feedbackEl.hidden = false;
+      feedbackEl.className = 'personal-submit-feedback is-wrong';
+      feedbackEl.textContent = 'Göndermeden önce bir cevap yaz.';
+      return;
+    }
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Gönderiliyor…';
+    try {
+      await postJSON(`/api/topics/${deckSlug}/${unitParam}/personal-answer`, {
+        question: activity.question,
+        answer,
+      });
+      textareaEl.disabled = true;
+      submitBtn.textContent = '✓ Gönderildi';
+      feedbackEl.hidden = false;
+      feedbackEl.className = 'personal-submit-feedback is-correct';
+      feedbackEl.textContent = 'Cevabın öğretmenine gönderildi.';
+      revealZoneEl.hidden = false;
+      markDone(index, 0, 0);
+    } catch (err) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Gönder';
+      feedbackEl.hidden = false;
+      feedbackEl.className = 'personal-submit-feedback is-wrong';
+      feedbackEl.textContent = 'Gönderilemedi, tekrar dene.';
+    }
+  });
+
   revealBtn.addEventListener('click', () => {
     modelAnswerEl.hidden = false;
     revealBtn.disabled = true;
     revealBtn.textContent = '✓ Örnek cevap gösterildi';
-    markDone(index, 0, 0);
   });
 
   return card;
@@ -121,20 +171,24 @@ function renderMC(activity, index) {
   const explanationEl = card.querySelector('.activity-explanation');
   let answered = false;
 
-  activity.options.forEach((opt, i) => {
+  // Şıklar her gösterimde karıştırılır, doğru cevap her zaman ilk şıkta olmasın diye.
+  const order = shuffleArray(activity.options.map((_, i) => i));
+
+  order.forEach((originalIndex) => {
     const btn = document.createElement('button');
     btn.className = 'quiz-option activity-option';
     btn.type = 'button';
-    btn.textContent = opt;
+    btn.textContent = activity.options[originalIndex];
+    btn.dataset.originalIndex = String(originalIndex);
     btn.addEventListener('click', () => {
       if (answered) return;
       answered = true;
-      const isCorrect = i === activity.correctIndex;
+      const isCorrect = originalIndex === activity.correctIndex;
       const allBtns = Array.from(optionsEl.querySelectorAll('.activity-option'));
-      allBtns.forEach((b, bi) => {
+      allBtns.forEach((b) => {
         b.disabled = true;
-        if (bi === activity.correctIndex) b.classList.add('is-correct');
-        else if (bi === i) b.classList.add('is-wrong');
+        if (Number(b.dataset.originalIndex) === activity.correctIndex) b.classList.add('is-correct');
+        else if (b === btn) b.classList.add('is-wrong');
       });
       if (activity.explanation) {
         explanationEl.textContent = activity.explanation;
@@ -253,7 +307,7 @@ function renderMatching(activity, index) {
 
   const pairs = activity.pairs;
   const leftOrder = pairs.map((_, i) => i);
-  const rightOrder = shuffle(pairs.map((_, i) => i));
+  const rightOrder = shuffleArray(pairs.map((_, i) => i));
 
   const leftColEl = card.querySelector('.matching-col-en');
   const rightColEl = card.querySelector('.matching-col-tr');
@@ -261,15 +315,6 @@ function renderMatching(activity, index) {
   let selectedLeft = null;
   let selectedRight = null;
   let matchedCount = 0;
-
-  function shuffle(arr) {
-    const copy = [...arr];
-    for (let i = copy.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [copy[i], copy[j]] = [copy[j], copy[i]];
-    }
-    return copy;
-  }
 
   function makeItem(pairIndex, text, side) {
     const btn = document.createElement('button');

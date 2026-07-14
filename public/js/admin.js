@@ -8,6 +8,11 @@ const emptyStudentsEl = document.getElementById('empty-students');
 const classFilterEl = document.getElementById('class-filter');
 const summaryCardsEl = document.getElementById('summary-cards');
 
+const GRADE5_UNIT_NAMES = {
+  1: 'Okul Hayatı', 2: 'Sınıf Hayatı', 3: 'Kişisel Hayat', 4: 'Aile Hayatı',
+  5: 'Mahalle ve Şehir Hayatı', 6: 'Dünyada Hayat', 7: 'Doğada Hayat', 8: 'Evren ve Gelecekte Hayat',
+};
+
 const AVATAR_COLORS = [
   { bg: '#EEEDFE', fg: '#7C6CE0' },
   { bg: '#E1F5EE', fg: '#2D9B6F' },
@@ -146,10 +151,14 @@ function renderStudents() {
           ? `<span class="score-correct">${s.topicUnitsCompleted}</span> ünite <span class="accuracy-exam-pct">· %${s.topicAvgPercent}</span>`
           : '<span class="muted-dash">—</span>'}
       </td>
+      <td><button class="notes-count-btn personal-answers-count-btn" ${s.personalAnswers.length === 0 ? 'disabled' : ''}>${s.personalAnswers.length} cevap</button></td>
       <td><button class="notes-count-btn" ${s.notes.length === 0 ? 'disabled' : ''}>${s.notes.length} not</button></td>
     `;
-    tr.querySelector('.notes-count-btn').addEventListener('click', () => {
+    tr.querySelector('.notes-count-btn:not(.personal-answers-count-btn)').addEventListener('click', () => {
       if (s.notes.length > 0) openNotesModal(s);
+    });
+    tr.querySelector('.personal-answers-count-btn').addEventListener('click', () => {
+      if (s.personalAnswers.length > 0) openPersonalAnswersModal(s);
     });
     tbodyEl.appendChild(tr);
   });
@@ -207,6 +216,32 @@ function openNotesModal(student) {
 
 document.getElementById('notes-modal-close').addEventListener('click', () => {
   notesModal.style.display = 'none';
+});
+
+// Kişisel Cevaplar modalı
+const personalAnswersModal = document.getElementById('personal-answers-modal');
+const personalAnswersModalTitle = document.getElementById('personal-answers-modal-title');
+const personalAnswersModalList = document.getElementById('personal-answers-modal-list');
+
+function openPersonalAnswersModal(student) {
+  personalAnswersModalTitle.textContent = `${student.displayName} — Kişisel Cevaplar`;
+  personalAnswersModalList.innerHTML = '';
+  student.personalAnswers.forEach((a) => {
+    const div = document.createElement('div');
+    div.className = 'notes-modal-note';
+    const unitLabel = GRADE5_UNIT_NAMES[a.unit] ? `Ünite ${a.unit} — ${GRADE5_UNIT_NAMES[a.unit]}` : `Ünite ${a.unit}`;
+    div.innerHTML = `
+      <div class="note-title">${unitLabel}</div>
+      <div class="note-content"><em>${a.question}</em><br>${(a.answer || '').replace(/</g, '&lt;')}</div>
+      <div class="note-date">${formatDate(a.submittedAt)}</div>
+    `;
+    personalAnswersModalList.appendChild(div);
+  });
+  personalAnswersModal.style.display = 'flex';
+}
+
+document.getElementById('personal-answers-modal-close').addEventListener('click', () => {
+  personalAnswersModal.style.display = 'none';
 });
 
 document.getElementById('back-to-decks-btn').addEventListener('click', () => {

@@ -432,8 +432,9 @@
       "activities": [
         {
           "type": "tf",
-          "statement": "'There is a museum in my neighbourhood.' cümlesi 'Mahallemde bir müze var.' anlamına gelir.",
-          "correct": true
+          "statement": "'There is a museum in my neighbourhood.' cümlesi 'Mahallemde bir müze yok.' anlamına gelir.",
+          "correct": false,
+          "explanation": "Doğrusu: 'Mahallemde bir müze var.' — 'there is' olumlu bir cümledir, 'var' demektir, 'yok' değil."
         },
         {
           "type": "mc",
@@ -576,8 +577,9 @@
         },
         {
           "type": "tf",
-          "statement": "'What type of animal is a crocodile?' sorusunun cevabı 'It is a reptile.'dir.",
-          "correct": true
+          "statement": "'What type of animal is a crocodile?' sorusunun cevabı 'It is a mammal.'dir.",
+          "correct": false,
+          "explanation": "Doğrusu: 'It is a reptile.' Timsah bir sürüngendir (reptile), memeli (mammal) değildir."
         },
         {
           "type": "mc",
@@ -723,8 +725,9 @@
         },
         {
           "type": "tf",
-          "statement": "'They are going to ride a camel.' cümlesi 'Onlar deveye binecek.' anlamına gelir.",
-          "correct": true
+          "statement": "'They are going to ride a camel.' cümlesi 'Onlar deveye bindi.' anlamına gelir.",
+          "correct": false,
+          "explanation": "Doğrusu: 'Onlar deveye binecek.' — 'going to' gelecekteki bir planı anlatır, geçmiş zamanı değil."
         },
         {
           "type": "mc",

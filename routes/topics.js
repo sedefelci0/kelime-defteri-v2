@@ -88,4 +88,31 @@ router.post('/:deckSlug/:unit/complete', requireAuth, async (req, res) => {
   }
 });
 
+// Kişisel (açık uçlu) soruya öğrencinin yazdığı cevabı kaydeder — öğretmen admin
+// panelinden görebilsin diye. Aynı soruya tekrar gönderim yapılırsa üzerine yazılır.
+router.post('/:deckSlug/:unit/personal-answer', requireAuth, async (req, res) => {
+  try {
+    const unit = Number(req.params.unit);
+    const { question, answer } = req.body || {};
+    if (!Number.isInteger(unit)) return res.status(400).json({ error: 'Geçersiz ünite.' });
+    if (!question || !answer || !answer.trim()) {
+      return res.status(400).json({ error: 'Cevap boş olamaz.' });
+    }
+
+    await pool.query(
+      `INSERT INTO topic_personal_answers (user_id, deck_slug, unit, question, answer, submitted_at)
+       VALUES ($1, $2, $3, $4, $5, now())
+       ON CONFLICT (user_id, deck_slug, unit, question) DO UPDATE SET
+         answer = EXCLUDED.answer,
+         submitted_at = now()`,
+      [req.session.userId, req.params.deckSlug, unit, question, answer.trim()]
+    );
+
+    res.json({ ok: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Cevap kaydedilirken hata oluştu.' });
+  }
+});
+
 module.exports = router;
