@@ -77,7 +77,7 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
       [ids]
     );
     const { rows: activityResults } = await pool.query(
-      `SELECT user_id, unit, activity_index, activity_type, prompt, is_correct, explanation
+      `SELECT user_id, unit, activity_index, activity_type, prompt, is_correct, answered, points, correct_points, explanation
        FROM topic_activity_results
        WHERE user_id = ANY($1) ORDER BY unit ASC, activity_index ASC`,
       [ids]
@@ -130,6 +130,9 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
         type: r.activity_type,
         prompt: r.prompt,
         isCorrect: r.is_correct,
+        answered: r.answered,
+        points: r.points,
+        correctPoints: r.correct_points,
         explanation: r.explanation,
       });
     }

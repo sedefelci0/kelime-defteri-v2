@@ -305,6 +305,24 @@ function openTopicDetailModal(student) {
   topicDetailModal.style.display = 'flex';
 }
 
+// Bir aktivite sonucunun doğru/yanlış/boş puan dağılımı (topics.js'deki tallyFor ile aynı mantık).
+// mc/tf: cevaplanmadıysa hepsi boş, cevaplandıysa doğru ya da yanlış. fill_blank/matching'de
+// kalıcı bir "yanlış" durumu yok, doğru yapılmayan her puan boş sayılır (yarıda kalan eşleştirme
+// çiftleri gibi).
+function tallyForResult(r) {
+  const correct = r.correctPoints;
+  if (r.type === 'mc' || r.type === 'tf') {
+    if (r.answered) return { correct, wrong: r.points - correct, blank: 0 };
+    return { correct: 0, wrong: 0, blank: r.points };
+  }
+  return { correct, wrong: 0, blank: r.points - correct };
+}
+
+function unitBlankCount(unit) {
+  const results = topicModalStudent.topicActivityResults.filter((r) => r.unit === unit);
+  return results.reduce((sum, r) => sum + tallyForResult(r).blank, 0);
+}
+
 function renderTopicModalList() {
   topicDetailBackBtn.style.display = 'none';
   topicDetailBackBtn.onclick = null;
@@ -314,13 +332,14 @@ function renderTopicModalList() {
   const sorted = [...topicModalStudent.topicProgressDetail].sort((a, b) => a.unit - b.unit);
   sorted.forEach((t) => {
     const pct = t.bestTotal > 0 ? Math.round((t.bestScore / t.bestTotal) * 100) : 0;
+    const blank = unitBlankCount(t.unit);
     const row = document.createElement('button');
     row.className = 'topic-modal-row';
     row.type = 'button';
     row.innerHTML = `
       <div class="topic-modal-row-main">
         <div class="topic-modal-row-title">${unitLabelFor(t.unit)}</div>
-        <div class="topic-modal-row-sub">${t.bestScore} / ${t.bestTotal} doğru · %${pct} · ${t.attempts} deneme</div>
+        <div class="topic-modal-row-sub">${t.bestScore} / ${t.bestTotal} doğru · %${pct}${blank > 0 ? ` · ${blank} boş` : ''} · ${t.attempts} deneme</div>
       </div>
       <span class="topic-modal-row-arrow">›</span>
     `;
@@ -347,7 +366,8 @@ function renderTopicModalUnitDetail(unit) {
 
   const t = topicModalStudent.topicProgressDetail.find((x) => x.unit === unit);
   const pct = t.bestTotal > 0 ? Math.round((t.bestScore / t.bestTotal) * 100) : 0;
-  topicDetailModalTitle.textContent = `${unitLabelFor(unit)} · ${t.bestScore}/${t.bestTotal} (%${pct})`;
+  const blank = unitBlankCount(unit);
+  topicDetailModalTitle.textContent = `${unitLabelFor(unit)} · ${t.bestScore}/${t.bestTotal} (%${pct})${blank > 0 ? ` · ${blank} boş` : ''}`;
   topicDetailModalList.innerHTML = '';
 
   // Boşluk doldurma / eşleştirme için "ilk denemede doğru %" özeti
@@ -378,14 +398,27 @@ function renderTopicModalUnitDetail(unit) {
 
   results.forEach((r, i) => {
     const div = document.createElement('div');
-    div.className = `notes-modal-note ${r.isCorrect ? 'topic-q-correct' : 'topic-q-wrong'}`;
+    let icon, statusClass;
+    if (!r.answered) {
+      icon = '⬜'; statusClass = 'topic-q-blank';
+    } else if (r.isCorrect) {
+      icon = '✓'; statusClass = 'topic-q-correct';
+    } else if (r.correctPoints > 0) {
+      icon = '◐'; statusClass = 'topic-q-partial';
+    } else {
+      icon = '✗'; statusClass = 'topic-q-wrong';
+    }
+
     let attemptNote = '';
     if (r.type === 'fill_blank' || r.type === 'matching') {
       const entry = (topicModalStudent.attemptDetail || []).find((e) => e.unit === unit && e.type === r.type && e.prompt === r.prompt);
       if (entry) attemptNote = ` · ${entry.attempts}. denemede`;
     }
+    const pointsNote = r.points > 1 ? ` (${r.correctPoints}/${r.points})` : '';
+
+    div.className = `notes-modal-note ${statusClass}`;
     div.innerHTML = `
-      <div class="note-title">${r.isCorrect ? '✓' : '✗'} Soru ${i + 1}${attemptNote}</div>
+      <div class="note-title">${icon} Soru ${i + 1}${pointsNote}${attemptNote}</div>
       <div class="note-content">${r.prompt}</div>
       ${!r.isCorrect && r.explanation ? `<div class="note-date">${r.explanation}</div>` : ''}
     `;

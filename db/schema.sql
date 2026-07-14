@@ -188,6 +188,13 @@ CREATE TABLE IF NOT EXISTS topic_activity_results (
   recorded_at TIMESTAMPTZ NOT NULL DEFAULT now(),
   UNIQUE (user_id, deck_slug, unit, activity_index)
 );
+-- answered: öğrenci bu aktiviteyle hiç etkileşime girdi mi (false ise "boş bırakıldı" demektir —
+-- artık tüm soruları cevaplamadan da Tamamla'ya basılabiliyor, boş kalanlar yanlış sayılıyor).
+-- points/correct_points: eşleştirme gibi çok puanlı aktivitelerde kısmi başarıyı da saklamak için
+-- (örn. 5 çiftten 3'ü eşleştirilmiş → points=5, correct_points=3).
+ALTER TABLE topic_activity_results ADD COLUMN IF NOT EXISTS answered BOOLEAN NOT NULL DEFAULT true;
+ALTER TABLE topic_activity_results ADD COLUMN IF NOT EXISTS points INTEGER NOT NULL DEFAULT 1;
+ALTER TABLE topic_activity_results ADD COLUMN IF NOT EXISTS correct_points INTEGER NOT NULL DEFAULT 0;
 CREATE INDEX IF NOT EXISTS idx_topic_activity_results_user ON topic_activity_results(user_id, deck_slug, unit);
 
 -- Oturum (session) verisi için connect-pg-simple bu tabloyu kendisi oluşturur (session.sql ile)

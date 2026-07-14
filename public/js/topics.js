@@ -64,10 +64,9 @@ function updateProgress() {
   progressPillTextEl.textContent = `${totalAttempted} / ${activityMeta.length} tamamlandı`;
   progressPillEl.style.display = '';
 
-  const scorableItems = activityMeta.filter((m) => m.scorable);
-  const allScorableDone = scorableItems.length === 0 || scorableItems.every((m) => m.done);
-  finishBtn.disabled = !allScorableDone;
-  finishBtn.textContent = allScorableDone ? 'Skoru Gör' : 'Önce tüm soruları tamamla';
+  // Tüm sorular cevaplanmadan da Tamamla'ya basılabilir — boş kalanlar yanlış sayılır.
+  finishBtn.disabled = false;
+  finishBtn.textContent = 'Tamamla';
 }
 
 function markDone(index, correctPoints, totalPoints, extra) {
@@ -75,6 +74,13 @@ function markDone(index, correctPoints, totalPoints, extra) {
   activityMeta[index].correctPoints = correctPoints;
   activityMeta[index].points = totalPoints;
   if (extra) Object.assign(activityMeta[index], extra);
+  updateProgress();
+}
+
+// Eşleştirme gibi çok puanlı aktivitelerde, tamamlanmadan da kısmi doğru sayısını günceller
+// (öğrenci yarıda bırakıp Tamamla'ya basarsa eşleştirdiği çiftler yine puan olarak sayılsın).
+function updatePartialPoints(index, correctPoints) {
+  activityMeta[index].correctPoints = correctPoints;
   updateProgress();
 }
 
@@ -359,6 +365,9 @@ function renderMatching(activity, index) {
               attempts: wrongAttempts + 1,
               type: 'matching',
             }).catch(() => {});
+          } else {
+            // Yarıda bırakılsa bile şimdiye kadar doğru eşleşen çiftler puan olarak sayılsın.
+            updatePartialPoints(index, matchedCount);
           }
         } else {
           wrongAttempts += 1;
@@ -427,9 +436,30 @@ function renderActivities() {
   updateProgress();
 }
 
+// Bir aktivitenin (mc/tf/fill_blank/matching) doğru/yanlış/boş puan dağılımını hesaplar.
+// mc/tf: cevaplanmadıysa hepsi boş, cevaplandıysa doğru ya da yanlış (kilitli tek deneme).
+// fill_blank/matching: kalıcı bir "yanlış" durumu yok — doğru yapılmayan her puan boş sayılır
+// (eşleştirmede yarıda bırakılan çiftler de boş, ama o ana kadar eşleşenler doğru sayılır).
+function tallyFor(m) {
+  const correct = m.correctPoints;
+  if (m.activityType === 'mc' || m.activityType === 'tf') {
+    if (m.done) return { correct, wrong: m.points - correct, blank: 0 };
+    return { correct: 0, wrong: 0, blank: m.points };
+  }
+  return { correct, wrong: 0, blank: m.points - correct };
+}
+
 finishBtn.addEventListener('click', async () => {
-  const totalScore = activityMeta.reduce((sum, m) => sum + m.points, 0);
-  const correctScore = activityMeta.reduce((sum, m) => sum + m.correctPoints, 0);
+  const scorable = activityMeta.filter((m) => m.scorable);
+  const totalScore = scorable.reduce((sum, m) => sum + m.points, 0);
+  const correctScore = scorable.reduce((sum, m) => sum + m.correctPoints, 0);
+  let wrongScore = 0;
+  let blankScore = 0;
+  scorable.forEach((m) => {
+    const t = tallyFor(m);
+    wrongScore += t.wrong;
+    blankScore += t.blank;
+  });
 
   const details = activityMeta
     .map((m, index) => ({ m, index }))
@@ -439,6 +469,9 @@ finishBtn.addEventListener('click', async () => {
       type: m.activityType,
       prompt: m.promptText,
       isCorrect: m.points > 0 ? m.correctPoints === m.points : true,
+      answered: m.activityType === 'matching' ? m.correctPoints > 0 : m.done,
+      points: m.points,
+      correctPoints: m.correctPoints,
       explanation: m.explanation || null,
     }));
 
@@ -457,7 +490,7 @@ finishBtn.addEventListener('click', async () => {
   scoreEmojiEl.textContent = pct >= 80 ? '🎉' : pct >= 50 ? '👍' : '💪';
   scoreTitleEl.textContent = totalScore > 0 ? `${correctScore} / ${totalScore} doğru` : 'Tamamlandı!';
   scoreDetailEl.textContent = totalScore > 0
-    ? `%${pct} başarı — harika çalıştın!`
+    ? `${correctScore} doğru · ${wrongScore} yanlış · ${blankScore} boş — %${pct} başarı`
     : 'Kişisel sorularını gözden geçirdin.';
   scoreResultEl.style.display = '';
 });

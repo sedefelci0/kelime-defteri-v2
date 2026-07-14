@@ -82,18 +82,24 @@ router.post('/:deckSlug/:unit/complete', requireAuth, async (req, res) => {
     if (Array.isArray(details)) {
       for (const d of details) {
         if (!d || !Number.isInteger(d.index) || !d.type || !d.prompt || typeof d.isCorrect !== 'boolean') continue;
+        const points = Number.isInteger(d.points) ? d.points : 1;
+        const correctPoints = Number.isInteger(d.correctPoints) ? d.correctPoints : (d.isCorrect ? points : 0);
+        const answered = typeof d.answered === 'boolean' ? d.answered : d.isCorrect;
         await pool.query(
-          `INSERT INTO topic_activity_results (user_id, deck_slug, unit, activity_index, activity_type, prompt, is_correct, explanation, recorded_at)
-           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, now())
+          `INSERT INTO topic_activity_results (user_id, deck_slug, unit, activity_index, activity_type, prompt, is_correct, answered, points, correct_points, explanation, recorded_at)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, now())
            ON CONFLICT (user_id, deck_slug, unit, activity_index) DO UPDATE SET
              activity_type = EXCLUDED.activity_type,
              prompt = EXCLUDED.prompt,
              is_correct = EXCLUDED.is_correct,
+             answered = EXCLUDED.answered,
+             points = EXCLUDED.points,
+             correct_points = EXCLUDED.correct_points,
              explanation = EXCLUDED.explanation,
              recorded_at = now()`,
           [
             req.session.userId, req.params.deckSlug, unit, d.index, String(d.type).slice(0, 40),
-            String(d.prompt).slice(0, 500), d.isCorrect,
+            String(d.prompt).slice(0, 500), d.isCorrect, answered, points, correctPoints,
             d.explanation ? String(d.explanation).slice(0, 1000) : null,
           ]
         ).catch(() => {});

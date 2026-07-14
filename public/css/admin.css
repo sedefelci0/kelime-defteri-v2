@@ -633,6 +633,8 @@
 /* Ünite detay — soru bazlı doğru/yanlış */
 .topic-q-correct { border-left: 4px solid var(--deck-green-accent, #2D9B6F); }
 .topic-q-wrong { border-left: 4px solid var(--clay, #b5563a); background: #FBEEE8; }
+.topic-q-blank { border-left: 4px solid #C5C3CC; background: #FAFAF9; opacity: 0.85; }
+.topic-q-partial { border-left: 4px solid #E0B400; background: #FFF9E5; }
 
 /* Ünite detayı üstünde "ilk denemede doğru %" özeti (boşluk doldurma / eşleştirme) */
 .topic-attempt-summary {
