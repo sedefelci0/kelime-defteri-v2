@@ -15,8 +15,16 @@ const ALL_UNIT_NAMES = {
     1: 'Okul Hayatı', 2: 'Sınıf Hayatı', 3: 'Kişisel Hayat', 4: 'Aile Hayatı',
     5: 'Mahalle ve Şehir Hayatı', 6: 'Dünyada Hayat', 7: 'Doğada Hayat', 8: 'Evren ve Gelecekte Hayat',
   },
-  '6-sinif': {},
-  '8-sinif': {},
+  '6-sinif': {
+    1: 'Zaman ve Rutinler', 2: 'Kahvaltı ve Miktarlar', 3: 'Şehir Hayatı: Kıyaslamalar ve Şimdiki Zaman',
+    4: 'Hava Durumu ve Duygular', 5: 'Lunaparkta', 6: 'Meslekler', 7: 'Tatiller ve Geçmiş Zaman',
+    8: 'Kitap Kurtları ve Yer Edatları', 9: 'Gezegenimizi Koruyalım', 10: 'Demokrasi ve Seçimler',
+  },
+  '8-sinif': {
+    1: 'Arkadaşlık', 2: 'Genç Yaşamı', 3: 'Mutfakta', 4: 'Telefonda', 5: 'İnternet',
+    6: 'Maceralar ve Ekstrem Sporlar', 7: 'Turizm ve En Üstünlük Hâli', 8: 'Ev İşleri ve Sorumluluklar',
+    9: 'Bilim ve Buluşlar', 10: 'Doğal Afetler ve Gelecek',
+  },
 };
 
 const DECK_TITLES = {
