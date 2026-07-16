@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Kelime Defteri — Profilim</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css" />
 <link rel="stylesheet" href="/css/profil.css" />
 </head>
@@ -32,85 +32,34 @@
 
     <!-- Sidebar -->
     <aside class="profil-sidebar">
-      <div class="avatar-section">
-        <div class="avatar-circle" id="avatar-circle"></div>
-        <div class="avatar-name" id="avatar-name"></div>
-        <div class="avatar-meta" id="avatar-meta"></div>
-      </div>
-
-      <div class="stat-boxes">
-        <div class="stat-box stat-box--green">
-          <div class="stat-value" id="stat-known">—</div>
-          <div class="stat-label">Öğrenilen kelime</div>
-        </div>
-        <div class="stat-box stat-box--yellow">
-          <div class="stat-value" id="stat-learning">—</div>
-          <div class="stat-label">Tekrar lazım</div>
-        </div>
-        <div class="stat-box stat-box--red">
-          <div class="stat-value" id="stat-wrong">—</div>
-          <div class="stat-label">Yanlış kelime</div>
-        </div>
-        <div class="stat-box stat-box--purple">
-          <div class="stat-value" id="stat-success">—</div>
-          <div class="stat-label">Quiz doğruluk</div>
+      <div class="profile-card">
+        <div class="profile-card-avatar" id="avatar-circle"></div>
+        <div class="profile-card-name" id="avatar-name"></div>
+        <div class="profile-card-meta">
+          <span class="class-chip" id="class-chip" style="display:none;"></span>
+          <span class="member-since" id="avatar-meta"></span>
         </div>
       </div>
 
-      <div class="stat-detail-section">
-        <div class="sidebar-section-title">Soru İstatistikleri</div>
-        <div class="stat-detail-row">
-          <span class="stat-detail-label">Çözülen soru</span>
-          <span class="stat-detail-val" id="stat-total-q">—</span>
+      <div class="goal-card">
+        <div class="sidebar-section-title" id="goal-label">Kelime Hedefi</div>
+        <div class="goal-numbers">
+          <span class="goal-current" id="goal-current">0</span>
+          <span class="goal-sep">/</span>
+          <span class="goal-target" id="goal-target">0</span>
+          <span class="goal-pct" id="goal-pct">%0</span>
         </div>
-        <div class="stat-detail-row">
-          <span class="stat-detail-label">Doğru cevap</span>
-          <span class="stat-detail-val stat-detail-val--green" id="stat-exam-correct">—</span>
-        </div>
-        <div class="stat-detail-row">
-          <span class="stat-detail-label">Yanlış cevap</span>
-          <span class="stat-detail-val stat-detail-val--red" id="stat-exam-wrong">—</span>
-        </div>
-        <div class="stat-detail-row">
-          <span class="stat-detail-label">Doğruluk oranı</span>
-          <span class="stat-detail-val stat-detail-val--purple" id="stat-exam-acc">—</span>
-        </div>
+        <div class="goal-bar-track"><div class="goal-bar-fill" id="goal-bar-fill" style="width:0%"></div></div>
       </div>
 
-      <div id="ranking-section" class="stat-detail-section" style="display:none;">
-        <div class="sidebar-section-title">Sınıf Sıralaması</div>
-        <div class="rank-display">
-          <span class="rank-number" id="rank-number">—</span>
-          <span class="rank-of" id="rank-of">— öğrenci içinde</span>
-        </div>
-        <div class="stat-detail-row" style="margin-top:10px;">
-          <span class="stat-detail-label">🏆 Günlük Şampiyonluk</span>
-          <span class="stat-detail-val" id="stat-champion">0</span>
-        </div>
-      </div>
+      <div class="wheel-highlight-card" id="wheel-highlight-card"></div>
 
-      <div id="medals-section" class="medals-section" style="display:none;">
-        <div class="sidebar-section-title">Mücadele Madalyaları</div>
-        <div class="medal-line">
-          <span class="medal-line-icon">🥇</span>
-          <span class="medal-line-label">Altın</span>
-          <span class="medal-line-count" id="medal-gold">0</span>
+      <div class="topic-summary-card" id="topic-summary-card" style="display:none;">
+        <div class="sidebar-section-title">Konu Özetleri</div>
+        <div class="topic-summary-overview">
+          <span id="topic-units-completed">0</span> ünite tamamlandı · ortalama <span id="topic-avg-pct">%0</span>
         </div>
-        <div class="medal-line">
-          <span class="medal-line-icon">🥈</span>
-          <span class="medal-line-label">Gümüş</span>
-          <span class="medal-line-count" id="medal-silver">0</span>
-        </div>
-        <div class="medal-line">
-          <span class="medal-line-icon">🥉</span>
-          <span class="medal-line-label">Bronz</span>
-          <span class="medal-line-count" id="medal-bronze">0</span>
-        </div>
-        <div class="medal-line medal-line--total">
-          <span class="medal-line-icon">🏅</span>
-          <span class="medal-line-label">Toplam</span>
-          <span class="medal-line-count" id="medal-total">0</span>
-        </div>
+        <div class="topic-summary-list" id="topic-summary-list"></div>
       </div>
 
       <div class="deck-progress-section">
@@ -120,55 +69,124 @@
     </aside>
 
     <!-- Main content -->
-    <section class="profil-main">
-      <div class="tabs" role="tablist">
-        <button class="tab-btn tab-btn--active" id="tab-wrong"    role="tab" data-status="wrong">Yanlışlarım</button>
-        <button class="tab-btn"                  id="tab-learning" role="tab" data-status="learning">Tekrar Lazım</button>
-        <button class="tab-btn"                  id="tab-known"    role="tab" data-status="known">Öğrendiklerim</button>
-        <button class="tab-btn"                  id="tab-activity" role="tab" data-status="activity">Aktivite</button>
-      </div>
+    <section class="profil-main-col">
 
-      <div id="tab-panel-words" class="tab-panel">
-        <div id="words-loading" class="tab-loading">Yükleniyor…</div>
-        <div id="words-empty"  class="tab-empty" style="display:none;">Henüz kelime yok.</div>
-        <table id="words-table" class="words-table" style="display:none;">
-          <thead>
-            <tr>
-              <th>İngilizce</th>
-              <th>Türkçe</th>
-              <th>Set</th>
-              <th>Yanlış</th>
-              <th>Durum</th>
-            </tr>
-          </thead>
-          <tbody id="words-tbody"></tbody>
-        </table>
-      </div>
-
-      <div id="tab-panel-activity" class="tab-panel" style="display:none;">
-        <div class="heatmap-header">
-          <span class="heatmap-title">Son 3 ay</span>
-          <span class="heatmap-legend">
-            <span>Az</span>
-            <span class="heatmap-swatch heatmap-swatch--0"></span>
-            <span class="heatmap-swatch heatmap-swatch--1"></span>
-            <span class="heatmap-swatch heatmap-swatch--2"></span>
-            <span class="heatmap-swatch heatmap-swatch--3"></span>
-            <span class="heatmap-swatch heatmap-swatch--4"></span>
-            <span>Çok</span>
-          </span>
+      <div class="stat-cards-row">
+        <div class="stat-card stat-card--green">
+          <div class="stat-card-icon">📗</div>
+          <div class="stat-card-value" id="stat-known">—</div>
+          <div class="stat-card-label">Öğrenilen kelime</div>
         </div>
-        <div class="heatmap-wrapper">
-          <div class="heatmap-day-labels">
-            <span></span>
-            <span>Pzt</span>
-            <span></span>
-            <span>Çar</span>
-            <span></span>
-            <span>Cum</span>
-            <span></span>
+        <div class="stat-card stat-card--purple">
+          <div class="stat-card-icon">🎯</div>
+          <div class="stat-card-value" id="stat-quiz-acc">—</div>
+          <div class="stat-card-label">Quiz doğruluğu</div>
+        </div>
+        <div class="stat-card stat-card--blue">
+          <div class="stat-card-icon">⏱️</div>
+          <div class="stat-card-value" id="stat-study-time">—</div>
+          <div class="stat-card-label">Çalışma süresi</div>
+        </div>
+        <div class="stat-card stat-card--gold">
+          <div class="stat-card-icon">📘</div>
+          <div class="stat-card-value" id="stat-topic-acc">—</div>
+          <div class="stat-card-label">Konu özeti başarısı</div>
+        </div>
+      </div>
+
+      <div class="detail-cards-row">
+        <div class="stat-detail-section">
+          <div class="sidebar-section-title">Kelime İstatistikleri</div>
+          <div class="stat-detail-row">
+            <span class="stat-detail-label">Tekrar lazım</span>
+            <span class="stat-detail-val" id="stat-learning">—</span>
           </div>
-          <div id="heatmap-container" class="heatmap-container"></div>
+          <div class="stat-detail-row">
+            <span class="stat-detail-label">Yanlış kelime</span>
+            <span class="stat-detail-val stat-detail-val--red" id="stat-wrong">—</span>
+          </div>
+          <div class="stat-detail-row">
+            <span class="stat-detail-label">Quiz doğru / yanlış</span>
+            <span class="stat-detail-val" id="stat-quiz-count">—</span>
+          </div>
+        </div>
+
+        <div class="stat-detail-section">
+          <div class="sidebar-section-title">Soru İstatistikleri</div>
+          <div class="stat-detail-row">
+            <span class="stat-detail-label">Çözülen soru</span>
+            <span class="stat-detail-val" id="stat-total-q">—</span>
+          </div>
+          <div class="stat-detail-row">
+            <span class="stat-detail-label">Doğru cevap</span>
+            <span class="stat-detail-val stat-detail-val--green" id="stat-exam-correct">—</span>
+          </div>
+          <div class="stat-detail-row">
+            <span class="stat-detail-label">Yanlış cevap</span>
+            <span class="stat-detail-val stat-detail-val--red" id="stat-exam-wrong">—</span>
+          </div>
+          <div class="stat-detail-row">
+            <span class="stat-detail-label">Doğruluk oranı</span>
+            <span class="stat-detail-val stat-detail-val--purple" id="stat-exam-acc">—</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-feed-card" id="activity-feed-card" style="display:none;">
+        <div class="sidebar-section-title">Son Aktiviteler</div>
+        <div class="activity-feed-list" id="activity-feed-list"></div>
+      </div>
+
+      <div class="profil-main">
+        <div class="tabs" role="tablist">
+          <button class="tab-btn tab-btn--active" id="tab-wrong"    role="tab" data-status="wrong">Yanlışlarım</button>
+          <button class="tab-btn"                  id="tab-learning" role="tab" data-status="learning">Tekrar Lazım</button>
+          <button class="tab-btn"                  id="tab-known"    role="tab" data-status="known">Öğrendiklerim</button>
+          <button class="tab-btn"                  id="tab-activity" role="tab" data-status="activity">Aktivite</button>
+        </div>
+
+        <div id="tab-panel-words" class="tab-panel">
+          <div id="words-loading" class="tab-loading">Yükleniyor…</div>
+          <div id="words-empty"  class="tab-empty" style="display:none;">Henüz kelime yok.</div>
+          <table id="words-table" class="words-table" style="display:none;">
+            <thead>
+              <tr>
+                <th>İngilizce</th>
+                <th>Türkçe</th>
+                <th>Set</th>
+                <th>Yanlış</th>
+                <th>Durum</th>
+              </tr>
+            </thead>
+            <tbody id="words-tbody"></tbody>
+          </table>
+        </div>
+
+        <div id="tab-panel-activity" class="tab-panel" style="display:none;">
+          <div class="heatmap-header">
+            <span class="heatmap-title">Son 3 ay</span>
+            <span class="heatmap-legend">
+              <span>Az</span>
+              <span class="heatmap-swatch heatmap-swatch--0"></span>
+              <span class="heatmap-swatch heatmap-swatch--1"></span>
+              <span class="heatmap-swatch heatmap-swatch--2"></span>
+              <span class="heatmap-swatch heatmap-swatch--3"></span>
+              <span class="heatmap-swatch heatmap-swatch--4"></span>
+              <span>Çok</span>
+            </span>
+          </div>
+          <div class="heatmap-wrapper">
+            <div class="heatmap-day-labels">
+              <span></span>
+              <span>Pzt</span>
+              <span></span>
+              <span>Çar</span>
+              <span></span>
+              <span>Cum</span>
+              <span></span>
+            </div>
+            <div id="heatmap-container" class="heatmap-container"></div>
+          </div>
         </div>
       </div>
     </section>

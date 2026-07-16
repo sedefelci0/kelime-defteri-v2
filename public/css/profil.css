@@ -4,7 +4,7 @@
 }
 
 .profil-page {
-  max-width: 1060px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 40px 24px 80px;
 }
@@ -16,8 +16,8 @@
 }
 .profil-layout {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 28px;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
   align-items: start;
 }
 
@@ -25,19 +25,20 @@
 .profil-sidebar {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 18px;
 }
 
-.avatar-section {
+.profile-card {
   background: var(--paper-raised);
   border: 1.5px solid var(--rule);
-  border-radius: 16px;
+  border-radius: 18px;
   padding: 28px 20px 24px;
   text-align: center;
+  box-shadow: var(--shadow);
 }
-.avatar-circle {
-  width: 72px;
-  height: 72px;
+.profile-card-avatar {
+  width: 76px;
+  height: 76px;
   border-radius: 50%;
   background: var(--deck-purple);
   color: var(--deck-purple-accent);
@@ -49,53 +50,172 @@
   margin: 0 auto 14px;
   border: 3px solid var(--deck-purple-accent);
 }
-.avatar-name {
+.profile-card-name {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--ink);
   letter-spacing: -0.02em;
 }
-.avatar-meta {
-  font-size: 13px;
+.profile-card-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+.class-chip {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 11px;
+  border-radius: 20px;
+  background: var(--deck-purple);
+  color: var(--deck-purple-accent);
+}
+.member-since {
+  font-size: 12px;
   color: var(--muted);
-  margin-top: 4px;
 }
 
-.stat-boxes {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-.stat-box {
+/* ===== Kelime Hedefi ===== */
+.goal-card {
   background: var(--paper-raised);
   border: 1.5px solid var(--rule);
-  border-radius: 12px;
-  padding: 14px 12px;
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+}
+.goal-numbers {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin: 4px 0 10px;
+}
+.goal-current {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--moss-deep);
+  letter-spacing: -0.02em;
+}
+.goal-sep { font-size: 16px; color: var(--muted); }
+.goal-target { font-size: 16px; font-weight: 600; color: var(--muted); }
+.goal-pct {
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--moss-deep);
+}
+.goal-bar-track {
+  height: 8px;
+  background: #e8e4dd;
+  border-radius: 99px;
+  overflow: hidden;
+}
+.goal-bar-fill {
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--moss) 0%, var(--moss-deep) 100%);
+  transition: width 0.6s ease;
+}
+
+/* ===== Ödül Çarkı öne çıkan ===== */
+.wheel-highlight-card {
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+}
+.wheel-highlight-card--has-prize {
+  background: linear-gradient(160deg, #FFF7D6 0%, #FFEBA6 100%);
+  border: 1.5px solid #F0D060;
+}
+.wheel-highlight-card--empty {
+  background: var(--paper-raised);
+  border: 1.5px solid var(--rule);
   text-align: center;
 }
-.stat-box--green  { border-color: #a7e8c8; background: #f0fdf7; }
-.stat-box--yellow { border-color: #f5d98a; background: #fefce8; }
-.stat-box--red    { border-color: #fca5a5; background: #fff5f5; }
-.stat-box--purple { border-color: #c4b5fd; background: #f5f3ff; }
-
-.stat-value {
-  font-size: 24px;
+.wheel-highlight-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #97740A;
+  margin-bottom: 10px;
+}
+.wheel-highlight-card--empty .wheel-highlight-title {
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.wheel-highlight-body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.wheel-highlight-emoji { font-size: 32px; flex-shrink: 0; }
+.wheel-highlight-label {
+  font-size: 14px;
   font-weight: 700;
   color: var(--ink);
-  letter-spacing: -0.02em;
-  line-height: 1;
+  line-height: 1.3;
 }
-.stat-box--green  .stat-value { color: #16a34a; }
-.stat-box--yellow .stat-value { color: #ca8a04; }
-.stat-box--red    .stat-value { color: #dc2626; }
-.stat-box--purple .stat-value { color: #7c3aed; }
-.stat-label {
+.wheel-highlight-date {
   font-size: 11px;
-  font-weight: 600;
+  color: #97740A;
+  margin-top: 2px;
+}
+.wheel-highlight-empty-text {
+  font-size: 13px;
   color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-top: 4px;
+  line-height: 1.5;
+}
+.wheel-highlight-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--moss-deep);
+  text-decoration: none;
+}
+.wheel-highlight-link:hover { text-decoration: underline; }
+
+/* ===== Konu Özetleri özeti ===== */
+.topic-summary-card {
+  background: var(--paper-raised);
+  border: 1.5px solid var(--rule);
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+}
+.topic-summary-overview {
+  font-size: 13px;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.topic-summary-overview span { font-weight: 700; color: var(--deck-orange-accent); }
+.topic-summary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.topic-summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+}
+.topic-summary-row-name {
+  color: var(--ink);
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.topic-summary-row-pct {
+  flex-shrink: 0;
+  font-weight: 700;
+  color: var(--deck-orange-accent);
 }
 
 .deck-progress-section {
@@ -103,6 +223,7 @@
   border: 1.5px solid var(--rule);
   border-radius: 16px;
   padding: 20px;
+  box-shadow: var(--shadow);
 }
 .sidebar-section-title {
   font-size: 12px;
@@ -145,13 +266,140 @@
 .deck-progress-item:nth-child(2) .deck-progress-bar-fill { background: var(--deck-green-accent); }
 .deck-progress-item:nth-child(3) .deck-progress-bar-fill { background: var(--deck-orange-accent); }
 .deck-progress-item:nth-child(4) .deck-progress-bar-fill { background: var(--deck-yellow-accent); }
+.deck-progress-item:nth-child(5) .deck-progress-bar-fill { background: var(--deck-blue-accent); }
+.deck-progress-item:nth-child(6) .deck-progress-bar-fill { background: var(--deck-pink-accent); }
 
-/* ===== Main content ===== */
+/* ===== Main column ===== */
+.profil-main-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== Büyük istatistik kartları ===== */
+.stat-cards-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.stat-card {
+  background: var(--paper-raised);
+  border: 1.5px solid var(--rule);
+  border-radius: 16px;
+  padding: 20px 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.stat-card-icon { font-size: 26px; margin-bottom: 8px; }
+.stat-card-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.stat-card-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.stat-card--green  .stat-card-value { color: var(--moss-deep); }
+.stat-card--purple .stat-card-value { color: var(--deck-purple-accent); }
+.stat-card--blue   .stat-card-value { color: var(--deck-blue-accent); }
+.stat-card--gold   .stat-card-value { color: var(--deck-orange-accent); }
+.stat-card--green  { background: #f0fdf7; border-color: #a7e8c8; }
+.stat-card--purple { background: #f5f3ff; border-color: #c4b5fd; }
+.stat-card--blue   { background: #eff6ff; border-color: #bfdbfe; }
+.stat-card--gold   { background: #fefce8; border-color: #f5d98a; }
+
+/* ===== Detay kartları ===== */
+.detail-cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.stat-detail-section {
+  background: var(--paper-raised);
+  border: 1.5px solid var(--rule);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+}
+.stat-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 13px;
+}
+.stat-detail-row:last-child { border-bottom: none; }
+.stat-detail-label { color: var(--muted); }
+.stat-detail-val { font-weight: 700; color: var(--ink); }
+.stat-detail-val--green  { color: var(--moss-deep); }
+.stat-detail-val--red    { color: var(--clay); }
+.stat-detail-val--purple { color: var(--deck-purple-accent); }
+
+/* ===== Son Aktiviteler ===== */
+.activity-feed-card {
+  background: var(--paper-raised);
+  border: 1.5px solid var(--rule);
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+}
+.activity-feed-list {
+  display: flex;
+  flex-direction: column;
+}
+.activity-feed-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0ece6;
+}
+.activity-feed-row:last-child { border-bottom: none; }
+.activity-feed-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.activity-feed-body { flex: 1; min-width: 0; }
+.activity-feed-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.4;
+}
+.activity-feed-sublabel {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 1px;
+}
+.activity-feed-date {
+  font-size: 11px;
+  color: var(--muted);
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-left: auto;
+  padding-left: 8px;
+}
+
+/* ===== Sekmeler / kelime listesi ===== */
 .profil-main {
   background: var(--paper-raised);
   border: 1.5px solid var(--rule);
   border-radius: 16px;
   overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
 .tabs {
@@ -178,7 +426,7 @@
   border-bottom-color: var(--deck-purple-accent);
 }
 
-.tab-panel { padding: 20px; min-height: 400px; }
+.tab-panel { padding: 20px; min-height: 320px; }
 .tab-loading { color: var(--muted); font-size: 14px; padding: 40px 0; text-align: center; }
 .tab-empty   { color: var(--muted); font-size: 14px; padding: 40px 0; text-align: center; }
 
@@ -300,69 +548,16 @@
 .heatmap-cell--3 { background: #30A14E; }
 .heatmap-cell--4 { background: #216E39; }
 
-/* ===== Soru istatistikleri + Siralama ===== */
-.stat-detail-section {
-  background: var(--paper-raised);
-  border: 1.5px solid var(--rule);
-  border-radius: 14px;
-  padding: 16px 18px;
-}
-.stat-detail-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px 0;
-  border-bottom: 1px solid var(--rule);
-  font-size: 13px;
-}
-.stat-detail-row:last-child { border-bottom: none; }
-.stat-detail-label { color: var(--muted); }
-.stat-detail-val { font-weight: 700; color: var(--ink); }
-.stat-detail-val--green  { color: var(--moss-deep); }
-.stat-detail-val--red    { color: var(--clay); }
-.stat-detail-val--purple { color: var(--deck-purple-accent); }
-
-.rank-display {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  margin-bottom: 6px;
-}
-.rank-number {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--gold);
-  line-height: 1;
-}
-.rank-of { font-size: 13px; color: var(--muted); }
-
-/* ===== Madalyalar ===== */
-.medals-section {
-  background: var(--paper-raised);
-  border: 1.5px solid var(--rule);
-  border-radius: 14px;
-  padding: 16px 18px;
-}
-.medal-line {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 0;
-  border-bottom: 1px solid var(--rule);
-}
-.medal-line:last-child { border-bottom: none; }
-.medal-line--total { margin-top: 2px; }
-.medal-line-icon { font-size: 18px; flex-shrink: 0; }
-.medal-line-label { font-size: 13px; color: var(--muted); flex: 1; }
-.medal-line-count { font-size: 15px; font-weight: 700; color: var(--ink); }
-.medal-line--total .medal-line-count { color: var(--moss-deep); }
-
 /* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .stat-cards-row { grid-template-columns: repeat(2, 1fr); }
+  .detail-cards-row { grid-template-columns: 1fr; }
+}
 @media (max-width: 720px) {
   .profil-layout {
     grid-template-columns: 1fr;
   }
-  .stat-boxes {
-    grid-template-columns: repeat(4, 1fr);
-  }
+}
+@media (max-width: 480px) {
+  .stat-cards-row { grid-template-columns: 1fr 1fr; }
 }

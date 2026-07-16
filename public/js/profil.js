@@ -1,4 +1,4 @@
-const DECK_THEME_ORDER = ['purple', 'green', 'orange', 'yellow'];
+const DECK_THEME_ORDER = ['purple', 'green', 'orange', 'yellow', 'blue', 'pink'];
 
 async function getJSON(url) {
   const res = await fetch(url, { credentials: 'same-origin' });
@@ -11,6 +11,24 @@ function formatMemberSince(dateStr) {
   if (!dateStr) return '';
   const d = new Date(dateStr);
   return `Üye: ${d.toLocaleDateString('tr-TR', { month: 'long', year: 'numeric' })}`;
+}
+
+function formatDuration(totalSeconds) {
+  const mins = Math.floor((totalSeconds || 0) / 60);
+  if (mins < 60) return `${mins} dk`;
+  const hours = Math.floor(mins / 60);
+  const rem = mins % 60;
+  return `${hours} sa ${rem} dk`;
+}
+
+function formatRelativeDate(dateStr) {
+  const d = new Date(dateStr);
+  const diffMs = Date.now() - d.getTime();
+  const diffDays = Math.floor(diffMs / 86400000);
+  if (diffDays <= 0) return 'Bugün';
+  if (diffDays === 1) return 'Dün';
+  if (diffDays < 7) return `${diffDays} gün önce`;
+  return d.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' });
 }
 
 function initials(name) {
@@ -113,6 +131,63 @@ function setActiveTab(activeBtn) {
   activeBtn.classList.add('tab-btn--active');
 }
 
+const ACTIVITY_ICONS = { topic: '📘', wheel: '🎁', study: '📗' };
+
+function renderWheelHighlight(lastPrize) {
+  const card = document.getElementById('wheel-highlight-card');
+  if (lastPrize) {
+    card.className = 'wheel-highlight-card wheel-highlight-card--has-prize';
+    card.innerHTML = `
+      <div class="wheel-highlight-title">🎁 Son Kazandığın Ödül</div>
+      <div class="wheel-highlight-body">
+        <div class="wheel-highlight-emoji">${lastPrize.tier === 'legendary' ? '✨' : '🏆'}</div>
+        <div>
+          <div class="wheel-highlight-label">${lastPrize.label}</div>
+          <div class="wheel-highlight-date">${formatRelativeDate(lastPrize.spunAt)}</div>
+        </div>
+      </div>
+    `;
+  } else {
+    card.className = 'wheel-highlight-card wheel-highlight-card--empty';
+    card.innerHTML = `
+      <div class="wheel-highlight-title">Ödül Çarkı</div>
+      <div class="wheel-highlight-empty-text">Henüz çark çevirmedin.</div>
+      <a class="wheel-highlight-link" href="/wheel.html">Çarkı çevir →</a>
+    `;
+  }
+}
+
+function renderTopicSummary(topicSummary) {
+  if (!topicSummary || topicSummary.unitsCompleted === 0) return;
+  document.getElementById('topic-summary-card').style.display = '';
+  document.getElementById('topic-units-completed').textContent = topicSummary.unitsCompleted;
+  document.getElementById('topic-avg-pct').textContent = `%${topicSummary.avgPercent}`;
+
+  const listEl = document.getElementById('topic-summary-list');
+  listEl.innerHTML = topicSummary.units.map(u => `
+    <div class="topic-summary-row">
+      <span class="topic-summary-row-name">${u.deckTitle} — ${u.unitName ? u.unitName : `Ünite ${u.unit}`}</span>
+      <span class="topic-summary-row-pct">%${u.pct}</span>
+    </div>
+  `).join('');
+}
+
+function renderActivityFeed(recentActivity) {
+  if (!recentActivity || recentActivity.length === 0) return;
+  document.getElementById('activity-feed-card').style.display = '';
+  const listEl = document.getElementById('activity-feed-list');
+  listEl.innerHTML = recentActivity.map(a => `
+    <div class="activity-feed-row">
+      <div class="activity-feed-icon">${ACTIVITY_ICONS[a.type] || '•'}</div>
+      <div class="activity-feed-body">
+        <div class="activity-feed-label">${a.label}</div>
+        ${a.sublabel ? `<div class="activity-feed-sublabel">${a.sublabel}</div>` : ''}
+      </div>
+      <div class="activity-feed-date">${formatRelativeDate(a.at)}</div>
+    </div>
+  `).join('');
+}
+
 (async function init() {
   try {
     const [me, profile] = await Promise.all([
@@ -120,43 +195,53 @@ function setActiveTab(activeBtn) {
       getJSON('/api/progress/profile'),
     ]);
 
-    // Soru istatistikleri
-    document.getElementById('stat-total-q').textContent   = profile.stats.totalQuestions.toLocaleString('tr-TR');
-    document.getElementById('stat-exam-correct').textContent = profile.stats.examCorrect.toLocaleString('tr-TR');
-    document.getElementById('stat-exam-wrong').textContent   = profile.stats.examWrong.toLocaleString('tr-TR');
-    document.getElementById('stat-exam-acc').textContent     = profile.stats.totalQuestions > 0 ? `%${profile.stats.examAccuracy}` : '—';
-
-    // Sinif siralaması
-    if (profile.stats.classRank !== null) {
-      document.getElementById('rank-number').textContent = `${profile.stats.classRank}.`;
-      document.getElementById('rank-of').textContent     = `${profile.stats.classSize} öğrenci içinde`;
-      document.getElementById('ranking-section').style.display = '';
-    }
-    document.getElementById('stat-champion').textContent = profile.stats.championCount;
-
-    // Mücadele madalyaları
-    const { medals } = profile.stats;
-    const totalMedals = medals.gold + medals.silver + medals.bronze;
-    if (totalMedals > 0) {
-      document.getElementById('medal-gold').textContent   = medals.gold;
-      document.getElementById('medal-silver').textContent = medals.silver;
-      document.getElementById('medal-bronze').textContent = medals.bronze;
-      document.getElementById('medal-total').textContent  = totalMedals;
-      document.getElementById('medals-section').style.display = '';
-    }
-
-    // Avatar
+    // Avatar / profil kartı
     document.getElementById('avatar-circle').textContent = initials(me.displayName);
     document.getElementById('avatar-name').textContent   = me.displayName;
     document.getElementById('avatar-meta').textContent   = formatMemberSince(me.createdAt);
+    if (me.className) {
+      const chip = document.getElementById('class-chip');
+      chip.textContent = me.className;
+      chip.style.display = '';
+    }
 
-    // Stats
-    document.getElementById('stat-known').textContent    = profile.stats.known.toLocaleString('tr-TR');
+    // Büyük istatistik kartları
+    document.getElementById('stat-known').textContent = profile.stats.known.toLocaleString('tr-TR');
+    const quizAns = profile.stats.quizCorrect + profile.stats.quizWrong;
+    document.getElementById('stat-quiz-acc').textContent = quizAns > 0 ? `%${profile.stats.quizAccuracy}` : '—';
+    document.getElementById('stat-study-time').textContent = me.totalStudySeconds > 0 ? formatDuration(me.totalStudySeconds) : '—';
+    document.getElementById('stat-topic-acc').textContent = profile.topicSummary.unitsCompleted > 0 ? `%${profile.topicSummary.avgPercent}` : '—';
+
+    // Kelime istatistikleri
     document.getElementById('stat-learning').textContent = profile.stats.learning.toLocaleString('tr-TR');
     document.getElementById('stat-wrong').textContent    = profile.stats.wrong.toLocaleString('tr-TR');
-    document.getElementById('stat-success').textContent  = `%${profile.stats.successRate}`;
+    document.getElementById('stat-quiz-count').textContent =
+      `${profile.stats.quizCorrect.toLocaleString('tr-TR')} / ${profile.stats.quizWrong.toLocaleString('tr-TR')}`;
 
-    // Deck progress
+    // Soru istatistikleri
+    document.getElementById('stat-total-q').textContent      = profile.stats.totalQuestions.toLocaleString('tr-TR');
+    document.getElementById('stat-exam-correct').textContent = profile.stats.examCorrect.toLocaleString('tr-TR');
+    document.getElementById('stat-exam-wrong').textContent    = profile.stats.examWrong.toLocaleString('tr-TR');
+    document.getElementById('stat-exam-acc').textContent      = profile.stats.totalQuestions > 0 ? `%${profile.stats.examAccuracy}` : '—';
+
+    // Kelime hedefi
+    const { goal } = profile;
+    document.getElementById('goal-label').textContent = goal.label;
+    document.getElementById('goal-current').textContent = goal.current.toLocaleString('tr-TR');
+    document.getElementById('goal-target').textContent  = `/ ${goal.target.toLocaleString('tr-TR')}`;
+    document.getElementById('goal-pct').textContent = `%${goal.pct}`;
+    document.getElementById('goal-bar-fill').style.width = `${goal.pct}%`;
+
+    // Ödül çarkı öne çıkan
+    renderWheelHighlight(profile.wheelLastPrize);
+
+    // Konu özetleri özeti
+    renderTopicSummary(profile.topicSummary);
+
+    // Son aktiviteler
+    renderActivityFeed(profile.recentActivity);
+
+    // Deste ilerlemesi
     const listEl = document.getElementById('deck-progress-list');
     profile.decks.forEach((deck, i) => {
       const themeClass = DECK_THEME_ORDER[i] || 'purple';

@@ -1,6 +1,7 @@
 const express = require('express');
 const pool = require('../db/pool');
 const { requireAuth } = require('../middleware/auth');
+const DECKS_CONFIG = require('../db/decks-config');
 
 const router = express.Router();
 
@@ -91,7 +92,7 @@ router.get('/profile', requireAuth, async (req, res) => {
   try {
     const uid = req.session.userId;
 
-    const [quizResult, examResult, deckResult, userResult] = await Promise.all([
+    const [quizResult, examResult, deckResult, userResult, topicResult, wheelResult, dailyResult] = await Promise.all([
       pool.query(
         `SELECT
            COALESCE(SUM(CASE WHEN up.status = 'known' THEN 1 ELSE 0 END), 0)::int AS known,
@@ -120,6 +121,21 @@ router.get('/profile', requireAuth, async (req, res) => {
         [uid]
       ),
       pool.query('SELECT class_name FROM users WHERE id = $1', [uid]),
+      pool.query(
+        `SELECT deck_slug, unit, best_score, best_total, updated_at FROM topic_progress
+         WHERE user_id = $1 ORDER BY updated_at DESC`,
+        [uid]
+      ),
+      pool.query(
+        `SELECT prize_key, prize_label, prize_tier, spun_at FROM wheel_spins
+         WHERE user_id = $1 AND prize_key != 'respin' ORDER BY spun_at DESC LIMIT 1`,
+        [uid]
+      ),
+      pool.query(
+        `SELECT date, correct_count, wrong_count FROM daily_stats
+         WHERE user_id = $1 ORDER BY date DESC LIMIT 5`,
+        [uid]
+      ).catch(() => ({ rows: [] })),
     ]);
 
     const s = quizResult.rows[0];
@@ -131,50 +147,6 @@ router.get('/profile', requireAuth, async (req, res) => {
     const examTotal = e.exam_correct + e.exam_wrong;
     const examAccuracy = examTotal > 0 ? Math.round((e.exam_correct / examTotal) * 100) : 0;
 
-    // Sınıf sıralaması (sadece sınıf öğrencileri için)
-    let classRank = null;
-    let classSize = null;
-    if (className && /^[5-8]-[A-F]$/.test(className)) {
-      const [rankRes, sizeRes] = await Promise.all([
-        pool.query(
-          `SELECT COUNT(DISTINCT u2.id)::int + 1 AS rank
-           FROM users u2
-           LEFT JOIN (
-             SELECT user_id, SUM(times_correct)::int AS correct FROM user_progress GROUP BY user_id
-           ) up2 ON up2.user_id = u2.id
-           WHERE u2.class_name = $1 AND u2.is_teacher = FALSE AND u2.id != $2
-             AND COALESCE(up2.correct, 0) > $3`,
-          [className, uid, s.total_correct]
-        ),
-        pool.query(
-          'SELECT COUNT(*)::int AS cnt FROM users WHERE class_name = $1 AND is_teacher = FALSE',
-          [className]
-        ),
-      ]);
-      classRank = rankRes.rows[0].rank;
-      classSize = sizeRes.rows[0].cnt;
-    }
-
-    // Şampiyonluk sayısı (daily_champions)
-    let championCount = 0;
-    try {
-      const { rows: chRows } = await pool.query(
-        'SELECT COUNT(*)::int AS cnt FROM daily_champions WHERE user_id = $1 AND medal_type = $2',
-        [uid, 'gold']
-      );
-      championCount = chRows[0]?.cnt || 0;
-    } catch (_) {}
-
-    // Mücadele madalyaları (daily_medals)
-    const medals = { gold: 0, silver: 0, bronze: 0 };
-    try {
-      const { rows: mRows } = await pool.query(
-        'SELECT medal_type, COUNT(*)::int AS cnt FROM daily_medals WHERE user_id = $1 GROUP BY medal_type',
-        [uid]
-      );
-      mRows.forEach((r) => { if (r.medal_type in medals) medals[r.medal_type] = r.cnt; });
-    } catch (_) {}
-
     const decks = deckResult.rows.map((r) => ({
       slug: r.slug,
       title: r.title,
@@ -182,6 +154,85 @@ router.get('/profile', requireAuth, async (req, res) => {
       known: r.known,
       pct: r.total > 0 ? Math.round((r.known / r.total) * 100) : 0,
     }));
+
+    // Konu Özetleri özeti — ünite adları db/decks-config.js'den okunur (aynı kaynak,
+    // admin panelindeki ile tutarlı kalsın diye).
+    const units = topicResult.rows.map((t) => {
+      const deck = DECKS_CONFIG.find((d) => d.slug === t.deck_slug);
+      const unitName = deck?.unitNames?.[t.unit];
+      return {
+        deckSlug: t.deck_slug,
+        deckTitle: deck ? deck.title : t.deck_slug,
+        unit: t.unit,
+        unitName: unitName || null,
+        bestScore: t.best_score,
+        bestTotal: t.best_total,
+        pct: t.best_total > 0 ? Math.round((t.best_score / t.best_total) * 100) : 0,
+        updatedAt: t.updated_at,
+      };
+    });
+    const topicSummary = {
+      unitsCompleted: units.length,
+      avgPercent: units.length > 0 ? Math.round(units.reduce((sum, u) => sum + u.pct, 0) / units.length) : 0,
+      units,
+    };
+
+    const wheelLastPrize = wheelResult.rows[0]
+      ? {
+          key: wheelResult.rows[0].prize_key,
+          label: wheelResult.rows[0].prize_label,
+          tier: wheelResult.rows[0].prize_tier,
+          spunAt: wheelResult.rows[0].spun_at,
+        }
+      : null;
+
+    // Kelime hedefi — öğrencinin kendi sınıf seviyesine ait deste varsa onu hedef alır
+    // (örn. "6-A" -> "6-sinif" destesi), yoksa tüm destelerin toplamını gösterir.
+    const gradeMatch = className && /^([5-8])-[A-F]$/.exec(className);
+    const gradeDeck = gradeMatch ? decks.find((d) => d.slug === `${gradeMatch[1]}-sinif`) : null;
+    const goal = gradeDeck
+      ? { label: gradeDeck.title, current: gradeDeck.known, target: gradeDeck.total, pct: gradeDeck.pct }
+      : {
+          label: 'Genel Kelime Hedefi',
+          current: decks.reduce((sum, d) => sum + d.known, 0),
+          target: decks.reduce((sum, d) => sum + d.total, 0),
+          pct: (() => {
+            const total = decks.reduce((sum, d) => sum + d.total, 0);
+            const known = decks.reduce((sum, d) => sum + d.known, 0);
+            return total > 0 ? Math.round((known / total) * 100) : 0;
+          })(),
+        };
+
+    // Son aktiviteler — konu özeti tamamlama, ödül çarkı çevirme ve günlük çalışma
+    // kayıtları tek bir zaman çizelgesinde birleştirilir (gerçek veri, uydurma yok).
+    const recentActivity = [];
+    units.slice(0, 5).forEach((u) => {
+      recentActivity.push({
+        type: 'topic',
+        label: `Konu özeti tamamladı: ${u.deckTitle}${u.unitName ? ` — ${u.unitName}` : ` Ünite ${u.unit}`}`,
+        sublabel: `%${u.pct} başarı`,
+        at: u.updatedAt,
+      });
+    });
+    if (wheelLastPrize) {
+      recentActivity.push({
+        type: 'wheel',
+        label: `Ödül çarkını çevirdi: ${wheelLastPrize.label}`,
+        sublabel: null,
+        at: wheelLastPrize.spunAt,
+      });
+    }
+    dailyResult.rows.forEach((d) => {
+      const total = d.correct_count + d.wrong_count;
+      if (total === 0) return;
+      recentActivity.push({
+        type: 'study',
+        label: `${total} soru çalıştı`,
+        sublabel: `${d.correct_count} doğru · ${d.wrong_count} yanlış`,
+        at: d.date,
+      });
+    });
+    recentActivity.sort((a, b) => new Date(b.at) - new Date(a.at));
 
     res.json({
       stats: {
@@ -195,12 +246,12 @@ router.get('/profile', requireAuth, async (req, res) => {
         examWrong: e.exam_wrong,
         examAccuracy,
         totalQuestions: examTotal,
-        classRank,
-        classSize,
-        championCount,
-        medals,
       },
       decks,
+      topicSummary,
+      wheelLastPrize,
+      goal,
+      recentActivity: recentActivity.slice(0, 8),
     });
   } catch (err) {
     console.error(err);
