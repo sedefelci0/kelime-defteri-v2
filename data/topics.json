@@ -792,5 +792,3183 @@
         }
       ]
     }
+  },
+  "6-sinif": {
+    "1": {
+      "theme": "Zaman ve Rutinler",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What time do you usually wake up?",
+          "questionTr": "Genellikle saat kaçta uyanırsın?",
+          "modelAnswer": "I usually wake up at seven o'clock.",
+          "modelAnswerTr": "Genellikle saat yedide uyanırım."
+        },
+        {
+          "type": "personal",
+          "question": "What do you do before you go to school?",
+          "questionTr": "Okula gitmeden önce ne yaparsın?",
+          "modelAnswer": "Before I go to school, I have breakfast and get dressed.",
+          "modelAnswerTr": "Okula gitmeden önce kahvaltı yapar ve giyinirim."
+        },
+        {
+          "type": "personal",
+          "question": "How often do you help around the house?",
+          "questionTr": "Ev işlerine ne sıklıkla yardım edersin?",
+          "modelAnswer": "I usually help around the house on weekends.",
+          "modelAnswerTr": "Genellikle haftasonları ev işlerine yardım ederim."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Daima dişlerimi fırçalarım.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "I always brush my teeth.",
+            "I never brush my teeth.",
+            "I sometimes brush my teeth.",
+            "I brush my teeth after."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'2:15' saatinin İngilizce okunuşu hangisidir?",
+          "options": [
+            "It is quarter to two.",
+            "It is half past two.",
+            "It is quarter past two.",
+            "It is two o'clock."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "type": "mc",
+          "prompt": "Ay isimlerinin önünde hangi zaman edatı kullanılır?",
+          "options": [
+            "at",
+            "on",
+            "in",
+            "for"
+          ],
+          "correctIndex": 2,
+          "explanation": "Aylardan önce 'in' zaman edatı kullanılır (in April)."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Kim?' sorusunun İngilizcesi hangisidir?",
+          "options": [
+            "What?",
+            "Who?",
+            "Which?",
+            "Whose?"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mc",
+          "prompt": "'21.' (yirmi birinci) sayısının İngilizcesi hangisidir?",
+          "options": [
+            "twenty-one",
+            "twenty-first",
+            "twentieth",
+            "twenty-oneth"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "tf",
+          "statement": "'I never eat junk food.' cümlesinin Türkçesi 'Bazen abur cubur yerim.'dir.",
+          "correct": false,
+          "explanation": "'Never' asla/hiç anlamındadır, doğrusu 'Asla abur cubur yemem.'dir."
+        },
+        {
+          "type": "tf",
+          "statement": "Gün isimlerinin önünde 'on' zaman edatı kullanılır (örn. on Monday).",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'Before I watch TV, I do my homework.' cümlesinin Türkçesi 'Ödevimi yaptıktan sonra tv izlerim.'dir.",
+          "correct": false,
+          "explanation": "'Before' önce anlamındadır, doğrusu 'Tv izlemeden önce ödevimi yaparım.'dır."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "3:00 → It is three ______.",
+          "answer": "o'clock"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "4:30 → It is half ______ four.",
+          "answer": "past"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I ______ get up early on weekdays. (Genellikle haftaiçi erken kalkarım)",
+          "answer": "usually"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Saat ifadelerinin önünde ______ zaman edatı kullanılır (______ 6 o'clock).",
+          "answer": "at"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "1st = ______ (birinci)",
+          "answer": "first"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Cumartesi ve Pazar günlerine İngilizce ne denir? (haftasonu)",
+          "answer": "weekend"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "Monday",
+              "tr": "Pazartesi"
+            },
+            {
+              "en": "Wednesday",
+              "tr": "Çarşamba"
+            },
+            {
+              "en": "Friday",
+              "tr": "Cuma"
+            },
+            {
+              "en": "Sunday",
+              "tr": "Pazar"
+            }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "theme": "Kahvaltı ve Miktarlar",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What do you like for breakfast?",
+          "questionTr": "Kahvaltıda ne seversin?",
+          "modelAnswer": "I like cheese and honey for breakfast.",
+          "modelAnswerTr": "Kahvaltıda peynir ve bal severim."
+        },
+        {
+          "type": "personal",
+          "question": "Do you prefer tea or coffee?",
+          "questionTr": "Çayı mı yoksa kahveyi mi tercih edersin?",
+          "modelAnswer": "I prefer tea because it is delicious.",
+          "modelAnswerTr": "Çayı tercih ederim çünkü lezzetlidir."
+        },
+        {
+          "type": "personal",
+          "question": "What food do you dislike?",
+          "questionTr": "Hangi yiyeceği sevmezsin?",
+          "modelAnswer": "I dislike olives.",
+          "modelAnswerTr": "Zeytin sevmem."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Biraz bal alabilir miyim?' sorusunun İngilizcesi hangisidir?",
+          "options": [
+            "Can I have some honey?",
+            "Is there any honey?",
+            "Do you like honey?",
+            "There is some honey."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "Hangi kelime sayılamayan (uncountable) bir isimdir?",
+          "options": [
+            "egg",
+            "apple",
+            "milk",
+            "cookie"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Milk' sıvı olduğu için sayılamayan bir isimdir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'There ___ two apples on the table.' boşluğa hangisi gelmelidir?",
+          "options": [
+            "is",
+            "are",
+            "am",
+            "be"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mc",
+          "prompt": "'Hiç sosis yok.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "There are some sausages.",
+            "There aren't any sausages.",
+            "There isn't a sausage.",
+            "Is there any sausage?"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mc",
+          "prompt": "Sesli harfle başlayan bir isimden önce hangisi kullanılır?",
+          "options": [
+            "a",
+            "an",
+            "some",
+            "any"
+          ],
+          "correctIndex": 1,
+          "explanation": "'An apple' örneğinde olduğu gibi sesli harfle başlayan isimlerden önce 'an' kullanılır."
+        },
+        {
+          "type": "tf",
+          "statement": "'There is some milk.' cümlesinde 'milk' sayılamayan bir isim olduğu için 'some' ile kullanılmıştır.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'Is there any tea?' cümlesinin Türkçesi 'Hiç çay var mı?'dır.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'She likes honey but she doesn't like egg.' cümlesinin Türkçesi 'O kız yumurta sever ama bal sevmez.'dir.",
+          "correct": false,
+          "explanation": "Doğrusu: 'O kız bal sever ama yumurta sevmez.'dir."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "There is ______ apple on the table. (sesli harfle başladığı için)",
+          "answer": "an"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "There is a bottle of ______. (süt)",
+          "answer": "milk"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "'Rica ederim' İngilizce nasıl söylenir?",
+          "answer": "you're welcome"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Can I have some honey? Yes, of ______.",
+          "answer": "course"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "There are not ______ books. (hiç kitap yok)",
+          "answer": "any"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "'Hepsi bitti' İngilizcesi nedir?",
+          "answer": "it's all gone"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "I like cheese.",
+              "tr": "Peynir severim."
+            },
+            {
+              "en": "I don't like olives.",
+              "tr": "Zeytin sevmem."
+            },
+            {
+              "en": "He hates milk.",
+              "tr": "O erkek sütten nefret eder."
+            },
+            {
+              "en": "Can I have some water?",
+              "tr": "Biraz su alabilir miyim?"
+            }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "theme": "Şehir Hayatı: Kıyaslamalar ve Şimdiki Zaman",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What is bigger, your city or the countryside near you?",
+          "questionTr": "Şehrin mi yoksa yakınındaki kırsal bölge mi daha büyük?",
+          "modelAnswer": "My city is bigger than the countryside near me.",
+          "modelAnswerTr": "Şehrim, yakınımdaki kırsal bölgeden daha büyüktür."
+        },
+        {
+          "type": "personal",
+          "question": "What are you doing right now?",
+          "questionTr": "Şu anda ne yapıyorsun?",
+          "modelAnswer": "I am reading a book now.",
+          "modelAnswerTr": "Şimdi bir kitap okuyorum."
+        },
+        {
+          "type": "personal",
+          "question": "Is your hometown crowded or peaceful?",
+          "questionTr": "Memleketin kalabalık mı yoksa huzurlu mu?",
+          "modelAnswer": "My hometown is peaceful and quiet.",
+          "modelAnswerTr": "Memleketim huzurlu ve sessizdir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Veli, Musa'dan daha uzundur.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "Veli is taller than Musa.",
+            "Veli is more tall than Musa.",
+            "Veli is tall than Musa.",
+            "Veli is taller Musa."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "Tek heceli bir sıfata 'daha' anlamı katmak için ne yapılır?",
+          "options": [
+            "Sıfatın sonuna 'er' eklenir",
+            "Sıfatın önüne 'more' getirilir",
+            "Sıfat aynen kullanılır",
+            "Sıfatın başına 'the' eklenir"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'İstanbul, Konya'dan daha kalabalıktır.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "İstanbul is more crowded than Konya.",
+            "İstanbul is crowdeder than Konya.",
+            "İstanbul is crowded than Konya.",
+            "İstanbul is the most crowded Konya."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'good' sıfatının kıyaslama (comparative) hali nedir?",
+          "options": [
+            "better",
+            "gooder",
+            "more good",
+            "goodier"
+          ],
+          "correctIndex": 0,
+          "explanation": "good sıfatı düzensizdir: good-better-best."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Onlar şimdi bisiklet sürüyor.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "They are riding a bike right now.",
+            "They ride a bike right now.",
+            "They is riding a bike right now.",
+            "They riding a bike right now."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "statement": "'bad' sıfatının kıyaslama hali 'more bad' şeklindedir.",
+          "correct": false,
+          "explanation": "bad sıfatı düzensizdir: bad-worse-worst."
+        },
+        {
+          "type": "tf",
+          "statement": "'Are you watering the flowers?' sorusunun anlamı 'Çiçekleri suluyor musun?'dur.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "Şimdiki zaman olumsuz cümlelerinde 'not' eki am/is/are kelimelerinden önce kullanılır.",
+          "correct": false,
+          "explanation": "'not' eki am/is/are kelimelerinden SONRA kullanılır."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Coffee is ______ (kötü) than tea. (kıyaslama hali)",
+          "answer": "worse"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "İstanbul is more ______ (kalabalık) than Konya.",
+          "answer": "crowded"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I am ______ (okumak) a book now.",
+          "answer": "reading"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "______ they cleaning the barn? (Onlar barınağı temizliyorlar mı?)",
+          "answer": "are"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "The cat is not ______ (uyumak) now.",
+          "answer": "sleeping"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "taller",
+              "tr": "daha uzun"
+            },
+            {
+              "en": "more beautiful",
+              "tr": "daha güzel"
+            },
+            {
+              "en": "better",
+              "tr": "daha iyi"
+            },
+            {
+              "en": "worse",
+              "tr": "daha kötü"
+            },
+            {
+              "en": "further",
+              "tr": "daha uzak"
+            }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "theme": "Hava Durumu ve Duygular",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What is the weather like today?",
+          "questionTr": "Bugün hava nasıl?",
+          "modelAnswer": "It is sunny and warm today.",
+          "modelAnswerTr": "Bugün güneşli ve ılık."
+        },
+        {
+          "type": "personal",
+          "question": "How do you feel on rainy days?",
+          "questionTr": "Yağmurlu günlerde nasıl hissedersin?",
+          "modelAnswer": "I feel sleepy and a little sad on rainy days.",
+          "modelAnswerTr": "Yağmurlu günlerde uykulu ve biraz üzgün hissederim."
+        },
+        {
+          "type": "personal",
+          "question": "What is your favorite season? Why?",
+          "questionTr": "En sevdiğin mevsim hangisi? Neden?",
+          "modelAnswer": "My favorite season is summer because I feel energetic and happy.",
+          "modelAnswerTr": "En sevdiğim mevsim yazdır çünkü enerjik ve mutlu hissederim."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Hava nasıl?' sorusunun İngilizcesi hangisidir?",
+          "options": [
+            "What is the weather like?",
+            "What is the weather feel?",
+            "How is temperature?",
+            "What do you feel weather?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'Sıcaklık nedir?' sorusunun İngilizcesi hangisidir?",
+          "options": [
+            "What is the temperature?",
+            "What is the weather?",
+            "How is the degree?",
+            "What do you feel?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'O erkek, sisli günlerde nasıl hisseder?' sorusunun İngilizcesi hangisidir?",
+          "options": [
+            "How does he feel on foggy days?",
+            "How do he feel on foggy days?",
+            "How is he feeling foggy days?",
+            "What does he feel on foggy days?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'Does she feel scared on stormy days?' sorusuna olumsuz cevap nasıl verilir?",
+          "options": [
+            "No, she doesn't feel scared on stormy days.",
+            "No, she not feel scared on stormy days.",
+            "No, she isn't feel scared on stormy days.",
+            "No, she don't feels scared on stormy days."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'On santigrat derece.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "It is 10 degrees celcius.",
+            "It is 10 celcius degrees.",
+            "It has 10 degrees celcius.",
+            "It is 10 degree celcius."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "statement": "'What is the weather like?' ve 'How is the weather?' aynı anlama gelir.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'I feel happy and energetic.' cümlesinin Türkçesi 'Üzgün ve yorgun hissederim.'dir.",
+          "correct": false,
+          "explanation": "Doğru çeviri: 'Mutlu ve enerjik hissederim.'"
+        },
+        {
+          "type": "tf",
+          "statement": "'The temperature is minus 2 degrees celcius.' cümlesinin Türkçesi 'Sıcaklık eksi iki santigrat derece.'dir.",
+          "correct": true
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "How do you feel ______ sunny days? (günlerde anlamı için)",
+          "answer": "on"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "What is the weather ______ in Konya? (Konya'da hava nasıl?)",
+          "answer": "like"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "He feels ______ (karamsar) on foggy days.",
+          "answer": "moody"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I feel fabulous and happy in ______ (kış).",
+          "answer": "winters"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Can you ______ that please? (tekrar etmek)",
+          "answer": "repeat"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "sunny",
+              "tr": "güneşli"
+            },
+            {
+              "en": "stormy",
+              "tr": "fırtınalı"
+            },
+            {
+              "en": "foggy",
+              "tr": "sisli"
+            },
+            {
+              "en": "rainy",
+              "tr": "yağmurlu"
+            },
+            {
+              "en": "snowy",
+              "tr": "karlı"
+            }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "theme": "Lunaparkta",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What do you think about roller coasters?",
+          "questionTr": "Hız trenleri hakkında ne düşünüyorsun?",
+          "modelAnswer": "I think roller coasters are thrilling.",
+          "modelAnswerTr": "Bence hız trenleri heyecan vericidir."
+        },
+        {
+          "type": "personal",
+          "question": "Are you scared of ghost trains? Why?",
+          "questionTr": "Korku trenlerinden korkar mısın? Neden?",
+          "modelAnswer": "Yes, I am scared of ghost trains because they are frightening.",
+          "modelAnswerTr": "Evet, korku trenlerinden korkarım çünkü korkutucudurlar."
+        },
+        {
+          "type": "personal",
+          "question": "What is your favorite ride at the fair?",
+          "questionTr": "Fuarda en sevdiğin oyuncak nedir?",
+          "modelAnswer": "My favorite ride is the Ferris wheel.",
+          "modelAnswerTr": "En sevdiğim oyuncak dönme dolaptır."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Bence, atlı karıncalar sıkıcıdır.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "I think carrousels are dull.",
+            "I think carrousels are dulling.",
+            "I am dull carrousels.",
+            "Carrousels think dull."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "Bir şeyin bizde uyandırdığı duyguyu anlatmak için hangi ek kullanılır?",
+          "options": [
+            "-ing",
+            "-ed",
+            "-s",
+            "-er"
+          ],
+          "correctIndex": 0,
+          "explanation": "-ing ekiyle biten sıfatlar bir şeyin bizde uyandırdığı duyguyu anlatır (frightening = korkutucu)."
+        },
+        {
+          "type": "mc",
+          "prompt": "'I am bored.' cümlesindeki 'bored' kelimesi ne anlama gelir?",
+          "options": [
+            "Sıkılmış (ben hissediyorum)",
+            "Sıkıcı (o şey öyle)",
+            "Sıkmak (fiil)",
+            "Sıkıcılık (isim)"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'Sana katılıyorum' ifadesinin İngilizcesi hangisidir?",
+          "options": [
+            "I agree with you.",
+            "I disagree with you.",
+            "You are wrong.",
+            "I don't think so."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'What do you think about bumper cars?' sorusuna en uygun cevap hangisidir?",
+          "options": [
+            "I think bumper cars are exciting.",
+            "I am bumper cars.",
+            "Bumper cars think exciting.",
+            "Yes, I do."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "statement": "'Ferris wheels are boring, I am bored.' cümlesinde 'boring' dönme dolağı, 'bored' ise kişinin hissini anlatır.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'I disagree with you' ifadesi 'Sana katılıyorum' anlamına gelir.",
+          "correct": false,
+          "explanation": "'I disagree with you' katılmadığını belirtir, 'katılıyorum' değil."
+        },
+        {
+          "type": "tf",
+          "statement": "'In my opinion' ifadesi 'Benim düşünceme göre' anlamına gelir.",
+          "correct": true
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ferris wheels are boring, I am ______.",
+          "answer": "bored"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "What do you think ______ carrousels?",
+          "answer": "about"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I ______ with you. (Katılıyorum.)",
+          "answer": "agree"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Roller coasters are ______. (Korkutucudur - oyuncağın kendisi)",
+          "answer": "frightening"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I am ______ of ghost trains. (Korkarım - kişinin hissi)",
+          "answer": "frightened"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "exciting",
+              "tr": "heyecan verici"
+            },
+            {
+              "en": "boring",
+              "tr": "sıkıcı"
+            },
+            {
+              "en": "frightening",
+              "tr": "korkutucu"
+            },
+            {
+              "en": "dull",
+              "tr": "sıkıcı"
+            },
+            {
+              "en": "thrilling",
+              "tr": "heyecan verici"
+            }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "theme": "Meslekler",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What is your occupation?",
+          "questionTr": "Mesleğin nedir?",
+          "modelAnswer": "I am a student.",
+          "modelAnswerTr": "Ben bir öğrenciyim."
+        },
+        {
+          "type": "personal",
+          "question": "Where were you born?",
+          "questionTr": "Nerede doğdun?",
+          "modelAnswer": "I was born in Istanbul.",
+          "modelAnswerTr": "İstanbul'da doğdum."
+        },
+        {
+          "type": "personal",
+          "question": "What job would you like to do in the future? What can you do in that job?",
+          "questionTr": "Gelecekte hangi mesleği yapmak istersin? O meslekte neler yapabilirsin?",
+          "modelAnswer": "I would like to be a doctor. A doctor can treat ill people.",
+          "modelAnswerTr": "Doktor olmak isterim. Bir doktor hasta insanları tedavi edebilir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Bir terzi kumaş dikebilir ama saç kesemez.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "A tailor can sew fabrics but a tailor can't cut hair.",
+            "A tailor can cut hair but can't sew fabrics.",
+            "A tailor sews fabrics and cuts hair.",
+            "A tailor can't sew fabrics."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'He is retired now but he ______ a teacher 2 years ago.' cümlesinde boşluğa ne gelmeli?",
+          "options": [
+            "was",
+            "were",
+            "is",
+            "are"
+          ],
+          "correctIndex": 0,
+          "explanation": "'He' tekil özne olduğu için 'was' kullanılır."
+        },
+        {
+          "type": "mc",
+          "prompt": "'The students ______ at school.' cümlesinde boşluğa ne gelmeli?",
+          "options": [
+            "were",
+            "was",
+            "is",
+            "am"
+          ],
+          "correctIndex": 0,
+          "explanation": "'The students' çoğul özne olduğu için 'were' kullanılır."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Onlar mutlu değildi.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "They were not happy.",
+            "They was not happy.",
+            "They are not happy.",
+            "They weren't happy now."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'Mesleğin nedir?' sorusunun İngilizcesi hangisidir?",
+          "options": [
+            "What is your occupation?",
+            "Where is your occupation?",
+            "When is your occupation?",
+            "How is your occupation?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "statement": "'A mechanic can fix cars.' cümlesinin Türkçesi 'Bir araba tamircisi araba tamir edebilir.'dir.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "Tekil özneler ile 'were' kullanılır.",
+          "correct": false,
+          "explanation": "Tekil öznelerle 'was', çoğul öznelerle 'were' kullanılır."
+        },
+        {
+          "type": "tf",
+          "statement": "'I was born in Konya.' cümlesi 'Konya'da doğdum' anlamına gelir.",
+          "correct": true
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "He is retired now but he ______ a teacher 2 years ago.",
+          "answer": "was"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "The children ______ happy yesterday.",
+          "answer": "were"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A doctor can ______ ill people. (tedavi etmek)",
+          "answer": "treat"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "A lawyer can ______ people at court. (savunmak)",
+          "answer": "defend"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Where ______ you born? (Nerede doğdun?)",
+          "answer": "were"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I wasn't at home. = I ______ not at home.",
+          "answer": "was"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "doctor",
+              "tr": "doktor"
+            },
+            {
+              "en": "lawyer",
+              "tr": "avukat"
+            },
+            {
+              "en": "hairdresser",
+              "tr": "kuaför"
+            },
+            {
+              "en": "mechanic",
+              "tr": "araba tamircisi"
+            },
+            {
+              "en": "farmer",
+              "tr": "çiftçi"
+            }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "theme": "Tatiller ve Geçmiş Zaman",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "Where did you go on holiday last summer?",
+          "questionTr": "Geçen yaz tatile nereye gittin?",
+          "modelAnswer": "I went to Antalya last summer.",
+          "modelAnswerTr": "Geçen yaz Antalya'ya gittim."
+        },
+        {
+          "type": "personal",
+          "question": "What did you do yesterday?",
+          "questionTr": "Dün ne yaptın?",
+          "modelAnswer": "I played basketball with my friends yesterday.",
+          "modelAnswerTr": "Dün arkadaşlarımla basketbol oynadım."
+        },
+        {
+          "type": "personal",
+          "question": "Did you visit any historical places last year?",
+          "questionTr": "Geçen yıl herhangi bir tarihi yer ziyaret ettin mi?",
+          "modelAnswer": "Yes, I visited an ancient castle last year.",
+          "modelAnswerTr": "Evet, geçen yıl antik bir kaleyi ziyaret ettim."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Sen dün basketbol oynadın mı?' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "Did you play basketball yesterday?",
+            "Do you play basketball yesterday?",
+            "Are you play basketball yesterday?",
+            "You played basketball yesterday?"
+          ],
+          "correctIndex": 0,
+          "explanation": "Geçmiş zamanda soru cümlesi 'Did + özne + fiilin 1.hâli' şeklinde kurulur."
+        },
+        {
+          "type": "mc",
+          "prompt": "'They ______ to Antalya last summer.' cümlesinde boşluğa hangisi gelmelidir? (go fiilinin 2. hâli)",
+          "options": [
+            "went",
+            "goed",
+            "go",
+            "gone"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Go' düzensiz bir fiildir, 2. hâli 'went' şeklindedir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'O erkek, dün gece haberleri izlemedi.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "He did not watch news last night.",
+            "He does not watch news last night.",
+            "He did not watched news last night.",
+            "He not watch news last night."
+          ],
+          "correctIndex": 0,
+          "explanation": "Olumsuz geçmiş zaman cümlelerinde 'did not' kullanılır ve fiil 1. hâline döner."
+        },
+        {
+          "type": "mc",
+          "prompt": "Aşağıdaki fiillerden hangisi DÜZENLİ bir fiildir?",
+          "options": [
+            "watch",
+            "go",
+            "buy",
+            "make"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Watch' düzenli bir fiildir; 2. hâli 'watched' şeklinde -ed takısı alır."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Sen 2 gün önce bir dağa tırmandın.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "You climbed a mountain 2 days ago.",
+            "You climb a mountain 2 days ago.",
+            "You climbed a mountain 2 days last.",
+            "You climbing a mountain 2 days ago."
+          ],
+          "correctIndex": 0,
+          "explanation": "'Climb' düzenli bir fiildir, 2. hâli 'climbed' şeklindedir; 'ago' geçmişte belirli bir zamanı gösterir."
+        },
+        {
+          "type": "tf",
+          "statement": "'Did they go to Antalya last summer?' sorusunun Türkçesi 'Onlar, geçen yaz Antalya'ya gittiler mi?'dir.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "Geçmiş zamanda olumsuz cümle kurarken özneden sonra 'does not' kullanılır.",
+          "correct": false,
+          "explanation": "Geçmiş zamanda olumsuz cümlelerde 'did not (didn't)' kullanılır, 'does not' şimdiki zamana aittir."
+        },
+        {
+          "type": "tf",
+          "statement": "'Buy' fiilinin geçmiş zamandaki (2. hâl) şekli 'bought'tur.",
+          "correct": true
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I ______ basketball yesterday. (play fiilinin 2. hâli)",
+          "answer": "played"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "We ______ in the forest. (walk fiilinin 2. hâli)",
+          "answer": "walked"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "She did not ______ to music. (listen fiilinin 1. hâli)",
+          "answer": "listen"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "______ you play basketball yesterday? (soru cümlesi için gereken yardımcı fiil)",
+          "answer": "did"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "'Go' fiilinin geçmiş zamandaki (2. hâl) şekli ______.",
+          "answer": "went"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Geçmiş zamanda kullanılan zaman zarflarından biri: ______ (dün)",
+          "answer": "yesterday"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "go - went",
+              "tr": "gitmek - gitti"
+            },
+            {
+              "en": "play - played",
+              "tr": "oynamak - oynadı"
+            },
+            {
+              "en": "watch - watched",
+              "tr": "seyretmek - seyretti"
+            },
+            {
+              "en": "buy - bought",
+              "tr": "satın almak - satın aldı"
+            },
+            {
+              "en": "make - made",
+              "tr": "yapmak - yaptı"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "yesterday",
+              "tr": "dün"
+            },
+            {
+              "en": "last summer",
+              "tr": "geçen yaz"
+            },
+            {
+              "en": "2 days ago",
+              "tr": "2 gün önce"
+            }
+          ]
+        }
+      ]
+    },
+    "8": {
+      "theme": "Kitap Kurtları ve Yer Edatları",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "Where is your favourite book now?",
+          "questionTr": "En sevdiğin kitap şu anda nerede?",
+          "modelAnswer": "My favourite book is on the bookshelf.",
+          "modelAnswerTr": "En sevdiğim kitap kitaplıkta."
+        },
+        {
+          "type": "personal",
+          "question": "Did you go to the library last week?",
+          "questionTr": "Geçen hafta kütüphaneye gittin mi?",
+          "modelAnswer": "Yes, I borrowed a novel from the library last week.",
+          "modelAnswerTr": "Evet, geçen hafta kütüphaneden bir roman ödünç aldım."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Top, kutunun altında.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "The ball is under the box.",
+            "The ball is on the box.",
+            "The ball is behind the box.",
+            "The ball is near the box."
+          ],
+          "correctIndex": 0,
+          "explanation": "'Under' altında anlamına gelir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Kütüphane, okulun karşısındadır.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "The library is opposite the school.",
+            "The library is between the school.",
+            "The library is next to the school.",
+            "The library is in the school."
+          ],
+          "correctIndex": 0,
+          "explanation": "'Opposite' karşısında anlamına gelir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Kitabımı, yatağın altında buldum.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "I found my book under the bed.",
+            "I find my book under the bed.",
+            "I found my book on the bed.",
+            "I founded my book under the bed."
+          ],
+          "correctIndex": 0,
+          "explanation": "'Find' düzensiz bir fiildir, 2. hâli 'found'dur."
+        },
+        {
+          "type": "mc",
+          "prompt": "Aşağıdakilerden hangisi 'temas etmeden üstünde' anlamına gelen yer edatıdır?",
+          "options": [
+            "over",
+            "on",
+            "under",
+            "between"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Over' temas etmeden üstünde anlamına gelirken, 'on' değme ile üstünde anlamına gelir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'O kız, çantasını kaybetti.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "She lost her bag.",
+            "She loses her bag.",
+            "She lose her bag.",
+            "She losed her bag."
+          ],
+          "correctIndex": 0,
+          "explanation": "'Lose' düzensiz bir fiildir, 2. hâli 'lost'tur."
+        },
+        {
+          "type": "tf",
+          "statement": "'Next to' kelimesinin Türkçe anlamı 'bitişiğinde'dir.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'The ball is between the two boxes.' cümlesinin Türkçesi 'Top, iki kutunun arasındadır.'dır.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'In front of' kelimesinin anlamı 'arkasında'dır.",
+          "correct": false,
+          "explanation": "'In front of' önünde anlamına gelir, 'arkasında' için 'behind' kullanılır."
+        },
+        {
+          "type": "tf",
+          "statement": "'He didn't come to the party.' cümlesinin Türkçesi 'O erkek partiye geldi.'dir.",
+          "correct": false,
+          "explanation": "Cümle olumsuzdur, doğru anlamı 'O erkek partiye gelmedi.'dir."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "The ball is ______ the box. (Top, kutunun yanında.)",
+          "answer": "near"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "The book is ______ the two vases. (Kitap, iki vazonun arasında.)",
+          "answer": "between"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "She is at home now but she ______ at hospital yesterday. (be fiilinin geçmiş hâli)",
+          "answer": "was"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "They are happy now but they ______ upset yesterday. (be fiilinin geçmiş hâli, çoğul)",
+          "answer": "were"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "______ you sing a song in the class? (soru cümlesi için gereken yardımcı fiil)",
+          "answer": "did"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "The lamp is ______ the table, not touching it. (temas etmeden üstünde)",
+          "answer": "over"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "in",
+              "tr": "içinde"
+            },
+            {
+              "en": "on",
+              "tr": "üstünde"
+            },
+            {
+              "en": "under",
+              "tr": "altında"
+            },
+            {
+              "en": "behind",
+              "tr": "arkasında"
+            },
+            {
+              "en": "near",
+              "tr": "yanında"
+            },
+            {
+              "en": "between",
+              "tr": "arasında"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "in front of",
+              "tr": "önünde"
+            },
+            {
+              "en": "opposite",
+              "tr": "karşısında"
+            },
+            {
+              "en": "next to",
+              "tr": "bitişiğinde"
+            },
+            {
+              "en": "over",
+              "tr": "temas etmeden üstünde"
+            }
+          ]
+        }
+      ]
+    },
+    "9": {
+      "theme": "Gezegenimizi Koruyalım",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What should people do to protect the environment?",
+          "questionTr": "İnsanlar çevreyi korumak için ne yapmalı?",
+          "modelAnswer": "People should recycle and use less water.",
+          "modelAnswerTr": "İnsanlar geri dönüşüm yapmalı ve daha az su kullanmalı."
+        },
+        {
+          "type": "personal",
+          "question": "What should you do to save energy at home?",
+          "questionTr": "Evde enerji tasarrufu yapmak için ne yapmalısın?",
+          "modelAnswer": "I should turn off the lights when I leave the room.",
+          "modelAnswerTr": "Odadan çıkarken ışıkları kapatmalıyım."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Çevreyi kirletmemelisin.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "You should not pollute the environment.",
+            "You should pollute the environment.",
+            "You should protect the environment.",
+            "You should clean the environment."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'You should use public transportation.' cümlesinin Türkçesi nedir?",
+          "options": [
+            "Toplu taşımayı kullanmalısın.",
+            "Özel araç kullanmalısın.",
+            "Bisiklet kullanmalısın.",
+            "Yürümelisin."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "Hangisi olumsuz bir 'should' cümlesidir?",
+          "options": [
+            "You shouldn't throw rubbish around.",
+            "You should plant trees.",
+            "You should save water.",
+            "You should recycle."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'Ağaçları kesmemelisin.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "You should not cut down trees.",
+            "You should cut down trees.",
+            "You should plant trees.",
+            "You should water trees."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'Should' kelimesi cümleye hangi anlamı katar?",
+          "options": [
+            "-meli, -malı (tavsiye/gereklilik)",
+            "geçmiş zaman anlamı",
+            "gelecek zaman anlamı",
+            "soru anlamı"
+          ],
+          "correctIndex": 0,
+          "explanation": "Should, tavsiye vermek veya gereklilik belirtmek için kullanılır ve '-meli, -malı' anlamı katar."
+        },
+        {
+          "type": "tf",
+          "statement": "'You should save the environment.' cümlesinin Türkçesi 'Çevreyi korumalısın.'dır.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "Olumsuz 'should' cümlelerinde 'should not' yerine 'shouldn't' kullanılabilir.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'You should hunt animals.' cümlesi çevre dostu bir tavsiyedir.",
+          "correct": false,
+          "explanation": "Doğru cümle 'You shouldn't hunt animals.' olmalıdır (Hayvanları avlamamalısın)."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "You ______ use renewable energy sources. (Yenilenebilir enerji kaynaklarını kullanmalısın.)",
+          "answer": "should"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "You ______ throw rubbish around. (Etrafa çöp atmamalısın.)",
+          "answer": "shouldn't"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "You should ______ public transportation. (Toplu taşımayı kullanmalısın.)",
+          "answer": "use"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "You ______ pollute the environment. (Çevreyi kirletmemelisin.)",
+          "answer": "shouldn't"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "You should ______ tree. (Ağaç dikmelisin.)",
+          "answer": "plant"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "You shouldn't ______ waste into the sea. (Denize atık dökmemelisin.)",
+          "answer": "pour"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "should",
+              "tr": "-meli, -malı"
+            },
+            {
+              "en": "shouldn't",
+              "tr": "-memeli, -mamalı"
+            },
+            {
+              "en": "recycle",
+              "tr": "geri dönüştürmek"
+            },
+            {
+              "en": "pollute",
+              "tr": "kirletmek"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "You should plant tree.",
+              "tr": "Ağaç dikmelisin."
+            },
+            {
+              "en": "You shouldn't hunt animals.",
+              "tr": "Hayvanları avlamamalısın."
+            },
+            {
+              "en": "You should use public transportation.",
+              "tr": "Toplu taşımayı kullanmalısın."
+            },
+            {
+              "en": "You shouldn't damage forests.",
+              "tr": "Ormanlara zarar vermemelisin."
+            }
+          ]
+        }
+      ]
+    },
+    "10": {
+      "theme": "Demokrasi ve Seçimler",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "Who is your candidate?",
+          "questionTr": "Adayın kim?",
+          "modelAnswer": "My candidate is Ayşe.",
+          "modelAnswerTr": "Adayım Ayşe."
+        },
+        {
+          "type": "personal",
+          "question": "Why should people vote in elections?",
+          "questionTr": "İnsanlar neden seçimlerde oy kullanmalı?",
+          "modelAnswer": "People should vote because it is their right and responsibility.",
+          "modelAnswerTr": "İnsanlar oy kullanmalı çünkü bu onların hakkı ve sorumluluğudur."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Kimi destekliyorsun?' sorusunun İngilizcesi hangisidir?",
+          "options": [
+            "Who do you support?",
+            "Who is your candidate?",
+            "What do you support?",
+            "Where do you vote?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'You should respect the results.' cümlesinin Türkçesi nedir?",
+          "options": [
+            "Sonuçlara saygı duymalısın.",
+            "Sonuçları değiştirmelisin.",
+            "Sonuçları saymalısın.",
+            "Sonuçları unutmalısın."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "Oy verme sürecinde ilk yapılması gereken adım hangisidir?",
+          "options": [
+            "Show your identity card to the officials.",
+            "Put the envelope into the ballot box.",
+            "Fold the paper.",
+            "Sign the list."
+          ],
+          "correctIndex": 0,
+          "explanation": "Önce kimlik kartı görevlilere gösterilir, sonra listede isim bulunup imzalanır."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Aday olmaya karar vermelisin.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "You should decide to be a candidate.",
+            "You should be a president.",
+            "You should vote for a candidate.",
+            "You should support a candidate."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'My candidate is Ahmet.' hangi soruya cevaptır?",
+          "options": [
+            "Who is your candidate?",
+            "Who is the president?",
+            "What is democracy?",
+            "Where do you vote?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "statement": "'You should support one of the candidates.' cümlesinin Türkçesi 'Adaylardan birini desteklemelisin.'dir.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "Oy pusulasını kullandıktan sonra doğrudan çöpe atmalısın.",
+          "correct": false,
+          "explanation": "Oy pusulası zarfa konulup oy sandığına atılmalıdır."
+        },
+        {
+          "type": "tf",
+          "statement": "'You should be kind and fair.' cümlesi bir seçim adayı için verilen bir tavsiyedir.",
+          "correct": true
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "You should put the paper into the ______. (Kağıdı zarfın içine koymalısın.)",
+          "answer": "envelope"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "You should put the envelope into the ballot ______. (Zarfı oy sandığının içine atmalısın.)",
+          "answer": "box"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Who ______ your candidate? (Adayın kim?)",
+          "answer": "is"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Who do you ______? (Kimi destekliyorsun?)",
+          "answer": "support"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "You should ______ the other candidates. (Diğer adaylara saygı göstermelisin.)",
+          "answer": "respect"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "You should write the name on a paper and ______ it. (Kağıda ismi yazıp katlamalısın.)",
+          "answer": "fold"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "candidate",
+              "tr": "aday"
+            },
+            {
+              "en": "vote",
+              "tr": "oy vermek"
+            },
+            {
+              "en": "election",
+              "tr": "seçim"
+            },
+            {
+              "en": "ballot box",
+              "tr": "oy sandığı"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "You should respect the results.",
+              "tr": "Sonuçlara saygı duymalısın."
+            },
+            {
+              "en": "You should be kind and fair.",
+              "tr": "Kibar ve âdil olmalısın."
+            },
+            {
+              "en": "You should support one of the candidates.",
+              "tr": "Adaylardan birini desteklemelisin."
+            },
+            {
+              "en": "You should decide to be a candidate.",
+              "tr": "Aday olmaya karar vermelisin."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "8-sinif": {
+    "1": {
+      "theme": "Arkadaşlık",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What do you usually do with your best friend at the weekend?",
+          "questionTr": "En iyi arkadaşınla hafta sonu genellikle ne yaparsın?",
+          "modelAnswer": "I usually hang out with my best friend and we watch a movie together.",
+          "modelAnswerTr": "Genellikle en iyi arkadaşımla takılırım ve birlikte film izleriz."
+        },
+        {
+          "type": "personal",
+          "question": "Would you like to come over to my house this weekend? Why / why not?",
+          "questionTr": "Bu hafta sonu bana uğramak ister misin? Neden / neden değil?",
+          "modelAnswer": "Yes, I would love to. I'm free on Saturday afternoon.",
+          "modelAnswerTr": "Evet, çok isterim. Cumartesi öğleden sonra müsaitim."
+        },
+        {
+          "type": "personal",
+          "question": "What qualities should a true friend have, in your opinion?",
+          "questionTr": "Sence gerçek bir arkadaşta hangi özellikler olmalı?",
+          "modelAnswer": "In my opinion, a true friend should be honest and always support you.",
+          "modelAnswerTr": "Bence gerçek bir arkadaş dürüst olmalı ve seni her zaman desteklemeli."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Sinemaya gitmeye ne dersin?' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "How about going to the cinema?",
+            "How about go to the cinema?",
+            "What about go to the cinema?",
+            "Shall we going to the cinema?"
+          ],
+          "correctIndex": 0,
+          "explanation": "How about kalıbından sonra fiil -ing eki alır."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Tiyatroya gidelim mi?' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "Shall we going to the theatre?",
+            "Would you go to the theatre?",
+            "Shall we go to the theatre?",
+            "Let's going to the theatre."
+          ],
+          "correctIndex": 2,
+          "explanation": "Shall we kalıbından sonra fiil yalın haldedir."
+        },
+        {
+          "type": "mc",
+          "prompt": "Aşağıdakilerden hangisi bir daveti KABUL etme (accepting) ifadesidir?",
+          "options": [
+            "I'm afraid I'm busy.",
+            "That sounds great!",
+            "Sorry, not right now.",
+            "Maybe next time."
+          ],
+          "correctIndex": 1,
+          "explanation": "Diğer seçenekler reddetme (refusing) ifadeleridir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Neden birlikte film izlemiyoruz?' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "Why we don't watch a movie together?",
+            "Why don't we watch a movie together?",
+            "Why don't we watching a movie together?",
+            "Why don't we to watch a movie together?"
+          ],
+          "correctIndex": 1,
+          "explanation": "Why don't we kalıbından sonra fiil yalın haldedir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Let's' ile başlayan bir teklif cümlesinin sonunda hangi noktalama işareti kullanılır?",
+          "options": [
+            "Soru işareti (?)",
+            "Nokta (.)",
+            "Ünlem işareti (!)",
+            "İki nokta (:)"
+          ],
+          "correctIndex": 1,
+          "explanation": "Let's ile kurulan cümleler soru cümlesi değildir, sonunda nokta kullanılır."
+        },
+        {
+          "type": "tf",
+          "statement": "'Would you like to' kalıbından sonra fiil -ing eki alır.",
+          "correct": false,
+          "explanation": "Would you like to'dan sonra fiil yalın haldedir. Örn: Would you like to come over?"
+        },
+        {
+          "type": "tf",
+          "statement": "'What about' kalıbından sonra gelen fiil mutlaka -ing eki alır.",
+          "correct": true,
+          "explanation": "Örn: What about going to the concert?"
+        },
+        {
+          "type": "tf",
+          "statement": "'I'm afraid I'm busy.' bir daveti kabul etme (accepting) ifadesidir.",
+          "correct": false,
+          "explanation": "Bu bir reddetme (refusing) ifadesidir."
+        },
+        {
+          "type": "tf",
+          "statement": "Gerçek bir arkadaş (a true friend), arkadaşının sırlarını başkalarıyla paylaşmamalıdır.",
+          "correct": true
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "How about ______ (go) to the concert?",
+          "answer": "going"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Shall we ______ (go) to the theatre?",
+          "answer": "go"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Fikrini asla değiştirmeyen, çok inatçı bir kişiye İngilizcede ______ denir.",
+          "answer": "stubborn"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Daima doğruyu söyleyen ve asla yalan söylemeyen kişiye ______ denir.",
+          "answer": "honest"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hiçbir şeyi paylaşmayan, cimri bir kişiye İngilizcede ______ denir.",
+          "answer": "stingy"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "honest",
+              "tr": "dürüst"
+            },
+            {
+              "en": "selfish",
+              "tr": "bencil"
+            },
+            {
+              "en": "punctual",
+              "tr": "dakik, hep zamanında gelen"
+            },
+            {
+              "en": "outgoing",
+              "tr": "dışa dönük, sosyal"
+            },
+            {
+              "en": "generous",
+              "tr": "cömert"
+            },
+            {
+              "en": "stubborn",
+              "tr": "inatçı"
+            }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "theme": "Genç Yaşamı",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "How often do you go to the cinema?",
+          "questionTr": "Ne sıklıkla sinemaya gidersin?",
+          "modelAnswer": "I go to the cinema once a month.",
+          "modelAnswerTr": "Ayda bir kez sinemaya giderim."
+        },
+        {
+          "type": "personal",
+          "question": "Do you agree that teenagers spend too much time on social media? Why?",
+          "questionTr": "Gençlerin sosyal medyada çok fazla zaman geçirdiğine katılıyor musun? Neden?",
+          "modelAnswer": "In my opinion, teenagers spend too much time on social media instead of exercising.",
+          "modelAnswerTr": "Bence gençler egzersiz yapmak yerine sosyal medyada çok fazla zaman geçiriyor."
+        },
+        {
+          "type": "personal",
+          "question": "What kind of music do you prefer listening to?",
+          "questionTr": "Hangi tür müziği dinlemeyi tercih edersin?",
+          "modelAnswer": "I prefer listening to pop music to folk music.",
+          "modelAnswerTr": "Halk müziğine göre pop müzik dinlemeyi tercih ederim."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Ne sıklıkla sinemaya gidersin?' sorusunun İngilizcesi hangisidir?",
+          "options": [
+            "How often do you go to the cinema?",
+            "How many times you go to the cinema?",
+            "How long do you go to the cinema?",
+            "What do you go to the cinema?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'Kitabı televizyona tercih ederim.' cümlesinin doğru İngilizcesi hangisidir?",
+          "options": [
+            "I prefer book than tv.",
+            "I prefer book to tv.",
+            "I prefer more book than tv.",
+            "I prefer book from tv."
+          ],
+          "correctIndex": 1,
+          "explanation": "Prefer kalıbı 'prefer A to B' şeklinde kullanılır."
+        },
+        {
+          "type": "mc",
+          "prompt": "Aşağıdakilerden hangisi bir fikre KATILMA (agreeing) ifadesidir?",
+          "options": [
+            "I disagree with you.",
+            "You are wrong.",
+            "I agree with you.",
+            "I don't think so."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "type": "mc",
+          "prompt": "'Sana katılmıyorum.' ifadesinin İngilizcesi hangisidir?",
+          "options": [
+            "I agree with you.",
+            "I don't agree with you.",
+            "You are right.",
+            "I think so."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "type": "mc",
+          "prompt": "Aşağıdaki sıklık zarflarından hangisi 'neredeyse hiç' anlamına gelir?",
+          "options": [
+            "Always",
+            "Usually",
+            "Often",
+            "Hardly ever"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "type": "tf",
+          "statement": "'Never' kelimesi 'her zaman' anlamına gelir.",
+          "correct": false,
+          "explanation": "Never = hiç, asla anlamına gelir. Her zaman = always."
+        },
+        {
+          "type": "tf",
+          "statement": "'I prefer reading books to watching TV.' cümlesinde her iki fiil de -ing eki alır.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'In my opinion' ifadesi 'benim fikrimce' anlamına gelir.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'I'm keen on' ifadesi bir şeyi sevmemek anlamına gelir.",
+          "correct": false,
+          "explanation": "I'm keen on = bir şeye meraklı/düşkün olmak anlamına gelir."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I go to the cinema once a ______. (ayda bir kez)",
+          "answer": "month"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "How ______ do you go swimming? (Ne sıklıkla)",
+          "answer": "often"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "'Nadiren' anlamına gelen ve 'seldom' ile eş anlamlı sıklık zarfı: I ______ watch soap operas.",
+          "answer": "rarely"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "In my ______, reading is very useful. (fikrimce)",
+          "answer": "opinion"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I prefer book ______ tv. (tercih etme kalıbı: prefer A ___ B)",
+          "answer": "to"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "I agree with you",
+              "tr": "Sana katılıyorum"
+            },
+            {
+              "en": "I disagree with you",
+              "tr": "Sana katılmıyorum"
+            },
+            {
+              "en": "In my opinion",
+              "tr": "Benim fikrimce"
+            },
+            {
+              "en": "I'm fond of",
+              "tr": "Düşkün olmak"
+            },
+            {
+              "en": "How often",
+              "tr": "Ne sıklıkla"
+            }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "theme": "Mutfakta",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What is your favourite recipe? Describe the steps.",
+          "questionTr": "En sevdiğin tarif nedir? Adımlarını anlat.",
+          "modelAnswer": "My favourite recipe is pancakes. First, mix the eggs and flour. Then, add some milk. Finally, cook it in a hot pan.",
+          "modelAnswerTr": "En sevdiğim tarif pankektir. İlk olarak yumurta ve unu karıştır. Sonra biraz süt ekle. Son olarak sıcak bir tavada pişir."
+        },
+        {
+          "type": "personal",
+          "question": "How long does it take you to prepare your favourite meal?",
+          "questionTr": "En sevdiğin yemeği hazırlaman ne kadar sürer?",
+          "modelAnswer": "It takes about thirty minutes to prepare my favourite meal.",
+          "modelAnswerTr": "En sevdiğim yemeği hazırlamak yaklaşık otuz dakika sürer."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Sebzeleri soymadan önce yıka.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "Wash the vegetables before you peel them.",
+            "Wash the vegetables after you peel them.",
+            "Peel the vegetables before you wash them.",
+            "Peel the vegetables and wash them."
+          ],
+          "correctIndex": 0,
+          "explanation": "'Before' kendinden sonraki eylemden önce yapılan işi belirtir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Add some flour after you crack three eggs.' cümlesinin Türkçesi hangisidir?",
+          "options": [
+            "Üç yumurta kırdıktan sonra biraz un ekle.",
+            "Biraz un ekledikten sonra üç yumurta kır.",
+            "Üç yumurta kırmadan önce biraz un ekle.",
+            "Biraz un eklemeden önce üç yumurta kır."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "Sıralama bağlaçlarında hangi kelime her zaman en başta yer alır?",
+          "options": [
+            "First",
+            "Next",
+            "Then",
+            "After that"
+          ],
+          "correctIndex": 0,
+          "explanation": "First, second ve finally sabit yerlerde kullanılır; next, then, after that yer değiştirebilir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Sürecin ilk adımı nedir?' sorusunun İngilizcesi hangisidir?",
+          "options": [
+            "What is the first step of the process?",
+            "What is the last step of the process?",
+            "How long does it take to prepare?",
+            "What are the ingredients of this meal?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "statement": "'Don't fry vegetables.' cümlesi bir emir cümlesidir ve 'Sebzeleri kızartma.' anlamına gelir.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'Boil water before you put pasta.' cümlesinin Türkçesi 'Makarna koyduktan sonra suyu kaynat.'dır.",
+          "correct": false,
+          "explanation": "Doğrusu: 'Makarna koymadan önce suyu kaynat.'"
+        },
+        {
+          "type": "tf",
+          "statement": "'How many eggs do you need for the cake?' sorusu sayılabilen bir isim (eggs) hakkında sorulmuştur.",
+          "correct": true
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Stir the soup ______ you add some salt. (Tuz eklemeden önce çorbayı karıştır.)",
+          "answer": "before"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "______ , put some oil into a pan. (İlk olarak tavaya biraz sıvı yağ koy.)",
+          "answer": "first"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "______ , pour the mixture into the hot pan. (Son olarak karışımı sıcak tavaya dök.)",
+          "answer": "finally"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "______ the vegetables. (Sebzeleri soy. - emir cümlesi)",
+          "answer": "peel"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "How ______ does it take to prepare? (Hazırlaması ne kadar sürer?)",
+          "answer": "long"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "first",
+              "tr": "ilk olarak"
+            },
+            {
+              "en": "next",
+              "tr": "sonra"
+            },
+            {
+              "en": "then",
+              "tr": "daha sonra"
+            },
+            {
+              "en": "after that",
+              "tr": "ondan sonra"
+            },
+            {
+              "en": "finally",
+              "tr": "son olarak"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "crack the egg",
+              "tr": "yumurtayı kır"
+            },
+            {
+              "en": "peel the vegetables",
+              "tr": "sebzeleri soy"
+            },
+            {
+              "en": "add some flour",
+              "tr": "biraz un ekle"
+            },
+            {
+              "en": "stir the soup",
+              "tr": "çorbayı karıştır"
+            }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "theme": "Telefonda",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What do you usually say when you answer the phone?",
+          "questionTr": "Telefona cevap verdiğinde genellikle ne söylersin?",
+          "modelAnswer": "I usually say 'Hello, this is my name speaking.'",
+          "modelAnswerTr": "Genellikle 'Merhaba, ben adım konuşuyorum.' derim."
+        },
+        {
+          "type": "personal",
+          "question": "Which way of communication do you prefer, calling or texting? Why?",
+          "questionTr": "Hangi iletişim yolunu tercih edersin, arama mı yazma mı? Neden?",
+          "modelAnswer": "I prefer texting because it is quick and I can think about my answer.",
+          "modelAnswerTr": "Yazışmayı tercih ederim çünkü hızlıdır ve cevabımı düşünebilirim."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Kenan ile görüşebilir miyim lütfen?' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "Could I speak to Kenan please?",
+            "Could you speak to Kenan please?",
+            "Are you Kenan please?",
+            "Do you speak to Kenan please?"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Could I' kalıbı izin isterken kullanılır."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Who is calling?' sorusunun Türkçesi hangisidir?",
+          "options": [
+            "Kim arıyor?",
+            "Kimi arıyorsun?",
+            "Ne zaman aradın?",
+            "Nereden arıyorsun?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "Birinden telefonu bağlamasını istediğimizde hangi ifadeyi kullanırız?",
+          "options": [
+            "Could you put me through to Kenan please?",
+            "Could you hang up please?",
+            "Could you spell your name please?",
+            "Could you call me back please?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'I'm sorry, he is on another line now.' cümlesinin Türkçesi hangisidir?",
+          "options": [
+            "Üzgünüm, o şu an diğer hatta.",
+            "Üzgünüm, o şu an toplantıda.",
+            "Üzgünüm, yanlış numarayı aradınız.",
+            "Üzgünüm, hat kötü."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "statement": "'Can I take a message?' ifadesi mesaj almak isteyen kişi tarafından kullanılır.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'Hold on' ve 'Hang up' aynı anlama gelir, ikisi de 'hatta beklemek' demektir.",
+          "correct": false,
+          "explanation": "'Hold on' hatta beklemek, 'hang up' ise telefonu kapatmak anlamına gelir."
+        },
+        {
+          "type": "tf",
+          "statement": "'May I ask who is calling?' sorusu, arayan kişinin kim olduğunu öğrenmek için kullanılır.",
+          "correct": true
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "______ I speak to Mr. Watson, please? (İzin isterken kullanılır - Kenan ile görüşebilir miyim?)",
+          "answer": "could"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Don't ______ up the phone please. (Lütfen telefonu kapatma.)",
+          "answer": "hang"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Could you ______ your name please? (Adınızı harf harf söyler misiniz?)",
+          "answer": "spell"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Would you like to leave a ______? (Mesaj bırakmak ister misiniz?)",
+          "answer": "message"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sorry, it is a bad______. (Üzgünüm, hat kötü.)",
+          "answer": "line"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "hang on",
+              "tr": "hatta beklemek"
+            },
+            {
+              "en": "hang up",
+              "tr": "telefonu kapatmak"
+            },
+            {
+              "en": "pick up",
+              "tr": "telefonu açmak"
+            },
+            {
+              "en": "call back",
+              "tr": "geri aramak"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "Can I take your number?",
+              "tr": "Numaranızı alabilir miyim?"
+            },
+            {
+              "en": "May I ask who is calling?",
+              "tr": "Kimin aradığını sorabilir miyim?"
+            },
+            {
+              "en": "Could I speak with Ahmet please?",
+              "tr": "Ahmet ile görüşebilir miyim lütfen?"
+            },
+            {
+              "en": "Can I leave a message?",
+              "tr": "Mesaj bırakabilir miyim?"
+            }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "theme": "İnternet",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "Why do you use the internet?",
+          "questionTr": "İnterneti neden kullanırsın?",
+          "modelAnswer": "I use the internet to keep in touch with my friends and to do research for school.",
+          "modelAnswerTr": "İnterneti arkadaşlarımla iletişim kurmak ve okul için araştırma yapmak için kullanırım."
+        },
+        {
+          "type": "personal",
+          "question": "How many hours do you spend on the net every day?",
+          "questionTr": "Her gün internette kaç saat geçiriyorsun?",
+          "modelAnswer": "I spend about two hours on the net every day.",
+          "modelAnswerTr": "Her gün internette yaklaşık iki saat geçiriyorum."
+        },
+        {
+          "type": "personal",
+          "question": "What precautions do you take for internet safety?",
+          "questionTr": "İnternet güvenliği için hangi önlemleri alırsın?",
+          "modelAnswer": "I never share my personal information and I use strong passwords.",
+          "modelAnswerTr": "Asla kişisel bilgilerimi paylaşmam ve güçlü şifreler kullanırım."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Neyi kastediyorsun?' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "What do you mean?",
+            "What do you use?",
+            "How do you connect?",
+            "Why do you ask?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'Şifreni gizli tut.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "Keep your password secret.",
+            "Share your password online.",
+            "Delete your password.",
+            "Send your password to friends."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "Aşağıdakilerden hangisi 'giriş yapmak' anlamına gelir?",
+          "options": [
+            "log in",
+            "log out",
+            "log off",
+            "delete"
+          ],
+          "correctIndex": 0,
+          "explanation": "log in = log on = sign in (giriş yapmak); log out = log off (çıkış yapmak)"
+        },
+        {
+          "type": "mc",
+          "prompt": "'Tanımadığın insanlardan gelen arkadaşlık isteklerini reddet.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "Refuse unknown people's friend request.",
+            "Accept unknown people's friend request.",
+            "Send a friend request to strangers.",
+            "Ignore your own friend request."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'Ne anlama geldiğini açıklar mısın?' sorusunun İngilizcesi hangisidir?",
+          "options": [
+            "Can you explain what it means?",
+            "What do you mean by that?",
+            "In other words...",
+            "I mean..."
+          ],
+          "correctIndex": 0,
+          "explanation": "Bu kalıp doğrudan açıklama isteyen bir sorudur; diğerleri de açıklama ile ilgili kalıplardır ama soru formunda değildir."
+        },
+        {
+          "type": "tf",
+          "statement": "'Log out' ve 'log off' aynı anlama gelir: çıkış yapmak.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'What do you mean?' sorusunun Türkçe anlamı 'Nasıl bağlanırsın?'dır.",
+          "correct": false,
+          "explanation": "'What do you mean?' = 'Neyi kastediyorsun?' demektir."
+        },
+        {
+          "type": "tf",
+          "statement": "İnternet güvenlik kurallarına göre, bir dosya indirmeden önce bir yetişkinle kontrol etmek önerilir.",
+          "correct": true
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Are you an internet ______? (bağımlı)",
+          "answer": "addict"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Keep your password ______. (gizli)",
+          "answer": "secret"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Don't share your ______ information. (kişisel)",
+          "answer": "personal"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "'Giriş yapmak' = log in / log on / sign ______",
+          "answer": "in"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Which ______ do you use to connect to the internet? (cihaz)",
+          "answer": "device"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "log in",
+              "tr": "giriş yapmak"
+            },
+            {
+              "en": "log out",
+              "tr": "çıkış yapmak"
+            },
+            {
+              "en": "sign up",
+              "tr": "kayıt olmak"
+            },
+            {
+              "en": "friend request",
+              "tr": "arkadaşlık isteği"
+            },
+            {
+              "en": "password",
+              "tr": "şifre"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "What do you mean?",
+              "tr": "Neyi kastediyorsun?"
+            },
+            {
+              "en": "In other words...",
+              "tr": "Başka bir deyişle..."
+            },
+            {
+              "en": "I mean...",
+              "tr": "Demek istediğim şey..."
+            },
+            {
+              "en": "Can you explain what it means?",
+              "tr": "Ne anlama geldiğini açıklar mısın?"
+            }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "theme": "Maceralar ve Ekstrem Sporlar",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "Which extreme sport would you like to try? Why?",
+          "questionTr": "Hangi ekstrem sporu denemek istersin? Neden?",
+          "modelAnswer": "I would like to try skydiving because it looks very exciting.",
+          "modelAnswerTr": "Skydiving denemek isterim çünkü çok heyecan verici görünüyor."
+        },
+        {
+          "type": "personal",
+          "question": "Are you an adrenaline seeker? What kind of equipment do you need for your favorite sport?",
+          "questionTr": "Adrenalin bağımlısı mısın? Favori sporun için hangi ekipmanlara ihtiyacın var?",
+          "modelAnswer": "Yes, I am. I need a helmet and kneepads for skateboarding.",
+          "modelAnswerTr": "Evet, öyleyim. Kaykay için kask ve dizliklere ihtiyacım var."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Basketbolu, bisiklete tercih ederim.' cümlesinin doğru İngilizcesi hangisidir?",
+          "options": [
+            "I prefer basketball to bike.",
+            "I prefer basketball than bike.",
+            "I would rather basketball to bike.",
+            "I prefer to basketball bike."
+          ],
+          "correctIndex": 0,
+          "explanation": "Prefer kelimesinden sonra 'to' kullanılır."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Kitap okumayı, televizyon izlemeye tercih ederim.' cümlesinin doğru İngilizcesi hangisidir?",
+          "options": [
+            "I would rather read a book than watch tv.",
+            "I would rather reading a book than watching tv.",
+            "I prefer read a book than watch tv.",
+            "I would rather to read a book than to watch tv."
+          ],
+          "correctIndex": 0,
+          "explanation": "Would rather'dan sonra fiil yalın halde kullanılır (read, watch)."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Golf, gökyüzü dalışından daha güvenlidir.' cümlesinin doğru İngilizcesi hangisidir?",
+          "options": [
+            "Golf is safer than skydiving.",
+            "Golf is more safe than skydiving.",
+            "Golf is safer as skydiving.",
+            "Golf is the safer than skydiving."
+          ],
+          "correctIndex": 0,
+          "explanation": "Safe tek heceli bir sıfat olduğu için sonuna '-er' eklenir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Rafting, okçuluktan daha zorlayıcıdır.' cümlesinin doğru İngilizcesi hangisidir?",
+          "options": [
+            "Rafting is more challenging than archery.",
+            "Rafting is challenginger than archery.",
+            "Rafting is more challenging as archery.",
+            "Rafting is challenging than archery."
+          ],
+          "correctIndex": 0,
+          "explanation": "Challenging çok heceli bir sıfat olduğu için önüne 'more' getirilir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Good' sıfatının kıyaslama (comparative) hali hangisidir?",
+          "options": [
+            "better",
+            "gooder",
+            "more good",
+            "goodest"
+          ],
+          "correctIndex": 0,
+          "explanation": "Good sıfatı düzensizdir: good-better-best."
+        },
+        {
+          "type": "tf",
+          "statement": "'I prefer playing basketball to riding a bike.' cümlesinde prefer'dan sonra gelen fiiller '-ing' eki alır.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'Would rather' yapısında tercihler arasına 'to' kelimesi konulur.",
+          "correct": false,
+          "explanation": "Would rather yapısında 'than' kullanılır, 'to' değil; 'to' prefer yapısında kullanılır."
+        },
+        {
+          "type": "tf",
+          "statement": "'Tennis is worse than basketball.' cümlesinin Türkçesi 'Tenis, basketboldan daha kötüdür.'dür.",
+          "correct": true
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Hang-gliding is ______ (hard) than scuba diving.",
+          "answer": "harder"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Paragliding is ______ (dangerous) than soccer.",
+          "answer": "more dangerous"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I prefer basketball ______ bike.",
+          "answer": "to"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I would rather play basketball ______ ride a bike.",
+          "answer": "than"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "'Bad' sıfatının kıyaslama hali ______'dur.",
+          "answer": "worse"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I prefer ______ (read) a book to watching tv.",
+          "answer": "reading"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "skydiving",
+              "tr": "gökyüzü dalışı"
+            },
+            {
+              "en": "rock climbing",
+              "tr": "kaya tırmanışı"
+            },
+            {
+              "en": "scuba diving",
+              "tr": "tüplü dalış"
+            },
+            {
+              "en": "paragliding",
+              "tr": "yamaç paraşütü"
+            },
+            {
+              "en": "bungee-jumping",
+              "tr": "elastik ip ile yüksekten atlama"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "good - better",
+              "tr": "iyi - daha iyi"
+            },
+            {
+              "en": "bad - worse",
+              "tr": "kötü - daha kötü"
+            },
+            {
+              "en": "far - further",
+              "tr": "uzak - daha uzak"
+            },
+            {
+              "en": "little - less",
+              "tr": "az - daha az"
+            }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "theme": "Turizm ve En Üstünlük Hâli",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What is the most fascinating place you have ever visited?",
+          "questionTr": "Şimdiye kadar ziyaret ettiğin en büyüleyici yer neresi?",
+          "modelAnswer": "The most fascinating place I have ever visited is Cappadocia.",
+          "modelAnswerTr": "Şimdiye kadar ziyaret ettiğim en büyüleyici yer Kapadokya'dır."
+        },
+        {
+          "type": "personal",
+          "question": "Would you rather travel by plane or by bus? Why?",
+          "questionTr": "Uçakla mı yoksa otobüsle mi seyahat etmeyi tercih edersin? Neden?",
+          "modelAnswer": "I would rather travel by plane than by bus because it is faster.",
+          "modelAnswerTr": "Otobüsle seyahat etmektense uçakla seyahat etmeyi tercih ederim çünkü daha hızlıdır."
+        },
+        {
+          "type": "personal",
+          "question": "In your opinion, what is the best type of holiday?",
+          "questionTr": "Sence en iyi tatil türü nedir?",
+          "modelAnswer": "In my opinion, a cultural holiday is the best type of holiday.",
+          "modelAnswerTr": "Bana göre, kültürel tatil en iyi tatil türüdür."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Konya, Türkiye'deki en geniş şehirdir.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "Konya is the largest city in Türkiye.",
+            "Konya is larger city in Türkiye.",
+            "Konya is the more large city in Türkiye.",
+            "Konya is large city in Türkiye."
+          ],
+          "correctIndex": 0,
+          "explanation": "Tek heceli sıfatlarda 'en' anlamı için sıfatın sonuna 'the...est' eklenir: the largest."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Uçak en rahat araçtır.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "Plane is comfortabler vehicle.",
+            "Plane is the most comfortable vehicle.",
+            "Plane is the comfortablest vehicle.",
+            "Plane is more comfortable vehicle."
+          ],
+          "correctIndex": 1,
+          "explanation": "Çok heceli sıfatlarda 'en' anlamı için sıfatın önüne 'the most' getirilir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'good' sıfatının en üstünlük hâli hangisidir?",
+          "options": [
+            "the goodest",
+            "the more good",
+            "the best",
+            "the most good"
+          ],
+          "correctIndex": 2,
+          "explanation": "'good' düzensiz bir sıfattır: good - better - the best."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Tarihi yerleri modern binalara tercih ederim.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "I prefer modern buildings to historic sites.",
+            "I prefer historic sites to modern buildings.",
+            "I would rather historic sites than modern buildings.",
+            "I prefer historic sites than modern buildings."
+          ],
+          "correctIndex": 1,
+          "explanation": "'prefer A to B' yapısı 'A'yı B'ye tercih etmek' anlamına gelir."
+        },
+        {
+          "type": "tf",
+          "statement": "'Göreme is the best place I have ever visited.' cümlesi doğru bir üstünlük yapısıdır.",
+          "correct": true,
+          "explanation": "'good' düzensiz sıfattır ve en üstünlük hâli 'the best' şeklindedir."
+        },
+        {
+          "type": "tf",
+          "statement": "Tek heceli sıfatlarda 'en' anlamı katmak için sıfatın önüne 'the most' getirilir.",
+          "correct": false,
+          "explanation": "Tek heceli sıfatlarda sıfatın sonuna '-est' eklenir; 'the most' çok heceli sıfatlar için kullanılır."
+        },
+        {
+          "type": "tf",
+          "statement": "'I suppose Türkiye is more attractive than Greece.' cümlesinin Türkçesi 'Türkiye'nin Yunanistan'dan daha çekici olduğunu zannediyorum.'dur.",
+          "correct": true
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Levent is the ______ student in the class. (tall)",
+          "answer": "tallest"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ephesus ancient city is the ______ fascinating place in İzmir.",
+          "answer": "most"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "This is the ______ (bad) holiday I have ever had.",
+          "answer": "worst"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I would rather travel by plane ______ by bus.",
+          "answer": "than"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I prefer historic sites ______ modern buildings.",
+          "answer": "to"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "______ my opinion, cultural holiday is very exciting.",
+          "answer": "in"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "I think",
+              "tr": "Düşünüyorum"
+            },
+            {
+              "en": "I believe",
+              "tr": "İnanıyorum"
+            },
+            {
+              "en": "I suppose",
+              "tr": "Zannediyorum"
+            },
+            {
+              "en": "In my opinion",
+              "tr": "Bana göre / Düşünceme göre"
+            },
+            {
+              "en": "I guess",
+              "tr": "Sanırım"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "the tallest",
+              "tr": "en uzun"
+            },
+            {
+              "en": "the safest",
+              "tr": "en güvenli"
+            },
+            {
+              "en": "the most dangerous",
+              "tr": "en tehlikeli"
+            },
+            {
+              "en": "the most challenging",
+              "tr": "en zorlayıcı"
+            },
+            {
+              "en": "the best",
+              "tr": "en iyi"
+            }
+          ]
+        }
+      ]
+    },
+    "8": {
+      "theme": "Ev İşleri ve Sorumluluklar",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What is your responsibility at home?",
+          "questionTr": "Evdeki sorumluluğun nedir?",
+          "modelAnswer": "I am responsible for washing the dishes every evening.",
+          "modelAnswerTr": "Her akşam bulaşıkları yıkamaktan sorumluyum."
+        },
+        {
+          "type": "personal",
+          "question": "What chore do you hate doing? Why?",
+          "questionTr": "Yapmaktan nefret ettiğin ev işi nedir? Neden?",
+          "modelAnswer": "I hate ironing the clothes because it is boring.",
+          "modelAnswerTr": "Kıyafetleri ütülemekten nefret ederim çünkü sıkıcıdır."
+        },
+        {
+          "type": "personal",
+          "question": "What must you do before going to school every day?",
+          "questionTr": "Her gün okula gitmeden önce ne yapmalısın?",
+          "modelAnswer": "I must make my bed and have breakfast before going to school.",
+          "modelAnswerTr": "Okula gitmeden önce yatağımı toplamalı ve kahvaltı yapmalıyım."
+        },
+        {
+          "type": "mc",
+          "prompt": "'O kız, üniforma giymeli.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "She must wear the uniform.",
+            "She should wears the uniform.",
+            "She musts wear the uniform.",
+            "She must wearing the uniform."
+          ],
+          "correctIndex": 0,
+          "explanation": "'must' modal fiildir, sonrasına fiilin yalın hâli gelir ve özneye göre değişmez."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Ütü yapmak zorunda değilsin.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "You mustn't do ironing.",
+            "You don't have to do ironing.",
+            "You shouldn't do ironing.",
+            "You doesn't have to do ironing."
+          ],
+          "correctIndex": 1,
+          "explanation": "Zorunluluğun olmadığını belirtmek için I/YOU/WE/THEY ile 'don't have to' kullanılır."
+        },
+        {
+          "type": "mc",
+          "prompt": "'Koridorlarda koşmamalıyız.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "We don't have to run in corridors.",
+            "We shouldn't run in corridors.",
+            "We mustn't run in corridors.",
+            "We haven't to run in corridors."
+          ],
+          "correctIndex": 2,
+          "explanation": "Yasak belirtmek için 'mustn't' kullanılır."
+        },
+        {
+          "type": "mc",
+          "prompt": "'O erkek, çimleri biçmeli.' (zorunluluk) cümlesinin doğru hâli hangisidir?",
+          "options": [
+            "He have to mow the lawn.",
+            "He has to mow the lawn.",
+            "He must to mow the lawn.",
+            "He having to mow the lawn."
+          ],
+          "correctIndex": 1,
+          "explanation": "HE/SHE/IT ile 'has to' kullanılır."
+        },
+        {
+          "type": "tf",
+          "statement": "'You should wash the dishes.' cümlesi bir tavsiye/öğüt anlamı taşır.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'Have to' ifadesi sadece HE/SHE/IT özneleriyle kullanılır.",
+          "correct": false,
+          "explanation": "'Have to' I/YOU/WE/THEY ile, 'has to' HE/SHE/IT ile kullanılır."
+        },
+        {
+          "type": "tf",
+          "statement": "'I like vacuuming the carpet.' cümlesinin Türkçesi 'Halı süpürmeyi severim.'dir.",
+          "correct": true
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "You ______ wash the dishes. (tavsiye)",
+          "answer": "should"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I ______ do my homework. (zorunluluk)",
+          "answer": "must"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "She ______ to do laundry. (zorunluluk, she)",
+          "answer": "has"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "We ______ step on the grass. (yasak)",
+          "answer": "mustn't"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "He doesn't have ______ clean the windows.",
+          "answer": "to"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Watering the flowers is my ______. (görev)",
+          "answer": "duty"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "must",
+              "tr": "-meli/-malı (zorunluluk)"
+            },
+            {
+              "en": "should",
+              "tr": "-meli/-malı (tavsiye)"
+            },
+            {
+              "en": "don't have to",
+              "tr": "zorunda değil"
+            },
+            {
+              "en": "mustn't",
+              "tr": "yapmamalı (yasak)"
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "set the table",
+              "tr": "masayı kurmak"
+            },
+            {
+              "en": "take out the garbage",
+              "tr": "çöpleri dışarı çıkarmak"
+            },
+            {
+              "en": "do the laundry",
+              "tr": "çamaşır yıkamak"
+            },
+            {
+              "en": "mop the floor",
+              "tr": "yeri paspaslamak"
+            },
+            {
+              "en": "make the bed",
+              "tr": "yatağı toplamak"
+            }
+          ]
+        }
+      ]
+    },
+    "9": {
+      "theme": "Bilim ve Buluşlar",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What did you discover about yourself last year?",
+          "questionTr": "Geçen yıl kendinle ilgili ne keşfettin?",
+          "modelAnswer": "I discovered that I really enjoy doing science experiments.",
+          "modelAnswerTr": "Bilim deneyleri yapmaktan gerçekten hoşlandığımı keşfettim."
+        },
+        {
+          "type": "personal",
+          "question": "What are you doing at the moment?",
+          "questionTr": "Şu anda ne yapıyorsun?",
+          "modelAnswer": "I am reading a book about famous inventors.",
+          "modelAnswerTr": "Ünlü mucitler hakkında bir kitap okuyorum."
+        },
+        {
+          "type": "personal",
+          "question": "Which invention do you admire the most and why?",
+          "questionTr": "Hangi icada hayransın ve neden?",
+          "modelAnswer": "I admire the telephone because it changed how people communicate.",
+          "modelAnswerTr": "Telefona hayranım çünkü insanların iletişim şeklini değiştirdi."
+        },
+        {
+          "type": "mc",
+          "prompt": "'She developed her invention.' cümlesinin Türkçesi hangisidir?",
+          "options": [
+            "O, icadını geliştirdi.",
+            "O, icadını geliştirecek.",
+            "O, icadını geliştiriyor.",
+            "O, icadını geliştirmedi."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "Aşağıdakilerden hangisi doğru bir geçmiş zaman (Past Tense) olumsuz cümlesidir?",
+          "options": [
+            "He didn't go to school.",
+            "He don't went to school.",
+            "He not go to school.",
+            "He isn't go to school."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'Did he invent the first telephone?' sorusunun Türkçesi hangisidir?",
+          "options": [
+            "O, ilk telefonu icat etti mi?",
+            "O, ilk telefonu icat edecek mi?",
+            "O, ilk telefonu icat ediyor mu?",
+            "O, ilk telefonu icat etmedi mi?"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'I ______ (graduate) from the university last year.' boşluğa hangisi gelmelidir?",
+          "options": [
+            "graduated",
+            "graduate",
+            "graduates",
+            "am graduating"
+          ],
+          "correctIndex": 0,
+          "explanation": "Geçmiş zamanda özneden sonra fiilin 2. hâli kullanılır."
+        },
+        {
+          "type": "mc",
+          "prompt": "'She is conducting an experiment.' cümlesinin Türkçesi hangisidir?",
+          "options": [
+            "O, bir deney yapıyor.",
+            "O, bir deney yaptı.",
+            "O, bir deney yapacak.",
+            "O, bir deney yapar."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "statement": "'When did he invent the first telephone?' sorusu bir WH question (soru kökü ile kurulan soru) örneğidir.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "Present Continuous Tense'de olumlu cümle kurarken 'am/is/are' kullanılmaz.",
+          "correct": false,
+          "explanation": "Present Continuous'ta özne + am/is/are + fiil-ing yapısı kullanılır."
+        },
+        {
+          "type": "tf",
+          "statement": "'They win the Nobel Prize.' cümlesi doğru bir geçmiş zaman cümlesidir.",
+          "correct": false,
+          "explanation": "Doğrusu 'They won the Nobel Prize.' olmalıdır çünkü geçmiş zamanda fiil 2. hâlini alır."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "He ______ (become) a professor. (Geçmiş zaman)",
+          "answer": "became"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I am work______ on a new technological device. (Şimdiki zaman eki)",
+          "answer": "ing"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "______ you write a book? (Geçmiş zaman soru kalıbı)",
+          "answer": "did"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "He ______ not go to school when he was a child. (Geçmiş zaman olumsuz)",
+          "answer": "did"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Is she operat______ the machine? (Şimdiki zaman)",
+          "answer": "ing"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "What ______ he discover? (Geçmiş zaman WH soru)",
+          "answer": "did"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "achievement",
+              "tr": "başarı"
+            },
+            {
+              "en": "invention",
+              "tr": "icat"
+            },
+            {
+              "en": "discovery",
+              "tr": "keşif"
+            },
+            {
+              "en": "experiment",
+              "tr": "deney"
+            },
+            {
+              "en": "scientist",
+              "tr": "bilim insanı"
+            }
+          ]
+        }
+      ]
+    },
+    "10": {
+      "theme": "Doğal Afetler ve Gelecek",
+      "activities": [
+        {
+          "type": "personal",
+          "question": "What do you think will happen to the environment in the future?",
+          "questionTr": "Sence gelecekte çevreye ne olacak?",
+          "modelAnswer": "I think there will be more droughts and less clean water in the future.",
+          "modelAnswerTr": "Bence gelecekte daha fazla kuraklık ve daha az temiz su olacak."
+        },
+        {
+          "type": "personal",
+          "question": "What should people do to protect the environment?",
+          "questionTr": "İnsanlar çevreyi korumak için ne yapmalı?",
+          "modelAnswer": "People should recycle more and use public transportation.",
+          "modelAnswerTr": "İnsanlar daha çok geri dönüşüm yapmalı ve toplu taşıma kullanmalı."
+        },
+        {
+          "type": "personal",
+          "question": "What is the biggest environmental problem in your city?",
+          "questionTr": "Şehrindeki en büyük çevre sorunu nedir?",
+          "modelAnswer": "The biggest problem in my city is air pollution from cars.",
+          "modelAnswerTr": "Şehrimdeki en büyük sorun arabalardan kaynaklanan hava kirliliğidir."
+        },
+        {
+          "type": "mc",
+          "prompt": "'There will not be enough water in the future.' cümlesinin Türkçesi hangisidir?",
+          "options": [
+            "Gelecekte, yeterli su olmayacak.",
+            "Gelecekte, yeterli su olacak.",
+            "Gelecekte, yeterli su yok.",
+            "Gelecekte, yeterli su olmadı."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'Çevreyi kirletmemelisin.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "You should not pollute the environment.",
+            "You should pollute the environment.",
+            "You will not pollute the environment.",
+            "You did not pollute the environment."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "Gelecekle ilgili tahminlerde bulunurken hangi yardımcı fiil kullanılır?",
+          "options": [
+            "will",
+            "did",
+            "should have",
+            "was"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'You should use renewable energy sources.' cümlesinin Türkçesi hangisidir?",
+          "options": [
+            "Yenilenebilir enerji kaynaklarını kullanmalısın.",
+            "Yenilenebilir enerji kaynaklarını kullanmamalısın.",
+            "Yenilenebilir enerji kaynaklarını kullanacaksın.",
+            "Yenilenebilir enerji kaynaklarını kullandın."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "mc",
+          "prompt": "'Hayvanları avlamamalısın.' cümlesinin İngilizcesi hangisidir?",
+          "options": [
+            "You shouldn't hunt animals.",
+            "You should hunt animals.",
+            "You won't hunt animals.",
+            "You didn't hunt animals."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "type": "tf",
+          "statement": "'Won't' kelimesi 'will not' kelimesinin kısaltmasıdır.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'Should' kelimesi bir öneride bulunmak veya tavsiye vermek için kullanılır.",
+          "correct": true
+        },
+        {
+          "type": "tf",
+          "statement": "'You should pollute the environment.' cümlesi çevreyi korumak için doğru bir tavsiyedir.",
+          "correct": false,
+          "explanation": "Doğrusu 'You should not pollute the environment.' olmalıdır."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "I think we ______ have water shortage in the future. (Gelecek zaman)",
+          "answer": "will"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "There ______ not be a lot of rain. (Gelecek zaman olumsuz)",
+          "answer": "will"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "You ______ use environmentally friendly products. (Tavsiye)",
+          "answer": "should"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "You ______ pour waste into the sea. (Olumsuz tavsiyenin kısa hali)",
+          "answer": "shouldn't"
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "In my opinion, there ______ be serious droughts in the future. (Gelecek zaman)",
+          "answer": "will"
+        },
+        {
+          "type": "matching",
+          "pairs": [
+            {
+              "en": "drought",
+              "tr": "kuraklık"
+            },
+            {
+              "en": "flood",
+              "tr": "sel baskını"
+            },
+            {
+              "en": "earthquake",
+              "tr": "deprem"
+            },
+            {
+              "en": "pollution",
+              "tr": "kirlilik"
+            },
+            {
+              "en": "recycle",
+              "tr": "geri dönüşüm"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

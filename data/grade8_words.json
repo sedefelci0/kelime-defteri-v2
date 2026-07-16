@@ -1,0 +1,6939 @@
+[
+  {
+    "unit": 1,
+    "english": "Honest",
+    "pronunciation": "Onist",
+    "turkish_meaning": "Dürüst",
+    "example_sentence": "She is always honest with her friends."
+  },
+  {
+    "unit": 1,
+    "english": "Generous",
+    "pronunciation": "Ceniris",
+    "turkish_meaning": "Cömert",
+    "example_sentence": "He is very generous; he shares everything."
+  },
+  {
+    "unit": 1,
+    "english": "Funny",
+    "pronunciation": "Fani",
+    "turkish_meaning": "Komik",
+    "example_sentence": "My best friend is really funny."
+  },
+  {
+    "unit": 1,
+    "english": "Amusing",
+    "pronunciation": "Amyuzing",
+    "turkish_meaning": "Eğlenceli",
+    "example_sentence": "It was an amusing story."
+  },
+  {
+    "unit": 1,
+    "english": "Fair",
+    "pronunciation": "Fer",
+    "turkish_meaning": "Adil",
+    "example_sentence": "A good teacher is fair to all students."
+  },
+  {
+    "unit": 1,
+    "english": "Crazy",
+    "pronunciation": "Kreyzi",
+    "turkish_meaning": "Deli, çılgın",
+    "example_sentence": "We had a crazy adventure last summer."
+  },
+  {
+    "unit": 1,
+    "english": "Cool",
+    "pronunciation": "Kul",
+    "turkish_meaning": "Havalı",
+    "example_sentence": "Everyone thinks he is cool."
+  },
+  {
+    "unit": 1,
+    "english": "Relaxed",
+    "pronunciation": "Rilekst",
+    "turkish_meaning": "Sakin",
+    "example_sentence": "She stayed relaxed during the exam."
+  },
+  {
+    "unit": 1,
+    "english": "Calm",
+    "pronunciation": "Kam",
+    "turkish_meaning": "Sakin",
+    "example_sentence": "He remained calm in the difficult situation."
+  },
+  {
+    "unit": 1,
+    "english": "Respectful",
+    "pronunciation": "Rispektful",
+    "turkish_meaning": "Saygılı",
+    "example_sentence": "Students should be respectful to teachers."
+  },
+  {
+    "unit": 1,
+    "english": "Selfish",
+    "pronunciation": "Selfiş",
+    "turkish_meaning": "Bencil",
+    "example_sentence": "A selfish friend only thinks about himself."
+  },
+  {
+    "unit": 1,
+    "english": "Punctual",
+    "pronunciation": "Panktuıl",
+    "turkish_meaning": "Dakik",
+    "example_sentence": "He is always punctual for meetings."
+  },
+  {
+    "unit": 1,
+    "english": "Helpful",
+    "pronunciation": "Helpful",
+    "turkish_meaning": "Yardımsever",
+    "example_sentence": "My neighbor is very helpful."
+  },
+  {
+    "unit": 1,
+    "english": "Patient",
+    "pronunciation": "Peyşınt",
+    "turkish_meaning": "Sabırlı",
+    "example_sentence": "A good teacher is patient with students."
+  },
+  {
+    "unit": 1,
+    "english": "Outgoing",
+    "pronunciation": "Autgoing",
+    "turkish_meaning": "Dışa dönük",
+    "example_sentence": "She is outgoing and loves meeting new people."
+  },
+  {
+    "unit": 1,
+    "english": "Loyal",
+    "pronunciation": "Loyıl",
+    "turkish_meaning": "Sadık",
+    "example_sentence": "A loyal friend never lets you down."
+  },
+  {
+    "unit": 1,
+    "english": "Kind",
+    "pronunciation": "Kayind",
+    "turkish_meaning": "Kibar",
+    "example_sentence": "He is kind to everyone he meets."
+  },
+  {
+    "unit": 1,
+    "english": "Laid back",
+    "pronunciation": "Leyd bek",
+    "turkish_meaning": "Umursamaz",
+    "example_sentence": "My brother has a laid back attitude about life."
+  },
+  {
+    "unit": 1,
+    "english": "Sneaky",
+    "pronunciation": "Sniki",
+    "turkish_meaning": "Sinsi",
+    "example_sentence": "The sneaky cat stole the food quietly."
+  },
+  {
+    "unit": 1,
+    "english": "Tactful",
+    "pronunciation": "Taktful",
+    "turkish_meaning": "İnce düşünceli",
+    "example_sentence": "She gave tactful advice without hurting anyone."
+  },
+  {
+    "unit": 1,
+    "english": "Jealous",
+    "pronunciation": "Celıs",
+    "turkish_meaning": "Kıskanç",
+    "example_sentence": "He felt jealous of his friend's new bike."
+  },
+  {
+    "unit": 1,
+    "english": "Serious",
+    "pronunciation": "Siriıs",
+    "turkish_meaning": "Ciddi",
+    "example_sentence": "This is a serious problem we need to solve."
+  },
+  {
+    "unit": 1,
+    "english": "Solemn",
+    "pronunciation": "Solım",
+    "turkish_meaning": "Ciddi",
+    "example_sentence": "He made a solemn promise to his family."
+  },
+  {
+    "unit": 1,
+    "english": "Understanding",
+    "pronunciation": "Andırstending",
+    "turkish_meaning": "Anlayışlı",
+    "example_sentence": "My mother is very understanding."
+  },
+  {
+    "unit": 1,
+    "english": "Alone",
+    "pronunciation": "Alon",
+    "turkish_meaning": "Yalnız",
+    "example_sentence": "He prefers to study alone."
+  },
+  {
+    "unit": 1,
+    "english": "Stubborn",
+    "pronunciation": "Stabırn",
+    "turkish_meaning": "İnatçı",
+    "example_sentence": "My little sister is so stubborn."
+  },
+  {
+    "unit": 1,
+    "english": "Reliable",
+    "pronunciation": "Rilayıbıl",
+    "turkish_meaning": "Güvenilir",
+    "example_sentence": "He is a reliable person; you can count on him."
+  },
+  {
+    "unit": 1,
+    "english": "Unreliable",
+    "pronunciation": "Anrilayıbıl",
+    "turkish_meaning": "Güvenilmez",
+    "example_sentence": "I don't trust him, he is unreliable."
+  },
+  {
+    "unit": 1,
+    "english": "Aggressive",
+    "pronunciation": "Egresiv",
+    "turkish_meaning": "Agresif",
+    "example_sentence": "The dog became aggressive when scared."
+  },
+  {
+    "unit": 1,
+    "english": "Determined",
+    "pronunciation": "Ditörmind",
+    "turkish_meaning": "Kararlı",
+    "example_sentence": "She is determined to pass the exam."
+  },
+  {
+    "unit": 1,
+    "english": "Adventurous",
+    "pronunciation": "Edvençırıs",
+    "turkish_meaning": "Maceracı",
+    "example_sentence": "He is an adventurous traveler."
+  },
+  {
+    "unit": 1,
+    "english": "Arrogant",
+    "pronunciation": "Erıgınt",
+    "turkish_meaning": "Kibirli",
+    "example_sentence": "Nobody likes an arrogant person."
+  },
+  {
+    "unit": 1,
+    "english": "Mean",
+    "pronunciation": "Min",
+    "turkish_meaning": "Kaba",
+    "example_sentence": "Don't be mean to your classmates."
+  },
+  {
+    "unit": 1,
+    "english": "Supportive",
+    "pronunciation": "Sıportiv",
+    "turkish_meaning": "Destekleyici",
+    "example_sentence": "My parents are always supportive of my dreams."
+  },
+  {
+    "unit": 1,
+    "english": "Self-centered",
+    "pronunciation": "Self sentırd",
+    "turkish_meaning": "Benmerkezci",
+    "example_sentence": "A self-centered person only cares about himself."
+  },
+  {
+    "unit": 1,
+    "english": "Bad-tempered",
+    "pronunciation": "Bed tempırd",
+    "turkish_meaning": "Sinirli",
+    "example_sentence": "He gets bad-tempered when he is tired."
+  },
+  {
+    "unit": 1,
+    "english": "Self disciplined",
+    "pronunciation": "Self disiplind",
+    "turkish_meaning": "Disiplinli",
+    "example_sentence": "She is a self disciplined student who studies every day."
+  },
+  {
+    "unit": 1,
+    "english": "Liar",
+    "pronunciation": "Layır",
+    "turkish_meaning": "Yalancı",
+    "example_sentence": "Nobody trusts a liar."
+  },
+  {
+    "unit": 1,
+    "english": "Caring",
+    "pronunciation": "Kering",
+    "turkish_meaning": "Şefkatli",
+    "example_sentence": "She is a caring and kind person."
+  },
+  {
+    "unit": 1,
+    "english": "Ask",
+    "pronunciation": "Ask",
+    "turkish_meaning": "Sormak",
+    "example_sentence": "You can ask me for help anytime."
+  },
+  {
+    "unit": 1,
+    "english": "Argue",
+    "pronunciation": "Argyu",
+    "turkish_meaning": "Tartışmak",
+    "example_sentence": "Friends sometimes argue but then make up."
+  },
+  {
+    "unit": 1,
+    "english": "Call",
+    "pronunciation": "Kol",
+    "turkish_meaning": "Aramak",
+    "example_sentence": "I will call you tonight."
+  },
+  {
+    "unit": 1,
+    "english": "Back up",
+    "pronunciation": "Bek ap",
+    "turkish_meaning": "Desteklemek",
+    "example_sentence": "A true friend will always back you up."
+  },
+  {
+    "unit": 1,
+    "english": "Support",
+    "pronunciation": "Sıport",
+    "turkish_meaning": "Desteklemek",
+    "example_sentence": "Friends should support each other."
+  },
+  {
+    "unit": 1,
+    "english": "Buddy",
+    "pronunciation": "Badi",
+    "turkish_meaning": "Arkadaş",
+    "example_sentence": "He is my best buddy from school."
+  },
+  {
+    "unit": 1,
+    "english": "Friend",
+    "pronunciation": "Frend",
+    "turkish_meaning": "Arkadaş",
+    "example_sentence": "She is my closest friend."
+  },
+  {
+    "unit": 1,
+    "english": "Mate",
+    "pronunciation": "Meyt",
+    "turkish_meaning": "Arkadaş",
+    "example_sentence": "He is a good mate of mine."
+  },
+  {
+    "unit": 1,
+    "english": "Decide",
+    "pronunciation": "Disayd",
+    "turkish_meaning": "Karar vermek",
+    "example_sentence": "We need to decide where to go."
+  },
+  {
+    "unit": 1,
+    "english": "Count on",
+    "pronunciation": "Kaunt on",
+    "turkish_meaning": "Güvenmek",
+    "example_sentence": "You can always count on me."
+  },
+  {
+    "unit": 1,
+    "english": "Rely on",
+    "pronunciation": "Rilay on",
+    "turkish_meaning": "Güvenmek",
+    "example_sentence": "I rely on my friends for advice."
+  },
+  {
+    "unit": 1,
+    "english": "Trust",
+    "pronunciation": "Trast",
+    "turkish_meaning": "Güvenmek",
+    "example_sentence": "I trust my best friend completely."
+  },
+  {
+    "unit": 1,
+    "english": "Friendship",
+    "pronunciation": "Frendşip",
+    "turkish_meaning": "Arkadaşlık",
+    "example_sentence": "Their friendship lasted for many years."
+  },
+  {
+    "unit": 1,
+    "english": "Get on well with",
+    "pronunciation": "Get on vel vit",
+    "turkish_meaning": "İyi anlaşmak",
+    "example_sentence": "I get on well with my classmates."
+  },
+  {
+    "unit": 1,
+    "english": "Have fun",
+    "pronunciation": "Hev fan",
+    "turkish_meaning": "Eğlenmek",
+    "example_sentence": "We always have fun together."
+  },
+  {
+    "unit": 1,
+    "english": "Have similar interests",
+    "pronunciation": "Hev simılır intrests",
+    "turkish_meaning": "Benzer ilgi alanlarına sahip olmak",
+    "example_sentence": "We have similar interests in music."
+  },
+  {
+    "unit": 1,
+    "english": "Have in common",
+    "pronunciation": "Hev in komın",
+    "turkish_meaning": "Ortak noktası olmak",
+    "example_sentence": "We have a lot in common."
+  },
+  {
+    "unit": 1,
+    "english": "Help",
+    "pronunciation": "Help",
+    "turkish_meaning": "Yardım",
+    "example_sentence": "Thank you for your help."
+  },
+  {
+    "unit": 1,
+    "english": "Promise",
+    "pronunciation": "Promis",
+    "turkish_meaning": "Söz vermek",
+    "example_sentence": "I promise to be there on time."
+  },
+  {
+    "unit": 1,
+    "english": "Keep promise",
+    "pronunciation": "Kip promis",
+    "turkish_meaning": "Sözünü tutmak",
+    "example_sentence": "A good friend always keeps a promise."
+  },
+  {
+    "unit": 1,
+    "english": "Relationship",
+    "pronunciation": "Rileyşınşip",
+    "turkish_meaning": "İlişki",
+    "example_sentence": "They have a strong relationship."
+  },
+  {
+    "unit": 1,
+    "english": "Respect",
+    "pronunciation": "Rispekt",
+    "turkish_meaning": "Saygı",
+    "example_sentence": "We should treat others with respect."
+  },
+  {
+    "unit": 1,
+    "english": "Secret",
+    "pronunciation": "Sikrit",
+    "turkish_meaning": "Sır",
+    "example_sentence": "I will never tell your secret."
+  },
+  {
+    "unit": 1,
+    "english": "Keep secret",
+    "pronunciation": "Kip sikrit",
+    "turkish_meaning": "Sır tutmak",
+    "example_sentence": "Can you keep a secret?"
+  },
+  {
+    "unit": 1,
+    "english": "Occupied",
+    "pronunciation": "Okyupayd",
+    "turkish_meaning": "Meşgul",
+    "example_sentence": "Sorry, I am occupied right now."
+  },
+  {
+    "unit": 1,
+    "english": "Hungry",
+    "pronunciation": "Hangri",
+    "turkish_meaning": "Aç",
+    "example_sentence": "I am very hungry after school."
+  },
+  {
+    "unit": 1,
+    "english": "Full",
+    "pronunciation": "Ful",
+    "turkish_meaning": "Tok, dolu",
+    "example_sentence": "I am full after that big meal."
+  },
+  {
+    "unit": 1,
+    "english": "Stuffed",
+    "pronunciation": "Staft",
+    "turkish_meaning": "Tıka basa dolu",
+    "example_sentence": "I am stuffed after the dinner."
+  },
+  {
+    "unit": 1,
+    "english": "Share",
+    "pronunciation": "Şer",
+    "turkish_meaning": "Paylaşmak",
+    "example_sentence": "Friends should share their problems."
+  },
+  {
+    "unit": 1,
+    "english": "Spend time",
+    "pronunciation": "Spend taym",
+    "turkish_meaning": "Zaman geçirmek",
+    "example_sentence": "I love to spend time with my friends."
+  },
+  {
+    "unit": 1,
+    "english": "Tell a lie",
+    "pronunciation": "Tel ı lay",
+    "turkish_meaning": "Yalan söylemek",
+    "example_sentence": "A good friend never tells a lie."
+  },
+  {
+    "unit": 1,
+    "english": "Tell the truth",
+    "pronunciation": "Tel dı truth",
+    "turkish_meaning": "Doğruyu söylemek",
+    "example_sentence": "Always tell the truth to your friends."
+  },
+  {
+    "unit": 1,
+    "english": "Understand",
+    "pronunciation": "Andırstand",
+    "turkish_meaning": "Anlamak",
+    "example_sentence": "I understand your problem."
+  },
+  {
+    "unit": 1,
+    "english": "Invite",
+    "pronunciation": "İnvayt",
+    "turkish_meaning": "Davet etmek",
+    "example_sentence": "I want to invite you to my party."
+  },
+  {
+    "unit": 1,
+    "english": "Accept",
+    "pronunciation": "Aksept",
+    "turkish_meaning": "Kabul etmek",
+    "example_sentence": "She accepted my invitation."
+  },
+  {
+    "unit": 1,
+    "english": "Refuse",
+    "pronunciation": "Rifyuz",
+    "turkish_meaning": "Reddetmek",
+    "example_sentence": "He refused to come to the party."
+  },
+  {
+    "unit": 1,
+    "english": "Apologize",
+    "pronunciation": "Apolocayz",
+    "turkish_meaning": "Özür dilemek",
+    "example_sentence": "You should apologize for your mistake."
+  },
+  {
+    "unit": 1,
+    "english": "Attend/Join",
+    "pronunciation": "Atend/Coyn",
+    "turkish_meaning": "Katılmak",
+    "example_sentence": "Will you attend the meeting tomorrow?"
+  },
+  {
+    "unit": 1,
+    "english": "Date",
+    "pronunciation": "Deyt",
+    "turkish_meaning": "Tarih",
+    "example_sentence": "What is the date of the event?"
+  },
+  {
+    "unit": 1,
+    "english": "Give a reason",
+    "pronunciation": "Giv ı rizın",
+    "turkish_meaning": "Neden bildirmek",
+    "example_sentence": "Please give a reason for being late."
+  },
+  {
+    "unit": 1,
+    "english": "Make an excuse",
+    "pronunciation": "Meyk ın ekskyuz",
+    "turkish_meaning": "Mazeret bildirmek",
+    "example_sentence": "Don't make an excuse, just apologize."
+  },
+  {
+    "unit": 1,
+    "english": "Offer",
+    "pronunciation": "Ofır",
+    "turkish_meaning": "Önermek",
+    "example_sentence": "She offered to help me with my homework."
+  },
+  {
+    "unit": 1,
+    "english": "Place",
+    "pronunciation": "Pleys",
+    "turkish_meaning": "Yer",
+    "example_sentence": "This is a nice place to meet friends."
+  },
+  {
+    "unit": 1,
+    "english": "Day",
+    "pronunciation": "Dey",
+    "turkish_meaning": "Gün",
+    "example_sentence": "What day is the party?"
+  },
+  {
+    "unit": 1,
+    "english": "Time",
+    "pronunciation": "Taym",
+    "turkish_meaning": "Zaman",
+    "example_sentence": "What time does the event start?"
+  },
+  {
+    "unit": 1,
+    "english": "Ticket",
+    "pronunciation": "Tikit",
+    "turkish_meaning": "Bilet",
+    "example_sentence": "I bought two tickets for the concert."
+  },
+  {
+    "unit": 1,
+    "english": "Event",
+    "pronunciation": "İvent",
+    "turkish_meaning": "Etkinlik",
+    "example_sentence": "The school is organizing a special event."
+  },
+  {
+    "unit": 1,
+    "english": "Visit",
+    "pronunciation": "Vizit",
+    "turkish_meaning": "Ziyaret etmek",
+    "example_sentence": "We will visit our grandparents this weekend."
+  },
+  {
+    "unit": 2,
+    "english": "Adult",
+    "pronunciation": "Edalt",
+    "turkish_meaning": "Yetişkin",
+    "example_sentence": "An adult must accompany the children to the park."
+  },
+  {
+    "unit": 2,
+    "english": "Always",
+    "pronunciation": "Olveyz",
+    "turkish_meaning": "Daima, her zaman",
+    "example_sentence": "She always does her homework on time."
+  },
+  {
+    "unit": 2,
+    "english": "Amazing",
+    "pronunciation": "Imeyzing",
+    "turkish_meaning": "Şaşırtıcı",
+    "example_sentence": "The fireworks were amazing last night."
+  },
+  {
+    "unit": 2,
+    "english": "Among",
+    "pronunciation": "Imang",
+    "turkish_meaning": "Arasında",
+    "example_sentence": "She was the tallest student among her friends."
+  },
+  {
+    "unit": 2,
+    "english": "Argue",
+    "pronunciation": "Argyu",
+    "turkish_meaning": "Tartışmak",
+    "example_sentence": "They often argue about small things."
+  },
+  {
+    "unit": 2,
+    "english": "Attend",
+    "pronunciation": "Itend",
+    "turkish_meaning": "Katılmak",
+    "example_sentence": "All students must attend the meeting."
+  },
+  {
+    "unit": 2,
+    "english": "Awesome",
+    "pronunciation": "Osım",
+    "turkish_meaning": "Mükemmel",
+    "example_sentence": "That concert was awesome!"
+  },
+  {
+    "unit": 2,
+    "english": "Awful",
+    "pronunciation": "Ofıl",
+    "turkish_meaning": "Berbat",
+    "example_sentence": "The weather was awful yesterday."
+  },
+  {
+    "unit": 2,
+    "english": "Band",
+    "pronunciation": "Bend",
+    "turkish_meaning": "Müzik grubu",
+    "example_sentence": "My brother plays guitar in a band."
+  },
+  {
+    "unit": 2,
+    "english": "Be late",
+    "pronunciation": "Bi Leyt",
+    "turkish_meaning": "Geç kalmak",
+    "example_sentence": "Don't be late for school tomorrow."
+  },
+  {
+    "unit": 2,
+    "english": "Biographical",
+    "pronunciation": "Bayogrefikıl",
+    "turkish_meaning": "Biyografi",
+    "example_sentence": "I read a biographical book about Einstein."
+  },
+  {
+    "unit": 2,
+    "english": "Book genre",
+    "pronunciation": "Buk Canrı",
+    "turkish_meaning": "Kitap türü",
+    "example_sentence": "What is your favourite book genre?"
+  },
+  {
+    "unit": 2,
+    "english": "Boring",
+    "pronunciation": "Boring",
+    "turkish_meaning": "Sıkıcı",
+    "example_sentence": "This movie is really boring."
+  },
+  {
+    "unit": 2,
+    "english": "Casual",
+    "pronunciation": "Kejuıl",
+    "turkish_meaning": "Gündelik giysi",
+    "example_sentence": "He wore casual clothes to the party."
+  },
+  {
+    "unit": 2,
+    "english": "Chat",
+    "pronunciation": "Çet",
+    "turkish_meaning": "Sohbet",
+    "example_sentence": "We had a nice chat after class."
+  },
+  {
+    "unit": 2,
+    "english": "Cheap",
+    "pronunciation": "Çip",
+    "turkish_meaning": "Ucuz",
+    "example_sentence": "These shoes are very cheap."
+  },
+  {
+    "unit": 2,
+    "english": "Come over",
+    "pronunciation": "Kam Ovır",
+    "turkish_meaning": "Uğramak, ziyaret etmek",
+    "example_sentence": "Can you come over to my house tonight?"
+  },
+  {
+    "unit": 2,
+    "english": "Concert",
+    "pronunciation": "Konsırt",
+    "turkish_meaning": "Konser",
+    "example_sentence": "We are going to a concert this weekend."
+  },
+  {
+    "unit": 2,
+    "english": "Daily",
+    "pronunciation": "Deyli",
+    "turkish_meaning": "Günlük",
+    "example_sentence": "I read the newspaper daily."
+  },
+  {
+    "unit": 2,
+    "english": "Detective",
+    "pronunciation": "Ditektiv",
+    "turkish_meaning": "Dedektif",
+    "example_sentence": "The detective solved the mystery quickly."
+  },
+  {
+    "unit": 2,
+    "english": "Different",
+    "pronunciation": "Difırınt",
+    "turkish_meaning": "Farklı",
+    "example_sentence": "We have different opinions about the film."
+  },
+  {
+    "unit": 2,
+    "english": "Dislike",
+    "pronunciation": "Dislayk",
+    "turkish_meaning": "Sevmemek",
+    "example_sentence": "I dislike waking up early."
+  },
+  {
+    "unit": 2,
+    "english": "Documentary",
+    "pronunciation": "Dokyumentıri",
+    "turkish_meaning": "Belgesel",
+    "example_sentence": "We watched a documentary about space."
+  },
+  {
+    "unit": 2,
+    "english": "Drummer",
+    "pronunciation": "Dramır",
+    "turkish_meaning": "Baterist, davulcu",
+    "example_sentence": "He is the drummer of the school band."
+  },
+  {
+    "unit": 2,
+    "english": "Early",
+    "pronunciation": "Örli",
+    "turkish_meaning": "Erken",
+    "example_sentence": "She always gets up early."
+  },
+  {
+    "unit": 2,
+    "english": "Educative",
+    "pronunciation": "Edjukeytiv",
+    "turkish_meaning": "Eğitici",
+    "example_sentence": "This programme is very educative."
+  },
+  {
+    "unit": 2,
+    "english": "Energetic",
+    "pronunciation": "Enırcetik",
+    "turkish_meaning": "Enerjik",
+    "example_sentence": "My little brother is very energetic."
+  },
+  {
+    "unit": 2,
+    "english": "Enjoy",
+    "pronunciation": "İncoy",
+    "turkish_meaning": "Sevmek, hoşlanmak",
+    "example_sentence": "I enjoy listening to music."
+  },
+  {
+    "unit": 2,
+    "english": "Enjoyable",
+    "pronunciation": "İncoyıbıl",
+    "turkish_meaning": "Eğlenceli, zevkli",
+    "example_sentence": "We had an enjoyable trip to the coast."
+  },
+  {
+    "unit": 2,
+    "english": "Enlarge",
+    "pronunciation": "İnlarc",
+    "turkish_meaning": "Genişletmek, büyütmek",
+    "example_sentence": "Can you enlarge this photo, please?"
+  },
+  {
+    "unit": 2,
+    "english": "Exciting",
+    "pronunciation": "İksayting",
+    "turkish_meaning": "Heyecan verici",
+    "example_sentence": "The football match was very exciting."
+  },
+  {
+    "unit": 2,
+    "english": "Exercise",
+    "pronunciation": "Eksırsayz",
+    "turkish_meaning": "Egzersiz",
+    "example_sentence": "I do exercise every morning."
+  },
+  {
+    "unit": 2,
+    "english": "Fantasy",
+    "pronunciation": "Fentısi",
+    "turkish_meaning": "Hayal ürünü",
+    "example_sentence": "She loves reading fantasy books."
+  },
+  {
+    "unit": 2,
+    "english": "Fascinating",
+    "pronunciation": "Fesineyting",
+    "turkish_meaning": "Büyüleyici",
+    "example_sentence": "The museum has a fascinating history."
+  },
+  {
+    "unit": 2,
+    "english": "Fashion",
+    "pronunciation": "Feşın",
+    "turkish_meaning": "Moda",
+    "example_sentence": "She is very interested in fashion."
+  },
+  {
+    "unit": 2,
+    "english": "Fashionable",
+    "pronunciation": "Feşınıbıl",
+    "turkish_meaning": "Modaya uygun",
+    "example_sentence": "He always wears fashionable clothes."
+  },
+  {
+    "unit": 2,
+    "english": "Fast",
+    "pronunciation": "Fest",
+    "turkish_meaning": "Hızlı",
+    "example_sentence": "He runs very fast."
+  },
+  {
+    "unit": 2,
+    "english": "Folk music",
+    "pronunciation": "Fok Myuzik",
+    "turkish_meaning": "Halk müziği",
+    "example_sentence": "My grandmother enjoys folk music."
+  },
+  {
+    "unit": 2,
+    "english": "Follow",
+    "pronunciation": "Falow",
+    "turkish_meaning": "Takip etmek",
+    "example_sentence": "Please follow the instructions carefully."
+  },
+  {
+    "unit": 2,
+    "english": "Fond of",
+    "pronunciation": "Fand Ev",
+    "turkish_meaning": "Bir şeye düşkün olmak",
+    "example_sentence": "I am fond of animals."
+  },
+  {
+    "unit": 2,
+    "english": "Form",
+    "pronunciation": "Form",
+    "turkish_meaning": "Kurmak, oluşturmak",
+    "example_sentence": "They formed a new band last year."
+  },
+  {
+    "unit": 2,
+    "english": "Free time",
+    "pronunciation": "Fri Taym",
+    "turkish_meaning": "Boş zaman",
+    "example_sentence": "What do you do in your free time?"
+  },
+  {
+    "unit": 2,
+    "english": "Gym",
+    "pronunciation": "Cim",
+    "turkish_meaning": "Spor salonu",
+    "example_sentence": "She goes to the gym three times a week."
+  },
+  {
+    "unit": 2,
+    "english": "Hang out",
+    "pronunciation": "Heng Avt",
+    "turkish_meaning": "Gezmek, takılmak",
+    "example_sentence": "We hang out at the park after school."
+  },
+  {
+    "unit": 2,
+    "english": "Hate",
+    "pronunciation": "Heyt",
+    "turkish_meaning": "Nefret etmek",
+    "example_sentence": "I hate waiting in long queues."
+  },
+  {
+    "unit": 2,
+    "english": "Hiking",
+    "pronunciation": "Hayking",
+    "turkish_meaning": "Doğa yürüyüşü",
+    "example_sentence": "We went hiking in the mountains."
+  },
+  {
+    "unit": 2,
+    "english": "Horizon",
+    "pronunciation": "Hırayzın",
+    "turkish_meaning": "Ufuk",
+    "example_sentence": "The sun sets over the horizon."
+  },
+  {
+    "unit": 2,
+    "english": "How often",
+    "pronunciation": "Hav Ofın",
+    "turkish_meaning": "Ne sıklıkla",
+    "example_sentence": "How often do you go swimming?"
+  },
+  {
+    "unit": 2,
+    "english": "Impressive",
+    "pronunciation": "İmpresiv",
+    "turkish_meaning": "Etkileyici",
+    "example_sentence": "Her painting was really impressive."
+  },
+  {
+    "unit": 2,
+    "english": "In my opinion",
+    "pronunciation": "İn May Ipinyın",
+    "turkish_meaning": "Benim fikrimce",
+    "example_sentence": "In my opinion, reading is very useful."
+  },
+  {
+    "unit": 2,
+    "english": "Individual",
+    "pronunciation": "İndividjuıl",
+    "turkish_meaning": "Bireysel",
+    "example_sentence": "Every individual has different talents."
+  },
+  {
+    "unit": 2,
+    "english": "Instead",
+    "pronunciation": "İnsted",
+    "turkish_meaning": "Yerine",
+    "example_sentence": "Let's walk instead of taking the bus."
+  },
+  {
+    "unit": 2,
+    "english": "Keen on",
+    "pronunciation": "Kin On",
+    "turkish_meaning": "Bir şeye meraklı olmak",
+    "example_sentence": "She is keen on painting."
+  },
+  {
+    "unit": 2,
+    "english": "Latest",
+    "pronunciation": "Leytist",
+    "turkish_meaning": "En son",
+    "example_sentence": "Have you heard the latest news?"
+  },
+  {
+    "unit": 2,
+    "english": "Laughable",
+    "pronunciation": "Lefıbıl",
+    "turkish_meaning": "Gülünç, komik",
+    "example_sentence": "His excuse was really laughable."
+  },
+  {
+    "unit": 2,
+    "english": "Loud",
+    "pronunciation": "Lavd",
+    "turkish_meaning": "Sesli, gürültülü",
+    "example_sentence": "The music was too loud."
+  },
+  {
+    "unit": 2,
+    "english": "Meet",
+    "pronunciation": "Mit",
+    "turkish_meaning": "Buluşmak",
+    "example_sentence": "Let's meet at the cafe at five."
+  },
+  {
+    "unit": 2,
+    "english": "National",
+    "pronunciation": "Neşınıl",
+    "turkish_meaning": "Milli",
+    "example_sentence": "Today is a national holiday."
+  },
+  {
+    "unit": 2,
+    "english": "No way!",
+    "pronunciation": "Nov Vey",
+    "turkish_meaning": "Mümkün değil",
+    "example_sentence": "No way! I can't believe you won the prize."
+  },
+  {
+    "unit": 2,
+    "english": "Once",
+    "pronunciation": "Vans",
+    "turkish_meaning": "Bir kez",
+    "example_sentence": "I go to the cinema once a month."
+  },
+  {
+    "unit": 2,
+    "english": "Patriot",
+    "pronunciation": "Peytriıt",
+    "turkish_meaning": "Vatansever kişi",
+    "example_sentence": "He is known as a true patriot."
+  },
+  {
+    "unit": 2,
+    "english": "Pay attention",
+    "pronunciation": "Pey Itenşın",
+    "turkish_meaning": "Önem vermek, dikkat etmek",
+    "example_sentence": "Please pay attention to the teacher."
+  },
+  {
+    "unit": 2,
+    "english": "Prefer",
+    "pronunciation": "Prifır",
+    "turkish_meaning": "Tercih etmek",
+    "example_sentence": "I prefer tea to coffee."
+  },
+  {
+    "unit": 2,
+    "english": "Rarely",
+    "pronunciation": "Rerli",
+    "turkish_meaning": "Nadiren",
+    "example_sentence": "He rarely watches television."
+  },
+  {
+    "unit": 2,
+    "english": "Recommend",
+    "pronunciation": "Rekımend",
+    "turkish_meaning": "Tavsiye",
+    "example_sentence": "Can you recommend a good book?"
+  },
+  {
+    "unit": 2,
+    "english": "Relationship",
+    "pronunciation": "Rileyşınşip",
+    "turkish_meaning": "İlişki, bağ, yakınlık",
+    "example_sentence": "They have a strong relationship."
+  },
+  {
+    "unit": 2,
+    "english": "Relaxing",
+    "pronunciation": "Rilaksing",
+    "turkish_meaning": "Rahatlatıcı",
+    "example_sentence": "Swimming is very relaxing for me."
+  },
+  {
+    "unit": 2,
+    "english": "Respect",
+    "pronunciation": "Rispekt",
+    "turkish_meaning": "Saygı",
+    "example_sentence": "We should respect our teachers."
+  },
+  {
+    "unit": 2,
+    "english": "Rest",
+    "pronunciation": "Rest",
+    "turkish_meaning": "Dinlenmek",
+    "example_sentence": "You need to rest after the exam."
+  },
+  {
+    "unit": 2,
+    "english": "Ridiculous",
+    "pronunciation": "Ridikyulıs",
+    "turkish_meaning": "Gülünç, komik",
+    "example_sentence": "That story sounds ridiculous."
+  },
+  {
+    "unit": 2,
+    "english": "Romance",
+    "pronunciation": "Rovmens",
+    "turkish_meaning": "Aşk romanı",
+    "example_sentence": "She likes reading romance novels."
+  },
+  {
+    "unit": 2,
+    "english": "Science fiction",
+    "pronunciation": "Sayıns Fikşın",
+    "turkish_meaning": "Bilim kurgu",
+    "example_sentence": "He enjoys science fiction movies."
+  },
+  {
+    "unit": 2,
+    "english": "Scuba diving",
+    "pronunciation": "Skubı Dayving",
+    "turkish_meaning": "Sualtı dalışı",
+    "example_sentence": "We tried scuba diving on holiday."
+  },
+  {
+    "unit": 2,
+    "english": "Seldom",
+    "pronunciation": "Seldım",
+    "turkish_meaning": "Nadiren",
+    "example_sentence": "She seldom eats fast food."
+  },
+  {
+    "unit": 2,
+    "english": "Serious",
+    "pronunciation": "Siriıs",
+    "turkish_meaning": "Ciddi",
+    "example_sentence": "This is a serious problem."
+  },
+  {
+    "unit": 2,
+    "english": "Slow",
+    "pronunciation": "Slov",
+    "turkish_meaning": "Yavaş",
+    "example_sentence": "The traffic was very slow today."
+  },
+  {
+    "unit": 2,
+    "english": "Snob",
+    "pronunciation": "Snab",
+    "turkish_meaning": "Züppe, burnu havada",
+    "example_sentence": "He acts like a snob sometimes."
+  },
+  {
+    "unit": 2,
+    "english": "Soap opera",
+    "pronunciation": "Sovp Aprı",
+    "turkish_meaning": "Dizi film",
+    "example_sentence": "My mother watches a soap opera every evening."
+  },
+  {
+    "unit": 2,
+    "english": "Sometimes",
+    "pronunciation": "Samtaymz",
+    "turkish_meaning": "Ara sıra, bazen",
+    "example_sentence": "Sometimes I go to bed late."
+  },
+  {
+    "unit": 2,
+    "english": "Spending time",
+    "pronunciation": "Spending Taym",
+    "turkish_meaning": "Zaman geçirmek",
+    "example_sentence": "I love spending time with my family."
+  },
+  {
+    "unit": 2,
+    "english": "Successful",
+    "pronunciation": "Sıksesfıl",
+    "turkish_meaning": "Başarılı",
+    "example_sentence": "She is a successful writer."
+  },
+  {
+    "unit": 2,
+    "english": "Teen life",
+    "pronunciation": "Tin Layf",
+    "turkish_meaning": "Genç yaşamı, ergen yaşamı",
+    "example_sentence": "The book is about teen life problems."
+  },
+  {
+    "unit": 2,
+    "english": "Teenager",
+    "pronunciation": "Tineycır",
+    "turkish_meaning": "Genç, ergen",
+    "example_sentence": "My cousin is a teenager now."
+  },
+  {
+    "unit": 2,
+    "english": "Terrific",
+    "pronunciation": "Tırifik",
+    "turkish_meaning": "Müthiş",
+    "example_sentence": "We had a terrific holiday."
+  },
+  {
+    "unit": 2,
+    "english": "Text",
+    "pronunciation": "Tekst",
+    "turkish_meaning": "Mesaj yazmak",
+    "example_sentence": "I will text you when I arrive."
+  },
+  {
+    "unit": 2,
+    "english": "Tidying the room",
+    "pronunciation": "Taydiing Dı Rum",
+    "turkish_meaning": "Odayı toplamak",
+    "example_sentence": "She is tidying the room right now."
+  },
+  {
+    "unit": 2,
+    "english": "To be honest",
+    "pronunciation": "Tı Bi Onist",
+    "turkish_meaning": "Dürüst olmak gerekirse",
+    "example_sentence": "To be honest, I didn't like the film."
+  },
+  {
+    "unit": 2,
+    "english": "Train",
+    "pronunciation": "Treyn",
+    "turkish_meaning": "Antrenman yapmak",
+    "example_sentence": "He trains every day at the gym."
+  },
+  {
+    "unit": 2,
+    "english": "Training",
+    "pronunciation": "Treyning",
+    "turkish_meaning": "Antrenman",
+    "example_sentence": "Football training starts at five."
+  },
+  {
+    "unit": 2,
+    "english": "Travel",
+    "pronunciation": "Trevıl",
+    "turkish_meaning": "Seyahat, yolculuk",
+    "example_sentence": "I love to travel to new countries."
+  },
+  {
+    "unit": 2,
+    "english": "Trekking",
+    "pronunciation": "Treking",
+    "turkish_meaning": "Doğa yürüyüşü",
+    "example_sentence": "They went trekking in the hills."
+  },
+  {
+    "unit": 2,
+    "english": "Trendy",
+    "pronunciation": "Trendi",
+    "turkish_meaning": "Tarz, modaya uygun",
+    "example_sentence": "She always buys trendy clothes."
+  },
+  {
+    "unit": 2,
+    "english": "Twice",
+    "pronunciation": "Tvays",
+    "turkish_meaning": "İki kez",
+    "example_sentence": "I go swimming twice a week."
+  },
+  {
+    "unit": 2,
+    "english": "Types of music",
+    "pronunciation": "Tayps Ev Myuzik",
+    "turkish_meaning": "Müzik türleri",
+    "example_sentence": "There are many types of music around the world."
+  },
+  {
+    "unit": 2,
+    "english": "Unbearable",
+    "pronunciation": "Anberıbıl",
+    "turkish_meaning": "Dayanılmaz, katlanılmaz",
+    "example_sentence": "The heat was unbearable yesterday."
+  },
+  {
+    "unit": 2,
+    "english": "Usually",
+    "pronunciation": "Yujuıli",
+    "turkish_meaning": "Genellikle, çoğunlukla",
+    "example_sentence": "I usually walk to school."
+  },
+  {
+    "unit": 2,
+    "english": "Vocalist",
+    "pronunciation": "Vovkılist",
+    "turkish_meaning": "Şarkıcı",
+    "example_sentence": "She is the vocalist of the school band."
+  },
+  {
+    "unit": 2,
+    "english": "What kind",
+    "pronunciation": "Vat Kaynd",
+    "turkish_meaning": "Ne tür? Ne çeşit?",
+    "example_sentence": "What kind of music do you like?"
+  },
+  {
+    "unit": 2,
+    "english": "Wonderful",
+    "pronunciation": "Vandırfıl",
+    "turkish_meaning": "Harika",
+    "example_sentence": "We had a wonderful time at the party."
+  },
+  {
+    "unit": 2,
+    "english": "Work out",
+    "pronunciation": "Vörk Avt",
+    "turkish_meaning": "Antrenman yapmak",
+    "example_sentence": "He works out at the gym every day."
+  },
+  {
+    "unit": 3,
+    "english": "Add",
+    "pronunciation": "Ed",
+    "turkish_meaning": "eklemek",
+    "example_sentence": "Add some salt to the soup."
+  },
+  {
+    "unit": 3,
+    "english": "After that",
+    "pronunciation": "Aftır dhet",
+    "turkish_meaning": "ondan sonra",
+    "example_sentence": "After that, we mixed the eggs and flour."
+  },
+  {
+    "unit": 3,
+    "english": "Bake",
+    "pronunciation": "Beyk",
+    "turkish_meaning": "fırında pişirmek (unlu mamül)",
+    "example_sentence": "We bake the cake for thirty minutes."
+  },
+  {
+    "unit": 3,
+    "english": "Baking powder",
+    "pronunciation": "Beykin pauder",
+    "turkish_meaning": "kabartma tozu",
+    "example_sentence": "Baking powder makes the cake soft."
+  },
+  {
+    "unit": 3,
+    "english": "Baking tray",
+    "pronunciation": "Beykin trey",
+    "turkish_meaning": "pişirme tepsisi",
+    "example_sentence": "Put the cookies on the baking tray."
+  },
+  {
+    "unit": 3,
+    "english": "Batter",
+    "pronunciation": "Betır",
+    "turkish_meaning": "akışkan hamur",
+    "example_sentence": "Pour the batter into the pan."
+  },
+  {
+    "unit": 3,
+    "english": "Bean",
+    "pronunciation": "Bin",
+    "turkish_meaning": "fasülye",
+    "example_sentence": "We cooked green beans for dinner."
+  },
+  {
+    "unit": 3,
+    "english": "Beef",
+    "pronunciation": "Bif",
+    "turkish_meaning": "biftek",
+    "example_sentence": "My mother is cooking beef today."
+  },
+  {
+    "unit": 3,
+    "english": "Bitter",
+    "pronunciation": "Bitır",
+    "turkish_meaning": "acı",
+    "example_sentence": "This coffee tastes very bitter."
+  },
+  {
+    "unit": 3,
+    "english": "Black pepper",
+    "pronunciation": "Blek pepır",
+    "turkish_meaning": "kara biber",
+    "example_sentence": "Add some black pepper to the soup."
+  },
+  {
+    "unit": 3,
+    "english": "Blend",
+    "pronunciation": "Blend",
+    "turkish_meaning": "karıştırmak",
+    "example_sentence": "Blend the fruits to make a smoothie."
+  },
+  {
+    "unit": 3,
+    "english": "Boil",
+    "pronunciation": "Boyl",
+    "turkish_meaning": "kaynatmak, haşlamak",
+    "example_sentence": "Boil the water before you add the pasta."
+  },
+  {
+    "unit": 3,
+    "english": "Bon appetit",
+    "pronunciation": "Bon apeti",
+    "turkish_meaning": "afiyet olsun",
+    "example_sentence": "Bon appetit! Enjoy your meal."
+  },
+  {
+    "unit": 3,
+    "english": "Bowl",
+    "pronunciation": "Bol",
+    "turkish_meaning": "kâse",
+    "example_sentence": "Mix the eggs in a big bowl."
+  },
+  {
+    "unit": 3,
+    "english": "Breadcrumb",
+    "pronunciation": "Bredkram",
+    "turkish_meaning": "ekmek kırıntısı",
+    "example_sentence": "Cover the chicken with breadcrumbs."
+  },
+  {
+    "unit": 3,
+    "english": "Brush",
+    "pronunciation": "Braş",
+    "turkish_meaning": "fırça ile sürmek",
+    "example_sentence": "Brush some butter on the bread."
+  },
+  {
+    "unit": 3,
+    "english": "Butter",
+    "pronunciation": "Batır",
+    "turkish_meaning": "tereyağ",
+    "example_sentence": "Spread some butter on the toast."
+  },
+  {
+    "unit": 3,
+    "english": "Cardamom powder",
+    "pronunciation": "Kardımım pauder",
+    "turkish_meaning": "kakule tozu",
+    "example_sentence": "Add a pinch of cardamom powder to the tea."
+  },
+  {
+    "unit": 3,
+    "english": "Carrot",
+    "pronunciation": "Kerıt",
+    "turkish_meaning": "havuç",
+    "example_sentence": "Cut the carrot into small pieces."
+  },
+  {
+    "unit": 3,
+    "english": "Celery",
+    "pronunciation": "Selıri",
+    "turkish_meaning": "kereviz",
+    "example_sentence": "She added celery to the soup."
+  },
+  {
+    "unit": 3,
+    "english": "Chicken stock",
+    "pronunciation": "Çikın stok",
+    "turkish_meaning": "tavuk suyu",
+    "example_sentence": "Cook the rice with chicken stock."
+  },
+  {
+    "unit": 3,
+    "english": "Chilli pepper",
+    "pronunciation": "Çili pepır",
+    "turkish_meaning": "kırmızı biber",
+    "example_sentence": "This dish has a lot of chilli pepper."
+  },
+  {
+    "unit": 3,
+    "english": "Chop",
+    "pronunciation": "Çop",
+    "turkish_meaning": "doğramak",
+    "example_sentence": "Chop the onions finely."
+  },
+  {
+    "unit": 3,
+    "english": "Cinnamon",
+    "pronunciation": "Sinımın",
+    "turkish_meaning": "tarçın",
+    "example_sentence": "Sprinkle cinnamon on the pancakes."
+  },
+  {
+    "unit": 3,
+    "english": "Coconut powder",
+    "pronunciation": "Kokınat pauder",
+    "turkish_meaning": "hindistan cevizi tozu",
+    "example_sentence": "Add coconut powder to the dessert."
+  },
+  {
+    "unit": 3,
+    "english": "Cold",
+    "pronunciation": "Kold",
+    "turkish_meaning": "soğuk",
+    "example_sentence": "Serve this soup cold in summer."
+  },
+  {
+    "unit": 3,
+    "english": "Combine",
+    "pronunciation": "Kımbayn",
+    "turkish_meaning": "birleştirmek",
+    "example_sentence": "Combine the flour and sugar in a bowl."
+  },
+  {
+    "unit": 3,
+    "english": "Cook",
+    "pronunciation": "Kuk",
+    "turkish_meaning": "pişirmek",
+    "example_sentence": "My father likes to cook on weekends."
+  },
+  {
+    "unit": 3,
+    "english": "Cooker",
+    "pronunciation": "Kukır",
+    "turkish_meaning": "ocak",
+    "example_sentence": "Put the pan on the cooker."
+  },
+  {
+    "unit": 3,
+    "english": "Coriander",
+    "pronunciation": "Kori-endır",
+    "turkish_meaning": "kişniş",
+    "example_sentence": "She sprinkled fresh coriander on the salad."
+  },
+  {
+    "unit": 3,
+    "english": "Cover",
+    "pronunciation": "Kavır",
+    "turkish_meaning": "kaplamak",
+    "example_sentence": "Cover the pot with a lid."
+  },
+  {
+    "unit": 3,
+    "english": "Crack",
+    "pronunciation": "Krek",
+    "turkish_meaning": "kırmak (yumurta)",
+    "example_sentence": "Crack two eggs into the bowl."
+  },
+  {
+    "unit": 3,
+    "english": "Cuisine",
+    "pronunciation": "Kwizin",
+    "turkish_meaning": "yemek kültürü, mutfak",
+    "example_sentence": "Turkish cuisine is famous around the world."
+  },
+  {
+    "unit": 3,
+    "english": "Cumin",
+    "pronunciation": "Kyumin",
+    "turkish_meaning": "kimyon",
+    "example_sentence": "Add a teaspoon of cumin to the meat."
+  },
+  {
+    "unit": 3,
+    "english": "Cup",
+    "pronunciation": "Kap",
+    "turkish_meaning": "fincan, kupa",
+    "example_sentence": "She drank a cup of tea."
+  },
+  {
+    "unit": 3,
+    "english": "Cut",
+    "pronunciation": "Kat",
+    "turkish_meaning": "kesmek",
+    "example_sentence": "Cut the bread into slices."
+  },
+  {
+    "unit": 3,
+    "english": "Delicious",
+    "pronunciation": "Dilişıs",
+    "turkish_meaning": "lezzetli",
+    "example_sentence": "This cake is absolutely delicious."
+  },
+  {
+    "unit": 3,
+    "english": "Dessert",
+    "pronunciation": "Dizırt",
+    "turkish_meaning": "tatlı",
+    "example_sentence": "We had ice cream for dessert."
+  },
+  {
+    "unit": 3,
+    "english": "Dice",
+    "pronunciation": "Days",
+    "turkish_meaning": "küp küp doğramak",
+    "example_sentence": "Dice the tomatoes before adding them."
+  },
+  {
+    "unit": 3,
+    "english": "Difficulty",
+    "pronunciation": "Difikılti",
+    "turkish_meaning": "zorluk, güçlük",
+    "example_sentence": "I had no difficulty with this recipe."
+  },
+  {
+    "unit": 3,
+    "english": "Dough",
+    "pronunciation": "Do",
+    "turkish_meaning": "hamur",
+    "example_sentence": "Knead the dough for ten minutes."
+  },
+  {
+    "unit": 3,
+    "english": "Drain",
+    "pronunciation": "Dreyn",
+    "turkish_meaning": "süzmek",
+    "example_sentence": "Drain the pasta after boiling it."
+  },
+  {
+    "unit": 3,
+    "english": "Enjoy the meal",
+    "pronunciation": "Encoy dhı mil",
+    "turkish_meaning": "afiyet olsun",
+    "example_sentence": "Enjoy the meal, everyone!"
+  },
+  {
+    "unit": 3,
+    "english": "Experience",
+    "pronunciation": "Ikspiriıns",
+    "turkish_meaning": "deneyim, tecrübe",
+    "example_sentence": "Cooking with my grandmother was a great experience."
+  },
+  {
+    "unit": 3,
+    "english": "Finally",
+    "pronunciation": "Faynıli",
+    "turkish_meaning": "son olarak",
+    "example_sentence": "Finally, pour the mixture into the pan."
+  },
+  {
+    "unit": 3,
+    "english": "First",
+    "pronunciation": "First",
+    "turkish_meaning": "ilk olarak",
+    "example_sentence": "First, wash the vegetables."
+  },
+  {
+    "unit": 3,
+    "english": "Flour",
+    "pronunciation": "Flauır",
+    "turkish_meaning": "un",
+    "example_sentence": "Mix the flour with the water."
+  },
+  {
+    "unit": 3,
+    "english": "Fork",
+    "pronunciation": "Fork",
+    "turkish_meaning": "çatal",
+    "example_sentence": "Eat the pasta with a fork."
+  },
+  {
+    "unit": 3,
+    "english": "Fresh",
+    "pronunciation": "Freş",
+    "turkish_meaning": "taze",
+    "example_sentence": "We always use fresh vegetables."
+  },
+  {
+    "unit": 3,
+    "english": "Fridge",
+    "pronunciation": "Fric",
+    "turkish_meaning": "buzdolabı",
+    "example_sentence": "Put the milk back in the fridge."
+  },
+  {
+    "unit": 3,
+    "english": "Fruit",
+    "pronunciation": "Frut",
+    "turkish_meaning": "meyve",
+    "example_sentence": "She eats fruit every morning."
+  },
+  {
+    "unit": 3,
+    "english": "Fry",
+    "pronunciation": "Fray",
+    "turkish_meaning": "yağda kızartmak",
+    "example_sentence": "Fry the onions until golden."
+  },
+  {
+    "unit": 3,
+    "english": "Garlic",
+    "pronunciation": "Garlik",
+    "turkish_meaning": "sarımsak",
+    "example_sentence": "Add two cloves of garlic to the sauce."
+  },
+  {
+    "unit": 3,
+    "english": "Ginger",
+    "pronunciation": "Cincır",
+    "turkish_meaning": "zencefil",
+    "example_sentence": "This tea has fresh ginger in it."
+  },
+  {
+    "unit": 3,
+    "english": "Grate",
+    "pronunciation": "Greyt",
+    "turkish_meaning": "rendelemek",
+    "example_sentence": "Grate the cheese over the pasta."
+  },
+  {
+    "unit": 3,
+    "english": "Grater",
+    "pronunciation": "Greytır",
+    "turkish_meaning": "rende",
+    "example_sentence": "Use a grater to grate the carrots."
+  },
+  {
+    "unit": 3,
+    "english": "Grill",
+    "pronunciation": "Gril",
+    "turkish_meaning": "ızgarada pişirmek",
+    "example_sentence": "We grill the chicken on Sundays."
+  },
+  {
+    "unit": 3,
+    "english": "Healthy",
+    "pronunciation": "Helthi",
+    "turkish_meaning": "sağlıklı",
+    "example_sentence": "Vegetables are healthy for our body."
+  },
+  {
+    "unit": 3,
+    "english": "Heat",
+    "pronunciation": "Hit",
+    "turkish_meaning": "ısıtmak",
+    "example_sentence": "Heat the oil in the pan."
+  },
+  {
+    "unit": 3,
+    "english": "Homemade",
+    "pronunciation": "Homeyd",
+    "turkish_meaning": "ev yapımı",
+    "example_sentence": "I prefer homemade bread."
+  },
+  {
+    "unit": 3,
+    "english": "Hot",
+    "pronunciation": "Hat",
+    "turkish_meaning": "sıcak",
+    "example_sentence": "Be careful, the pan is hot."
+  },
+  {
+    "unit": 3,
+    "english": "How long",
+    "pronunciation": "Hau long",
+    "turkish_meaning": "ne kadar süre",
+    "example_sentence": "How long does it take to bake the cake?"
+  },
+  {
+    "unit": 3,
+    "english": "Ingredients",
+    "pronunciation": "İngridiınts",
+    "turkish_meaning": "malzemeler, içindekiler",
+    "example_sentence": "Check all the ingredients before you start."
+  },
+  {
+    "unit": 3,
+    "english": "Kitchen",
+    "pronunciation": "Kiçin",
+    "turkish_meaning": "mutfak",
+    "example_sentence": "My mother is in the kitchen."
+  },
+  {
+    "unit": 3,
+    "english": "Knead",
+    "pronunciation": "Nid",
+    "turkish_meaning": "yoğurmak",
+    "example_sentence": "Knead the dough until it is smooth."
+  },
+  {
+    "unit": 3,
+    "english": "Knife",
+    "pronunciation": "Nayf",
+    "turkish_meaning": "bıçak",
+    "example_sentence": "Use a sharp knife to cut the meat."
+  },
+  {
+    "unit": 3,
+    "english": "Lentil",
+    "pronunciation": "Lentıl",
+    "turkish_meaning": "mercimek",
+    "example_sentence": "We cooked lentil soup today."
+  },
+  {
+    "unit": 3,
+    "english": "Marinate",
+    "pronunciation": "Merıneyt",
+    "turkish_meaning": "terbiye etmek",
+    "example_sentence": "Marinate the chicken for two hours."
+  },
+  {
+    "unit": 3,
+    "english": "Mash",
+    "pronunciation": "Meş",
+    "turkish_meaning": "pürelemek",
+    "example_sentence": "Mash the potatoes with butter."
+  },
+  {
+    "unit": 3,
+    "english": "Meal",
+    "pronunciation": "Mil",
+    "turkish_meaning": "yemek",
+    "example_sentence": "This was a delicious meal."
+  },
+  {
+    "unit": 3,
+    "english": "Meat",
+    "pronunciation": "Mit",
+    "turkish_meaning": "et",
+    "example_sentence": "We don't eat meat every day."
+  },
+  {
+    "unit": 3,
+    "english": "Meatball",
+    "pronunciation": "Mitbol",
+    "turkish_meaning": "köfte",
+    "example_sentence": "My grandmother makes the best meatballs."
+  },
+  {
+    "unit": 3,
+    "english": "Melt",
+    "pronunciation": "Melt",
+    "turkish_meaning": "eritmek",
+    "example_sentence": "Melt the butter in a small pan."
+  },
+  {
+    "unit": 3,
+    "english": "Milky",
+    "pronunciation": "Milki",
+    "turkish_meaning": "sütlü",
+    "example_sentence": "This dessert has a milky taste."
+  },
+  {
+    "unit": 3,
+    "english": "Mince",
+    "pronunciation": "Mins",
+    "turkish_meaning": "kıyma",
+    "example_sentence": "We need some mince for the meatballs."
+  },
+  {
+    "unit": 3,
+    "english": "Mix",
+    "pronunciation": "Miks",
+    "turkish_meaning": "karıştırmak",
+    "example_sentence": "Mix the sugar and eggs together."
+  },
+  {
+    "unit": 3,
+    "english": "Mixture",
+    "pronunciation": "Mikstşır",
+    "turkish_meaning": "karışım",
+    "example_sentence": "Pour the mixture into the baking tray."
+  },
+  {
+    "unit": 3,
+    "english": "Mussel",
+    "pronunciation": "Masıl",
+    "turkish_meaning": "midye",
+    "example_sentence": "They cooked mussels for dinner."
+  },
+  {
+    "unit": 3,
+    "english": "Next",
+    "pronunciation": "Nekst",
+    "turkish_meaning": "sonra",
+    "example_sentence": "Next, add some salt and pepper."
+  },
+  {
+    "unit": 3,
+    "english": "Nuts",
+    "pronunciation": "Nats",
+    "turkish_meaning": "fındık",
+    "example_sentence": "She added some nuts to the cake."
+  },
+  {
+    "unit": 3,
+    "english": "Oil",
+    "pronunciation": "Oyl",
+    "turkish_meaning": "sıvı yağ",
+    "example_sentence": "Add a spoon of oil to the pan."
+  },
+  {
+    "unit": 3,
+    "english": "Olive oil",
+    "pronunciation": "Oliv oyl",
+    "turkish_meaning": "zeytin yağı",
+    "example_sentence": "We cook vegetables with olive oil."
+  },
+  {
+    "unit": 3,
+    "english": "Oven",
+    "pronunciation": "Avın",
+    "turkish_meaning": "fırın",
+    "example_sentence": "Put the cake in the oven."
+  },
+  {
+    "unit": 3,
+    "english": "Pan",
+    "pronunciation": "Pen",
+    "turkish_meaning": "tava",
+    "example_sentence": "Heat the pan before frying the eggs."
+  },
+  {
+    "unit": 3,
+    "english": "Pancake",
+    "pronunciation": "Penkeyk",
+    "turkish_meaning": "pankek, krep",
+    "example_sentence": "We had pancakes for breakfast."
+  },
+  {
+    "unit": 3,
+    "english": "Paprika",
+    "pronunciation": "Peprika",
+    "turkish_meaning": "kırmızı biber",
+    "example_sentence": "Sprinkle some paprika on the potatoes."
+  },
+  {
+    "unit": 3,
+    "english": "Parsley",
+    "pronunciation": "Parsli",
+    "turkish_meaning": "maydanoz",
+    "example_sentence": "Add some fresh parsley to the salad."
+  },
+  {
+    "unit": 3,
+    "english": "Pasta",
+    "pronunciation": "Pesta",
+    "turkish_meaning": "makarna",
+    "example_sentence": "Boil the pasta for ten minutes."
+  },
+  {
+    "unit": 3,
+    "english": "Peel",
+    "pronunciation": "Pil",
+    "turkish_meaning": "soymak",
+    "example_sentence": "Peel the potatoes before cooking."
+  },
+  {
+    "unit": 3,
+    "english": "Peeler",
+    "pronunciation": "Pilır",
+    "turkish_meaning": "sebze soyacağı",
+    "example_sentence": "Use a peeler to peel the apple."
+  },
+  {
+    "unit": 3,
+    "english": "Pepper",
+    "pronunciation": "Pepır",
+    "turkish_meaning": "biber",
+    "example_sentence": "Add some salt and pepper to taste."
+  },
+  {
+    "unit": 3,
+    "english": "Phyllo",
+    "pronunciation": "Filo",
+    "turkish_meaning": "yufka",
+    "example_sentence": "She used phyllo pastry for the börek."
+  },
+  {
+    "unit": 3,
+    "english": "Piece",
+    "pronunciation": "Pis",
+    "turkish_meaning": "parça",
+    "example_sentence": "Cut the cake into small pieces."
+  },
+  {
+    "unit": 3,
+    "english": "Pinch",
+    "pronunciation": "Pinç",
+    "turkish_meaning": "tutam",
+    "example_sentence": "Add a pinch of salt to the soup."
+  },
+  {
+    "unit": 3,
+    "english": "Plate",
+    "pronunciation": "Pleyt",
+    "turkish_meaning": "tabak",
+    "example_sentence": "Put the food on a clean plate."
+  },
+  {
+    "unit": 3,
+    "english": "Pot",
+    "pronunciation": "Pat",
+    "turkish_meaning": "tencere",
+    "example_sentence": "Boil the water in a big pot."
+  },
+  {
+    "unit": 3,
+    "english": "Pour",
+    "pronunciation": "Por",
+    "turkish_meaning": "dökmek",
+    "example_sentence": "Pour the milk into the glass."
+  },
+  {
+    "unit": 3,
+    "english": "Powdered sugar",
+    "pronunciation": "Paudırd şugır",
+    "turkish_meaning": "pudra şekeri",
+    "example_sentence": "Sprinkle powdered sugar on the cake."
+  },
+  {
+    "unit": 3,
+    "english": "Prawns",
+    "pronunciation": "Prons",
+    "turkish_meaning": "karides",
+    "example_sentence": "We had prawns for dinner."
+  },
+  {
+    "unit": 3,
+    "english": "Preheated",
+    "pronunciation": "Prihitıd",
+    "turkish_meaning": "önceden ısıtılmış",
+    "example_sentence": "Put the cake in a preheated oven."
+  },
+  {
+    "unit": 3,
+    "english": "Preparation",
+    "pronunciation": "Prepıreyşın",
+    "turkish_meaning": "hazırlık",
+    "example_sentence": "The preparation of this dish takes an hour."
+  },
+  {
+    "unit": 3,
+    "english": "Prepare",
+    "pronunciation": "Pripeır",
+    "turkish_meaning": "hazırlamak",
+    "example_sentence": "Let's prepare the ingredients first."
+  },
+  {
+    "unit": 3,
+    "english": "Process",
+    "pronunciation": "Prases",
+    "turkish_meaning": "süreç, aşama",
+    "example_sentence": "Follow each step of the process carefully."
+  },
+  {
+    "unit": 3,
+    "english": "Put",
+    "pronunciation": "Put",
+    "turkish_meaning": "koymak",
+    "example_sentence": "Put the pan on the cooker."
+  },
+  {
+    "unit": 3,
+    "english": "Recipe",
+    "pronunciation": "Resıpi",
+    "turkish_meaning": "tarif",
+    "example_sentence": "This is my favourite recipe."
+  },
+  {
+    "unit": 3,
+    "english": "Refrigerator",
+    "pronunciation": "Rifricıreytır",
+    "turkish_meaning": "buzdolabı",
+    "example_sentence": "Keep the milk in the refrigerator."
+  },
+  {
+    "unit": 3,
+    "english": "Rice",
+    "pronunciation": "Rays",
+    "turkish_meaning": "pirinç",
+    "example_sentence": "We cook rice with chicken stock."
+  },
+  {
+    "unit": 3,
+    "english": "Rinse",
+    "pronunciation": "Rins",
+    "turkish_meaning": "yıkamak",
+    "example_sentence": "Rinse the vegetables with cold water."
+  },
+  {
+    "unit": 3,
+    "english": "Roast",
+    "pronunciation": "Rost",
+    "turkish_meaning": "fırında pişirmek (et, tavuk)",
+    "example_sentence": "We roast the chicken in the oven."
+  },
+  {
+    "unit": 3,
+    "english": "Roll",
+    "pronunciation": "Rol",
+    "turkish_meaning": "yuvarlamak",
+    "example_sentence": "Roll the dough with a rolling pin."
+  },
+  {
+    "unit": 3,
+    "english": "Rolling pin",
+    "pronunciation": "Rolin pin",
+    "turkish_meaning": "merdane, oklava",
+    "example_sentence": "Use a rolling pin to flatten the dough."
+  },
+  {
+    "unit": 3,
+    "english": "Saffron",
+    "pronunciation": "Sefrın",
+    "turkish_meaning": "safran",
+    "example_sentence": "This rice is coloured with saffron."
+  },
+  {
+    "unit": 3,
+    "english": "Salt",
+    "pronunciation": "Solt",
+    "turkish_meaning": "tuz",
+    "example_sentence": "Add some salt to the water."
+  },
+  {
+    "unit": 3,
+    "english": "Salty",
+    "pronunciation": "Solti",
+    "turkish_meaning": "tuzlu",
+    "example_sentence": "This soup is too salty."
+  },
+  {
+    "unit": 3,
+    "english": "Saucepan",
+    "pronunciation": "Sospen",
+    "turkish_meaning": "sos tavası, tencere",
+    "example_sentence": "Heat the milk in a saucepan."
+  },
+  {
+    "unit": 3,
+    "english": "Scoop",
+    "pronunciation": "Skup",
+    "turkish_meaning": "kepçe ile dökmek",
+    "example_sentence": "Scoop the ice cream into the bowl."
+  },
+  {
+    "unit": 3,
+    "english": "Season",
+    "pronunciation": "Sizın",
+    "turkish_meaning": "baharat katmak",
+    "example_sentence": "Season the meat with salt and pepper."
+  },
+  {
+    "unit": 3,
+    "english": "Second",
+    "pronunciation": "Sekınd",
+    "turkish_meaning": "ikinci olarak",
+    "example_sentence": "Second, heat the oil in the pan."
+  },
+  {
+    "unit": 3,
+    "english": "Serve",
+    "pronunciation": "Sırv",
+    "turkish_meaning": "servis etmek",
+    "example_sentence": "Serve the soup hot."
+  },
+  {
+    "unit": 3,
+    "english": "Shake",
+    "pronunciation": "Şeyk",
+    "turkish_meaning": "çalkalamak",
+    "example_sentence": "Shake the bottle before you open it."
+  },
+  {
+    "unit": 3,
+    "english": "Shape",
+    "pronunciation": "Şeyp",
+    "turkish_meaning": "şekil vermek",
+    "example_sentence": "Shape the dough into small balls."
+  },
+  {
+    "unit": 3,
+    "english": "Sharp",
+    "pronunciation": "Şarp",
+    "turkish_meaning": "keskin",
+    "example_sentence": "Be careful, this knife is very sharp."
+  },
+  {
+    "unit": 3,
+    "english": "Slice",
+    "pronunciation": "Slays",
+    "turkish_meaning": "dilimlemek",
+    "example_sentence": "Slice the bread thinly."
+  },
+  {
+    "unit": 3,
+    "english": "Smooth",
+    "pronunciation": "Smudh",
+    "turkish_meaning": "yumuşatmak, pürüzsüz",
+    "example_sentence": "Mix until the batter is smooth."
+  },
+  {
+    "unit": 3,
+    "english": "Soak",
+    "pronunciation": "Sok",
+    "turkish_meaning": "emmek, içine çekmek",
+    "example_sentence": "Soak the beans in water overnight."
+  },
+  {
+    "unit": 3,
+    "english": "Soup",
+    "pronunciation": "Sup",
+    "turkish_meaning": "çorba",
+    "example_sentence": "My mother made vegetable soup."
+  },
+  {
+    "unit": 3,
+    "english": "Sour",
+    "pronunciation": "Sauır",
+    "turkish_meaning": "ekşi",
+    "example_sentence": "This lemon tastes very sour."
+  },
+  {
+    "unit": 3,
+    "english": "Spicy",
+    "pronunciation": "Spaysi",
+    "turkish_meaning": "baharatlı",
+    "example_sentence": "I love spicy food."
+  },
+  {
+    "unit": 3,
+    "english": "Spoon",
+    "pronunciation": "Spun",
+    "turkish_meaning": "kaşık",
+    "example_sentence": "Stir the tea with a spoon."
+  },
+  {
+    "unit": 3,
+    "english": "Spread",
+    "pronunciation": "Spred",
+    "turkish_meaning": "sürmek",
+    "example_sentence": "Spread the jam on the bread."
+  },
+  {
+    "unit": 3,
+    "english": "Sprinkle",
+    "pronunciation": "Sprinkıl",
+    "turkish_meaning": "serpmek",
+    "example_sentence": "Sprinkle some cheese on top."
+  },
+  {
+    "unit": 3,
+    "english": "Squeeze",
+    "pronunciation": "Skwiz",
+    "turkish_meaning": "suyunu sıkmak",
+    "example_sentence": "Squeeze a lemon into the water."
+  },
+  {
+    "unit": 3,
+    "english": "Starch",
+    "pronunciation": "Starç",
+    "turkish_meaning": "nişasta",
+    "example_sentence": "Potatoes contain a lot of starch."
+  },
+  {
+    "unit": 3,
+    "english": "Steak",
+    "pronunciation": "Steyk",
+    "turkish_meaning": "biftek, et",
+    "example_sentence": "He ordered a steak for dinner."
+  },
+  {
+    "unit": 3,
+    "english": "Steam",
+    "pronunciation": "Stim",
+    "turkish_meaning": "buharda pişirmek",
+    "example_sentence": "Steam the vegetables for five minutes."
+  },
+  {
+    "unit": 3,
+    "english": "Stir",
+    "pronunciation": "Stır",
+    "turkish_meaning": "karıştırmak (çorba, çay)",
+    "example_sentence": "Stir the soup after adding the salt."
+  },
+  {
+    "unit": 3,
+    "english": "Strawberry",
+    "pronunciation": "Strobıri",
+    "turkish_meaning": "çilek",
+    "example_sentence": "She made a strawberry cake."
+  },
+  {
+    "unit": 3,
+    "english": "Stretch",
+    "pronunciation": "Streç",
+    "turkish_meaning": "uzatmak, açmak",
+    "example_sentence": "Stretch the dough carefully."
+  },
+  {
+    "unit": 3,
+    "english": "Sugar",
+    "pronunciation": "Şugır",
+    "turkish_meaning": "toz şeker",
+    "example_sentence": "Add two spoons of sugar."
+  },
+  {
+    "unit": 3,
+    "english": "Sweet",
+    "pronunciation": "Swit",
+    "turkish_meaning": "tatlı",
+    "example_sentence": "This cake is very sweet."
+  },
+  {
+    "unit": 3,
+    "english": "Sweet tooth",
+    "pronunciation": "Swit tuth",
+    "turkish_meaning": "tatlıya düşkün",
+    "example_sentence": "My brother has a sweet tooth."
+  },
+  {
+    "unit": 3,
+    "english": "Syrup",
+    "pronunciation": "Sırıp",
+    "turkish_meaning": "şerbet",
+    "example_sentence": "Pour some syrup on the pancakes."
+  },
+  {
+    "unit": 3,
+    "english": "Tablespoon",
+    "pronunciation": "Teybılspun",
+    "turkish_meaning": "yemek kaşığı",
+    "example_sentence": "Add one tablespoon of oil."
+  },
+  {
+    "unit": 3,
+    "english": "Taste",
+    "pronunciation": "Teyst",
+    "turkish_meaning": "tadına bakmak",
+    "example_sentence": "Taste the soup before serving."
+  },
+  {
+    "unit": 3,
+    "english": "Tasty",
+    "pronunciation": "Teysti",
+    "turkish_meaning": "lezzetli",
+    "example_sentence": "This meal is really tasty."
+  },
+  {
+    "unit": 3,
+    "english": "Teaspoon",
+    "pronunciation": "Tispun",
+    "turkish_meaning": "çay kaşığı",
+    "example_sentence": "Add a teaspoon of sugar to the tea."
+  },
+  {
+    "unit": 3,
+    "english": "Tender",
+    "pronunciation": "Tendır",
+    "turkish_meaning": "yumuşamak",
+    "example_sentence": "Cook the meat until it is tender."
+  },
+  {
+    "unit": 3,
+    "english": "Then",
+    "pronunciation": "Dhen",
+    "turkish_meaning": "sonra",
+    "example_sentence": "Then, add some milk and stir."
+  },
+  {
+    "unit": 3,
+    "english": "Tortilla",
+    "pronunciation": "Tortiyı",
+    "turkish_meaning": "lavaş benzeri ekmek",
+    "example_sentence": "We ate chicken tortillas for lunch."
+  },
+  {
+    "unit": 3,
+    "english": "Traditional",
+    "pronunciation": "Tridişınıl",
+    "turkish_meaning": "geleneksel",
+    "example_sentence": "This is a traditional Turkish recipe."
+  },
+  {
+    "unit": 3,
+    "english": "Until",
+    "pronunciation": "Antil",
+    "turkish_meaning": "..-e kadar",
+    "example_sentence": "Cook the rice until it is soft."
+  },
+  {
+    "unit": 3,
+    "english": "Vegetables",
+    "pronunciation": "Vecıtıbıls",
+    "turkish_meaning": "sebze",
+    "example_sentence": "Wash the vegetables before you peel them."
+  },
+  {
+    "unit": 3,
+    "english": "Whisk",
+    "pronunciation": "Wisk",
+    "turkish_meaning": "çırpmak",
+    "example_sentence": "Whisk the eggs quickly."
+  },
+  {
+    "unit": 3,
+    "english": "Wrap",
+    "pronunciation": "Rep",
+    "turkish_meaning": "sarmak, örtmek",
+    "example_sentence": "Wrap the dough in plastic and rest it."
+  },
+  {
+    "unit": 3,
+    "english": "Yeast",
+    "pronunciation": "Yist",
+    "turkish_meaning": "maya",
+    "example_sentence": "Add yeast to make the dough rise."
+  },
+  {
+    "unit": 3,
+    "english": "Cucumber",
+    "pronunciation": "Kyukambır",
+    "turkish_meaning": "salatalık",
+    "example_sentence": "She sliced a cucumber for the salad."
+  },
+  {
+    "unit": 3,
+    "english": "Noodle",
+    "pronunciation": "Nudıl",
+    "turkish_meaning": "erişte",
+    "example_sentence": "We had noodles with vegetables."
+  },
+  {
+    "unit": 3,
+    "english": "Rice flour",
+    "pronunciation": "Rays flauır",
+    "turkish_meaning": "pirinç unu",
+    "example_sentence": "This cake is made with rice flour."
+  },
+  {
+    "unit": 3,
+    "english": "Bottle",
+    "pronunciation": "Batıl",
+    "turkish_meaning": "şişe",
+    "example_sentence": "Pour the oil from the bottle."
+  },
+  {
+    "unit": 3,
+    "english": "Strainer",
+    "pronunciation": "Streynır",
+    "turkish_meaning": "süzgeç",
+    "example_sentence": "Use a strainer to drain the pasta."
+  },
+  {
+    "unit": 3,
+    "english": "Fatty",
+    "pronunciation": "Feti",
+    "turkish_meaning": "yağlı",
+    "example_sentence": "Fatty food is not very healthy."
+  },
+  {
+    "unit": 3,
+    "english": "Greasy",
+    "pronunciation": "Grisi",
+    "turkish_meaning": "yağlı",
+    "example_sentence": "I don't like greasy food."
+  },
+  {
+    "unit": 4,
+    "english": "Addiction",
+    "pronunciation": "Idikşın",
+    "turkish_meaning": "bağımlılık",
+    "example_sentence": "Phone addiction is a common problem today."
+  },
+  {
+    "unit": 4,
+    "english": "Again",
+    "pronunciation": "Igen",
+    "turkish_meaning": "tekrar",
+    "example_sentence": "Could you say that again, please?"
+  },
+  {
+    "unit": 4,
+    "english": "Answer",
+    "pronunciation": "Ansır",
+    "turkish_meaning": "cevap vermek",
+    "example_sentence": "Please answer the phone."
+  },
+  {
+    "unit": 4,
+    "english": "Application",
+    "pronunciation": "Eplikeyşın",
+    "turkish_meaning": "uygulama",
+    "example_sentence": "I downloaded a new application on my phone."
+  },
+  {
+    "unit": 4,
+    "english": "Appointment",
+    "pronunciation": "Ipointmınt",
+    "turkish_meaning": "randevu",
+    "example_sentence": "I made an appointment with the doctor."
+  },
+  {
+    "unit": 4,
+    "english": "Arrange",
+    "pronunciation": "Ireync",
+    "turkish_meaning": "düzenlemek",
+    "example_sentence": "Let's arrange a meeting for tomorrow."
+  },
+  {
+    "unit": 4,
+    "english": "Arrangement",
+    "pronunciation": "İreyncmınt",
+    "turkish_meaning": "düzenleme, ayarlama",
+    "example_sentence": "We made an arrangement to meet at five."
+  },
+  {
+    "unit": 4,
+    "english": "As soon as possible",
+    "pronunciation": "Ez sun ez posıbıl",
+    "turkish_meaning": "mümkün olan en kısa sürede",
+    "example_sentence": "Please call me back as soon as possible."
+  },
+  {
+    "unit": 4,
+    "english": "Available",
+    "pronunciation": "Iveylıbıl",
+    "turkish_meaning": "müsait",
+    "example_sentence": "Sorry, Mr. Watson is not available now."
+  },
+  {
+    "unit": 4,
+    "english": "Badline",
+    "pronunciation": "Bedlayn",
+    "turkish_meaning": "kötü hat, cızırtılı hat",
+    "example_sentence": "I can't hear you, it's a badline."
+  },
+  {
+    "unit": 4,
+    "english": "Book",
+    "pronunciation": "Buk",
+    "turkish_meaning": "rezervasyon yapmak",
+    "example_sentence": "I want to book a flight ticket."
+  },
+  {
+    "unit": 4,
+    "english": "Busy",
+    "pronunciation": "Bizi",
+    "turkish_meaning": "meşgul",
+    "example_sentence": "The line is busy right now."
+  },
+  {
+    "unit": 4,
+    "english": "Call",
+    "pronunciation": "Kol",
+    "turkish_meaning": "telefon ile aramak",
+    "example_sentence": "I will call you tonight."
+  },
+  {
+    "unit": 4,
+    "english": "Call back",
+    "pronunciation": "Kol bek",
+    "turkish_meaning": "geri aramak",
+    "example_sentence": "Can you call back later, please?"
+  },
+  {
+    "unit": 4,
+    "english": "Call center",
+    "pronunciation": "Kol sentır",
+    "turkish_meaning": "çağrı merkezi",
+    "example_sentence": "She works at a call center."
+  },
+  {
+    "unit": 4,
+    "english": "Caller",
+    "pronunciation": "Kolır",
+    "turkish_meaning": "arayan",
+    "example_sentence": "Who is the caller, please?"
+  },
+  {
+    "unit": 4,
+    "english": "Calm down",
+    "pronunciation": "Kam daun",
+    "turkish_meaning": "sakin olmak",
+    "example_sentence": "Please calm down and explain the problem."
+  },
+  {
+    "unit": 4,
+    "english": "Cell phone",
+    "pronunciation": "Sel fon",
+    "turkish_meaning": "cep telefonu",
+    "example_sentence": "I left my cell phone at home."
+  },
+  {
+    "unit": 4,
+    "english": "Change",
+    "pronunciation": "Çeync",
+    "turkish_meaning": "değiştirmek",
+    "example_sentence": "I want to change my old phone."
+  },
+  {
+    "unit": 4,
+    "english": "Cheap",
+    "pronunciation": "Çip",
+    "turkish_meaning": "ucuz",
+    "example_sentence": "This phone is quite cheap."
+  },
+  {
+    "unit": 4,
+    "english": "Clearly",
+    "pronunciation": "Klirli",
+    "turkish_meaning": "net şekilde",
+    "example_sentence": "Please speak clearly, I can't hear you."
+  },
+  {
+    "unit": 4,
+    "english": "Communicate",
+    "pronunciation": "Kımyunikeyt",
+    "turkish_meaning": "iletişim kurmak",
+    "example_sentence": "We communicate by phone every day."
+  },
+  {
+    "unit": 4,
+    "english": "Company",
+    "pronunciation": "Kampıni",
+    "turkish_meaning": "şirket",
+    "example_sentence": "He works for a big company."
+  },
+  {
+    "unit": 4,
+    "english": "Confirm",
+    "pronunciation": "Kınfırm",
+    "turkish_meaning": "doğrulamak, onaylamak",
+    "example_sentence": "Can you confirm your appointment, please?"
+  },
+  {
+    "unit": 4,
+    "english": "Connect",
+    "pronunciation": "Kınekt",
+    "turkish_meaning": "bağlamak",
+    "example_sentence": "I will connect you to Mr. Watson."
+  },
+  {
+    "unit": 4,
+    "english": "Contact",
+    "pronunciation": "Kontekt",
+    "turkish_meaning": "iletişim kurmak",
+    "example_sentence": "Please contact me if you have any questions."
+  },
+  {
+    "unit": 4,
+    "english": "Conversation",
+    "pronunciation": "Konvırseyşın",
+    "turkish_meaning": "görüşme",
+    "example_sentence": "We had a long conversation on the phone."
+  },
+  {
+    "unit": 4,
+    "english": "Customer service",
+    "pronunciation": "Kastımır sırvis",
+    "turkish_meaning": "müşteri hizmetleri",
+    "example_sentence": "I called customer service about my order."
+  },
+  {
+    "unit": 4,
+    "english": "Delivery",
+    "pronunciation": "Dilivıri",
+    "turkish_meaning": "gönderi",
+    "example_sentence": "I want to inform a delivery problem."
+  },
+  {
+    "unit": 4,
+    "english": "Device",
+    "pronunciation": "Divays",
+    "turkish_meaning": "alet, aygıt, cihaz",
+    "example_sentence": "This is a very useful device."
+  },
+  {
+    "unit": 4,
+    "english": "Dial",
+    "pronunciation": "Dayıl",
+    "turkish_meaning": "numarayı tuşlamak / çevirmek",
+    "example_sentence": "Dial the number and wait."
+  },
+  {
+    "unit": 4,
+    "english": "Discovery",
+    "pronunciation": "Diskavıri",
+    "turkish_meaning": "keşif",
+    "example_sentence": "The telephone was an important discovery."
+  },
+  {
+    "unit": 4,
+    "english": "Disturb",
+    "pronunciation": "Distırb",
+    "turkish_meaning": "rahatsız etmek",
+    "example_sentence": "Sorry to disturb you at this hour."
+  },
+  {
+    "unit": 4,
+    "english": "Easy way",
+    "pronunciation": "Izi wey",
+    "turkish_meaning": "kolay yol",
+    "example_sentence": "Texting is an easy way of communication."
+  },
+  {
+    "unit": 4,
+    "english": "Engaged",
+    "pronunciation": "İngeycd",
+    "turkish_meaning": "meşgul",
+    "example_sentence": "The line is engaged, please try later."
+  },
+  {
+    "unit": 4,
+    "english": "Examine",
+    "pronunciation": "İgzemin",
+    "turkish_meaning": "muayene etmek",
+    "example_sentence": "The doctor will examine the patient."
+  },
+  {
+    "unit": 4,
+    "english": "Expensive",
+    "pronunciation": "İkspensiv",
+    "turkish_meaning": "pahalı",
+    "example_sentence": "Smartphones can be very expensive."
+  },
+  {
+    "unit": 4,
+    "english": "Experimental",
+    "pronunciation": "İksperimentıl",
+    "turkish_meaning": "deneysel",
+    "example_sentence": "This is an experimental application."
+  },
+  {
+    "unit": 4,
+    "english": "Express",
+    "pronunciation": "İkspres",
+    "turkish_meaning": "ifade etmek",
+    "example_sentence": "Try to express your problem clearly."
+  },
+  {
+    "unit": 4,
+    "english": "Extension",
+    "pronunciation": "İkstenşın",
+    "turkish_meaning": "dahili hat, iç hat",
+    "example_sentence": "Please dial the extension number 205."
+  },
+  {
+    "unit": 4,
+    "english": "Fast",
+    "pronunciation": "Fast",
+    "turkish_meaning": "hızlı",
+    "example_sentence": "The internet connection is very fast."
+  },
+  {
+    "unit": 4,
+    "english": "Get back",
+    "pronunciation": "Get bek",
+    "turkish_meaning": "geri dönmek (telefonda)",
+    "example_sentence": "I will get back to you soon."
+  },
+  {
+    "unit": 4,
+    "english": "Get somebody",
+    "pronunciation": "Get sambıdi",
+    "turkish_meaning": "birini telefona çağırmak",
+    "example_sentence": "Can you get Mr. Watson for me, please?"
+  },
+  {
+    "unit": 4,
+    "english": "Get well soon",
+    "pronunciation": "Get wel sun",
+    "turkish_meaning": "geçmiş olsun",
+    "example_sentence": "Get well soon! I heard you are sick."
+  },
+  {
+    "unit": 4,
+    "english": "Graduation",
+    "pronunciation": "Grecuyeyşın",
+    "turkish_meaning": "mezuniyet",
+    "example_sentence": "She called to invite me to her graduation."
+  },
+  {
+    "unit": 4,
+    "english": "Hang on",
+    "pronunciation": "Heng on",
+    "turkish_meaning": "hatta beklemek",
+    "example_sentence": "Hang on a minute, please."
+  },
+  {
+    "unit": 4,
+    "english": "Hang up",
+    "pronunciation": "Heng ap",
+    "turkish_meaning": "telefonu kapatmak",
+    "example_sentence": "Don't hang up the phone, please."
+  },
+  {
+    "unit": 4,
+    "english": "Harmful",
+    "pronunciation": "Harmfıl",
+    "turkish_meaning": "zararlı",
+    "example_sentence": "Too much phone use can be harmful."
+  },
+  {
+    "unit": 4,
+    "english": "Headquarter",
+    "pronunciation": "Hedkwortır",
+    "turkish_meaning": "yönetim merkezi",
+    "example_sentence": "The headquarter is in the city center."
+  },
+  {
+    "unit": 4,
+    "english": "Hear",
+    "pronunciation": "Hiır",
+    "turkish_meaning": "duymak",
+    "example_sentence": "I can't hear you very well."
+  },
+  {
+    "unit": 4,
+    "english": "Hold on",
+    "pronunciation": "Hold on",
+    "turkish_meaning": "hatta beklemek",
+    "example_sentence": "Hold on, I will put you through."
+  },
+  {
+    "unit": 4,
+    "english": "Imagine",
+    "pronunciation": "İmecin",
+    "turkish_meaning": "hayal etmek",
+    "example_sentence": "Imagine a life without phones."
+  },
+  {
+    "unit": 4,
+    "english": "Important",
+    "pronunciation": "İmportınt",
+    "turkish_meaning": "önemli",
+    "example_sentence": "This is an important message for you."
+  },
+  {
+    "unit": 4,
+    "english": "Information",
+    "pronunciation": "İnfırmeyşın",
+    "turkish_meaning": "bilgi",
+    "example_sentence": "I need some information about the ticket."
+  },
+  {
+    "unit": 4,
+    "english": "Invention",
+    "pronunciation": "İnvenşın",
+    "turkish_meaning": "icat",
+    "example_sentence": "The smartphone is an amazing invention."
+  },
+  {
+    "unit": 4,
+    "english": "Keep calm",
+    "pronunciation": "Kip kam",
+    "turkish_meaning": "sakin ol",
+    "example_sentence": "Keep calm and speak slowly, please."
+  },
+  {
+    "unit": 4,
+    "english": "Keep in touch",
+    "pronunciation": "Kip in taç",
+    "turkish_meaning": "görüşmek, iletişim kurmak",
+    "example_sentence": "Let's keep in touch by phone."
+  },
+  {
+    "unit": 4,
+    "english": "Kind",
+    "pronunciation": "Kaynd",
+    "turkish_meaning": "kibar",
+    "example_sentence": "The customer service was very kind to me."
+  },
+  {
+    "unit": 4,
+    "english": "Leave",
+    "pronunciation": "Liv",
+    "turkish_meaning": "bırakmak",
+    "example_sentence": "Please leave your name and number."
+  },
+  {
+    "unit": 4,
+    "english": "Leave message",
+    "pronunciation": "Liv mesic",
+    "turkish_meaning": "mesaj bırakmak",
+    "example_sentence": "Would you like to leave a message?"
+  },
+  {
+    "unit": 4,
+    "english": "Line",
+    "pronunciation": "Layn",
+    "turkish_meaning": "hat, telefon hattı",
+    "example_sentence": "The line is very bad today."
+  },
+  {
+    "unit": 4,
+    "english": "Listen",
+    "pronunciation": "Lisın",
+    "turkish_meaning": "dinlemek",
+    "example_sentence": "Please listen carefully to the message."
+  },
+  {
+    "unit": 4,
+    "english": "Loud",
+    "pronunciation": "Laud",
+    "turkish_meaning": "yüksek sesli",
+    "example_sentence": "Could you speak a little louder, please?"
+  },
+  {
+    "unit": 4,
+    "english": "Meet up",
+    "pronunciation": "Mit ap",
+    "turkish_meaning": "buluşmak",
+    "example_sentence": "Let's meet up this weekend."
+  },
+  {
+    "unit": 4,
+    "english": "Meeting",
+    "pronunciation": "Mitin",
+    "turkish_meaning": "toplantı",
+    "example_sentence": "He is in a meeting right now."
+  },
+  {
+    "unit": 4,
+    "english": "Memo",
+    "pronunciation": "Memo",
+    "turkish_meaning": "not",
+    "example_sentence": "She wrote a memo for her boss."
+  },
+  {
+    "unit": 4,
+    "english": "Message",
+    "pronunciation": "Mesic",
+    "turkish_meaning": "mesaj",
+    "example_sentence": "I left a message for him."
+  },
+  {
+    "unit": 4,
+    "english": "Minute",
+    "pronunciation": "Minit",
+    "turkish_meaning": "dakika",
+    "example_sentence": "Please hold on for a minute."
+  },
+  {
+    "unit": 4,
+    "english": "Misunderstanding",
+    "pronunciation": "Misandırstendin",
+    "turkish_meaning": "yanlış anlama",
+    "example_sentence": "There was a misunderstanding on the phone."
+  },
+  {
+    "unit": 4,
+    "english": "Mobile phone",
+    "pronunciation": "Mobayl fon",
+    "turkish_meaning": "cep telefonu",
+    "example_sentence": "I always carry my mobile phone."
+  },
+  {
+    "unit": 4,
+    "english": "Mouthpiece",
+    "pronunciation": "Mauthpis",
+    "turkish_meaning": "telefonun konuşma kısmı",
+    "example_sentence": "Speak clearly into the mouthpiece."
+  },
+  {
+    "unit": 4,
+    "english": "Once upon a time",
+    "pronunciation": "Wans ıpon ı taym",
+    "turkish_meaning": "bir zamanlar",
+    "example_sentence": "Once upon a time, people used letters to communicate."
+  },
+  {
+    "unit": 4,
+    "english": "Overseas",
+    "pronunciation": "Ovırsiz",
+    "turkish_meaning": "denizaşırı",
+    "example_sentence": "She called her friend overseas."
+  },
+  {
+    "unit": 4,
+    "english": "Patient",
+    "pronunciation": "Peyşınt",
+    "turkish_meaning": "hasta",
+    "example_sentence": "The doctor examined the patient."
+  },
+  {
+    "unit": 4,
+    "english": "Phone",
+    "pronunciation": "Fon",
+    "turkish_meaning": "telefon yada aramak",
+    "example_sentence": "Please phone me tonight."
+  },
+  {
+    "unit": 4,
+    "english": "Pick up",
+    "pronunciation": "Pik ap",
+    "turkish_meaning": "telefonu açmak",
+    "example_sentence": "Can you pick up the phone, please?"
+  },
+  {
+    "unit": 4,
+    "english": "Polite",
+    "pronunciation": "Pılayt",
+    "turkish_meaning": "kibar",
+    "example_sentence": "Always be polite when you speak on the phone."
+  },
+  {
+    "unit": 4,
+    "english": "Put somebody through",
+    "pronunciation": "Put sambıdi thru",
+    "turkish_meaning": "birini telefona bağlamak",
+    "example_sentence": "I will put you through to the manager."
+  },
+  {
+    "unit": 4,
+    "english": "Receiver",
+    "pronunciation": "Risivır",
+    "turkish_meaning": "telefonu yanıtlayan",
+    "example_sentence": "Pick up the receiver and dial the number."
+  },
+  {
+    "unit": 4,
+    "english": "Repeat",
+    "pronunciation": "Ripit",
+    "turkish_meaning": "tekrar etmek",
+    "example_sentence": "Could you repeat that, please?"
+  },
+  {
+    "unit": 4,
+    "english": "Reservation",
+    "pronunciation": "Rezırveyşın",
+    "turkish_meaning": "rezervasyon, yer ayırtma",
+    "example_sentence": "I made a reservation for two people."
+  },
+  {
+    "unit": 4,
+    "english": "Response",
+    "pronunciation": "Rispons",
+    "turkish_meaning": "karşılık, cevap",
+    "example_sentence": "I am waiting for your response."
+  },
+  {
+    "unit": 4,
+    "english": "Revolution",
+    "pronunciation": "Revılluşın",
+    "turkish_meaning": "devrim",
+    "example_sentence": "The internet started a big revolution."
+  },
+  {
+    "unit": 4,
+    "english": "Ring",
+    "pronunciation": "Ring",
+    "turkish_meaning": "çalmak (telefon yada zil)",
+    "example_sentence": "The phone started to ring."
+  },
+  {
+    "unit": 4,
+    "english": "Rude",
+    "pronunciation": "Rud",
+    "turkish_meaning": "kaba",
+    "example_sentence": "It is rude to hang up suddenly."
+  },
+  {
+    "unit": 4,
+    "english": "Say",
+    "pronunciation": "Sey",
+    "turkish_meaning": "söylemek",
+    "example_sentence": "Can you say that again, please?"
+  },
+  {
+    "unit": 4,
+    "english": "Smartphone",
+    "pronunciation": "Smartfon",
+    "turkish_meaning": "akıllı telefon",
+    "example_sentence": "Almost everyone has a smartphone now."
+  },
+  {
+    "unit": 4,
+    "english": "Solve",
+    "pronunciation": "Solv",
+    "turkish_meaning": "çözmek",
+    "example_sentence": "The call center helped me solve the problem."
+  },
+  {
+    "unit": 4,
+    "english": "Soon",
+    "pronunciation": "Sun",
+    "turkish_meaning": "yakında",
+    "example_sentence": "I will call you again soon."
+  },
+  {
+    "unit": 4,
+    "english": "Sorry to hear that",
+    "pronunciation": "Sori tu hiır dhet",
+    "turkish_meaning": "duyduğuna üzülmek",
+    "example_sentence": "Sorry to hear that, I hope you feel better."
+  },
+  {
+    "unit": 4,
+    "english": "Speak",
+    "pronunciation": "Spik",
+    "turkish_meaning": "konuşmak",
+    "example_sentence": "Can I speak to Mr. Watson, please?"
+  },
+  {
+    "unit": 4,
+    "english": "Spell",
+    "pronunciation": "Spel",
+    "turkish_meaning": "harf harf söylemek, hecelemek",
+    "example_sentence": "Could you spell your name, please?"
+  },
+  {
+    "unit": 4,
+    "english": "Take care",
+    "pronunciation": "Teyk keır",
+    "turkish_meaning": "kendine iyi bak",
+    "example_sentence": "Take care and have a nice day."
+  },
+  {
+    "unit": 4,
+    "english": "Take message",
+    "pronunciation": "Teyk mesic",
+    "turkish_meaning": "mesaj almak",
+    "example_sentence": "Can I take a message for you?"
+  },
+  {
+    "unit": 4,
+    "english": "Talk",
+    "pronunciation": "Tok",
+    "turkish_meaning": "konuşmak",
+    "example_sentence": "We talked on the phone for an hour."
+  },
+  {
+    "unit": 4,
+    "english": "Tell",
+    "pronunciation": "Tel",
+    "turkish_meaning": "söylemek, anlatmak",
+    "example_sentence": "Could you tell him that I called?"
+  },
+  {
+    "unit": 4,
+    "english": "Text a message",
+    "pronunciation": "Tekst ı mesic",
+    "turkish_meaning": "mesaj yazmak",
+    "example_sentence": "I will text a message to my friend."
+  },
+  {
+    "unit": 4,
+    "english": "Ticket",
+    "pronunciation": "Tikıt",
+    "turkish_meaning": "bilet",
+    "example_sentence": "I want to book a flight ticket."
+  },
+  {
+    "unit": 4,
+    "english": "Try",
+    "pronunciation": "Tray",
+    "turkish_meaning": "denemek",
+    "example_sentence": "I will try to call again later."
+  },
+  {
+    "unit": 4,
+    "english": "Useful",
+    "pronunciation": "Yusfıl",
+    "turkish_meaning": "faydalı, yararlı",
+    "example_sentence": "This application is very useful."
+  },
+  {
+    "unit": 4,
+    "english": "Via",
+    "pronunciation": "Vayı",
+    "turkish_meaning": "yoluyla",
+    "example_sentence": "We keep in touch via video chats."
+  },
+  {
+    "unit": 4,
+    "english": "Wait",
+    "pronunciation": "Weyt",
+    "turkish_meaning": "beklemek",
+    "example_sentence": "Please wait, I will connect you."
+  },
+  {
+    "unit": 4,
+    "english": "Want",
+    "pronunciation": "Wont",
+    "turkish_meaning": "istemek",
+    "example_sentence": "I want to speak to the manager."
+  },
+  {
+    "unit": 4,
+    "english": "What's up?",
+    "pronunciation": "Wats ap",
+    "turkish_meaning": "naber?",
+    "example_sentence": "Hi, what's up? How are you?"
+  },
+  {
+    "unit": 4,
+    "english": "Wonder",
+    "pronunciation": "Wandır",
+    "turkish_meaning": "merak etmek",
+    "example_sentence": "I wonder why he didn't answer the phone."
+  },
+  {
+    "unit": 4,
+    "english": "Wrong number",
+    "pronunciation": "Rong nambır",
+    "turkish_meaning": "yanlış numara",
+    "example_sentence": "Sorry, you called the wrong number."
+  },
+  {
+    "unit": 5,
+    "english": "Account",
+    "pronunciation": "Akaunt",
+    "turkish_meaning": "Hesap",
+    "example_sentence": "I need to create an account to use this website."
+  },
+  {
+    "unit": 5,
+    "english": "Addict",
+    "pronunciation": "Ädikt",
+    "turkish_meaning": "Bağımlı",
+    "example_sentence": "He is a social media addict."
+  },
+  {
+    "unit": 5,
+    "english": "Adult",
+    "pronunciation": "Ädalt",
+    "turkish_meaning": "Yetişkin",
+    "example_sentence": "Only an adult can buy this product online."
+  },
+  {
+    "unit": 5,
+    "english": "Affect",
+    "pronunciation": "Ifekt",
+    "turkish_meaning": "Etkilemek",
+    "example_sentence": "Too much screen time can affect your sleep."
+  },
+  {
+    "unit": 5,
+    "english": "Attachment",
+    "pronunciation": "Itäçmınt",
+    "turkish_meaning": "Ekli dosya",
+    "example_sentence": "She sent the photo as an attachment."
+  },
+  {
+    "unit": 5,
+    "english": "Avoid",
+    "pronunciation": "Ivoyd",
+    "turkish_meaning": "Sakınmak, kaçınmak",
+    "example_sentence": "You should avoid dangerous websites."
+  },
+  {
+    "unit": 5,
+    "english": "Believe",
+    "pronunciation": "Bilîv",
+    "turkish_meaning": "İnanmak",
+    "example_sentence": "Don't believe everything you read online."
+  },
+  {
+    "unit": 5,
+    "english": "Blog",
+    "pronunciation": "Blog",
+    "turkish_meaning": "İnternet günlüğü",
+    "example_sentence": "She writes a blog about cooking."
+  },
+  {
+    "unit": 5,
+    "english": "Break",
+    "pronunciation": "Breyk",
+    "turkish_meaning": "Bozmak",
+    "example_sentence": "Please don't break the rules."
+  },
+  {
+    "unit": 5,
+    "english": "Broken",
+    "pronunciation": "Brokın",
+    "turkish_meaning": "Arızalı, bozuk, kesik",
+    "example_sentence": "My phone screen is broken."
+  },
+  {
+    "unit": 5,
+    "english": "Browse",
+    "pronunciation": "Brauz",
+    "turkish_meaning": "Göz gezdirmek",
+    "example_sentence": "I like to browse the internet in my free time."
+  },
+  {
+    "unit": 5,
+    "english": "Check",
+    "pronunciation": "Çek",
+    "turkish_meaning": "Kontrol etmek",
+    "example_sentence": "Check the file before you open it."
+  },
+  {
+    "unit": 5,
+    "english": "Click",
+    "pronunciation": "Klik",
+    "turkish_meaning": "Tıklamak",
+    "example_sentence": "Click the button to sign in."
+  },
+  {
+    "unit": 5,
+    "english": "Command",
+    "pronunciation": "Kımänd",
+    "turkish_meaning": "Komut",
+    "example_sentence": "Type the command to open the program."
+  },
+  {
+    "unit": 5,
+    "english": "Comment",
+    "pronunciation": "Kament",
+    "turkish_meaning": "Yorum, yorum yapmak",
+    "example_sentence": "He left a nice comment on my post."
+  },
+  {
+    "unit": 5,
+    "english": "Communication",
+    "pronunciation": "Kımünikeyşın",
+    "turkish_meaning": "İletişim",
+    "example_sentence": "The internet makes communication easier."
+  },
+  {
+    "unit": 5,
+    "english": "Confirm",
+    "pronunciation": "Kınförm",
+    "turkish_meaning": "Onaylamak, doğrulamak",
+    "example_sentence": "Please confirm your password."
+  },
+  {
+    "unit": 5,
+    "english": "Connect",
+    "pronunciation": "Kınekt",
+    "turkish_meaning": "Bağlanmak",
+    "example_sentence": "I can't connect to the internet."
+  },
+  {
+    "unit": 5,
+    "english": "Connection",
+    "pronunciation": "Kınekşın",
+    "turkish_meaning": "Bağlantı",
+    "example_sentence": "My internet connection is very slow."
+  },
+  {
+    "unit": 5,
+    "english": "Create",
+    "pronunciation": "Kriyeyt",
+    "turkish_meaning": "Oluşturmak",
+    "example_sentence": "You can create a new account for free."
+  },
+  {
+    "unit": 5,
+    "english": "Dangerous",
+    "pronunciation": "Deyncırıs",
+    "turkish_meaning": "Tehlikeli",
+    "example_sentence": "Some websites are dangerous for children."
+  },
+  {
+    "unit": 5,
+    "english": "Delete",
+    "pronunciation": "Dilît",
+    "turkish_meaning": "Silmek",
+    "example_sentence": "I deleted the old file by mistake."
+  },
+  {
+    "unit": 5,
+    "english": "Develop",
+    "pronunciation": "Divelıp",
+    "turkish_meaning": "Geliştirmek",
+    "example_sentence": "We need to develop safer habits online."
+  },
+  {
+    "unit": 5,
+    "english": "Device",
+    "pronunciation": "Divays",
+    "turkish_meaning": "Alet, cihaz",
+    "example_sentence": "Which device do you use to go online?"
+  },
+  {
+    "unit": 5,
+    "english": "Download",
+    "pronunciation": "Daunlod",
+    "turkish_meaning": "İndirmek (cihaza)",
+    "example_sentence": "Don't download files from unknown websites."
+  },
+  {
+    "unit": 5,
+    "english": "File",
+    "pronunciation": "Fayl",
+    "turkish_meaning": "Dosya",
+    "example_sentence": "I saved the file on my computer."
+  },
+  {
+    "unit": 5,
+    "english": "Find",
+    "pronunciation": "Faynd",
+    "turkish_meaning": "Bulmak",
+    "example_sentence": "I used a search engine to find the answer."
+  },
+  {
+    "unit": 5,
+    "english": "Follow",
+    "pronunciation": "Falo",
+    "turkish_meaning": "Takip etmek",
+    "example_sentence": "I follow my friends on social media."
+  },
+  {
+    "unit": 5,
+    "english": "Free time",
+    "pronunciation": "Fri Taym",
+    "turkish_meaning": "Boş zaman",
+    "example_sentence": "I browse the internet in my free time."
+  },
+  {
+    "unit": 5,
+    "english": "Friend request",
+    "pronunciation": "Frend Rikuest",
+    "turkish_meaning": "Arkadaşlık isteği",
+    "example_sentence": "She sent me a friend request yesterday."
+  },
+  {
+    "unit": 5,
+    "english": "Habit",
+    "pronunciation": "Häbit",
+    "turkish_meaning": "Alışkanlık",
+    "example_sentence": "Checking your phone every minute is a bad habit."
+  },
+  {
+    "unit": 5,
+    "english": "Ignore",
+    "pronunciation": "İgnôr",
+    "turkish_meaning": "Reddetmek",
+    "example_sentence": "You should ignore messages from strangers."
+  },
+  {
+    "unit": 5,
+    "english": "Important",
+    "pronunciation": "İmpôrtınt",
+    "turkish_meaning": "Önemli",
+    "example_sentence": "It is important to protect your password."
+  },
+  {
+    "unit": 5,
+    "english": "Improve",
+    "pronunciation": "İmprûv",
+    "turkish_meaning": "Geliştirmek",
+    "example_sentence": "I use the internet to improve my English."
+  },
+  {
+    "unit": 5,
+    "english": "Information",
+    "pronunciation": "İnfırmeyşın",
+    "turkish_meaning": "Bilgi",
+    "example_sentence": "You can find a lot of information online."
+  },
+  {
+    "unit": 5,
+    "english": "Instant",
+    "pronunciation": "İnstınt",
+    "turkish_meaning": "Anlık",
+    "example_sentence": "Instant messaging is very popular now."
+  },
+  {
+    "unit": 5,
+    "english": "Isolated",
+    "pronunciation": "Aysıleytid",
+    "turkish_meaning": "Soyutlanmış, izole edilmiş",
+    "example_sentence": "Too much internet use can make you feel isolated."
+  },
+  {
+    "unit": 5,
+    "english": "Join",
+    "pronunciation": "Coyn",
+    "turkish_meaning": "Katılmak",
+    "example_sentence": "I joined a new social networking site."
+  },
+  {
+    "unit": 5,
+    "english": "Just",
+    "pronunciation": "Cast",
+    "turkish_meaning": "Sadece",
+    "example_sentence": "I just wanted to check my email."
+  },
+  {
+    "unit": 5,
+    "english": "Letters",
+    "pronunciation": "Letırz",
+    "turkish_meaning": "Harfler",
+    "example_sentence": "A password should have numbers and letters."
+  },
+  {
+    "unit": 5,
+    "english": "Log in",
+    "pronunciation": "Log İn",
+    "turkish_meaning": "Giriş yapmak",
+    "example_sentence": "You need a username to log in."
+  },
+  {
+    "unit": 5,
+    "english": "Log off",
+    "pronunciation": "Log Of",
+    "turkish_meaning": "Çıkış yapmak",
+    "example_sentence": "Always log off after using a public computer."
+  },
+  {
+    "unit": 5,
+    "english": "Log on",
+    "pronunciation": "Log On",
+    "turkish_meaning": "Giriş yapmak",
+    "example_sentence": "I log on to my account every day."
+  },
+  {
+    "unit": 5,
+    "english": "Log out",
+    "pronunciation": "Log Aut",
+    "turkish_meaning": "Çıkış yapmak",
+    "example_sentence": "Don't forget to log out when you finish."
+  },
+  {
+    "unit": 5,
+    "english": "Look for",
+    "pronunciation": "Luk Fôr",
+    "turkish_meaning": "Aramak",
+    "example_sentence": "I am looking for information about safety online."
+  },
+  {
+    "unit": 5,
+    "english": "Mean",
+    "pronunciation": "Mîn",
+    "turkish_meaning": "Kastetmek, demek istemek",
+    "example_sentence": "What do you mean by that?"
+  },
+  {
+    "unit": 5,
+    "english": "Necessary",
+    "pronunciation": "Nesıseri",
+    "turkish_meaning": "Gerekli",
+    "example_sentence": "It is necessary to have a strong password."
+  },
+  {
+    "unit": 5,
+    "english": "Nickname",
+    "pronunciation": "Nikneym",
+    "turkish_meaning": "Takma ad, lakap",
+    "example_sentence": "She uses a nickname instead of her real name."
+  },
+  {
+    "unit": 5,
+    "english": "Obey",
+    "pronunciation": "Ibey",
+    "turkish_meaning": "Uymak",
+    "example_sentence": "You should obey the internet safety rules."
+  },
+  {
+    "unit": 5,
+    "english": "Online",
+    "pronunciation": "Onlayn",
+    "turkish_meaning": "Çevrimiçi",
+    "example_sentence": "I do my shopping online."
+  },
+  {
+    "unit": 5,
+    "english": "Opinion",
+    "pronunciation": "Ipinyın",
+    "turkish_meaning": "Fikir, düşünce",
+    "example_sentence": "In my opinion, sharing personal information is risky."
+  },
+  {
+    "unit": 5,
+    "english": "Password",
+    "pronunciation": "Päsvörd",
+    "turkish_meaning": "Şifre",
+    "example_sentence": "Keep your password secret."
+  },
+  {
+    "unit": 5,
+    "english": "Personal",
+    "pronunciation": "Pörsınıl",
+    "turkish_meaning": "Kişisel",
+    "example_sentence": "Don't share your personal information online."
+  },
+  {
+    "unit": 5,
+    "english": "Post",
+    "pronunciation": "Post",
+    "turkish_meaning": "Gönderi, göndermek",
+    "example_sentence": "She posted a photo on social media."
+  },
+  {
+    "unit": 5,
+    "english": "Practice",
+    "pronunciation": "Präktis",
+    "turkish_meaning": "Alıştırma, pratik yapmak",
+    "example_sentence": "I practice English online every day."
+  },
+  {
+    "unit": 5,
+    "english": "Precaution",
+    "pronunciation": "Prikôşın",
+    "turkish_meaning": "Önlem",
+    "example_sentence": "Take precautions before you meet online friends."
+  },
+  {
+    "unit": 5,
+    "english": "Press",
+    "pronunciation": "Pres",
+    "turkish_meaning": "Basmak",
+    "example_sentence": "Press the button to send the message."
+  },
+  {
+    "unit": 5,
+    "english": "Properly",
+    "pronunciation": "Propırli",
+    "turkish_meaning": "Düzgün bir şekilde",
+    "example_sentence": "Use the internet properly and safely."
+  },
+  {
+    "unit": 5,
+    "english": "Protect",
+    "pronunciation": "Pritekt",
+    "turkish_meaning": "Korumak",
+    "example_sentence": "A strong password protects your account."
+  },
+  {
+    "unit": 5,
+    "english": "Register",
+    "pronunciation": "Recistır",
+    "turkish_meaning": "Kayıt olmak",
+    "example_sentence": "You must register before you can log in."
+  },
+  {
+    "unit": 5,
+    "english": "Reply",
+    "pronunciation": "Riplay",
+    "turkish_meaning": "Cevap vermek",
+    "example_sentence": "I will reply to your message later."
+  },
+  {
+    "unit": 5,
+    "english": "Research",
+    "pronunciation": "Risörç",
+    "turkish_meaning": "Araştırmak",
+    "example_sentence": "She did research on internet safety."
+  },
+  {
+    "unit": 5,
+    "english": "Rules",
+    "pronunciation": "Rûlz",
+    "turkish_meaning": "Kurallar",
+    "example_sentence": "We must obey the internet safety rules."
+  },
+  {
+    "unit": 5,
+    "english": "Safety",
+    "pronunciation": "Seyfti",
+    "turkish_meaning": "Güvenlik",
+    "example_sentence": "Internet safety is important for everyone."
+  },
+  {
+    "unit": 5,
+    "english": "Screen",
+    "pronunciation": "Skrîn",
+    "turkish_meaning": "Ekran",
+    "example_sentence": "Don't spend too much time in front of a screen."
+  },
+  {
+    "unit": 5,
+    "english": "Search engine",
+    "pronunciation": "Sörç Encın",
+    "turkish_meaning": "Arama motoru",
+    "example_sentence": "I used a search engine to find the website."
+  },
+  {
+    "unit": 5,
+    "english": "Secret",
+    "pronunciation": "Sîkrit",
+    "turkish_meaning": "Gizli, sır",
+    "example_sentence": "Keep your password secret."
+  },
+  {
+    "unit": 5,
+    "english": "Send",
+    "pronunciation": "Send",
+    "turkish_meaning": "Göndermek",
+    "example_sentence": "I will send you the file by email."
+  },
+  {
+    "unit": 5,
+    "english": "Share",
+    "pronunciation": "Şer",
+    "turkish_meaning": "Paylaşmak",
+    "example_sentence": "Be careful what you share on the internet."
+  },
+  {
+    "unit": 5,
+    "english": "Sign",
+    "pronunciation": "Sayn",
+    "turkish_meaning": "Simge, işaret",
+    "example_sentence": "Click on the sign to open the menu."
+  },
+  {
+    "unit": 5,
+    "english": "Sign in",
+    "pronunciation": "Sayn İn",
+    "turkish_meaning": "Giriş yapmak",
+    "example_sentence": "You need a password to sign in."
+  },
+  {
+    "unit": 5,
+    "english": "Sign up",
+    "pronunciation": "Sayn Ap",
+    "turkish_meaning": "Kayıt olmak",
+    "example_sentence": "I signed up for a new social networking site."
+  },
+  {
+    "unit": 5,
+    "english": "Social networking site",
+    "pronunciation": "Soşıl Netvörking Sayt",
+    "turkish_meaning": "Sosyal ağ sitesi",
+    "example_sentence": "She spends hours on social networking sites."
+  },
+  {
+    "unit": 5,
+    "english": "Stranger",
+    "pronunciation": "Streyncır",
+    "turkish_meaning": "Yabancı",
+    "example_sentence": "Never meet a stranger you met online."
+  },
+  {
+    "unit": 5,
+    "english": "Suggest",
+    "pronunciation": "Sıcest",
+    "turkish_meaning": "Önermek",
+    "example_sentence": "I suggest using a strong password."
+  },
+  {
+    "unit": 5,
+    "english": "Survey",
+    "pronunciation": "Sörvey",
+    "turkish_meaning": "Anket, araştırma",
+    "example_sentence": "We did a survey about internet use."
+  },
+  {
+    "unit": 5,
+    "english": "Trap",
+    "pronunciation": "Träp",
+    "turkish_meaning": "Tuzak, kapan",
+    "example_sentence": "Some websites are a trap for personal information."
+  },
+  {
+    "unit": 5,
+    "english": "Unknown",
+    "pronunciation": "Annon",
+    "turkish_meaning": "Bilinmeyen",
+    "example_sentence": "Don't open messages from unknown people."
+  },
+  {
+    "unit": 5,
+    "english": "Upload",
+    "pronunciation": "Aplod",
+    "turkish_meaning": "Yüklemek (internete)",
+    "example_sentence": "She uploaded her photos to the website."
+  },
+  {
+    "unit": 5,
+    "english": "Use",
+    "pronunciation": "Yûz",
+    "turkish_meaning": "Kullanmak",
+    "example_sentence": "I use the internet to do research."
+  },
+  {
+    "unit": 5,
+    "english": "Username",
+    "pronunciation": "Yûzırneym",
+    "turkish_meaning": "Kullanıcı adı",
+    "example_sentence": "Enter your username and password to log in."
+  },
+  {
+    "unit": 5,
+    "english": "Via",
+    "pronunciation": "Vaya",
+    "turkish_meaning": "Aracılığı ile, yoluyla",
+    "example_sentence": "We keep in touch via social media."
+  },
+  {
+    "unit": 5,
+    "english": "Web browser",
+    "pronunciation": "Veb Brauzır",
+    "turkish_meaning": "İnternet tarayıcısı",
+    "example_sentence": "Open your web browser to visit the website."
+  },
+  {
+    "unit": 5,
+    "english": "Website",
+    "pronunciation": "Vebsayt",
+    "turkish_meaning": "İnternet sitesi",
+    "example_sentence": "This website has a lot of useful information."
+  },
+  {
+    "unit": 6,
+    "english": "Adrenaline seeker",
+    "pronunciation": "Ädrınılin Sîkır",
+    "turkish_meaning": "Adrenalin bağımlısı",
+    "example_sentence": "He is an adrenaline seeker who loves extreme sports."
+  },
+  {
+    "unit": 6,
+    "english": "Adventure",
+    "pronunciation": "Idvençır",
+    "turkish_meaning": "Macera",
+    "example_sentence": "Skydiving was the best adventure of my life."
+  },
+  {
+    "unit": 6,
+    "english": "Adventurer",
+    "pronunciation": "Idvençırır",
+    "turkish_meaning": "Maceracı",
+    "example_sentence": "The adventurer climbed the highest mountain."
+  },
+  {
+    "unit": 6,
+    "english": "Adventurous",
+    "pronunciation": "Idvençırıs",
+    "turkish_meaning": "Maceracı, maceraperest",
+    "example_sentence": "She is very adventurous and loves new experiences."
+  },
+  {
+    "unit": 6,
+    "english": "Afraid",
+    "pronunciation": "Ifreyd",
+    "turkish_meaning": "Korkmak",
+    "example_sentence": "I am afraid of heights."
+  },
+  {
+    "unit": 6,
+    "english": "Air",
+    "pronunciation": "Er",
+    "turkish_meaning": "Hava",
+    "example_sentence": "Paragliders float in the air."
+  },
+  {
+    "unit": 6,
+    "english": "Aircraft",
+    "pronunciation": "Erkräft",
+    "turkish_meaning": "Hava aracı",
+    "example_sentence": "We watched the aircraft fly over the mountains."
+  },
+  {
+    "unit": 6,
+    "english": "Amazing",
+    "pronunciation": "Imeyzing",
+    "turkish_meaning": "Harika, şaşırtıcı",
+    "example_sentence": "The view from the top was amazing."
+  },
+  {
+    "unit": 6,
+    "english": "Amusing",
+    "pronunciation": "Imyûzing",
+    "turkish_meaning": "Komik, eğlenceli",
+    "example_sentence": "Skateboarding is an amusing activity."
+  },
+  {
+    "unit": 6,
+    "english": "Barefoot",
+    "pronunciation": "Berfut",
+    "turkish_meaning": "Yalın ayak",
+    "example_sentence": "We walked barefoot on the sand."
+  },
+  {
+    "unit": 6,
+    "english": "Both",
+    "pronunciation": "Bôth",
+    "turkish_meaning": "Her ikisi",
+    "example_sentence": "I like both rafting and canoeing."
+  },
+  {
+    "unit": 6,
+    "english": "Bungee-jumping",
+    "pronunciation": "Banci Campıng",
+    "turkish_meaning": "Elastik ip ile yüksekten atlama",
+    "example_sentence": "Bungee-jumping is one of the riskiest sports."
+  },
+  {
+    "unit": 6,
+    "english": "Canoeing",
+    "pronunciation": "Kınûing",
+    "turkish_meaning": "Kano, sal ile gezinti",
+    "example_sentence": "We went canoeing on the river last summer."
+  },
+  {
+    "unit": 6,
+    "english": "Caving",
+    "pronunciation": "Keyving",
+    "turkish_meaning": "Mağaracılık",
+    "example_sentence": "Caving can be a dark and silent experience."
+  },
+  {
+    "unit": 6,
+    "english": "Challenging",
+    "pronunciation": "Çälıncing",
+    "turkish_meaning": "Zorlu, meydan okuyucu",
+    "example_sentence": "Rock climbing is very challenging."
+  },
+  {
+    "unit": 6,
+    "english": "Climbing",
+    "pronunciation": "Klaymıng",
+    "turkish_meaning": "Tırmanma",
+    "example_sentence": "Climbing that hill took two hours."
+  },
+  {
+    "unit": 6,
+    "english": "Courage",
+    "pronunciation": "Körıc",
+    "turkish_meaning": "Cesaret",
+    "example_sentence": "You need courage to try skydiving."
+  },
+  {
+    "unit": 6,
+    "english": "Dangerous",
+    "pronunciation": "Deyncırıs",
+    "turkish_meaning": "Tehlikeli",
+    "example_sentence": "Extreme sports can be dangerous without equipment."
+  },
+  {
+    "unit": 6,
+    "english": "Darkness",
+    "pronunciation": "Darknıs",
+    "turkish_meaning": "Karanlık",
+    "example_sentence": "The cave was full of darkness."
+  },
+  {
+    "unit": 6,
+    "english": "Desert",
+    "pronunciation": "Dezırt",
+    "turkish_meaning": "Çöl",
+    "example_sentence": "We rode camels in the desert."
+  },
+  {
+    "unit": 6,
+    "english": "Disappointing",
+    "pronunciation": "Disıpoynting",
+    "turkish_meaning": "Hayal kırıklığına uğratıcı",
+    "example_sentence": "The trip was disappointing because of the rain."
+  },
+  {
+    "unit": 6,
+    "english": "Diving suit",
+    "pronunciation": "Dayving Sût",
+    "turkish_meaning": "Dalış kıyafeti",
+    "example_sentence": "You need a diving suit for scuba diving."
+  },
+  {
+    "unit": 6,
+    "english": "Entertaining",
+    "pronunciation": "Entırteyning",
+    "turkish_meaning": "Eğlenceli",
+    "example_sentence": "Zip lining is a very entertaining activity."
+  },
+  {
+    "unit": 6,
+    "english": "Equipment",
+    "pronunciation": "İkuipmınt",
+    "turkish_meaning": "Araç gereç, ekipman",
+    "example_sentence": "You need special equipment for mountain climbing."
+  },
+  {
+    "unit": 6,
+    "english": "Exciting",
+    "pronunciation": "İksayting",
+    "turkish_meaning": "Heyecan verici",
+    "example_sentence": "Skydiving is an exciting experience."
+  },
+  {
+    "unit": 6,
+    "english": "Experience",
+    "pronunciation": "İkspiriyıns",
+    "turkish_meaning": "Deneyim, tecrübe",
+    "example_sentence": "It was an unforgettable experience."
+  },
+  {
+    "unit": 6,
+    "english": "Experienced",
+    "pronunciation": "İkspiriyınst",
+    "turkish_meaning": "Deneyimli, tecrübeli",
+    "example_sentence": "You need an experienced guide for caving."
+  },
+  {
+    "unit": 6,
+    "english": "Explore",
+    "pronunciation": "İksplôr",
+    "turkish_meaning": "Keşfetmek",
+    "example_sentence": "We explored the historical sites in the city."
+  },
+  {
+    "unit": 6,
+    "english": "Extreme sport",
+    "pronunciation": "İkstrîm Spôrt",
+    "turkish_meaning": "Tehlikeli ve heyecanlı spor",
+    "example_sentence": "Skydiving is a popular extreme sport."
+  },
+  {
+    "unit": 6,
+    "english": "Fascinating",
+    "pronunciation": "Fäsıneyting",
+    "turkish_meaning": "Büyüleyici",
+    "example_sentence": "The Northern lights are fascinating to watch."
+  },
+  {
+    "unit": 6,
+    "english": "Feel",
+    "pronunciation": "Fîl",
+    "turkish_meaning": "Hissetmek",
+    "example_sentence": "I feel scared when I look down from a height."
+  },
+  {
+    "unit": 6,
+    "english": "Fighting",
+    "pronunciation": "Faytıng",
+    "turkish_meaning": "Mücadele",
+    "example_sentence": "The sailors were fighting against the waves."
+  },
+  {
+    "unit": 6,
+    "english": "Float",
+    "pronunciation": "Flot",
+    "turkish_meaning": "Süzülmek",
+    "example_sentence": "The hot air balloon floated above the hills."
+  },
+  {
+    "unit": 6,
+    "english": "Goggle",
+    "pronunciation": "Gogıl",
+    "turkish_meaning": "Koruyucu gözlük",
+    "example_sentence": "Wear goggles when you go skiing."
+  },
+  {
+    "unit": 6,
+    "english": "Hang-gliding",
+    "pronunciation": "Häng-Glayding",
+    "turkish_meaning": "Delta kanatla uçuş",
+    "example_sentence": "Hang-gliding lets you feel like a bird."
+  },
+  {
+    "unit": 6,
+    "english": "Height",
+    "pronunciation": "Hayt",
+    "turkish_meaning": "Yükseklik",
+    "example_sentence": "She is afraid of height."
+  },
+  {
+    "unit": 6,
+    "english": "Helmet",
+    "pronunciation": "Helmıt",
+    "turkish_meaning": "Kask",
+    "example_sentence": "Always wear a helmet when skateboarding."
+  },
+  {
+    "unit": 6,
+    "english": "Hill",
+    "pronunciation": "Hil",
+    "turkish_meaning": "Tepe",
+    "example_sentence": "We rode our bikes up the hill."
+  },
+  {
+    "unit": 6,
+    "english": "Historical sites",
+    "pronunciation": "Histôrikıl Saytz",
+    "turkish_meaning": "Tarihi yerler",
+    "example_sentence": "We visited many historical sites on our trip."
+  },
+  {
+    "unit": 6,
+    "english": "Hot air balloon",
+    "pronunciation": "Hat Er Bılûn",
+    "turkish_meaning": "Sıcak hava balonu",
+    "example_sentence": "Flying in a hot air balloon was amazing."
+  },
+  {
+    "unit": 6,
+    "english": "Ice skating",
+    "pronunciation": "Ays Skeyting",
+    "turkish_meaning": "Buz pateni",
+    "example_sentence": "Ice skating is fun in winter."
+  },
+  {
+    "unit": 6,
+    "english": "Include",
+    "pronunciation": "İnklûd",
+    "turkish_meaning": "İçermek, kapsamak",
+    "example_sentence": "The price includes all the equipment."
+  },
+  {
+    "unit": 6,
+    "english": "Incredible",
+    "pronunciation": "İnkredıbıl",
+    "turkish_meaning": "İnanılmaz",
+    "example_sentence": "The view from the top was incredible."
+  },
+  {
+    "unit": 6,
+    "english": "Individually",
+    "pronunciation": "İndıvıcuıli",
+    "turkish_meaning": "Bireysel",
+    "example_sentence": "You can try skydiving individually or with a partner."
+  },
+  {
+    "unit": 6,
+    "english": "Indoor",
+    "pronunciation": "İndôr",
+    "turkish_meaning": "Kapalı mekan, iç mekan",
+    "example_sentence": "We prefer indoor climbing in winter."
+  },
+  {
+    "unit": 6,
+    "english": "Inexperienced",
+    "pronunciation": "İnikspiriyınst",
+    "turkish_meaning": "Deneyimsiz, tecrübesiz",
+    "example_sentence": "An inexperienced climber should not try that route."
+  },
+  {
+    "unit": 6,
+    "english": "Interesting",
+    "pronunciation": "İntrıstıng",
+    "turkish_meaning": "İlginç",
+    "example_sentence": "Caving is an interesting hobby."
+  },
+  {
+    "unit": 6,
+    "english": "Jump",
+    "pronunciation": "Camp",
+    "turkish_meaning": "Atlamak, zıplamak",
+    "example_sentence": "He jumped off the cliff with a parachute."
+  },
+  {
+    "unit": 6,
+    "english": "Kayaking",
+    "pronunciation": "Kayäking",
+    "turkish_meaning": "Kanoya benzer bir su sporu",
+    "example_sentence": "We went kayaking on the lake."
+  },
+  {
+    "unit": 6,
+    "english": "Kneepad",
+    "pronunciation": "Nîpäd",
+    "turkish_meaning": "Diz koruyucu, dizlik",
+    "example_sentence": "Wear kneepads when you go skateboarding."
+  },
+  {
+    "unit": 6,
+    "english": "Land",
+    "pronunciation": "Länd",
+    "turkish_meaning": "Toprak, kara",
+    "example_sentence": "The plane will land in ten minutes."
+  },
+  {
+    "unit": 6,
+    "english": "Less",
+    "pronunciation": "Les",
+    "turkish_meaning": "Daha az",
+    "example_sentence": "Caving is less exciting than scuba diving for me."
+  },
+  {
+    "unit": 6,
+    "english": "More",
+    "pronunciation": "Môr",
+    "turkish_meaning": "Daha fazla",
+    "example_sentence": "Skydiving is more dangerous than swimming."
+  },
+  {
+    "unit": 6,
+    "english": "Motor racing",
+    "pronunciation": "Motır Reysıng",
+    "turkish_meaning": "Motor yarışı",
+    "example_sentence": "Motor racing is a very risky sport."
+  },
+  {
+    "unit": 6,
+    "english": "Mountain biking",
+    "pronunciation": "Mauntın Baykıng",
+    "turkish_meaning": "Dağ bisikleti",
+    "example_sentence": "We went mountain biking last weekend."
+  },
+  {
+    "unit": 6,
+    "english": "Natural",
+    "pronunciation": "Näçırıl",
+    "turkish_meaning": "Doğal",
+    "example_sentence": "The cave has a natural beauty."
+  },
+  {
+    "unit": 6,
+    "english": "Need",
+    "pronunciation": "Nîd",
+    "turkish_meaning": "İhtiyaç duymak",
+    "example_sentence": "You need a helmet for this sport."
+  },
+  {
+    "unit": 6,
+    "english": "Northern lights",
+    "pronunciation": "Nôrdın Laytz",
+    "turkish_meaning": "Kuzey ışıkları",
+    "example_sentence": "We saw the Northern lights in Norway."
+  },
+  {
+    "unit": 6,
+    "english": "Outdoor",
+    "pronunciation": "Autdôr",
+    "turkish_meaning": "Açık alan, dış mekan",
+    "example_sentence": "I love outdoor sports like hiking and climbing."
+  },
+  {
+    "unit": 6,
+    "english": "Own",
+    "pronunciation": "On",
+    "turkish_meaning": "Kendi",
+    "example_sentence": "Everyone has their own opinion about extreme sports."
+  },
+  {
+    "unit": 6,
+    "english": "Paragliding",
+    "pronunciation": "Perıglayding",
+    "turkish_meaning": "Yamaç paraşütü",
+    "example_sentence": "Paragliding gives you a great view of the sea."
+  },
+  {
+    "unit": 6,
+    "english": "Parasailing",
+    "pronunciation": "Perıseylıng",
+    "turkish_meaning": "Deniz paraşütü",
+    "example_sentence": "We tried parasailing on our holiday."
+  },
+  {
+    "unit": 6,
+    "english": "Parkour",
+    "pronunciation": "Parkur",
+    "turkish_meaning": "Parkur sporu, parkur",
+    "example_sentence": "Parkour needs a lot of practice and courage."
+  },
+  {
+    "unit": 6,
+    "english": "Perform",
+    "pronunciation": "Pırfôrm",
+    "turkish_meaning": "Uygulamak, yapmak",
+    "example_sentence": "The athletes performed amazing tricks."
+  },
+  {
+    "unit": 6,
+    "english": "Pleasure",
+    "pronunciation": "Plejır",
+    "turkish_meaning": "Keyif",
+    "example_sentence": "Diving gives me great pleasure."
+  },
+  {
+    "unit": 6,
+    "english": "Prefer",
+    "pronunciation": "Prifır",
+    "turkish_meaning": "Tercih etmek",
+    "example_sentence": "I prefer swimming to running."
+  },
+  {
+    "unit": 6,
+    "english": "Rafting",
+    "pronunciation": "Räftıng",
+    "turkish_meaning": "Bot ile yapılan su sporu",
+    "example_sentence": "Rafting on the river was so much fun."
+  },
+  {
+    "unit": 6,
+    "english": "Risky",
+    "pronunciation": "Riski",
+    "turkish_meaning": "Riskli",
+    "example_sentence": "Bungee-jumping is a risky activity."
+  },
+  {
+    "unit": 6,
+    "english": "Rock climbing",
+    "pronunciation": "Rak Klaymıng",
+    "turkish_meaning": "Kaya tırmanışı",
+    "example_sentence": "Rock climbing needs strong arms and courage."
+  },
+  {
+    "unit": 6,
+    "english": "Rocky",
+    "pronunciation": "Raki",
+    "turkish_meaning": "Kayalık",
+    "example_sentence": "The path was rocky and difficult to walk on."
+  },
+  {
+    "unit": 6,
+    "english": "Rope",
+    "pronunciation": "Rop",
+    "turkish_meaning": "Halat, ip",
+    "example_sentence": "The climber held the rope tightly."
+  },
+  {
+    "unit": 6,
+    "english": "Row",
+    "pronunciation": "Ro",
+    "turkish_meaning": "Kürekle çekmek",
+    "example_sentence": "We took turns to row the boat."
+  },
+  {
+    "unit": 6,
+    "english": "Sand kiting",
+    "pronunciation": "Sänd Kayting",
+    "turkish_meaning": "Kum uçurtması",
+    "example_sentence": "Sand kiting is popular in the desert."
+  },
+  {
+    "unit": 6,
+    "english": "Sandboarding",
+    "pronunciation": "Sändbôrdıng",
+    "turkish_meaning": "Kum sörfü",
+    "example_sentence": "Sandboarding on the dunes was really fun."
+  },
+  {
+    "unit": 6,
+    "english": "Scenery",
+    "pronunciation": "Sînıri",
+    "turkish_meaning": "Manzara",
+    "example_sentence": "The scenery from the mountain was beautiful."
+  },
+  {
+    "unit": 6,
+    "english": "Scuba diving",
+    "pronunciation": "Skûbı Dayvıng",
+    "turkish_meaning": "Su altı dalışı, tüplü dalış",
+    "example_sentence": "We saw many sea creatures while scuba diving."
+  },
+  {
+    "unit": 6,
+    "english": "Sea creatures",
+    "pronunciation": "Sî Krîçırz",
+    "turkish_meaning": "Deniz canlıları",
+    "example_sentence": "We saw colorful sea creatures under the water."
+  },
+  {
+    "unit": 6,
+    "english": "Silence",
+    "pronunciation": "Saylıns",
+    "turkish_meaning": "Sessizlik",
+    "example_sentence": "There was total silence inside the cave."
+  },
+  {
+    "unit": 6,
+    "english": "Skateboarding",
+    "pronunciation": "Skeytbôrdıng",
+    "turkish_meaning": "Kaykay yapmak",
+    "example_sentence": "He goes skateboarding in the park every day."
+  },
+  {
+    "unit": 6,
+    "english": "Ski",
+    "pronunciation": "Skî",
+    "turkish_meaning": "Kar kayağı",
+    "example_sentence": "We ski in the mountains every winter."
+  },
+  {
+    "unit": 6,
+    "english": "Skydiving",
+    "pronunciation": "Skaydayving",
+    "turkish_meaning": "Gökyüzü dalışı",
+    "example_sentence": "Skydiving is his favorite extreme sport."
+  },
+  {
+    "unit": 6,
+    "english": "Skyscraper",
+    "pronunciation": "Skayskreypır",
+    "turkish_meaning": "Gökdelen",
+    "example_sentence": "The skyscraper was taller than I expected."
+  },
+  {
+    "unit": 6,
+    "english": "Take risks",
+    "pronunciation": "Teyk Risks",
+    "turkish_meaning": "Risk almak",
+    "example_sentence": "Adventurers like to take risks."
+  },
+  {
+    "unit": 6,
+    "english": "To me",
+    "pronunciation": "Tı Mî",
+    "turkish_meaning": "Bana göre",
+    "example_sentence": "To me, safety is more important than adventure."
+  },
+  {
+    "unit": 6,
+    "english": "Track",
+    "pronunciation": "Träk",
+    "turkish_meaning": "Pist, yol",
+    "example_sentence": "We followed the mountain bike track."
+  },
+  {
+    "unit": 6,
+    "english": "Try",
+    "pronunciation": "Tray",
+    "turkish_meaning": "Denemek",
+    "example_sentence": "I want to try rock climbing this summer."
+  },
+  {
+    "unit": 6,
+    "english": "View",
+    "pronunciation": "Vyû",
+    "turkish_meaning": "Manzara",
+    "example_sentence": "The view from the hot air balloon was incredible."
+  },
+  {
+    "unit": 6,
+    "english": "Waves",
+    "pronunciation": "Weyvz",
+    "turkish_meaning": "Dalgalar",
+    "example_sentence": "The surfers rode the big waves."
+  },
+  {
+    "unit": 6,
+    "english": "Wind",
+    "pronunciation": "Vind",
+    "turkish_meaning": "Rüzgar",
+    "example_sentence": "Paragliders use the wind to fly."
+  },
+  {
+    "unit": 6,
+    "english": "Wing suit",
+    "pronunciation": "Ving Sût",
+    "turkish_meaning": "Yarasa kanatla uçuş",
+    "example_sentence": "He flew across the valley in a wing suit."
+  },
+  {
+    "unit": 6,
+    "english": "Wings",
+    "pronunciation": "Vingz",
+    "turkish_meaning": "Kanatlar",
+    "example_sentence": "The hang-glider has wings like a bird."
+  },
+  {
+    "unit": 6,
+    "english": "Wonderful",
+    "pronunciation": "Vandırfıl",
+    "turkish_meaning": "Harika, müthiş",
+    "example_sentence": "We had a wonderful adventure in the mountains."
+  },
+  {
+    "unit": 6,
+    "english": "Zip lining",
+    "pronunciation": "Zip Laynıng",
+    "turkish_meaning": "Çelik halatla iniş",
+    "example_sentence": "Zip lining through the forest was thrilling."
+  },
+  {
+    "unit": 7,
+    "english": "Accommodation",
+    "pronunciation": "Akomodeyşın",
+    "turkish_meaning": "konaklama, kalacak yer",
+    "example_sentence": "We booked cheap accommodation near the beach."
+  },
+  {
+    "unit": 7,
+    "english": "All-inclusive",
+    "pronunciation": "Ol-İnklusiv",
+    "turkish_meaning": "her şey dahil",
+    "example_sentence": "We stayed at an all-inclusive hotel in Antalya."
+  },
+  {
+    "unit": 7,
+    "english": "Amphitheater",
+    "pronunciation": "Emfitiyetır",
+    "turkish_meaning": "amfitiyatro",
+    "example_sentence": "The ancient amphitheater can hold thousands of people."
+  },
+  {
+    "unit": 7,
+    "english": "Ancient",
+    "pronunciation": "Eynşınt",
+    "turkish_meaning": "antik",
+    "example_sentence": "Ephesus is an ancient city in Turkey."
+  },
+  {
+    "unit": 7,
+    "english": "Approximately",
+    "pronunciation": "Aproksimitli",
+    "turkish_meaning": "yaklaşık olarak",
+    "example_sentence": "The trip takes approximately three hours."
+  },
+  {
+    "unit": 7,
+    "english": "Architecture",
+    "pronunciation": "Arkitekçır",
+    "turkish_meaning": "mimari",
+    "example_sentence": "I love the architecture of old mosques."
+  },
+  {
+    "unit": 7,
+    "english": "Attraction",
+    "pronunciation": "Atrekşın",
+    "turkish_meaning": "gezip görülmek istenen yer",
+    "example_sentence": "The castle is the main attraction in this town."
+  },
+  {
+    "unit": 7,
+    "english": "Attractive",
+    "pronunciation": "Atrektiv",
+    "turkish_meaning": "çekici, cezbedici",
+    "example_sentence": "The seaside town looks very attractive in summer."
+  },
+  {
+    "unit": 7,
+    "english": "Bazaar",
+    "pronunciation": "Bazar",
+    "turkish_meaning": "çarşı, pazar",
+    "example_sentence": "We bought souvenirs at the local bazaar."
+  },
+  {
+    "unit": 7,
+    "english": "Beach",
+    "pronunciation": "Biç",
+    "turkish_meaning": "kumsal, sahil",
+    "example_sentence": "The children played on the beach all day."
+  },
+  {
+    "unit": 7,
+    "english": "Bed and breakfast",
+    "pronunciation": "Bed End Brekfıst",
+    "turkish_meaning": "yatak kahvaltı (konaklama)",
+    "example_sentence": "We stayed in a cozy bed and breakfast."
+  },
+  {
+    "unit": 7,
+    "english": "Been",
+    "pronunciation": "Bin",
+    "turkish_meaning": "bulunmak",
+    "example_sentence": "Have you ever been to Istanbul?"
+  },
+  {
+    "unit": 7,
+    "english": "Big",
+    "pronunciation": "Big",
+    "turkish_meaning": "büyük",
+    "example_sentence": "London is a big city with many attractions."
+  },
+  {
+    "unit": 7,
+    "english": "Book",
+    "pronunciation": "Buk",
+    "turkish_meaning": "yer ayırtmak, rezervasyon",
+    "example_sentence": "I need to book a hotel room for next week."
+  },
+  {
+    "unit": 7,
+    "english": "Budget",
+    "pronunciation": "Bacit",
+    "turkish_meaning": "bütçe",
+    "example_sentence": "Our holiday budget is quite limited this year."
+  },
+  {
+    "unit": 7,
+    "english": "Capital",
+    "pronunciation": "Kepitıl",
+    "turkish_meaning": "başkent",
+    "example_sentence": "Ankara is the capital of Turkey."
+  },
+  {
+    "unit": 7,
+    "english": "Castle",
+    "pronunciation": "Kasıl",
+    "turkish_meaning": "kale",
+    "example_sentence": "Tourists visit the old castle every day."
+  },
+  {
+    "unit": 7,
+    "english": "Charm",
+    "pronunciation": "Çarm",
+    "turkish_meaning": "çekicilik, cazibe",
+    "example_sentence": "The small village has a special charm."
+  },
+  {
+    "unit": 7,
+    "english": "Cheap",
+    "pronunciation": "Çip",
+    "turkish_meaning": "ucuz",
+    "example_sentence": "We found a cheap flight to Izmir."
+  },
+  {
+    "unit": 7,
+    "english": "Clean",
+    "pronunciation": "Klin",
+    "turkish_meaning": "temiz",
+    "example_sentence": "The hotel room was very clean."
+  },
+  {
+    "unit": 7,
+    "english": "Climate",
+    "pronunciation": "Klaymit",
+    "turkish_meaning": "iklim",
+    "example_sentence": "The climate in the south is warm and sunny."
+  },
+  {
+    "unit": 7,
+    "english": "Close",
+    "pronunciation": "Klous",
+    "turkish_meaning": "yakın",
+    "example_sentence": "Our hotel is close to the beach."
+  },
+  {
+    "unit": 7,
+    "english": "Countryside",
+    "pronunciation": "Kantrisayd",
+    "turkish_meaning": "kırsal kesim",
+    "example_sentence": "We spent our holiday in the quiet countryside."
+  },
+  {
+    "unit": 7,
+    "english": "Crowded",
+    "pronunciation": "Kraudid",
+    "turkish_meaning": "kalabalık",
+    "example_sentence": "The bazaar was crowded with tourists."
+  },
+  {
+    "unit": 7,
+    "english": "Cruise holiday",
+    "pronunciation": "Kruz Halidey",
+    "turkish_meaning": "gemi tatili",
+    "example_sentence": "They went on a cruise holiday around the Mediterranean."
+  },
+  {
+    "unit": 7,
+    "english": "Cultural",
+    "pronunciation": "Kalçırıl",
+    "turkish_meaning": "kültürel",
+    "example_sentence": "Rome offers many cultural attractions."
+  },
+  {
+    "unit": 7,
+    "english": "Culture",
+    "pronunciation": "Kalçır",
+    "turkish_meaning": "kültür",
+    "example_sentence": "I want to learn about Japanese culture."
+  },
+  {
+    "unit": 7,
+    "english": "Destination",
+    "pronunciation": "Destineyşın",
+    "turkish_meaning": "varış yeri",
+    "example_sentence": "Paris is a popular tourist destination."
+  },
+  {
+    "unit": 7,
+    "english": "Detail",
+    "pronunciation": "Diteyl",
+    "turkish_meaning": "ayrıntı, detay",
+    "example_sentence": "The guide explained every detail of the palace."
+  },
+  {
+    "unit": 7,
+    "english": "Different",
+    "pronunciation": "Difırınt",
+    "turkish_meaning": "farklı",
+    "example_sentence": "Every country has a different culture."
+  },
+  {
+    "unit": 7,
+    "english": "Dirty",
+    "pronunciation": "Dörti",
+    "turkish_meaning": "kirli, pis",
+    "example_sentence": "The streets near the port were dirty."
+  },
+  {
+    "unit": 7,
+    "english": "Empire",
+    "pronunciation": "Empayır",
+    "turkish_meaning": "imparatorluk",
+    "example_sentence": "The Ottoman Empire had a rich history."
+  },
+  {
+    "unit": 7,
+    "english": "Enjoyable",
+    "pronunciation": "Encoyıbıl",
+    "turkish_meaning": "eğlenceli",
+    "example_sentence": "Our trip to the coast was very enjoyable."
+  },
+  {
+    "unit": 7,
+    "english": "Ephesus",
+    "pronunciation": "Efesıs",
+    "turkish_meaning": "Efes antik kenti",
+    "example_sentence": "Ephesus is famous for its ancient ruins."
+  },
+  {
+    "unit": 7,
+    "english": "Ever",
+    "pronunciation": "Evır",
+    "turkish_meaning": "hiç",
+    "example_sentence": "Have you ever tried Turkish delight?"
+  },
+  {
+    "unit": 7,
+    "english": "Expensive",
+    "pronunciation": "İkspensiv",
+    "turkish_meaning": "pahalı",
+    "example_sentence": "That resort is too expensive for us."
+  },
+  {
+    "unit": 7,
+    "english": "Farming",
+    "pronunciation": "Farming",
+    "turkish_meaning": "çiftçilik, tarım",
+    "example_sentence": "Farming is common in the rural areas."
+  },
+  {
+    "unit": 7,
+    "english": "Fascinating",
+    "pronunciation": "Fesineyting",
+    "turkish_meaning": "büyüleyici",
+    "example_sentence": "The old city has a fascinating history."
+  },
+  {
+    "unit": 7,
+    "english": "Foreign",
+    "pronunciation": "Forın",
+    "turkish_meaning": "yabancı",
+    "example_sentence": "She enjoys meeting people from foreign countries."
+  },
+  {
+    "unit": 7,
+    "english": "Fountain",
+    "pronunciation": "Fauntın",
+    "turkish_meaning": "çeşme, fıskiye",
+    "example_sentence": "Tourists take photos next to the old fountain."
+  },
+  {
+    "unit": 7,
+    "english": "Heritage",
+    "pronunciation": "Heritic",
+    "turkish_meaning": "miras",
+    "example_sentence": "This temple is part of our cultural heritage."
+  },
+  {
+    "unit": 7,
+    "english": "Historic site",
+    "pronunciation": "Histarik Sayt",
+    "turkish_meaning": "tarihi yer",
+    "example_sentence": "The castle is an important historic site."
+  },
+  {
+    "unit": 7,
+    "english": "History",
+    "pronunciation": "Histıri",
+    "turkish_meaning": "tarih",
+    "example_sentence": "I am interested in the history of ancient cities."
+  },
+  {
+    "unit": 7,
+    "english": "Holiday",
+    "pronunciation": "Halidey",
+    "turkish_meaning": "tatil",
+    "example_sentence": "We are planning our summer holiday."
+  },
+  {
+    "unit": 7,
+    "english": "Hometown",
+    "pronunciation": "Houmtaun",
+    "turkish_meaning": "memleket",
+    "example_sentence": "My hometown is famous for its beaches."
+  },
+  {
+    "unit": 7,
+    "english": "Hospitable",
+    "pronunciation": "Haspitıbıl",
+    "turkish_meaning": "misafirperver",
+    "example_sentence": "The local people were very hospitable to us."
+  },
+  {
+    "unit": 7,
+    "english": "Huge",
+    "pronunciation": "Hyuc",
+    "turkish_meaning": "büyük, kocaman, dev",
+    "example_sentence": "The palace has a huge garden."
+  },
+  {
+    "unit": 7,
+    "english": "Imagine",
+    "pronunciation": "İmecin",
+    "turkish_meaning": "hayal etmek",
+    "example_sentence": "I can't imagine living in such a busy city."
+  },
+  {
+    "unit": 7,
+    "english": "Incredible",
+    "pronunciation": "İnkredıbıl",
+    "turkish_meaning": "inanılmaz",
+    "example_sentence": "The view from the castle was incredible."
+  },
+  {
+    "unit": 7,
+    "english": "Island",
+    "pronunciation": "Aylınd",
+    "turkish_meaning": "ada",
+    "example_sentence": "We took a boat to a small island."
+  },
+  {
+    "unit": 7,
+    "english": "Lake",
+    "pronunciation": "Leyk",
+    "turkish_meaning": "göl",
+    "example_sentence": "There is a beautiful lake near the village."
+  },
+  {
+    "unit": 7,
+    "english": "Large",
+    "pronunciation": "Larc",
+    "turkish_meaning": "geniş",
+    "example_sentence": "Istanbul is a large and crowded city."
+  },
+  {
+    "unit": 7,
+    "english": "Local dishes",
+    "pronunciation": "Loukıl Dişiz",
+    "turkish_meaning": "yerel yemekler",
+    "example_sentence": "We tried some local dishes at the restaurant."
+  },
+  {
+    "unit": 7,
+    "english": "Location",
+    "pronunciation": "Lokeyşın",
+    "turkish_meaning": "konum",
+    "example_sentence": "The hotel has a perfect location by the sea."
+  },
+  {
+    "unit": 7,
+    "english": "Mosque",
+    "pronunciation": "Mask",
+    "turkish_meaning": "cami",
+    "example_sentence": "The old mosque attracts many visitors."
+  },
+  {
+    "unit": 7,
+    "english": "Mysterious",
+    "pronunciation": "Mistiriıs",
+    "turkish_meaning": "gizemli, esrarengiz",
+    "example_sentence": "The ancient ruins look mysterious at night."
+  },
+  {
+    "unit": 7,
+    "english": "Natural",
+    "pronunciation": "Neçırıl",
+    "turkish_meaning": "doğal",
+    "example_sentence": "The national park has beautiful natural scenery."
+  },
+  {
+    "unit": 7,
+    "english": "Noisy",
+    "pronunciation": "Noyzi",
+    "turkish_meaning": "gürültülü",
+    "example_sentence": "The city center is very noisy during the day."
+  },
+  {
+    "unit": 7,
+    "english": "Palace",
+    "pronunciation": "Pelis",
+    "turkish_meaning": "saray",
+    "example_sentence": "Topkapi Palace is a famous historic site."
+  },
+  {
+    "unit": 7,
+    "english": "Plane",
+    "pronunciation": "Pleyn",
+    "turkish_meaning": "uçak",
+    "example_sentence": "We traveled to Antalya by plane."
+  },
+  {
+    "unit": 7,
+    "english": "Population",
+    "pronunciation": "Popyuleyşın",
+    "turkish_meaning": "nüfus",
+    "example_sentence": "The population of this city is very high."
+  },
+  {
+    "unit": 7,
+    "english": "Port",
+    "pronunciation": "Port",
+    "turkish_meaning": "liman",
+    "example_sentence": "Ships arrive at the port every morning."
+  },
+  {
+    "unit": 7,
+    "english": "Price",
+    "pronunciation": "Prays",
+    "turkish_meaning": "ücret, fiyat",
+    "example_sentence": "The price of the tour was reasonable."
+  },
+  {
+    "unit": 7,
+    "english": "Quiet",
+    "pronunciation": "Kuayıt",
+    "turkish_meaning": "sessiz, sakin",
+    "example_sentence": "We prefer a quiet place for our holiday."
+  },
+  {
+    "unit": 7,
+    "english": "Religious",
+    "pronunciation": "Rilicıs",
+    "turkish_meaning": "dini",
+    "example_sentence": "The temple is an important religious site."
+  },
+  {
+    "unit": 7,
+    "english": "Resort",
+    "pronunciation": "Rizort",
+    "turkish_meaning": "tatil yeri, tatil köyü",
+    "example_sentence": "We stayed at a resort by the sea."
+  },
+  {
+    "unit": 7,
+    "english": "Rich",
+    "pronunciation": "Riç",
+    "turkish_meaning": "zengin",
+    "example_sentence": "The museum shows the rich history of the city."
+  },
+  {
+    "unit": 7,
+    "english": "Rural",
+    "pronunciation": "Rurıl",
+    "turkish_meaning": "kırsal",
+    "example_sentence": "Life in rural areas is calmer than in cities."
+  },
+  {
+    "unit": 7,
+    "english": "Seaside",
+    "pronunciation": "Sisayd",
+    "turkish_meaning": "deniz kenarı",
+    "example_sentence": "We spent our holiday in a small seaside town."
+  },
+  {
+    "unit": 7,
+    "english": "Ship",
+    "pronunciation": "Şip",
+    "turkish_meaning": "gemi",
+    "example_sentence": "The ship sailed across the Mediterranean Sea."
+  },
+  {
+    "unit": 7,
+    "english": "Sightseeing tour",
+    "pronunciation": "Saytsiing Tur",
+    "turkish_meaning": "gezi turu",
+    "example_sentence": "We went on a sightseeing tour of the old city."
+  },
+  {
+    "unit": 7,
+    "english": "Small",
+    "pronunciation": "Smol",
+    "turkish_meaning": "küçük",
+    "example_sentence": "It is a small but charming village."
+  },
+  {
+    "unit": 7,
+    "english": "Soil",
+    "pronunciation": "Soyl",
+    "turkish_meaning": "toprak",
+    "example_sentence": "The soil in this region is good for farming."
+  },
+  {
+    "unit": 7,
+    "english": "Souvenir",
+    "pronunciation": "Suvınir",
+    "turkish_meaning": "hediyelik eşya",
+    "example_sentence": "I bought a souvenir for my family."
+  },
+  {
+    "unit": 7,
+    "english": "Square",
+    "pronunciation": "Skuer",
+    "turkish_meaning": "meydan",
+    "example_sentence": "Tourists gather in the main square every evening."
+  },
+  {
+    "unit": 7,
+    "english": "Stay",
+    "pronunciation": "Stey",
+    "turkish_meaning": "kalmak, konaklamak",
+    "example_sentence": "We will stay at a hotel near the beach."
+  },
+  {
+    "unit": 7,
+    "english": "Street",
+    "pronunciation": "Strit",
+    "turkish_meaning": "sokak",
+    "example_sentence": "The old streets are full of small shops."
+  },
+  {
+    "unit": 7,
+    "english": "Temple",
+    "pronunciation": "Tempıl",
+    "turkish_meaning": "tapınak, mâbet",
+    "example_sentence": "The ancient temple is a popular attraction."
+  },
+  {
+    "unit": 7,
+    "english": "Trade",
+    "pronunciation": "Treyd",
+    "turkish_meaning": "ticaret",
+    "example_sentence": "The city grew rich because of trade."
+  },
+  {
+    "unit": 7,
+    "english": "Traditions",
+    "pronunciation": "Tradişınz",
+    "turkish_meaning": "gelenekler",
+    "example_sentence": "Every region has its own traditions."
+  },
+  {
+    "unit": 7,
+    "english": "Transportation",
+    "pronunciation": "Transporteyşın",
+    "turkish_meaning": "ulaşım",
+    "example_sentence": "Public transportation in the city is cheap."
+  },
+  {
+    "unit": 7,
+    "english": "Travel",
+    "pronunciation": "Trevıl",
+    "turkish_meaning": "seyahat etmek, yolculuk",
+    "example_sentence": "I love to travel to new countries."
+  },
+  {
+    "unit": 7,
+    "english": "Trip",
+    "pronunciation": "Trip",
+    "turkish_meaning": "gezi, seyahat",
+    "example_sentence": "We had an amazing trip to the coast."
+  },
+  {
+    "unit": 7,
+    "english": "Unbelievable",
+    "pronunciation": "Anbiliivıbıl",
+    "turkish_meaning": "inanılmaz",
+    "example_sentence": "The beauty of the castle was unbelievable."
+  },
+  {
+    "unit": 7,
+    "english": "Urban",
+    "pronunciation": "Örbın",
+    "turkish_meaning": "şehirsel, kentsel",
+    "example_sentence": "Urban areas are usually more crowded than rural ones."
+  },
+  {
+    "unit": 7,
+    "english": "Vacation",
+    "pronunciation": "Veykeyşın",
+    "turkish_meaning": "tatil",
+    "example_sentence": "We are going on vacation next month."
+  },
+  {
+    "unit": 7,
+    "english": "Visit",
+    "pronunciation": "Vizit",
+    "turkish_meaning": "ziyaret etmek",
+    "example_sentence": "We plan to visit the ancient city this summer."
+  },
+  {
+    "unit": 7,
+    "english": "Wealthy",
+    "pronunciation": "Velti",
+    "turkish_meaning": "varlıklı, zengin",
+    "example_sentence": "The wealthy merchant built a large palace."
+  },
+  {
+    "unit": 7,
+    "english": "Weather",
+    "pronunciation": "Vedır",
+    "turkish_meaning": "hava",
+    "example_sentence": "The weather was perfect for the beach."
+  },
+  {
+    "unit": 7,
+    "english": "Wildlife",
+    "pronunciation": "Vayldlayf",
+    "turkish_meaning": "vahşi yaşam",
+    "example_sentence": "The national park protects the local wildlife."
+  },
+  {
+    "unit": 7,
+    "english": "Worth seeing",
+    "pronunciation": "Vört Siing",
+    "turkish_meaning": "görmeye değer",
+    "example_sentence": "The old castle is definitely worth seeing."
+  },
+  {
+    "unit": 8,
+    "english": "Annoy",
+    "pronunciation": "Enoy",
+    "turkish_meaning": "kızdırmak, sinirlendirmek",
+    "example_sentence": "Loud noises really annoy my little brother."
+  },
+  {
+    "unit": 8,
+    "english": "Arrive on time",
+    "pronunciation": "Irayv On Taym",
+    "turkish_meaning": "zamanında varmak",
+    "example_sentence": "You should arrive on time for school."
+  },
+  {
+    "unit": 8,
+    "english": "Break promise",
+    "pronunciation": "Breyk Pramis",
+    "turkish_meaning": "sözünde durmamak",
+    "example_sentence": "Don't break your promise to your parents."
+  },
+  {
+    "unit": 8,
+    "english": "Carpet",
+    "pronunciation": "Karpit",
+    "turkish_meaning": "halı",
+    "example_sentence": "I need to vacuum the carpet in the living room."
+  },
+  {
+    "unit": 8,
+    "english": "Children",
+    "pronunciation": "Çildrın",
+    "turkish_meaning": "çocuklar",
+    "example_sentence": "The children help their parents with chores."
+  },
+  {
+    "unit": 8,
+    "english": "Chores",
+    "pronunciation": "Çorz",
+    "turkish_meaning": "ev işleri",
+    "example_sentence": "I do my chores every morning before school."
+  },
+  {
+    "unit": 8,
+    "english": "Clean",
+    "pronunciation": "Klin",
+    "turkish_meaning": "temiz, temizlemek",
+    "example_sentence": "Please clean your room before dinner."
+  },
+  {
+    "unit": 8,
+    "english": "Clean up",
+    "pronunciation": "Klin Ap",
+    "turkish_meaning": "temizlemek",
+    "example_sentence": "We need to clean up the kitchen together."
+  },
+  {
+    "unit": 8,
+    "english": "Clothes",
+    "pronunciation": "Klouz",
+    "turkish_meaning": "kıyafetler",
+    "example_sentence": "She washes the clothes every weekend."
+  },
+  {
+    "unit": 8,
+    "english": "Complaining",
+    "pronunciation": "Kompleyning",
+    "turkish_meaning": "şikayet etmek",
+    "example_sentence": "Stop complaining and help with the housework."
+  },
+  {
+    "unit": 8,
+    "english": "Complaint",
+    "pronunciation": "Kompleynt",
+    "turkish_meaning": "şikayet, yakınma",
+    "example_sentence": "He made a complaint about the noise."
+  },
+  {
+    "unit": 8,
+    "english": "Cook the meal",
+    "pronunciation": "Kuk Dı Mil",
+    "turkish_meaning": "yemek pişirmek",
+    "example_sentence": "My mother usually cooks the meal for the family."
+  },
+  {
+    "unit": 8,
+    "english": "Difficult",
+    "pronunciation": "Difikılt",
+    "turkish_meaning": "zor",
+    "example_sentence": "Cleaning the whole house is a difficult task."
+  },
+  {
+    "unit": 8,
+    "english": "Dirty",
+    "pronunciation": "Dörti",
+    "turkish_meaning": "kirli",
+    "example_sentence": "The dirty dishes are still in the sink."
+  },
+  {
+    "unit": 8,
+    "english": "Do the errands",
+    "pronunciation": "Du Di Errındz",
+    "turkish_meaning": "işleri halletmek",
+    "example_sentence": "I have to do the errands after school."
+  },
+  {
+    "unit": 8,
+    "english": "Do the ironing",
+    "pronunciation": "Du Di Ayırnıng",
+    "turkish_meaning": "ütü yapmak",
+    "example_sentence": "My sister does the ironing on Sundays."
+  },
+  {
+    "unit": 8,
+    "english": "Do the laundry",
+    "pronunciation": "Du Di Londri",
+    "turkish_meaning": "çamaşır yıkamak",
+    "example_sentence": "It's my job to do the laundry every week."
+  },
+  {
+    "unit": 8,
+    "english": "Do the shopping",
+    "pronunciation": "Du Di Şoping",
+    "turkish_meaning": "alışveriş yapmak",
+    "example_sentence": "My father does the shopping every Saturday."
+  },
+  {
+    "unit": 8,
+    "english": "Doing chores",
+    "pronunciation": "Duing Çorz",
+    "turkish_meaning": "ev işleri yapmak",
+    "example_sentence": "Doing chores teaches children responsibility."
+  },
+  {
+    "unit": 8,
+    "english": "Dry the dishes",
+    "pronunciation": "Dray Dı Dişiz",
+    "turkish_meaning": "tabakları kurulamak",
+    "example_sentence": "Can you dry the dishes after I wash them?"
+  },
+  {
+    "unit": 8,
+    "english": "Dust",
+    "pronunciation": "Dast",
+    "turkish_meaning": "toz almak",
+    "example_sentence": "There is a lot of dust on the shelves."
+  },
+  {
+    "unit": 8,
+    "english": "Dust the furniture",
+    "pronunciation": "Dast Dı Förnçır",
+    "turkish_meaning": "mobilyaların tozunu almak",
+    "example_sentence": "I usually dust the furniture on weekends."
+  },
+  {
+    "unit": 8,
+    "english": "Duty",
+    "pronunciation": "Dyuti",
+    "turkish_meaning": "görev",
+    "example_sentence": "Taking out the trash is my duty at home."
+  },
+  {
+    "unit": 8,
+    "english": "Elder",
+    "pronunciation": "Eldır",
+    "turkish_meaning": "yaşça büyük, yaşlı",
+    "example_sentence": "The elder brother helps look after the younger ones."
+  },
+  {
+    "unit": 8,
+    "english": "Empty the dishwasher",
+    "pronunciation": "Empti Dı Dişvaşır",
+    "turkish_meaning": "bulaşık makinesini boşaltmak",
+    "example_sentence": "Can you empty the dishwasher, please?"
+  },
+  {
+    "unit": 8,
+    "english": "Everybody",
+    "pronunciation": "Evribadi",
+    "turkish_meaning": "herkes",
+    "example_sentence": "Everybody in the family has a chore to do."
+  },
+  {
+    "unit": 8,
+    "english": "Family",
+    "pronunciation": "Femili",
+    "turkish_meaning": "aile",
+    "example_sentence": "Every member of the family has responsibilities."
+  },
+  {
+    "unit": 8,
+    "english": "Feed",
+    "pronunciation": "Fid",
+    "turkish_meaning": "beslemek",
+    "example_sentence": "I feed our dog every morning."
+  },
+  {
+    "unit": 8,
+    "english": "Garbage",
+    "pronunciation": "Garbic",
+    "turkish_meaning": "çöp",
+    "example_sentence": "Don't forget to take out the garbage tonight."
+  },
+  {
+    "unit": 8,
+    "english": "Hard",
+    "pronunciation": "Hard",
+    "turkish_meaning": "zor",
+    "example_sentence": "Housework can be really hard sometimes."
+  },
+  {
+    "unit": 8,
+    "english": "Help",
+    "pronunciation": "Help",
+    "turkish_meaning": "yardım etmek",
+    "example_sentence": "Children should help their parents at home."
+  },
+  {
+    "unit": 8,
+    "english": "Household",
+    "pronunciation": "Haushould",
+    "turkish_meaning": "eve ait",
+    "example_sentence": "Everyone shares the household duties in our family."
+  },
+  {
+    "unit": 8,
+    "english": "Housework",
+    "pronunciation": "Hausvörk",
+    "turkish_meaning": "ev işi",
+    "example_sentence": "My mother does most of the housework."
+  },
+  {
+    "unit": 8,
+    "english": "In charge of",
+    "pronunciation": "İn Çarc Ov",
+    "turkish_meaning": "sorumlu olmak",
+    "example_sentence": "I am in charge of feeding the cat."
+  },
+  {
+    "unit": 8,
+    "english": "Iron",
+    "pronunciation": "Ayırn",
+    "turkish_meaning": "ütü, ütü yapmak",
+    "example_sentence": "She has to iron her school uniform."
+  },
+  {
+    "unit": 8,
+    "english": "Keep promise",
+    "pronunciation": "Kip Pramis",
+    "turkish_meaning": "söz tutmak",
+    "example_sentence": "You must keep your promise to your friends."
+  },
+  {
+    "unit": 8,
+    "english": "Keep quiet",
+    "pronunciation": "Kip Kuayıt",
+    "turkish_meaning": "sessiz olmak",
+    "example_sentence": "We must keep quiet in the library."
+  },
+  {
+    "unit": 8,
+    "english": "Load the dishwasher",
+    "pronunciation": "Loud Dı Dişvaşır",
+    "turkish_meaning": "bulaşık makinesini doldurmak",
+    "example_sentence": "Can you load the dishwasher after dinner?"
+  },
+  {
+    "unit": 8,
+    "english": "Make life easier",
+    "pronunciation": "Meyk Layf İziır",
+    "turkish_meaning": "hayatı kolaylaştırmak",
+    "example_sentence": "Sharing chores makes life easier for everyone."
+  },
+  {
+    "unit": 8,
+    "english": "Make the bed",
+    "pronunciation": "Meyk Dı Bed",
+    "turkish_meaning": "yatağı toplamak",
+    "example_sentence": "I always make my bed in the morning."
+  },
+  {
+    "unit": 8,
+    "english": "Member",
+    "pronunciation": "Membır",
+    "turkish_meaning": "üye",
+    "example_sentence": "Every member of the family helps with chores."
+  },
+  {
+    "unit": 8,
+    "english": "Mess",
+    "pronunciation": "Mes",
+    "turkish_meaning": "dağınıklık",
+    "example_sentence": "Please clean up this mess in your room."
+  },
+  {
+    "unit": 8,
+    "english": "Mop the floor",
+    "pronunciation": "Map Dı Flor",
+    "turkish_meaning": "yeri paspaslamak",
+    "example_sentence": "He has to mop the floor every evening."
+  },
+  {
+    "unit": 8,
+    "english": "Necessary",
+    "pronunciation": "Nesıseri",
+    "turkish_meaning": "gerekli",
+    "example_sentence": "It is necessary to keep your room clean."
+  },
+  {
+    "unit": 8,
+    "english": "Obey the rules",
+    "pronunciation": "Obey Dı Rulz",
+    "turkish_meaning": "kurallara uymak",
+    "example_sentence": "Students must obey the school rules."
+  },
+  {
+    "unit": 8,
+    "english": "Obligation",
+    "pronunciation": "Obligeyşın",
+    "turkish_meaning": "zorunluluk",
+    "example_sentence": "Doing homework is an obligation for students."
+  },
+  {
+    "unit": 8,
+    "english": "Parents",
+    "pronunciation": "Perınts",
+    "turkish_meaning": "ebeveynler",
+    "example_sentence": "Parents often ask children to help with chores."
+  },
+  {
+    "unit": 8,
+    "english": "Pocket money",
+    "pronunciation": "Pakit Mani",
+    "turkish_meaning": "harçlık",
+    "example_sentence": "I get pocket money for doing chores."
+  },
+  {
+    "unit": 8,
+    "english": "Prepare",
+    "pronunciation": "Pripeır",
+    "turkish_meaning": "hazırlamak",
+    "example_sentence": "We prepare dinner together every evening."
+  },
+  {
+    "unit": 8,
+    "english": "Promise",
+    "pronunciation": "Pramis",
+    "turkish_meaning": "söz vermek",
+    "example_sentence": "I promise to clean my room tomorrow."
+  },
+  {
+    "unit": 8,
+    "english": "Respect",
+    "pronunciation": "Rispekt",
+    "turkish_meaning": "saygı, saygı duymak",
+    "example_sentence": "Children should respect their parents."
+  },
+  {
+    "unit": 8,
+    "english": "Respectful",
+    "pronunciation": "Rispektfıl",
+    "turkish_meaning": "saygılı",
+    "example_sentence": "He is always respectful to his teachers."
+  },
+  {
+    "unit": 8,
+    "english": "Responsibility",
+    "pronunciation": "Risponsibiliti",
+    "turkish_meaning": "sorumluluk",
+    "example_sentence": "Feeding the pets is my responsibility."
+  },
+  {
+    "unit": 8,
+    "english": "Responsible for ...",
+    "pronunciation": "Risponsıbıl For",
+    "turkish_meaning": "...dan sorumlu",
+    "example_sentence": "I am responsible for setting the table."
+  },
+  {
+    "unit": 8,
+    "english": "Return books",
+    "pronunciation": "Ritörn Buks",
+    "turkish_meaning": "kitapları iade etmek",
+    "example_sentence": "You must return books to the library on time."
+  },
+  {
+    "unit": 8,
+    "english": "Right",
+    "pronunciation": "Rayt",
+    "turkish_meaning": "hak",
+    "example_sentence": "Everyone has the right to a clean home."
+  },
+  {
+    "unit": 8,
+    "english": "Rude",
+    "pronunciation": "Rud",
+    "turkish_meaning": "kaba",
+    "example_sentence": "It is rude to interrupt when someone is talking."
+  },
+  {
+    "unit": 8,
+    "english": "Set the table",
+    "pronunciation": "Set Dı Teybıl",
+    "turkish_meaning": "masayı kurmak, hazırlamak",
+    "example_sentence": "Can you set the table for dinner?"
+  },
+  {
+    "unit": 8,
+    "english": "Share",
+    "pronunciation": "Şeır",
+    "turkish_meaning": "paylaşmak",
+    "example_sentence": "We should share the housework equally."
+  },
+  {
+    "unit": 8,
+    "english": "Strong ties",
+    "pronunciation": "Strong Tayz",
+    "turkish_meaning": "güçlü bağlar",
+    "example_sentence": "Doing chores together creates strong ties in a family."
+  },
+  {
+    "unit": 8,
+    "english": "Take care of",
+    "pronunciation": "Teyk Ker Ov",
+    "turkish_meaning": "ilgilenmek",
+    "example_sentence": "I take care of my younger sister after school."
+  },
+  {
+    "unit": 8,
+    "english": "Take out the garbage",
+    "pronunciation": "Teyk Aut Dı Garbic",
+    "turkish_meaning": "çöpleri dışarı çıkarmak",
+    "example_sentence": "It's my brother's job to take out the garbage."
+  },
+  {
+    "unit": 8,
+    "english": "Tidy up",
+    "pronunciation": "Taydi Ap",
+    "turkish_meaning": "düzenlemek, toplamak",
+    "example_sentence": "Let's tidy up the living room before guests arrive."
+  },
+  {
+    "unit": 8,
+    "english": "To do list",
+    "pronunciation": "Tı Du List",
+    "turkish_meaning": "yapılacaklar listesi",
+    "example_sentence": "I wrote a to do list for today's chores."
+  },
+  {
+    "unit": 8,
+    "english": "Trash",
+    "pronunciation": "Treş",
+    "turkish_meaning": "çöp",
+    "example_sentence": "Please put the trash in the bin."
+  },
+  {
+    "unit": 8,
+    "english": "Vacuum the floor",
+    "pronunciation": "Vekyum Dı Flor",
+    "turkish_meaning": "yerleri (elektrikli süpürge ile) süpürmek",
+    "example_sentence": "I vacuum the floor every Saturday morning."
+  },
+  {
+    "unit": 8,
+    "english": "Walking the dog",
+    "pronunciation": "Voking Dı Dog",
+    "turkish_meaning": "köpeği yürüyüşe çıkarmak",
+    "example_sentence": "Walking the dog is my favorite chore."
+  },
+  {
+    "unit": 8,
+    "english": "Wash",
+    "pronunciation": "Vaş",
+    "turkish_meaning": "yıkamak",
+    "example_sentence": "Please wash your hands before dinner."
+  },
+  {
+    "unit": 8,
+    "english": "Wash the dishes",
+    "pronunciation": "Vaş Dı Dişiz",
+    "turkish_meaning": "bulaşıkları yıkamak",
+    "example_sentence": "I wash the dishes after every meal."
+  },
+  {
+    "unit": 9,
+    "english": "Achievement",
+    "pronunciation": "Eçivmınt",
+    "turkish_meaning": "Başarı",
+    "example_sentence": "Winning the award was a great achievement for her."
+  },
+  {
+    "unit": 9,
+    "english": "Admire",
+    "pronunciation": "Ådmayır",
+    "turkish_meaning": "Beğenmek, hayran olmak",
+    "example_sentence": "I admire scientists who never give up."
+  },
+  {
+    "unit": 9,
+    "english": "Alien",
+    "pronunciation": "Eylıın",
+    "turkish_meaning": "Uzaylı",
+    "example_sentence": "The movie was about an alien from another planet."
+  },
+  {
+    "unit": 9,
+    "english": "Allow",
+    "pronunciation": "Ilau",
+    "turkish_meaning": "İzin vermek",
+    "example_sentence": "My parents allow me to use the computer for one hour."
+  },
+  {
+    "unit": 9,
+    "english": "Appreciate",
+    "pronunciation": "Iprişieyt",
+    "turkish_meaning": "Takdir etmek",
+    "example_sentence": "We should appreciate the work of great scientists."
+  },
+  {
+    "unit": 9,
+    "english": "Axis",
+    "pronunciation": "Äksis",
+    "turkish_meaning": "Eksen",
+    "example_sentence": "The Earth turns around its axis."
+  },
+  {
+    "unit": 9,
+    "english": "Born",
+    "pronunciation": "Born",
+    "turkish_meaning": "Doğmak",
+    "example_sentence": "Albert Einstein was born in Germany."
+  },
+  {
+    "unit": 9,
+    "english": "Branch",
+    "pronunciation": "Bränç",
+    "turkish_meaning": "Kol, dal",
+    "example_sentence": "Physics is a branch of science."
+  },
+  {
+    "unit": 9,
+    "english": "Brilliant",
+    "pronunciation": "Brilyınt",
+    "turkish_meaning": "Zeki, muhteşem, parlak",
+    "example_sentence": "She had a brilliant idea for the science project."
+  },
+  {
+    "unit": 9,
+    "english": "Calculator",
+    "pronunciation": "Kälkyuleytır",
+    "turkish_meaning": "Hesap makinesi",
+    "example_sentence": "I use a calculator to solve difficult maths problems."
+  },
+  {
+    "unit": 9,
+    "english": "Cell",
+    "pronunciation": "Sel",
+    "turkish_meaning": "Hücre",
+    "example_sentence": "A human body is made up of billions of cells."
+  },
+  {
+    "unit": 9,
+    "english": "Change",
+    "pronunciation": "Çeync",
+    "turkish_meaning": "Değiştirmek",
+    "example_sentence": "Technology can change our daily lives."
+  },
+  {
+    "unit": 9,
+    "english": "Cheap",
+    "pronunciation": "Çip",
+    "turkish_meaning": "Ucuz",
+    "example_sentence": "Smart phones were not cheap fifty years ago."
+  },
+  {
+    "unit": 9,
+    "english": "Childhood",
+    "pronunciation": "Çaylıdhud",
+    "turkish_meaning": "Çocukluk dönemi",
+    "example_sentence": "He spent his childhood in a small village."
+  },
+  {
+    "unit": 9,
+    "english": "Claim",
+    "pronunciation": "Kleym",
+    "turkish_meaning": "İddia etmek",
+    "example_sentence": "Some people claim that they have seen aliens."
+  },
+  {
+    "unit": 9,
+    "english": "Compass",
+    "pronunciation": "Kampıs",
+    "turkish_meaning": "Pusula",
+    "example_sentence": "Sailors used a compass to find directions."
+  },
+  {
+    "unit": 9,
+    "english": "Condition",
+    "pronunciation": "Kındişın",
+    "turkish_meaning": "Koşul, durum",
+    "example_sentence": "The old manuscript is in good condition."
+  },
+  {
+    "unit": 9,
+    "english": "Conduct",
+    "pronunciation": "Kındakt",
+    "turkish_meaning": "Yürütmek",
+    "example_sentence": "Scientists conduct experiments in the laboratory."
+  },
+  {
+    "unit": 9,
+    "english": "Continent",
+    "pronunciation": "Kontinınt",
+    "turkish_meaning": "Kıta",
+    "example_sentence": "Africa is the second largest continent in the world."
+  },
+  {
+    "unit": 9,
+    "english": "Cure",
+    "pronunciation": "Kyuır",
+    "turkish_meaning": "Tedavi",
+    "example_sentence": "Doctors are looking for a cure for the disease."
+  },
+  {
+    "unit": 9,
+    "english": "Currently",
+    "pronunciation": "Karıntli",
+    "turkish_meaning": "Şimdilerde",
+    "example_sentence": "Scientists are currently working on a new vaccine."
+  },
+  {
+    "unit": 9,
+    "english": "Describe",
+    "pronunciation": "Dıskrayb",
+    "turkish_meaning": "Tanımlamak",
+    "example_sentence": "Can you describe your invention to us?"
+  },
+  {
+    "unit": 9,
+    "english": "Deserve",
+    "pronunciation": "Dızörv",
+    "turkish_meaning": "Hak etmek",
+    "example_sentence": "She deserves the prize for her discovery."
+  },
+  {
+    "unit": 9,
+    "english": "Develop",
+    "pronunciation": "Dıvelöp",
+    "turkish_meaning": "Geliştirmek",
+    "example_sentence": "Scientists developed a new medicine last year."
+  },
+  {
+    "unit": 9,
+    "english": "Diagnose",
+    "pronunciation": "Dayıgnoz",
+    "turkish_meaning": "Teşhis etmek",
+    "example_sentence": "The doctor diagnosed the disease quickly."
+  },
+  {
+    "unit": 9,
+    "english": "Die",
+    "pronunciation": "Day",
+    "turkish_meaning": "Ölmek",
+    "example_sentence": "Many people died from the disease before the vaccine."
+  },
+  {
+    "unit": 9,
+    "english": "Discover",
+    "pronunciation": "Dıskavır",
+    "turkish_meaning": "Keşfetmek",
+    "example_sentence": "Alexander Fleming discovered penicillin."
+  },
+  {
+    "unit": 9,
+    "english": "Discoverer",
+    "pronunciation": "Dıskavırır",
+    "turkish_meaning": "Kaşif",
+    "example_sentence": "The discoverer of the telephone was Alexander Graham Bell."
+  },
+  {
+    "unit": 9,
+    "english": "Discovery",
+    "pronunciation": "Dıskavıri",
+    "turkish_meaning": "Keşif",
+    "example_sentence": "This discovery changed the history of medicine."
+  },
+  {
+    "unit": 9,
+    "english": "Disease",
+    "pronunciation": "Dızîz",
+    "turkish_meaning": "Hastalık",
+    "example_sentence": "Vaccination protects people from serious diseases."
+  },
+  {
+    "unit": 9,
+    "english": "Do an experiment",
+    "pronunciation": "Du ın eksperımınt",
+    "turkish_meaning": "Deney yapmak",
+    "example_sentence": "We did an experiment in the science lab today."
+  },
+  {
+    "unit": 9,
+    "english": "Documentary",
+    "pronunciation": "Dokyumentıri",
+    "turkish_meaning": "Belgesel",
+    "example_sentence": "I watched a documentary about famous inventors."
+  },
+  {
+    "unit": 9,
+    "english": "Education",
+    "pronunciation": "Ecukeyşın",
+    "turkish_meaning": "Eğitim",
+    "example_sentence": "Education is very important for a good career."
+  },
+  {
+    "unit": 9,
+    "english": "Efficiently",
+    "pronunciation": "İfişıntli",
+    "turkish_meaning": "Verimli bir şekilde",
+    "example_sentence": "The new machine works more efficiently than the old one."
+  },
+  {
+    "unit": 9,
+    "english": "Electric bulb",
+    "pronunciation": "İlektrik balb",
+    "turkish_meaning": "Ampul",
+    "example_sentence": "Thomas Edison invented the electric bulb."
+  },
+  {
+    "unit": 9,
+    "english": "Entertainment",
+    "pronunciation": "Entırteynmınt",
+    "turkish_meaning": "Eğlence",
+    "example_sentence": "Smart phones are now a big source of entertainment."
+  },
+  {
+    "unit": 9,
+    "english": "Explode",
+    "pronunciation": "İksplod",
+    "turkish_meaning": "Patlamak",
+    "example_sentence": "The old machine exploded during the experiment."
+  },
+  {
+    "unit": 9,
+    "english": "Explore",
+    "pronunciation": "İksplor",
+    "turkish_meaning": "Keşfetmek",
+    "example_sentence": "Scientists explore space to find new planets."
+  },
+  {
+    "unit": 9,
+    "english": "Explosion",
+    "pronunciation": "İksplojın",
+    "turkish_meaning": "Patlama",
+    "example_sentence": "There was a big explosion in the laboratory."
+  },
+  {
+    "unit": 9,
+    "english": "Facts",
+    "pronunciation": "Fäkts",
+    "turkish_meaning": "Gerçekler",
+    "example_sentence": "The documentary gave us interesting facts about science."
+  },
+  {
+    "unit": 9,
+    "english": "Gain",
+    "pronunciation": "Geyn",
+    "turkish_meaning": "Kazanmak",
+    "example_sentence": "She gained a lot of knowledge from her research."
+  },
+  {
+    "unit": 9,
+    "english": "Genius",
+    "pronunciation": "Cinyıs",
+    "turkish_meaning": "Dâhi, deha",
+    "example_sentence": "Einstein is known as a scientific genius."
+  },
+  {
+    "unit": 9,
+    "english": "Goldsmith",
+    "pronunciation": "Goldsmit",
+    "turkish_meaning": "Kuyumcu",
+    "example_sentence": "The goldsmith made a beautiful ring."
+  },
+  {
+    "unit": 9,
+    "english": "Gravity of the matter",
+    "pronunciation": "Gräviti ov dı mätır",
+    "turkish_meaning": "Maddenin yer çekimi",
+    "example_sentence": "The gravity of the matter pulls objects towards the ground."
+  },
+  {
+    "unit": 9,
+    "english": "Healthcare",
+    "pronunciation": "Helskeır",
+    "turkish_meaning": "Sağlık hizmeti",
+    "example_sentence": "Vaccination has improved healthcare all over the world."
+  },
+  {
+    "unit": 9,
+    "english": "High-tech",
+    "pronunciation": "Hay-tek",
+    "turkish_meaning": "Yüksek teknoloji",
+    "example_sentence": "This is a high-tech smart phone with many features."
+  },
+  {
+    "unit": 9,
+    "english": "History",
+    "pronunciation": "Histıri",
+    "turkish_meaning": "Tarih",
+    "example_sentence": "We are learning about the history of science."
+  },
+  {
+    "unit": 9,
+    "english": "Horizon",
+    "pronunciation": "Hırayzın",
+    "turkish_meaning": "Ufuk, görüş, anlayış",
+    "example_sentence": "The sun disappeared behind the horizon."
+  },
+  {
+    "unit": 9,
+    "english": "Improve",
+    "pronunciation": "İmpruv",
+    "turkish_meaning": "Geliştirmek",
+    "example_sentence": "New inventions improve our daily lives."
+  },
+  {
+    "unit": 9,
+    "english": "Improvement",
+    "pronunciation": "İmpruvmınt",
+    "turkish_meaning": "Gelişim, iyileşme",
+    "example_sentence": "There has been a big improvement in medicine."
+  },
+  {
+    "unit": 9,
+    "english": "Incredible",
+    "pronunciation": "İnkredıbıl",
+    "turkish_meaning": "İnanılmaz",
+    "example_sentence": "The scientist made an incredible discovery."
+  },
+  {
+    "unit": 9,
+    "english": "Infection",
+    "pronunciation": "İnfekşın",
+    "turkish_meaning": "Bulaşma, enfeksiyon",
+    "example_sentence": "The doctor treated her infection with medicine."
+  },
+  {
+    "unit": 9,
+    "english": "Information",
+    "pronunciation": "İnfırmeyşın",
+    "turkish_meaning": "Bilgi",
+    "example_sentence": "The internet gives us a lot of information."
+  },
+  {
+    "unit": 9,
+    "english": "Ink",
+    "pronunciation": "İnk",
+    "turkish_meaning": "Mürekkep",
+    "example_sentence": "The old pen was full of black ink."
+  },
+  {
+    "unit": 9,
+    "english": "Invent",
+    "pronunciation": "İnvent",
+    "turkish_meaning": "İcat etmek",
+    "example_sentence": "Alexander Graham Bell invented the telephone."
+  },
+  {
+    "unit": 9,
+    "english": "Invention",
+    "pronunciation": "İnvenşın",
+    "turkish_meaning": "İcat",
+    "example_sentence": "The printing press was a great invention."
+  },
+  {
+    "unit": 9,
+    "english": "Inventor",
+    "pronunciation": "İnventır",
+    "turkish_meaning": "Mucit",
+    "example_sentence": "Thomas Edison was a famous inventor."
+  },
+  {
+    "unit": 9,
+    "english": "Journalist",
+    "pronunciation": "Cörnılist",
+    "turkish_meaning": "Gazeteci",
+    "example_sentence": "The journalist wrote an article about the new discovery."
+  },
+  {
+    "unit": 9,
+    "english": "Knowledge",
+    "pronunciation": "Nolic",
+    "turkish_meaning": "Bilgi",
+    "example_sentence": "Reading books gives you a lot of knowledge."
+  },
+  {
+    "unit": 9,
+    "english": "Lab",
+    "pronunciation": "Läb",
+    "turkish_meaning": "Laboratuvar",
+    "example_sentence": "The scientists work in a modern lab."
+  },
+  {
+    "unit": 9,
+    "english": "Manuscript",
+    "pronunciation": "Mänyuskript",
+    "turkish_meaning": "El yazması",
+    "example_sentence": "The old manuscript was written by hand."
+  },
+  {
+    "unit": 9,
+    "english": "Masterpieces",
+    "pronunciation": "Mästırpisiz",
+    "turkish_meaning": "Şaheserler",
+    "example_sentence": "The museum has many masterpieces from famous artists."
+  },
+  {
+    "unit": 9,
+    "english": "Medicine",
+    "pronunciation": "Medsın",
+    "turkish_meaning": "Tıp, ilaç",
+    "example_sentence": "She takes medicine for her infection."
+  },
+  {
+    "unit": 9,
+    "english": "Merchant",
+    "pronunciation": "Mörçınt",
+    "turkish_meaning": "Tüccar",
+    "example_sentence": "The merchant sold goods from different countries."
+  },
+  {
+    "unit": 9,
+    "english": "Milestone",
+    "pronunciation": "Maylstoun",
+    "turkish_meaning": "Dönüm noktası, kilometre taşı",
+    "example_sentence": "The invention of the telephone was a milestone in history."
+  },
+  {
+    "unit": 9,
+    "english": "Mind",
+    "pronunciation": "Maynd",
+    "turkish_meaning": "Akıl, zihin",
+    "example_sentence": "A good scientist has a curious mind."
+  },
+  {
+    "unit": 9,
+    "english": "Moveable",
+    "pronunciation": "Muvıbıl",
+    "turkish_meaning": "Taşınabilir",
+    "example_sentence": "The printing press had moveable letters."
+  },
+  {
+    "unit": 9,
+    "english": "Novel",
+    "pronunciation": "Novıl",
+    "turkish_meaning": "Roman",
+    "example_sentence": "She wrote a famous novel about science."
+  },
+  {
+    "unit": 9,
+    "english": "Observe",
+    "pronunciation": "Ibzörv",
+    "turkish_meaning": "Gözlemlemek",
+    "example_sentence": "Scientists observe the stars through a telescope."
+  },
+  {
+    "unit": 9,
+    "english": "Operate",
+    "pronunciation": "Opıreyt",
+    "turkish_meaning": "Kullanmak",
+    "example_sentence": "He knows how to operate this machine."
+  },
+  {
+    "unit": 9,
+    "english": "Orbit",
+    "pronunciation": "Orbit",
+    "turkish_meaning": "Yörünge",
+    "example_sentence": "The Earth moves in an orbit around the Sun."
+  },
+  {
+    "unit": 9,
+    "english": "Pass away",
+    "pronunciation": "Päs ıvey",
+    "turkish_meaning": "Ölmek",
+    "example_sentence": "The famous scientist passed away last year."
+  },
+  {
+    "unit": 9,
+    "english": "Patience",
+    "pronunciation": "Peyşıns",
+    "turkish_meaning": "Sabır",
+    "example_sentence": "You need patience to do a long experiment."
+  },
+  {
+    "unit": 9,
+    "english": "Planet",
+    "pronunciation": "Plänit",
+    "turkish_meaning": "Gezegen",
+    "example_sentence": "Mars is a planet in our solar system."
+  },
+  {
+    "unit": 9,
+    "english": "Printing press",
+    "pronunciation": "Printing pres",
+    "turkish_meaning": "Matbaa / baskı makinesi",
+    "example_sentence": "The printing press changed the history of books."
+  },
+  {
+    "unit": 9,
+    "english": "Process",
+    "pronunciation": "Proses",
+    "turkish_meaning": "Süreç",
+    "example_sentence": "Making a vaccine is a long process."
+  },
+  {
+    "unit": 9,
+    "english": "Reach",
+    "pronunciation": "Riç",
+    "turkish_meaning": "Ulaşmak",
+    "example_sentence": "It took years for the news to reach other countries."
+  },
+  {
+    "unit": 9,
+    "english": "Realize",
+    "pronunciation": "Rîılayz",
+    "turkish_meaning": "Farketmek",
+    "example_sentence": "She realized her mistake during the experiment."
+  },
+  {
+    "unit": 9,
+    "english": "Record",
+    "pronunciation": "Rekord",
+    "turkish_meaning": "Plak",
+    "example_sentence": "My grandfather has an old music record."
+  },
+  {
+    "unit": 9,
+    "english": "Replaced",
+    "pronunciation": "Ripleyst",
+    "turkish_meaning": "Yerini almak",
+    "example_sentence": "The typewriter was replaced by the computer."
+  },
+  {
+    "unit": 9,
+    "english": "Research",
+    "pronunciation": "Risörç",
+    "turkish_meaning": "Araştırma",
+    "example_sentence": "The scientists did research on the new disease."
+  },
+  {
+    "unit": 9,
+    "english": "Result",
+    "pronunciation": "Rizalt",
+    "turkish_meaning": "Sonuç",
+    "example_sentence": "The result of the experiment was surprising."
+  },
+  {
+    "unit": 9,
+    "english": "Revolutionary",
+    "pronunciation": "Revılûşıneri",
+    "turkish_meaning": "Devrim",
+    "example_sentence": "The telephone was a revolutionary invention."
+  },
+  {
+    "unit": 9,
+    "english": "Safety",
+    "pronunciation": "Seyfti",
+    "turkish_meaning": "Güvenlik",
+    "example_sentence": "Safety is important when you do an experiment."
+  },
+  {
+    "unit": 9,
+    "english": "Scientific",
+    "pronunciation": "Sayıntifik",
+    "turkish_meaning": "Bilimsel",
+    "example_sentence": "He made a scientific discovery about the disease."
+  },
+  {
+    "unit": 9,
+    "english": "Scientist",
+    "pronunciation": "Sayıntist",
+    "turkish_meaning": "Bilim insanı",
+    "example_sentence": "The scientist worked for years to find a cure."
+  },
+  {
+    "unit": 9,
+    "english": "Search",
+    "pronunciation": "Sörç",
+    "turkish_meaning": "Araştırmak",
+    "example_sentence": "They searched for information about the new planet."
+  },
+  {
+    "unit": 9,
+    "english": "Servant",
+    "pronunciation": "Sörvınt",
+    "turkish_meaning": "Hizmetçi",
+    "example_sentence": "In the past, rich people had many servants."
+  },
+  {
+    "unit": 9,
+    "english": "Small",
+    "pronunciation": "Smol",
+    "turkish_meaning": "Küçük",
+    "example_sentence": "The cell is too small to see without a microscope."
+  },
+  {
+    "unit": 9,
+    "english": "Smart phone",
+    "pronunciation": "Smart foun",
+    "turkish_meaning": "Akıllı telefon",
+    "example_sentence": "I use my smart phone to search for information."
+  },
+  {
+    "unit": 9,
+    "english": "Solar system",
+    "pronunciation": "Soulır sistım",
+    "turkish_meaning": "Güneş sistemi",
+    "example_sentence": "There are eight planets in our solar system."
+  },
+  {
+    "unit": 9,
+    "english": "Store",
+    "pronunciation": "Stor",
+    "turkish_meaning": "Depolamak",
+    "example_sentence": "This device can store a lot of information."
+  },
+  {
+    "unit": 9,
+    "english": "Struggles",
+    "pronunciation": "Straglz",
+    "turkish_meaning": "Mücadeleler",
+    "example_sentence": "The inventor had many struggles before his success."
+  },
+  {
+    "unit": 9,
+    "english": "Succeed",
+    "pronunciation": "Sıksid",
+    "turkish_meaning": "Başarmak",
+    "example_sentence": "She succeeded in finding a cure for the disease."
+  },
+  {
+    "unit": 9,
+    "english": "Survive",
+    "pronunciation": "Sırvayv",
+    "turkish_meaning": "Hayatta kalmak",
+    "example_sentence": "Thanks to the vaccine, many people survived the disease."
+  },
+  {
+    "unit": 9,
+    "english": "Telegram",
+    "pronunciation": "Teligräm",
+    "turkish_meaning": "Telgraf",
+    "example_sentence": "People used to send telegrams before telephones."
+  },
+  {
+    "unit": 9,
+    "english": "Test tube",
+    "pronunciation": "Test tyub",
+    "turkish_meaning": "Test tüpü",
+    "example_sentence": "The scientist poured the liquid into a test tube."
+  },
+  {
+    "unit": 9,
+    "english": "Treatment",
+    "pronunciation": "Trîtmınt",
+    "turkish_meaning": "Tedavi",
+    "example_sentence": "The new treatment helped the patient recover quickly."
+  },
+  {
+    "unit": 9,
+    "english": "Typewriter",
+    "pronunciation": "Taypraytır",
+    "turkish_meaning": "Daktilo",
+    "example_sentence": "Writers used a typewriter before computers were invented."
+  },
+  {
+    "unit": 9,
+    "english": "Unfortunately",
+    "pronunciation": "Anforçınıtli",
+    "turkish_meaning": "Maalesef",
+    "example_sentence": "Unfortunately, the experiment did not succeed."
+  },
+  {
+    "unit": 9,
+    "english": "Unique",
+    "pronunciation": "Yunik",
+    "turkish_meaning": "Eşsiz, özgün, tek",
+    "example_sentence": "Every invention has its own unique story."
+  },
+  {
+    "unit": 9,
+    "english": "Universe",
+    "pronunciation": "Yunivörs",
+    "turkish_meaning": "Kainat",
+    "example_sentence": "Scientists are still exploring the universe."
+  },
+  {
+    "unit": 9,
+    "english": "Vaccination",
+    "pronunciation": "Väksineyşın",
+    "turkish_meaning": "Aşı",
+    "example_sentence": "Vaccination protects children from many diseases."
+  },
+  {
+    "unit": 9,
+    "english": "Water screw",
+    "pronunciation": "Vatır skru",
+    "turkish_meaning": "Burgu türbini / su vidası",
+    "example_sentence": "The water screw was used to move water uphill."
+  },
+  {
+    "unit": 9,
+    "english": "Wave",
+    "pronunciation": "Weyv",
+    "turkish_meaning": "Dalga",
+    "example_sentence": "Radio waves carry information over long distances."
+  },
+  {
+    "unit": 9,
+    "english": "Widen",
+    "pronunciation": "Waydın",
+    "turkish_meaning": "Genişletmek",
+    "example_sentence": "New research can widen our knowledge of science."
+  },
+  {
+    "unit": 9,
+    "english": "Writer",
+    "pronunciation": "Raytır",
+    "turkish_meaning": "Yazar",
+    "example_sentence": "The writer used an old typewriter to write his novel."
+  },
+  {
+    "unit": 10,
+    "english": "Affect",
+    "pronunciation": "Ifekt",
+    "turkish_meaning": "Etkilemek",
+    "example_sentence": "Climate change affects the whole world."
+  },
+  {
+    "unit": 10,
+    "english": "Air",
+    "pronunciation": "Eır",
+    "turkish_meaning": "Hava",
+    "example_sentence": "Pollution makes the air dirty in big cities."
+  },
+  {
+    "unit": 10,
+    "english": "Avalanche",
+    "pronunciation": "Ävılänç",
+    "turkish_meaning": "Çığ",
+    "example_sentence": "An avalanche can happen suddenly in the mountains."
+  },
+  {
+    "unit": 10,
+    "english": "Cause",
+    "pronunciation": "Koz",
+    "turkish_meaning": "Sebep olmak",
+    "example_sentence": "Global warming causes many natural disasters."
+  },
+  {
+    "unit": 10,
+    "english": "Climate change",
+    "pronunciation": "Klaymıt çeync",
+    "turkish_meaning": "İklim değişikliği",
+    "example_sentence": "Climate change is a serious problem for our planet."
+  },
+  {
+    "unit": 10,
+    "english": "Crisis",
+    "pronunciation": "Kraysis",
+    "turkish_meaning": "Kriz",
+    "example_sentence": "The water shortage caused a big crisis in the region."
+  },
+  {
+    "unit": 10,
+    "english": "Cut down",
+    "pronunciation": "Kat daun",
+    "turkish_meaning": "Kesmek",
+    "example_sentence": "People cut down too many trees every year."
+  },
+  {
+    "unit": 10,
+    "english": "Dead",
+    "pronunciation": "Ded",
+    "turkish_meaning": "Ölü",
+    "example_sentence": "Many animals were found dead after the flood."
+  },
+  {
+    "unit": 10,
+    "english": "Deforestation",
+    "pronunciation": "Diforısteyşın",
+    "turkish_meaning": "Ormansızlaşma",
+    "example_sentence": "Deforestation is one of the main causes of climate change."
+  },
+  {
+    "unit": 10,
+    "english": "Destruction",
+    "pronunciation": "Dıstrakşın",
+    "turkish_meaning": "Yıkım",
+    "example_sentence": "The earthquake caused a lot of destruction."
+  },
+  {
+    "unit": 10,
+    "english": "Disaster",
+    "pronunciation": "Dızästır",
+    "turkish_meaning": "Felaket, afet",
+    "example_sentence": "The flood was a terrible natural disaster."
+  },
+  {
+    "unit": 10,
+    "english": "Drought",
+    "pronunciation": "Draut",
+    "turkish_meaning": "Kuraklık",
+    "example_sentence": "The drought destroyed all the crops on the farm."
+  },
+  {
+    "unit": 10,
+    "english": "Earth",
+    "pronunciation": "Ört",
+    "turkish_meaning": "Yeryüzü",
+    "example_sentence": "We must protect the Earth for future generations."
+  },
+  {
+    "unit": 10,
+    "english": "Earthquake",
+    "pronunciation": "Örtkweyk",
+    "turkish_meaning": "Deprem",
+    "example_sentence": "The earthquake destroyed many buildings in the city."
+  },
+  {
+    "unit": 10,
+    "english": "Eco friendly",
+    "pronunciation": "İko frendli",
+    "turkish_meaning": "Doğa dostu",
+    "example_sentence": "We should use eco friendly products to protect nature."
+  },
+  {
+    "unit": 10,
+    "english": "Effect",
+    "pronunciation": "İfekt",
+    "turkish_meaning": "Etki, etkilemek",
+    "example_sentence": "Pollution has a bad effect on our health."
+  },
+  {
+    "unit": 10,
+    "english": "Enough",
+    "pronunciation": "İnaf",
+    "turkish_meaning": "Yeterli",
+    "example_sentence": "There isn't enough water in the drought area."
+  },
+  {
+    "unit": 10,
+    "english": "Environment",
+    "pronunciation": "İnvayrınmınt",
+    "turkish_meaning": "Çevre",
+    "example_sentence": "We must protect the environment from pollution."
+  },
+  {
+    "unit": 10,
+    "english": "Environmental",
+    "pronunciation": "İnvayrınmentıl",
+    "turkish_meaning": "Çevresel",
+    "example_sentence": "Recycling is a good environmental habit."
+  },
+  {
+    "unit": 10,
+    "english": "Erosion",
+    "pronunciation": "İrojın",
+    "turkish_meaning": "Erozyon, toprak aşınması",
+    "example_sentence": "Erosion removes the fertile soil from the land."
+  },
+  {
+    "unit": 10,
+    "english": "Estimated",
+    "pronunciation": "Estimeytid",
+    "turkish_meaning": "Tahmin edilen",
+    "example_sentence": "The estimated number of survivors was two hundred."
+  },
+  {
+    "unit": 10,
+    "english": "Feel",
+    "pronunciation": "Fil",
+    "turkish_meaning": "Hissetmek",
+    "example_sentence": "People felt the earthquake all over the city."
+  },
+  {
+    "unit": 10,
+    "english": "Flood",
+    "pronunciation": "Flad",
+    "turkish_meaning": "Sel baskını",
+    "example_sentence": "The flood destroyed many houses near the river."
+  },
+  {
+    "unit": 10,
+    "english": "Forest",
+    "pronunciation": "Forist",
+    "turkish_meaning": "Orman",
+    "example_sentence": "We should plant more trees to protect the forest."
+  },
+  {
+    "unit": 10,
+    "english": "Forest fire",
+    "pronunciation": "Forist fayır",
+    "turkish_meaning": "Orman yangını",
+    "example_sentence": "The forest fire spread quickly because of the dry weather."
+  },
+  {
+    "unit": 10,
+    "english": "Future",
+    "pronunciation": "Fyuçır",
+    "turkish_meaning": "Gelecek",
+    "example_sentence": "We should protect nature for the future."
+  },
+  {
+    "unit": 10,
+    "english": "Global warming",
+    "pronunciation": "Gloubıl worming",
+    "turkish_meaning": "Küresel ısınma",
+    "example_sentence": "Global warming is melting the ice at the poles."
+  },
+  {
+    "unit": 10,
+    "english": "Happen",
+    "pronunciation": "Häpın",
+    "turkish_meaning": "Olmak, meydana gelmek",
+    "example_sentence": "Nobody knew when the earthquake would happen."
+  },
+  {
+    "unit": 10,
+    "english": "Hit",
+    "pronunciation": "Hit",
+    "turkish_meaning": "Vurmak",
+    "example_sentence": "A big hurricane hit the coast last night."
+  },
+  {
+    "unit": 10,
+    "english": "Human",
+    "pronunciation": "Hyumın",
+    "turkish_meaning": "İnsan",
+    "example_sentence": "Human activities are the main cause of pollution."
+  },
+  {
+    "unit": 10,
+    "english": "Hunger",
+    "pronunciation": "Hangır",
+    "turkish_meaning": "Açlık",
+    "example_sentence": "The drought caused hunger in many villages."
+  },
+  {
+    "unit": 10,
+    "english": "Hurricane",
+    "pronunciation": "Hörikeyn",
+    "turkish_meaning": "Kasırga",
+    "example_sentence": "The hurricane destroyed hundreds of houses."
+  },
+  {
+    "unit": 10,
+    "english": "Increase",
+    "pronunciation": "İnkris",
+    "turkish_meaning": "Artmak",
+    "example_sentence": "The temperature will increase because of global warming."
+  },
+  {
+    "unit": 10,
+    "english": "Injured",
+    "pronunciation": "İncırd",
+    "turkish_meaning": "Yaralı",
+    "example_sentence": "Many people were injured in the earthquake."
+  },
+  {
+    "unit": 10,
+    "english": "Injury",
+    "pronunciation": "İncıri",
+    "turkish_meaning": "Yaralanma",
+    "example_sentence": "She had a serious injury after the landslide."
+  },
+  {
+    "unit": 10,
+    "english": "Keep clean",
+    "pronunciation": "Kip klin",
+    "turkish_meaning": "Temiz tutmak",
+    "example_sentence": "We should keep our environment clean."
+  },
+  {
+    "unit": 10,
+    "english": "Killed",
+    "pronunciation": "Kild",
+    "turkish_meaning": "Öldürmek",
+    "example_sentence": "The tsunami killed thousands of people."
+  },
+  {
+    "unit": 10,
+    "english": "Land",
+    "pronunciation": "Länd",
+    "turkish_meaning": "Kara, toprak parçası",
+    "example_sentence": "The earthquake changed the shape of the land."
+  },
+  {
+    "unit": 10,
+    "english": "Landslide",
+    "pronunciation": "Ländslayd",
+    "turkish_meaning": "Toprak kayması, heyelan",
+    "example_sentence": "Heavy rain caused a landslide on the mountain."
+  },
+  {
+    "unit": 10,
+    "english": "Leak",
+    "pronunciation": "Lik",
+    "turkish_meaning": "Sızıntı",
+    "example_sentence": "There was a radiation leak at the power plant."
+  },
+  {
+    "unit": 10,
+    "english": "Learn",
+    "pronunciation": "Lörn",
+    "turkish_meaning": "Öğrenmek",
+    "example_sentence": "We should learn how to protect our planet."
+  },
+  {
+    "unit": 10,
+    "english": "Leave",
+    "pronunciation": "Liv",
+    "turkish_meaning": "Terketmek",
+    "example_sentence": "The villagers had to leave their homes after the flood."
+  },
+  {
+    "unit": 10,
+    "english": "Magnitude",
+    "pronunciation": "Mägnityud",
+    "turkish_meaning": "Büyüklük",
+    "example_sentence": "The earthquake had a magnitude of seven."
+  },
+  {
+    "unit": 10,
+    "english": "Main",
+    "pronunciation": "Meyn",
+    "turkish_meaning": "Ana, başlıca",
+    "example_sentence": "Pollution is the main cause of climate change."
+  },
+  {
+    "unit": 10,
+    "english": "Melting ice",
+    "pronunciation": "Melting ays",
+    "turkish_meaning": "Buzun erimesi",
+    "example_sentence": "Melting ice is making sea levels rise."
+  },
+  {
+    "unit": 10,
+    "english": "Missing",
+    "pronunciation": "Mising",
+    "turkish_meaning": "Kayıp",
+    "example_sentence": "Ten people are still missing after the flood."
+  },
+  {
+    "unit": 10,
+    "english": "Movement",
+    "pronunciation": "Muvmınt",
+    "turkish_meaning": "Hareket",
+    "example_sentence": "The movement of the Earth's plates causes earthquakes."
+  },
+  {
+    "unit": 10,
+    "english": "Natural",
+    "pronunciation": "Näçırıl",
+    "turkish_meaning": "Doğal",
+    "example_sentence": "Earthquakes and floods are natural disasters."
+  },
+  {
+    "unit": 10,
+    "english": "Neighbour",
+    "pronunciation": "Neybır",
+    "turkish_meaning": "Komşu",
+    "example_sentence": "My neighbour helped us during the flood."
+  },
+  {
+    "unit": 10,
+    "english": "Overpopulation",
+    "pronunciation": "Ovırpopyuleyşın",
+    "turkish_meaning": "Aşırı nüfus",
+    "example_sentence": "Overpopulation increases pollution in big cities."
+  },
+  {
+    "unit": 10,
+    "english": "Pesticide",
+    "pronunciation": "Pestisayd",
+    "turkish_meaning": "Böcek ilacı",
+    "example_sentence": "Farmers use pesticide to protect their crops."
+  },
+  {
+    "unit": 10,
+    "english": "Planet",
+    "pronunciation": "Plänit",
+    "turkish_meaning": "Gezegen",
+    "example_sentence": "We only have one planet to live on."
+  },
+  {
+    "unit": 10,
+    "english": "Plant trees",
+    "pronunciation": "Plänt triz",
+    "turkish_meaning": "Ağaçlar dikmek",
+    "example_sentence": "We should plant trees to fight climate change."
+  },
+  {
+    "unit": 10,
+    "english": "Pollute",
+    "pronunciation": "Pılut",
+    "turkish_meaning": "Kirletmek",
+    "example_sentence": "Factories pollute the air and water."
+  },
+  {
+    "unit": 10,
+    "english": "Pollution",
+    "pronunciation": "Pılûşın",
+    "turkish_meaning": "Kirlilik",
+    "example_sentence": "Air pollution is a big problem in cities."
+  },
+  {
+    "unit": 10,
+    "english": "Population",
+    "pronunciation": "Popyuleyşın",
+    "turkish_meaning": "Nüfus",
+    "example_sentence": "The population of the city is growing fast."
+  },
+  {
+    "unit": 10,
+    "english": "Precaution",
+    "pronunciation": "Prikoşın",
+    "turkish_meaning": "Önlem",
+    "example_sentence": "We should take precautions before a disaster happens."
+  },
+  {
+    "unit": 10,
+    "english": "Prevent",
+    "pronunciation": "Privent",
+    "turkish_meaning": "Önlemek",
+    "example_sentence": "Recycling helps prevent pollution."
+  },
+  {
+    "unit": 10,
+    "english": "Private car",
+    "pronunciation": "Prayvıt kar",
+    "turkish_meaning": "Özel araç",
+    "example_sentence": "You should use less private car and more public transportation."
+  },
+  {
+    "unit": 10,
+    "english": "Protect",
+    "pronunciation": "Protekt",
+    "turkish_meaning": "Korumak",
+    "example_sentence": "We must protect the environment for future generations."
+  },
+  {
+    "unit": 10,
+    "english": "Public transportation",
+    "pronunciation": "Pablik transporteyşın",
+    "turkish_meaning": "Toplu taşıma",
+    "example_sentence": "Public transportation causes less pollution than private cars."
+  },
+  {
+    "unit": 10,
+    "english": "Radiation",
+    "pronunciation": "Reydieyşın",
+    "turkish_meaning": "Radyasyon",
+    "example_sentence": "The accident released dangerous radiation into the air."
+  },
+  {
+    "unit": 10,
+    "english": "Reach",
+    "pronunciation": "Riç",
+    "turkish_meaning": "Ulaşmak",
+    "example_sentence": "The rescue team couldn't reach the village because of the flood."
+  },
+  {
+    "unit": 10,
+    "english": "Reason",
+    "pronunciation": "Rizın",
+    "turkish_meaning": "Sebep",
+    "example_sentence": "Deforestation is a common reason for landslides."
+  },
+  {
+    "unit": 10,
+    "english": "Recycle",
+    "pronunciation": "Risaykıl",
+    "turkish_meaning": "Geri dönüşüm",
+    "example_sentence": "We should recycle plastic and paper."
+  },
+  {
+    "unit": 10,
+    "english": "Region",
+    "pronunciation": "Ricın",
+    "turkish_meaning": "Bölge, alan",
+    "example_sentence": "The drought affected a large region of the country."
+  },
+  {
+    "unit": 10,
+    "english": "Rescue team",
+    "pronunciation": "Reskyu tim",
+    "turkish_meaning": "Kurtarma ekibi",
+    "example_sentence": "The rescue team saved many survivors from the flood."
+  },
+  {
+    "unit": 10,
+    "english": "Result",
+    "pronunciation": "Rizalt",
+    "turkish_meaning": "Sonuç",
+    "example_sentence": "Pollution is a result of human activities."
+  },
+  {
+    "unit": 10,
+    "english": "Save",
+    "pronunciation": "Seyv",
+    "turkish_meaning": "Korumak",
+    "example_sentence": "We should save water during a drought."
+  },
+  {
+    "unit": 10,
+    "english": "Serious",
+    "pronunciation": "Sîriıs",
+    "turkish_meaning": "Ciddi",
+    "example_sentence": "Climate change is a serious threat to our planet."
+  },
+  {
+    "unit": 10,
+    "english": "Shortage",
+    "pronunciation": "Şortıc",
+    "turkish_meaning": "Kıtlık, eksiklik",
+    "example_sentence": "There is a serious water shortage this summer."
+  },
+  {
+    "unit": 10,
+    "english": "Source",
+    "pronunciation": "Sors",
+    "turkish_meaning": "Kaynak",
+    "example_sentence": "Solar energy is a clean source of power."
+  },
+  {
+    "unit": 10,
+    "english": "Suffer from",
+    "pronunciation": "Safır from",
+    "turkish_meaning": "Acı çekmek, müzdarip olmak",
+    "example_sentence": "Many people suffer from hunger after a disaster."
+  },
+  {
+    "unit": 10,
+    "english": "Survivor",
+    "pronunciation": "Sırvayvır",
+    "turkish_meaning": "Hayatta kalan",
+    "example_sentence": "The rescue team found three survivors under the debris."
+  },
+  {
+    "unit": 10,
+    "english": "Take action",
+    "pronunciation": "Teyk äkşın",
+    "turkish_meaning": "Harekete geçmek",
+    "example_sentence": "We must take action now to stop climate change."
+  },
+  {
+    "unit": 10,
+    "english": "Temperature",
+    "pronunciation": "Tempriçır",
+    "turkish_meaning": "Sıcaklık",
+    "example_sentence": "The temperature has increased because of global warming."
+  },
+  {
+    "unit": 10,
+    "english": "Terrible",
+    "pronunciation": "Teribıl",
+    "turkish_meaning": "Korkunç",
+    "example_sentence": "The earthquake caused terrible destruction."
+  },
+  {
+    "unit": 10,
+    "english": "The power plant",
+    "pronunciation": "Dı pauır plänt",
+    "turkish_meaning": "Enerji santrali",
+    "example_sentence": "The power plant produces electricity for the whole city."
+  },
+  {
+    "unit": 10,
+    "english": "Thirst",
+    "pronunciation": "Törst",
+    "turkish_meaning": "Susuzluk",
+    "example_sentence": "The survivors suffered from thirst in the desert."
+  },
+  {
+    "unit": 10,
+    "english": "Threat",
+    "pronunciation": "Tret",
+    "turkish_meaning": "Tehdit",
+    "example_sentence": "Pollution is a big threat to wildlife."
+  },
+  {
+    "unit": 10,
+    "english": "Tornado",
+    "pronunciation": "Torneydou",
+    "turkish_meaning": "Hortum",
+    "example_sentence": "A tornado destroyed several houses in the town."
+  },
+  {
+    "unit": 10,
+    "english": "Tsunami",
+    "pronunciation": "Tsunami",
+    "turkish_meaning": "Tsunami",
+    "example_sentence": "The earthquake caused a huge tsunami."
+  },
+  {
+    "unit": 10,
+    "english": "Use",
+    "pronunciation": "Yuz",
+    "turkish_meaning": "Kullanmak",
+    "example_sentence": "We should use public transportation instead of private cars."
+  },
+  {
+    "unit": 10,
+    "english": "Volcanic eruption",
+    "pronunciation": "Volkänik iripşın",
+    "turkish_meaning": "Yanardağ patlaması",
+    "example_sentence": "The volcanic eruption covered the town with ash."
+  },
+  {
+    "unit": 10,
+    "english": "Waste",
+    "pronunciation": "Weyst",
+    "turkish_meaning": "İsraf etmek / atık",
+    "example_sentence": "You shouldn't waste water during a drought."
+  },
+  {
+    "unit": 10,
+    "english": "Water",
+    "pronunciation": "Vôtır",
+    "turkish_meaning": "Su",
+    "example_sentence": "Clean water is very important for our health."
+  },
+  {
+    "unit": 10,
+    "english": "Wave",
+    "pronunciation": "Weyv",
+    "turkish_meaning": "Dalga",
+    "example_sentence": "A huge wave hit the coast during the tsunami."
+  },
+  {
+    "unit": 10,
+    "english": "Weather condition",
+    "pronunciation": "Vedır kındişın",
+    "turkish_meaning": "Hava durumu",
+    "example_sentence": "The weather conditions caused the forest fire to spread."
+  },
+  {
+    "unit": 10,
+    "english": "Wildlife",
+    "pronunciation": "Wayldlayf",
+    "turkish_meaning": "Vahşi yaşam",
+    "example_sentence": "Pollution is dangerous for wildlife."
+  },
+  {
+    "unit": 10,
+    "english": "Wind",
+    "pronunciation": "Vind",
+    "turkish_meaning": "Rüzgar",
+    "example_sentence": "Strong wind can cause a lot of damage."
+  },
+  {
+    "unit": 10,
+    "english": "World",
+    "pronunciation": "Vörld",
+    "turkish_meaning": "Dünya",
+    "example_sentence": "Climate change affects the whole world."
+  },
+  {
+    "unit": 10,
+    "english": "Worried",
+    "pronunciation": "Vörid",
+    "turkish_meaning": "Endişeli",
+    "example_sentence": "People are worried about the future of the planet."
+  }
+]
