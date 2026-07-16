@@ -1,7 +1,7 @@
 .wheel-page {
-  max-width: 560px;
+  max-width: 520px;
   margin: 0 auto;
-  padding: 32px 20px 80px;
+  padding: 20px 16px 60px;
   text-align: center;
 }
 
@@ -28,17 +28,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 32px;
-  width: 340px;
-  height: 340px;
+  margin: 0 auto 24px;
+  width: 460px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
 }
 
 .wheel-pointer {
   position: absolute;
-  top: -14px;
+  top: -10px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 34px;
+  font-size: 40px;
   color: var(--clay-deep);
   z-index: 10;
   filter: drop-shadow(0 2px 3px rgba(0,0,0,0.25));
@@ -46,10 +47,13 @@
 
 .wheel-outer {
   position: relative;
-  width: 340px;
-  height: 340px;
+  width: 460px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
-  border: 8px solid var(--paper-raised);
+  /* Eskiden 8px'lik beyaz bir bezel, renkli dilimlerle dış halka arasında rahatsız edici bir
+     boşluk bırakıyordu — artık sadece ince bir ayraç çizgisi kalacak kadar inceltildi. */
+  border: 2px solid var(--paper-raised);
   box-shadow: 0 0 0 4px var(--moss-deep), 0 14px 40px rgba(0,0,0,0.25);
   display: flex;
   align-items: center;
@@ -77,15 +81,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
-  width: 56px;
-  height: 56px;
+  width: 74px;
+  height: 74px;
   border-radius: 50%;
   background: var(--paper-raised);
   border: 4px solid var(--moss-deep);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 30px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
@@ -193,6 +197,5 @@
 }
 
 @media (max-width: 420px) {
-  .wheel-stage { transform: scale(0.78); margin-bottom: -20px; }
   .wheel-page-title { font-size: 24px; }
 }
