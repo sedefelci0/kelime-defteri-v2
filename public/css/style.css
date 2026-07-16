@@ -25,6 +25,10 @@
   --deck-orange-accent: #D96B38;
   --deck-yellow: #FEF3DC;
   --deck-yellow-accent: #C99010;
+  --deck-blue: #E3F0FD;
+  --deck-blue-accent: #2D7FC9;
+  --deck-pink: #FDE9F1;
+  --deck-pink-accent: #D9468C;
 }
 
 * { box-sizing: border-box; }

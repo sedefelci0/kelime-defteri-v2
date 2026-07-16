@@ -6,7 +6,9 @@ const { requireAuth } = require('../middleware/auth');
 
 const router = express.Router();
 
-const TOPICS_FILE = path.join(__dirname, '../data/grade5_topics.json');
+// Tüm sınıfların konu özeti verisi tek dosyada, deckSlug'a göre anahtarlanmış
+// şekilde tutulur: { "5-sinif": {...}, "6-sinif": {...}, "8-sinif": {...} }.
+const TOPICS_FILE = path.join(__dirname, '../data/topics.json');
 
 function loadTopics() {
   const raw = fs.readFileSync(TOPICS_FILE, 'utf8');
@@ -14,7 +16,7 @@ function loadTopics() {
 }
 
 // Bir ünitenin konu özeti aktivitelerini döner. Kaynağı olmayan üniteler için
-// { comingSoon: true } döner (bkz. data/grade5_topics.json).
+// { comingSoon: true } döner (bkz. data/topics.json).
 router.get('/:deckSlug/:unit', requireAuth, (req, res) => {
   try {
     const unit = Number(req.params.unit);

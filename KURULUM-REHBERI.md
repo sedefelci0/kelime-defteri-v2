@@ -96,19 +96,19 @@ Yeni kelimeler eklemek istediğinde excel dosyasını tekrar bana gönder, ben `
 1. GitHub'da `data/words.json` dosyasını yeni haliyle değiştirirsin (dosyaya tıkla → kalem ikonu → içeriği değiştir → Commit),
 2. Render Shell'den şunu çalıştırırsın: `node -e "require('./scripts/setup-db')"` — ama bu sadece tablo boşsa kelime ekler, mevcut ilerlemeni bozmaz. İstersen bu adımı senin için otomatikleştiren ayrı bir "kelime ekle" komutu da hazırlayabilirim.
 
-## 5. Sınıf Ünite 2-8 ve Konu Özetleri Nasıl Devreye Alınır
+## Yeni Sınıf Üniteleri ve Konu Özetleri Nasıl Devreye Alınır
 
-5. Sınıf destesine Ünite 2-8'in kelimeleri ve her ünite için "Konu Özetleri" bölümü (interaktif alıştırmalar) eklendi. Bunların canlı siteye yansıması için **hiçbir ekstra adım gerekmiyor** — Ünite 1 zaten dolu olduğu için normal kurulum yeni üniteleri atlasa da, sunucu her açıldığında (her deploy'da otomatik) eksik üniteleri kendisi tespit edip ekliyor (`db/setup.js`). Yani:
+5, 6 ve 8. Sınıf destelerine ünite ünite kelimeler ve her ünite için "Konu Özetleri" bölümü (interaktif alıştırmalar) eklendi/ekleniyor. Bunların canlı siteye yansıması için **hiçbir ekstra adım gerekmiyor** — her destenin ilk ünitesi zaten dolu olduğu için normal kurulum sonradan eklenen üniteleri atlasa da, sunucu her açıldığında (her deploy'da otomatik) tüm desteler için eksik üniteleri kendisi tespit edip ekliyor (`db/setup.js`). Yani:
 
 1. Değişiklikleri her zamanki gibi GitHub'a yükle (Commit changes).
 2. Render'ın otomatik olarak yeni kodu yayınlamasını bekle (Render panelinde "Deploying" yazısı biter, "Live" olur).
 3. Bu kadar — sunucu açılırken eksik üniteleri kendisi ekler. Render'ın loglarında (**"Logs"** sekmesi) `[db] "5. Sınıf" Ünite 2: 117 kelime eklendi.` gibi satırlar görürsün.
 
-**Not (ücretsiz Render planı için):** Ücretsiz plan **Shell** sekmesi sunmuyor — bu yüzden yukarıdaki otomatik yöntem tasarlandı, elle komut çalıştırmana hiç gerek yok. Eğer ileride Shell erişimin olursa (ücretli plan) ve hemen, sunucuyu yeniden başlatmadan eklemek istersen `node scripts/sync-grade5-words.js` de çalıştırabilirsin — o da aynı işi yapar.
+**Not (ücretsiz Render planı için):** Ücretsiz plan **Shell** sekmesi sunmuyor — bu yüzden yukarıdaki otomatik yöntem tasarlandı, elle komut çalıştırmana hiç gerek yok. Eğer ileride Shell erişimin olursa (ücretli plan) ve hemen, sunucuyu yeniden başlatmadan eklemek istersen `node scripts/sync-deck-words.js` de çalıştırabilirsin — o da aynı işi yapar (tüm desteler için).
 
 Konu Özetleri bölümü için ekstra bir adım gerekmiyor — veritabanı şeması (`topic_progress` tablosu) sunucu her açıldığında otomatik oluşturulur.
 
-**Not:** Ünite 4 (Aile Hayatı) ve Ünite 6 (Dünyada Hayat) için kaynak PDF'lerinde konu özeti/gramer içeriği bulunmadığından, bu iki ünitede öğrenciler "Yakında eklenecek" mesajı görecek — kelime kartları bu ünitelerde de tam ve çalışır durumda.
+**Not:** Kaynak PDF'lerinde konu özeti/gramer içeriği bulunmayan üniteler için öğrenciler "Yakında eklenecek" mesajı görecek — kelime kartları bu ünitelerde de tam ve çalışır durumda (örn. 5. Sınıf Ünite 4 ve Ünite 6).
 
 ## Bir Sorun Olursa
 

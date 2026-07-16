@@ -63,23 +63,23 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
     );
     const { rows: personalAnswers } = await pool.query(
       `SELECT user_id, deck_slug, unit, question, answer, submitted_at FROM topic_personal_answers
-       WHERE user_id = ANY($1) ORDER BY unit ASC, submitted_at DESC`,
+       WHERE user_id = ANY($1) ORDER BY deck_slug ASC, unit ASC, submitted_at DESC`,
       [ids]
     );
     const { rows: topicDetail } = await pool.query(
-      `SELECT user_id, unit, best_score, best_total, attempts FROM topic_progress
-       WHERE user_id = ANY($1) ORDER BY unit ASC`,
+      `SELECT user_id, deck_slug, unit, best_score, best_total, attempts FROM topic_progress
+       WHERE user_id = ANY($1) ORDER BY deck_slug ASC, unit ASC`,
       [ids]
     );
     const { rows: attemptRows } = await pool.query(
-      `SELECT user_id, unit, prompt, attempts, activity_type FROM topic_fillblank_attempts
-       WHERE user_id = ANY($1) ORDER BY unit ASC, submitted_at DESC`,
+      `SELECT user_id, deck_slug, unit, prompt, attempts, activity_type FROM topic_fillblank_attempts
+       WHERE user_id = ANY($1) ORDER BY deck_slug ASC, unit ASC, submitted_at DESC`,
       [ids]
     );
     const { rows: activityResults } = await pool.query(
-      `SELECT user_id, unit, activity_index, activity_type, prompt, is_correct, answered, points, correct_points, explanation
+      `SELECT user_id, deck_slug, unit, activity_index, activity_type, prompt, is_correct, answered, points, correct_points, explanation
        FROM topic_activity_results
-       WHERE user_id = ANY($1) ORDER BY unit ASC, activity_index ASC`,
+       WHERE user_id = ANY($1) ORDER BY deck_slug ASC, unit ASC, activity_index ASC`,
       [ids]
     );
     const { rows: wheelHistory } = await pool.query(
@@ -110,6 +110,7 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
     for (const t of topicDetail) {
       if (!topicDetailByUser[t.user_id]) topicDetailByUser[t.user_id] = [];
       topicDetailByUser[t.user_id].push({
+        deckSlug: t.deck_slug,
         unit: t.unit,
         bestScore: t.best_score,
         bestTotal: t.best_total,
@@ -119,12 +120,13 @@ router.get('/students', requireAuth, requireOwner, async (req, res) => {
     const attemptDetailByUser = {};
     for (const f of attemptRows) {
       if (!attemptDetailByUser[f.user_id]) attemptDetailByUser[f.user_id] = [];
-      attemptDetailByUser[f.user_id].push({ unit: f.unit, prompt: f.prompt, attempts: f.attempts, type: f.activity_type });
+      attemptDetailByUser[f.user_id].push({ deckSlug: f.deck_slug, unit: f.unit, prompt: f.prompt, attempts: f.attempts, type: f.activity_type });
     }
     const activityResultsByUser = {};
     for (const r of activityResults) {
       if (!activityResultsByUser[r.user_id]) activityResultsByUser[r.user_id] = [];
       activityResultsByUser[r.user_id].push({
+        deckSlug: r.deck_slug,
         unit: r.unit,
         index: r.activity_index,
         type: r.activity_type,

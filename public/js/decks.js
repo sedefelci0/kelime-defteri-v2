@@ -2,8 +2,15 @@ const DECK_THEMES = {
   'yokdil':             { theme: 'purple', icon: '🏆', badge: 'Popüler' },
   'benim-kelimelerim':  { theme: 'green',  icon: '⭐' },
   '5-sinif':            { theme: 'orange', icon: '📗' },
+  '6-sinif':            { theme: 'blue',   icon: '📙' },
+  '7-sinif':            { theme: 'pink',   icon: '📕' },
   '8-sinif':            { theme: 'yellow', icon: '📘' },
 };
+
+// Konu Özetleri (Topic aktiviteleri) verisi olan desteler — bu listedeki desteler için
+// "Kelimeler / Konu Özetleri" sekmesi gösterilir. 7. sınıf henüz kaynak içerik eklenmediği
+// için listede yok; içerik eklenince buraya da eklenmesi yeterli.
+const TOPICS_ENABLED_DECKS = ['5-sinif', '6-sinif', '8-sinif'];
 
 const loadingEl       = document.getElementById('loading');
 const deckListViewEl  = document.getElementById('deck-list-view');
@@ -91,7 +98,7 @@ async function openDeck(deck) {
     showView('loading');
     currentUnits = await getJSON(`/api/decks/${deck.slug}/units`);
 
-    if (deck.slug === '5-sinif') {
+    if (TOPICS_ENABLED_DECKS.includes(deck.slug)) {
       unitModeTabsEl.style.display = '';
       topicsProgress = await getJSON(`/api/topics/${deck.slug}/progress`).catch(() => ({}));
     } else {

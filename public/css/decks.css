@@ -57,6 +57,8 @@
 .deck-card--green  { background: var(--deck-green); }
 .deck-card--orange { background: var(--deck-orange); }
 .deck-card--yellow { background: var(--deck-yellow); }
+.deck-card--blue   { background: var(--deck-blue); }
+.deck-card--pink   { background: var(--deck-pink); }
 
 .deck-card-top {
   display: flex;
@@ -79,6 +81,8 @@
 .deck-card--green  .deck-icon-circle { background: rgba(45,155,111,0.18); }
 .deck-card--orange .deck-icon-circle { background: rgba(217,107,56,0.18); }
 .deck-card--yellow .deck-icon-circle { background: rgba(201,144,16,0.18); }
+.deck-card--blue   .deck-icon-circle { background: rgba(45,127,201,0.18); }
+.deck-card--pink   .deck-icon-circle { background: rgba(217,70,140,0.18); }
 
 .deck-badge {
   font-size: 11px;
@@ -92,6 +96,8 @@
 .deck-card--green  .deck-badge { background: var(--deck-green-accent); color: #fff; }
 .deck-card--orange .deck-badge { background: var(--deck-orange-accent); color: #fff; }
 .deck-card--yellow .deck-badge { background: var(--deck-yellow-accent); color: #fff; }
+.deck-card--blue   .deck-badge { background: var(--deck-blue-accent); color: #fff; }
+.deck-card--pink   .deck-badge { background: var(--deck-pink-accent); color: #fff; }
 
 .deck-title {
   font-size: 18px;
@@ -119,6 +125,8 @@
 .deck-card--green  .deck-meta { color: var(--deck-green-accent); }
 .deck-card--orange .deck-meta { color: var(--deck-orange-accent); }
 .deck-card--yellow .deck-meta { color: var(--deck-yellow-accent); }
+.deck-card--blue   .deck-meta { color: var(--deck-blue-accent); }
+.deck-card--pink   .deck-meta { color: var(--deck-pink-accent); }
 
 /* ===== Tools section ===== */
 .tools-section {
@@ -201,6 +209,8 @@
 .unit-deck-icon--green  { background: var(--deck-green); }
 .unit-deck-icon--orange { background: var(--deck-orange); }
 .unit-deck-icon--yellow { background: var(--deck-yellow); }
+.unit-deck-icon--blue   { background: var(--deck-blue); }
+.unit-deck-icon--pink   { background: var(--deck-pink); }
 .unit-deck-title {
   font-size: 24px;
   font-weight: 700;

@@ -61,22 +61,25 @@ async function ensureDatabaseReady() {
     console.log(`[db] "${deck.title}" yükleme tamamlandı.`);
   }
 
-  await syncGrade5Units();
+  for (const deck of DECKS) {
+    await syncDeckUnits(deck.slug, deck.wordsFile, deck.title);
+  }
   await ensureExamQuestionsReady();
   await fixTypos();
 }
 
-// 5. Sınıf destesi Ünite 1 ile birlikte kuruldu ve artık "dolu" sayıldığı için, yukarıdaki
-// döngü sonradan eklenen üniteleri (2, 3, ...) yüklemez. Bu fonksiyon her sunucu açılışında
-// çalışır ve data/grade5_words.json'daki, veritabanında henüz olmayan üniteleri ünite ünite
-// kontrol edip ekler — Shell erişimi olmayan (ücretsiz) hosting planlarında bile elle bir
-// komut çalıştırmaya gerek kalmaz. Aynı mantık scripts/sync-grade5-words.js'de de var
-// (yerelde manuel çalıştırmak isteyenler için), birden fazla çalıştırılması güvenlidir.
-async function syncGrade5Units() {
-  const filePath = path.join(__dirname, '../data/grade5_words.json');
+// Bir deste ilk kurulumda birkaç üniteyle "dolu" sayılıp yukarıdaki ana döngü tarafından
+// atlandıktan sonra, o desteye ait words dosyasına sonradan eklenen yeni üniteleri (örn.
+// Ünite 2, 3, ...) tek tek kontrol edip yükler. Her sunucu açılışında tüm desteler için
+// çalışır — Shell erişimi olmayan (ücretsiz) hosting planlarında bile elle bir komut
+// çalıştırmaya gerek kalmaz. Aynı mantık scripts/sync-grade5-words.js'de de var (yerelde
+// manuel çalıştırmak isteyenler için); birden fazla çalıştırılması güvenlidir.
+async function syncDeckUnits(deckSlug, wordsFile, deckTitle) {
+  if (!wordsFile) return;
+  const filePath = path.join(__dirname, wordsFile);
   if (!fs.existsSync(filePath)) return;
 
-  const { rows: deckRows } = await pool.query("SELECT id FROM decks WHERE slug = '5-sinif'");
+  const { rows: deckRows } = await pool.query('SELECT id FROM decks WHERE slug = $1', [deckSlug]);
   if (deckRows.length === 0) return;
   const deckId = deckRows[0].id;
 
@@ -102,7 +105,7 @@ async function syncGrade5Units() {
         [deckId, unit, w.english, w.pronunciation || null, w.turkish_meaning, w.english_explanation || null, w.example_sentence, w.part_of_speech || null]
       );
     }
-    console.log(`[db] "5. Sınıf" Ünite ${unit}: ${byUnit[unit].length} kelime eklendi.`);
+    console.log(`[db] "${deckTitle}" Ünite ${unit}: ${byUnit[unit].length} kelime eklendi.`);
   }
 }
 
@@ -158,4 +161,4 @@ async function ensureExamQuestionsReady() {
   }
 }
 
-module.exports = { ensureDatabaseReady, syncGrade5Units };
+module.exports = { ensureDatabaseReady, syncDeckUnits };

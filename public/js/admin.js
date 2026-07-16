@@ -8,10 +8,24 @@ const emptyStudentsEl = document.getElementById('empty-students');
 const classFilterEl = document.getElementById('class-filter');
 const summaryCardsEl = document.getElementById('summary-cards');
 
-const GRADE5_UNIT_NAMES = {
-  1: 'Okul Hayatı', 2: 'Sınıf Hayatı', 3: 'Kişisel Hayat', 4: 'Aile Hayatı',
-  5: 'Mahalle ve Şehir Hayatı', 6: 'Dünyada Hayat', 7: 'Doğada Hayat', 8: 'Evren ve Gelecekte Hayat',
+// Konu Özetleri artık birden çok sınıf destesinde olabildiği için ünite adları
+// deste (deckSlug) bazında ayrı haritalarda tutulur.
+const ALL_UNIT_NAMES = {
+  '5-sinif': {
+    1: 'Okul Hayatı', 2: 'Sınıf Hayatı', 3: 'Kişisel Hayat', 4: 'Aile Hayatı',
+    5: 'Mahalle ve Şehir Hayatı', 6: 'Dünyada Hayat', 7: 'Doğada Hayat', 8: 'Evren ve Gelecekte Hayat',
+  },
+  '6-sinif': {},
+  '8-sinif': {},
 };
+
+const DECK_TITLES = {
+  '5-sinif': '5. Sınıf', '6-sinif': '6. Sınıf', '7-sinif': '7. Sınıf', '8-sinif': '8. Sınıf',
+};
+
+function deckTitleFor(deckSlug) {
+  return DECK_TITLES[deckSlug] || deckSlug || '';
+}
 
 const AVATAR_COLORS = [
   { bg: '#EEEDFE', fg: '#7C6CE0' },
@@ -239,8 +253,10 @@ const personalAnswersModal = document.getElementById('personal-answers-modal');
 const personalAnswersModalTitle = document.getElementById('personal-answers-modal-title');
 const personalAnswersModalList = document.getElementById('personal-answers-modal-list');
 
-function unitLabelFor(unit) {
-  return GRADE5_UNIT_NAMES[unit] ? `Ünite ${unit} — ${GRADE5_UNIT_NAMES[unit]}` : `Ünite ${unit}`;
+function unitLabelFor(deckSlug, unit) {
+  const name = (ALL_UNIT_NAMES[deckSlug] || {})[unit];
+  const base = name ? `Ünite ${unit} — ${name}` : `Ünite ${unit}`;
+  return deckSlug ? `${deckTitleFor(deckSlug)} · ${base}` : base;
 }
 
 // Kişisel Cevaplar modalı — ünite ünite gruplu, her grup içinde tarihe göre (en yeni önce)
@@ -248,27 +264,31 @@ function openPersonalAnswersModal(student) {
   personalAnswersModalTitle.textContent = `${student.displayName} — Kişisel Cevaplar`;
   personalAnswersModalList.innerHTML = '';
 
-  const byUnit = {};
+  const byGroup = {};
   student.personalAnswers.forEach((a) => {
-    if (!byUnit[a.unit]) byUnit[a.unit] = [];
-    byUnit[a.unit].push(a);
+    const key = `${a.deckSlug || ''}::${a.unit}`;
+    if (!byGroup[key]) byGroup[key] = { deckSlug: a.deckSlug, unit: a.unit, answers: [] };
+    byGroup[key].answers.push(a);
   });
-  const units = Object.keys(byUnit).map(Number).sort((a, b) => a - b);
+  const groups = Object.values(byGroup).sort((a, b) => {
+    const d = deckTitleFor(a.deckSlug).localeCompare(deckTitleFor(b.deckSlug));
+    return d !== 0 ? d : a.unit - b.unit;
+  });
 
-  if (units.length === 0) {
+  if (groups.length === 0) {
     personalAnswersModalList.innerHTML = '<p class="q-empty-hint">Henüz kişisel cevap göndermemiş.</p>';
   }
 
-  units.forEach((unit) => {
+  groups.forEach((group) => {
     const groupEl = document.createElement('div');
     groupEl.className = 'personal-answers-group';
 
     const heading = document.createElement('div');
     heading.className = 'personal-answers-group-heading';
-    heading.textContent = unitLabelFor(unit);
+    heading.textContent = unitLabelFor(group.deckSlug, group.unit);
     groupEl.appendChild(heading);
 
-    const sortedAnswers = [...byUnit[unit]].sort((a, b) => new Date(b.submittedAt) - new Date(a.submittedAt));
+    const sortedAnswers = [...group.answers].sort((a, b) => new Date(b.submittedAt) - new Date(a.submittedAt));
     sortedAnswers.forEach((a) => {
       const div = document.createElement('div');
       div.className = 'notes-modal-note';
@@ -318,8 +338,8 @@ function tallyForResult(r) {
   return { correct, wrong: 0, blank: r.points - correct };
 }
 
-function unitBlankCount(unit) {
-  const results = topicModalStudent.topicActivityResults.filter((r) => r.unit === unit);
+function unitBlankCount(deckSlug, unit) {
+  const results = topicModalStudent.topicActivityResults.filter((r) => r.deckSlug === deckSlug && r.unit === unit);
   return results.reduce((sum, r) => sum + tallyForResult(r).blank, 0);
 }
 
@@ -329,21 +349,24 @@ function renderTopicModalList() {
   topicDetailModalTitle.textContent = `${topicModalStudent.displayName} — Konu Özetleri`;
   topicDetailModalList.innerHTML = '';
 
-  const sorted = [...topicModalStudent.topicProgressDetail].sort((a, b) => a.unit - b.unit);
+  const sorted = [...topicModalStudent.topicProgressDetail].sort((a, b) => {
+    const d = deckTitleFor(a.deckSlug).localeCompare(deckTitleFor(b.deckSlug));
+    return d !== 0 ? d : a.unit - b.unit;
+  });
   sorted.forEach((t) => {
     const pct = t.bestTotal > 0 ? Math.round((t.bestScore / t.bestTotal) * 100) : 0;
-    const blank = unitBlankCount(t.unit);
+    const blank = unitBlankCount(t.deckSlug, t.unit);
     const row = document.createElement('button');
     row.className = 'topic-modal-row';
     row.type = 'button';
     row.innerHTML = `
       <div class="topic-modal-row-main">
-        <div class="topic-modal-row-title">${unitLabelFor(t.unit)}</div>
+        <div class="topic-modal-row-title">${unitLabelFor(t.deckSlug, t.unit)}</div>
         <div class="topic-modal-row-sub">${t.bestScore} / ${t.bestTotal} doğru · %${pct}${blank > 0 ? ` · ${blank} boş` : ''} · ${t.attempts} deneme</div>
       </div>
       <span class="topic-modal-row-arrow">›</span>
     `;
-    row.addEventListener('click', () => renderTopicModalUnitDetail(t.unit));
+    row.addEventListener('click', () => renderTopicModalUnitDetail(t.deckSlug, t.unit));
     topicDetailModalList.appendChild(row);
   });
 
@@ -352,27 +375,27 @@ function renderTopicModalList() {
   }
 }
 
-// Belirli bir ünitede, belirli bir aktivite tipi için "ilk denemede doğru" yüzdesini hesaplar.
-function firstTryStatsFor(unit, type) {
-  const entries = (topicModalStudent.attemptDetail || []).filter((e) => e.unit === unit && e.type === type);
+// Belirli bir deste/ünitede, belirli bir aktivite tipi için "ilk denemede doğru" yüzdesini hesaplar.
+function firstTryStatsFor(deckSlug, unit, type) {
+  const entries = (topicModalStudent.attemptDetail || []).filter((e) => e.deckSlug === deckSlug && e.unit === unit && e.type === type);
   if (entries.length === 0) return null;
   const firstTry = entries.filter((e) => e.attempts === 1).length;
   return { count: entries.length, pct: Math.round((firstTry / entries.length) * 100) };
 }
 
-function renderTopicModalUnitDetail(unit) {
+function renderTopicModalUnitDetail(deckSlug, unit) {
   topicDetailBackBtn.style.display = '';
   topicDetailBackBtn.onclick = renderTopicModalList;
 
-  const t = topicModalStudent.topicProgressDetail.find((x) => x.unit === unit);
+  const t = topicModalStudent.topicProgressDetail.find((x) => x.deckSlug === deckSlug && x.unit === unit);
   const pct = t.bestTotal > 0 ? Math.round((t.bestScore / t.bestTotal) * 100) : 0;
-  const blank = unitBlankCount(unit);
-  topicDetailModalTitle.textContent = `${unitLabelFor(unit)} · ${t.bestScore}/${t.bestTotal} (%${pct})${blank > 0 ? ` · ${blank} boş` : ''}`;
+  const blank = unitBlankCount(deckSlug, unit);
+  topicDetailModalTitle.textContent = `${unitLabelFor(deckSlug, unit)} · ${t.bestScore}/${t.bestTotal} (%${pct})${blank > 0 ? ` · ${blank} boş` : ''}`;
   topicDetailModalList.innerHTML = '';
 
   // Boşluk doldurma / eşleştirme için "ilk denemede doğru %" özeti
-  const fillBlankStats = firstTryStatsFor(unit, 'fill_blank');
-  const matchingStats = firstTryStatsFor(unit, 'matching');
+  const fillBlankStats = firstTryStatsFor(deckSlug, unit, 'fill_blank');
+  const matchingStats = firstTryStatsFor(deckSlug, unit, 'matching');
   if (fillBlankStats || matchingStats) {
     const summaryEl = document.createElement('div');
     summaryEl.className = 'topic-attempt-summary';
@@ -388,7 +411,7 @@ function renderTopicModalUnitDetail(unit) {
   }
 
   const results = topicModalStudent.topicActivityResults
-    .filter((r) => r.unit === unit)
+    .filter((r) => r.deckSlug === deckSlug && r.unit === unit)
     .sort((a, b) => a.index - b.index);
 
   if (results.length === 0) {
@@ -411,7 +434,7 @@ function renderTopicModalUnitDetail(unit) {
 
     let attemptNote = '';
     if (r.type === 'fill_blank' || r.type === 'matching') {
-      const entry = (topicModalStudent.attemptDetail || []).find((e) => e.unit === unit && e.type === r.type && e.prompt === r.prompt);
+      const entry = (topicModalStudent.attemptDetail || []).find((e) => e.deckSlug === deckSlug && e.unit === unit && e.type === r.type && e.prompt === r.prompt);
       if (entry) attemptNote = ` · ${entry.attempts}. denemede`;
     }
     const pointsNote = r.points > 1 ? ` (${r.correctPoints}/${r.points})` : '';
