@@ -1,5 +1,6 @@
 const DECK_THEMES = {
   'yokdil':             { theme: 'purple', icon: '🏆', badge: 'Popüler' },
+  'yan-anlam':          { theme: 'pink',   icon: '🔄', badge: 'Yeni' },
   'benim-kelimelerim':  { theme: 'green',  icon: '⭐' },
   '5-sinif':            { theme: 'orange', icon: '📗' },
   '6-sinif':            { theme: 'blue',   icon: '📙' },

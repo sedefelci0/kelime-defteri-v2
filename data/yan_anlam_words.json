@@ -1,0 +1,1474 @@
+[
+  {
+    "unit": 1,
+    "english": "considerable",
+    "turkish_meaning": "dikkate değer, hatırı sayılır",
+    "example_sentence": "The study required a considerable amount of time and resources.",
+    "english_explanation": "significant, substantial, outstanding, essential, notable, vital, crucial",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "deniable",
+    "turkish_meaning": "inkâr edilebilir",
+    "example_sentence": "The claim is deniable given the lack of solid evidence.",
+    "english_explanation": "refutable, disputable, questionable",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "vulnerable",
+    "turkish_meaning": "savunmasız, kırılgan",
+    "example_sentence": "Coral reefs are extremely vulnerable to rising sea temperatures.",
+    "english_explanation": "susceptible, defenseless, delicate, fragile, sensitive",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "habitable",
+    "turkish_meaning": "yaşanabilir",
+    "example_sentence": "Scientists are searching for habitable planets beyond our solar system.",
+    "english_explanation": "livable, inhabitable",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "changeable",
+    "turkish_meaning": "değişken",
+    "example_sentence": "Weather in mountainous regions can be highly changeable.",
+    "english_explanation": "variable, mutable, unstable",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "respectable",
+    "turkish_meaning": "saygıdeğer",
+    "example_sentence": "She achieved a respectable score on the final exam.",
+    "english_explanation": "honorable",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "regular",
+    "turkish_meaning": "düzenli",
+    "example_sentence": "Regular exercise improves cardiovascular health.",
+    "english_explanation": "consistent, steady, routine",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "distinct",
+    "turkish_meaning": "farklı, kendine özgü",
+    "example_sentence": "The two species have distinct genetic characteristics.",
+    "english_explanation": "different, unique",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "virtual",
+    "turkish_meaning": "sanal",
+    "example_sentence": "Virtual reality is increasingly used in scientific training.",
+    "english_explanation": "simulated, computer-generated",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "consistent",
+    "turkish_meaning": "tutarlı",
+    "example_sentence": "The results were consistent across all experimental trials.",
+    "english_explanation": "steady, uniform, reliable",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "rare",
+    "turkish_meaning": "nadir",
+    "example_sentence": "This mineral is rare and found only in a few locations.",
+    "english_explanation": "uncommon, unusual, infrequent",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "sensitive",
+    "turkish_meaning": "hassas",
+    "example_sentence": "The instrument is sensitive enough to detect tiny vibrations.",
+    "english_explanation": "delicate, responsive, vulnerable",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "suspicious",
+    "turkish_meaning": "şüpheli",
+    "example_sentence": "Researchers were suspicious of the unusual data pattern.",
+    "english_explanation": "doubtful, wary, questionable, dubious",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "practical",
+    "turkish_meaning": "pratik",
+    "example_sentence": "They developed a practical solution to the energy problem.",
+    "english_explanation": "pragmatic, sensible, realistic",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "repetitive",
+    "turkish_meaning": "tekrarlayan",
+    "example_sentence": "The task involved repetitive measurements over several weeks.",
+    "english_explanation": "monotonous, recurring, frequent",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "threatening",
+    "turkish_meaning": "tehdit edici",
+    "example_sentence": "Climate change poses a threatening risk to coastal cities.",
+    "english_explanation": "menacing, intimidating, dangerous",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "deliberate",
+    "turkish_meaning": "kasıtlı",
+    "example_sentence": "The deliberate release of the chemical caused contamination.",
+    "english_explanation": "intentional, planned",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "bizarre",
+    "turkish_meaning": "tuhaf, garip",
+    "example_sentence": "The fossil showed a bizarre combination of features.",
+    "english_explanation": "strange, odd, weird",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "trivial",
+    "turkish_meaning": "önemsiz",
+    "example_sentence": "The difference between the two results was trivial.",
+    "english_explanation": "insignificant, minor, unimportant",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "challenging",
+    "turkish_meaning": "zorlu",
+    "example_sentence": "Mapping the ocean floor remains a challenging task.",
+    "english_explanation": "difficult, tough",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "efficient",
+    "turkish_meaning": "verimli",
+    "example_sentence": "Solar panels are becoming more efficient every year.",
+    "english_explanation": "effective, productive, competent",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "devastating",
+    "turkish_meaning": "yıkıcı",
+    "example_sentence": "The earthquake had a devastating effect on the region.",
+    "english_explanation": "destructive, catastrophic, ruinous",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "irregular",
+    "turkish_meaning": "düzensiz",
+    "example_sentence": "The patient's heartbeat showed an irregular rhythm.",
+    "english_explanation": "uneven, inconsistent, sporadic",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "irrelevant",
+    "turkish_meaning": "alakasız",
+    "example_sentence": "That data point is irrelevant to our hypothesis.",
+    "english_explanation": "unrelated, unconnected",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "inevitable",
+    "turkish_meaning": "kaçınılmaz",
+    "example_sentence": "Some side effects of the treatment are inevitable.",
+    "english_explanation": "unavoidable, certain, inescapable",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "undeniable",
+    "turkish_meaning": "inkâr edilemez",
+    "example_sentence": "The evidence for climate change is undeniable.",
+    "english_explanation": "indisputable, unquestionable, evident",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "irreversible",
+    "turkish_meaning": "geri döndürülemez",
+    "example_sentence": "Deforestation can cause irreversible damage to ecosystems.",
+    "english_explanation": "permanent, unchangeable, irreparable",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "unreliable",
+    "turkish_meaning": "güvenilmez",
+    "example_sentence": "The old equipment produced unreliable readings.",
+    "english_explanation": "undependable, uncertain, inconsistent",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "manageable",
+    "turkish_meaning": "yönetilebilir",
+    "example_sentence": "The disease is manageable with early diagnosis.",
+    "english_explanation": "controllable, feasible",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "various",
+    "turkish_meaning": "çeşitli",
+    "example_sentence": "Various factors influence the rate of a reaction.",
+    "english_explanation": "diverse, several, multiple",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "precious",
+    "turkish_meaning": "değerli",
+    "example_sentence": "Fresh water is a precious resource in dry regions.",
+    "english_explanation": "valuable, cherished, treasured",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "frequent",
+    "turkish_meaning": "sık",
+    "example_sentence": "Frequent testing helped researchers track the virus's spread.",
+    "english_explanation": "common, repeated, habitual",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "detectable",
+    "turkish_meaning": "tespit edilebilir",
+    "example_sentence": "The gas was detectable only in trace amounts.",
+    "english_explanation": "noticeable, observable, identifiable",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "deceptive",
+    "turkish_meaning": "aldatıcı",
+    "example_sentence": "The graph's scale made the trend appear deceptive.",
+    "english_explanation": "misleading, false, tricky",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "remarkable",
+    "turkish_meaning": "dikkat çekici, olağanüstü",
+    "example_sentence": "The telescope captured a remarkable image of the galaxy.",
+    "english_explanation": "extraordinary, notable, outstanding",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "cautionary",
+    "turkish_meaning": "uyarı niteliğinde",
+    "example_sentence": "The report serves as a cautionary tale about overfishing.",
+    "english_explanation": "warning, advisory, preventive",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "ambiguous",
+    "turkish_meaning": "belirsiz",
+    "example_sentence": "The instructions were ambiguous and confused the participants.",
+    "english_explanation": "unclear, vague, equivocal",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "reversible",
+    "turkish_meaning": "geri döndürülebilir",
+    "example_sentence": "The chemical reaction is reversible under normal conditions.",
+    "english_explanation": "changeable",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "invaluable",
+    "turkish_meaning": "paha biçilmez",
+    "example_sentence": "Fossil records are invaluable for understanding evolution.",
+    "english_explanation": "priceless, indispensable, precious, unprecedented",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "unstable",
+    "turkish_meaning": "kararsız",
+    "example_sentence": "The isotope is unstable and decays rapidly.",
+    "english_explanation": "unsteady",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "invisible",
+    "turkish_meaning": "görünmez",
+    "example_sentence": "Ultraviolet light is invisible to the human eye.",
+    "english_explanation": "unseen, hidden, concealed",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "uneven",
+    "turkish_meaning": "düzensiz, eşit olmayan",
+    "example_sentence": "The rock's surface was uneven and hard to measure.",
+    "english_explanation": "irregular, disparate",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "irresistible",
+    "turkish_meaning": "karşı konulmaz",
+    "example_sentence": "The urge to explore the cave proved irresistible.",
+    "english_explanation": "alluring, compelling, captivating",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "conflicting",
+    "turkish_meaning": "çelişkili",
+    "example_sentence": "The two studies produced conflicting results.",
+    "english_explanation": "contradictory, opposing, clashing",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "convertible",
+    "turkish_meaning": "dönüştürülebilir",
+    "example_sentence": "Kinetic energy is convertible into electrical energy.",
+    "english_explanation": "changeable, adaptable, transformable",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "appropriate",
+    "turkish_meaning": "uygun",
+    "example_sentence": "Choosing the appropriate method is crucial for accurate results.",
+    "english_explanation": "suitable, fitting, proper, convenient",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "abundant",
+    "turkish_meaning": "bol, bereketli",
+    "example_sentence": "Hydrogen is the most abundant element in the universe.",
+    "english_explanation": "plentiful, ample, copious",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 1,
+    "english": "corruptible",
+    "turkish_meaning": "bozulabilir, yozlaştırılabilir",
+    "example_sentence": "Without oversight, the system can become corruptible.",
+    "english_explanation": "vulnerable to corruption, dishonest",
+    "part_of_speech": "Sıfat"
+  },
+  {
+    "unit": 2,
+    "english": "sentence",
+    "turkish_meaning": "mahkûm etmek, hüküm giydirmek",
+    "example_sentence": "The court decided to sentence the offender to community service.",
+    "english_explanation": "condemn, judge, convict",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "designate",
+    "turkish_meaning": "atamak, belirlemek",
+    "example_sentence": "The area was designated as a protected nature reserve.",
+    "english_explanation": "appoint, assign, nominate",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "restrict",
+    "turkish_meaning": "kısıtlamak",
+    "example_sentence": "Regulations restrict the use of certain chemicals in food.",
+    "english_explanation": "limit, confine, constrict, constrain, restrain",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "transmit",
+    "turkish_meaning": "iletmek",
+    "example_sentence": "Mosquitoes can transmit several dangerous diseases.",
+    "english_explanation": "send, convey, pass on",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "adjust",
+    "turkish_meaning": "ayarlamak",
+    "example_sentence": "Organisms adjust their behavior in response to temperature changes.",
+    "english_explanation": "modify, adapt, alter",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "derive",
+    "turkish_meaning": "türetmek, kaynaklanmak",
+    "example_sentence": "The formula is derived from basic principles of physics.",
+    "english_explanation": "arise from, stem from, originate, result from, emerge from",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "prevent",
+    "turkish_meaning": "önlemek",
+    "example_sentence": "Vaccines help prevent the spread of infectious diseases.",
+    "english_explanation": "avert",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "extract",
+    "turkish_meaning": "çıkarmak",
+    "example_sentence": "Scientists extract DNA samples from ancient bones.",
+    "english_explanation": "remove, withdraw, pull out",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "distinguish",
+    "turkish_meaning": "ayırt etmek",
+    "example_sentence": "It can be difficult to distinguish between the two species.",
+    "english_explanation": "identify, recognize, differentiate",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "obtain",
+    "turkish_meaning": "elde etmek",
+    "example_sentence": "Researchers obtained new data using advanced sensors.",
+    "english_explanation": "attain, acquire, gain, get, secure",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "endure",
+    "turkish_meaning": "dayanmak, katlanmak",
+    "example_sentence": "Desert plants have evolved to endure extreme heat.",
+    "english_explanation": "tolerate, bear, withstand",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "regret",
+    "turkish_meaning": "pişman olmak",
+    "example_sentence": "He came to regret not backing up his research data.",
+    "english_explanation": "lament, feel sorry, repent",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "predict",
+    "turkish_meaning": "tahmin etmek",
+    "example_sentence": "Meteorologists use models to predict the weather.",
+    "english_explanation": "forecast, foresee, anticipate, estimate, envisage",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "differentiate",
+    "turkish_meaning": "ayırt etmek",
+    "example_sentence": "The test helps differentiate between benign and malignant cells.",
+    "english_explanation": "distinguish, discern, set apart",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "appreciate",
+    "turkish_meaning": "takdir etmek, değerini anlamak",
+    "example_sentence": "It's important to appreciate the complexity of ecosystems.",
+    "english_explanation": "value, recognize, acknowledge",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "distract",
+    "turkish_meaning": "dikkatini dağıtmak",
+    "example_sentence": "Loud noises can distract animals from finding food.",
+    "english_explanation": "divert, confuse",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "narrow",
+    "turkish_meaning": "daraltmak",
+    "example_sentence": "The team managed to narrow down the possible causes.",
+    "english_explanation": "tighten, reduce, contract",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "pollute",
+    "turkish_meaning": "kirletmek",
+    "example_sentence": "Industrial waste continues to pollute nearby rivers.",
+    "english_explanation": "contaminate, corrupt",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "destroy",
+    "turkish_meaning": "yok etmek",
+    "example_sentence": "The wildfire destroyed thousands of acres of forest.",
+    "english_explanation": "ruin, demolish, wreck",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "contain",
+    "turkish_meaning": "içermek",
+    "example_sentence": "The sample contains traces of a rare mineral.",
+    "english_explanation": "hold, include",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "resolve",
+    "turkish_meaning": "çözmek",
+    "example_sentence": "The dispute was eventually resolved through negotiation.",
+    "english_explanation": "settle, solve, work out",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "dissolve",
+    "turkish_meaning": "çözünmek, erimek",
+    "example_sentence": "Salt dissolves quickly in warm water.",
+    "english_explanation": "melt, disintegrate, break down",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "excavate",
+    "turkish_meaning": "kazı yapmak, kazmak",
+    "example_sentence": "Archaeologists excavated the site for several months.",
+    "english_explanation": "dig out, unearth, uncover",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "magnify",
+    "turkish_meaning": "büyütmek",
+    "example_sentence": "The microscope can magnify objects thousands of times.",
+    "english_explanation": "enlarge, amplify",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "reverse",
+    "turkish_meaning": "tersine çevirmek",
+    "example_sentence": "It may be possible to reverse some of the damage.",
+    "english_explanation": "undo, invert, overturn",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "overcome",
+    "turkish_meaning": "üstesinden gelmek",
+    "example_sentence": "The team worked hard to overcome the technical obstacles.",
+    "english_explanation": "conquer, defeat, tackle, handle, cope with, deal with, surmount",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "exclude",
+    "turkish_meaning": "hariç tutmak",
+    "example_sentence": "Researchers excluded incomplete data from the analysis.",
+    "english_explanation": "leave out, take out",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "ensure",
+    "turkish_meaning": "garanti etmek, sağlamak",
+    "example_sentence": "Strict protocols ensure the safety of the experiment.",
+    "english_explanation": "guarantee, secure, make certain",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "admit",
+    "turkish_meaning": "kabul etmek",
+    "example_sentence": "The scientist admitted that the theory needed revision.",
+    "english_explanation": "acknowledge, confess, accept",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "abuse",
+    "turkish_meaning": "kötüye kullanmak",
+    "example_sentence": "Overfishing is a clear abuse of marine resources.",
+    "english_explanation": "misuse, mistreat, exploit",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "conceal",
+    "turkish_meaning": "gizlemek",
+    "example_sentence": "The animal's coloring helps it conceal itself from predators.",
+    "english_explanation": "hide, cover, disguise",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "recognize",
+    "turkish_meaning": "tanımak, fark etmek",
+    "example_sentence": "The software can recognize patterns in large datasets.",
+    "english_explanation": "identify, acknowledge, realize",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "purchase",
+    "turkish_meaning": "satın almak",
+    "example_sentence": "The lab plans to purchase new equipment next year.",
+    "english_explanation": "buy",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "trigger",
+    "turkish_meaning": "tetiklemek",
+    "example_sentence": "A sudden change in temperature can trigger the reaction.",
+    "english_explanation": "cause, initiate, activate, set off, ignite, spark, stimulate, induce",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "suspend",
+    "turkish_meaning": "askıya almak",
+    "example_sentence": "The experiment was suspended due to safety concerns.",
+    "english_explanation": "put aside, put off, postpone, delay",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "relieve",
+    "turkish_meaning": "hafifletmek",
+    "example_sentence": "The medication helped relieve the patient's symptoms.",
+    "english_explanation": "ease, mitigate, alleviate",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "diminish",
+    "turkish_meaning": "azaltmak",
+    "example_sentence": "Pollution levels have diminished since the new regulations.",
+    "english_explanation": "reduce, decrease, lessen",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "imply",
+    "turkish_meaning": "ima etmek",
+    "example_sentence": "The data implies a strong correlation between the two factors.",
+    "english_explanation": "suggest, hint, indicate",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "determine",
+    "turkish_meaning": "belirlemek",
+    "example_sentence": "Tests were carried out to determine the exact cause.",
+    "english_explanation": "decide, establish, conclude, pinpoint, detect",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "regulate",
+    "turkish_meaning": "düzenlemek",
+    "example_sentence": "Hormones regulate many essential body functions.",
+    "english_explanation": "control, manage, oversee",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "resist",
+    "turkish_meaning": "direnmek",
+    "example_sentence": "Some bacteria have evolved to resist common antibiotics.",
+    "english_explanation": "oppose, withstand, defy",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "enhance",
+    "turkish_meaning": "geliştirmek, artırmak",
+    "example_sentence": "The new method significantly enhances measurement accuracy.",
+    "english_explanation": "improve, boost, augment",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "offer",
+    "turkish_meaning": "sunmak, önermek",
+    "example_sentence": "The researchers offered a new explanation for the phenomenon.",
+    "english_explanation": "present, propose",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "capture",
+    "turkish_meaning": "yakalamak",
+    "example_sentence": "The camera captured the moment of the eruption.",
+    "english_explanation": "seize, catch",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 2,
+    "english": "eradicate",
+    "turkish_meaning": "yok etmek, ortadan kaldırmak",
+    "example_sentence": "Efforts continue to eradicate the disease worldwide.",
+    "english_explanation": "eliminate, wipe out, exterminate, get rid of, abolish",
+    "part_of_speech": "Fiil"
+  },
+  {
+    "unit": 3,
+    "english": "openly",
+    "turkish_meaning": "açıkça",
+    "example_sentence": "Scientists should openly share their research data.",
+    "english_explanation": "publicly, obviously, clearly, evidently, overtly, frankly",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "firmly",
+    "turkish_meaning": "sıkıca, kesin bir şekilde",
+    "example_sentence": "The rock samples were firmly attached to the seabed.",
+    "english_explanation": "strongly, securely, solidly",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "initially",
+    "turkish_meaning": "başlangıçta",
+    "example_sentence": "The hypothesis was initially rejected by most researchers.",
+    "english_explanation": "at first, originally, at the beginning",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "mutually",
+    "turkish_meaning": "karşılıklı olarak",
+    "example_sentence": "The two species benefit mutually from this relationship.",
+    "english_explanation": "jointly, together",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "virtually",
+    "turkish_meaning": "neredeyse",
+    "example_sentence": "The two samples were virtually identical in composition.",
+    "english_explanation": "nearly, almost",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "immensely",
+    "turkish_meaning": "muazzam derecede",
+    "example_sentence": "The discovery immensely improved our understanding of the disease.",
+    "english_explanation": "enormously, tremendously, exceptionally, profoundly, incredibly",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "insufficiently",
+    "turkish_meaning": "yetersiz bir şekilde",
+    "example_sentence": "The data was insufficiently detailed to draw firm conclusions.",
+    "english_explanation": "inadequately, poorly, barely",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "adversely",
+    "turkish_meaning": "olumsuz bir şekilde",
+    "example_sentence": "Pollution adversely affects marine ecosystems.",
+    "english_explanation": "negatively, unfavorably, harmfully",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "inconveniently",
+    "turkish_meaning": "sıkıntı verici bir şekilde",
+    "example_sentence": "The equipment broke down inconveniently during the test.",
+    "english_explanation": "awkwardly, untimely, uncomfortably",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "elaborately",
+    "turkish_meaning": "ayrıntılı bir şekilde",
+    "example_sentence": "The mechanism was elaborately designed to reduce friction.",
+    "english_explanation": "intricately, thoroughly, carefully",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "temporarily",
+    "turkish_meaning": "geçici olarak",
+    "example_sentence": "The experiment was temporarily halted due to a power outage.",
+    "english_explanation": "briefly, momentarily, for a short time",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "simultaneously",
+    "turkish_meaning": "eş zamanlı olarak",
+    "example_sentence": "Both reactions occurred simultaneously in the chamber.",
+    "english_explanation": "concurrently, at the same time, together",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "privately",
+    "turkish_meaning": "özel olarak, gizlice",
+    "example_sentence": "The findings were privately shared with the research team first.",
+    "english_explanation": "secretly, personally, confidentially",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "entirely",
+    "turkish_meaning": "tamamen",
+    "example_sentence": "The theory was entirely based on new observational data.",
+    "english_explanation": "completely, totally, wholly",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "desperately",
+    "turkish_meaning": "çaresizce",
+    "example_sentence": "Researchers are desperately searching for a cure.",
+    "english_explanation": "urgently, hopelessly",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "incompetently",
+    "turkish_meaning": "yetersiz bir biçimde",
+    "example_sentence": "The survey was incompetently conducted and had to be repeated.",
+    "english_explanation": "poorly, inadequately, unskillfully",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "inaccurately",
+    "turkish_meaning": "yanlış, hatalı bir şekilde",
+    "example_sentence": "The instrument had been calibrated inaccurately.",
+    "english_explanation": "incorrectly, imprecisely, wrongly",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "unconsciously",
+    "turkish_meaning": "bilinçsizce, farkında olmadan",
+    "example_sentence": "Participants unconsciously altered their behavior during observation.",
+    "english_explanation": "unknowingly, involuntarily, automatically",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "inevitably",
+    "turkish_meaning": "kaçınılmaz olarak",
+    "example_sentence": "Rising temperatures will inevitably affect crop yields.",
+    "english_explanation": "unavoidably, necessarily, inescapably",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "irresponsibly",
+    "turkish_meaning": "sorumsuzca",
+    "example_sentence": "The factory irresponsibly dumped waste into the river.",
+    "english_explanation": "carelessly, recklessly, thoughtlessly",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "deliberately",
+    "turkish_meaning": "kasıtlı olarak",
+    "example_sentence": "The variable was deliberately excluded from the model.",
+    "english_explanation": "intentionally, purposely, knowingly",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "coherently",
+    "turkish_meaning": "tutarlı bir şekilde",
+    "example_sentence": "The theory explains the observations coherently.",
+    "english_explanation": "logically, clearly, consistently",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "urgently",
+    "turkish_meaning": "acilen",
+    "example_sentence": "The team urgently needs more funding for the project.",
+    "english_explanation": "immediately, quickly, critically",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "accurately",
+    "turkish_meaning": "doğru bir şekilde",
+    "example_sentence": "The device measures temperature accurately.",
+    "english_explanation": "precisely, exactly, correctly",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "slightly",
+    "turkish_meaning": "hafifçe",
+    "example_sentence": "The temperature rose only slightly during the experiment.",
+    "english_explanation": "somewhat, a little, mildly",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "equally",
+    "turkish_meaning": "eşit şekilde",
+    "example_sentence": "The sample was equally divided among the three groups.",
+    "english_explanation": "evenly, uniformly, fairly",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "instinctively",
+    "turkish_meaning": "içgüdüsel olarak",
+    "example_sentence": "Animals instinctively avoid areas with predators.",
+    "english_explanation": "naturally, automatically, intuitively, inherently",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "respectively",
+    "turkish_meaning": "sırasıyla",
+    "example_sentence": "The values increased to 10, 20, and 30, respectively.",
+    "english_explanation": "in order, correspondingly, sequentially",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "intensely",
+    "turkish_meaning": "yoğun bir şekilde",
+    "example_sentence": "The region was intensely affected by the drought.",
+    "english_explanation": "deeply, strongly, extremely",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "selfishly",
+    "turkish_meaning": "bencilce",
+    "example_sentence": "The species selfishly competes for limited resources.",
+    "english_explanation": "egotistically, self-centeredly, greedily",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "reluctantly",
+    "turkish_meaning": "isteksizce",
+    "example_sentence": "The committee reluctantly approved the new policy.",
+    "english_explanation": "unwillingly, hesitantly",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "efficiently",
+    "turkish_meaning": "verimli bir şekilde",
+    "example_sentence": "The new engine burns fuel more efficiently.",
+    "english_explanation": "effectively, productively, competently",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "forcefully",
+    "turkish_meaning": "güçlü bir şekilde",
+    "example_sentence": "The wind forcefully pushed against the structure.",
+    "english_explanation": "powerfully, strongly, assertively",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "loyally",
+    "turkish_meaning": "sadakatle",
+    "example_sentence": "The assistant loyally followed the same protocol for years.",
+    "english_explanation": "faithfully, devotedly, dependably",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "spontaneously",
+    "turkish_meaning": "kendiliğinden",
+    "example_sentence": "The reaction occurred spontaneously without any catalyst.",
+    "english_explanation": "impulsively, automatically, naturally",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "severely",
+    "turkish_meaning": "ciddi şekilde",
+    "example_sentence": "The coral reef was severely damaged by the storm.",
+    "english_explanation": "harshly, seriously, adversely",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "offensively",
+    "turkish_meaning": "saldırgan bir şekilde",
+    "example_sentence": "The comment was interpreted offensively by the audience.",
+    "english_explanation": "rudely, aggressively, disrespectfully",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "incidentally",
+    "turkish_meaning": "bu arada, tesadüfen",
+    "example_sentence": "Incidentally, the same gene was found in an unrelated species.",
+    "english_explanation": "by the way, casually, accidentally",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "amusingly",
+    "turkish_meaning": "eğlenceli bir biçimde",
+    "example_sentence": "The results were, amusingly, the opposite of the prediction.",
+    "english_explanation": "humorously, entertainingly, comically",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "fortunately",
+    "turkish_meaning": "neyse ki",
+    "example_sentence": "Fortunately, the backup data survived the system crash.",
+    "english_explanation": "luckily, happily, providentially",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "strongly",
+    "turkish_meaning": "güçlü bir şekilde",
+    "example_sentence": "The evidence strongly supports the new theory.",
+    "english_explanation": "firmly, powerfully, intensely",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "arbitrarily",
+    "turkish_meaning": "keyfi olarak",
+    "example_sentence": "The threshold was arbitrarily set at fifty percent.",
+    "english_explanation": "randomly, without reason, subjectively",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "comprehensively",
+    "turkish_meaning": "kapsamlı bir şekilde",
+    "example_sentence": "The report comprehensively covers all aspects of the study.",
+    "english_explanation": "thoroughly, completely, extensively",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "supposedly",
+    "turkish_meaning": "sözde, güya",
+    "example_sentence": "The compound was supposedly harmless in small doses.",
+    "english_explanation": "allegedly, reportedly, seemingly",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "instantly",
+    "turkish_meaning": "anında",
+    "example_sentence": "The reaction occurs almost instantly at room temperature.",
+    "english_explanation": "immediately, promptly, at once",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "consequently",
+    "turkish_meaning": "sonuç olarak",
+    "example_sentence": "The ice melted; consequently, sea levels rose.",
+    "english_explanation": "therefore, as a result, hence",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 3,
+    "english": "endlessly",
+    "turkish_meaning": "sonsuza dek",
+    "example_sentence": "The universe seems to expand almost endlessly.",
+    "english_explanation": "infinitely, continually, perpetually",
+    "part_of_speech": "Zarf"
+  },
+  {
+    "unit": 4,
+    "english": "bring about",
+    "turkish_meaning": "sebep olmak, yol açmak",
+    "example_sentence": "Human activity has brought about significant changes in climate.",
+    "english_explanation": "cause, lead to, result in",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "watch over",
+    "turkish_meaning": "gözetmek, korumak",
+    "example_sentence": "The mother bird watches over her chicks until they can fly.",
+    "english_explanation": "guard, supervise, look after",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "give up",
+    "turkish_meaning": "vazgeçmek",
+    "example_sentence": "Researchers refused to give up despite repeated failures.",
+    "english_explanation": "quit, abandon, surrender",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "keep off",
+    "turkish_meaning": "uzak durmak",
+    "example_sentence": "Warning signs tell visitors to keep off the fragile ecosystem.",
+    "english_explanation": "avoid, stay away from, refrain from",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "center on",
+    "turkish_meaning": "odaklanmak",
+    "example_sentence": "The study centers on the effects of pollution on marine life.",
+    "english_explanation": "focus on, concentrate on",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "fall behind",
+    "turkish_meaning": "geride kalmak",
+    "example_sentence": "The project began to fall behind schedule due to funding issues.",
+    "english_explanation": "not keep up",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "leave out",
+    "turkish_meaning": "hariç tutmak, dışarıda bırakmak",
+    "example_sentence": "Incomplete samples were left out of the final analysis.",
+    "english_explanation": "exclude",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "bring down",
+    "turkish_meaning": "düşürmek, azaltmak",
+    "example_sentence": "The new policy helped bring down carbon emissions.",
+    "english_explanation": "reduce, overthrow, wreck",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "put off",
+    "turkish_meaning": "ertelemek",
+    "example_sentence": "The launch was put off due to bad weather conditions.",
+    "english_explanation": "postpone, delay",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "fill out",
+    "turkish_meaning": "doldurmak",
+    "example_sentence": "Participants were asked to fill out a detailed questionnaire.",
+    "english_explanation": "complete, write in, enter",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "turn down",
+    "turkish_meaning": "reddetmek",
+    "example_sentence": "The committee turned down the proposal for further funding.",
+    "english_explanation": "reject, refuse, decline",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "carry out",
+    "turkish_meaning": "yürütmek, gerçekleştirmek",
+    "example_sentence": "The team carried out a series of controlled experiments.",
+    "english_explanation": "perform, conduct, execute, apply, implement, fulfill",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "depend on",
+    "turkish_meaning": "bağlı olmak, dayanmak",
+    "example_sentence": "The outcome depends on several environmental factors.",
+    "english_explanation": "rely on, count on, rest on, be based on",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "work out",
+    "turkish_meaning": "çözmek",
+    "example_sentence": "It took months to work out the cause of the malfunction.",
+    "english_explanation": "solve, figure out",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "throw away",
+    "turkish_meaning": "atmak, çöpe atmak",
+    "example_sentence": "Contaminated samples must be thrown away immediately.",
+    "english_explanation": "discard, dispose of, get rid of",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "figure out",
+    "turkish_meaning": "anlamak, çözmek",
+    "example_sentence": "Scientists are still trying to figure out how the virus spreads.",
+    "english_explanation": "understand, solve, comprehend, grasp, make out",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "come in",
+    "turkish_meaning": "girmek, gelmek",
+    "example_sentence": "New data began to come in from the remote sensors.",
+    "english_explanation": "enter, arrive, join",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "refer to",
+    "turkish_meaning": "atıfta bulunmak, işaret etmek",
+    "example_sentence": "The term 'greenhouse effect' refers to the warming of the atmosphere.",
+    "english_explanation": "mention, relate to, indicate",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "run into",
+    "turkish_meaning": "karşılaşmak, rastlamak",
+    "example_sentence": "The expedition ran into unexpected difficulties in the field.",
+    "english_explanation": "encounter, bump into, come across, face",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "split up",
+    "turkish_meaning": "ayrılmak, bölünmek",
+    "example_sentence": "The continent split up into several smaller landmasses.",
+    "english_explanation": "separate, break up, divide",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "get through",
+    "turkish_meaning": "atlatmak, üstesinden gelmek",
+    "example_sentence": "The colony managed to get through the harsh winter.",
+    "english_explanation": "overcome, survive, go through, pass through",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "break into",
+    "turkish_meaning": "zorla girmek",
+    "example_sentence": "Roots can break into pipes and cause structural damage.",
+    "english_explanation": "enter by force, intrude, burst in, rush into",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "account for",
+    "turkish_meaning": "açıklamak; oluşturmak",
+    "example_sentence": "These two gases account for most of the atmosphere's volume.",
+    "english_explanation": "explain; consist of, make up",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "set back",
+    "turkish_meaning": "geciktirmek, engellemek",
+    "example_sentence": "The equipment failure set the project back by several weeks.",
+    "english_explanation": "delay, hinder, hamper, hold up",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "take in",
+    "turkish_meaning": "emmek, özümsemek",
+    "example_sentence": "Plants take in carbon dioxide during photosynthesis.",
+    "english_explanation": "absorb, understand",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "rule out",
+    "turkish_meaning": "elemek, olasılık dışı bırakmak",
+    "example_sentence": "Doctors ruled out infection as the cause of the symptoms.",
+    "english_explanation": "eliminate, exclude, reject",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "switch on",
+    "turkish_meaning": "açmak, çalıştırmak",
+    "example_sentence": "The sensor switches on automatically when motion is detected.",
+    "english_explanation": "activate, turn on, start",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "give in",
+    "turkish_meaning": "teslim olmak, boyun eğmek",
+    "example_sentence": "The material eventually gives in under extreme pressure.",
+    "english_explanation": "surrender, submit",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "wear out",
+    "turkish_meaning": "yıpranmak, aşınmak",
+    "example_sentence": "Repeated use caused the equipment to wear out quickly.",
+    "english_explanation": "exhaust, fatigue, deteriorate",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "pass down",
+    "turkish_meaning": "aktarmak, sonraki nesle geçirmek",
+    "example_sentence": "Certain genetic traits are passed down from parent to offspring.",
+    "english_explanation": "transmit, hand down",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "find out",
+    "turkish_meaning": "öğrenmek, keşfetmek",
+    "example_sentence": "Researchers are working to find out why the population declined.",
+    "english_explanation": "discover, learn, detect",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "make up",
+    "turkish_meaning": "oluşturmak",
+    "example_sentence": "Oxygen and nitrogen make up most of Earth's atmosphere.",
+    "english_explanation": "constitute",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "turn out",
+    "turkish_meaning": "sonuçlanmak, ortaya çıkmak",
+    "example_sentence": "The compound turned out to be far more stable than expected.",
+    "english_explanation": "result, end up, happen",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "put forward",
+    "turkish_meaning": "öne sürmek, önermek",
+    "example_sentence": "The scientist put forward a new theory about the fossil's origin.",
+    "english_explanation": "propose, suggest, present",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "get into",
+    "turkish_meaning": "girmek, dahil olmak",
+    "example_sentence": "Microplastics can get into the food chain through small organisms.",
+    "english_explanation": "enter, join, become involved in",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "settle down",
+    "turkish_meaning": "yerleşmek; sakinleşmek",
+    "example_sentence": "The dust eventually settled down after the eruption.",
+    "english_explanation": "inhabit; calm down",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "give off",
+    "turkish_meaning": "yaymak, salmak",
+    "example_sentence": "Burning fuel gives off carbon dioxide and other gases.",
+    "english_explanation": "emit, release, radiate",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "carry on",
+    "turkish_meaning": "devam etmek",
+    "example_sentence": "Despite setbacks, the team carried on with the research.",
+    "english_explanation": "continue, proceed, persist",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "make out",
+    "turkish_meaning": "anlamak, ayırt etmek",
+    "example_sentence": "It was hard to make out the details in the blurry image.",
+    "english_explanation": "understand, discern, see clearly",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "aim at",
+    "turkish_meaning": "hedeflemek",
+    "example_sentence": "The new policy aims at reducing plastic waste.",
+    "english_explanation": "target, focus on",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "expose to",
+    "turkish_meaning": "maruz bırakmak",
+    "example_sentence": "The samples were exposed to high levels of radiation.",
+    "english_explanation": "subject to",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "divide by",
+    "turkish_meaning": "bölmek",
+    "example_sentence": "The total mass is divided by the volume to find density.",
+    "english_explanation": "separate, fall into, break down, split into",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "liken to",
+    "turkish_meaning": "benzetmek",
+    "example_sentence": "Scientists have likened the structure to a honeycomb pattern.",
+    "english_explanation": "compare to, equate with, associate with",
+    "part_of_speech": "Phrasal Verb"
+  },
+  {
+    "unit": 4,
+    "english": "relieve of",
+    "turkish_meaning": "kurtarmak, serbest bırakmak",
+    "example_sentence": "The new treatment relieves patients of chronic pain.",
+    "english_explanation": "free from, release from, unburden",
+    "part_of_speech": "Phrasal Verb"
+  }
+]

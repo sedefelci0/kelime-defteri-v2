@@ -18,12 +18,27 @@ module.exports = [
     },
   },
   {
+    slug: 'yan-anlam',
+    title: 'Yan Anlam',
+    description: 'YÖKDİL Fen paragraflarında sık çıkan kelimelerin eş anlamlıları (paraphrase)',
+    requiresOwner: false,
+    hasExplanation: true,
+    sortOrder: 1,
+    wordsFile: '../data/yan_anlam_words.json',
+    unitNames: {
+      1: 'Sıfatlar',
+      2: 'Fiiller',
+      3: 'Zarflar',
+      4: 'Öbek Fiiller (Phrasal Verbs)',
+    },
+  },
+  {
     slug: 'benim-kelimelerim',
     title: 'Benim Kelimelerim',
     description: '617 kelime',
     requiresOwner: true,
     hasExplanation: true,
-    sortOrder: 1,
+    sortOrder: 2,
     wordsFile: '../data/words.json',
   },
   {
@@ -32,7 +47,7 @@ module.exports = [
     description: 'Üniteler halinde kelimeler',
     requiresOwner: false,
     hasExplanation: false,
-    sortOrder: 2,
+    sortOrder: 3,
     wordsFile: '../data/grade5_words.json',
     unitNames: {
       1: 'Okul Hayatı',
@@ -51,7 +66,7 @@ module.exports = [
     description: 'Üniteler halinde kelimeler',
     requiresOwner: false,
     hasExplanation: false,
-    sortOrder: 3,
+    sortOrder: 4,
     wordsFile: '../data/grade6_words.json',
     unitNames: {
       1: 'Zaman ve Rutinler',
@@ -72,7 +87,7 @@ module.exports = [
     description: 'Üniteler halinde kelimeler',
     requiresOwner: false,
     hasExplanation: false,
-    sortOrder: 4,
+    sortOrder: 5,
     wordsFile: '../data/grade8_words.json',
     unitNames: {
       1: 'Arkadaşlık',
