@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kelime Defteri — Yarışma Testi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/challenge.css" />
+<link rel="stylesheet" href="/css/quiz.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a href="/decks.html" class="navbar-home-link">
+      <span class="navbar-icon">📚</span>
+      <span class="navbar-title">Kelime Defteri</span>
+    </a>
+  </div>
+  <div class="navbar-actions">
+    <a class="navbar-link navbar-home" href="/decks.html">Anasayfa</a>
+    <button class="navbar-link navbar-logout" id="logout-btn" type="button">Çıkış yap</button>
+  </div>
+</nav>
+
+<main class="challenge-page">
+  <div id="loading-panel" class="ch-panel">
+    <div class="loading-state">Yükleniyor…</div>
+  </div>
+
+  <!-- Hata / erişim yok -->
+  <div id="error-panel" class="ch-panel" style="display:none;">
+    <div class="ch-card ch-card--center">
+      <div class="ch-result-icon">😕</div>
+      <h1>Bu yarışma testine şu an giremiyorsun</h1>
+      <p class="ch-sub" id="error-text"></p>
+      <a class="ch-back-link" href="/decks.html">← Anasayfa</a>
+    </div>
+  </div>
+
+  <!-- Giriş ekranı -->
+  <div id="entry-panel" class="ch-panel" style="display:none;">
+    <div class="ch-card ch-card--center">
+      <div class="ch-result-icon">🏆</div>
+      <h1>Yarışma Testi</h1>
+      <p class="ch-sub" id="entry-info"></p>
+      <div class="qz-entry-actions">
+        <button class="btn btn-primary" id="start-btn" type="button">Teste Gir (Otomatik Eşleştir)</button>
+        <button class="btn btn-secondary" id="open-room-btn" type="button">Oda Aç (Arkadaşımla)</button>
+      </div>
+      <div class="qz-room-join">
+        <input type="text" id="room-code-input" class="q-text-input" placeholder="Oda kodu gir" maxlength="6" />
+        <button class="btn btn-secondary" id="join-room-btn" type="button">Katıl</button>
+      </div>
+      <p id="entry-error" class="q-form-error" style="display:none;"></p>
+      <a class="ch-back-link" href="/decks.html">← Anasayfa</a>
+    </div>
+  </div>
+
+  <!-- Soru ekranı -->
+  <div id="question-panel" class="ch-panel" style="display:none;">
+    <div class="ch-header">
+      <div>
+        <h1 class="ch-title">Yarışma Testi</h1>
+        <p class="ch-sub" id="qz-info"></p>
+        <p class="ch-sub" id="qz-room-code-line" style="display:none;"></p>
+      </div>
+      <div class="ch-timer-wrap">
+        <div class="ch-timer" id="qz-timer">5:00</div>
+        <div class="ch-timer-label">kalan süre</div>
+      </div>
+    </div>
+
+    <div class="ch-progress-bar">
+      <div class="ch-progress-fill" id="qz-progress-fill" style="width:0%"></div>
+    </div>
+    <div class="ch-progress-text" id="qz-progress-text">Soru 1 / 4</div>
+
+    <div class="ch-question-area">
+      <div class="ch-question-text" id="qz-question-text"></div>
+      <div class="ch-options" id="qz-options"></div>
+    </div>
+  </div>
+
+  <!-- Rakip bekleniyor -->
+  <div id="waiting-panel" class="ch-panel" style="display:none;">
+    <div class="ch-card ch-card--center">
+      <div class="qz-spinner"></div>
+      <h1>Testi bitirdin!</h1>
+      <p class="ch-sub" id="waiting-score-text"></p>
+      <p class="ch-sub">Rakibinin sonucu bekleniyor…</p>
+    </div>
+  </div>
+
+  <!-- Sonuç -->
+  <div id="result-panel" class="ch-panel" style="display:none;">
+    <div class="ch-card ch-card--center">
+      <div class="ch-result-icon" id="result-icon">🎉</div>
+      <h1 id="result-title">Sonuç</h1>
+      <div class="qz-vs-card" id="qz-vs-card"></div>
+      <a class="ch-back-link" href="/decks.html">← Anasayfa</a>
+    </div>
+  </div>
+</main>
+
+<script src="/js/quiz.js"></script>
+</body>
+</html>

@@ -251,6 +251,28 @@
   font-family: var(--font-mono);
 }
 
+.unit-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.unit-cell .unit-btn { flex: 1; }
+
+.unit-quiz-link {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: var(--deck-orange, #FAECE7);
+  color: var(--clay, #D96B38);
+  border: 1px solid var(--clay, #D96B38);
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.unit-quiz-link:hover { opacity: 0.85; }
+
 /* ===== Kelimeler / Konu Özetleri sekmesi ===== */
 .unit-mode-tabs {
   display: flex;

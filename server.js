@@ -18,6 +18,7 @@ const topicsRoutes = require('./routes/topics');
 const wheelRoutes = require('./routes/wheel');
 const adminRoutes = require('./routes/admin');
 const { router: challengeRoutes, awardDailyMedals } = require('./routes/challenge');
+const { router: quizRoutes, adminRouter: quizAdminRoutes } = require('./routes/quiz');
 
 const app = express();
 app.set('trust proxy', 1);
@@ -52,6 +53,8 @@ app.use('/api/topics', topicsRoutes);
 app.use('/api/wheel', wheelRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/challenge', challengeRoutes);
+app.use('/api/quiz', quizRoutes);
+app.use('/api/admin/quiz', quizAdminRoutes);
 
 // Statik dosyalar (HTML/CSS/JS)
 app.use(express.static(path.join(__dirname, 'public')));

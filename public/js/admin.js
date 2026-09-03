@@ -462,6 +462,10 @@ document.getElementById('topic-detail-modal-close').addEventListener('click', ()
 });
 
 // Ödül Çarkı detay modalı (son 7 gün + verildi işaretleme + çarkı şimdi aç)
+const qzDetailModal = document.getElementById('qz-detail-modal');
+const qzDetailTitle = document.getElementById('qz-detail-title');
+const qzDetailBody = document.getElementById('qz-detail-body');
+
 const wheelModal = document.getElementById('wheel-modal');
 const wheelModalTitle = document.getElementById('wheel-modal-title');
 const wheelModalList = document.getElementById('wheel-modal-list');
@@ -570,22 +574,26 @@ const tabBtnStudents  = document.getElementById('tab-btn-students');
 const tabBtnQuestions = document.getElementById('tab-btn-questions');
 const tabBtnRequests  = document.getElementById('tab-btn-requests');
 const tabBtnAnalytics = document.getElementById('tab-btn-analytics');
+const tabBtnQuiz      = document.getElementById('tab-btn-quiz');
 const tabStudents     = document.getElementById('tab-students');
 const tabQuestions    = document.getElementById('tab-questions');
 const tabRequests     = document.getElementById('tab-requests');
 const tabAnalytics    = document.getElementById('tab-analytics');
+const tabQuiz         = document.getElementById('tab-quiz');
 
 let analyticsLoaded = false;
+let quizTabLoaded = false;
 
 function activateTab(name) {
-  [tabBtnStudents, tabBtnQuestions, tabBtnRequests, tabBtnAnalytics].forEach((b, i) => {
-    const names = ['students', 'questions', 'requests', 'analytics'];
+  [tabBtnStudents, tabBtnQuestions, tabBtnRequests, tabBtnAnalytics, tabBtnQuiz].forEach((b, i) => {
+    const names = ['students', 'questions', 'requests', 'analytics', 'quiz'];
     b.classList.toggle('is-active', names[i] === name);
   });
   tabStudents.style.display   = name === 'students'  ? '' : 'none';
   tabQuestions.style.display  = name === 'questions' ? '' : 'none';
   tabRequests.style.display   = name === 'requests'  ? '' : 'none';
   tabAnalytics.style.display  = name === 'analytics' ? '' : 'none';
+  tabQuiz.style.display       = name === 'quiz'      ? '' : 'none';
 
   if (name === 'questions' && !questionsLoaded) {
     loadDecksForRestrictOptions();
@@ -593,12 +601,14 @@ function activateTab(name) {
   }
   if (name === 'requests') loadWordRequests();
   if (name === 'analytics' && !analyticsLoaded) loadAnalytics();
+  if (name === 'quiz' && !quizTabLoaded) initQuizTab();
 }
 
 tabBtnStudents.addEventListener('click',  () => activateTab('students'));
 tabBtnQuestions.addEventListener('click', () => activateTab('questions'));
 tabBtnRequests.addEventListener('click',  () => activateTab('requests'));
 tabBtnAnalytics.addEventListener('click', () => activateTab('analytics'));
+tabBtnQuiz.addEventListener('click',      () => activateTab('quiz'));
 
 // --- Analitik sekmesi ---
 async function loadAnalytics() {
@@ -937,8 +947,214 @@ async function deleteQuestion(q) {
   }
 }
 
+// --- Yarışma Testleri sekmesi ---
+const qzClassEl = document.getElementById('qz-class');
+const qzDeckEl = document.getElementById('qz-deck');
+const qzUnitEl = document.getElementById('qz-unit');
+const qzStartsEl = document.getElementById('qz-starts');
+const qzEndsEl = document.getElementById('qz-ends');
+const qzDurationEl = document.getElementById('qz-duration');
+const qzQuestionCountEl = document.getElementById('qz-question-count');
+const qzFormErrorEl = document.getElementById('qz-form-error');
+const qzCreateBtn = document.getElementById('qz-create-btn');
+const qzWindowsListEl = document.getElementById('qz-windows-list');
+const qzWindowsEmptyHintEl = document.getElementById('qz-windows-empty-hint');
+
+function qzFormatDuration(secs) {
+  if (secs === null || secs === undefined) return '—';
+  if (secs < 60) return `${secs}s`;
+  return `${Math.floor(secs / 60)}d ${secs % 60}s`;
+}
+
+function qzFormatDateTime(iso) {
+  return new Date(iso).toLocaleString('tr-TR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+}
+
+async function initQuizTab() {
+  quizTabLoaded = true;
+  try {
+    const classes = await getJSON('/api/admin/classes');
+    classes.forEach((c) => {
+      const opt = document.createElement('option');
+      opt.value = c; opt.textContent = c;
+      qzClassEl.appendChild(opt);
+    });
+    const decks = await getJSON('/api/decks');
+    decks.forEach((d) => {
+      const opt = document.createElement('option');
+      opt.value = d.slug; opt.textContent = d.title;
+      qzDeckEl.appendChild(opt);
+    });
+  } catch (err) {
+    // getJSON zaten yönlendirdi/no-access gösterdi
+  }
+  await loadQuizWindows();
+}
+
+qzDeckEl.addEventListener('change', async () => {
+  qzUnitEl.innerHTML = '';
+  if (!qzDeckEl.value) {
+    qzUnitEl.disabled = true;
+    qzUnitEl.appendChild(new Option('Önce deste seç', ''));
+    return;
+  }
+  try {
+    const units = await getJSON(`/api/decks/${qzDeckEl.value}/units`);
+    qzUnitEl.disabled = false;
+    units.forEach((u) => {
+      const label = `Ünite ${u.unit}${u.name ? ' — ' + u.name : ''} (${u.wordCount} kelime)`;
+      const opt = new Option(label, u.unit);
+      if (u.wordCount < 4) opt.disabled = true;
+      qzUnitEl.appendChild(opt);
+    });
+  } catch (err) {
+    alert(err.message || 'Üniteler yüklenemedi.');
+  }
+});
+
+qzCreateBtn.addEventListener('click', async () => {
+  qzFormErrorEl.style.display = 'none';
+  const className = qzClassEl.value;
+  const deckSlug = qzDeckEl.value;
+  const unit = Number(qzUnitEl.value);
+  const startsAt = qzStartsEl.value;
+  const endsAt = qzEndsEl.value;
+  const durationSeconds = Number(qzDurationEl.value) || 300;
+  const questionCount = Number(qzQuestionCountEl.value) || 4;
+
+  if (!className || !deckSlug || !Number.isInteger(unit) || !startsAt || !endsAt) {
+    qzFormErrorEl.textContent = 'Sınıf, deste, ünite, başlangıç ve bitiş zamanı zorunlu.';
+    qzFormErrorEl.style.display = '';
+    return;
+  }
+
+  try {
+    await sendJSON('/api/admin/quiz/windows', 'POST', {
+      className, deckSlug, unit,
+      startsAt: new Date(startsAt).toISOString(),
+      endsAt: new Date(endsAt).toISOString(),
+      durationSeconds, questionCount,
+    });
+    qzStartsEl.value = '';
+    qzEndsEl.value = '';
+    await loadQuizWindows();
+  } catch (err) {
+    qzFormErrorEl.textContent = err.message || 'Pencere oluşturulamadı.';
+    qzFormErrorEl.style.display = '';
+  }
+});
+
+function qzWindowStatus(w) {
+  const now = new Date();
+  if (now < new Date(w.starts_at)) return { key: 'upcoming', label: 'Yaklaşan' };
+  if (now > new Date(w.ends_at)) return { key: 'ended', label: 'Bitti' };
+  return { key: 'active', label: 'Aktif' };
+}
+
+async function loadQuizWindows() {
+  try {
+    const windows = await getJSON('/api/admin/quiz/windows');
+    qzWindowsEmptyHintEl.style.display = windows.length ? 'none' : '';
+    if (!windows.length) { qzWindowsListEl.innerHTML = ''; return; }
+
+    qzWindowsListEl.innerHTML = `
+      <table class="qz-windows-table">
+        <thead>
+          <tr><th>Sınıf</th><th>Deste / Ünite</th><th>Başlangıç</th><th>Bitiş</th><th>Katılım</th><th>Durum</th></tr>
+        </thead>
+        <tbody>
+          ${windows.map((w) => {
+            const status = qzWindowStatus(w);
+            return `
+              <tr class="qz-row--clickable" data-window-id="${w.id}">
+                <td>${w.class_name}</td>
+                <td>${deckTitleFor(w.deck_slug)} · Ünite ${w.unit}</td>
+                <td>${qzFormatDateTime(w.starts_at)}</td>
+                <td>${qzFormatDateTime(w.ends_at)}</td>
+                <td>${w.finished_count}/${w.attempt_count}</td>
+                <td><span class="qz-status-pill qz-status-pill--${status.key}">${status.label}</span></td>
+              </tr>`;
+          }).join('')}
+        </tbody>
+      </table>`;
+
+    qzWindowsListEl.querySelectorAll('tr[data-window-id]').forEach((row) => {
+      row.addEventListener('click', () => openQuizDetail(Number(row.dataset.windowId)));
+    });
+  } catch (err) {
+    // getJSON zaten yönlendirdi/no-access gösterdi
+  }
+}
+
+async function openQuizDetail(windowId) {
+  try {
+    const data = await getJSON(`/api/admin/quiz/windows/${windowId}`);
+    qzDetailTitle.textContent = `${deckTitleFor(data.window.deck_slug)} · Ünite ${data.window.unit} · ${data.window.class_name}`;
+
+    const unmatched = data.attempts.filter((a) => a.status !== 'in_progress' && !a.matchId);
+
+    const attemptsRows = data.attempts.map((a) => `
+      <tr>
+        <td>${a.displayName}</td>
+        <td>${a.status === 'in_progress' ? 'Devam ediyor' : a.status === 'expired' ? 'Süre doldu' : 'Bitti'}</td>
+        <td>${a.correctCount === null || a.correctCount === undefined ? '—' : a.correctCount}</td>
+        <td>${qzFormatDuration(a.durationSeconds)}</td>
+        <td>${a.matchId ? 'Eşleşti' : '—'}</td>
+      </tr>`).join('');
+
+    const matchesRows = data.matches.map((m) => {
+      const resultText = m.isTie ? 'Berabere'
+        : m.winnerAttemptId === m.attempt1.id ? `${m.attempt1.displayName} kazandı`
+        : m.attempt2 && m.winnerAttemptId === m.attempt2.id ? `${m.attempt2.displayName} kazandı`
+        : 'Bekleniyor';
+      return `<div class="qz-match-row"><span>${m.attempt1.displayName} vs ${m.attempt2 ? m.attempt2.displayName : '(bekleniyor)'} <em>(${m.method})</em></span><strong>${resultText}</strong></div>`;
+    }).join('') || '<p class="q-empty-hint">Henüz eşleşme yok.</p>';
+
+    const manualMatchHtml = unmatched.length >= 2 ? `
+      <div class="qz-match-select">
+        <select id="qz-manual-a">${unmatched.map((a) => `<option value="${a.id}">${a.displayName}</option>`).join('')}</select>
+        <span>vs</span>
+        <select id="qz-manual-b">${unmatched.map((a) => `<option value="${a.id}">${a.displayName}</option>`).join('')}</select>
+        <button class="btn btn-secondary" id="qz-manual-match-btn" type="button">Eşleştir</button>
+      </div>` : '';
+
+    qzDetailBody.innerHTML = `
+      <h4 class="analytics-heading">Denemeler</h4>
+      <table class="qz-windows-table">
+        <thead><tr><th>Öğrenci</th><th>Durum</th><th>Doğru</th><th>Süre</th><th>Eşleşme</th></tr></thead>
+        <tbody>${attemptsRows || '<tr><td colspan="5">Henüz katılım yok.</td></tr>'}</tbody>
+      </table>
+      <h4 class="analytics-heading">Eşleşmeler</h4>
+      ${matchesRows}
+      ${manualMatchHtml ? `<h4 class="analytics-heading">Manuel Eşleştir</h4>${manualMatchHtml}` : ''}
+    `;
+
+    const manualBtn = document.getElementById('qz-manual-match-btn');
+    if (manualBtn) {
+      manualBtn.addEventListener('click', async () => {
+        const a = Number(document.getElementById('qz-manual-a').value);
+        const b = Number(document.getElementById('qz-manual-b').value);
+        if (a === b) { alert('Aynı öğrenciyi iki kez seçemezsin.'); return; }
+        try {
+          await sendJSON(`/api/admin/quiz/windows/${windowId}/match`, 'POST', { attempt1Id: a, attempt2Id: b });
+          await openQuizDetail(windowId);
+          await loadQuizWindows();
+        } catch (err) {
+          alert(err.message || 'Eşleştirme yapılamadı.');
+        }
+      });
+    }
+
+    qzDetailModal.style.display = '';
+  } catch (err) {
+    alert(err.message || 'Detay yüklenemedi.');
+  }
+}
+
+document.getElementById('qz-detail-close').addEventListener('click', () => { qzDetailModal.style.display = 'none'; });
+
 // --- Tüm popup'lar için: ESC ile kapatma + arka plana tıklayınca kapatma ---
-const ALL_MODALS = [notesModal, personalAnswersModal, topicDetailModal, wheelModal];
+const ALL_MODALS = [notesModal, personalAnswersModal, topicDetailModal, wheelModal, qzDetailModal];
 
 document.addEventListener('keydown', (e) => {
   if (e.key !== 'Escape') return;

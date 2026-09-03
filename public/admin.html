@@ -37,6 +37,7 @@
       <button class="admin-tab-btn" id="tab-btn-questions" type="button">Soru Ekle</button>
       <button class="admin-tab-btn" id="tab-btn-requests" type="button">Kelime Talepleri <span class="tab-badge" id="requests-badge" style="display:none;"></span></button>
       <button class="admin-tab-btn" id="tab-btn-analytics" type="button">Analitik</button>
+      <button class="admin-tab-btn" id="tab-btn-quiz" type="button">Yarışma Testleri</button>
     </div>
 
     <!-- Öğrenciler sekmesi -->
@@ -183,6 +184,59 @@
         <div id="questions-list" class="questions-list"></div>
         <p id="questions-empty-hint" class="q-empty-hint" style="display:none;">Henüz soru eklenmemiş.</p>
       </div>
+    </div>
+
+    <!-- Yarışma Testleri sekmesi -->
+    <div id="tab-quiz" style="display:none;">
+      <p class="q-form-hint">
+        Bir sınıf + deste + ünite için bir zaman penceresi aç. O aralıkta giren
+        öğrenciler o ünitenin kelimelerinden rastgele üretilen 4 soruluk bir
+        yarışma testi çözer, ikişerli otomatik eşleştirilip sonuçları karşılaştırılır.
+      </p>
+      <div class="question-form-card">
+        <h3>Yeni Test Penceresi</h3>
+        <div class="q-form-grid">
+          <select id="qz-class"><option value="">Sınıf seç</option></select>
+          <select id="qz-deck"><option value="">Deste seç</option></select>
+          <select id="qz-unit" disabled><option value="">Önce deste seç</option></select>
+        </div>
+        <div class="q-form-grid">
+          <label class="qz-inline-label">Başlangıç
+            <input type="datetime-local" id="qz-starts" class="q-text-input" />
+          </label>
+          <label class="qz-inline-label">Bitiş
+            <input type="datetime-local" id="qz-ends" class="q-text-input" />
+          </label>
+        </div>
+        <div class="q-form-grid">
+          <label class="qz-inline-label">Süre (saniye)
+            <input type="number" id="qz-duration" class="q-text-input" value="300" min="30" />
+          </label>
+          <label class="qz-inline-label">Soru sayısı
+            <input type="number" id="qz-question-count" class="q-text-input" value="4" min="2" />
+          </label>
+        </div>
+        <p id="qz-form-error" class="q-form-error" style="display:none;"></p>
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="qz-create-btn" type="button">Pencere Oluştur</button>
+        </div>
+      </div>
+
+      <div class="questions-list-card">
+        <h3>Test Pencereleri</h3>
+        <div id="qz-windows-list" class="table-wrap"></div>
+        <p id="qz-windows-empty-hint" class="q-empty-hint" style="display:none;">Henüz test penceresi oluşturulmadı.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="qz-detail-modal" style="display:none;">
+  <div class="modal-card notes-modal-card">
+    <h3 id="qz-detail-title">Test Penceresi Detayı</h3>
+    <div id="qz-detail-body" class="notes-modal-list"></div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" id="qz-detail-close" type="button">Kapat</button>
     </div>
   </div>
 </div>

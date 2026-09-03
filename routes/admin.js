@@ -204,6 +204,7 @@ async function resetStudentsData(client, userIds) {
   await client.query('DELETE FROM daily_champions WHERE user_id = ANY($1)', [userIds]).catch(() => {});
   await client.query('DELETE FROM wheel_spins WHERE user_id = ANY($1)', [userIds]).catch(() => {});
   await client.query('UPDATE users SET wheel_next_spin_at = NULL WHERE id = ANY($1)', [userIds]).catch(() => {});
+  await client.query('DELETE FROM quiz_attempts WHERE user_id = ANY($1)', [userIds]).catch(() => {});
 }
 
 router.post('/students/:id/reset', requireAuth, requireOwner, async (req, res) => {

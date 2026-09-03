@@ -832,10 +832,31 @@
   margin-top: 2px;
 }
 
+/* ── Yarışma Testleri sekmesi ────────────────────────────── */
+#tab-quiz .q-form-grid { grid-template-columns: 1fr 1fr 1fr; }
+.qz-inline-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--muted, #6b6b80);
+}
+.qz-windows-table { width: 100%; border-collapse: collapse; }
+.qz-windows-table th, .qz-windows-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #EDEAF6; font-size: 13px; }
+.qz-windows-table tr.qz-row--clickable { cursor: pointer; }
+.qz-windows-table tr.qz-row--clickable:hover { background: #FAF9FD; }
+.qz-status-pill { padding: 2px 8px; border-radius: 99px; font-size: 11px; font-weight: 600; }
+.qz-status-pill--active { background: #E1F5EE; color: #2D9B6F; }
+.qz-status-pill--upcoming { background: #FEF3DC; color: #C99010; }
+.qz-status-pill--ended { background: #EEEDF2; color: #6b6b80; }
+.qz-match-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 0; border-bottom: 1px solid #EDEAF6; font-size: 13px; }
+.qz-match-select { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; }
+
 /* ── Responsive ───────────────────────────────────────── */
 @media (max-width: 700px) {
   .summary-cards { grid-template-columns: 1fr; }
   .students-table th, .students-table td { padding: 10px 12px; }
   .q-form-grid, .q-options-grid { grid-template-columns: 1fr; }
+  #tab-quiz .q-form-grid { grid-template-columns: 1fr; }
   .student-email { display: none; }
 }

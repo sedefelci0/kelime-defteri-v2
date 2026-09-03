@@ -44,18 +44,39 @@ function goToTopics(deckSlug, unit) {
   window.location.href = `/topics.html?${new URLSearchParams({ deck: deckSlug, unit }).toString()}`;
 }
 
+function goToQuiz(deckSlug, unit) {
+  window.location.href = `/quiz.html?${new URLSearchParams({ deck: deckSlug, unit }).toString()}`;
+}
+
 let currentDeck = null;
 let currentUnits = [];
 let currentMode = 'words';
 let topicsProgress = {};
+let quizActiveByUnit = {};
 
 const unitModeTabsEl = document.getElementById('unit-mode-tabs');
 const tabWordsEl = document.getElementById('tab-words');
 const tabTopicsEl = document.getElementById('tab-topics');
 
+// Her ünite için, öğrencinin kendi sınıfına açık aktif bir yarışma testi
+// penceresi olup olmadığını sorar. Herhangi bir sınıf/ünite/deste için
+// çalışır — deste bazlı bir whitelist gerekmez (bkz. GET /api/quiz/active).
+async function loadQuizActiveState(deckSlug, units) {
+  quizActiveByUnit = {};
+  await Promise.all(units.map(async (u) => {
+    try {
+      const info = await getJSON(`/api/quiz/active?deckSlug=${encodeURIComponent(deckSlug)}&unit=${encodeURIComponent(u.unit)}`);
+      if (info.active) quizActiveByUnit[u.unit] = info;
+    } catch (_) { /* sessiz geç */ }
+  }));
+}
+
 function renderUnitButtons() {
   unitButtonsEl.innerHTML = '';
   currentUnits.forEach((u) => {
+    const cell = document.createElement('div');
+    cell.className = 'unit-cell';
+
     const btn = document.createElement('button');
     btn.className = 'unit-btn';
     const label = u.name || `Ünite ${u.unit}`;
@@ -67,7 +88,19 @@ function renderUnitButtons() {
       btn.textContent = label;
       btn.addEventListener('click', () => goToStudy(currentDeck.slug, u.unit));
     }
-    unitButtonsEl.appendChild(btn);
+    cell.appendChild(btn);
+
+    const quizInfo = quizActiveByUnit[u.unit];
+    if (quizInfo) {
+      const quizLink = document.createElement('button');
+      quizLink.type = 'button';
+      quizLink.className = 'unit-quiz-link';
+      quizLink.textContent = quizInfo.alreadyAttempted ? '🏆 Sonucunu gör' : '🏆 Yarışma Testi';
+      quizLink.addEventListener('click', (e) => { e.stopPropagation(); goToQuiz(currentDeck.slug, u.unit); });
+      cell.appendChild(quizLink);
+    }
+
+    unitButtonsEl.appendChild(cell);
   });
 }
 
@@ -106,6 +139,7 @@ async function openDeck(deck) {
       unitModeTabsEl.style.display = 'none';
     }
 
+    await loadQuizActiveState(deck.slug, currentUnits);
     renderUnitButtons();
     showView('units');
   } else {
