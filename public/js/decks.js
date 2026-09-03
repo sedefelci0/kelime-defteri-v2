@@ -1,12 +1,17 @@
 const DECK_THEMES = {
-  'yokdil':             { theme: 'purple', icon: '🏆', badge: 'Popüler' },
-  'yan-anlam':          { theme: 'pink',   icon: '🔄', badge: 'Yeni' },
+  'yokdil':             { theme: 'purple', icon: '🏆', badge: { label: 'En Çok Çalışılan', style: 'gold' } },
+  'yan-anlam':          { theme: 'pink',   icon: '🔑', badge: { label: 'Yeni', style: 'new' } },
   'benim-kelimelerim':  { theme: 'green',  icon: '⭐' },
-  '5-sinif':            { theme: 'orange', icon: '📗' },
-  '6-sinif':            { theme: 'blue',   icon: '📙' },
+  '5-sinif':            { theme: 'orange', icon: '🚀', badge: { label: 'Yeni', style: 'new' } },
+  '6-sinif':            { theme: 'blue',   icon: '🏰', badge: { label: 'Critical', style: 'critical' } },
   '7-sinif':            { theme: 'pink',   icon: '📕' },
-  '8-sinif':            { theme: 'yellow', icon: '📘' },
+  '8-sinif':            { theme: 'yellow', icon: '💎', badge: { label: 'LGS Özel', style: 'info' } },
 };
+
+// Kullanıcının deste bazında ilerlemesi (/api/progress/profile'dan gelir,
+// deck kartlarındaki progress bar için). Ünite/kelime verisini bozmadan
+// sadece "known/total kelime (%pct)" gösterimini besler.
+let deckProgressBySlug = {};
 
 // Konu Özetleri (Topic aktiviteleri) verisi olan desteler — bu listedeki desteler için
 // "Kelimeler / Konu Özetleri" sekmesi gösterilir. 7. sınıf henüz kaynak içerik eklenmediği
@@ -149,6 +154,32 @@ async function openDeck(deck) {
 
 const MEDAL_ICONS = ['🥇', '🥈', '🥉'];
 
+// Kullanıcı fotoğrafı yok — admin.js'teki baş harf + renkli daire avatar
+// deseninin aynısı (aynı renk paleti, aynı mantık), liderlik podyumunda
+// kullanmak için burada da tanımlandı.
+const AVATAR_COLORS = [
+  { bg: '#7C3AED', fg: '#fff' },
+  { bg: '#06B6D4', fg: '#fff' },
+  { bg: '#F59E0B', fg: '#241a04' },
+  { bg: '#EC4899', fg: '#fff' },
+  { bg: '#3B82F6', fg: '#fff' },
+  { bg: '#16A34A', fg: '#fff' },
+];
+function getInitials(name) {
+  return (name || '?')
+    .split(' ')
+    .filter(Boolean)
+    .map((w) => w[0])
+    .join('')
+    .slice(0, 2)
+    .toUpperCase();
+}
+function avatarColorFor(name) {
+  let hash = 0;
+  for (let i = 0; i < (name || '').length; i++) hash = (hash * 31 + name.charCodeAt(i)) >>> 0;
+  return AVATAR_COLORS[hash % AVATAR_COLORS.length];
+}
+
 function renderLeaderboard(data) {
   const section = document.getElementById('leaderboard-section');
   const gradesEl = document.getElementById('leaderboard-grades');
@@ -158,23 +189,60 @@ function renderLeaderboard(data) {
   gradesEl.innerHTML = grades.map((grade) => {
     const students = data[grade];
     if (!students.length) return '';
-    const rows = students.map((s, i) => `
-      <div class="lb-row lb-row--${i + 1}">
-        <span class="lb-medal">${MEDAL_ICONS[i]}</span>
+
+    // İlk 3'ü podyum olarak (2.-1.-3. sırayla, ortada en yüksek), varsa
+    // 3'ten fazlası (backend şu an en fazla 3 döndürüyor) düz liste olarak.
+    const podium = students.slice(0, 3);
+    const rest = students.slice(3);
+
+    const podiumHtml = podium.map((s, i) => {
+      const color = avatarColorFor(s.displayName);
+      return `
+        <div class="lb-podium-slot lb-podium-slot--${i + 1}">
+          <span class="lb-podium-medal">${MEDAL_ICONS[i]}</span>
+          <div class="lb-podium-avatar" style="background:${color.bg};color:${color.fg}">${getInitials(s.displayName)}</div>
+          <div class="lb-podium-name">${s.displayName}</div>
+          <div class="lb-podium-score">${s.correctCount.toLocaleString('tr-TR')} doğru</div>
+          <div class="lb-podium-bar"></div>
+        </div>`;
+    }).join('');
+
+    const restHtml = rest.map((s, i) => `
+      <div class="lb-row">
+        <span class="lb-rank">${i + 4}.</span>
         <span class="lb-name">${s.displayName}</span>
         <span class="lb-class">${s.className}</span>
-        <span class="lb-score">${s.correctCount.toLocaleString('tr-TR')} doğru</span>
+        <span class="lb-score">${s.correctCount.toLocaleString('tr-TR')}</span>
       </div>
     `).join('');
+
     return `
       <div class="lb-grade-card">
         <div class="lb-grade-title">${grade}. Sınıf</div>
-        ${rows}
+        <div class="lb-podium">${podiumHtml}</div>
+        ${restHtml}
       </div>
     `;
   }).join('');
 
   section.style.display = '';
+}
+
+// Son 5 günün doğru/yanlış sayısına göre basit bir çubuk sparkline (gerçek
+// veri — /api/progress/profile'ın dailyStats alanından, bkz. routes/progress.js).
+function renderSparkline(dailyStats) {
+  const el = document.getElementById('stat-sparkline');
+  if (!dailyStats || !dailyStats.length) {
+    el.innerHTML = '<span class="stat-sparkline-empty">Henüz çalışma verisi yok</span>';
+    return;
+  }
+  const days = dailyStats.slice(0, 5).reverse();
+  const max = Math.max(1, ...days.map((d) => d.correct + d.wrong));
+  el.innerHTML = days.map((d) => {
+    const total = d.correct + d.wrong;
+    const heightPct = Math.max(8, Math.round((total / max) * 100));
+    return `<div class="stat-sparkline-bar" style="height:${heightPct}%" title="${total} soru"></div>`;
+  }).join('');
 }
 
 async function loadLeaderboard() {
@@ -191,23 +259,30 @@ async function loadDecks() {
 
   decks.forEach((deck) => {
     const t = DECK_THEMES[deck.slug] || { theme: 'purple', icon: '📚' };
+    const progress = deckProgressBySlug[deck.slug];
 
     const card = document.createElement('button');
     card.className = `deck-card deck-card--${t.theme}`;
     card.type = 'button';
 
-    const metaText = deck.wordCount
+    let metaText = deck.wordCount
       ? `${deck.wordCount.toLocaleString('tr-TR')} kelime${deck.unitCount > 0 ? ` · ${deck.unitCount} ünite` : ''}`
       : '';
+    let progressBarHtml = '';
+    if (progress && progress.total > 0) {
+      metaText = `${progress.known}/${progress.total} kelime (%${progress.pct})${deck.unitCount > 0 ? ` · ${deck.unitCount} ünite` : ''}`;
+      progressBarHtml = `<div class="deck-progress-track"><div class="deck-progress-fill" style="width:${progress.pct}%"></div></div>`;
+    }
 
     card.innerHTML = `
       <div class="deck-card-top">
         <div class="deck-icon-circle">${t.icon}</div>
-        ${t.badge ? `<span class="deck-badge">${t.badge}</span>` : ''}
+        ${t.badge ? `<span class="deck-badge deck-badge--${t.badge.style}">${t.badge.label}</span>` : ''}
       </div>
       <div class="deck-title">${deck.title}</div>
       ${deck.description ? `<div class="deck-desc">${deck.description}</div>` : ''}
       ${metaText ? `<div class="deck-meta">${metaText}</div>` : ''}
+      ${progressBarHtml}
     `;
     card.addEventListener('click', () => openDeck(deck));
     deckGridEl.appendChild(card);
@@ -241,6 +316,20 @@ document.getElementById('admin-panel-btn').addEventListener('click', () => {
     const userBtn = document.getElementById('user-name-btn');
     userBtn.textContent = me.displayName;
     userBtn.addEventListener('click', () => { window.location.href = '/profil.html'; });
+
+    const firstName = (me.displayName || '').split(' ')[0];
+    document.getElementById('dash-greeting').textContent = `Selam ${firstName}! 👋`;
+
+    // Deste bazlı ilerleme (progress bar) ve son 5 günlük sparkline — gerçek
+    // veri, /api/progress/profile'dan (bkz. routes/progress.js:91). loadDecks()
+    // çağrılmadan önce çözülmesi beklenir ki progress bar'lar ilk çizimde gelsin.
+    try {
+      const profile = await getJSON('/api/progress/profile');
+      (profile.decks || []).forEach((d) => { deckProgressBySlug[d.slug] = d; });
+      renderSparkline(profile.dailyStats);
+    } catch (_) {
+      renderSparkline(null);
+    }
 
     if (me.isOwner) {
       document.getElementById('admin-panel-btn').style.display = '';

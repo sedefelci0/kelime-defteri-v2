@@ -252,6 +252,12 @@ router.get('/profile', requireAuth, async (req, res) => {
       wheelLastPrize,
       goal,
       recentActivity: recentActivity.slice(0, 8),
+      // Ana ekrandaki mini sparkline için ham günlük veri (en yeni önce).
+      dailyStats: dailyResult.rows.map((d) => ({
+        date: d.date,
+        correct: d.correct_count,
+        wrong: d.wrong_count,
+      })),
     });
   } catch (err) {
     console.error(err);

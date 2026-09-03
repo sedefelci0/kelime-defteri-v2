@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Kelime Defteri</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css" />
 <link rel="stylesheet" href="/css/decks.css" />
 </head>
-<body>
+<body class="decks-dark">
 
 <nav class="navbar">
   <div class="navbar-brand">
@@ -29,47 +29,50 @@
   <div id="loading" class="loading-state">Yükleniyor…</div>
 
   <div id="deck-list-view" style="display:none;">
-    <h1 class="page-title">Hangi seti çalışmak istersin?</h1>
-    <div id="deck-grid" class="deck-grid"></div>
-
-    <div class="tools-section">
-      <h2 class="tools-heading">Araçlar</h2>
-      <div class="tools-grid">
-        <button class="tool-card" id="profil-btn" type="button">
-          <span class="tool-icon">📊</span>
-          <div class="tool-text">
-            <div class="tool-name">Öğrenci Paneli</div>
-            <div class="tool-desc">İlerleme ve istatistikler</div>
-          </div>
-        </button>
-        <button class="tool-card tool-card--challenge" id="challenge-btn" type="button" style="display:none;">
-          <span class="tool-icon">⚡</span>
-          <div class="tool-text">
-            <div class="tool-name">Günlük Mücadele</div>
-            <div class="tool-desc" id="challenge-desc">5 soru · 3 dakika</div>
-          </div>
-        </button>
-        <button class="tool-card tool-card--wheel" id="wheel-btn" type="button" style="display:none;">
-          <span class="tool-icon">🎁</span>
-          <div class="tool-text">
-            <div class="tool-name">Ödül Çarkı</div>
-            <div class="tool-desc" id="wheel-desc">Her 60 saatte bir çevir!</div>
-          </div>
-        </button>
-        <button class="tool-card tool-card--admin" id="admin-panel-btn" type="button" style="display:none;">
-          <span class="tool-icon">🛠️</span>
-          <div class="tool-text">
-            <div class="tool-name">Yönetim Paneli</div>
-            <div class="tool-desc">Öğrenci istatistikleri</div>
-          </div>
-        </button>
-      </div>
+    <div class="dash-welcome">
+      <h1 class="dash-greeting" id="dash-greeting">Selam! 👋</h1>
+      <p class="dash-sub">Bugün kelime fethedeceğiz! Hangi seti çalışmak istersin?</p>
     </div>
 
-    <div class="leaderboard-section" id="leaderboard-section" style="display:none;">
-      <h2 class="tools-heading">Liderlik Tablosu</h2>
-      <p class="leaderboard-sub">Her sınıf seviyesinde en çok doğru yapan ilk 3 öğrenci</p>
-      <div class="leaderboard-grades" id="leaderboard-grades"></div>
+    <div class="dash-layout">
+      <div class="dash-main">
+        <div id="deck-grid" class="deck-grid"></div>
+      </div>
+
+      <aside class="dash-aside">
+        <h2 class="tools-heading">🎮 Oyun Paneli</h2>
+
+        <button class="stat-card" id="profil-btn" type="button">
+          <div class="stat-card-top">
+            <div class="stat-card-title">Öğrenci Paneli</div>
+            <div class="stat-card-sub">İlerleme ve istatistikler</div>
+          </div>
+          <div class="stat-sparkline" id="stat-sparkline"></div>
+        </button>
+
+        <div class="mini-tools-grid">
+          <button class="mini-tool-card mini-tool-card--wheel" id="wheel-btn" type="button" style="display:none;">
+            <span class="mini-tool-icon">🎁</span>
+            <div class="mini-tool-name">Günlük Ödül Çarkı</div>
+            <div class="mini-tool-desc" id="wheel-desc">Her 60 saatte bir çevir!</div>
+          </button>
+          <button class="mini-tool-card mini-tool-card--challenge" id="challenge-btn" type="button" style="display:none;">
+            <span class="mini-tool-icon">⚡</span>
+            <div class="mini-tool-name">Günlük Mücadele</div>
+            <div class="mini-tool-desc" id="challenge-desc">5 soru · 3 dakika</div>
+          </button>
+        </div>
+
+        <button class="admin-panel-link" id="admin-panel-btn" type="button" style="display:none;">
+          <span class="mini-tool-icon">🛠️</span>
+          <span>Yönetim Paneli</span>
+        </button>
+
+        <div class="leaderboard-section" id="leaderboard-section" style="display:none;">
+          <h2 class="tools-heading">🏆 Liderlik Tablosu</h2>
+          <div class="leaderboard-grades" id="leaderboard-grades"></div>
+        </div>
+      </aside>
     </div>
   </div>
 
