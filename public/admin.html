@@ -189,14 +189,17 @@
     <!-- Yarışma Testleri sekmesi -->
     <div id="tab-quiz" style="display:none;">
       <p class="q-form-hint">
-        Bir sınıf + deste + ünite için bir zaman penceresi aç. O aralıkta giren
-        öğrenciler o ünitenin kelimelerinden rastgele üretilen 4 soruluk bir
-        yarışma testi çözer, ikişerli otomatik eşleştirilip sonuçları karşılaştırılır.
+        Bir veya birden çok sınıf + deste + ünite için bir zaman penceresi aç.
+        Birden fazla şube (hatta farklı sınıflar) seçersen hepsi aynı pencerede
+        birbiriyle eşleşip yarışabilir. O aralıkta giren öğrenciler o ünitenin
+        kelimelerinden rastgele üretilen sorulardan oluşan bir yarışma testi
+        çözer, ikişerli otomatik eşleştirilip sonuçları karşılaştırılır.
       </p>
       <div class="question-form-card">
         <h3>Yeni Test Penceresi</h3>
+        <div class="qz-class-label">Sınıflar (birden çok seçilebilir — farklı sınıfları birbiriyle yarıştırmak için hepsini işaretle)</div>
+        <div id="qz-class-grid" class="qz-class-grid"></div>
         <div class="q-form-grid">
-          <select id="qz-class"><option value="">Sınıf seç</option></select>
           <select id="qz-deck"><option value="">Deste seç</option></select>
           <select id="qz-unit" disabled><option value="">Önce deste seç</option></select>
         </div>

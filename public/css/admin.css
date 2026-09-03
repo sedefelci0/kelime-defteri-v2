@@ -833,7 +833,6 @@
 }
 
 /* ── Yarışma Testleri sekmesi ────────────────────────────── */
-#tab-quiz .q-form-grid { grid-template-columns: 1fr 1fr 1fr; }
 .qz-inline-label {
   display: flex;
   flex-direction: column;
@@ -841,6 +840,37 @@
   font-size: 12px;
   color: var(--muted, #6b6b80);
 }
+.qz-class-label { font-size: 12px; color: var(--muted, #6b6b80); margin: 4px 0 6px; }
+.qz-class-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  border: 1px solid #E0DCED;
+  border-radius: 8px;
+  background: var(--paper, #F7F5F0);
+}
+.qz-class-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-right: 1px solid #E0DCED;
+}
+.qz-class-group:last-child { border-right: none; }
+.qz-class-group-title { font-size: 11px; font-weight: 700; color: var(--muted, #6b6b80); margin-right: 2px; }
+.qz-class-check-btn {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 99px;
+  border: 1px solid #D8D2EA;
+  background: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+.qz-class-check-btn.is-checked { background: var(--deck-purple-accent, #7C6CE0); border-color: var(--deck-purple-accent, #7C6CE0); color: #fff; }
+.qz-class-group-all { font-size: 11px; text-decoration: underline; cursor: pointer; color: var(--deck-purple-accent, #7C6CE0); background: none; border: none; }
 .qz-windows-table { width: 100%; border-collapse: collapse; }
 .qz-windows-table th, .qz-windows-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #EDEAF6; font-size: 13px; }
 .qz-windows-table tr.qz-row--clickable { cursor: pointer; }

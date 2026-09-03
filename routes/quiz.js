@@ -2,6 +2,7 @@ const express = require('express');
 const crypto = require('crypto');
 const pool = require('../db/pool');
 const { requireAuth } = require('../middleware/auth');
+const { STUDENT_CLASSES } = require('../db/classes-config');
 
 const router = express.Router();
 const adminRouter = express.Router();
@@ -23,7 +24,7 @@ pool.query(`CREATE TABLE IF NOT EXISTS quiz_windows (
   id                 SERIAL PRIMARY KEY,
   deck_slug          TEXT NOT NULL,
   unit               INTEGER NOT NULL,
-  class_name         TEXT NOT NULL,
+  class_names        TEXT[] NOT NULL,
   starts_at          TIMESTAMPTZ NOT NULL,
   ends_at            TIMESTAMPTZ NOT NULL,
   duration_seconds   INTEGER NOT NULL DEFAULT 300,
@@ -35,7 +36,18 @@ pool.query(`CREATE TABLE IF NOT EXISTS quiz_windows (
   created_by         INTEGER REFERENCES users(id),
   created_at         TIMESTAMPTZ NOT NULL DEFAULT now(),
   CHECK (ends_at > starts_at)
-)`).catch((e) => console.error('[db] quiz_windows:', e.message));
+)`).catch((e) => console.error('[db] quiz_windows:', e.message))
+  // Eski sürümde tek bir class_name TEXT sütunu vardı — bir pencere sadece
+  // tek bir şubeye açılabiliyordu. Birden çok şubenin (hatta farklı sınıfların
+  // birbiriyle) aynı pencerede yarışabilmesi için diziye geçirildi. Zaten
+  // class_names ile kurulmuş taze bir veritabanında bu adımların hepsi no-op'tur.
+  .then(() => pool.query(`ALTER TABLE quiz_windows ADD COLUMN IF NOT EXISTS class_names TEXT[]`))
+  .then(() => pool.query(`ALTER TABLE quiz_windows ADD COLUMN IF NOT EXISTS class_name TEXT`))
+  .then(() => pool.query(`UPDATE quiz_windows SET class_names = ARRAY[class_name] WHERE class_names IS NULL AND class_name IS NOT NULL`))
+  .then(() => pool.query(`UPDATE quiz_windows SET class_names = '{}' WHERE class_names IS NULL`))
+  .then(() => pool.query(`ALTER TABLE quiz_windows ALTER COLUMN class_names SET NOT NULL`))
+  .then(() => pool.query(`ALTER TABLE quiz_windows DROP COLUMN IF EXISTS class_name`))
+  .catch((e) => console.error('[db] quiz_windows class_names migration:', e.message));
 
 pool.query(`CREATE TABLE IF NOT EXISTS quiz_attempts (
   id            SERIAL PRIMARY KEY,
@@ -225,7 +237,7 @@ async function getUserClassName(userId) {
 
 async function loadAttemptWithWindow(client, attemptId) {
   const { rows } = await client.query(
-    `SELECT a.*, w.questions AS window_questions, w.question_count, w.ends_at, w.class_name, w.deck_slug, w.unit
+    `SELECT a.*, w.questions AS window_questions, w.question_count, w.ends_at, w.class_names, w.deck_slug, w.unit
      FROM quiz_attempts a JOIN quiz_windows w ON w.id = a.window_id
      WHERE a.id = $1`,
     [attemptId]
@@ -297,7 +309,7 @@ router.get('/active', requireAuth, async (req, res) => {
 
     const { rows } = await pool.query(
       `SELECT id, ends_at FROM quiz_windows
-       WHERE deck_slug = $1 AND unit = $2 AND class_name = $3
+       WHERE deck_slug = $1 AND unit = $2 AND $3 = ANY(class_names)
          AND starts_at <= now() AND ends_at >= now()
        ORDER BY starts_at DESC LIMIT 1`,
       [deckSlug, unitNum, className]
@@ -331,7 +343,7 @@ router.post('/attempts', requireAuth, async (req, res) => {
     if (!window_) { await client.query('ROLLBACK'); return res.status(404).json({ error: 'Pencere bulunamadı.' }); }
 
     const className = await getUserClassName(req.session.userId);
-    if (className !== window_.class_name) {
+    if (!window_.class_names.includes(className)) {
       await client.query('ROLLBACK');
       return res.status(403).json({ error: 'Bu yarışma testi senin sınıfına açık değil.' });
     }
@@ -510,7 +522,7 @@ router.post('/rooms', requireAuth, async (req, res) => {
 
     const className = await getUserClassName(req.session.userId);
     const now = new Date();
-    if (className !== window_.class_name || now < new Date(window_.starts_at) || now > new Date(window_.ends_at)) {
+    if (!window_.class_names.includes(className) || now < new Date(window_.starts_at) || now > new Date(window_.ends_at)) {
       await client.query('ROLLBACK');
       return res.status(400).json({ error: 'Bu yarışma testine şu an katılamazsın.' });
     }
@@ -601,7 +613,7 @@ router.post('/rooms/:code/join', requireAuth, async (req, res) => {
 
     const className = await getUserClassName(req.session.userId);
     const now = new Date();
-    if (className !== window_.class_name || now < new Date(window_.starts_at) || now > new Date(window_.ends_at)) {
+    if (!window_.class_names.includes(className) || now < new Date(window_.starts_at) || now > new Date(window_.ends_at)) {
       await client.query('ROLLBACK');
       return res.status(400).json({ error: 'Bu yarışma testine şu an katılamazsın.' });
     }
@@ -649,12 +661,17 @@ router.post('/rooms/:code/join', requireAuth, async (req, res) => {
 // POST /api/admin/quiz/windows — yeni test penceresi oluştur.
 adminRouter.post('/windows', requireAuth, requireOwner, async (req, res) => {
   try {
-    const { deckSlug, unit, className, startsAt, endsAt, durationSeconds, questionCount, allowAutoMatch, allowManualMatch, allowRoomMatch } = req.body || {};
+    const { deckSlug, unit, classNames, startsAt, endsAt, durationSeconds, questionCount, allowAutoMatch, allowManualMatch, allowRoomMatch } = req.body || {};
     const unitNum = Number(unit);
     const start = new Date(startsAt);
     const end = new Date(endsAt);
-    if (!deckSlug || !Number.isInteger(unitNum) || !className) {
-      return res.status(400).json({ error: 'Deste, ünite ve sınıf zorunlu.' });
+    const classNameList = Array.isArray(classNames) ? [...new Set(classNames)].filter(Boolean) : [];
+    if (!deckSlug || !Number.isInteger(unitNum) || !classNameList.length) {
+      return res.status(400).json({ error: 'Deste, ünite ve en az bir sınıf zorunlu.' });
+    }
+    const unknownClass = classNameList.find((c) => !STUDENT_CLASSES.includes(c));
+    if (unknownClass) {
+      return res.status(400).json({ error: `Geçersiz sınıf: ${unknownClass}` });
     }
     if (Number.isNaN(start.getTime()) || Number.isNaN(end.getTime()) || end <= start) {
       return res.status(400).json({ error: 'Geçersiz başlangıç/bitiş zamanı.' });
@@ -669,10 +686,10 @@ adminRouter.post('/windows', requireAuth, requireOwner, async (req, res) => {
     }
 
     const { rows } = await pool.query(
-      `INSERT INTO quiz_windows (deck_slug, unit, class_name, starts_at, ends_at, duration_seconds, question_count,
+      `INSERT INTO quiz_windows (deck_slug, unit, class_names, starts_at, ends_at, duration_seconds, question_count,
                                   allow_auto_match, allow_manual_match, allow_room_match, created_by)
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING *`,
-      [deckSlug, unitNum, className, start, end, duration, qCount,
+      [deckSlug, unitNum, classNameList, start, end, duration, qCount,
         allowAutoMatch !== false, allowManualMatch !== false, allowRoomMatch !== false, req.session.userId]
     );
     res.json(rows[0]);
@@ -688,13 +705,13 @@ adminRouter.get('/windows', requireAuth, requireOwner, async (req, res) => {
     const { class: classFilter, deckSlug, unit } = req.query;
     const conditions = [];
     const params = [];
-    if (classFilter) { params.push(classFilter); conditions.push(`w.class_name = $${params.length}`); }
+    if (classFilter) { params.push(classFilter); conditions.push(`$${params.length} = ANY(w.class_names)`); }
     if (deckSlug) { params.push(deckSlug); conditions.push(`w.deck_slug = $${params.length}`); }
     if (unit) { params.push(Number(unit)); conditions.push(`w.unit = $${params.length}`); }
     const where = conditions.length ? `WHERE ${conditions.join(' AND ')}` : '';
 
     const { rows } = await pool.query(
-      `SELECT w.id, w.deck_slug, w.unit, w.class_name, w.starts_at, w.ends_at, w.duration_seconds, w.question_count,
+      `SELECT w.id, w.deck_slug, w.unit, w.class_names, w.starts_at, w.ends_at, w.duration_seconds, w.question_count,
               COUNT(a.id)::int AS attempt_count,
               COUNT(a.id) FILTER (WHERE a.status != 'in_progress')::int AS finished_count
        FROM quiz_windows w

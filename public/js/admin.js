@@ -948,7 +948,7 @@ async function deleteQuestion(q) {
 }
 
 // --- Yarışma Testleri sekmesi ---
-const qzClassEl = document.getElementById('qz-class');
+const qzClassGridEl = document.getElementById('qz-class-grid');
 const qzDeckEl = document.getElementById('qz-deck');
 const qzUnitEl = document.getElementById('qz-unit');
 const qzStartsEl = document.getElementById('qz-starts');
@@ -970,15 +970,52 @@ function qzFormatDateTime(iso) {
   return new Date(iso).toLocaleString('tr-TR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
 }
 
+// STUDENT_CLASSES ('YOKDIL', '5-A'..'8-F') sınıf-numarasına göre grupluyoruz,
+// her grup için "Tümü" hızlı seçim butonuyla birlikte tıklanabilir rozet
+// (buton-şeklinde checkbox) listesi oluşturuyoruz. Birden çok sınıf/şube
+// seçilebilir — hepsi aynı pencerede birbiriyle eşleşip yarışabilir.
+function renderClassGrid(classes) {
+  const groups = {};
+  const groupOrder = [];
+  classes.forEach((c) => {
+    const m = /^(\d)-/.exec(c);
+    const key = m ? m[1] : c;
+    if (!groups[key]) { groups[key] = []; groupOrder.push(key); }
+    groups[key].push(c);
+  });
+
+  qzClassGridEl.innerHTML = groupOrder.map((key) => {
+    const title = /^\d$/.test(key) ? `${key}. Sınıf` : key;
+    return `
+      <div class="qz-class-group" data-group="${key}">
+        <span class="qz-class-group-title">${title}</span>
+        <button type="button" class="qz-class-group-all" data-group-all="${key}">Tümü</button>
+        ${groups[key].map((c) => `<button type="button" class="qz-class-check-btn" data-class="${c}">${c}</button>`).join('')}
+      </div>`;
+  }).join('');
+
+  qzClassGridEl.querySelectorAll('.qz-class-check-btn').forEach((btn) => {
+    btn.addEventListener('click', () => btn.classList.toggle('is-checked'));
+  });
+  qzClassGridEl.querySelectorAll('[data-group-all]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const group = qzClassGridEl.querySelector(`.qz-class-group[data-group="${btn.dataset.groupAll}"]`);
+      const btns = group.querySelectorAll('.qz-class-check-btn');
+      const allChecked = Array.from(btns).every((b) => b.classList.contains('is-checked'));
+      btns.forEach((b) => b.classList.toggle('is-checked', !allChecked));
+    });
+  });
+}
+
+function getSelectedClassNames() {
+  return Array.from(qzClassGridEl.querySelectorAll('.qz-class-check-btn.is-checked')).map((b) => b.dataset.class);
+}
+
 async function initQuizTab() {
   quizTabLoaded = true;
   try {
     const classes = await getJSON('/api/admin/classes');
-    classes.forEach((c) => {
-      const opt = document.createElement('option');
-      opt.value = c; opt.textContent = c;
-      qzClassEl.appendChild(opt);
-    });
+    renderClassGrid(classes);
     const decks = await getJSON('/api/decks');
     decks.forEach((d) => {
       const opt = document.createElement('option');
@@ -1014,7 +1051,7 @@ qzDeckEl.addEventListener('change', async () => {
 
 qzCreateBtn.addEventListener('click', async () => {
   qzFormErrorEl.style.display = 'none';
-  const className = qzClassEl.value;
+  const classNames = getSelectedClassNames();
   const deckSlug = qzDeckEl.value;
   const unit = Number(qzUnitEl.value);
   const startsAt = qzStartsEl.value;
@@ -1022,21 +1059,22 @@ qzCreateBtn.addEventListener('click', async () => {
   const durationSeconds = Number(qzDurationEl.value) || 300;
   const questionCount = Number(qzQuestionCountEl.value) || 4;
 
-  if (!className || !deckSlug || !Number.isInteger(unit) || !startsAt || !endsAt) {
-    qzFormErrorEl.textContent = 'Sınıf, deste, ünite, başlangıç ve bitiş zamanı zorunlu.';
+  if (!classNames.length || !deckSlug || !Number.isInteger(unit) || !startsAt || !endsAt) {
+    qzFormErrorEl.textContent = 'En az bir sınıf, deste, ünite, başlangıç ve bitiş zamanı zorunlu.';
     qzFormErrorEl.style.display = '';
     return;
   }
 
   try {
     await sendJSON('/api/admin/quiz/windows', 'POST', {
-      className, deckSlug, unit,
+      classNames, deckSlug, unit,
       startsAt: new Date(startsAt).toISOString(),
       endsAt: new Date(endsAt).toISOString(),
       durationSeconds, questionCount,
     });
     qzStartsEl.value = '';
     qzEndsEl.value = '';
+    qzClassGridEl.querySelectorAll('.qz-class-check-btn.is-checked').forEach((b) => b.classList.remove('is-checked'));
     await loadQuizWindows();
   } catch (err) {
     qzFormErrorEl.textContent = err.message || 'Pencere oluşturulamadı.';
@@ -1067,7 +1105,7 @@ async function loadQuizWindows() {
             const status = qzWindowStatus(w);
             return `
               <tr class="qz-row--clickable" data-window-id="${w.id}">
-                <td>${w.class_name}</td>
+                <td>${(w.class_names || []).join(', ')}</td>
                 <td>${deckTitleFor(w.deck_slug)} · Ünite ${w.unit}</td>
                 <td>${qzFormatDateTime(w.starts_at)}</td>
                 <td>${qzFormatDateTime(w.ends_at)}</td>
@@ -1089,7 +1127,7 @@ async function loadQuizWindows() {
 async function openQuizDetail(windowId) {
   try {
     const data = await getJSON(`/api/admin/quiz/windows/${windowId}`);
-    qzDetailTitle.textContent = `${deckTitleFor(data.window.deck_slug)} · Ünite ${data.window.unit} · ${data.window.class_name}`;
+    qzDetailTitle.textContent = `${deckTitleFor(data.window.deck_slug)} · Ünite ${data.window.unit} · ${(data.window.class_names || []).join(', ')}`;
 
     const unmatched = data.attempts.filter((a) => a.status !== 'in_progress' && !a.matchId);
 
