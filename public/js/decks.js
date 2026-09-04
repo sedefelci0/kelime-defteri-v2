@@ -4,7 +4,7 @@ const DECK_THEMES = {
   'benim-kelimelerim':  { theme: 'green',  icon: '⭐' },
   '5-sinif':            { theme: 'orange', icon: '🚀', badge: { label: 'Yeni', style: 'new' } },
   '6-sinif':            { theme: 'blue',   icon: '🏰', badge: { label: 'Critical', style: 'critical' } },
-  '7-sinif':            { theme: 'pink',   icon: '📕' },
+  '7-sinif':            { theme: 'rose',   icon: '🧭', badge: { label: 'Yeni', style: 'new' } },
   '8-sinif':            { theme: 'yellow', icon: '💎', badge: { label: 'LGS Özel', style: 'info' } },
 };
 

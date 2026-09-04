@@ -120,6 +120,7 @@ body.decks-dark {
 .deck-card--blue   { background: linear-gradient(135deg, #6366F1, #8B5CF6); }
 .deck-card--yellow { background: linear-gradient(135deg, #F59E0B, #FB923C); }
 .deck-card--orange { background: linear-gradient(135deg, #10B981, #0EA5E9); }
+.deck-card--rose   { background: linear-gradient(135deg, #F43F5E, #7C3AED); }
 
 .deck-card-top {
   display: flex;
@@ -385,6 +386,7 @@ body.decks-dark {
 .unit-deck-icon--blue   { background: linear-gradient(135deg, #6366F1, #8B5CF6); }
 .unit-deck-icon--yellow { background: linear-gradient(135deg, #F59E0B, #FB923C); }
 .unit-deck-icon--orange { background: linear-gradient(135deg, #10B981, #0EA5E9); }
+.unit-deck-icon--rose   { background: linear-gradient(135deg, #F43F5E, #7C3AED); }
 .unit-deck-title {
   font-size: 24px;
   font-weight: 800;
