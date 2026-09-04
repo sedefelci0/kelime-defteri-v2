@@ -82,13 +82,13 @@ body.decks-dark {
   gap: 16px;
 }
 
-/* İlk iki kart (en yüksek sortOrder'lı iki deste) öne çıkan büyük kart olarak,
-   kalanlar küçük kart olarak gösterilir — db/decks-config.js sırası neyse
-   otomatik uyum sağlar, sabit kod yok. */
+/* İlk dört kart (sınıf seviyesi desteleri — db/decks-config.js sırasına göre
+   ilk 4) eşit büyüklükte "öne çıkan" kart olarak, kalanlar küçük kart olarak
+   gösterilir — sıra neyse otomatik uyum sağlar, sabit kod yok. */
 .deck-card {
   grid-column: span 2;
 }
-.deck-card:nth-child(-n+2) {
+.deck-card:nth-child(-n+4) {
   grid-column: span 3;
   min-height: 180px;
 }
@@ -504,13 +504,13 @@ body.decks-dark {
 @media (max-width: 900px) {
   .dash-layout { grid-template-columns: 1fr; }
   .deck-grid { grid-template-columns: repeat(2, 1fr); }
-  .deck-card:nth-child(-n+2) { grid-column: span 2; }
+  .deck-card:nth-child(-n+4) { grid-column: span 2; }
 }
 
 @media (max-width: 560px) {
   .decks-page { padding: 28px 16px 80px; }
   .deck-grid { grid-template-columns: 1fr; }
-  .deck-card, .deck-card:nth-child(-n+2) { grid-column: span 1; }
+  .deck-card, .deck-card:nth-child(-n+4) { grid-column: span 1; }
   .mini-tools-grid { grid-template-columns: 1fr; }
   .dash-greeting { font-size: 22px; }
 }
