@@ -42,3 +42,16 @@
 }
 .qz-room-join .q-text-input { text-align: center; text-transform: uppercase; letter-spacing: 0.1em; }
 .qz-room-join .btn { flex-shrink: 0; }
+
+.qz-room-code-display {
+  font-family: var(--font-mono);
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--moss-deep);
+  background: var(--deck-green);
+  border: 1.5px dashed var(--moss-deep);
+  border-radius: 12px;
+  padding: 14px 20px;
+  margin: 16px 0;
+}

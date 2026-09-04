@@ -2,6 +2,7 @@ const PANELS = {
   loading:  document.getElementById('loading-panel'),
   error:    document.getElementById('error-panel'),
   entry:    document.getElementById('entry-panel'),
+  roomWait: document.getElementById('room-wait-panel'),
   question: document.getElementById('question-panel'),
   waiting:  document.getElementById('waiting-panel'),
   result:   document.getElementById('result-panel'),
@@ -281,10 +282,42 @@ function showEntryError(message) {
   el.style.display = '';
 }
 
+// Oda açma isteğinin cevabı artık HENÜZ bir deneme içermiyor (bkz.
+// routes/quiz.js createRoomForWindow) — sadece {status:'room_open', roomCode}.
+// Arkadaş kodu girip katılana kadar süre başlamasın diye burada bekleme
+// ekranına geçip GET /rooms/:code/status ile poll ediyoruz; katılım olunca
+// o endpoint kendi denemesi+sorularını döner ve soru ekranına geçilir.
+function handleRoomOpenResponse(data) {
+  if (data.status !== 'room_open') { beginQuizFromAttempt(data); return; }
+  document.getElementById('room-wait-code').textContent = data.roomCode;
+  showPanel('roomWait');
+  pollRoomStatus(data.roomCode, data.windowEndsAt);
+}
+
+let roomPollTimeout = null;
+
+async function pollRoomStatus(code, windowEndsAt) {
+  if (roomPollTimeout) clearTimeout(roomPollTimeout);
+  try {
+    const res = await getJSON(`/api/quiz/rooms/${encodeURIComponent(code)}/status`);
+    if (res.status !== 'pending') {
+      beginQuizFromAttempt(res);
+      return;
+    }
+    if (windowEndsAt && Date.now() > new Date(windowEndsAt).getTime()) {
+      showError('Bu oda için kimse katılmadı, süresi doldu. Yeni bir oda aç.');
+      return;
+    }
+    roomPollTimeout = setTimeout(() => pollRoomStatus(code, windowEndsAt), 3000);
+  } catch (err) {
+    roomPollTimeout = setTimeout(() => pollRoomStatus(code, windowEndsAt), 5000);
+  }
+}
+
 async function openRoom(windowId) {
   try {
     const data = await postJSON('/api/quiz/rooms', { windowId });
-    beginQuizFromAttempt(data);
+    handleRoomOpenResponse(data);
   } catch (err) {
     showEntryError(err.message || 'Oda açılamadı.');
   }
@@ -305,7 +338,7 @@ async function startDuelAuto() {
 async function openDuelRoom() {
   try {
     const data = await postJSON('/api/quiz/duels', { deckSlug, unit: Number(unit), mode: 'room' });
-    beginQuizFromAttempt(data);
+    handleRoomOpenResponse(data);
   } catch (err) {
     showEntryError(err.message || 'Oda açılamadı.');
   }
