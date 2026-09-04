@@ -76,14 +76,16 @@ async function loadQuizActiveState(deckSlug, units) {
   }));
 }
 
+const UNIT_BTN_COLOR_COUNT = 8;
+
 function renderUnitButtons() {
   unitButtonsEl.innerHTML = '';
-  currentUnits.forEach((u) => {
+  currentUnits.forEach((u, i) => {
     const cell = document.createElement('div');
     cell.className = 'unit-cell';
 
     const btn = document.createElement('button');
-    btn.className = 'unit-btn';
+    btn.className = `unit-btn unit-btn--${i % UNIT_BTN_COLOR_COUNT}`;
     const label = u.name || `Ünite ${u.unit}`;
     if (currentMode === 'topics') {
       const prog = topicsProgress[u.unit];

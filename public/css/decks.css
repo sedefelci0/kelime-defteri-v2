@@ -400,28 +400,41 @@ body.decks-dark {
 
 .unit-btn {
   padding: 22px 16px;
-  background: var(--dd-card);
-  border: 1px solid var(--dd-border);
+  border: none;
   border-radius: 14px;
   font-size: 16px;
-  font-weight: 600;
-  color: var(--dd-text);
+  font-weight: 700;
+  color: #fff;
   cursor: pointer;
   text-align: center;
-  transition: transform 0.12s, box-shadow 0.12s, border-color 0.12s;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.16);
+  transition: transform 0.12s, box-shadow 0.12s;
 }
 .unit-btn:hover {
   transform: translateY(-2px);
-  border-color: #7C6CE0;
-  background: var(--dd-card-hover);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.22);
 }
+
+/* Ünitelere sırayla döngüsel olarak canlı gradyanlar atanır (deck kartları/
+   not kartlarıyla aynı renk ailesi) — düz koyu tek renk yerine. */
+.unit-btn--0 { background: linear-gradient(135deg, #06B6D4, #3B82F6); }
+.unit-btn--1 { background: linear-gradient(135deg, #6366F1, #8B5CF6); }
+.unit-btn--2 { background: linear-gradient(135deg, #16A34A, #4ADE80); }
+.unit-btn--3 { background: linear-gradient(135deg, #F59E0B, #FB923C); }
+.unit-btn--4 { background: linear-gradient(135deg, #7C3AED, #C026D3); }
+.unit-btn--5 { background: linear-gradient(135deg, #10B981, #0EA5E9); }
+.unit-btn--6 { background: linear-gradient(135deg, #F97316, #EF4444); }
+.unit-btn--7 { background: linear-gradient(135deg, #EC4899, #F43F5E); }
 
 .unit-btn-badge {
   display: block;
   margin-top: 6px;
   font-size: 12px;
   font-weight: 700;
-  color: #4ADE80;
+  color: #fff;
+  background: rgba(0,0,0,0.25);
+  border-radius: 20px;
+  padding: 2px 8px;
   font-family: var(--font-mono);
 }
 
