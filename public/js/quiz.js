@@ -56,6 +56,7 @@ function formatDuration(secs) {
 const params = new URLSearchParams(window.location.search);
 const deckSlug = params.get('deck');
 const unit = params.get('unit');
+const isDuel = params.get('mode') === 'duel';
 
 let quiz = null; // { attemptId, questions, answers, deadlineAt, windowEndsAt }
 let currentIdx = 0;
@@ -289,6 +290,27 @@ async function openRoom(windowId) {
   }
 }
 
+// Düello: öğretmen penceresi yok, POST /api/quiz/duels aynı sınıf+deste+ünite
+// için "yuvarlanan" bir pencere bulur/oluşturur ve doğrudan denemeyi/odayı
+// başlatır (bkz. routes/quiz.js resolveDuelWindow).
+async function startDuelAuto() {
+  try {
+    const data = await postJSON('/api/quiz/duels', { deckSlug, unit: Number(unit), mode: 'auto' });
+    beginQuizFromAttempt(data);
+  } catch (err) {
+    showEntryError(err.message || 'Düello başlatılamadı.');
+  }
+}
+
+async function openDuelRoom() {
+  try {
+    const data = await postJSON('/api/quiz/duels', { deckSlug, unit: Number(unit), mode: 'room' });
+    beginQuizFromAttempt(data);
+  } catch (err) {
+    showEntryError(err.message || 'Oda açılamadı.');
+  }
+}
+
 async function joinRoom() {
   const code = document.getElementById('room-code-input').value.trim().toUpperCase();
   if (!code) { showEntryError('Önce arkadaşından aldığın oda kodunu gir.'); return; }
@@ -311,6 +333,18 @@ document.getElementById('logout-btn').addEventListener('click', async () => {
     showError('Geçersiz bağlantı.');
     return;
   }
+
+  if (isDuel) {
+    document.getElementById('start-btn').textContent = 'Rakip Bul (Otomatik)';
+    document.getElementById('entry-info').textContent =
+      `${deckSlug} · Ünite ${unit} — sınıf arkadaşınla düello! Otomatik rakip bul, oda aç ya da bir kodla katıl.`;
+    document.getElementById('start-btn').addEventListener('click', () => startDuelAuto(), { once: true });
+    document.getElementById('open-room-btn').addEventListener('click', () => openDuelRoom(), { once: true });
+    document.getElementById('join-room-btn').addEventListener('click', joinRoom);
+    showPanel('entry');
+    return;
+  }
+
   try {
     const info = await getJSON(`/api/quiz/active?deckSlug=${encodeURIComponent(deckSlug)}&unit=${encodeURIComponent(unit)}`);
     if (!info.active) {

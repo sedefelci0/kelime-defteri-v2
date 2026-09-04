@@ -460,6 +460,20 @@ body.decks-dark {
 }
 .unit-quiz-link:hover { opacity: 0.88; }
 
+.unit-duel-link {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #7C3AED, #EC4899);
+  color: #fff;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+.unit-duel-link:hover { opacity: 0.88; }
+
 /* ===== Kelimeler / Konu Özetleri sekmesi ===== */
 .unit-mode-tabs {
   display: flex;

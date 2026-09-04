@@ -1026,6 +1026,7 @@ async function initQuizTab() {
     // getJSON zaten yönlendirdi/no-access gösterdi
   }
   await loadQuizWindows();
+  await loadQuizDuels();
 }
 
 qzDeckEl.addEventListener('change', async () => {
@@ -1089,13 +1090,13 @@ function qzWindowStatus(w) {
   return { key: 'active', label: 'Aktif' };
 }
 
-async function loadQuizWindows() {
+async function renderQuizWindowsInto(source, listEl, emptyHintEl) {
   try {
-    const windows = await getJSON('/api/admin/quiz/windows');
-    qzWindowsEmptyHintEl.style.display = windows.length ? 'none' : '';
-    if (!windows.length) { qzWindowsListEl.innerHTML = ''; return; }
+    const windows = await getJSON(`/api/admin/quiz/windows?source=${source}`);
+    emptyHintEl.style.display = windows.length ? 'none' : '';
+    if (!windows.length) { listEl.innerHTML = ''; return; }
 
-    qzWindowsListEl.innerHTML = `
+    listEl.innerHTML = `
       <table class="qz-windows-table">
         <thead>
           <tr><th>Sınıf</th><th>Deste / Ünite</th><th>Başlangıç</th><th>Bitiş</th><th>Katılım</th><th>Durum</th></tr>
@@ -1116,12 +1117,22 @@ async function loadQuizWindows() {
         </tbody>
       </table>`;
 
-    qzWindowsListEl.querySelectorAll('tr[data-window-id]').forEach((row) => {
+    listEl.querySelectorAll('tr[data-window-id]').forEach((row) => {
       row.addEventListener('click', () => openQuizDetail(Number(row.dataset.windowId)));
     });
   } catch (err) {
     // getJSON zaten yönlendirdi/no-access gösterdi
   }
+}
+
+async function loadQuizWindows() {
+  await renderQuizWindowsInto('teacher', qzWindowsListEl, qzWindowsEmptyHintEl);
+}
+
+async function loadQuizDuels() {
+  const listEl = document.getElementById('qz-duels-list');
+  const emptyEl = document.getElementById('qz-duels-empty-hint');
+  await renderQuizWindowsInto('student', listEl, emptyEl);
 }
 
 async function openQuizDetail(windowId) {
@@ -1148,7 +1159,10 @@ async function openQuizDetail(windowId) {
       return `<div class="qz-match-row"><span>${m.attempt1.displayName} vs ${m.attempt2 ? m.attempt2.displayName : '(bekleniyor)'} <em>(${m.method})</em></span><strong>${resultText}</strong></div>`;
     }).join('') || '<p class="q-empty-hint">Henüz eşleşme yok.</p>';
 
-    const manualMatchHtml = unmatched.length >= 2 ? `
+    // Öğrenci düellolarında öğretmen manuel eşleştirme yapamaz (backend de
+    // bunu reddediyor) — bu yüzden UI'da da hiç gösterilmiyor.
+    const isDuelWindow = data.window.source === 'student';
+    const manualMatchHtml = !isDuelWindow && unmatched.length >= 2 ? `
       <div class="qz-match-select">
         <select id="qz-manual-a">${unmatched.map((a) => `<option value="${a.id}">${a.displayName}</option>`).join('')}</select>
         <span>vs</span>

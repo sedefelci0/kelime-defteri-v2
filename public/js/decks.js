@@ -53,6 +53,12 @@ function goToQuiz(deckSlug, unit) {
   window.location.href = `/quiz.html?${new URLSearchParams({ deck: deckSlug, unit }).toString()}`;
 }
 
+// Öğrenci düellosu — öğretmenin açtığı bir yarışma penceresi gerekmez,
+// her zaman kullanılabilir (bkz. POST /api/quiz/duels).
+function goToDuel(deckSlug, unit) {
+  window.location.href = `/quiz.html?${new URLSearchParams({ deck: deckSlug, unit, mode: 'duel' }).toString()}`;
+}
+
 let currentDeck = null;
 let currentUnits = [];
 let currentMode = 'words';
@@ -106,6 +112,14 @@ function renderUnitButtons() {
       quizLink.addEventListener('click', (e) => { e.stopPropagation(); goToQuiz(currentDeck.slug, u.unit); });
       cell.appendChild(quizLink);
     }
+
+    // Düello, öğretmen penceresinden bağımsız olarak her zaman kullanılabilir.
+    const duelLink = document.createElement('button');
+    duelLink.type = 'button';
+    duelLink.className = 'unit-duel-link';
+    duelLink.textContent = '⚔️ Düello';
+    duelLink.addEventListener('click', (e) => { e.stopPropagation(); goToDuel(currentDeck.slug, u.unit); });
+    cell.appendChild(duelLink);
 
     unitButtonsEl.appendChild(cell);
   });

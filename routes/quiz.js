@@ -35,7 +35,9 @@ pool.query(`CREATE TABLE IF NOT EXISTS quiz_windows (
   questions          JSONB,
   created_by         INTEGER REFERENCES users(id),
   created_at         TIMESTAMPTZ NOT NULL DEFAULT now(),
-  CHECK (ends_at > starts_at)
+  source             TEXT NOT NULL DEFAULT 'teacher',
+  CHECK (ends_at > starts_at),
+  CHECK (source IN ('teacher','student'))
 )`).catch((e) => console.error('[db] quiz_windows:', e.message))
   // Eski sürümde tek bir class_name TEXT sütunu vardı — bir pencere sadece
   // tek bir şubeye açılabiliyordu. Birden çok şubenin (hatta farklı sınıfların
@@ -47,7 +49,17 @@ pool.query(`CREATE TABLE IF NOT EXISTS quiz_windows (
   .then(() => pool.query(`UPDATE quiz_windows SET class_names = '{}' WHERE class_names IS NULL`))
   .then(() => pool.query(`ALTER TABLE quiz_windows ALTER COLUMN class_names SET NOT NULL`))
   .then(() => pool.query(`ALTER TABLE quiz_windows DROP COLUMN IF EXISTS class_name`))
-  .catch((e) => console.error('[db] quiz_windows class_names migration:', e.message));
+  // source: öğretmenin açtığı sınav penceresi mi ('teacher'), yoksa öğrencinin
+  // kendi başlattığı düello mu ('student') — öğrenci düellolarında öğretmen
+  // manuel eşleştirme yapamaz ve bu pencereler "🏆 Yarışma Testi" rozetinde
+  // görünmez (bkz. GET /api/quiz/active source filtresi).
+  .then(() => pool.query(`ALTER TABLE quiz_windows ADD COLUMN IF NOT EXISTS source TEXT`))
+  .then(() => pool.query(`UPDATE quiz_windows SET source = 'teacher' WHERE source IS NULL`))
+  .then(() => pool.query(`ALTER TABLE quiz_windows ALTER COLUMN source SET DEFAULT 'teacher'`))
+  .then(() => pool.query(`ALTER TABLE quiz_windows ALTER COLUMN source SET NOT NULL`))
+  .then(() => pool.query(`ALTER TABLE quiz_windows DROP CONSTRAINT IF EXISTS quiz_windows_source_check`))
+  .then(() => pool.query(`ALTER TABLE quiz_windows ADD CONSTRAINT quiz_windows_source_check CHECK (source IN ('teacher','student'))`))
+  .catch((e) => console.error('[db] quiz_windows class_names/source migration:', e.message));
 
 pool.query(`CREATE TABLE IF NOT EXISTS quiz_attempts (
   id            SERIAL PRIMARY KEY,
@@ -310,7 +322,7 @@ router.get('/active', requireAuth, async (req, res) => {
     const { rows } = await pool.query(
       `SELECT id, ends_at FROM quiz_windows
        WHERE deck_slug = $1 AND unit = $2 AND $3 = ANY(class_names)
-         AND starts_at <= now() AND ends_at >= now()
+         AND source = 'teacher' AND starts_at <= now() AND ends_at >= now()
        ORDER BY starts_at DESC LIMIT 1`,
       [deckSlug, unitNum, className]
     );
@@ -327,6 +339,54 @@ router.get('/active', requireAuth, async (req, res) => {
     res.status(500).json({ error: 'Yarışma testi bilgisi alınırken hata oluştu.' });
   }
 });
+
+// Bir pencerede öğrenci için deneme başlatır/devam ettirir — hem öğretmen
+// sınavı (POST /attempts) hem öğrenci düellosu (POST /duels) tarafından
+// kullanılan ortak mantık. `window_` satırı FOR UPDATE ile zaten kilitli ve
+// caller tarafından sınıf/zaman doğrulaması yapılmış olmalı.
+async function startOrResumeAttempt(client, window_, userId) {
+  const windowId = window_.id;
+
+  const { rows: existingRows } = await client.query(
+    'SELECT * FROM quiz_attempts WHERE window_id = $1 AND user_id = $2',
+    [windowId, userId]
+  );
+  if (existingRows.length) {
+    await finalizeExpiredInWindow(client, windowId);
+    const { rows: refreshed } = await client.query('SELECT * FROM quiz_attempts WHERE id = $1', [existingRows[0].id]);
+    const attempt = refreshed[0];
+    const matchSummary = attempt.status === 'in_progress' ? null : await matchSummaryFor(client, attempt);
+    return {
+      ...attemptResponse(attempt, matchSummary, window_.ends_at),
+      questions: publicQuestions(window_.questions || []),
+      answers: attempt.answers,
+    };
+  }
+
+  let questions = window_.questions;
+  if (!questions) {
+    questions = await generateQuestions(window_.deck_slug, window_.unit, window_.question_count);
+    if (!questions) return null; // yetersiz kelime — caller 503 döner
+    await client.query('UPDATE quiz_windows SET questions = $1 WHERE id = $2', [JSON.stringify(questions), windowId]);
+  }
+
+  const now = new Date();
+  const deadlineAt = new Date(Math.min(
+    now.getTime() + window_.duration_seconds * 1000,
+    new Date(window_.ends_at).getTime()
+  ));
+
+  const { rows: created } = await client.query(
+    `INSERT INTO quiz_attempts (window_id, user_id, deadline_at) VALUES ($1, $2, $3) RETURNING *`,
+    [windowId, userId, deadlineAt]
+  );
+
+  return {
+    ...attemptResponse(created[0], null, window_.ends_at),
+    questions: publicQuestions(questions),
+    answers: created[0].answers,
+  };
+}
 
 // POST /api/quiz/attempts { windowId } — teste başlar (veya yarım kalmış
 // denemeyi devam ettirir).
@@ -354,50 +414,14 @@ router.post('/attempts', requireAuth, async (req, res) => {
       return res.status(400).json({ error: 'Bu yarışma testinin zamanı değil.' });
     }
 
-    // Zaten bir denemesi varsa (sayfa yenilendi/kapandı) onu döndür.
-    const { rows: existingRows } = await client.query(
-      'SELECT * FROM quiz_attempts WHERE window_id = $1 AND user_id = $2',
-      [windowId, req.session.userId]
-    );
-    if (existingRows.length) {
-      await finalizeExpiredInWindow(client, windowId);
-      const { rows: refreshed } = await client.query('SELECT * FROM quiz_attempts WHERE id = $1', [existingRows[0].id]);
-      const attempt = refreshed[0];
-      await client.query('COMMIT');
-      const matchSummary = attempt.status === 'in_progress' ? null : await matchSummaryFor(pool, attempt);
-      return res.json({
-        ...attemptResponse(attempt, matchSummary, window_.ends_at),
-        questions: publicQuestions(window_.questions || []),
-        answers: attempt.answers,
-      });
+    const payload = await startOrResumeAttempt(client, window_, req.session.userId);
+    if (!payload) {
+      await client.query('ROLLBACK');
+      return res.status(503).json({ error: 'Bu ünite için yeterli kelime yok, yarışma testi oluşturulamadı.' });
     }
-
-    let questions = window_.questions;
-    if (!questions) {
-      questions = await generateQuestions(window_.deck_slug, window_.unit, window_.question_count);
-      if (!questions) {
-        await client.query('ROLLBACK');
-        return res.status(503).json({ error: 'Bu ünite için yeterli kelime yok, yarışma testi oluşturulamadı.' });
-      }
-      await client.query('UPDATE quiz_windows SET questions = $1 WHERE id = $2', [JSON.stringify(questions), windowId]);
-    }
-
-    const deadlineAt = new Date(Math.min(
-      now.getTime() + window_.duration_seconds * 1000,
-      new Date(window_.ends_at).getTime()
-    ));
-
-    const { rows: created } = await client.query(
-      `INSERT INTO quiz_attempts (window_id, user_id, deadline_at) VALUES ($1, $2, $3) RETURNING *`,
-      [windowId, req.session.userId, deadlineAt]
-    );
 
     await client.query('COMMIT');
-    res.json({
-      ...attemptResponse(created[0], null, window_.ends_at),
-      questions: publicQuestions(questions),
-      answers: created[0].answers,
-    });
+    res.json(payload);
   } catch (err) {
     await client.query('ROLLBACK');
     console.error(err);
@@ -505,6 +529,73 @@ router.post('/attempts/:id/answer', requireAuth, async (req, res) => {
   }
 });
 
+// Bir pencerede oda açar (kod üretir) — hem öğretmen sınavı (POST /rooms)
+// hem öğrenci düellosu (POST /duels) tarafından kullanılan ortak mantık.
+// Zaten katılmışsa 'already_joined', kelime yetersizse 'insufficient_words'
+// koduyla bir hata fırlatır; caller bunu uygun HTTP durumuna çevirir.
+async function createRoomForWindow(client, window_, userId) {
+  const windowId = window_.id;
+  const now = new Date();
+
+  const { rows: existingRows } = await client.query(
+    'SELECT * FROM quiz_attempts WHERE window_id = $1 AND user_id = $2',
+    [windowId, userId]
+  );
+  if (existingRows.length) {
+    const err = new Error('Bu yarışma testine zaten katıldın.');
+    err.code = 'already_joined';
+    throw err;
+  }
+
+  let questions = window_.questions;
+  if (!questions) {
+    questions = await generateQuestions(window_.deck_slug, window_.unit, window_.question_count);
+    if (!questions) {
+      const err = new Error('Bu ünite için yeterli kelime yok.');
+      err.code = 'insufficient_words';
+      throw err;
+    }
+    await client.query('UPDATE quiz_windows SET questions = $1 WHERE id = $2', [JSON.stringify(questions), windowId]);
+  }
+
+  const deadlineAt = new Date(Math.min(now.getTime() + window_.duration_seconds * 1000, new Date(window_.ends_at).getTime()));
+  const { rows: attemptRows } = await client.query(
+    `INSERT INTO quiz_attempts (window_id, user_id, deadline_at) VALUES ($1, $2, $3) RETURNING *`,
+    [windowId, userId, deadlineAt]
+  );
+  const attempt = attemptRows[0];
+
+  const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  let roomCode;
+  for (let tries = 0; tries < 10; tries++) {
+    const candidate = Array.from({ length: 6 }, () => alphabet[crypto.randomInt(alphabet.length)]).join('');
+    const { rows: clash } = await client.query(
+      `SELECT 1 FROM quiz_matches WHERE room_code = $1 AND status != 'resolved'`, [candidate]
+    );
+    if (!clash.length) { roomCode = candidate; break; }
+  }
+  if (!roomCode) {
+    const err = new Error('Oda kodu üretilemedi, tekrar dene.');
+    err.code = 'room_code_failed';
+    throw err;
+  }
+
+  const { rows: matchRows } = await client.query(
+    `INSERT INTO quiz_matches (window_id, attempt1_id, match_method, status, room_code)
+     VALUES ($1, $2, 'room', 'pending', $3) RETURNING *`,
+    [windowId, attempt.id, roomCode]
+  );
+  await client.query('UPDATE quiz_attempts SET match_id = $1 WHERE id = $2', [matchRows[0].id, attempt.id]);
+
+  return {
+    ...attemptResponse({ ...attempt, match_id: matchRows[0].id }, { status: 'waiting', opponent: null, result: null, roomCode }, window_.ends_at),
+    questions: publicQuestions(questions),
+    answers: attempt.answers,
+  };
+}
+
+const ROOM_ERROR_STATUS = { already_joined: 409, insufficient_words: 503, room_code_failed: 500 };
+
 // POST /api/quiz/rooms { windowId } — oda açar, kod döner.
 router.post('/rooms', requireAuth, async (req, res) => {
   const client = await pool.connect();
@@ -527,58 +618,14 @@ router.post('/rooms', requireAuth, async (req, res) => {
       return res.status(400).json({ error: 'Bu yarışma testine şu an katılamazsın.' });
     }
 
-    const { rows: existingRows } = await client.query(
-      'SELECT * FROM quiz_attempts WHERE window_id = $1 AND user_id = $2',
-      [windowId, req.session.userId]
-    );
-    if (existingRows.length) {
-      await client.query('ROLLBACK');
-      return res.status(409).json({ error: 'Bu yarışma testine zaten katıldın.' });
-    }
-
-    let questions = window_.questions;
-    if (!questions) {
-      questions = await generateQuestions(window_.deck_slug, window_.unit, window_.question_count);
-      if (!questions) {
-        await client.query('ROLLBACK');
-        return res.status(503).json({ error: 'Bu ünite için yeterli kelime yok.' });
-      }
-      await client.query('UPDATE quiz_windows SET questions = $1 WHERE id = $2', [JSON.stringify(questions), windowId]);
-    }
-
-    const deadlineAt = new Date(Math.min(now.getTime() + window_.duration_seconds * 1000, new Date(window_.ends_at).getTime()));
-    const { rows: attemptRows } = await client.query(
-      `INSERT INTO quiz_attempts (window_id, user_id, deadline_at) VALUES ($1, $2, $3) RETURNING *`,
-      [windowId, req.session.userId, deadlineAt]
-    );
-    const attempt = attemptRows[0];
-
-    const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-    let roomCode;
-    for (let tries = 0; tries < 10; tries++) {
-      const candidate = Array.from({ length: 6 }, () => alphabet[crypto.randomInt(alphabet.length)]).join('');
-      const { rows: clash } = await client.query(
-        `SELECT 1 FROM quiz_matches WHERE room_code = $1 AND status != 'resolved'`, [candidate]
-      );
-      if (!clash.length) { roomCode = candidate; break; }
-    }
-    if (!roomCode) { await client.query('ROLLBACK'); return res.status(500).json({ error: 'Oda kodu üretilemedi, tekrar dene.' }); }
-
-    const { rows: matchRows } = await client.query(
-      `INSERT INTO quiz_matches (window_id, attempt1_id, match_method, status, room_code)
-       VALUES ($1, $2, 'room', 'pending', $3) RETURNING *`,
-      [windowId, attempt.id, roomCode]
-    );
-    await client.query('UPDATE quiz_attempts SET match_id = $1 WHERE id = $2', [matchRows[0].id, attempt.id]);
-
+    const payload = await createRoomForWindow(client, window_, req.session.userId);
     await client.query('COMMIT');
-    res.json({
-      ...attemptResponse({ ...attempt, match_id: matchRows[0].id }, { status: 'waiting', opponent: null, result: null, roomCode }, window_.ends_at),
-      questions: publicQuestions(questions),
-      answers: attempt.answers,
-    });
+    res.json(payload);
   } catch (err) {
     await client.query('ROLLBACK');
+    if (err.code && ROOM_ERROR_STATUS[err.code]) {
+      return res.status(ROOM_ERROR_STATUS[err.code]).json({ error: err.message });
+    }
     console.error(err);
     res.status(500).json({ error: 'Oda açılırken hata oluştu.' });
   } finally {
@@ -655,6 +702,87 @@ router.post('/rooms/:code/join', requireAuth, async (req, res) => {
 });
 
 // ---------------------------------------------------------------------------
+// Öğrenci düelloları — öğretmenin açtığı zaman pencereli sınavın öğrenci
+// başlatmalı hali. Öğretmen penceresi gerekmez; aynı sınıf+deste+ünite için
+// "yuvarlanan" (rolling) bir pencere kullanılır: hâlâ açık (ends_at > now())
+// bir düello penceresi varsa ona katılır, yoksa yeni açar. Böylece o an aynı
+// deste/üniteyi seçen sınıf arkadaşları otomatik olarak aynı havuzda buluşup
+// mevcut tryAutoMatch mantığıyla eşleşir — ayrı bir "kuyruk" sistemi gerekmez.
+const DUEL_WINDOW_LIFETIME_MS = 3 * 60 * 60 * 1000; // 3 saat — sadece havuzun ne kadar açık kalacağı, cevap süresi hâlâ duration_seconds (5 dk)
+
+async function resolveDuelWindow(client, userId, deckSlug, unitNum) {
+  const className = await getUserClassName(userId);
+  if (!className) {
+    const err = new Error('Sınıfın tanımlı değil, düelloya katılamazsın.');
+    err.code = 'no_class';
+    throw err;
+  }
+
+  const { rows: existing } = await client.query(
+    `SELECT * FROM quiz_windows
+     WHERE source = 'student' AND deck_slug = $1 AND unit = $2 AND $3 = ANY(class_names) AND ends_at > now()
+     ORDER BY created_at DESC LIMIT 1 FOR UPDATE`,
+    [deckSlug, unitNum, className]
+  );
+  if (existing.length) return existing[0];
+
+  const wordPool = await getUsableWordPool(deckSlug, unitNum);
+  if (wordPool.length < 4) {
+    const err = new Error('Bu ünite için yeterli kelime yok, düello açılamadı.');
+    err.code = 'insufficient_words';
+    throw err;
+  }
+
+  const now = new Date();
+  const { rows: created } = await client.query(
+    `INSERT INTO quiz_windows (deck_slug, unit, class_names, starts_at, ends_at, duration_seconds, question_count,
+                                allow_auto_match, allow_manual_match, allow_room_match, created_by, source)
+     VALUES ($1, $2, $3, $4, $5, 300, 4, TRUE, FALSE, TRUE, $6, 'student') RETURNING *`,
+    [deckSlug, unitNum, [className], now, new Date(now.getTime() + DUEL_WINDOW_LIFETIME_MS), userId]
+  );
+  return created[0];
+}
+
+const DUEL_ERROR_STATUS = { no_class: 400, insufficient_words: 503, ...ROOM_ERROR_STATUS };
+
+// POST /api/quiz/duels { deckSlug, unit, mode: 'auto'|'room' } — öğrenci
+// kendi başına bir düello başlatır (öğretmen penceresi gerekmez).
+router.post('/duels', requireAuth, async (req, res) => {
+  const client = await pool.connect();
+  try {
+    const { deckSlug, mode } = req.body || {};
+    const unitNum = Number(req.body?.unit);
+    if (!deckSlug || !Number.isInteger(unitNum) || !['auto', 'room'].includes(mode)) {
+      return res.status(400).json({ error: 'Geçersiz parametreler.' });
+    }
+
+    await client.query('BEGIN');
+    const window_ = await resolveDuelWindow(client, req.session.userId, deckSlug, unitNum);
+
+    const payload = mode === 'room'
+      ? await createRoomForWindow(client, window_, req.session.userId)
+      : await startOrResumeAttempt(client, window_, req.session.userId);
+
+    if (!payload) {
+      await client.query('ROLLBACK');
+      return res.status(503).json({ error: 'Bu ünite için yeterli kelime yok, düello başlatılamadı.' });
+    }
+
+    await client.query('COMMIT');
+    res.json(payload);
+  } catch (err) {
+    await client.query('ROLLBACK');
+    if (err.code && DUEL_ERROR_STATUS[err.code]) {
+      return res.status(DUEL_ERROR_STATUS[err.code]).json({ error: err.message });
+    }
+    console.error(err);
+    res.status(500).json({ error: 'Düello başlatılırken hata oluştu.' });
+  } finally {
+    client.release();
+  }
+});
+
+// ---------------------------------------------------------------------------
 // Öğretmen (admin) endpoint'leri — /api/admin/quiz altında mount edilir.
 // ---------------------------------------------------------------------------
 
@@ -699,19 +827,22 @@ adminRouter.post('/windows', requireAuth, requireOwner, async (req, res) => {
   }
 });
 
-// GET /api/admin/quiz/windows?class=&deckSlug=&unit= — pencere listesi (özet).
+// GET /api/admin/quiz/windows?class=&deckSlug=&unit=&source= — pencere listesi (özet).
+// source='teacher' (varsayılan sınav pencereleri) veya 'student' (öğrenci
+// düelloları) ile filtrelenebilir — admin panelinde iki ayrı liste için.
 adminRouter.get('/windows', requireAuth, requireOwner, async (req, res) => {
   try {
-    const { class: classFilter, deckSlug, unit } = req.query;
+    const { class: classFilter, deckSlug, unit, source } = req.query;
     const conditions = [];
     const params = [];
     if (classFilter) { params.push(classFilter); conditions.push(`$${params.length} = ANY(w.class_names)`); }
     if (deckSlug) { params.push(deckSlug); conditions.push(`w.deck_slug = $${params.length}`); }
     if (unit) { params.push(Number(unit)); conditions.push(`w.unit = $${params.length}`); }
+    if (source) { params.push(source); conditions.push(`w.source = $${params.length}`); }
     const where = conditions.length ? `WHERE ${conditions.join(' AND ')}` : '';
 
     const { rows } = await pool.query(
-      `SELECT w.id, w.deck_slug, w.unit, w.class_names, w.starts_at, w.ends_at, w.duration_seconds, w.question_count,
+      `SELECT w.id, w.deck_slug, w.unit, w.class_names, w.starts_at, w.ends_at, w.duration_seconds, w.question_count, w.source,
               COUNT(a.id)::int AS attempt_count,
               COUNT(a.id) FILTER (WHERE a.status != 'in_progress')::int AS finished_count
        FROM quiz_windows w
@@ -785,6 +916,16 @@ adminRouter.post('/windows/:id/match', requireAuth, requireOwner, async (req, re
     }
 
     await client.query('BEGIN');
+    const { rows: winRows } = await client.query('SELECT source FROM quiz_windows WHERE id = $1', [windowId]);
+    if (!winRows.length) {
+      await client.query('ROLLBACK');
+      return res.status(404).json({ error: 'Pencere bulunamadı.' });
+    }
+    if (winRows[0].source === 'student') {
+      await client.query('ROLLBACK');
+      return res.status(403).json({ error: 'Öğrenci düellolarında manuel eşleştirme yapılamaz.' });
+    }
+
     const { rows } = await client.query(
       `SELECT * FROM quiz_attempts WHERE id IN ($1, $2) AND window_id = $3 FOR UPDATE`,
       [attempt1Id, attempt2Id, windowId]
